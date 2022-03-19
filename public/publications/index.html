@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Publications | Justin C Yang</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">About</a></li>
+      
+      <li><a href="/publications/">Publications</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Publications</span></h1>
+<h2 class="author">Justin Yang</h2>
+
+</div>
+
+<main>
+<pre><code class="language-{r">knitr::opts_chunk$set(collapse = TRUE)
+</code></pre>
+<pre><code class="language-{r">library(knitr)
+library(scholar)
+library(dplyr)
+library(kableExtra)
+yang &lt;- &quot;o-MsbBYAAAAJ&quot;
+pubs_1 &lt;- get_publications(yang)
+pubs_1 %&gt;% knitr::kable(format = &quot;html&quot;)
+</code></pre>
+
+</main>
+
+  <footer>
+  <script defer src="//yihui.org/js/math-code.js"></script>
+<script defer src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script defer src="//yihui.org/js/center-img.js"></script>
+
+  
+  <hr/>
+  © <a href="https://justinyang.me">Justin C Yang</a> 2022
+  
+  </footer>
+  </body>
+</html>
+
