@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About on Justin C Yang</title>
+    <title>About on Justin C Yang, PhD</title>
     <link>https://justinyang.me/</link>
-    <description>Recent content in About on Justin C Yang</description>
+    <description>Recent content in About on Justin C Yang, PhD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://justinyang.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact</title>
+      <link>https://justinyang.me/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://justinyang.me/contact/</guid>
+      <description>Division of Psychiatry
+University College London
+6th Floor, Maple House
+149 Tottenham Court Road
+London W1T 7NF
+justin.yang@ucl.ac.uk
+@JustinCYang</description>
+    </item>
+    
     <item>
       <title>Publications</title>
       <link>https://justinyang.me/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://justinyang.me/publications/</guid>
-      <description>knitr::opts_chunk$set(collapse = TRUE) library(knitr)library(scholar)library(dplyr)library(kableExtra)yang &amp;lt;- &amp;quot;o-MsbBYAAAAJ&amp;quot;pubs_1 &amp;lt;- get_publications(yang)pubs_1 %&amp;gt;% knitr::kable(format = &amp;quot;html&amp;quot;) </description>
+      <description>2021SC Ifeagwu, JC Yang, R Parkes-Ratanshi, C Brayne (2021) Health financing for universal health coverage in Sub-Saharan Africa: a systematic review, Global health research and policy, 6 (1), 1-9B Rosner, J Neicun, JC Yang, A Roman-Urrestarazu (2021) Substance use among sexual minorities in the US?Linked to inequalities and unmet need for mental health treatment? Results from the National Survey on Drug Use and Health (NSDUH), Journal of Psychiatric Research, 135, 107-1182020JC Yang, A Roman-Urrestarazu, C Brayne (2020) Responses among substance abuse treatment providers to the opioid epidemic in the USA: Variations in buprenorphine and methadone treatment by geography, operational, and?</description>
     </item>
     
   </channel>
