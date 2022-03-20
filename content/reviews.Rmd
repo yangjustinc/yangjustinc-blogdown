@@ -1,0 +1,38 @@
+---
+title: Peer Review
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(janitor)
+library(rorcid)
+library(rcrossref)
+library(stringi)
+
+reviews <-
+  orcid_peer_reviews("0000-0003-2881-4906")[[1]]$group$`peer-review-group` %>%
+  map_dfr(pluck, "peer-review-summary") %>%
+  as_tibble() %>%
+  clean_names() %>%
+  select(review_group_id) %>%
+  distinct() %>%
+  mutate(issn = stri_enc_toutf8(str_replace(review_group_id, "issn:", ""))) %>%
+  select(issn)
+
+
+get_title_from_issn <- function(issn) {
+  tryCatch(
+    issn_title[[issn]],
+    error = function(e) {
+      rcrossref::cr_journals(issn)$data$title
+    }
+  )
+}
+
+journal_names <-
+  reviews %>% purrr::map(~ get_title_from_issn(.x)) %>% unlist() %>% as_tibble() %>% arrange(value) %>% mutate(value = str_squish(value))
+
+journal_names %>% knitr::kable("html", col.names = NULL)
+
+```
+Last retrieved from [OrcID](https://orcid.org/0000-0003-2881-4906) on `r format(Sys.time(), '%d %B, %Y')`
