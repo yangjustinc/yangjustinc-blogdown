@@ -2,11 +2,13 @@
 title: Contact
 ---
 <center>
+<img src="/img/University_College_London_logo.svg" style="max-width:30%;min-width:40px;" />  
 Division of Psychiatry  
 University College London    
 6th Floor, Maple House  
 149 Tottenham Court Road  
 London W1T 7NF  
+United Kingdom  
 
 <justin.yang@ucl.ac.uk>  
 [\@JustinCYang](https://twitter.com/JustinCYang)
