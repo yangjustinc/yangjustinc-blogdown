@@ -31,7 +31,7 @@ menu:
 
 params:
   description: "Justin C Yang, PhD"
-  footer: "&copy; [Justin C Yang](https://justinyang.me) 2019-{Year}"
+  footer: "Published using [blogdown](https://bookdown.org/yihui/blogdown) and [Hugo](https://gohugo.io). &copy; [Justin C Yang](https://justinyang.me) 2019-{Year}"
 
 markup:
   highlight:
