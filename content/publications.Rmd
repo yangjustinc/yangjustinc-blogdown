@@ -4,11 +4,10 @@ output:
   md_document:
     variant: markdown_github
 ---
-Retrieved from [Google Scholar](https://scholar.google.com/citations?user=o-MsbBYAAAAJ) on `r format(Sys.time(), '%d %B, %Y')`:
+Last retrieved from [Google Scholar](https://scholar.google.com/citations?user=o-MsbBYAAAAJ) on `r format(Sys.time(), '%d %B, %Y')`
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(scholar)
 library(tidyverse)
-library(janitor)
 
 publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
   arrange(desc(year)) %>% 
@@ -16,19 +15,8 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
      author=str_replace_all(author, ", \\.\\.\\.", " et al."),
      author=str_replace_all(author, "JC Yang", "**JC Yang**"),
      author=str_replace_all(author, "J Yang", "**J Yang**")) %>%
-  mutate(citation = paste0(author,". ",title,". ","*",journal,"*"," ","(",year,")"," ",number)) %>%
+  mutate(citation = paste0(author,". ","(",year,")."," ",title,". ","*",journal,"*"," ",number,".")) %>%
   select(citation)
-  
-# %>% 
-#   split(.$year) 
-# %>%
-#    map(function(x){
-#      x <- x %>%
-#        glue_data('{author} ({year}) <a href="https://scholar.google.com/scholar?oi=bibs&cluster={cid}&btnI=1&hl=en">{title}</a>, {journal}, {number}') %>%
-#        str_replace_all("(, )+</p>", "</p>")
-#      x <- c('<table><tbody>', x, '</tbody></table>')
-#      return(x);
-#    }) %>% rev
- 
+
 publications %>% knitr::kable("html", col.names = NULL)
 ```

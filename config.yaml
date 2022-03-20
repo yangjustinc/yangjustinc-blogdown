@@ -25,7 +25,7 @@ menu:
 
 params:
   description: "Justin C Yang, PhD"
-  footer: "&copy; [Justin C Yang](https://justinyang.me) {Year} | Created using [blogdown](https://bookdown.org/yihui/blogdown), [Hugo](https://gohugo.io), and [Xmin](https://github.com/yihui/hugo-xmin)"
+  footer: "&copy; [Justin C Yang](https://justinyang.me) 2019-{Year}"
 
 markup:
   highlight:
