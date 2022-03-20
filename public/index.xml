@@ -12,18 +12,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://justinyang.me/contact/</guid>
-      <description>Division of PsychiatryUniversity College London 6th Floor, Maple House149 Tottenham Court RoadLondon W1T 7NFjustin.yang@ucl.ac.uk
+      <description>Division of PsychiatryUniversity College London 6th Floor, Maple House149 Tottenham Court RoadLondon W1T 7NFjustin.yang@ucl.ac.uk
 @JustinCYang
-library(tidyverse)mpg %&amp;gt;%ggplot( aes(x=reorder(class, hwy), y=hwy, fill=class)) + geom_boxplot() +xlab(&amp;quot;class&amp;quot;) +theme(legend.position=&amp;quot;none&amp;quot;) </description>
-    </item>
-    
-    <item>
-      <title>Publications</title>
-      <link>https://justinyang.me/publications/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://justinyang.me/publications/</guid>
-      <description>2021SC Ifeagwu, JC Yang, R Parkes-Ratanshi, C Brayne (2021) Health financing for universal health coverage in Sub-Saharan Africa: a systematic review, Global health research and policy, 6 (1), 1-9B Rosner, J Neicun, JC Yang, A Roman-Urrestarazu (2021) Substance use among sexual minorities in the US?Linked to inequalities and unmet need for mental health treatment? Results from the National Survey on Drug Use and Health (NSDUH), Journal of Psychiatric Research, 135, 107-1182020JC Yang, A Roman-Urrestarazu, C Brayne (2020) Responses among substance abuse treatment providers to the opioid epidemic in the USA: Variations in buprenorphine and methadone treatment by geography, operational, and?</description>
+library(scholar)library(tidyverse)library(glue)# Run this code, then put the outputs in publications.html into publications.md. # Delete publications.html afterwards.html_2 &amp;lt;- get_publications(&amp;quot;o-MsbBYAAAAJ&amp;quot;) %&amp;gt;%as_tibble %&amp;gt;% arrange(desc(year)) %&amp;gt;%mutate(# author=str_replace_all(author, &amp;quot; (\\S) &amp;quot;, &amp;quot;\\1 &amp;quot;),author=str_replace_all(author, &amp;quot;([A-Z]) ([A-Z]) &amp;quot;, &amp;quot;\\1\\2 &amp;quot;),author=str_replace_all(author, &amp;quot;, \\.\\.\\.&amp;quot;, &amp;quot; et al.&amp;quot;),author=str_replace_all(author, &amp;quot;JC Yang&amp;quot;, &amp;quot;&amp;lt;b&amp;gt;JC Yang&amp;lt;/b&amp;gt;&amp;quot;), # make my name fatauthor=str_replace_all(author, &amp;quot;J Yang&amp;quot;, &amp;quot;&amp;lt;b&amp;gt;J Yang&amp;lt;/b&amp;gt;&amp;quot;) # make my name fat) %&amp;gt;% split(.</description>
     </item>
     
   </channel>
