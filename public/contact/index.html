@@ -30,13 +30,22 @@
 </div>
 
 <main>
-<p>Division of Psychiatry<br>
-University College London<br>
-6th Floor, Maple House<br>
-149 Tottenham Court Road<br>
-London W1T 7NF</p>
+<center>
+Division of Psychiatry<br/>
+University College London<br/>  
+6th Floor, Maple House<br/>
+149 Tottenham Court Road<br/>
+London W1T 7NF<br/>
 <p><a href="mailto:justin.yang@ucl.ac.uk">justin.yang@ucl.ac.uk</a><br>
 <a href="https://twitter.com/JustinCYang">@JustinCYang</a></p>
+</center>
+<pre><code class="language-{r,">library(tidyverse)
+mpg %&gt;%
+  ggplot( aes(x=reorder(class, hwy), y=hwy, fill=class)) + 
+    geom_boxplot() +
+    xlab(&quot;class&quot;) +
+    theme(legend.position=&quot;none&quot;)
+</code></pre>
 
 </main>
 
@@ -48,7 +57,7 @@ London W1T 7NF</p>
 
   
   <hr/>
-  © <a href="https://justinyang.me">Justin C Yang</a> 2022
+  © <a href="https://justinyang.me">Justin C Yang</a> 2022 | Created using <a href="https://bookdown.org/yihui/blogdown">blogdown</a>, <a href="https://gohugo.io">Hugo</a>, and <a href="https://github.com/yihui/hugo-xmin">Xmin</a>
   
   </footer>
   </body>
