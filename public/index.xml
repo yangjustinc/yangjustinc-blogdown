@@ -12,9 +12,33 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://justinyang.me/contact/</guid>
-      <description>Division of PsychiatryUniversity College London 6th Floor, Maple House149 Tottenham Court RoadLondon W1T 7NFjustin.yang@ucl.ac.uk
+      <description>Division of Psychiatry
+University College London
+6th Floor, Maple House
+149 Tottenham Court Road
+London W1T 7NF
+justin.yang@ucl.ac.uk
 @JustinCYang
-library(scholar)library(tidyverse)library(glue)# Run this code, then put the outputs in publications.html into publications.md. # Delete publications.html afterwards.html_2 &amp;lt;- get_publications(&amp;quot;o-MsbBYAAAAJ&amp;quot;) %&amp;gt;%as_tibble %&amp;gt;% arrange(desc(year)) %&amp;gt;%mutate(# author=str_replace_all(author, &amp;quot; (\\S) &amp;quot;, &amp;quot;\\1 &amp;quot;),author=str_replace_all(author, &amp;quot;([A-Z]) ([A-Z]) &amp;quot;, &amp;quot;\\1\\2 &amp;quot;),author=str_replace_all(author, &amp;quot;, \\.\\.\\.&amp;quot;, &amp;quot; et al.&amp;quot;),author=str_replace_all(author, &amp;quot;JC Yang&amp;quot;, &amp;quot;&amp;lt;b&amp;gt;JC Yang&amp;lt;/b&amp;gt;&amp;quot;), # make my name fatauthor=str_replace_all(author, &amp;quot;J Yang&amp;quot;, &amp;quot;&amp;lt;b&amp;gt;J Yang&amp;lt;/b&amp;gt;&amp;quot;) # make my name fat) %&amp;gt;% split(.</description>
+</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://justinyang.me/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://justinyang.me/publications/</guid>
+      <description>Last retrieved from Google Scholar on 20 March, 2022SC Ifeagwu, JC Yang, R Parkes-Ratanshi, C Brayne. (2021). Health financing for universal health coverage in Sub-Saharan Africa. Global health research and policy 6 (1), 1-9.B Rosner, J Neicun, JC Yang, A Roman-Urrestarazu. (2021). Substance use among sexual minorities in the US–Linked to inequalities and unmet need for mental health treatment? Results from the National Survey on Drug Use and Health (NSDUH).</description>
+    </item>
+    
+    <item>
+      <title>Teaching &amp; Supervision</title>
+      <link>https://justinyang.me/teaching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://justinyang.me/teaching/</guid>
+      <description>I’m a Teaching Assistant for the Practical Statistics for Mental Health Research module on the UCL MSc in Mental Health Sciences Research course. I also mark for the Current Research in Depression and Anxiety and Current Research in Psychosis and Bipolar Disorder modules. I’m always happy to co-supervise MSc students completing their dissertations using the Research Database at Camden &amp;amp; Islington NHS Foundation Trust.
+I’m a dissertation supervisor on the QMUL MSc in Global Public Health and Policy course where I mainly supervise projects pertaining to secondary data analysis, substance-related use disorders, and comparative health policy.</description>
     </item>
     
   </channel>

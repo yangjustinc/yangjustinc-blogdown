@@ -17,6 +17,10 @@
       
       <li><a href="/publications/">Publications</a></li>
       
+      <li><a href="/presentations/">Presentations</a></li>
+      
+      <li><a href="/teaching/">Teaching &amp; Supervision</a></li>
+      
       <li><a href="/contact/">Contact</a></li>
       
     </ul>
@@ -30,42 +34,18 @@
 </div>
 
 <main>
+
+
+
 <center>
-Division of Psychiatry<br/>
-University College London<br/>  
-6th Floor, Maple House<br/>
-149 Tottenham Court Road<br/>
-London W1T 7NF<br/>
-<p><a href="mailto:justin.yang@ucl.ac.uk">justin.yang@ucl.ac.uk</a><br>
+<p>Division of Psychiatry<br />
+University College London<br />
+6th Floor, Maple House<br />
+149 Tottenham Court Road<br />
+London W1T 7NF</p>
+<p><a href="mailto:justin.yang@ucl.ac.uk" class="email">justin.yang@ucl.ac.uk</a><br />
 <a href="https://twitter.com/JustinCYang">@JustinCYang</a></p>
 </center>
-<pre><code class="language-{r}">library(scholar)
-library(tidyverse)
-library(glue)
-
-# Run this code, then put the outputs in publications.html into publications.md. 
-# Delete publications.html afterwards.
-
-html_2 &lt;-  get_publications(&quot;o-MsbBYAAAAJ&quot;) %&gt;%
-  as_tibble %&gt;% arrange(desc(year)) %&gt;%
-  mutate(
-    #    author=str_replace_all(author, &quot; (\\S) &quot;, &quot;\\1 &quot;),
-    author=str_replace_all(author, &quot;([A-Z]) ([A-Z]) &quot;, &quot;\\1\\2 &quot;),
-    author=str_replace_all(author, &quot;, \\.\\.\\.&quot;, &quot; et al.&quot;),
-    author=str_replace_all(author, &quot;JC Yang&quot;, &quot;&lt;b&gt;JC Yang&lt;/b&gt;&quot;), # make my name fat
-    author=str_replace_all(author, &quot;J Yang&quot;, &quot;&lt;b&gt;J Yang&lt;/b&gt;&quot;) # make my name fat
-  ) %&gt;% split(.$year) %&gt;%
-  map(function(x){
-    x &lt;- x %&gt;%
-      glue_data('&lt;tr&gt;&lt;td width=&quot;100%&quot;&gt;{author} ({year}) &lt;a href=&quot;https://scholar.google.com/scholar?oi=bibs&amp;cluster={cid}&amp;btnI=1&amp;hl=en&quot;&gt;{title}&lt;/a&gt;, {journal}, {number}&lt;/td&gt;&lt;/tr&gt;') %&gt;%
-      str_replace_all(&quot;(, )+&lt;/p&gt;&quot;, &quot;&lt;/p&gt;&quot;) %&gt;%
-      char2html()
-    x &lt;- c('&lt;table&gt;&lt;tbody&gt;', x, '&lt;/tbody&gt;&lt;/table&gt;')
-    return(x);
-  }) %&gt;% rev
-
-html_3 &lt;- map2(names(html_2) %&gt;% paste0(&quot;&lt;h3&gt;&quot;, ., &quot;&lt;/h3&gt;&quot;), html_2, c) %&gt;% unlist
-</code></pre>
 
 </main>
 
@@ -77,7 +57,7 @@ html_3 &lt;- map2(names(html_2) %&gt;% paste0(&quot;&lt;h3&gt;&quot;, ., &quot;&
 
   
   <hr/>
-  © <a href="https://justinyang.me">Justin C Yang</a> 2022 | Created using <a href="https://bookdown.org/yihui/blogdown">blogdown</a>, <a href="https://gohugo.io">Hugo</a>, and <a href="https://github.com/yihui/hugo-xmin">Xmin</a>
+  © <a href="https://justinyang.me">Justin C Yang</a> 2019-2022
   
   </footer>
   </body>

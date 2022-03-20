@@ -1,8 +1,5 @@
 ---
 title: Publications
-output:
-  md_document:
-    variant: markdown_github
 ---
 Last retrieved from [Google Scholar](https://scholar.google.com/citations?user=o-MsbBYAAAAJ) on `r format(Sys.time(), '%d %B, %Y')`
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
@@ -12,10 +9,11 @@ library(tidyverse)
 publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
   arrange(desc(year)) %>% 
   mutate(author=str_replace_all(author, "([A-Z]) ([A-Z]) ", "\\1\\2 "),
-     author=str_replace_all(author, ", \\.\\.\\.", " et al."),
+     author=str_replace_all(author, ", \\.\\.\\.", " et al"),
      author=str_replace_all(author, "JC Yang", "**JC Yang**"),
-     author=str_replace_all(author, "J Yang", "**J Yang**")) %>%
-  mutate(citation = paste0(author,". ","(",year,")."," ",title,". ","*",journal,"*"," ",number,".")) %>%
+     author=str_replace_all(author, "J Yang", "**J Yang**"), 
+     title=str_replace_all(title, ":.+", "")) %>%
+  mutate(citation = paste0(author,". ","(",year,")."," ","[",title,"]","(https://scholar.google.com/scholar?oi=bibs&cluster=",cid,"&btnI=1&hl=en)",". ","*",journal,"*"," ",number,".")) %>%
   select(citation)
 
 publications %>% knitr::kable("html", col.names = NULL)
