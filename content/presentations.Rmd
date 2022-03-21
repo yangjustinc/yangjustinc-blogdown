@@ -1,6 +1,8 @@
 ---
 title: Presentations
+disable_comments: true
 ---
 <center>
+🚧  
 Under construction
 </center>

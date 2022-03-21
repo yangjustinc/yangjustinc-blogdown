@@ -1,5 +1,6 @@
 ---
 title: About
+disable_comments: true
 ---
 <img src="/img/profile_circle.png" style="max-width:30%;min-width:40px;float:right;" alt="Justin C Yang, PhD" />
 
@@ -13,3 +14,5 @@ My [doctoral dissertation](https://www.repository.cam.ac.uk/handle/1810/296192) 
 My [professional life](https://www.linkedin.com/in/yangjustinc) has taken me in a number of directions, including [student services management](https://www.ams.ubc.ca), [higher education administration](https://www.ubc.ca), [strategic consultancy](https://avalere.com), and [assessment](https://www.admissionstesting.org). I try to maintain an active network with my colleagues outside of academia and always welcome opportunities to meet to discuss shared professional or academic interests.   
 
 When I'm not working, I'm usually reading [books](https://www.goodreads.com/user/show/4912476-justin) and comics, [traveling](https://instagram.com/yangjustinc), watching too many [TV shows and films](https://trakt.tv/users/yangjustinc), attending the theatre, or playing board games and tabletop RPGs.
+
+* * *

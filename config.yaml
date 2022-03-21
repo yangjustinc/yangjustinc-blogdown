@@ -28,9 +28,12 @@ menu:
     - name: Teaching & Supervision
       url: "teaching/"
       weight: 5      
+    - name: Notes
+      url: "notes/"
+      weight: 6
     - name: Contact
       url: "contact/"
-      weight: 6
+      weight: 7
 
 params:
   description: "Justin C Yang, PhD"

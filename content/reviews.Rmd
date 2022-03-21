@@ -1,5 +1,6 @@
 ---
 title: Peer Review
+disable_comments: true
 ---
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}

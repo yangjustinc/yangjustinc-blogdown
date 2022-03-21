@@ -2,3 +2,14 @@
 <script defer src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 <script defer src="//yihui.org/js/center-img.js"></script>
+
+{{ if not .Params.disable_comments }}
+<script src="https://utteranc.es/client.js"
+        repo="yangjustinc/yangjustinc.github.io"
+        issue-term="pathname"
+        label="💬"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+{{ end }}
