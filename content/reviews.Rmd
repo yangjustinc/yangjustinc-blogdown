@@ -1,7 +1,7 @@
 ---
 title: Peer Review
 ---
-I have served as an invited peer reviewer for:  
+I have served as an invited peer reviewer for  
 
 ```{r, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
