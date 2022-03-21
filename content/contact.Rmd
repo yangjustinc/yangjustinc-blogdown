@@ -1,6 +1,5 @@
 ---
 title: Contact
-disable_comments: true
 ---
 <center>
 <img src="/img/UCL.svg" style="max-width:30%;min-width:40px;" />  

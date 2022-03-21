@@ -5,7 +5,18 @@
     <link>https://justinyang.me/</link>
     <description>Recent content in About on Justin C Yang, PhD</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://justinyang.me/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://justinyang.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World!</title>
+      <link>https://justinyang.me/notes/2022-03-21-hello-world/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://justinyang.me/notes/2022-03-21-hello-world/</guid>
+      <description>Hello! Welcome to my new personal academic landing page. Having previously tried Hugo Academic and al-folio, both of which were very nice, I found that updating themes was annoying and bothersome sometimes, often requiring me to sit down and rebase/merge differences across code where I modified themes for my taste and purpose.
+So now it’s back to basics with Yihui Xie’s marvelous great XMin theme where I can focus entirely on content and not have to worry too much about theming and visuals and such.</description>
+    </item>
+    
     <item>
       <title>Contact</title>
       <link>https://justinyang.me/contact/</link>
@@ -29,7 +40,7 @@ justin.yang@ucl.ac.uk
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://justinyang.me/reviews/</guid>
-      <description>American Journal of Men s HealthAmerican Journal on AddictionsApplied EconomicsExpert Opinion on PharmacotherapyHealth and Quality of Life OutcomesInternational Journal for Equity in HealthJournal of Psychoactive DrugsSocial Psychiatry and Psychiatric EpidemiologySubstance Abuse Research and TreatmentSubstance Abuse Treatment Prevention and PolicyThe American Journal of Drug and Alcohol AbuseLast retrieved from OrcID on 20 March, 2022</description>
+      <description>American Journal of Men s HealthAmerican Journal on AddictionsApplied EconomicsExpert Opinion on PharmacotherapyHealth and Quality of Life OutcomesInternational Journal for Equity in HealthJournal of Psychoactive DrugsSocial Psychiatry and Psychiatric EpidemiologySubstance Abuse Research and TreatmentSubstance Abuse Treatment Prevention and PolicyThe American Journal of Drug and Alcohol AbuseLast retrieved from ORCID on 21 March, 2022</description>
     </item>
     
     <item>
@@ -38,7 +49,8 @@ justin.yang@ucl.ac.uk
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://justinyang.me/presentations/</guid>
-      <description>Under construction</description>
+      <description>🚧
+Under construction</description>
     </item>
     
     <item>
