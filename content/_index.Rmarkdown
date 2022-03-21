@@ -1,8 +1,7 @@
 ---
 title: About
 ---
-
-<img src="/img/prof_pic.jpg" style="max-width:30%;min-width:40px;float:right;" alt="Justin C Yang, PhD" />
+<img src="/img/profile_circle.png" style="max-width:30%;min-width:40px;float:right;" alt="Justin C Yang, PhD" />
 
 # Justin C Yang, PhD
 I'm currently a Research Fellow under the supervision of [Professor David Osborn](https://www.ucl.ac.uk/psychiatry/people/david-osborn) in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk). I'm also an Honorary Research Associate at [Camden & Islington NHS Foundation Trust](https://www.candi.nhs.uk) (where I manage its [Research Database](https://www.candi.nhs.uk/health-professionals/research/ci-research-database)) and an Honorary Lecturer in the [Wolfson Institute of Population Health](https://www.qmul.ac.uk/wiph) at [Queen Mary University of London](https://www.qmul.ac.uk).

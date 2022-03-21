@@ -35,4 +35,4 @@ journal_names <-
 journal_names %>% knitr::kable("html", col.names = NULL)
 
 ```
-Last retrieved from [OrcID](https://orcid.org/0000-0003-2881-4906) on `r format(Sys.time(), '%d %B, %Y')`
+Last retrieved from [ORCID](https://orcid.org/0000-0003-2881-4906) on `r format(Sys.time(), '%d %B, %Y')`
