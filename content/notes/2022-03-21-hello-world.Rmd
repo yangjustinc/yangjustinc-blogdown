@@ -10,6 +10,4 @@ Hello! Welcome to my new personal academic landing page. Having previously tried
 
 So now it's back to basics with Yihui Xie's marvelous great [XMin](https://github.com/yihui/hugo-xmin) theme where I can focus entirely on content and not have to worry too much about theming and visuals and such. It's not necessarily "pretty" but I think there is also an elegance to simplicity. 
 
-I'm hoping to use this site more robustly to share my thoughts, random things I come across in my work, and maybe other things if they are of interest. 
-
-{{< embed-pdf url="ddalpg.pdf" >}}
+I'm hoping to use this site more robustly to share my thoughts, random things I come across in my work, and maybe other things if they are of interest.
