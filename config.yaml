@@ -19,9 +19,9 @@ menu:
     - name: Publications
       url: "publications/"
       weight: 2
-    # - name: Presentations
-    #   url: "presentations/"
-    #   weight: 3      
+    - name: Presentations
+      url: "presentations/"
+      weight: 3
     - name: Peer Review
       url: "peer-review/"
       weight: 4
