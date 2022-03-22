@@ -11,5 +11,6 @@ London W1T 7NF
 United Kingdom  
 
 <justin.yang@ucl.ac.uk>  
-[\@JustinCYang](https://twitter.com/JustinCYang)  
+
+<a href = "https://twitter.com/JustinCYang"><i class="fa-brands fa-twitter fa-3x"></i></a> <a href = "https://www.linkedin.com/in/yangjustinc"><i class="fa-brands fa-linkedin fa-3x"></i></a> <a href = "https://github.com/yangjustinc"><i class="fa-brands fa-github fa-3x"></i></a>
 </center>

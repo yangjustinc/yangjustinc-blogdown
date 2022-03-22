@@ -36,4 +36,4 @@ journal_names <-
 cat(paste0("- ", names(journal_names)), sep = "\n")
 ```  
 
-Last retrieved from [Publons](https://publons.com/researcher/1396604/justin-c-yang) via [ORCID](https://orcid.org/0000-0003-2881-4906) on `r format(Sys.time(), '%d %B, %Y')`
+Last retrieved from <a href="https://publons.com/researcher/1396604/justin-c-yang"><i class="ai ai-publons"></i></a> via <a href = "https://orcid.org/0000-0003-2881-4906"><i class="ai ai-orcid"></i></a> on `r format(Sys.time(), '%d %B, %Y')`

@@ -22,10 +22,10 @@ menu:
       url: "presentations/"
       weight: 3      
     - name: Peer Review
-      url: "reviews/"
+      url: "peer-review/"
       weight: 4
     - name: Teaching & Supervision
-      url: "teaching/"
+      url: "teaching-supervision/"
       weight: 5      
     - name: Notes
       url: "notes/"

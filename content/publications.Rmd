@@ -18,4 +18,4 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
 
 publications %>% knitr::kable("html", col.names = NULL)
 ```
-Last retrieved from [Google Scholar](https://scholar.google.com/citations?user=o-MsbBYAAAAJ) on `r format(Sys.time(), '%d %B, %Y')`
+Last retrieved from <a href="https://scholar.google.com/citations?user=o-MsbBYAAAAJ"><i class="ai ai-google-scholar"></i></a> on `r format(Sys.time(), '%d %B, %Y')`
