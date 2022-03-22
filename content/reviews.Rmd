@@ -1,9 +1,9 @@
 ---
 title: Peer Review
 ---
-I have served as an invited peer reviewer for  
+I have served as an invited peer reviewer for:  
 
-```{r, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
+```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
 library(tidyverse)
 library(janitor)
 library(rorcid)
@@ -31,10 +31,9 @@ get_title_from_issn <- function(issn) {
 }
 
 journal_names <-
-  reviews %>% purrr::map(~ get_title_from_issn(.x)) %>% unlist() %>% as_tibble() %>% arrange(value) %>% mutate(value = str_squish(value)) %>% pivot_wider(names_from = value)
+  reviews %>% purrr::map( ~ get_title_from_issn(.x)) %>% unlist() %>% as_tibble() %>% drop_na() %>% arrange(value) %>% mutate(value = str_squish(value)) %>% pivot_wider(names_from = value)
 
-cat(paste0("- `", names(journal_names), "`"), sep = "\n")
-
+cat(paste0("- ", names(journal_names)), sep = "\n")
 ```  
 
-Last retrieved from [ORCID](https://orcid.org/0000-0003-2881-4906) on `r format(Sys.time(), '%d %B, %Y')`
+Last retrieved from [Publons](https://publons.com/researcher/1396604/justin-c-yang) via [ORCID](https://orcid.org/0000-0003-2881-4906) on `r format(Sys.time(), '%d %B, %Y')`

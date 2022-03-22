@@ -2,19 +2,18 @@ baseurl: "https://justinyang.me"
 languageCode: "en-us"
 title: "Justin C Yang, PhD"
 theme: "hugo-xmin"
-googleAnalytics: ""
-disqusShortname: ""
+googleAnalytics: "UA-113917488-1"
+# disqusShortname: ""
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 footnotereturnlinkcontents: "↩"
 
-# permalinks:
-#   note: "/note/:year/:month/:day/:slug/"
-#   post: "/post/:year/:month/:day/:slug/"
+permalinks:
+  note: "/note/:year/:month/:day/:slug/"
 
 menu:
   main:
     - name: About
-      url: ""
+      url: "/"
       weight: 1
     - name: Publications
       url: "publications/"
