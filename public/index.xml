@@ -1,66 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>About on Justin C Yang, PhD</title>
-    <link>https://justinyang.me/</link>
-    <description>Recent content in About on Justin C Yang, PhD</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 21 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://justinyang.me/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hello World!</title>
-      <link>https://justinyang.me/notes/2022/03/21/hello-world/</link>
-      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://justinyang.me/notes/2022/03/21/hello-world/</guid>
-      <description>Hello! Welcome to my new personal academic landing page. Having previously tried Hugo Academic and al-folio, both of which were very nice, I found that updating themes was annoying and bothersome sometimes, often requiring me to sit down and rebase/merge differences across code where I modified themes for my taste and purpose.
-So now it’s back to basics with Yihui Xie’s marvelous great XMin theme where I can focus entirely on content and not have to worry too much about theming and visuals and such.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://justinyang.me/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://justinyang.me/contact/</guid>
-      <description>Division of Psychiatry
-University College London
-6th Floor, Maple House
-149 Tottenham Court Road
-London W1T 7NF
-United Kingdom
-justin.yang@ucl.ac.uk
-  </description>
-    </item>
-    
-    <item>
-      <title>Peer Review</title>
-      <link>https://justinyang.me/peer-review/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://justinyang.me/peer-review/</guid>
-      <description>I have served as an invited peer reviewer for:
-American Journal of Men s HealthAmerican Journal on AddictionsApplied EconomicsExpert Opinion on PharmacotherapyHealth and Quality of Life OutcomesInternational Journal for Equity in HealthJournal of Psychoactive DrugsSocial Psychiatry and Psychiatric EpidemiologySubstance Abuse Research and TreatmentSubstance Abuse Treatment Prevention and PolicyThe American Journal of Drug and Alcohol AbuseLast retrieved from  via  on 22 March, 2022</description>
-    </item>
-    
-    <item>
-      <title>Publications</title>
-      <link>https://justinyang.me/publications/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://justinyang.me/publications/</guid>
-      <description>SC Ifeagwu, JC Yang, R Parkes-Ratanshi, C Brayne. (2021). Health financing for universal health coverage in Sub-Saharan Africa. Global health research and policy 6 (1), 1-9.B Rosner, J Neicun, JC Yang, A Roman-Urrestarazu. (2021). Substance use among sexual minorities in the US–Linked to inequalities and unmet need for mental health treatment? Results from the National Survey on Drug Use and Health (NSDUH). Journal of Psychiatric Research 135, 107-118.</description>
-    </item>
-    
-    <item>
-      <title>Teaching &amp; Supervision</title>
-      <link>https://justinyang.me/teaching-supervision/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://justinyang.me/teaching-supervision/</guid>
-      <description>University College LondonI’m a teaching assistant for the Practical Statistics for Mental Health Research module on the MSc in Mental Health Sciences Research course. I also mark for the Current Research in Depression and Anxiety and Current Research in Psychosis and Bipolar Disorder modules. I’m always happy to co-supervise MSc students completing their dissertations using the Research Database at Camden &amp;amp; Islington NHS Foundation Trust.
-Queen Mary University of LondonI’m a dissertation supervisor on the MSc in Global Public Health and Policy course where I mainly supervise projects pertaining to secondary data analysis, substance-related use disorders, and comparative health policy.</description>
-    </item>
-    
-  </channel>
-</rss>
