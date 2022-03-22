@@ -3,15 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://justinyang.me/</loc>
-    <lastmod>2022-03-21T00:00:00+00:00</lastmod>
+    <lastmod>2022-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://justinyang.me/categories/</loc>
+    <lastmod>2022-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://justinyang.me/presentations/2022/03/22/demo-presentation/</loc>
+    <lastmod>2022-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://justinyang.me/presentations/</loc>
+    <lastmod>2022-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://justinyang.me/categories/test/</loc>
+    <lastmod>2022-03-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://justinyang.me/categories/announcements/</loc>
     <lastmod>2022-03-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://justinyang.me/categories/</loc>
-    <lastmod>2022-03-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://justinyang.me/notes/2022-03-21-hello-world/</loc>
+    <loc>https://justinyang.me/notes/2022/03/21/hello-world/</loc>
     <lastmod>2022-03-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://justinyang.me/notes/</loc>
@@ -19,14 +28,12 @@
   </url><url>
     <loc>https://justinyang.me/contact/</loc>
   </url><url>
-    <loc>https://justinyang.me/reviews/</loc>
-  </url><url>
-    <loc>https://justinyang.me/presentations/</loc>
+    <loc>https://justinyang.me/peer-review/</loc>
   </url><url>
     <loc>https://justinyang.me/publications/</loc>
   </url><url>
     <loc>https://justinyang.me/tags/</loc>
   </url><url>
-    <loc>https://justinyang.me/teaching/</loc>
+    <loc>https://justinyang.me/teaching-supervision/</loc>
   </url>
 </urlset>

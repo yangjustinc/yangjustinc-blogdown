@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 21 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://justinyang.me/categories/announcements/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World!</title>
-      <link>https://justinyang.me/notes/2022-03-21-hello-world/</link>
+      <link>https://justinyang.me/notes/2022/03/21/hello-world/</link>
       <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://justinyang.me/notes/2022-03-21-hello-world/</guid>
+      <guid>https://justinyang.me/notes/2022/03/21/hello-world/</guid>
       <description>Hello! Welcome to my new personal academic landing page. Having previously tried Hugo Academic and al-folio, both of which were very nice, I found that updating themes was annoying and bothersome sometimes, often requiring me to sit down and rebase/merge differences across code where I modified themes for my taste and purpose.
 So now it’s back to basics with Yihui Xie’s marvelous great XMin theme where I can focus entirely on content and not have to worry too much about theming and visuals and such.</description>
     </item>

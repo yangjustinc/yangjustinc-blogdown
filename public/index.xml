@@ -6,13 +6,23 @@
     <description>Recent content in About on Justin C Yang, PhD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://justinyang.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://justinyang.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Demo Presentation</title>
+      <link>https://justinyang.me/presentations/2022/03/22/demo-presentation/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://justinyang.me/presentations/2022/03/22/demo-presentation/</guid>
+      <description>This isn&amp;rsquo;t one of my presentations but it&amp;rsquo;s just a placeholder until I post mine!
+ </description>
+    </item>
+    
     <item>
       <title>Hello World!</title>
-      <link>https://justinyang.me/notes/2022-03-21-hello-world/</link>
+      <link>https://justinyang.me/notes/2022/03/21/hello-world/</link>
       <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://justinyang.me/notes/2022-03-21-hello-world/</guid>
+      <guid>https://justinyang.me/notes/2022/03/21/hello-world/</guid>
       <description>Hello! Welcome to my new personal academic landing page. Having previously tried Hugo Academic and al-folio, both of which were very nice, I found that updating themes was annoying and bothersome sometimes, often requiring me to sit down and rebase/merge differences across code where I modified themes for my taste and purpose.
 So now it’s back to basics with Yihui Xie’s marvelous great XMin theme where I can focus entirely on content and not have to worry too much about theming and visuals and such.</description>
     </item>
@@ -30,27 +40,17 @@ University College London
 London W1T 7NF
 United Kingdom
 justin.yang@ucl.ac.uk
-@JustinCYang</description>
+  </description>
     </item>
     
     <item>
       <title>Peer Review</title>
-      <link>https://justinyang.me/reviews/</link>
+      <link>https://justinyang.me/peer-review/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://justinyang.me/reviews/</guid>
+      <guid>https://justinyang.me/peer-review/</guid>
       <description>I have served as an invited peer reviewer for:
-American Journal of Men s HealthAmerican Journal on AddictionsApplied EconomicsExpert Opinion on PharmacotherapyHealth and Quality of Life OutcomesInternational Journal for Equity in HealthJournal of Psychoactive DrugsSocial Psychiatry and Psychiatric EpidemiologySubstance Abuse Research and TreatmentSubstance Abuse Treatment Prevention and PolicyThe American Journal of Drug and Alcohol AbuseLast retrieved from Publons via ORCID on 22 March, 2022</description>
-    </item>
-    
-    <item>
-      <title>Presentations</title>
-      <link>https://justinyang.me/presentations/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://justinyang.me/presentations/</guid>
-      <description>🚧
-Under construction</description>
+American Journal of Men s HealthAmerican Journal on AddictionsApplied EconomicsExpert Opinion on PharmacotherapyHealth and Quality of Life OutcomesInternational Journal for Equity in HealthJournal of Psychoactive DrugsSocial Psychiatry and Psychiatric EpidemiologySubstance Abuse Research and TreatmentSubstance Abuse Treatment Prevention and PolicyThe American Journal of Drug and Alcohol AbuseLast retrieved from  via  on 22 March, 2022</description>
     </item>
     
     <item>
@@ -64,10 +64,10 @@ Under construction</description>
     
     <item>
       <title>Teaching &amp; Supervision</title>
-      <link>https://justinyang.me/teaching/</link>
+      <link>https://justinyang.me/teaching-supervision/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://justinyang.me/teaching/</guid>
+      <guid>https://justinyang.me/teaching-supervision/</guid>
       <description>University College LondonI’m a teaching assistant for the Practical Statistics for Mental Health Research module on the MSc in Mental Health Sciences Research course. I also mark for the Current Research in Depression and Anxiety and Current Research in Psychosis and Bipolar Disorder modules. I’m always happy to co-supervise MSc students completing their dissertations using the Research Database at Camden &amp;amp; Islington NHS Foundation Trust.
 Queen Mary University of LondonI’m a dissertation supervisor on the MSc in Global Public Health and Policy course where I mainly supervise projects pertaining to secondary data analysis, substance-related use disorders, and comparative health policy.</description>
     </item>
