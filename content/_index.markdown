@@ -1,7 +1,7 @@
 ---
 title: About
 ---
-<img src="/img/profile_circle.png" style="max-width:30%;min-width:60px;float:right;" alt="Justin C Yang, PhD" />
+<img src="profile_circle.png" style="max-width:30%;min-width:60px;float:right;" alt="Justin C Yang, PhD" />
 
 # Justin C Yang, PhD
 I'm a psychiatric epidemiologist supervised by [David Osborn](https://www.ucl.ac.uk/psychiatry/people/david-osborn) in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [UCL](https://www.ucl.ac.uk). I'm also the [research database](https://www.candi.nhs.uk/health-professionals/research/ci-research-database) manager at [Camden & Islington NHS Foundation Trust](https://www.candi.nhs.uk) (C&I)[^cris] and an honorary lecturer in the [Wolfson Institute of Population Health](https://www.qmul.ac.uk/wiph) at [QMUL](https://www.qmul.ac.uk).
