@@ -2,7 +2,7 @@
 title: Contact
 ---
 <center>
-<img src="/img/UCL.svg" style="max-width:30%;min-width:40px;" />  
+<img src="UCL.svg" style="max-width:30%;min-width:40px;" />  
 Division of Psychiatry  
 University College London    
 6th Floor, Maple House  
