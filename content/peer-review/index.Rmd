@@ -1,5 +1,9 @@
 ---
 title: Peer Review
+
+output:
+  html_document:
+    keep_md: yes
 ---
 I have served as an invited peer reviewer for:  
 

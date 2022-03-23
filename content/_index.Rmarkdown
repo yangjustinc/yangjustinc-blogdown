@@ -1,5 +1,9 @@
 ---
 title: About
+
+output:
+  html_document:
+    keep_md: yes
 ---
 <img src="profile_circle.png" style="max-width:30%;min-width:60px;float:right;" alt="Justin C Yang, PhD" />
 

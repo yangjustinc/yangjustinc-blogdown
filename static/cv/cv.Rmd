@@ -1,0 +1,50 @@
+---
+name: Justin C
+surname: Yang
+position: "Research Fellow"
+address: "Division of Psychiatry, University College London"
+www: justinyang.me
+email: "justin.yang@ucl.ac.uk"
+twitter: JustinCYang
+github: yangjustinc
+linkedin: yangjustinc
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(dplyr)
+library(stringr)
+library(vitae)
+library(rorcid)
+library(scholar)
+```
+
+# Education
+```{r education}
+edu <- do.call("rbind",
+  rorcid::orcid_educations("0000-0003-2881-4906")$`0000-0003-2881-4906`$`affiliation-group`$summaries
+)
+edu %>%
+  detailed_entries(
+    with = `education-summary.role-title`,
+    where = glue::glue("{`education-summary.start-date.year.value`} - {`education-summary.end-date.year.value`}"),
+    what = `education-summary.organization.name`,
+    when = `education-summary.organization.address.city`
+  )
+```
+
+# Publications
+```{r publications}
+scholar::get_publications("o-MsbBYAAAAJ") %>% 
+  arrange(desc(year)) %>%
+  mutate(author=stringr::str_replace_all(author, ", \\.\\.\\.", " et al"),
+          title=stringr::str_replace_all(title, ":.+", "")) %>%
+  detailed_entries(
+    with = title,
+    where = year,
+    when = journal,
+    what = author
+    )
+```

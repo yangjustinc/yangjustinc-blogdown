@@ -1,5 +1,9 @@
 ---
 title: Publications
+
+output:
+  html_document:
+    keep_md: yes
 ---
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}

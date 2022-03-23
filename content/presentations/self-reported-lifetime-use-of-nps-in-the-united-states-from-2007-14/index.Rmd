@@ -2,9 +2,16 @@
 title: Self-reported lifetime use of NPS in the United States from 2007-14
 author: Justin Yang
 date: '2017-10-23'
+
+draft: false
+output:
+  html_document:
+    keep_md: yes  
+
 categories:
   - NPS
   - NSDUH
 ---
 
 `r blogdown::shortcode("embed-pdf", url = "presentation.pdf")`
+
