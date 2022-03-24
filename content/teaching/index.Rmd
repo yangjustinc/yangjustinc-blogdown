@@ -1,5 +1,5 @@
 ---
-title: Teaching & Supervision
+title: Teaching
 
 output:
   html_document:
@@ -10,9 +10,3 @@ I'm a teaching assistant for the [Practical Statistics for Mental Health Researc
 
 ## Queen Mary University of London
 I'm a dissertation supervisor on the [MSc in Global Public Health and Policy](https://www.qmul.ac.uk/postgraduate/taught/coursefinder/courses/global-public-health-and-policy-msc) course where I mainly supervise projects pertaining to secondary data analysis, substance-related use disorders, and comparative health policy. I normally supervise 1-2 students per term.
-
-## University of Cambridge
-I conducted supervisions on quantitative research methods and secondary data analysis to students on the [MPhil in Population Health Sciences](https://www.phs.masters.cam.ac.uk) course.
-
-## The University of British Columbia
-During the final year of my undergraduate studies, I designed and coordinated a [student directed seminar](https://students.ubc.ca/enrolment/courses/student-directed-seminars) on [modernist literature and obscenity law](https://blogs.ubc.ca/booksontrial).
