@@ -1,15 +1,14 @@
 ---
 title: Hello World!
+author: Justin Yang
 date: '2022-03-21'
-
-draft: false
-toc: false
+slug: 
+categories: [Announcements]
+tags: []
+toc: no
 output:
   html_document:
     keep_md: yes  
-
-categories:
-  - Announcements
 ---
 
 Hello! Welcome to my new personal academic landing page. Having previously tried [Hugo Academic](https://academic-demo.netlify.app) and [al-folio](https://github.com/alshedivat/al-folio), both of which were very nice, I found that updating themes was annoying and bothersome sometimes, often requiring me to sit down and rebase/merge differences across code where I modified themes for my taste and purpose. 

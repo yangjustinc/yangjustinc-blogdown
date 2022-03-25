@@ -1,7 +1,7 @@
 ---
 title: 
-author: Justin Yang
-date: {{ .Date }}
+author: 
+date: 
 
 draft: true
 toc: false
