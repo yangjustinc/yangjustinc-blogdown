@@ -5,16 +5,12 @@ date: '2022-03-25'
 slug: 
 categories: [Administration]
 tags: []
-toc: yes
 output:
   html_document:
     keep_md: yes
 ---
 
 
-<div id="TOC">
-
-</div>
 
 <p>I’ve had a few days to get used to Blogdown, Hugo, and Xmin now, and of course I immediately took to tinkering. This is just a short post to highlight some of the changes I’ve made and to whom I owe thanks.</p>
 <div id="last-things-first-footnotes-that-is" class="section level2">
@@ -32,13 +28,37 @@ output:
 library(tidyverse)
 
 publications &lt;- as_tibble(get_publications(&quot;o-MsbBYAAAAJ&quot;)) %&gt;%
-  arrange(desc(year)) %&gt;% 
-  mutate(author=str_replace_all(author, &quot;([A-Z]) ([A-Z]) &quot;, &quot;\\1\\2 &quot;),
-     author=str_replace_all(author, &quot;, \\.\\.\\.&quot;, &quot; et al&quot;),
-     author=str_replace_all(author, &quot;JC Yang&quot;, &quot;**JC Yang**&quot;),
-     author=str_replace_all(author, &quot;J Yang&quot;, &quot;**J Yang**&quot;), 
-     title=str_replace_all(title, &quot;:.+&quot;, &quot;&quot;)) %&gt;%
-  mutate(citation = paste0(author,&quot;. &quot;,&quot;(&quot;,year,&quot;).&quot;,&quot; &quot;,&quot;[&quot;,title,&quot;]&quot;,&quot;(https://scholar.google.com/scholar?oi=bibs&amp;cluster=&quot;,cid,&quot;&amp;btnI=1&amp;hl=en)&quot;,&quot;. &quot;,&quot;*&quot;,journal,&quot;*&quot;,&quot; &quot;,number,&quot;.&quot;)) %&gt;%
+  arrange(desc(year)) %&gt;%
+  mutate(
+    author = str_replace_all(author, &quot;([A-Z]) ([A-Z]) &quot;, &quot;\\1\\2 &quot;),
+    author = str_replace_all(author, &quot;, \\.\\.\\.&quot;, &quot; et al&quot;),
+    author = str_replace_all(author, &quot;JC Yang&quot;, &quot;**JC Yang**&quot;),
+    author = str_replace_all(author, &quot;J Yang&quot;, &quot;**J Yang**&quot;),
+    title = str_replace_all(title, &quot;:.+&quot;, &quot;&quot;)
+  ) %&gt;%
+  mutate(
+    citation = paste0(
+      author,
+      &quot;. &quot;,
+      &quot;(&quot;,
+      year,
+      &quot;).&quot;,
+      &quot; &quot;,
+      &quot;[&quot;,
+      title,
+      &quot;]&quot;,
+      &quot;(https://scholar.google.com/scholar?oi=bibs&amp;cluster=&quot;,
+      cid,
+      &quot;&amp;btnI=1&amp;hl=en)&quot;,
+      &quot;. &quot;,
+      &quot;*&quot;,
+      journal,
+      &quot;*&quot;,
+      &quot; &quot;,
+      number,
+      &quot;.&quot;
+    )
+  ) %&gt;%
   select(citation)
 
 publications %&gt;% knitr::kable(&quot;html&quot;, col.names = NULL)</code></pre>
@@ -68,7 +88,10 @@ get_title_from_issn &lt;- function(issn) {
     }
   )
 }
-journal_names &lt;-</code></pre>
+journal_names &lt;-
+  reviews %&gt;% purrr::map(~ get_title_from_issn(.x)) %&gt;% unlist() %&gt;% as_tibble() %&gt;% drop_na() %&gt;% arrange(value) %&gt;% mutate(value = str_squish(value)) %&gt;% pivot_wider(names_from = value)
+
+cat(paste0(&quot;- &quot;, names(journal_names)), sep = &quot;\n&quot;)</code></pre>
 </div>
 <div id="ill-show-you-mine-you-show-me-yours" class="section level2">
 <h2>I’ll Show You Mine, You Show Me Yours</h2>
@@ -287,8 +310,8 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
 <pre class="html"><code>&lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt;
 &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
 </div>
-<div id="talk-to-me" class="section level2">
-<h2>Talk to Me</h2>
+<div id="talk-nerdy-to-me" class="section level2">
+<h2>Talk Nerdy to Me</h2>
 <p>Finally, I didn’t want too much clutter on my pages, but I didn’t mind having a dialogue with people with respect to these notes and with presentations. I came across <a href="https://www.mpaulacaldas.com/post/2020/03/25/hello-hugo-xmin-comments/">María Paula’s great guide to getting utteranc.es set up</a> and it worked like a charm! All I had to do was added the following to my notes and presentations pages:</p>
 <pre class="html"><code>{{ if not .Params.disable_comments }}
 &lt;script src=&quot;https://utteranc.es/client.js&quot;
@@ -298,8 +321,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
         theme=&quot;github-light&quot;
         crossorigin=&quot;anonymous&quot;
         async&gt;
-&lt;/script&gt;
-          {{ end }}</code></pre>
+&lt;/script&gt;</code></pre>
 </div>
 <div id="final-thoughts" class="section level2">
 <h2>Final Thoughts</h2>

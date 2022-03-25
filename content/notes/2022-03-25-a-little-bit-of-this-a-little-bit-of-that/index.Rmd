@@ -5,7 +5,6 @@ date: '2022-03-25'
 slug: 
 categories: [Administration]
 tags: []
-toc: yes
 output:
   html_document:
     keep_md: yes
@@ -32,13 +31,37 @@ library(scholar)
 library(tidyverse)
 
 publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
-  arrange(desc(year)) %>% 
-  mutate(author=str_replace_all(author, "([A-Z]) ([A-Z]) ", "\\1\\2 "),
-     author=str_replace_all(author, ", \\.\\.\\.", " et al"),
-     author=str_replace_all(author, "JC Yang", "**JC Yang**"),
-     author=str_replace_all(author, "J Yang", "**J Yang**"), 
-     title=str_replace_all(title, ":.+", "")) %>%
-  mutate(citation = paste0(author,". ","(",year,")."," ","[",title,"]","(https://scholar.google.com/scholar?oi=bibs&cluster=",cid,"&btnI=1&hl=en)",". ","*",journal,"*"," ",number,".")) %>%
+  arrange(desc(year)) %>%
+  mutate(
+    author = str_replace_all(author, "([A-Z]) ([A-Z]) ", "\\1\\2 "),
+    author = str_replace_all(author, ", \\.\\.\\.", " et al"),
+    author = str_replace_all(author, "JC Yang", "**JC Yang**"),
+    author = str_replace_all(author, "J Yang", "**J Yang**"),
+    title = str_replace_all(title, ":.+", "")
+  ) %>%
+  mutate(
+    citation = paste0(
+      author,
+      ". ",
+      "(",
+      year,
+      ").",
+      " ",
+      "[",
+      title,
+      "]",
+      "(https://scholar.google.com/scholar?oi=bibs&cluster=",
+      cid,
+      "&btnI=1&hl=en)",
+      ". ",
+      "*",
+      journal,
+      "*",
+      " ",
+      number,
+      "."
+    )
+  ) %>%
   select(citation)
 
 publications %>% knitr::kable("html", col.names = NULL)
@@ -73,6 +96,9 @@ get_title_from_issn <- function(issn) {
   )
 }
 journal_names <-
+  reviews %>% purrr::map(~ get_title_from_issn(.x)) %>% unlist() %>% as_tibble() %>% drop_na() %>% arrange(value) %>% mutate(value = str_squish(value)) %>% pivot_wider(names_from = value)
+
+cat(paste0("- ", names(journal_names)), sep = "\n")
 ```
 
 ## I'll Show You Mine, You Show Me Yours
@@ -301,7 +327,7 @@ Hugo-Academic makes great use of Font Awesome and Academicons, and though I'm aw
 <link href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css" rel="stylesheet">
 ```
 
-## Talk to Me
+## Talk Nerdy to Me
 Finally, I didn't want too much clutter on my pages, but I didn't mind having a dialogue with people with respect to these notes and with presentations. I came across [María Paula's great guide to getting utteranc.es set up](https://www.mpaulacaldas.com/post/2020/03/25/hello-hugo-xmin-comments/) and it worked like a charm! All I had to do was added the following to my notes and presentations pages:
 
 ```{html, eval = FALSE}
@@ -314,7 +340,6 @@ Finally, I didn't want too much clutter on my pages, but I didn't mind having a 
         crossorigin="anonymous"
         async>
 </script>
-          {{ end }}
 ```
 
 ## Final Thoughts

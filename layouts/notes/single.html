@@ -25,7 +25,7 @@
   {{ if .File.Path }}
     {{ $.Scratch.Set "FilePath" .File.Path }}
     {{ $RmdFile := (print .File.BaseFileName ".Rmd") }}
-    {{ $Files := readDir (print "content//" .File.Dir) }}
+    {{ $Files := readDir (print "content/" .File.Dir) }}
     {{ if (where $Files "Name" $RmdFile) }}
       {{ $.Scratch.Set "FilePath" (print .File.Dir $RmdFile) }}
     {{ else }}
@@ -41,10 +41,6 @@
   {{ end }}
 </p>
 </div>
-
-{{ if .Params.toc }}
-{{ .TableOfContents }}
-{{ end }}
 
 <main>
 {{ .Content }}
