@@ -6,20 +6,55 @@ output:
     keep_md: yes
 ---
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
 library(scholar)
 library(tidyverse)
 
 publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
-  arrange(desc(year)) %>% 
-  mutate(author=str_replace_all(author, "([A-Z]) ([A-Z]) ", "\\1\\2 "),
-     author=str_replace_all(author, ", \\.\\.\\.", " et al"),
-     author=str_replace_all(author, "JC Yang", "**JC Yang**"),
-     author=str_replace_all(author, "J Yang", "**J Yang**"), 
-     title=str_replace_all(title, ":.+", "")) %>%
-  mutate(citation = paste0(author,". ","(",year,")."," ","[",title,"]","(https://scholar.google.com/scholar?oi=bibs&cluster=",cid,"&btnI=1&hl=en)",". ","*",journal,"*"," ",number,".")) %>%
-  select(citation)
+  arrange(desc(year)) %>%
+  mutate(
+    author = str_replace_all(author, "([A-Z]) ([A-Z]) ", "\\1\\2 "),
+    author = str_replace_all(author, ", \\.\\.\\.", " et al"),
+    author = str_replace_all(author, "JC Yang", "**JC Yang**"),
+    author = str_replace_all(author, "J Yang", "**J Yang**"),
+    title = str_replace_all(title, ":.+", "")
+  ) %>%
+  split(desc(.$year)) %>%
+  map(function(x) {
+    x <- x %>%
+      mutate(
+        citation = paste0(
+          author,
+          ". ",
+          "(",
+          year,
+          ").",
+          " ",
+          "[",
+          title,
+          "]",
+          "(https://scholar.google.com/scholar?oi=bibs&cluster=",
+          cid,
+          "&btnI=1&hl=en)",
+          ". ",
+          "*",
+          journal,
+          "*",
+          " ",
+          number,
+          "."
+        )
+      ) %>%
+      select(citation)
+    return(x)
+  })
 
-publications %>% knitr::kable("html", col.names = NULL)
-```
+publications <-
+  map2(substring(names(publications), 2) %>% paste0("<h2>", ., "</h2>"),
+       publications,
+       c) %>% unlist %>% as_tibble() %>% pivot_wider(names_from = value)
+
+cat(paste0(publications), sep = "  \n")
+```  
+  
 Last retrieved from <a href="https://scholar.google.com/citations?user=o-MsbBYAAAAJ"><i class="ai ai-google-scholar"></i></a> on `r format(Sys.time(), '%d %B, %Y')`
