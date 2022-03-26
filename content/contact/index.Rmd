@@ -14,7 +14,7 @@ London W1T 7NF
 United Kingdom  
 <justin.yang@ucl.ac.uk>  
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width="50%"}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(leaflet)
 leaflet() %>%
   addProviderTiles(providers$CartoDB.Positron) %>%
