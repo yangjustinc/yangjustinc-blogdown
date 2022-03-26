@@ -3,14 +3,17 @@ name: Justin C
 surname: Yang
 position: "Research Fellow"
 address: "Division of Psychiatry, University College London"
-www: justinyang.me
+www: homepages.ucl.ac.uk/~rejujcy
 email: "justin.yang@ucl.ac.uk"
 twitter: JustinCYang
 github: yangjustinc
 linkedin: yangjustinc
 date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 414141
 output: vitae::awesomecv
 ---
+# Research Interests
+Psychiatric epidemiology; observational epidemiology; pharmacoepidemiology; substance-related use disorders; severe mental illness; psychosis; social determinants of health
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
@@ -21,6 +24,20 @@ library(rorcid)
 library(scholar)
 ```
 
+# Experience
+```{r experience}
+employ <- do.call("rbind",
+  rorcid::orcid_employments("0000-0003-2881-4906")$`0000-0003-2881-4906`$`affiliation-group`$summaries
+)
+employ %>%
+  detailed_entries(
+    with = `employment-summary.organization.name`,
+    when = glue::glue("{`employment-summary.start-date.year.value`} - Present"),
+    what = `employment-summary.role-title`,
+    where = glue::glue("{`employment-summary.organization.address.city`}, {`employment-summary.organization.address.country`}")
+  )
+```
+
 # Education
 ```{r education}
 edu <- do.call("rbind",
@@ -28,23 +45,46 @@ edu <- do.call("rbind",
 )
 edu %>%
   detailed_entries(
-    with = `education-summary.role-title`,
-    where = glue::glue("{`education-summary.start-date.year.value`} - {`education-summary.end-date.year.value`}"),
-    what = `education-summary.organization.name`,
-    when = `education-summary.organization.address.city`
+    with = `education-summary.organization.name`,
+    when = glue::glue("{`education-summary.start-date.year.value`} - {`education-summary.end-date.year.value`}"),
+    what = `education-summary.role-title`,
+    where = glue::glue("{`education-summary.organization.address.city`}, {`education-summary.organization.address.country`}")
   )
 ```
 
 # Publications
-```{r publications}
-scholar::get_publications("o-MsbBYAAAAJ") %>% 
+```{r publications, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
+library(scholar)
+library(tidyverse)
+
+publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
   arrange(desc(year)) %>%
-  mutate(author=stringr::str_replace_all(author, ", \\.\\.\\.", " et al"),
-          title=stringr::str_replace_all(title, ":.+", "")) %>%
-  detailed_entries(
-    with = title,
-    where = year,
-    when = journal,
-    what = author
-    )
+  mutate(
+    author = str_replace_all(author, "([A-Z]) ([A-Z]) ", "\\1\\2 "),
+    author = str_replace_all(author, ", \\.\\.\\.", " et al"),
+    author = str_replace_all(author, "JC Yang", "**JC Yang**"),
+    author = str_replace_all(author, "J Yang", "**J Yang**"),
+    title = str_replace_all(title, ":.+", "")) %>%
+      mutate(citation = paste0(
+          author,
+          ". ",
+          "(",
+          year,
+          ").",
+          " ",
+          title,
+          ". ",
+          "*",
+          journal,
+          "*",
+          " ",
+          number,
+          "."
+        )) %>%
+      select(citation)
+
+publications <- publications %>% unlist %>% as_tibble() %>% pivot_wider(names_from = value)
+
+cat(paste0(publications), sep = "  \n  \n")
+
 ```

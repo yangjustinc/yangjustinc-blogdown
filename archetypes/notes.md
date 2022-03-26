@@ -1,12 +1,12 @@
 ---
 title: 
+author:
 date:
-
-draft: true
+slug: 
+categories: []
+tags: []
 output:
   html_document:
-    keep_md: yes  
-
-categories:
+    keep_md: yes
 ---
 

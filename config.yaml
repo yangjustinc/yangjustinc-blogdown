@@ -1,9 +1,8 @@
-baseurl: "https://justinyang.me"
+baseurl: "/"
 languageCode: "en-us"
 title: "Justin C Yang, PhD"
 theme: "hugo-xmin"
 googleAnalytics: "G-V3PM9R07G8"
-# disqusShortname: ""
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 footnotereturnlinkcontents: "↩"
 
@@ -31,9 +30,12 @@ menu:
     - name: Notes
       url: "notes/"
       weight: 6
+    - name: Brief CV
+      url: "/cv/cv.pdf"
+      weight: 7
     - name: Contact
       url: "contact/"
-      weight: 7
+      weight: 8
 
 params:
   description: "Justin C Yang, PhD"
