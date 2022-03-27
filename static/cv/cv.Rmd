@@ -12,9 +12,6 @@ date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: 414141
 output: vitae::awesomecv
 ---
-# Research Interests
-Psychiatric epidemiology; observational epidemiology; pharmacoepidemiology; substance-related use disorders; severe mental illness; psychosis; social determinants of health
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(dplyr)
@@ -23,21 +20,6 @@ library(vitae)
 library(rorcid)
 library(scholar)
 ```
-
-# Experience
-```{r experience}
-employ <- do.call("rbind",
-  rorcid::orcid_employments("0000-0003-2881-4906")$`0000-0003-2881-4906`$`affiliation-group`$summaries
-)
-employ %>%
-  detailed_entries(
-    with = `employment-summary.organization.name`,
-    when = glue::glue("{`employment-summary.start-date.year.value`} - Present"),
-    what = `employment-summary.role-title`,
-    where = glue::glue("{`employment-summary.organization.address.city`}, {`employment-summary.organization.address.country`}")
-  )
-```
-
 # Education
 ```{r education}
 edu <- do.call("rbind",
@@ -50,8 +32,20 @@ edu %>%
     what = `education-summary.role-title`,
     where = glue::glue("{`education-summary.organization.address.city`}, {`education-summary.organization.address.country`}")
   )
-```
-
+```  
+# Professional Appointments
+```{r experience}
+employ <- do.call("rbind",
+  rorcid::orcid_employments("0000-0003-2881-4906")$`0000-0003-2881-4906`$`affiliation-group`$summaries
+)
+employ %>%
+  detailed_entries(
+    with = `employment-summary.organization.name`,
+    when = glue::glue("{`employment-summary.start-date.year.value`} - Present"),
+    what = `employment-summary.role-title`,
+    where = glue::glue("{`employment-summary.organization.address.city`}, {`employment-summary.organization.address.country`}")
+  )
+```  
 # Publications
 ```{r publications, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
 library(scholar)
