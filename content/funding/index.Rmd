@@ -9,13 +9,10 @@ output:
 library(tidyverse)
 library(janitor)
 library(rorcid)
-library(rcrossref)
-library(stringi)
 
-orcid <- "0000-0001-8130-5137" # Set this to be the correct ORCID
+orcid <- "0000-0001-8130-5137"
 
-# Below won't work if any fields are missing (funding amount, etc)
-# Good to have data pull from Dimensions to ORCID
+# Must have all variables or function will report error
 
 funding <-  do.call("rbind",
   orcid_fundings(orcid)[[1]]$group$`funding-summary`) %>%
@@ -30,13 +27,18 @@ funding <-  do.call("rbind",
   group_by(put_code) %>%
   mutate(funding_amount = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$value,
          funding_currency = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$`currency-code`,
-         description = orcid_fundings(orcid, put_code = put_code)[[1]]$`short-description`
+         description = orcid_fundings(orcid, put_code = put_code)[[1]]$`short-description`,
+         url = orcid_fundings(orcid, put_code = put_code)[[1]]$`external-ids`$`external-id`$`external-id-url.value`
          ) %>%
   ungroup() %>%
   mutate(funding = paste0(
+    "<a href = \"",
+    url,
+    "\">",
     "<h2>",
     title,
     "</h2>",
+    "</a>",
     "<em>",
     "Funded by ",
     funder_name,
@@ -50,7 +52,7 @@ funding <-  do.call("rbind",
     year_end,
     "</em>",
     "<p />",
-    description
+    str_squish(description)
   )) %>%
   arrange(desc(year_start)) %>% 
   select(funding)
