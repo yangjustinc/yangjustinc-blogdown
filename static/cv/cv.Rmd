@@ -21,7 +21,7 @@ library(rorcid)
 library(scholar)
 ```
 # Education
-```{r education}
+```{r}
 edu <- do.call("rbind",
   rorcid::orcid_educations("0000-0003-2881-4906")$`0000-0003-2881-4906`$`affiliation-group`$summaries
 )
@@ -34,7 +34,7 @@ edu %>%
   )
 ```  
 # Professional Appointments
-```{r experience}
+```{r}
 employ <- do.call("rbind",
   rorcid::orcid_employments("0000-0003-2881-4906")$`0000-0003-2881-4906`$`affiliation-group`$summaries
 )
@@ -47,15 +47,20 @@ employ %>%
   )
 ```  
 # Publications
-```{r publications, results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
+```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 library(scholar)
 library(tidyverse)
 
 publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
   arrange(desc(year)) %>%
+  mutate(author_long =
+           case_when(str_detect(author, pattern = "\\.\\.\\.$") ~ 1, TRUE ~ 0)) %>%
+  mutate(author = case_when(
+    author_long == 1 ~ get_complete_authors("o-MsbBYAAAAJ", pubid),
+    TRUE ~ author
+  )) %>%
   mutate(
     author = str_replace_all(author, "([A-Z]) ([A-Z]) ", "\\1\\2 "),
-    author = str_replace_all(author, ", \\.\\.\\.", " et al"),
     author = str_replace_all(author, "JC Yang", "**JC Yang**"),
     author = str_replace_all(author, "J Yang", "**J Yang**"),
     title = str_replace_all(title, ":.+", "")) %>%
@@ -78,7 +83,47 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
       select(citation)
 
 publications <- publications %>% unlist %>% as_tibble() %>% pivot_wider(names_from = value)
-
+```
+```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
 cat(paste0(publications), sep = "  \n  \n")
 
-```
+```  
+
+<!-- # Funding -->
+
+```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
+# library(tidyverse)
+# library(janitor)
+# library(rorcid)
+# 
+# orcid <- "0000-0001-8130-5137"
+# 
+# # Must have all variables or function will report error
+# 
+# funding <-  do.call("rbind",
+#   orcid_fundings(orcid)[[1]]$group$`funding-summary`) %>%
+#   clean_names() %>%
+#   select(put_code, title_title_value, start_date_year_value, end_date_year_value, organization_name) %>%
+#   rename(
+#     title = title_title_value,
+#     year_start = start_date_year_value,
+#     year_end = end_date_year_value,
+#     funder_name = organization_name
+#   ) %>% 
+#   group_by(put_code) %>%
+#   mutate(funding_amount = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$value,
+#          funding_currency = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$`currency-code`,
+#          description = orcid_fundings(orcid, put_code = put_code)[[1]]$`short-description`,
+#          url = orcid_fundings(orcid, put_code = put_code)[[1]]$`external-ids`$`external-id`$`external-id-url.value`
+#          ) %>%
+#   ungroup()
+# 
+# funding %>%
+#   detailed_entries(
+#     with = funder_name,
+#     when = paste0(year_start," - ",year_end),
+#     what = title,
+#     where = paste0(funding_currency," ",funding_amount),
+#     why = str_squish(description)
+#     )
+```  
