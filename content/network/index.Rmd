@@ -89,7 +89,7 @@ Noax <- list(
   autorange = TRUE
 )
 
-ggplotly(ggnet2(statnet, label =  TRUE, node.color = "membership", label.size = 4, palette = "Set1")) %>%
+ggplotly(ggnet2(statnet, label =  TRUE, node.color = "membership", label.size = 4, palette = "Pastel1")) %>%
   layout(hovermode = FALSE, showlegend = FALSE, xaxis = Noax, yaxis = Noax)
 
 ```  
