@@ -73,11 +73,7 @@ modules <- cluster_fast_greedy(igraph)
 
 V(igraph)$color=modules$membership
 
-plot(igraph, col = modules, vertex.size = 4, vertex.label = NA)
-
 statnet %v% "membership" <- modules$membership
-
-
 ```
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
 Noax <- list(
