@@ -1,4 +1,4 @@
-baseurl: "/"
+baseurl: "https://justinyang.me"
 languageCode: "en-us"
 title: "Justin C Yang, PhD"
 theme: "hugo-xmin"

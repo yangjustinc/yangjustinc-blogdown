@@ -5,6 +5,7 @@ output:
   html_document:
     keep_md: yes
 ---
+This network diagram shows the relationships among coauthors for publications on which I am a named author or coauthor. Colours represent distinct dense subgraphs observed when optimising a modularity score and sizes represent the relative occurrences of coauthorship by quartile.
 
 ```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 library(scholar)
@@ -18,6 +19,7 @@ library(dplyr)
 library(stringr)
 library(plotly)
 library(GGally)
+library(ggrepel)
 
 google_id <- "o-MsbBYAAAAJ"
 
@@ -29,7 +31,8 @@ publications = get_publications(google_id) %>%
     ellipsis == 1 ~ get_complete_authors(google_id, pubid),
     TRUE ~ author
   )) %>%
-  mutate(author = str_replace(author, "J Yang", "JC Yang"))
+  mutate(author = str_replace(author, "J Yang", "JC Yang")) %>% 
+  mutate(author = str_replace(author, "Rv Kessel", "R van Kessel"))
 
 coauthors <-
   sapply(as.character(publications$author), strsplit, ", ")
@@ -42,10 +45,10 @@ bipartite.edges <-
     coauthors.unique %in% x
   })
 bipartite.edges <-
-  do.call("cbind", bipartite.edges) # dimension is number of authors x number of papers
+  do.call("cbind", bipartite.edges)
 rownames(bipartite.edges) <- coauthors.unique
 
-mat <- bipartite.edges %*% t(bipartite.edges) #bipartite to unimode
+mat <- bipartite.edges %*% t(bipartite.edges)
 mat <- mat[order(rownames(mat)), order(rownames(mat))]
 
 statnet <-
@@ -54,25 +57,12 @@ statnet <-
              names.eval = "edge.lwd",
              ignore.eval = FALSE)
 
-plot.network(
-  statnet,
-  edge.col = "gray",
-  edge.lwd = "edge.lwd",
-  label = "vertex.names",
-  label.cex = .5,
-  label.pad = 0,
-  label.pos = 1
-)
-
 author.codegree <- mat["JC Yang", ]
 statnet %v% "size" = log(author.codegree) + .5
 
 igraph <- asIgraph(statnet)
-
 modules <- cluster_fast_greedy(igraph)
-
 V(igraph)$color=modules$membership
-
 statnet %v% "membership" <- modules$membership
 ```
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
@@ -85,7 +75,7 @@ Noax <- list(
   autorange = TRUE
 )
 
-ggplotly(ggnet2(statnet, label =  TRUE, node.color = "membership", label.size = 4, palette = "Pastel1")) %>%
+ggplotly(ggnet2(statnet, label =  TRUE, size = "degree", size.cut = 4, color = "membership", edge.color = 'lightgray', label.size = 3, palette = "Pastel1") + geom_label_repel((aes(label = label)))) %>%
   layout(hovermode = FALSE, showlegend = FALSE, xaxis = Noax, yaxis = Noax)
 
 ```  
