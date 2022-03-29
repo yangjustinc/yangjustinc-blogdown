@@ -5,7 +5,7 @@ output:
   html_document:
     keep_md: yes
 ---
-All publications are presented here with shortened titles, where available. Please see [here](/network) for a network diagram of my coauthorship network. Feel free to [contact](/contact) me if you are having trouble accessing any of my works or if you'd like to talk about working on something together. 
+All publications are presented here with shortened titles, where applicable. Please see [here](/network) for a network diagram of my coauthorship network. Feel free to [contact](/contact) me if you are having trouble accessing any of my works or if you'd like to talk about working on something together. 
 ```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 library(scholar)
 library(tidyverse)
