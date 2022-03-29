@@ -31,7 +31,7 @@ publications = get_publications(google_id) %>%
     ellipsis == 1 ~ get_complete_authors(google_id, pubid),
     TRUE ~ author
   )) %>%
-  mutate(author = str_replace(author, "J Yang", "JC Yang")) %>% 
+  mutate(author = str_replace(author, "J Yang", "JC Yang")) %>%
   mutate(author = str_replace(author, "Rv Kessel", "R van Kessel"))
 
 coauthors <-
@@ -57,12 +57,12 @@ statnet <-
              names.eval = "edge.lwd",
              ignore.eval = FALSE)
 
-author.codegree <- mat["JC Yang", ]
+author.codegree <- mat["JC Yang",]
 statnet %v% "size" = log(author.codegree) + .5
 
 igraph <- asIgraph(statnet)
 modules <- cluster_fast_greedy(igraph)
-V(igraph)$color=modules$membership
+V(igraph)$color = modules$membership
 statnet %v% "membership" <- modules$membership
 ```
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
@@ -75,8 +75,28 @@ Noax <- list(
   autorange = TRUE
 )
 
-ggplotly(ggnet2(statnet, label =  TRUE, size = "degree", size.cut = 4, color = "membership", edge.color = 'lightgray', label.size = 3, palette = "Pastel1", mode = "fruchtermanreingold", layout.par = list(cell.jitter = 1))) %>%
-  layout(hovermode = FALSE, showlegend = FALSE, xaxis = Noax, yaxis = Noax)
+ggplotly(
+  ggnet2(
+    statnet,
+    label =  TRUE,
+    size = "degree",
+    size.cut = 4,
+    color = "membership",
+    edge.color = 'lightgray',
+    label.size = 3,
+    palette = "Pastel1",
+    mode = "fruchtermanreingold",
+    layout.par = list(cell.jitter = 1)
+  )
+) %>%
+  layout(
+    hovermode = FALSE,
+    showlegend = FALSE,
+    xaxis = Noax,
+    yaxis = Noax,
+    dragmode = FALSE
+  ) %>% 
+  config(displayModeBar = FALSE)
 
 ```  
 
