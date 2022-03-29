@@ -75,7 +75,7 @@ Noax <- list(
   autorange = TRUE
 )
 
-ggplotly(ggnet2(statnet, label =  TRUE, size = "degree", size.cut = 4, color = "membership", edge.color = 'lightgray', label.size = 3, palette = "Pastel1") + geom_label_repel((aes(label = label)))) %>%
+ggplotly(ggnet2(statnet, label =  TRUE, size = "degree", size.cut = 4, color = "membership", edge.color = 'lightgray', label.size = 3, palette = "Pastel1", mode = "fruchtermanreingold", layout.par = list(cell.jitter = 1)) + geom_label_repel((aes(label = label)))) %>%
   layout(hovermode = FALSE, showlegend = FALSE, xaxis = Noax, yaxis = Noax)
 
 ```  
