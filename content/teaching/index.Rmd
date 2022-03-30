@@ -6,7 +6,18 @@ output:
     keep_md: yes
 ---
 ## University College London
-I'm a teaching assistant for the [Practical Statistics for Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research/PSBS0008) module on the [MSc in Mental Health Sciences Research](https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/mental-health-sciences-research-msc) course. I also mark for the [Current Research in Depression and Anxiety](https://www.ucl.ac.uk/psychiatry/mental-health-sciences-modules/current-research-depression-and-anxiety) and [Current Research in Psychosis and Bipolar Disorder](https://www.ucl.ac.uk/psychiatry/mental-health-sciences-modules/current-research-psychosis-and-bipolar-disorder) modules. I co-supervise MSc students completing their dissertations using the [Research Database at Camden & Islington NHS Foundation Trust](https://www.candi.nhs.uk/health-professionals/research/ci-research-database).
+I'm a teaching assistant for the [Practical Statistics for Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research/PSBS0008) module on the [MSc in Mental Health Sciences Research](https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/mental-health-sciences-research-msc) course. I also mark for the [Current Research in Depression and Anxiety](https://www.ucl.ac.uk/psychiatry/mental-health-sciences-modules/current-research-depression-and-anxiety) and [Current Research in Psychosis and Bipolar Disorder](https://www.ucl.ac.uk/psychiatry/mental-health-sciences-modules/current-research-psychosis-and-bipolar-disorder) modules. I co-supervise MSc students completing their dissertations using the [Research Database at Camden & Islington NHS Foundation Trust](https://www.candi.nhs.uk/health-professionals/research/ci-research-database).  
+
+### Students Supervised 
+- Matios Haile, Msc (Co-Supervisor; 2022 - Present)  
+- Nathalie Rich, ESRC DTP (Subsidiary supervisor; 2022 - Present)  
 
 ## Queen Mary University of London
-I'm a dissertation supervisor on the [MSc in Global Public Health and Policy](https://www.qmul.ac.uk/postgraduate/taught/coursefinder/courses/global-public-health-and-policy-msc) course where I mainly supervise projects pertaining to secondary data analysis, substance-related use disorders, and comparative health policy. I normally supervise 1-2 students per term.
+I'm a dissertation supervisor on the [MSc in Global Public Health and Policy](https://www.qmul.ac.uk/postgraduate/taught/coursefinder/courses/global-public-health-and-policy-msc) course where I mainly supervise projects pertaining to secondary data analysis, substance-related use disorders, and comparative health policy. I normally supervise 1-2 students per term.  
+
+### Students Supervised
+
+- Lea Bastian, MSc (Supervisor; 2022 - Present)  
+- Rutendo Florence Kudenga, MSc (Supervisor; 2021 - Present)  
+- Jon Daly, MSc (Supervisor; 2021 - Present)  
+- Yara Nassar, MSc (Supervisor; 2020-21)  
