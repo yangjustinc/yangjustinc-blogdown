@@ -5,10 +5,9 @@ output:
   html_document:
     keep_md: yes
 ---
-This network diagram shows my second-order coauthorship network, that is, coauthors with whom I share at least one publication and their coauthors on their own papers (provided they are registered on ORCID). Colours represent distinct dense subgraphs observed when optimising a modularity score.
-
-```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+```{r setup, include=FALSE}
 library(rorcid)
+library(scholar)
 
 library(tidyr)
 library(janitor)
@@ -23,7 +22,89 @@ library(statnet)
 library(visNetwork)
 library(plotly)
 library(GGally)
+```
 
+## First Order Network
+```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+google_id <- "o-MsbBYAAAAJ"
+
+publications = get_publications(google_id) %>%
+  clean_names() %>%
+  mutate(ellipsis =
+           case_when(str_detect(author, pattern = "\\.\\.\\.$") ~ 1, TRUE ~ 0)) %>%
+  mutate(author = case_when(
+    ellipsis == 1 ~ get_complete_authors(google_id, pubid),
+    TRUE ~ author
+  )) %>%
+  mutate(author = str_replace(author, "J Yang", "JC Yang")) %>%
+  mutate(author = str_replace(author, "Rv Kessel", "R van Kessel"))
+
+coauthors <-
+  sapply(as.character(publications$author), strsplit, ", ")
+coauthors <- lapply(coauthors, trimws)
+coauthors.unique <-
+  unique(unlist(coauthors))[order(unique(unlist(coauthors)))]
+
+bipartite.edges <-
+  lapply(coauthors, function(x) {
+    coauthors.unique %in% x
+  })
+bipartite.edges <-
+  do.call("cbind", bipartite.edges)
+rownames(bipartite.edges) <- coauthors.unique
+
+mat <- bipartite.edges %*% t(bipartite.edges)
+mat <- mat[order(rownames(mat)), order(rownames(mat))]
+
+statnet <-
+  as.network(mat,
+             directed = FALSE,
+             names.eval = "edge.lwd",
+             ignore.eval = FALSE)
+
+author.codegree <- mat["JC Yang",]
+statnet %v% "size" = log(author.codegree) + .5
+
+igraph <- asIgraph(statnet)
+modules <- cluster_fast_greedy(igraph)
+V(igraph)$color = modules$membership
+statnet %v% "membership" <- modules$membership
+```
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
+Noax <- list(
+  title = "",
+  zeroline = FALSE,
+  showline = FALSE,
+  showticklabels = FALSE,
+  showgrid = FALSE,
+  autorange = TRUE
+)
+
+ggplotly(
+  ggnet2(
+    statnet,
+    label =  TRUE,
+    size = "degree",
+    size.cut = 4,
+    color = "membership",
+    edge.color = 'lightgray',
+    label.size = 3,
+    palette = "Pastel1",
+    mode = "fruchtermanreingold",
+    layout.par = list(cell.jitter = 1)
+  )
+) %>%
+  layout(
+    hovermode = FALSE,
+    showlegend = FALSE,
+    xaxis = Noax,
+    yaxis = Noax,
+    dragmode = FALSE
+  )
+```  
+
+## Second Order Network
+```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 # target_orcid <- "0000-0003-2881-4906"
 # 
 # get_doi <- function(x) {
@@ -152,4 +233,4 @@ ggplotly(
   )
 ```  
 
-Last generated from <a href = "https://orcid.org/0000-0003-2881-4906"><i class="ai ai-orcid"></i></a> on `r format(Sys.time(), '%d %B, %Y')`
+Last generated from <a href="https://scholar.google.com/citations?user=o-MsbBYAAAAJ"><i class="ai ai-google-scholar"></i></a> and <a href = "https://orcid.org/0000-0003-2881-4906"><i class="ai ai-orcid"></i></a> on `r format(Sys.time(), '%d %B, %Y')`
