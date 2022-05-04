@@ -21,9 +21,9 @@ menu:
     # - name: Funding
     #   url: "funding/"
     #   weight: 3      
-    - name: Network
-      url: "network/"
-      weight: 4
+    # - name: Network
+    #   url: "network/"
+    #   weight: 4
     - name: Presentations
       url: "presentations/"
       weight: 5

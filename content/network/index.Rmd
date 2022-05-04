@@ -28,15 +28,15 @@ This network diagram draws on data retrieved from Google Scholar includes all co
 ```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 google_id <- "o-MsbBYAAAAJ"
 
-publications = get_publications(google_id) %>%
-  clean_names() %>%
+publications = get_publications(google_id) |>
+  clean_names() |>
   mutate(ellipsis =
-           case_when(str_detect(author, pattern = "\\.\\.\\.$") ~ 1, TRUE ~ 0)) %>%
+           case_when(str_detect(author, pattern = "\\.\\.\\.$") ~ 1, TRUE ~ 0)) |>
   mutate(author = case_when(
     ellipsis == 1 ~ get_complete_authors(google_id, pubid),
     TRUE ~ author
-  )) %>%
-  mutate(author = str_replace(author, "J Yang", "JC Yang")) %>%
+  )) |>
+  mutate(author = str_replace(author, "J Yang", "JC Yang")) |>
   mutate(author = str_replace(author, "Rv Kessel", "R van Kessel"))
 
 coauthors <-
@@ -93,7 +93,7 @@ ggplotly(
     mode = "fruchtermanreingold",
     layout.par = list(cell.jitter = 1)
   )
-) %>%
+) |>
   layout(
     hovermode = FALSE,
     showlegend = FALSE,
@@ -106,99 +106,109 @@ ggplotly(
 ## Second-Order Network
 This network diagram draws on data retrieved from ORCID includes all coauthors from publications on which I am a listed author, as well as their coauthors from their own publications (but limited to only those with an ORCID profile). Colours indicate dense subgraphs identified by greedy optimisation of modularity score.  
 ```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
-# target_orcid <- "0000-0003-2881-4906"
-# 
-# get_doi <- function(x) {
-#   list.x <- orcid_works(x)[[1]]$works$`external-ids.external-id`
-#   list.x <- list.x[lapply(list.x,length)>0]
-#   do.call(rbind.data.frame, lapply(list.x, function(x) {
-#     if (length(x) == 0 | (!'doi' %in% x[, 1]) | ('isbn' %in% x[, 1])) {
-#       data.frame(value = NA)
-#     } else{
-#       data.frame(value = x[which(x[, 1] %in% 'doi'), 2])
-#     }
-#   }))
-# }
-# 
-# get_papers <- function(x) {
-#   papers <- data.frame(doi   = get_doi(x))
-# 
-#   paper.doi <- lapply(1:nrow(papers), function(x) {
-#     if (!is.na(papers[x, 1]))return(orcid_doi(dois = check_dois(papers[x, 1])$good, fuzzy = FALSE))
-#     return(NA)
-#   })
-# 
-#   your.papers <- lapply(1:length(paper.doi), function(x) {
-#     if (length(paper.doi[[x]]) == 0 || is.na(paper.doi[[x]])) {
-#       data.frame(doi = NA, orcid = NA)
-#     } else {
-#       data.frame(
-#         doi = papers[x, 1],
-#         orcid = paper.doi[[x]][[1]]$`orcid-identifier.path`,
-#         stringsAsFactors = FALSE
-#       )
-#     }
-#   })
-# 
-#   do.call(rbind.data.frame, your.papers)
-# 
-# }
-# 
-# paper.set <- get_papers(target_orcid) %>% drop_na()
-# 
-# unique.orcids <- unique(paper.set$orcid)
-# 
-# all.coauthors <- list()
-# 
-# for(i in 1:length(unique.orcids)){
-#   cat("Processing", i, "of", length(unique.orcids), ", orcid = ", unique.orcids[i], "\n")
-#   all.coauthors[[i]] <- get_papers(unique.orcids[i])
-# }
-# 
-# all.df <- do.call(rbind.data.frame, all.coauthors)
-# 
-# all.df.names <- all.df %>% select(orcid) %>% distinct(orcid) %>%
-#   drop_na() %>%
-#   rowwise() %>%
-#   mutate(name = str_to_title(str_squish(paste0(orcid_id(orcid)[[1]]$name$`given-names`$value, " ",
-#                       orcid_id(orcid)[[1]]$name$`family-name`$value)))) %>%
-#   ungroup()
-# 
-# all.df <- all.df %>% left_join(all.df.names)
-# all.df <- na.omit(all.df[!duplicated(all.df),])
-# 
-# 
-# all.pairs <- matrix(ncol = length(unique(all.df$name)),
-#                     nrow = length(unique(all.df$name)),
-#                     dimnames = list(unique(all.df$name),unique(all.df$name)), 0)
-# unique.dois <- unique(as.character(all.df$doi))
-# 
-# all.pairs <- all.pairs[rowSums(all.pairs)>0, colSums(all.pairs)>0]
-# 
-# diag(all.pairs) <- 0
-# 
-# statnet <-
-#   as.network(all.pairs,
-#              directed = FALSE,
-#              names.eval = "edge.lwd",
-#              ignore.eval = FALSE)
-# 
-# igraph <- asIgraph(statnet)
-# 
-# modules <- cluster_fast_greedy(igraph)
-# V(igraph)$color = modules$membership
-# statnet %v% "membership" <- modules$membership
-# 
-# save(
-#   all.coauthors,
-#   all.df,
-#   all.pairs,
-#   modules,
-#   unique.dois,
-#   unique.orcids,
-#   igraph,
-#   statnet,
-#   file = "output.rda")
+target_orcid <- "0000-0003-2881-4906"
+
+get_doi <- function(x) {
+  list.x <- orcid_works(x)[[1]]$works$`external-ids.external-id`
+  list.x <- list.x[lapply(list.x,length)>0]
+  do.call(rbind.data.frame, lapply(list.x, function(x) {
+    if (length(x) == 0 | (!'doi' %in% x[, 1]) | ('isbn' %in% x[, 1])) {
+      data.frame(value = NA)
+    } else{
+      data.frame(value = x[which(x[, 1] %in% 'doi'), 2])
+    }
+  }))
+}
+
+get_papers <- function(x) {
+  papers <- data.frame(doi   = get_doi(x))
+  
+  paper.doi <- lapply(1:nrow(papers), function(x) {
+    if (!is.na(papers[x, 1]))return(orcid_doi(dois = check_dois(papers[x, 1])$good, fuzzy = FALSE))
+    return(NA)
+  })
+  
+  your.papers <- lapply(1:length(paper.doi), function(x) {
+    if (length(paper.doi[[x]]) == 0 || is.na(paper.doi[[x]])) {
+      data.frame(doi = NA, orcid = NA)
+    } else {
+      data.frame(
+        doi = papers[x, 1],
+        orcid = paper.doi[[x]][[1]]$`orcid-identifier.path`,
+        stringsAsFactors = FALSE
+      )
+    }
+  })
+  
+  do.call(rbind.data.frame, your.papers)
+  
+}
+
+paper.set <- get_papers(target_orcid) |> drop_na()
+
+unique.orcids <- unique(paper.set$orcid)
+
+all.coauthors <- list()
+
+for(i in 1:length(unique.orcids)){
+  cat("Processing", i, "of", length(unique.orcids), ", orcid = ", unique.orcids[i], "\n")
+  all.coauthors[[i]] <- get_papers(unique.orcids[i])
+}
+
+all.df <- do.call(rbind.data.frame, all.coauthors) |>
+  remove_empty("rows")
+
+all.df.names <- all.df |> select(orcid) |> 
+  drop_na() |>
+  rowwise() |>
+  mutate(name = str_to_title(str_squish(paste0(orcid_id(orcid)[[1]]$name$`given-names`$value, " ",
+                                               orcid_id(orcid)[[1]]$name$`family-name`$value)))) |>
+  ungroup() |>
+  filter(name != "")
+
+all.df <- all.df |> left_join(all.df.names)
+all.df <- na.omit(all.df[!duplicated(all.df),])
+
+all.pairs <- matrix(ncol = length(unique(all.df$name)),
+                    nrow = length(unique(all.df$name)),
+                    dimnames = list(unique(all.df$name),unique(all.df$name)), 0)
+
+unique.dois <- unique(as.character(all.df$doi))
+
+for(i in 1:length(unique.dois)){
+  doi <- unique.dois[i]
+  
+  all.pairs[all.df$name[all.df$doi %in% doi],all.df$name[all.df$doi %in% doi]] <- 
+    all.pairs[all.df$name[all.df$doi %in% doi],all.df$name[all.df$doi %in% doi]] + 1
+  
+}
+
+all.pairs <- all.pairs[rowSums(all.pairs)>0, colSums(all.pairs)>0]
+
+diag(all.pairs) <- 0
+
+statnet <-
+  as.network(all.pairs,
+             directed = FALSE,
+             names.eval = "edge.lwd",
+             ignore.eval = FALSE)
+
+igraph <- asIgraph(statnet)
+
+modules <- cluster_fast_greedy(igraph)
+V(igraph)$color = modules$membership
+statnet %v% "membership" <- modules$membership
+
+save(
+  all.coauthors,
+  all.df,
+  all.pairs,
+  modules,
+  unique.dois,
+  unique.orcids,
+  igraph,
+  statnet,
+  file = "output.rda")
 
 ```
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
@@ -220,11 +230,10 @@ ggplotly(
     color = "membership",
     edge.color = 'lightgray',
     label.size = 3,
-    palette = "Pastel1",
     mode = "fruchtermanreingold",
     layout.par = list(cell.jitter = 1)
   )
-) %>%
+) |>
   layout(
     hovermode = FALSE,
     showlegend = FALSE,
