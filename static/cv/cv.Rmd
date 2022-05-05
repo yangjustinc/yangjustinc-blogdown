@@ -22,10 +22,10 @@ library(scholar)
 ```
 # Education
 ```{r}
-edu <- do.call("rbind",
+educations <- do.call("rbind",
   rorcid::orcid_educations("0000-0003-2881-4906")$`0000-0003-2881-4906`$`affiliation-group`$summaries
 )
-edu %>%
+educations %>%
   detailed_entries(
     with = `education-summary.organization.name`,
     when = glue::glue("{`education-summary.start-date.year.value`} - {`education-summary.end-date.year.value`}"),
@@ -35,10 +35,10 @@ edu %>%
 ```  
 # Professional Appointments
 ```{r}
-employ <- do.call("rbind",
+employments <- do.call("rbind",
   rorcid::orcid_employments("0000-0003-2881-4906")$`0000-0003-2881-4906`$`affiliation-group`$summaries
 )
-employ %>%
+employments %>%
   detailed_entries(
     with = `employment-summary.organization.name`,
     when = glue::glue("{`employment-summary.start-date.year.value`} - Present"),
@@ -46,6 +46,19 @@ employ %>%
     where = glue::glue("{`employment-summary.organization.address.city`}, {`employment-summary.organization.address.country`}")
   )
 ```  
+# Service
+```{r}
+services <- do.call("rbind",
+  rorcid::orcid_services("0000-0003-2881-4906")$`0000-0003-2881-4906`$`affiliation-group`$summaries
+)
+services %>%
+  detailed_entries(
+    with = `service-summary.organization.name`,
+    when = glue::glue("{`service-summary.start-date.year.value`} - Present"),
+    what = `service-summary.role-title`,
+    where = glue::glue("{`service-summary.organization.address.city`}, {`service-summary.organization.address.country`}")
+  )
+```
 # Publications
 ```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 library(scholar)
@@ -90,7 +103,6 @@ cat(paste0(publications), sep = "  \n  \n")
 ```  
 
 <!-- # Funding -->
-
 ```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
 # library(tidyverse)
 # library(janitor)
