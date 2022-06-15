@@ -44,8 +44,10 @@ The page footer can be defined in `.Params.footer`, and the text is treated as M
 
 ```
 params:
-  footer: "&copy; [Yihui Xie](https://yihui.org) 2017 -- 2021"
+  footer: "&copy; [Yihui Xie](https://yihui.org) 2017 -- {Year}"
 ```
+
+Here `{Year}` means the year in which the site is built (usually the current year).
 
 # Custom layouts
 
@@ -53,7 +55,7 @@ There are two layout files under `layouts/partials/` that you may want to overri
 
 ```html
 <script defer src="//yihui.org/js/math-code.js"></script>
-<script defer src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+<script defer src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 <script defer src="//yihui.org/js/center-img.js"></script>
