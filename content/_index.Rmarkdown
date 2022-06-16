@@ -13,5 +13,5 @@ I'm a psychiatric epidemiologist in the [Division of Psychiatry](https://www.ucl
 I analyse electronic health records using epidemiological, causal inferential, and machine learning methods to understand patients accessing secondary mental health services, their care, and their health outcomes. I’m broadly interested in applying administrative and routinely collected data to understand and ameliorate health disparities and pharmacotherapy for mental conditions. To date, my work has focused on substance use disorders, severe mental disorders, and personality disorders. 
 
 <center>
-<a href = "/cv/cv.pdf"><i class="ai ai-cv fa-3x"></i></a> 
+<a href = "/cv/cv.pdf" aria-label="CV of Justin C Yang"><i class="ai ai-cv fa-3x"></i></a> 
 </center>
