@@ -61,5 +61,3 @@ publications <-
 ```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
 cat(paste0(publications), sep = "  \n")
 ```  
-
-Last retrieved from <a href="https://scholar.google.com/citations?user=o-MsbBYAAAAJ"><i class="ai ai-google-scholar"></i></a> on `r format(Sys.time(), '%d %B, %Y')`
