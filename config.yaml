@@ -30,9 +30,9 @@ menu:
     - name: Service
       url: "service/"
       weight: 6
-    - name: Notes
-      url: "notes/"
-      weight: 7
+    # - name: Notes
+    #   url: "notes/"
+    #   weight: 7
     - name: Contact
       url: "contact/"
       weight: 8
