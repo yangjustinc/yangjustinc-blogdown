@@ -5,15 +5,4 @@ output:
   html_document:
     keep_md: yes
 ---
-<center><img src="UCL.svg" style="max-width:40%;min-width:40px;" alt="UCL logo"/>  
-Division of Psychiatry  
-University College London    
-6th Floor, Maple House  
-149 Tottenham Court Road  
-London W1T 7NF  
-United Kingdom  
-<justin.yang@ucl.ac.uk>  
-
-<a aria-label="Twitter" href = "https://twitter.com/JustinCYang"><i class="fa-brands fa-twitter fa-3x"></i></a> <a aria-label="LinkedIn" href = "https://www.linkedin.com/in/yangjustinc"><i class="fa-brands fa-linkedin fa-3x"></i></a> <a aria-label="Github" href = "https://github.com/yangjustinc"><i class="fa-brands fa-github fa-3x"></i></a> <a aria-label="OrcID" href = "https://orcid.org/0000-0003-2881-4906"><i class="ai ai-orcid fa-3x"></i></a> <a aria-label="Publons" href = "https://scholar.google.com/citations?user=o-MsbBYAAAAJ"><i class="ai ai-google-scholar fa-3x"></i></a>  <a aria-label="Publons" href = "https://publons.com/researcher/1396604/justin-c-yang"><i class="ai ai-publons fa-3x"></i></a>  <a aria-label="Researchgate" href = "https://www.researchgate.net/profile/Justin-Yang-10"><i class="ai ai-researchgate fa-3x"></i></a>
-
-</center>
+`r blogdown::shortcode("contact")`
