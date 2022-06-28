@@ -5,7 +5,7 @@ output:
   html_document:
     keep_md: yes
 ---
-<div align="center" style="max-width:30%;min-width:60px;float:right;"><img src="profile_circle.png" alt="Headshot of Justin C Yang" alt="Justin C Yang, PhD" /><a href = "https://twitter.com/JustinCYang"><i class="fa-brands fa-twitter fa-2x"></i></a> <a href = "https://www.linkedin.com/in/yangjustinc"><i class="fa-brands fa-linkedin fa-2x"></i></a> <a href = "https://github.com/yangjustinc"><i class="fa-brands fa-github fa-2x"></i></a> <a href = "https://orcid.org/0000-0003-2881-4906"><i class="ai ai-orcid fa-2x"></i></a></div>
+<div align="center" style="max-width:30%;min-width:80px;float:right;"><img src="profile_circle.png" alt="Headshot of Justin C Yang" alt="Justin C Yang, PhD" /><a href = "https://twitter.com/JustinCYang"><i class="fa-brands fa-twitter fa-2x"></i></a> <a href = "https://www.linkedin.com/in/yangjustinc"><i class="fa-brands fa-linkedin fa-2x"></i></a> <a href = "https://github.com/yangjustinc"><i class="fa-brands fa-github fa-2x"></i></a> <a href = "https://orcid.org/0000-0003-2881-4906"><i class="ai ai-orcid fa-2x"></i></a></div>
 
 # Justin C Yang
 
