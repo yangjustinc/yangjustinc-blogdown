@@ -26,13 +26,13 @@ menu:
       weight: 4
     # - name: Teaching
     #   url: "teaching/"
-    #   weight: 5     
+    #   weight: 5
     - name: Service
       url: "service/"
       weight: 6
-    # - name: Notes
-    #   url: "notes/"
-    #   weight: 7
+    - name: Notes
+      url: "notes/"
+      weight: 7
     - name: Contact
       url: "contact/"
       weight: 8
