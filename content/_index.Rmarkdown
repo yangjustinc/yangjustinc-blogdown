@@ -5,7 +5,7 @@ output:
   html_document:
     keep_md: yes
 ---
-<div class = "wrapper"><div id = "profile"><img src="profile_circle.png" alt="Headshot of Justin C Yang" alt="Justin C Yang, PhD" /><a href = "https://twitter.com/JustinCYang"><i class="fa-brands fa-twitter fa-2x"></i></a> <a href = "https://www.linkedin.com/in/yangjustinc"><i class="fa-brands fa-linkedin fa-2x"></i></a> <a href = "https://github.com/yangjustinc"><i class="fa-brands fa-github fa-2x"></i></a></div></div>
+<div id = "profile"><center><img src="profile_circle.png" alt="Headshot of Justin C Yang" alt="Justin C Yang, PhD" /><a href = "https://twitter.com/JustinCYang"><br><i class="fa-brands fa-twitter fa-2x"></i></a> <a href = "https://www.linkedin.com/in/yangjustinc"><i class="fa-brands fa-linkedin fa-2x"></i></a> <a href = "https://github.com/yangjustinc"><i class="fa-brands fa-github fa-2x"></i></a></center></div>
 
 # Justin C Yang
 
