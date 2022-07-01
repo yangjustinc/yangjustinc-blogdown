@@ -1,0 +1,47 @@
+---
+title: Put Me In, Coach!
+author: Justin Yang
+date: '2022-07-01'
+slug: put-me-in-coach
+categories: []
+tags: []
+output:
+  html_document:
+    keep_md: yes
+---
+
+UKRI and UCL recently provided me with the opportunity to undertake a course on Coaching for Academic Leadership with the Forton Group. It's been an interesting journey and I just wanted to share some things I've learned here and to reflect on them here.
+
+## What is coaching?
+Coaching, for the purpose of our training, was defined as the process of supporting people to lead, achieve, and succeed without doing it for them or telling them what to do. As part of that, we had to learn to adopt a coaching mindset and communication style. That is to say, we were asked to communicate with our coachees from a place of curiosity and of possibility, rather than a place where we delegated, instructed, or reflected a coachee. It was strongly impressed on us that coaches, rather than mentors, don't have wisdom and knowledge to impart to others, but rather, coaches support and help others to achieve their own goals. The coaching relationship is defined by certain principles, most of which focus on partnering with the coachee, meeting them where they are, believing in them, and believing in what's possible. If it sounds a little like therapy though, it's not. Coaching doesn't seek to address emotional or psychological trauma (that's better left to professionals in other fields!) but coaching can guide coachees towards these resources. 
+
+![](https://media.giphy.com/media/l0MYKfrEMRw1dYkus/giphy.gif)
+
+## What's possible?
+Coaching revolves around the question of possibilities and, specifically, those which pertain to the coachee's purpose and vision. In partnership with the coachee, the coach primes the conversation by looking to explore purpose and vision by taking the conversation to the future and speaking in the present tense as if it were happening right now. The conversation might go like this: "Imagine we're at your next departmental meeting. What's happening? Who is there? What are they saying to you? How do you feel? What would your future self want your current self to know? What does this all mean to you?" It all sounds a bit abstract but in practice I thought this was a really neat way to think about things -- to think about a future where a coachee is present and can share with me. 
+
+![](https://media.giphy.com/media/ZhESFK96NxbuO1yDgy/giphy.gif)
+
+## What's available? 
+The next step of the coaching model we were taught was to focus on resources: the physical, intellectual, emotional, and social "stuff" that help our coachees achieve the vision they conveyed to us. We also need to understand the current reality for our coachee by inviting them to share with us. We ask questions to help us understand - what is it like right now? What's the distance betwen here and now, and there and then (as described in the vision)? What's possible? What's difficult? 
+
+![](https://media.giphy.com/media/ehDtWi6IhBRXovtvhG/giphy.gif)
+
+## What can be done? 
+With the reality and resources in mind, we move onto the planning stage. With nothing but curiosity and respect for the coachee's creativity and capability, we invite the coachee to share with us the steps (big and small) to start moving towards the vision. We explore the options for moving forward, the obstacles which block the way, the commitment of those who are important to the plan, and the decisions which need to be made to move forward. We ask our coachees: what's a way forward? what might hold you back? to what can we commit? what's the first step? 
+
+![](https://media.giphy.com/media/7bH8tcNOd5zlu4sKKp/giphy.gif)
+
+## What will be done?
+Once our coachee has made the plan, we get out of their way and watch them enact it. We don't try to hold them to account - that's not our role! We believe that they have everything they need (or can access it) and we help support and acknowledge the work they are putting in. Without judging, we invite them to share with us: what's happening? What is being created? how are you impacting those around you? 
+
+![](https://media.giphy.com/media/xChIJZ7mMbiBb595uh/giphy.gif)
+
+## Curiosity, partnership, trust, presence
+Coaching might seem at times to be a bit abstract but the value I draw from it is a vocabulary and lexicon of ways to help people around me understand their goals and purpose. Holding the space for someone to share the future they see for themselves (motivated for their purpose and vision for this future) is so incredibly vulnerable and special. Too often, we all want offer advice or guidance on how to tackle life's many problems but when you believe that people are creative and capable, you stop telling them what to do and you get to revel in the possibilities they create for themselves. I want to be the kind of supervisor one day who not only helps develop my academic trainees but also helps them develop their individual visions. My favourite question in this entire training was so disarming: "If nothing were holding you back, what could you accomplish?"
+
+![](https://media.giphy.com/media/xUPGcjQ6dJEjH5uwMw/giphy-downsized-large.gif)
+
+Happy Canada day, friends, and here's to us all seeking our best futures. Shine bright!
+
+P.S. If you're reading this and you're a member of the UCL research community, I'm still looking for a coachee! Over three sessions, we'll talk about your vision and work through the steps of the coaching model. You'll help me learn, develop, and refine my coaching practice and I'll get to work with you. 
