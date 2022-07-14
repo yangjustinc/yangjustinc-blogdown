@@ -5,20 +5,16 @@ output:
   html_document:
     keep_md: yes
 ---
-## University College London
-I'm a teaching assistant for the [Practical Statistics for Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research/PSBS0008) module. I also co-supervise MSc students completing their dissertations using the [Research Database at Camden & Islington NHS Foundation Trust](https://www.candi.nhs.uk/health-professionals/research/ci-research-database).  
+## Teaching
+I'm a teaching assistant on the UCL [Practical Statistics for Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research/PSBS0008) module. 
 
-### MSc Student(s) Supervised
-- Matios Haile (Co-supervisor, 2022-Present): Socio-demographic and clinical characteristics of patients referred from early intervention in psychosis (EIP) to crisis resolution and home treatment teams
 
-### PhD Student(s) Supervised
-- Nat Rich (Thesis Committee, 2021-Present): Race disparities in pathways through psychiatric care and service engagement 
+## Supervision
+I co-supervise MSc students at UCL completing their dissertations using the [Research Database at Camden & Islington NHS Foundation Trust](https://www.candi.nhs.uk/health-professionals/research/ci-research-database). I'm also a dissertation supervisor on the QMUL [MSc in Global Public Health and Policy](https://www.qmul.ac.uk/postgraduate/taught/coursefinder/courses/global-public-health-and-policy-msc) course where I mainly supervise projects pertaining to secondary data analysis, substance use disorders, and comparative health policy.  
 
-## Queen Mary University of London
-I'm a dissertation supervisor on the [MSc in Global Public Health and Policy](https://www.qmul.ac.uk/postgraduate/taught/coursefinder/courses/global-public-health-and-policy-msc) course where I mainly supervise projects pertaining to secondary data analysis, substance use disorders, and comparative health policy. I normally supervise 1-2 students per term.  
+```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
+library(tidyverse)
 
-### MSc Student(s) Supervised
-- Yara Nassar (Supervisor, 2020-22): Retrospective health policy analysis on smoking-free and smoking cessation policies in the Netherlands
-- Rutendo Florence Kudenga (Supervisor, 2021-22): Knowledge and attitude of adolescents regarding electronic cigarettes
-- Jon Daly (Supervisor, 2021-22): Impact of predominantly plant based and vegan diets on gestational diabetes
-- Lea Bastian (Supervisor, 2022-Present): Impact of access barriers to abortion on the health of pregnant people in progressive legal settings
+read_csv('students.csv') |> 
+  knitr::kable()
+```
