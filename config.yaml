@@ -40,7 +40,7 @@ menu:
 params:
   description: "Justin C Yang, PhD"
   footer: "Published using [blogdown](https://bookdown.org/yihui/blogdown) and [Hugo](https://gohugo.io) <br> &copy; [Justin C Yang](https://justinyang.me) 2019-{Year}"
-  githubSource: "https://github.com/yangjustinc/yangjustinc.github.io/blob/master/content/"
+  githubSource: "https://github.com/yangjustinc/yangjustinc-blogdown/blob/main/content/"
 
 markup:
   highlight:
