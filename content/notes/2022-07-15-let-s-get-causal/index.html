@@ -1,0 +1,444 @@
+---
+title: Let's Get Causal
+author: Justin Yang
+date: '2022-07-22'
+slug: let-s-get-causal
+categories: []
+tags: []
+output:
+  html_document:
+    keep_md: yes
+---
+
+
+
+<div id="why-am-i-interested-in-causal-methods" class="section level2">
+<h2>Why am I interested in causal methods?</h2>
+<p>A while back, I attended a seminar where Professor Eleanor Murray talked about “causal inference for complex &amp; time-varying exposures, or why the g-formula is the only formula you need.” Since then, I have been looking for a good project to use to learn how to apply these methods to my own research. Causal inference methods appeal to me not least because they offer a more sophisticated way of understanding our world in causal terms, not merely associative, which means we can in turn (hopefully) help us develop better interventions.</p>
+<p>{{% youtube "LIPqYFB5_IU" %}}</p>
+<p>In particular, I am excited for the ability to model time-varying covariates in analyses using observational data, which is the kind I routinely use. In the clinic, these could represent any sort of interesting phenomena and more accuratley reflects the nature of real-world data. The failure to account for these can bias estimates of risk. <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+</div>
+<div id="what-is-the-parametric-g-formula" class="section level2">
+<h2>What is the parametric g-formula?</h2>
+<p>My understanding is that the g-formula is a way to estimate standardized outcome distributions using covariate-specific estimates of the outcome distribution when specific assumptions of causal inference are met. The assumptions of this approach include:</p>
+<ul>
+<li>Conditional Exchangeability: The counterfactual outcome risk under every exposure variable is the same in the exposed and the unexposed (e.g. the data simulate a RCT so there is no unmeasured confounding and no selection bias).</li>
+<li>Positivity: Any individual has a non-zero probability of receiving all values of the treatment variable.</li>
+<li>Consistency: The counterfactual for whether an individual receives treatment or not is observable (which means that the treatment is well-specified).</li>
+</ul>
+<p>The g-formula proceeds in the following way: <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<ol style="list-style-type: decimal">
+<li>Model conditional probabilities in the observed empirical data</li>
+<li>Monte Carlo simulation of time-varying exposures, covariates and outcomes</li>
+<li>Estimation and comparision of effect measures</li>
+</ol>
+</div>
+<div id="example" class="section level2">
+<h2>Example</h2>
+<p>Today I’m going to work through a fairly simple example using sample data offered by the <a href="https://cran.r-project.org/web/packages/gfoRmula/index.html">gfoRmula package in R</a>. <a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<p>Suppose we have a dataset which contains 13,170 observations on 2,500 individuals with a maximum of 7 follow-up times. No individuals are censored in this dataset. The variables in this dataset are:</p>
+<ul>
+<li>t0: The time index</li>
+<li>id: A unique identifier for each individual</li>
+<li>L1: A time-varying covariate; binary</li>
+<li>L2: A time-varying covariate; continuous</li>
+<li>L3: A baseline covariate; continuous</li>
+<li>A: The treatment variable; binary</li>
+<li>Y: The outcome of interest; continuous</li>
+</ul>
+<p>First, let’s turn to examine the dataset itself.</p>
+<pre class="r"><code>explanatory &lt;- c(&quot;A&quot;, &quot;L1&quot;, &quot;L2&quot;, &quot;L3&quot;)
+dependent &lt;- &quot;Y&quot;
+
+table1 &lt;- gfoRmula::basicdata_nocomp |&gt;
+  mutate(A = as.factor(A)) |&gt;
+  mutate(L1 = as.factor(L1)) |&gt;
+  mutate(Y = as.factor(Y)) |&gt;
+  summary_factorlist(
+    dependent,
+    explanatory,
+    p = TRUE,
+    column = TRUE,
+    add_dependent_label = TRUE,
+    dependent_label_prefix = &quot;&quot;,
+    total_col = TRUE
+  )
+
+table1 %&gt;% 
+  head(.[1:5], n = 6) |&gt; 
+  knitr::kable(&quot;html&quot;)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Y
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+0
+</th>
+<th style="text-align:left;">
+1
+</th>
+<th style="text-align:left;">
+Total
+</th>
+<th style="text-align:left;">
+p
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+3319 (27.9)
+</td>
+<td style="text-align:left;">
+967 (76.5)
+</td>
+<td style="text-align:left;">
+4286 (32.5)
+</td>
+<td style="text-align:left;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+8587 (72.1)
+</td>
+<td style="text-align:left;">
+297 (23.5)
+</td>
+<td style="text-align:left;">
+8884 (67.5)
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L1
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+6718 (56.4)
+</td>
+<td style="text-align:left;">
+988 (78.2)
+</td>
+<td style="text-align:left;">
+7706 (58.5)
+</td>
+<td style="text-align:left;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+5188 (43.6)
+</td>
+<td style="text-align:left;">
+276 (21.8)
+</td>
+<td style="text-align:left;">
+5464 (41.5)
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L2
+</td>
+<td style="text-align:left;">
+Mean (SD)
+</td>
+<td style="text-align:left;">
+-0.1 (1.0)
+</td>
+<td style="text-align:left;">
+-0.3 (0.9)
+</td>
+<td style="text-align:left;">
+-0.2 (1.0)
+</td>
+<td style="text-align:left;">
+&lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L3
+</td>
+<td style="text-align:left;">
+Mean (SD)
+</td>
+<td style="text-align:left;">
+7.6 (1.7)
+</td>
+<td style="text-align:left;">
+7.5 (1.7)
+</td>
+<td style="text-align:left;">
+7.6 (1.7)
+</td>
+<td style="text-align:left;">
+0.768
+</td>
+</tr>
+</tbody>
+</table>
+<p>Great! It looks like we’ve got 13,170 observations as expected. We also note a few statistically significant differences between the groups defined by the binary outcome. Next, let’s look at the Kaplan-Meier plot for this dataset.</p>
+<pre class="r"><code>explanatory &lt;- c(&quot;A&quot;)
+dependent &lt;- &quot;Surv(t0, Y)&quot;
+
+gfoRmula::basicdata_nocomp |&gt;
+  surv_plot(dependent, explanatory)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+So it looks like fewer of the untreated group are “surviving.” Just to be safe, let’s also check the assumption of proportional hazards.</p>
+<pre class="r"><code>explanatory &lt;- c(&quot;A&quot;, &quot;L1&quot;, &quot;L2&quot;, &quot;L3&quot;)
+dependent &lt;- &quot;Surv(t0, Y)&quot;
+
+gfoRmula::basicdata_nocomp |&gt;
+  mutate(A = as.factor(A)) |&gt;
+  mutate(L1 = as.factor(L1)) |&gt;
+  coxphmulti(dependent,
+           explanatory) |&gt;
+  cox.zph() %&gt;%
+  {zph_result &lt;&lt;- .} %&gt;% 
+  plot(var = 1)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+That line looks pretty flat! We would not be alone in saying that this looks proportional. So, let’s try a traditional Cox proportional hazards model to understand the difference in risk between those with the intervention compared to those without.</p>
+<pre class="r"><code>explanatory &lt;- c(&quot;A&quot;, &quot;L1&quot;, &quot;L2&quot;, &quot;L3&quot;)
+dependent &lt;- &quot;Surv(t0, Y)&quot;
+
+cox &lt;- gfoRmula::basicdata_nocomp |&gt;
+  mutate(A = as.factor(A)) |&gt;
+  mutate(L1 = as.factor(L1)) |&gt;
+  finalfit(dependent,
+           explanatory)
+
+cox %&gt;% 
+  head(.[1:4], n = 6) |&gt; 
+  knitr::kable(&quot;html&quot;)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Dependent: Surv(t0, Y)
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+all
+</th>
+<th style="text-align:left;">
+HR (univariable)
+</th>
+<th style="text-align:left;">
+HR (multivariable)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+4286 (32.5)
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+8884 (67.5)
+</td>
+<td style="text-align:left;">
+0.14 (0.13-0.16, p&lt;0.001)
+</td>
+<td style="text-align:left;">
+0.15 (0.13-0.17, p&lt;0.001)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L1
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+7706 (58.5)
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+5464 (41.5)
+</td>
+<td style="text-align:left;">
+0.41 (0.36-0.47, p&lt;0.001)
+</td>
+<td style="text-align:left;">
+0.39 (0.34-0.45, p&lt;0.001)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L2
+</td>
+<td style="text-align:left;">
+Mean (SD)
+</td>
+<td style="text-align:left;">
+-0.2 (1.0)
+</td>
+<td style="text-align:left;">
+1.06 (1.00-1.12, p=0.064)
+</td>
+<td style="text-align:left;">
+1.35 (1.26-1.44, p&lt;0.001)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L3
+</td>
+<td style="text-align:left;">
+Mean (SD)
+</td>
+<td style="text-align:left;">
+7.6 (1.7)
+</td>
+<td style="text-align:left;">
+0.99 (0.96-1.02, p=0.659)
+</td>
+<td style="text-align:left;">
+0.99 (0.96-1.02, p=0.587)
+</td>
+</tr>
+</tbody>
+</table>
+Alright, so the treated group have got an adjusted hazard ratio of 0.15 when compared to the untreated group. That’s a pretty big effect size! Finally, let’s compare these results with a g-formula approach.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<pre class="r"><code>outcome_type &lt;- &#39;survival&#39;
+id &lt;- &#39;id&#39;
+time_points &lt;- 7
+time_name &lt;- &#39;t0&#39;
+covnames &lt;- c(&#39;L1&#39;, &#39;L2&#39;, &#39;A&#39;)
+outcome_name &lt;- &#39;Y&#39;
+covtypes &lt;- c(&#39;binary&#39;, &#39;bounded normal&#39;, &#39;binary&#39;)
+histories &lt;- c(lagged, lagavg)
+histvars &lt;- list(c(&#39;A&#39;, &#39;L1&#39;, &#39;L2&#39;), c(&#39;L1&#39;, &#39;L2&#39;))
+covparams &lt;-
+  list(
+    covmodels = c(
+      L1 ~ lag1_A + lag_cumavg1_L1 + lag_cumavg1_L2++L3 + t0,
+      L2 ~ lag1_A + L1 + lag_cumavg1_L1++lag_cumavg1_L2 + L3 + t0,
+      A ~ lag1_A + L1 + L2 + lag_cumavg1_L1++lag_cumavg1_L2 + L3 + t0
+    )
+  )
+ymodel &lt;- Y ~ A + L1 + L2 + L3 + lag1_A + lag1_L1 + lag1_L2 + t0
+intvars &lt;- list(&#39;A&#39;, &#39;A&#39;)
+interventions &lt;-
+  list(list(c(static, rep(0, time_points))), list(c(static, rep(1, time_points))))
+int_descript &lt;- c(&#39;Never treat&#39;, &#39;Always treat&#39;)
+nsimul &lt;- 10000
+
+gform_basic &lt;- gformula(
+  obs_data = basicdata_nocomp,
+  outcome_type = outcome_type,
+  id = id,
+  time_points = time_points,
+  time_name = time_name,
+  covnames = covnames,
+  outcome_name = outcome_name,
+  covtypes = covtypes,
+  covparams = covparams,
+  ymodel = ymodel,
+  intvars = intvars,
+  interventions = interventions,
+  int_descript = int_descript,
+  histories = histories,
+  histvars = histvars,
+  basecovs = c(&quot;L3&quot;),
+  nsimul = nsimul,
+  seed = 1234
+)
+
+gform_basic</code></pre>
+<pre><code>## PREDICTED RISK UNDER MULTIPLE INTERVENTIONS
+## 
+## Intervention      Description
+## 0         Natural course
+## 1         Never treat
+## 2         Always treat
+## 
+## Sample size = 2500, Monte Carlo sample size = 10000
+## Number of bootstrap samples = 0
+## Reference intervention = natural course (0)
+##  
+## 
+##  k Interv. NP Risk g-form risk Risk ratio Risk difference
+##  6       0  0.5056   0.5048280  1.0000000       0.0000000
+##  6       1      NA   0.7314631  1.4489355       0.2266352
+##  6       2      NA   0.2339747  0.4634741      -0.2708533</code></pre>
+<p>In our results, we see the simulated risk estimates using the g-formula for the natural course (when some people are treated to A and others aren’t) as well as the counterfactual scenarios where no one is ever treated to A and where everyone is treated to A all of the time. Notice also that we require model specification for all covariates, not just for the outcome. Yet the advantages are that we adjust for time-varying confounding affected by prior exposures (and we also can account for dynamic interventions).</p>
+<p>In this example, we see that estimates of the risk for the natural course, never treated, and always treated populations are 0.505, 0.731, and 0.234 respectively (in the g-formula risk column). The NP Risk value represents the non-parametric risk estimate and is close to the g-form risk for the natural course group, so we have some (but not full) assurance that our model is not specified incorrectly.</p>
+<p>When we compare the risk in the always treated group compared to the never treated group as they do in Keil et al. (2014) to compare with our hazard ratios, we see that the g-formula approach yields a risk ratio of 0.32 while, as we observed earlier, we saw the hazard ratio of 0.15 between the treated and untreated group. Perhaps this difference is due to bias which is unaccounted in the Cox proportional hazards model but is addressed in the g-formula approach?</p>
+</div>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>Keil AP, Edwards JK, Richardson DR, Naimi AI, Cole SR. The parametric G-formula for time-to-event data: towards intuition with a worked example. Epidemiology (Cambridge, Mass.). 2014 Nov;25(6):889.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Johnson KW, Glicksberg BS, Hodos RA, Shameer K, Dudley JT. Causal inference on electronic health records to assess blood pressure treatment targets: an application of the parametric g formula. In PACIFIC SYMPOSIUM ON BIOCOMPUTING 2018: Proceedings of the Pacific Symposium 2018 (pp. 180-191) and Taubman SL, Robins JM, Mittleman MA, Hernán MA. Intervening on risk factors for coronary heart disease: an application of the parametric g-formula. International journal of epidemiology. 2009 Dec 1;38(6):1599-611.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>McGrath S, Lin V, Zhang Z, Petito LC, Logan RW, Hernán MA, Young JG. gfoRmula: An R package for estimating the effects of sustained treatment strategies via the parametric g-formula. Patterns. 2020 Jun 12;1(3):100008.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

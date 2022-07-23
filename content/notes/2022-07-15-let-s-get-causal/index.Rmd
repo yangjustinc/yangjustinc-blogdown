@@ -1,0 +1,183 @@
+---
+title: Let's Get Causal
+author: Justin Yang
+date: '2022-07-22'
+slug: let-s-get-causal
+categories: []
+tags: []
+output:
+  html_document:
+    keep_md: yes
+---
+
+```{r setup, include = FALSE, warning = FALSE, message = FALSE}
+library(dplyr)
+library(finalfit)
+library(gfoRmula)
+library(survminer)
+library(survival)
+```
+
+## Why am I interested in causal methods?
+A while back, I attended a seminar where Professor Eleanor Murray talked about "causal inference for complex & time-varying exposures, or why the g-formula is the only formula you need." Since then, I have been looking for a good project to use to learn how to apply these methods to my own research. Causal inference methods appeal to me not least because they offer a more sophisticated way of understanding our world in causal terms, not merely associative, which means we can in turn (hopefully) help us develop better interventions.
+
+```{r, echo = FALSE, eval=TRUE}
+blogdown::shortcode("youtube", "LIPqYFB5_IU")
+```
+
+In particular, I am excited for the ability to model time-varying covariates in analyses using observational data, which is the kind I routinely use. In the clinic, these could represent any sort of interesting phenomena and more accuratley reflects the nature of real-world data. The failure to account for these can bias estimates of risk. [^keil]
+
+[^keil]: Keil AP, Edwards JK, Richardson DR, Naimi AI, Cole SR. The parametric G-formula for time-to-event data: towards intuition with a worked example. Epidemiology (Cambridge, Mass.). 2014 Nov;25(6):889.
+
+## What is the parametric g-formula?
+
+My understanding is that the g-formula is a way to estimate standardized outcome distributions using covariate-specific estimates of the outcome distribution when specific assumptions of causal inference are met. The assumptions of this approach include:
+
+* Conditional Exchangeability: The counterfactual outcome risk under every exposure variable is the same in the exposed and the unexposed (e.g. the data simulate a RCT so there is no unmeasured confounding and no selection bias).
+* Positivity: Any individual has a non-zero probability of receiving all values of the treatment variable.
+* Consistency: The counterfactual for whether an individual receives treatment or not is observable (which means that the treatment is well-specified).
+
+The g-formula proceeds in the following way: [^steps]
+
+1. Model conditional probabilities in the observed empirical data
+2. Monte Carlo simulation of time-varying exposures, covariates and outcomes
+3. Estimation and comparision of effect measures
+
+[^steps]: Johnson KW, Glicksberg BS, Hodos RA, Shameer K, Dudley JT. Causal inference on electronic health records to assess blood pressure treatment targets: an application of the parametric g formula. In PACIFIC SYMPOSIUM ON BIOCOMPUTING 2018: Proceedings of the Pacific Symposium 2018 (pp. 180-191) and Taubman SL, Robins JM, Mittleman MA, Hernán MA. Intervening on risk factors for coronary heart disease: an application of the parametric g-formula. International journal of epidemiology. 2009 Dec 1;38(6):1599-611.
+
+## Example
+
+Today I'm going to work through a fairly simple example using sample data offered by the [gfoRmula package in R](https://cran.r-project.org/web/packages/gfoRmula/index.html). [^mcgrath]
+
+[^mcgrath]: McGrath S, Lin V, Zhang Z, Petito LC, Logan RW, Hernán MA, Young JG. gfoRmula: An R package for estimating the effects of sustained treatment strategies via the parametric g-formula. Patterns. 2020 Jun 12;1(3):100008.
+
+Suppose we have a dataset which contains 13,170 observations on 2,500 individuals with a maximum of 7 follow-up times. No individuals are censored in this dataset. The variables in this dataset are:
+
+* t0: The time index
+* id: A unique identifier for each individual
+* L1: A time-varying covariate; binary
+* L2: A time-varying covariate; continuous
+* L3: A baseline covariate; continuous
+* A: The treatment variable; binary
+* Y: The outcome of interest; continuous
+
+First, let's turn to examine the dataset itself. 
+
+```{r warning = FALSE, message = FALSE}
+explanatory <- c("A", "L1", "L2", "L3")
+dependent <- "Y"
+
+table1 <- gfoRmula::basicdata_nocomp |>
+  mutate(A = as.factor(A)) |>
+  mutate(L1 = as.factor(L1)) |>
+  mutate(Y = as.factor(Y)) |>
+  summary_factorlist(
+    dependent,
+    explanatory,
+    p = TRUE,
+    column = TRUE,
+    add_dependent_label = TRUE,
+    dependent_label_prefix = "",
+    total_col = TRUE
+  )
+
+table1 %>% 
+  head(.[1:5], n = 6) |> 
+  knitr::kable("html")
+```
+
+Great! It looks like we've got 13,170 observations as expected. We also note a few statistically significant differences between the groups defined by the binary outcome. Next, let's look at the Kaplan-Meier plot for this dataset.
+
+```{r warning = FALSE, message = FALSE}
+explanatory <- c("A")
+dependent <- "Surv(t0, Y)"
+
+gfoRmula::basicdata_nocomp |>
+  surv_plot(dependent, explanatory)
+```
+So it looks like fewer of the untreated group are "surviving." Just to be safe, let's also check the assumption of proportional hazards.
+
+```{r warning = FALSE, message = FALSE}
+explanatory <- c("A", "L1", "L2", "L3")
+dependent <- "Surv(t0, Y)"
+
+gfoRmula::basicdata_nocomp |>
+  mutate(A = as.factor(A)) |>
+  mutate(L1 = as.factor(L1)) |>
+  coxphmulti(dependent,
+           explanatory) |>
+  cox.zph() %>%
+  {zph_result <<- .} %>% 
+  plot(var = 1)
+```
+That line looks pretty flat! We would not be alone in saying that this looks proportional. So, let's try a traditional Cox proportional hazards model to understand the difference in risk between those with the intervention compared to those without.
+
+```{r warning = FALSE, message = FALSE}
+explanatory <- c("A", "L1", "L2", "L3")
+dependent <- "Surv(t0, Y)"
+
+cox <- gfoRmula::basicdata_nocomp |>
+  mutate(A = as.factor(A)) |>
+  mutate(L1 = as.factor(L1)) |>
+  finalfit(dependent,
+           explanatory)
+
+cox %>% 
+  head(.[1:4], n = 6) |> 
+  knitr::kable("html")
+```
+Alright, so the treated group have got an adjusted hazard ratio of 0.15 when compared to the untreated group. That's a pretty big effect size! Finally, let's compare these results with a g-formula approach.
+
+```{r warning = FALSE, message = FALSE}
+outcome_type <- 'survival'
+id <- 'id'
+time_points <- 7
+time_name <- 't0'
+covnames <- c('L1', 'L2', 'A')
+outcome_name <- 'Y'
+covtypes <- c('binary', 'bounded normal', 'binary')
+histories <- c(lagged, lagavg)
+histvars <- list(c('A', 'L1', 'L2'), c('L1', 'L2'))
+covparams <-
+  list(
+    covmodels = c(
+      L1 ~ lag1_A + lag_cumavg1_L1 + lag_cumavg1_L2++L3 + t0,
+      L2 ~ lag1_A + L1 + lag_cumavg1_L1++lag_cumavg1_L2 + L3 + t0,
+      A ~ lag1_A + L1 + L2 + lag_cumavg1_L1++lag_cumavg1_L2 + L3 + t0
+    )
+  )
+ymodel <- Y ~ A + L1 + L2 + L3 + lag1_A + lag1_L1 + lag1_L2 + t0
+intvars <- list('A', 'A')
+interventions <-
+  list(list(c(static, rep(0, time_points))), list(c(static, rep(1, time_points))))
+int_descript <- c('Never treat', 'Always treat')
+nsimul <- 10000
+
+gform_basic <- gformula(
+  obs_data = basicdata_nocomp,
+  outcome_type = outcome_type,
+  id = id,
+  time_points = time_points,
+  time_name = time_name,
+  covnames = covnames,
+  outcome_name = outcome_name,
+  covtypes = covtypes,
+  covparams = covparams,
+  ymodel = ymodel,
+  intvars = intvars,
+  interventions = interventions,
+  int_descript = int_descript,
+  histories = histories,
+  histvars = histvars,
+  basecovs = c("L3"),
+  nsimul = nsimul,
+  seed = 1234
+)
+
+gform_basic
+```
+In our results, we see the simulated risk estimates using the g-formula for the natural course (when some people are treated to A and others aren't) as well as the counterfactual scenarios where no one is ever treated to A and where everyone is treated to A all of the time. Notice also that we require model specification for all covariates, not just for the outcome. Yet the advantages are that we adjust for time-varying confounding affected by prior exposures (and we also can account for dynamic interventions).
+
+In this example, we see that estimates of the risk for the natural course, never treated, and always treated populations are 0.505, 0.731, and 0.234 respectively (in the g-formula risk column). The NP Risk value represents the non-parametric risk estimate and is close to the g-form risk for the natural course group, so we have some (but not full) assurance that our model is not specified incorrectly. 
+
+When we compare the risk in the always treated group compared to the never treated group as they do in Keil et al. (2014) to compare with our hazard ratios, we see that the g-formula approach yields a risk ratio of 0.32 while, as we observed earlier, we saw the hazard ratio of 0.15 between the treated and untreated group. Perhaps this difference is due to bias which is unaccounted in the Cox proportional hazards model but is addressed in the g-formula approach? 
