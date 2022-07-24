@@ -5,6 +5,9 @@ on:
   push:
     branches: master
 
+env:
+  ORCID_TOKEN: "7348c78b-0dd7-412d-8d77-79f553df8712"
+
 jobs:
   build:
     name: create the curriculum vitae pdf file
