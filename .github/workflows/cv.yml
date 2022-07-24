@@ -1,7 +1,13 @@
+#................................................
+# Modified from mlampros/My.CVitae
+#................................................
+
 name: CV
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 23 * * SUN"
   push:
     branches: master
 
@@ -10,7 +16,7 @@ env:
 
 jobs:
   build:
-    name: create the curriculum vitae pdf file
+    name: create the cv
     runs-on: ubuntu-latest
     container:
       image: mlampros/mycvitae:rstudiodev
@@ -24,18 +30,18 @@ jobs:
           sudo apt-get install -y texlive-latex-recommended
           sudo apt-get install -y texlive-xetex
           sudo apt-get install -y texlive-fonts-extra
-     - name: render the curriculum vitae
+     - name: render the cv
        run: |
          Rscript -e "print(getwd())"
          Rscript -e "rmarkdown::render(input = file.path(getwd(), 'static', 'cv', 'cv.Rmd'), params = list(work_dir = getwd()))"
-     - name: Commit files
+     - name: commit files
        run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add --all
-          git commit -am "add the cv.pdf file to the 'docs' directory of the repository"
+          git commit -am "upload cv to Github"
           git push
-     - name: Upload pdf file
+     - name: upload pdf file
        uses: actions/upload-artifact@v1
        with:
          name: cv
