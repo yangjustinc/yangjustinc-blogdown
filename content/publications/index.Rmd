@@ -54,10 +54,10 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
   })
 
 publications <-
-  map2(substring(names(publications), 2) %>% paste0("<h2>", ., "</h2>"),
+  map2(substring(names(publications), 2) %>% paste0("<!--", ., "-->"),
        publications,
        c) %>% unlist %>% as_tibble() %>%  mutate(value = gsub("Rv Kessel", "R van Kessel", value)) %>% pivot_wider(names_from = value) 
 ```
 ```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
-cat(paste0(publications), sep = "  \n")
+cat(paste0(publications), sep = "\r  \n")
 ```  
