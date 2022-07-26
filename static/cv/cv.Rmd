@@ -1,13 +1,10 @@
 ---
 name: Justin C
 surname: Yang
-position: "Research Fellow"
+position: "Research Fellow in Psychiatric Epidemiology"
 address: "Division of Psychiatry, University College London"
 www: justinyang.me
 email: "justin.yang@ucl.ac.uk"
-twitter: JustinCYang
-github: yangjustinc
-linkedin: yangjustinc
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::moderncv
 ---
@@ -75,8 +72,11 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
     author = str_replace_all(author, "([A-Z]) ([A-Z]) ", "\\1\\2 "),
     author = str_replace_all(author, "JC Yang", "**JC Yang**"),
     author = str_replace_all(author, "J Yang", "**J Yang**"),
-    title = str_replace_all(title, ":.+", "")) %>%
+    title = str_replace_all(title, ":.+", ""),
+    number = row_number()) %>%
       mutate(citation = paste0(
+          number,
+          ".\t",
           author,
           ". ",
           "(",
