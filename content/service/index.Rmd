@@ -8,7 +8,7 @@ output:
 ## Institutional Service
 
 - Personal Tutor, Division of Psychiatry, University College London
-- Member, Gender Equity & Athena SWAN Working Group, Division of Psychiatry, University College London
+- Data Lead, Gender Equity & Athena SWAN Working Group, Division of Psychiatry, University College London
 - Member, UK Research and Innovation Early Career Researcher Forum
 - Editorial Board Member, Substance Abuse: Research and Treatment
 

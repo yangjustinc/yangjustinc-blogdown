@@ -15,14 +15,13 @@ Working primarily in <i class="fa-brands fa-r-project" title="R"></i> and <i cla
 
 I received my PhD in Public Health and Primary Care from [Wolfson College](https://www.wolfson.cam.ac.uk), [University of Cambridge](https://www.cam.ac.uk), under the supervision of [Professor Carol Brayne](https://www.phpc.cam.ac.uk/people/visitors/professor-carol-brayne-cbe) and [Dr. Andres Roman-Urrestarazu](https://arc-eoe.nihr.ac.uk/about-us/people/researchers/andres-roman-urrestarazu). Before that, I received my MSPH in Health Policy from the [Bloomberg School of Public Health](https://publichealth.jhu.edu), [Johns Hopkins University](https://www.jhu.edu), and my BA and BSc from the [University of British Columbia](https://www.ubc.ca).
 
-Previously, I have held roles in [healthcare strategy consulting](https://avalere.com), [higher education administration](https://mech.ubc.ca), and [nonprofit management](https://www.ams.ubc.ca). When I'm not working, I enjoy travelling, theatre, art house cinema, reading, and tabletop gaming. 
-
 ## Research Interests
 - Social and economic determinants of mental health
 - Spatial and environmental epidemiology
 - Causal inference in behavioural health
 - Pharmacoepidemiology and pharmacovigilance
 - Mental health equity, justice, and policy
+- Dual diagnosis (severe mental illness and substance use disorder)
 
 <center>
 <a href = "/cv/cv.pdf" aria-label="CV of Justin C Yang"><i class="ai ai-cv fa-3x"></i></a> 
