@@ -6,7 +6,7 @@ output:
     keep_md: yes
 ---
 ## Teaching
-I am a guest lecturer on the [Core Principles of Mental Health Research](https://www.ucl.ac.uk/psychiatry/mental-health-sciences-modules/core-principles-mental-health-research) module and a teaching assistant on the [Practical Statistics for Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research/PSBS0008) module at UCL. 
+I am a guest lecturer on the [Core Principles of Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/core-principles-of-mental-health-research-PSBS0002) module and a teaching assistant on the [Practical Statistics for Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research/PSBS0008) module at UCL. 
 
 
 ## Supervision
