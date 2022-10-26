@@ -88,8 +88,6 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
           "*",
           journal,
           "*",
-          " ",
-          number,
           "."
         )) %>%
       select(citation)

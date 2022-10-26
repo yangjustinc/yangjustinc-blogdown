@@ -17,11 +17,11 @@ I received my PhD in Public Health and Primary Care from [Wolfson College](https
 
 ## Research Interests
 - Social and economic determinants of mental health
-- Spatial and environmental epidemiology
 - Causal inference in behavioural health
+- Dual diagnosis (severe mental illness and substance use disorder)
+- Spatial and environmental epidemiology
 - Pharmacoepidemiology and pharmacovigilance
 - Mental health equity, justice, and policy
-- Dual diagnosis (severe mental illness and substance use disorder)
 
 <center>
 <a href = "/cv/cv.pdf" aria-label="CV of Justin C Yang"><i class="ai ai-cv fa-3x"></i></a> 
