@@ -5,6 +5,7 @@ output:
   html_document:
     keep_md: yes
 ---
+
 ```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 library(scholar)
 library(tidyverse)
@@ -23,6 +24,16 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
     author = str_replace_all(author, "J Yang", "**J Yang**"),
     title = str_replace_all(title, ":.+", "")
   ) %>%
+  mutate(cid = case_when(
+    str_detect(pubid,
+               "IWHjjKOFINEC") ~ "15882838923600769415",
+    TRUE ~ cid
+  )) %>%
+  mutate(cid = case_when(
+    str_detect(pubid,
+               "4DMP91E08xMC") ~ "6138374257100904004",
+    TRUE ~ cid
+  )) %>%
   split(desc(.$year)) %>%
   map(function(x) {
     x <- x %>%
@@ -56,7 +67,7 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
 publications <-
   map2(substring(names(publications), 2) %>% paste0("<!--", ., "-->"),
        publications,
-       c) %>% unlist %>% as_tibble() %>%  mutate(value = gsub("Rv Kessel", "R van Kessel", value)) %>% pivot_wider(names_from = value) 
+       c) %>% unlist %>% as_tibble() %>% mutate(value = gsub("Rv Kessel", "R van Kessel", value)) %>% pivot_wider(names_from = value) 
 ```
 ```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
 cat(paste0(publications), sep = "\r  \n")
