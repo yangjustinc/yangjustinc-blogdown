@@ -7,7 +7,6 @@ ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\
 footnotereturnlinkcontents: "↩"
 
 permalinks:
-  notes: "/notes/:year/:month/:day/:title/"
   presentations: "/presentations/:year/:month/:day/:title/"
 
 menu:
@@ -30,12 +29,9 @@ menu:
     - name: Service
       url: "service/"
       weight: 6
-    - name: Notes
-      url: "notes/"
-      weight: 7
     - name: Contact
       url: "contact/"
-      weight: 8
+      weight: 7
 
 params:
   description: "Justin C Yang, PhD"
