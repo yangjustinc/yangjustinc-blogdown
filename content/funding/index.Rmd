@@ -10,7 +10,7 @@ library(tidyverse)
 library(janitor)
 library(rorcid)
 
-orcid <- "0000-0001-8130-5137"
+orcid <- "0000-0003-2881-4906"
 
 # Must have all variables or function will report error
 
@@ -59,5 +59,3 @@ funding <-  do.call("rbind",
 
 cat(str_c(funding$funding))
 ```  
-
-Last retrieved from <a href = "https://orcid.org/0000-0003-2881-4906"><i class="ai ai-orcid"></i></a> on `r format(Sys.time(), '%d %B, %Y')`
