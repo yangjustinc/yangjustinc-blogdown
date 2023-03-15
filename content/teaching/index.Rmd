@@ -9,8 +9,6 @@ output:
 I am a guest lecturer on the [Core Principles of Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/core-principles-of-mental-health-research-PSBS0002) module at UCL. 
 
 ## Supervision
-I co-supervise MSc students at UCL completing their dissertations using the [Research Database at Camden & Islington NHS Foundation Trust](https://www.candi.nhs.uk/health-professionals/research/ci-research-database). I'm also a dissertation supervisor on the QMUL [MSc in Global Public Health and Policy](https://www.qmul.ac.uk/postgraduate/taught/coursefinder/courses/global-public-health-and-policy-msc) course.
-
 ```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
 library(tidyverse)
 
