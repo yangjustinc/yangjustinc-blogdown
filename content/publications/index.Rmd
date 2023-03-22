@@ -6,6 +6,7 @@ output:
     keep_md: yes
 ---
 
+## Peer-Reviewed Publications
 ```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 library(scholar)
 library(tidyverse)
@@ -72,3 +73,51 @@ publications <-
 ```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
 cat(paste0(publications), sep = "\r  \n")
 ```  
+
+## Preprints
+```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+library(medrxivr)
+library(tidyverse)
+library(here)
+
+medrxivdata <- mx_api_content(from_date = "2021-01-01")
+saveRDS(medrxivdata, here("medrxivdata.rds"))
+
+medrxivdata <- readRDS(here("medrxivdata.rds"))
+
+preprints <- mx_search(data = medrxivdata,
+          query = c("10.1101/2021.11.28.21266870",
+                    "10.1101/2022.12.15.22283515"), 
+          fields = c("doi")
+          ) |> 
+  filter(grepl("NA",published)) |> 
+  select(authors, title, date, link_page) |> 
+  mutate(
+    authors = str_replace_all(authors, "Yang, J. C.", "**Yang, J. C.**"),
+     authors = str_replace_all(authors, "\\. ", ""),
+     authors = str_replace_all(authors, "\\.", ""),
+     authors = str_replace_all(authors, "\\;", ",")
+  ) |> 
+  mutate(date = str_sub(date,1,4)) |> 
+  mutate(citation = paste0(
+          authors,
+          ". ",
+          "(",
+          date,
+          ").",
+          " ",
+          "[",
+          title,
+          "]",
+          "(",
+          link_page,
+          ")",
+          "."
+        )) |> 
+  select(citation) |> 
+  rowwise() |> 
+  toString()
+```
+```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
+cat(paste0(preprints), sep = "\r  \n")
+``` 
