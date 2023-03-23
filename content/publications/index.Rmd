@@ -23,7 +23,8 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
     author = str_replace_all(author, "([A-Z]) ([A-Z]) ", "\\1\\2 "),
     author = str_replace_all(author, "JC Yang", "**JC Yang**"),
     author = str_replace_all(author, "J Yang", "**J Yang**"),
-    title = str_replace_all(title, ":.+", "")
+    title = str_replace_all(title, ":.+", ""),
+    author = str_replace(author, ", (?=[^,]*$)", ", and ")
   ) %>%
   mutate(cid = case_when(
     str_detect(pubid,
@@ -80,10 +81,29 @@ library(medrxivr)
 library(tidyverse)
 library(here)
 
-medrxivdata <- mx_api_content(from_date = "2021-01-01")
-saveRDS(medrxivdata, here("medrxivdata.rds"))
+# medrxivdata <- mx_api_content(from_date = "2021-01-01")
+# saveRDS(medrxivdata, here("medrxivdata.rds"))
 
 medrxivdata <- readRDS(here("medrxivdata.rds"))
+
+reformat_authors <- function(author_str) {
+  # Split the input string into individual authors
+  authors <- str_split(author_str, ";\\s+")[[1]]
+  
+  # Process each author name and store them in a new vector
+  formatted_authors <- sapply(authors, function(author) {
+    names_parts <- str_split(author, ",\\s+")[[1]]
+    last_name <- names_parts[1]
+    initials <- str_extract_all(names_parts[2], "[A-Za-z]") %>% paste(collapse = "")
+    initials <- gsub("(\\w)", "\\1.", initials, perl = TRUE)  # Add periods after each initial
+    initials <- gsub("", "", initials)  # Remove any spaces between initials
+    return(paste0(initials, " ", last_name))
+  })
+  
+  # Combine the formatted author names back into a single string
+  formatted_authors_str <- paste(formatted_authors, collapse = ", ")
+  return(formatted_authors_str)
+}
 
 preprints <- mx_search(data = medrxivdata,
           query = c("10.1101/2021.11.28.21266870",
@@ -92,12 +112,14 @@ preprints <- mx_search(data = medrxivdata,
           ) |> 
   filter(grepl("NA",published)) |> 
   select(authors, title, date, link_page) |> 
-  mutate(
-    authors = str_replace_all(authors, "Yang, J. C.", "**Yang, J. C.**"),
-     authors = str_replace_all(authors, "\\. ", ""),
-     authors = str_replace_all(authors, "\\.", ""),
-     authors = str_replace_all(authors, "\\;", ",")
-  ) |> 
+  mutate(authors = sapply(authors, reformat_authors)) |> 
+    mutate(
+    authors = str_replace_all(authors, 'c\\.\\(\\"',''),
+authors = str_replace_all(authors, '\\.\\"\\, \\"', ''),
+authors = str_replace_all(authors, '\\.\\"\\)', ''),
+authors = str_replace_all(authors, '\\.', ''),
+authors = str_replace_all(authors, 'JC Yang', '**JC Yang**'),
+authors = str_replace(authors, ", (?=[^,]*$)", ", and ")) |> 
   mutate(date = str_sub(date,1,4)) |> 
   mutate(citation = paste0(
           authors,
