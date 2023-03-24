@@ -1,4 +1,4 @@
-name: Render documents and upload
+name: publications
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
       - name: Render document
         uses: lc5415/rmarkdown-action@v1
         with:
-          input_file: yangjustinc-blogdown/content/publications/index.Rmd
+          input_file: 'yangjustinc-blogdown/content/publications/index.Rmd'
 	  output_format: html_document
       - name: Commit files
         run: |
