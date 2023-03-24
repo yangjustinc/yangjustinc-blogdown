@@ -2,7 +2,7 @@
 # Modified from mlampros/My.CVitae
 #................................................
 
-name: CV
+name: update cv
 
 on:
   workflow_dispatch:
