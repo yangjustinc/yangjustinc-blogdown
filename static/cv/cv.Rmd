@@ -105,8 +105,6 @@ cat(paste0(publications), sep = "  \r  \n")
 
 # Preprints
 ```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
-medrxivdata <- readRDS(here("medrxivdata.rds"))
-
 reformat_authors <- function(author_str) {
   # Split the input string into individual authors
   authors <- str_split(author_str, ";\\s+")[[1]]
@@ -153,13 +151,10 @@ number = row_number()
           date,
           ").",
           " ",
-          "[",
           title,
-          "]",
-          "(",
-          link_page,
-          ")",
-          "."
+          ".",
+          " ",
+          "medRxiv."
         )) |> 
   select(citation) |> 
   rowwise() |> 
