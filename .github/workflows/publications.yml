@@ -28,7 +28,11 @@ jobs:
       - name: Install packages, render Rmarkdown and Commit Results
         run: |
           echo "Rendering the page..."
-          Rscript -e 'install.packages(c("scholar", "tidyverse", "medrxvir", "here"))'
+      - name: Install rmarkdown
+        run: Rscript -e 'install.packages("scholar")'
+          Rscript -e 'install.packages("tidyverse")'
+          Rscript -e 'install.packages("medrxivr")'
+          Rscript -e 'install.packages("here")'
           Rscript -e 'rmarkdown::render(input = "content/publications/index.Rmd")'
           if [[ "$(git status --porcelain)" != "" ]]; then
             git config --local user.name "$GITHUB_ACTOR"
