@@ -33,6 +33,7 @@ jobs:
      - name: render the cv
        run: |
          Rscript -e "print(getwd())"
+         Rscript -e "install.packages('medrxivr')"
          Rscript -e "rmarkdown::render(input = file.path(getwd(), 'static', 'cv', 'cv.Rmd'), params = list(work_dir = getwd()))"
      - name: commit files
        run: |
