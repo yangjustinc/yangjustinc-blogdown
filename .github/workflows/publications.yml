@@ -16,9 +16,9 @@ jobs:
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Install rmarkdown and packages
-        run: Rscript -e 'install.packages(c("rmarkdown", "scholar", "medrxivr", "here", "tidyverse"))'
+        run: Rscript -e 'install.packages(c("rmarkdown", "blogdown", "scholar", "medrxivr", "here", "tidyverse"))'
       - name: Render page
-        run: Rscript -e 'rmarkdown::render("content/publications/index.Rmd", output_format = "html_document")'
+        run: Rscript -e 'rmarkdown::render("content/publications/index.Rmd", output_format = "html_document", keep_md = "yes")'
       - name: Commit results
         run: |
           git commit content/publications/index.html -m 'Update Publications' || echo "No changes to commit"
