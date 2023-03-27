@@ -78,7 +78,7 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
     title = str_replace_all(title, ":.+", ""),
     author = str_replace(author, ", (?=[^,]*$)", ", and "),
     number = row_number()) %>%
-    arrange(desc(year)) %>%
+    arrange(desc(number)) %>%
       mutate(citation = paste0(
           number,
           ".\t",
