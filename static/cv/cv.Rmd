@@ -78,7 +78,6 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
     title = str_replace_all(title, ":.+", ""),
     author = str_replace(author, ", (?=[^,]*$)", ", and "),
     number = 1:n()) %>%
-    arrange(desc(number)) %>%
       mutate(citation = paste0(
           number,
           ".\t",
@@ -95,6 +94,7 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
           "*",
           "."
         )) %>%
+      arrange(desc(number)) %>%
       select(citation)
 
 publications <- publications %>% unlist %>% as_tibble() %>% pivot_wider(names_from = value)
@@ -143,7 +143,6 @@ authors = str_replace_all(authors, 'JC Yang', '**JC Yang**'),
 authors = str_replace(authors, ", (?=[^,]*$)", ", and "),
 number = 1:n()
 ) |> 
-arrange(desc(date)) %>%
   mutate(date = str_sub(date,1,4)) |> 
   mutate(citation = paste0(
     number,
@@ -159,6 +158,7 @@ arrange(desc(date)) %>%
           " ",
           "medRxiv."
         )) |> 
+        arrange(desc(date)) %>%
   select(citation) |> 
   rowwise() |> 
   toString()
