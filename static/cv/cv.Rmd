@@ -63,7 +63,7 @@ library(scholar)
 library(tidyverse)
 
 publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
-  arrange(year) %>%
+  arrange(desc(year)) %>%
   mutate(author_long =
            case_when(str_detect(author, pattern = "\\.\\.\\.$") ~ 1, TRUE ~ 0)) %>%
   mutate(author = case_when(
@@ -94,7 +94,7 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
           "*",
           "."
         )) %>%
-      arrange(desc(number)) %>%
+#      arrange(desc(number)) %>%
       select(citation)
 
 publications <- publications %>% unlist %>% as_tibble() %>% pivot_wider(names_from = value)
