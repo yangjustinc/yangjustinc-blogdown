@@ -107,10 +107,12 @@ reformat_authors <- function(author_str) {
 
 preprints <- mx_search(data = medrxivdata,
           query = c("10.1101/2021.11.28.21266870",
-                    "10.1101/2022.12.15.22283515"), 
+                    "10.1101/2022.12.15.22283515",
+                    "10.1101/2023.03.29.23287850"), 
           fields = c("doi")
           ) |> 
-  filter(grepl("NA",published)) |> 
+  filter(grepl("NA",published) |
+           is.na(published)) |> 
   select(authors, title, date, link_page) |> 
   mutate(authors = sapply(authors, reformat_authors)) |> 
     mutate(
@@ -137,8 +139,10 @@ authors = str_replace(authors, ", (?=[^,]*$)", ", and ")) |>
           "."
         )) |> 
   select(citation) |> 
-  rowwise() |> 
-  toString()
+  unlist() |> 
+  as_tibble()  |>
+  pivot_wider(names_from = value) 
+
 ```
 ```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
 cat(paste0(preprints), sep = "\r  \n")
