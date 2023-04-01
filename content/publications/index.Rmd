@@ -113,6 +113,7 @@ preprints <- mx_search(data = medrxivdata,
           ) |> 
   filter(grepl("NA",published) |
            is.na(published)) |> 
+  arrange(desc(date)) |> 
   select(authors, title, date, link_page) |> 
   mutate(authors = sapply(authors, reformat_authors)) |> 
     mutate(
