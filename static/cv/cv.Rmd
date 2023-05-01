@@ -44,7 +44,7 @@ employments %>%
     where = glue::glue("{`employment-summary.organization.address.city`}, {`employment-summary.organization.address.country`}")
   )
 ```  
-# Service
+# Service and Professional Membership
 ```{r}
 services <- do.call("rbind",
   rorcid::orcid_services("0000-0003-2881-4906")$`0000-0003-2881-4906`$`affiliation-group`$summaries
