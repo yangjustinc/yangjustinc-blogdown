@@ -63,7 +63,7 @@ library(scholar)
 library(tidyverse)
 
 publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
-  arrange(desc(year)) %>%
+    arrange(year) %>%
   mutate(author_long =
            case_when(str_detect(author, pattern = "\\.\\.\\.$") ~ 1, TRUE ~ 0)) %>%
   mutate(author = case_when(
@@ -77,7 +77,9 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
     author = str_replace_all(author, "Rv Kessel", "R van Kessel"),
     title = str_replace_all(title, ":.+", ""),
     author = str_replace(author, ", (?=[^,]*$)", ", and "),
-    number = 1:n()) %>%
+    number = row_number()) %>%
+#    number = 1:n()) %>%
+    arrange(desc(number)) %>%
       mutate(citation = paste0(
           number,
           ".\t",
@@ -133,7 +135,7 @@ preprints <- mx_search(data = mx_api_content(from_date = "2021-01-01"),
   filter(grepl("NA",published) |
            is.na(published)) |> 
   select(authors, title, date, link_page) |> 
-  arrange(desc(date)) |>
+  arrange(date) |>
   mutate(authors = sapply(authors, reformat_authors)) |> 
     mutate(
     authors = str_replace_all(authors, 'c\\.\\(\\"',''),
@@ -144,7 +146,8 @@ authors = str_replace_all(authors, 'JC Yang', '**JC Yang**'),
 authors = str_replace(authors, ", (?=[^,]*$)", ", and "),
 ) |> 
   mutate(date = str_sub(date,1,4)) |> 
-  mutate(number = 1:n()) |>
+  mutate(number = row_number()) |>
+  arrange(desc(number)) |>
   mutate(citation = paste0(
     number,
           ".\t",
