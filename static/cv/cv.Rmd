@@ -63,7 +63,8 @@ library(scholar)
 library(tidyverse)
 
 publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
-    arrange(year) %>%
+#    arrange(desc(year)) %>%
+    arrange(year) %>% 
   mutate(author_long =
            case_when(str_detect(author, pattern = "\\.\\.\\.$") ~ 1, TRUE ~ 0)) %>%
   mutate(author = case_when(
@@ -77,8 +78,8 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
     author = str_replace_all(author, "Rv Kessel", "R van Kessel"),
     title = str_replace_all(title, ":.+", ""),
     author = str_replace(author, ", (?=[^,]*$)", ", and "),
-    number = row_number()) %>%
-#    number = 1:n()) %>%
+#    number = row_number()) %>%
+    number = 1:n()) %>%
     arrange(desc(number)) %>%
       mutate(citation = paste0(
           number,
@@ -146,7 +147,7 @@ authors = str_replace_all(authors, 'JC Yang', '**JC Yang**'),
 authors = str_replace(authors, ", (?=[^,]*$)", ", and "),
 ) |> 
   mutate(date = str_sub(date,1,4)) |> 
-  mutate(number = row_number()) |>
+  mutate(number = 1:n()) |>
   arrange(desc(number)) |>
   mutate(citation = paste0(
     number,
