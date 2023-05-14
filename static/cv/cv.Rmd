@@ -62,7 +62,7 @@ services %>%
 library(scholar)
 library(tidyverse)
 
-publications <- as_tibble(get_publications("o-MsbBYAAAAJ"))
+publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
     arrange(desc(year)) %>%
   mutate(author_long =
            case_when(str_detect(author, pattern = "\\.\\.\\.$") ~ 1, TRUE ~ 0)) %>%
