@@ -62,7 +62,11 @@ services %>%
 library(scholar)
 library(tidyverse)
 
+<<<<<<< HEAD
 publications <- as_tibble(get_publications("o-MsbBYAAAAJ"))
+=======
+publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
+>>>>>>> 5659053ca2a00cf14353df4939041e7c892c702a
     arrange(desc(year)) %>%
   mutate(author_long =
            case_when(str_detect(author, pattern = "\\.\\.\\.$") ~ 1, TRUE ~ 0)) %>%
@@ -80,8 +84,8 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ"))
     number = n():1) %>%
     arrange(desc(number)) %>%
       mutate(citation = paste0(
-          number,
-          ".\t",
+#          number,
+#          ".\t",
           author,
           ". ",
           "(",
@@ -151,8 +155,8 @@ authors = str_replace(authors, ", (?=[^,]*$)", ", and "),
   mutate(number = n():1) |>
   arrange(desc(number)) |>
   mutate(citation = paste0(
-    number,
-          ".\t",
+#    number,
+#          ".\t",
           authors,
           ". ",
           "(",
