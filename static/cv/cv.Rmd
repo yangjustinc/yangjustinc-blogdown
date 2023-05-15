@@ -103,7 +103,7 @@ publications <- publications %>%
   pivot_wider(names_from = value)
 ```
 ```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
-cat(paste0(publications), sep = "  \r  \n", fill = TRUE, labels = paste0(""))
+cat(paste0(publications), sep = "  \r  \n  \n", fill = TRUE, labels = paste0(""))
 
 ```  
 
@@ -171,7 +171,7 @@ authors = str_replace(authors, ", (?=[^,]*$)", ", and "),
   pivot_wider(names_from = value) 
 ```
 ```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
-cat(paste0(preprints), sep = "  \r  \n", fill = TRUE, labels = paste0(""))
+cat(paste0(preprints), sep = "  \r  \n  \n", fill = TRUE, labels = paste0(""))
 
 ```
 <!-- # Funding -->
