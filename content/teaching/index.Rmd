@@ -6,12 +6,15 @@ output:
     keep_md: yes
 ---
 ## Teaching
-I am a guest lecturer on the [Core Principles of Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/core-principles-of-mental-health-research-PSBS0002) module at UCL. 
+I am a guest lecturer on the [Core Principles of Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/core-principles-of-mental-health-research-PSBS0002) module at UCL. I have previously taught on statistics and epidemiology modules at the postgraduate level. 
 
 ## Supervision
 ```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
 library(tidyverse)
+library(kableExtra)
 
 read_csv('students.csv') |> 
-  knitr::kable()
+  arrange(desc(`Year(s)`)) |> 
+  knitr::kable() |> 
+  scroll_box(height = "400px")
 ```
