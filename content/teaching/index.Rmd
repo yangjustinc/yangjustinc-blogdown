@@ -16,5 +16,5 @@ library(kableExtra)
 read_csv('students.csv') |> 
   arrange(desc(`Year(s)`)) |> 
   knitr::kable() |> 
-  scroll_box(height = "400px")
+  kable_styling(fixed_thead = T)
 ```
