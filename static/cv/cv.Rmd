@@ -131,7 +131,8 @@ reformat_authors <- function(author_str) {
 preprints <- mx_search(data = mx_api_content(from_date = "2021-01-01"),
           query = c("10.1101/2021.11.28.21266870",
                     "10.1101/2022.12.15.22283515",
-                    "10.1101/2023.03.29.23287850"), 
+                    "10.1101/2023.03.29.23287850",
+                    "10.1101/2023.08.10.23293931"), 
           fields = c("doi")
           ) |> 
   filter(grepl("NA",published) |
