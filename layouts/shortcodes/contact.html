@@ -1,7 +1,7 @@
 <style type="text/css">
 .form-style-1 {
 	margin:10px auto;
-	max-width: 400px;
+	max-width: 100%;
 	padding: 20px 12px 10px 20px;
 }
 .form-style-1 li {
@@ -80,14 +80,14 @@ select{
       accept-charset="UTF-8"
       data-netlify-recaptcha="true">
 <ul class="form-style-1">
-    <li><label>Name <span class="required">*</span></label><input type="text" name="Name" class="field-long" /></li>
+    <li><label>Name <span class="required">*</span></label><input type="text" name="Name" placeholder="First and Last" class="field-long" /></li>
     <li>
         <label>Email <span class="required">*</span></label>
-        <input type="email" name="Email" class="field-long" />
+        <input type="email" name="Email" placeholder="your@email.com" class="field-long" />
     </li>
     <li>
         <label>Message <span class="required">*</span></label>
-        <textarea name="Message" id="Message" class="field-long field-textarea"></textarea>
+        <textarea name="Message" id="Message" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ex quis mi lobortis, a sollicitudin libero tristique. Quisque finibus facilisis diam, at dictum dui egestas et. Donec fermentum vitae lorem vitae dapibus." class="field-long field-textarea"></textarea>
     </li>
     <div data-netlify-recaptcha="true"></div>
     <li>
