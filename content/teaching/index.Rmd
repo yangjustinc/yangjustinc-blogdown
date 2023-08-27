@@ -14,7 +14,7 @@ library(tidyverse)
 library(kableExtra)
 
 read_csv('students.csv') |> 
-  arrange(desc(`Year(s)`)) |> 
+  arrange(desc(`Year(s)`), Student) |> 
   knitr::kable() |> 
   kable_styling(fixed_thead = T)
 ```
