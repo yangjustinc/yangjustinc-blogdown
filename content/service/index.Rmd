@@ -13,6 +13,7 @@ output:
 - Member, Gender Equity & Athena SWAN Working Group, Division of Psychiatry, University College London
 - Member, LGBTQ+ Equity Working Group, Division of Psychiatry, University College London
 - Editorial Board Member, Substance Abuse: Research and Treatment
+- protocols.io Ambassador, protocols.io
 
 ## Peer Review
 
