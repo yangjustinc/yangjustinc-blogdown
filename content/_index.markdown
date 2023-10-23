@@ -5,7 +5,7 @@ output:
   html_document:
     keep_md: yes
 ---
-<div id = "profile"><center><img src="profile_circle.png" alt="Headshot of Justin C Yang" alt="Justin C Yang, PhD" /><br /><a href = "https://twitter.com/JustinCYang"><i class="fa-brands fa-twitter fa-xl"></i></a> <a rel="me" href="https://fediscience.org/@JustinCYang"><i class="fa-brands fa-mastodon fa-xl"></i></a> <a href = "https://www.linkedin.com/in/yangjustinc"><i class="fa-brands fa-linkedin fa-xl"></i></a> <a href = "https://github.com/yangjustinc"><i class="fa-brands fa-github fa-xl"></i></a>  <a href = "https://www.protocols.io/researchers/justin-c-yang"><i class="ai ai-protocols fa-xl"></i></a>  <a href = "https://osf.io/qz9xm"><i class="ai ai-osf fa-xl"></i></a> <a href = "https://scholar.google.com/citations?user=o-MsbBYAAAAJ"><i class="ai ai-google-scholar fa-xl"></i></a> <a href = "https://orcid.org/0000-0003-2881-4906"><i class="ai ai-orcid fa-xl"></i></a></center></div>
+<div id = "profile"><center><img src="profile_circle.png" alt="Headshot of Justin C Yang" alt="Justin C Yang, PhD" /><br /><a href = "https://twitter.com/JustinCYang"><i class="fa-brands fa-twitter fa-xl"></i></a> <a href = "https://www.linkedin.com/in/yangjustinc"><i class="fa-brands fa-linkedin fa-xl"></i></a> <a href = "https://www.protocols.io/researchers/justin-c-yang"><i class="ai ai-protocols fa-xl"></i></a>  <a href = "https://osf.io/qz9xm"><i class="ai ai-osf fa-xl"></i></a> <a href = "https://scholar.google.com/citations?user=o-MsbBYAAAAJ"><i class="ai ai-google-scholar fa-xl"></i></a> <a href = "https://orcid.org/0000-0003-2881-4906"><i class="ai ai-orcid fa-xl"></i></a></center></div>
 
 # Justin C Yang
 
