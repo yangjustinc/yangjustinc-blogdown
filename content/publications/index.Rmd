@@ -26,16 +26,9 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
     title = str_replace_all(title, ":.+", ""),
     author = str_replace(author, ", (?=[^,]*$)", ", and ")
   ) %>%
-  mutate(cid = case_when(
-    str_detect(pubid,
-               "IWHjjKOFINEC") ~ "15882838923600769415",
-    TRUE ~ cid
-  )) %>%
-  mutate(cid = case_when(
-    str_detect(pubid,
-               "4DMP91E08xMC") ~ "6138374257100904004",
-    TRUE ~ cid
-  )) %>%
+  group_by(pubid) |> 
+  mutate(url = get_publication_url("o-MsbBYAAAAJ", pubid)) %>% 
+  ungroup() %>%
   split(desc(.$year)) %>%
   map(function(x) {
     x <- x %>%
@@ -50,9 +43,9 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
           "[",
           title,
           "]",
-          "(https://scholar.google.com/scholar?oi=bibs&cluster=",
-          cid,
-          "&btnI=1&hl=en)",
+          "(",
+          url,
+          ")",
           ". ",
           "*",
           journal,
@@ -69,7 +62,11 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
 publications <-
   map2(substring(names(publications), 2) %>% paste0("<!--", ., "-->"),
        publications,
-       c) %>% unlist %>% as_tibble() %>% mutate(value = gsub("Rv Kessel", "R van Kessel", value)) %>% pivot_wider(names_from = value) 
+       c) %>% 
+  unlist %>% 
+  as_tibble() %>% 
+  mutate(value = gsub("Rv Kessel", "R van Kessel", value)) %>%
+  pivot_wider(names_from = value)
 ```
 ```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
 cat(paste0(publications), sep = "\r  \n")
@@ -81,8 +78,8 @@ library(medrxivr)
 library(tidyverse)
 library(here)
 
-medrxivdata <- mx_api_content(from_date = "2021-01-01")
-saveRDS(medrxivdata, here("medrxivdata.rds"))
+# medrxivdata <- mx_api_content(from_date = "2021-01-01")
+# saveRDS(medrxivdata, here("medrxivdata.rds"))
 
 medrxivdata <- readRDS(here("medrxivdata.rds"))
 
