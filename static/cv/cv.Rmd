@@ -80,8 +80,8 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
     number = n():1) %>%
     arrange(desc(number)) %>%
       mutate(citation = paste0(
-#          number,
-#          ".\t",
+          number,
+          "\t",
           author,
           ". ",
           "(",
