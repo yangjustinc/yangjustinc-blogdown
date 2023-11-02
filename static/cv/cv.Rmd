@@ -83,7 +83,7 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
           "**",
           number,
           "**",
-          "\t\t",
+          "\\t",
           author,
           ". ",
           "(",
