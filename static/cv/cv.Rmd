@@ -80,10 +80,10 @@ publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
     number = n():1) %>%
     arrange(desc(number)) %>%
       mutate(citation = paste0(
-          "**",
-          number,
-          "**",
-          "\t",
+#          "**",
+#          number,
+#          "**",
+#          "\t",
           author,
           ". ",
           "(",
@@ -130,7 +130,7 @@ reformat_authors <- function(author_str) {
   return(formatted_authors_str)
 }
 
-preprints <- mx_search(data = mx_api_content(from_date = "2021-01-01"),
+preprints <- mx_search(data = mx_api_content(),
           query = c("10.1101/2021.11.28.21266870",
                     "10.1101/2022.12.15.22283515",
                     "10.1101/2023.03.29.23287850",
