@@ -5,9 +5,9 @@ output:
   html_document:
     keep_md: yes
 ---
-<div id = "profile"><center><img src="profile_circle.png" alt="Headshot of Justin C Yang" alt="Justin C Yang, PhD" /><br /><a href = "https://twitter.com/JustinCYang"><i class="fa-brands fa-twitter fa-xl"></i></a> <a href = "https://www.linkedin.com/in/yangjustinc"><i class="fa-brands fa-linkedin fa-xl"></i></a> <a href = "https://www.protocols.io/researchers/justin-c-yang"><i class="ai ai-protocols fa-xl"></i></a>  <a href = "https://osf.io/qz9xm"><i class="ai ai-osf fa-xl"></i></a> <a href = "https://scholar.google.com/citations?user=o-MsbBYAAAAJ"><i class="ai ai-google-scholar fa-xl"></i></a> <a href = "https://orcid.org/0000-0003-2881-4906"><i class="ai ai-orcid fa-xl"></i></a></center></div>
+<div id = "profile"><center><img src="profile_circle.png" alt="Headshot of Justin C Yang" alt="Justin C Yang, PhD" /></center></div>
 
-# Justin C Yang
+# Justin C Yang <a href = "https://links.justinyang.me" aria-label="Links"><i class="fa-solid fa-link"></i></a> 
 
 I am a psychiatric epidemiologist and mental health researcher in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk). I am also the [research database](https://www.candi.nhs.uk/health-professionals/research/ci-research-database) manager at [Camden & Islington NHS Foundation Trust](https://www.candi.nhs.uk), an honorary lecturer in the [Wolfson Institute of Population Health](https://www.qmul.ac.uk/wiph) at [Queen Mary, University of London](https://www.qmul.ac.uk), and an affiliated researcher with the [Mental Health|Policy|Economics Group](https://www.mentalhealthpolicyeconomicsgroup.com). 
 
