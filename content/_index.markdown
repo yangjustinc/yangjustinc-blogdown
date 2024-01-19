@@ -7,7 +7,7 @@ output:
 ---
 <div id = "profile"><center><img src="profile_circle.png" alt="Headshot of Justin C Yang" alt="Justin C Yang, PhD" /></center></div>
 
-# Justin C Yang <a href = "https://links.justinyang.me" aria-label="Links"><i class="fa-solid fa-link"></i></a> 
+# Justin C Yang 
 
 I am a psychiatric epidemiologist and mental health researcher in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk). I am also the [research database](https://www.candi.nhs.uk/health-professionals/research/ci-research-database) manager at [Camden & Islington NHS Foundation Trust](https://www.candi.nhs.uk), an honorary lecturer in the [Wolfson Institute of Population Health](https://www.qmul.ac.uk/wiph) at [Queen Mary, University of London](https://www.qmul.ac.uk), and an affiliated researcher with the [Mental Health|Policy|Economics Group](https://www.mentalhealthpolicyeconomicsgroup.com). 
 
