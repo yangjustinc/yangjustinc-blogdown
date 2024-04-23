@@ -22,6 +22,6 @@ I received my PhD in Public Health and Primary Care from [Wolfson College](https
 - Pharmacoepidemiology and pharmacovigilance
 - Mental health equity, justice, and policy
 
-<center>
-<a href = "/cv/cv.pdf" aria-label="CV of Justin C Yang"><i class="ai ai-cv fa-3x"></i></a> 
-</center>
+<!-- <center> -->
+<!-- <a href = "/cv/cv.pdf" aria-label="CV of Justin C Yang"><i class="ai ai-cv fa-3x"></i></a>  -->
+<!-- </center> -->
