@@ -1,0 +1,15 @@
+---
+title: Risk of suicide after cancer diagnosis in England
+author: 'Investigating risk of suicide in patients with cancer using routine data'
+date: '2024-05-09'
+
+draft: false
+output:
+  html_document:
+    keep_md: yes  
+
+categories:
+  - NCRAS
+---
+
+<iframe width="100%" height="1200" name="iframe" src="https://yangjustinc.github.io/2024-ncras/"></iframe>
