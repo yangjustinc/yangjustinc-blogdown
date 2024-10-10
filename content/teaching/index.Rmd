@@ -6,7 +6,7 @@ output:
     keep_md: yes
 ---
 ## Teaching
-I am a lecturer on the [Core Principles of Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/core-principles-of-mental-health-research-PSBS0002) module at UCL. I have previously taught on epidemiology and statistics modules at the postgraduate level. 
+I teach epidemiology and statistics at the postgraduate level. 
 
 ## Supervision
 ```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
