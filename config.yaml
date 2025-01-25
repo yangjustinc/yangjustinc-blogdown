@@ -32,9 +32,9 @@ menu:
     - name: Contact
       url: "contact/"
       weight: 7
-    - name: Links
-      url: "https://links.justinyang.me"
-      weight: 8
+#    - name: Links
+#      url: "https://links.justinyang.me"
+#      weight: 8
 
 params:
   description: "Justin C Yang, PhD"
