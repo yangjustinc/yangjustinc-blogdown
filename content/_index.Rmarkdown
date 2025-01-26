@@ -5,7 +5,8 @@ output:
   html_document:
     keep_md: yes
 ---
-<div id = "profile"><center><img src="profile_circle.png" alt="Headshot of Justin C Yang" alt="Justin C Yang, PhD" /></center></div>
+
+<div id = "profile" align="center" style="max-width:30%;min-width:80px;float:right;"><img src="profile_circle.png" alt="Headshot of Justin C Yang" alt="Justin C Yang, PhD" /> <a href = "https://orcid.org/0000-0003-2881-4906"><i class="ai ai-orcid fa-2x"></i></a> <a href = "https://scholar.google.com/citations?user=o-MsbBYAAAAJ"><i class="ai ai-google-scholar fa-2x"></i></a>  <a href = "https://www.linkedin.com/in/yangjustinc"><i class="fa-brands fa-linkedin fa-2x"></i></a></div>
 
 # Justin C Yang 
 
