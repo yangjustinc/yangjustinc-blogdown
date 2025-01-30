@@ -15,46 +15,54 @@ orcid <- "0000-0003-2881-4906"
 # Must have all variables or function will report error
 
 funding <-  do.call("rbind",
-  orcid_fundings(orcid)[[1]]$group$`funding-summary`) %>%
+                    rorcid::orcid_fundings(orcid)[[1]]$group$`funding-summary`) %>%
   clean_names() %>%
-  select(put_code, title_title_value, start_date_year_value, end_date_year_value, organization_name) %>%
+  select(
+    put_code,
+    title_title_value,
+    url_value,
+    start_date_year_value,
+    end_date_year_value,
+    organization_name
+  ) %>%
   rename(
     title = title_title_value,
+    url = url_value,
     year_start = start_date_year_value,
     year_end = end_date_year_value,
     funder_name = organization_name
-  ) %>% 
+  ) %>%
   group_by(put_code) %>%
-  mutate(funding_amount = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$value,
-         funding_currency = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$`currency-code`,
-         description = orcid_fundings(orcid, put_code = put_code)[[1]]$`short-description`,
-         url = orcid_fundings(orcid, put_code = put_code)[[1]]$`external-ids`$`external-id`$`external-id-url.value`
-         ) %>%
+  mutate(
+    funding_amount = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$value,
+    funding_currency = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$`currency-code`,
+    url = orcid_fundings(orcid, put_code = put_code)[[1]]$`external-ids`$`external-id`$`external-id-url.value`
+  ) %>%
   ungroup() %>%
-  mutate(funding = paste0(
-    "<a href = \"",
-    url,
-    "\">",
-    "<h2>",
-    title,
-    "</h2>",
-    "</a>",
-    "<em>",
-    "Funded by ",
-    funder_name,
-    " for ",
-    funding_currency,
-    " ",
-    funding_amount,
-    " from ",
-    year_start,
-    " to ",
-    year_end,
-    "</em>",
-    "<p />",
-    str_squish(description)
-  )) %>%
-  arrange(desc(year_start)) %>% 
+  mutate(
+    funding = paste0(
+      "<a href = \"",
+      url,
+      "\">",
+      "<h2>",
+      title,
+      "</h2>",
+      "</a>",
+      "<em>",
+      "Funded by ",
+      funder_name,
+      " for ",
+      funding_currency,
+      " ",
+      funding_amount,
+      " from ",
+      year_start,
+      " to ",
+      year_end,
+      "</em>"
+    )
+  ) %>%
+  arrange(desc(year_start)) %>%
   select(funding)
 
 cat(str_c(funding$funding))

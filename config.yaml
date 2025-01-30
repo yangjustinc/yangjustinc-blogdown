@@ -17,9 +17,9 @@ menu:
     - name: Publications
       url: "publications/"
       weight: 2
-    # - name: Funding
-    #   url: "funding/"
-    #   weight: 3      
+    - name: Funding
+      url: "funding/"
+      weight: 3
     - name: Presentations
       url: "presentations/"
       weight: 4
@@ -32,9 +32,6 @@ menu:
     - name: Contact
       url: "contact/"
       weight: 7
-#    - name: Links
-#      url: "https://links.justinyang.me"
-#      weight: 8
 
 params:
   description: "Justin C Yang, PhD"
