@@ -17,9 +17,9 @@ I analyse routinely collected and administrative data using epidemiological, cau
 I completed my PhD in Public Health and Primary Care from [Wolfson College](https://www.wolfson.cam.ac.uk), [University of Cambridge](https://www.cam.ac.uk), under the supervision of Professor Carol Brayne and Dr. Andres Roman-Urrestarazu. Before that, I worked at [Avalere](https://avalere.com), a healthcare consultancy based in Washington, DC, where I worked with clients from life sciences, charitable foundations, and patient groups. I received my MSPH from the [Bloomberg School of Public Health](https://publichealth.jhu.edu), [Johns Hopkins University](https://www.jhu.edu), and my BA Hons and BSc from the [University of British Columbia](https://www.ubc.ca).
 
 ## Research Interests
-- Causal inference in behavioural health
 - Social and economic determinants of mental health
 - Spatial and environmental epidemiology
+- Causal inference in behavioural health
 - Pharmacoepidemiology and pharmacovigilance
 - Data linkage and bias
-- Coproduction methods in mental health research
+- Open science and coproduction methods
