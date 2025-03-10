@@ -7,10 +7,20 @@ output:
 ---
 ## Institutional Service
 
-- Research Development Programme Lead, Division of Psychiatry, University College London
-- Lead, Non-Clinical Early Career Researcher Group, Division of Psychiatry, University College London
+### Internal
+
 - Personal Tutor, Division of Psychiatry, University College London
+- Research Development Programme Lead, Division of Psychiatry, University College London
+- Non-Clinical Early Career Researcher Group Lead, Division of Psychiatry, University College London
+- Culture Change Action Group, Division of Psychiatry, University College London
+- LGBTQ+ Equity Action Group, Division of Psychiatry, University College London
+- Open Science Champion, Faculty of Brain Science, University College London
+
+### External
+
 - Editorial Board Member, Substance Use: Research and Treatment
+- Steering Committee Data Subgroup, Addiction Healthcare Goals 
+- Ambassador, Protocols.io
 
 ## Peer Review
 
@@ -23,6 +33,8 @@ library(janitor)
 library(rorcid)
 library(rcrossref)
 library(stringi)
+
+ORCID_TOKEN="a273e212-bcdf-4131-b60b-54317eab2910"
 
 reviews <-
   orcid_peer_reviews("0000-0003-2881-4906")[[1]]$group$`peer-review-group` %>%
@@ -45,7 +57,7 @@ get_title_from_issn <- function(issn) {
 }
 
 journal_names <-
-  reviews %>% purrr::map( ~ get_title_from_issn(.x)) %>% unlist() %>% as_tibble() %>% mutate(value = gsub("Men s", "Men's", value)) %>% arrange(value) %>% mutate(value = str_squish(value)) %>% pivot_wider(names_from = value)
+  reviews %>% purrr::map( ~ get_title_from_issn(.x)) %>% unlist() %>% as_tibble() %>% mutate(value = gsub("Men s", "Men's", value)) %>% mutate(sort_value = str_remove(value, regex("^(the|a|an)\\s+", ignore_case = TRUE))) %>% arrange(sort_value) %>% select(-sort_value) %>% mutate(value = str_squish(value)) %>% pivot_wider(names_from = value)
 
 cat(paste0("- ", names(journal_names)), sep = "\n")
 ```  
