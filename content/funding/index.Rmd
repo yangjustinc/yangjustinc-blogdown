@@ -14,31 +14,40 @@ orcid <- "0000-0003-2881-4906"
 
 # Must have all variables or function will report error
 
-funding <-  do.call("rbind",                    rorcid::orcid_fundings(orcid)[[1]]$group$`funding-summary`) %>%
+funding <-  do.call("rbind",
+                    rorcid::orcid_fundings(orcid)[[1]]$group$`funding-summary`) %>%
   clean_names() %>%
   select(
     put_code,
     title_title_value,
     url_value,
+    start_date_month_value,
     start_date_year_value,
+    end_date_month_value,
     end_date_year_value,
     organization_name
   ) %>%
   rename(
     title = title_title_value,
     url = url_value,
-    year_start = start_date_year_value,
-    year_end = end_date_year_value,
+    start_month = start_date_month_value,
+    start_year = start_date_year_value,
+    end_month = end_date_month_value,
+    end_year = end_date_year_value,
     funder_name = organization_name
   ) %>%
   group_by(put_code) %>%
   mutate(
-    funding_amount = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$value,
-    funding_currency = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$`currency-code`
+    description = orcid_fundings(orcid, put_code = put_code)[[1]]$`short-description`,
+    currency = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$`currency-code`,
+    amount = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$value
   ) %>%
   ungroup() %>%
   mutate(
     funding = paste0(
+      "<a href =\"",
+      url,
+      "\">",
       "<h2>",
       title,
       "</h2>",
@@ -47,17 +56,27 @@ funding <-  do.call("rbind",                    rorcid::orcid_fundings(orcid)[[1
       "Funded by ",
       funder_name,
       " for ",
-      funding_currency,
+      currency,
       " ",
-      prettyNum(funding_amount, big.mark = ",", scientific = FALSE),
+      prettyNum(
+        as.numeric(amount),
+        big.mark = ",",
+        scientific = FALSE
+      ),
       " from ",
-      year_start,
+      month(as.numeric(start_month), label = TRUE, abbr = FALSE),
+      " ",
+      as.numeric(start_year),
       " to ",
-      year_end,
-      "</em>"
+      month(as.numeric(end_month), label = TRUE, abbr = FALSE),
+      " ",
+      as.numeric(end_year),
+      "</em>",
+      "<br />",
+      as.character(description)
     )
   ) %>%
-  arrange(desc(year_start)) %>%
+  arrange(desc(as.numeric(start_year)), desc(as.numeric(start_month))) %>%
   select(funding)
 
 cat(str_c(funding$funding))
