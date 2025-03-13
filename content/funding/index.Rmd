@@ -14,8 +14,7 @@ orcid <- "0000-0003-2881-4906"
 
 # Must have all variables or function will report error
 
-funding <-  do.call("rbind",
-                    rorcid::orcid_fundings(orcid)[[1]]$group$`funding-summary`) %>%
+funding <-  do.call("rbind",                    rorcid::orcid_fundings(orcid)[[1]]$group$`funding-summary`) %>%
   clean_names() %>%
   select(
     put_code,
@@ -35,15 +34,11 @@ funding <-  do.call("rbind",
   group_by(put_code) %>%
   mutate(
     funding_amount = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$value,
-    funding_currency = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$`currency-code`,
-    url = orcid_fundings(orcid, put_code = put_code)[[1]]$`external-ids`$`external-id`$`external-id-url.value`
+    funding_currency = orcid_fundings(orcid, put_code = put_code)[[1]]$amount$`currency-code`
   ) %>%
   ungroup() %>%
   mutate(
     funding = paste0(
-      "<a href = \"",
-      url,
-      "\">",
       "<h2>",
       title,
       "</h2>",
@@ -54,7 +49,7 @@ funding <-  do.call("rbind",
       " for ",
       funding_currency,
       " ",
-      funding_amount,
+      prettyNum(funding_amount, big.mark = ",", scientific = FALSE),
       " from ",
       year_start,
       " to ",
