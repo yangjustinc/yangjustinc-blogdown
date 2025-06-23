@@ -18,9 +18,10 @@ output:
 
 ### External
 
+- Associate Editor, Addiction
 - Editorial Board, Substance Use: Research and Treatment
-- Reviewer Development Scheme, National Institute for Health Research
 - Steering Committee Data Subgroup, Addiction Healthcare Goals 
+- Reviewer Development Scheme, National Institute for Health Research
 - Ambassador, Protocols.io
 
 ## Peer Review
