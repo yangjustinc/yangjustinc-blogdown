@@ -1,5 +1,5 @@
 ---
-title: Mapping and Spatial Analysis in R
+title: Mapping and spatial analysis in R
 author: ''
 date: '2025-08-16'
 

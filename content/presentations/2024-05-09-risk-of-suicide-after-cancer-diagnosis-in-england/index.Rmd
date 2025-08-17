@@ -1,6 +1,5 @@
 ---
 title: Risk of suicide after cancer diagnosis in England
-author: 'Investigating risk of suicide in patients with cancer using routine data'
 date: '2024-05-09'
 
 draft: false
