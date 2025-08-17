@@ -16,8 +16,8 @@ output:
 
 ### External
 
-- Associate Editor, Addiction
-- Editorial Board, Substance Use: Research and Treatment
+- Associate Editor, [Addiction](https://onlinelibrary.wiley.com/page/journal/13600443/homepage/editorialboard.html)
+- Editorial Board, [Substance Use: Research and Treatment](https://journals.sagepub.com/editorial-board/SAT)
 - Steering Committee Data Subgroup, Addiction Healthcare Goals 
 - Reviewer Development Scheme, National Institute for Health Research
 - Ambassador, Protocols.io
