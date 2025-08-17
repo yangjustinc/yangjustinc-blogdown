@@ -43,3 +43,6 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+      
+  env:
+    ORCID_TOKEN: "a273e212-bcdf-4131-b60b-54317eab2910"

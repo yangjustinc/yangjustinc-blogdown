@@ -10,8 +10,6 @@ output:
 ### Internal
 
 - Personal Tutor, Division of Psychiatry, University College London
-- Research Development Programme Lead, Division of Psychiatry, University College London
-- Non-Clinical Early Career Researcher Group Lead, Division of Psychiatry, University College London
 - Culture Change Action Group, Division of Psychiatry, University College London
 - LGBTQ+ Equity Action Group, Division of Psychiatry, University College London
 - Open Science Champion, Faculty of Brain Science, University College London
