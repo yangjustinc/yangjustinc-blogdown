@@ -6,7 +6,7 @@ output:
     keep_md: yes
 ---
 ## Teaching
-I primarily teach epidemiology and statistics at the postgraduate level. In the past, I have taught on the Core Principles of Mental Health Research and Practical Statistics for Mental Health Research modules at UCL.
+I primarily teach epidemiology, statistics, and open science at the postgraduate level. I have taught on the Core Principles of Mental Health Research and Practical Statistics for Mental Health Research modules at UCL.
 
 ## Supervision
 ```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
