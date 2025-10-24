@@ -10,3 +10,5 @@ Thumbs.db
 /resources/
 .Rproj
 .RDataTmp
+.Rprofile
+.Renviron
