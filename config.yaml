@@ -1,6 +1,6 @@
 baseurl: "https://justinyang.me"
 languageCode: "en-us"
-title: "Justin C Yang, PhD"
+title: "MINDSET: Multimodal INference and Data science for pSychiatric Epidemiology and Treatment"
 theme: "hugo-xmin"
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 footnotereturnlinkcontents: "↩"
@@ -33,7 +33,7 @@ menu:
       weight: 7
 
 params:
-  description: "Justin C Yang, PhD"
+  description: "MINDSET: Multimodal INference and Data science for pSychiatric Epidemiology and Treatment"
   footer: "Published using [blogdown](https://bookdown.org/yihui/blogdown) and [Hugo](https://gohugo.io) <br> &copy; [Justin C Yang](https://justinyang.me) 2019-{Year}"
   githubSource: "https://github.com/yangjustinc/yangjustinc-blogdown/blob/main/content/"
 
