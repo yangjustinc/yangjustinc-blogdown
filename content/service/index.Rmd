@@ -20,12 +20,12 @@ output:
 - Editorial Board, [Substance Use: Research and Treatment](https://journals.sagepub.com/editorial-board/SAT)
 - Steering Committee, Addiction Healthcare Goals 
 - Assessor College, Economic and Social Research Council (ESRC)
-- Reviewer Development Scheme, National Institute for Health Research
+- Reviewer Development Scheme, National Institute for Health and Care Research
 - Ambassador, Protocols.io
 
 ## Peer Review
 
-I have served as an invited referee for:  
+Dr Yang has served as an invited referee for:  
 
 ```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
 remotes::install_github("ropensci/rcrossref")
