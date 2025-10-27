@@ -19,13 +19,12 @@ output:
 - Associate Editor, [Addiction](https://onlinelibrary.wiley.com/page/journal/13600443/homepage/editorialboard.html)
 - Editorial Board, [Substance Use: Research and Treatment](https://journals.sagepub.com/editorial-board/SAT)
 - Steering Committee, Addiction Healthcare Goals 
-- Assessor College, Economic and Social Research Council (ESRC)
+- Assessor College, Economic and Social Research Council
 - Reviewer Development Scheme, National Institute for Health and Care Research
+- Public Member, British Society for Immunology Patient and Public Involvement Network
 - Ambassador, Protocols.io
 
 ## Peer Review
-
-Dr Yang has served as an invited referee for:  
 
 ```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
 remotes::install_github("ropensci/rcrossref")

@@ -13,24 +13,27 @@ menu:
     - name: About
       url: "/"
       weight: 1
+    # - name: Team
+    #   url: "team/"
+      weight: 2
     - name: Publications
       url: "publications/"
-      weight: 2
+      weight: 3
     - name: Funding
       url: "funding/"
-      weight: 3
+      weight: 4
     - name: Presentations
       url: "presentations/"
-      weight: 4
+      weight: 5
     - name: Teaching
       url: "teaching/"
-      weight: 5
+      weight: 6
     - name: Service
       url: "service/"
-      weight: 6
+      weight: 7
     - name: Contact
       url: "contact/"
-      weight: 7
+      weight: 8
 
 params:
   description: "MINDSET: Multimodal INference and Data science for pSychiatric Epidemiology and Treatment"
