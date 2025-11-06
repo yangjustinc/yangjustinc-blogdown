@@ -12,7 +12,7 @@ library(scholar)
 library(tidyverse)
 
 publications <- as_tibble(get_publications("o-MsbBYAAAAJ")) %>%
-  arrange(desc(year)) %>%
+  dplyr::arrange(desc(year)) %>%
   mutate(author_long =
            case_when(str_detect(author, pattern = "\\.\\.\\.$") ~ 1, TRUE ~ 0)) %>%
   mutate(author = case_when(
