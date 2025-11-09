@@ -1,6 +1,37 @@
 <script defer src="//yihui.org/js/math-code.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="//cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script defer src="//yihui.org/js/center-img.js"></script>
 <script src="//unpkg.com/littlefoot/dist/littlefoot.js" type="application/javascript" ></script> 
 <script type="application/javascript"> littlefoot.default() </script>
+
+<script src="//unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  // Auto-decorate common content so you do not edit posts
+  (function () {
+    const targets = [
+      'article p','article li','article img','article blockquote',
+      'article h2','article h3','article h4'
+    ];
+    const els = document.querySelectorAll(targets.join(','));
+    els.forEach(el => {
+      if (!el.hasAttribute('data-aos')) el.setAttribute('data-aos', 'fade-up');
+    });
+  }());
+
+  // Respect reduced-motion; animate once; gentle defaults
+  document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({
+      // disable when user prefers reduced motion
+      disable: function () {
+        return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      },
+      once: true,
+      offset: 80,
+      duration: 600,
+      easing: 'ease-in-out'
+    });
+  });
+</script>
+
