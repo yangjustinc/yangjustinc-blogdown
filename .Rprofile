@@ -19,7 +19,7 @@ options(
   blogdown.method = 'html'
 )
 
-options(blogdown.hugo.version = "0.95.0")
+options(blogdown.hugo.version = "0.152.2")
 
 options(blogdown.new_bundle = TRUE,        # force making page bundle (i.e folder instead of single file)
         blogdown.ext = '.Rmd',             # File extension for posts

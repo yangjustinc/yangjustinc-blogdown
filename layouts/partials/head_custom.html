@@ -8,3 +8,21 @@
 {{ template "_internal/twitter_cards.html" . }}
 
 <link rel="stylesheet" href="//unpkg.com/aos@2.3.4/dist/aos.css">
+
+<style>
+/* Add consistent gaps between header links no matter how HTML is minified */
+header nav a + a,
+header .menu a + a,
+#header a + a {
+  margin-left: .6rem;
+}
+
+/* If your header container is a flex row, this is even cleaner */
+header nav,
+header .menu,
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+</style>
