@@ -11,24 +11,26 @@
 
 <script defer>
 document.addEventListener('DOMContentLoaded', function () {
-  // 1) Initialise littlefoot after DOM is ready
+  // Initialise littlefoot safely if you use it
   if (window.littlefoot && typeof littlefoot.default === 'function') {
     try { littlefoot.default(); } catch (e) { console.warn('littlefoot init failed:', e); }
   }
 
-  // 2) Auto-decorate common content in BOTH article and main
-  var targets = [
-    'article p','article li','article img','article figure','article blockquote',
-    'article h2','article h3','article h4',
-    'main p','main li','main img','main figure','main blockquote',
-    'main h2','main h3','main h4','main section'
-  ];
-  var els = document.querySelectorAll(targets.join(','));
-  els.forEach(function (el) {
+  // Pick a safe container and broad selectors
+  var container = document.querySelector('main, .content, .post, .single, body');
+  if (!container) container = document.body;
+
+  var targets = container.querySelectorAll([
+    'p','li','img','figure','blockquote',
+    'h1','h2','h3','h4','section'
+  ].join(','));
+
+  targets.forEach(function (el) {
+    // Avoid animating header, nav, footer
+    if (el.closest('header, nav, footer')) return;
     if (!el.hasAttribute('data-aos')) el.setAttribute('data-aos', 'fade-up');
   });
 
-  // 3) Respect reduced motion; animate once; steady defaults
   if (window.AOS && typeof AOS.init === 'function') {
     AOS.init({
       disable: function () {
@@ -41,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 4) If MathJax typesets after AOS init, refresh so positions are correct
+  // If MathJax typesets after init, refresh AOS so positions are correct
   if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
     MathJax.startup.promise.then(function () {
       if (window.AOS && typeof AOS.refreshHard === 'function') AOS.refreshHard();
