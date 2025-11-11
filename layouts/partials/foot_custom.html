@@ -6,48 +6,75 @@
 <!-- littlefoot -->
 <script src="//unpkg.com/littlefoot/dist/littlefoot.js" type="application/javascript" defer></script>
 
-<!-- AOS -->
+<!-- AOS JS (keep aos.css in head as you already have) -->
 <script src="//unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
 
 <script defer>
 document.addEventListener('DOMContentLoaded', function () {
-  // Initialise littlefoot safely if you use it
-  if (window.littlefoot && typeof littlefoot.default === 'function') {
-    try { littlefoot.default(); } catch (e) { console.warn('littlefoot init failed:', e); }
+  // Helper to add data-aos to common content but not header/nav/footer
+  function tagTargets(root) {
+    var scope = root || document;
+
+    var selectors = [
+      // Typical page content
+      'main p','main li','main img','main figure','main blockquote',
+      'main h1','main h2','main h3','main h4','main section',
+      'main a',               // for link-only lines
+      // Publications/Teaching tables
+      'main table','main thead','main tbody',
+      'main tr','main td','main th','main caption',
+      // Fallbacks if a page lacks <main>
+      '.content p','.content li','.content img','.content figure','.content blockquote',
+      '.content h1','.content h2','.content h3','.content h4','.content section',
+      'article p','article li','article img','article figure','article blockquote',
+      'article h1','article h2','article h3','article h4','article section'
+    ];
+
+    var els = scope.querySelectorAll(selectors.join(','));
+    els.forEach(function (el) {
+      if (el.closest('header, nav, footer')) return;
+      if (!el.hasAttribute('data-aos')) el.setAttribute('data-aos', 'fade-up');
+    });
   }
 
-  // Pick a safe container and broad selectors
-  var container = document.querySelector('main, .content, .post, .single, body');
-  if (!container) container = document.body;
+  // Initial tagging
+  tagTargets();
 
-  var targets = container.querySelectorAll([
-    'p','li','img','figure','blockquote',
-    'h1','h2','h3','h4','section'
-  ].join(','));
-
-  targets.forEach(function (el) {
-    // Avoid animating header, nav, footer
-    if (el.closest('header, nav, footer')) return;
-    if (!el.hasAttribute('data-aos')) el.setAttribute('data-aos', 'fade-up');
-  });
-
+  // Init AOS, respecting reduced motion gently
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (window.AOS && typeof AOS.init === 'function') {
     AOS.init({
-      disable: function () {
-        return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      },
+      disable: false,                 // do not fully disable
       once: true,
-      offset: 80,
-      duration: 600,
+      offset: reduce ? 0 : 80,
+      duration: reduce ? 0 : 600,
       easing: 'ease-in-out'
     });
   }
 
-  // If MathJax typesets after init, refresh AOS so positions are correct
+  // Refresh after MathJax typesets or other late changes
   if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
     MathJax.startup.promise.then(function () {
       if (window.AOS && typeof AOS.refreshHard === 'function') AOS.refreshHard();
     }).catch(function(){});
   }
+
+  // Watch for late-added nodes (e.g., kePrint, shortcodes); re-tag + refresh
+  var scheduled = false;
+  function scheduleRefresh() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(function () {
+      scheduled = false;
+      tagTargets();
+      if (window.AOS && typeof AOS.refreshHard === 'function') AOS.refreshHard();
+    });
+  }
+  var mo = new MutationObserver(function (mutations) {
+    for (var m of mutations) {
+      if (m.addedNodes && m.addedNodes.length) { scheduleRefresh(); break; }
+    }
+  });
+  mo.observe(document.body, { childList: true, subtree: true });
 });
 </script>
