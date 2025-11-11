@@ -4,33 +4,25 @@
 <script defer src="//yihui.org/js/center-img.js"></script>
 
 <!-- littlefoot -->
-<script src="//unpkg.com/littlefoot/dist/littlefoot.js" type="application/javascript" defer></script>
+<script src="//unpkg.com/littlefoot/dist/littlefoot.js" defer></script>
 
-<!-- AOS JS -->
+<!-- AOS -->
 <script src="//unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
 
 <script defer>
 document.addEventListener('DOMContentLoaded', function () {
-  // Initialise littlefoot
+  // 1. Initialise littlefoot safely
   if (window.littlefoot && typeof littlefoot.default === 'function') {
     try { littlefoot.default(); } catch (e) { console.warn('littlefoot init failed:', e); }
   }
 
+  // 2. Tag logical content blocks for fade-in
   function tagBlocks(root) {
     var scope = root || document;
-
-    // Animate block-level sections rather than every child
     var blocks = scope.querySelectorAll([
-      // direct blocks under main/content/article
-      'main > *',
-      '.content > *',
-      'article > *',
-
-      // important structures
+      'main > *', '.content > *', 'article > *',
       'main table','main table > tbody > tr','main table > thead',
       '.content table','.content table > tbody > tr','.content table > thead',
-
-      // fallbacks if a page lacks <main>/<article>
       'body .page > *','body .single > *','body .post > *'
     ].join(','));
 
@@ -45,19 +37,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   tagBlocks();
 
-  // AOS with gentle reduced-motion handling
+  // 3. Initialise AOS with gentle reduced-motion handling
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (window.AOS && typeof AOS.init === 'function') {
     AOS.init({
       disable: false,
       once: true,
       offset: reduce ? 0 : 60,
-      duration: reduce ? 0 : 500,
-      easing: 'ease-in-out'
+      duration: reduce ? 200 : 500,   // short but visible fade
+      easing: reduce ? 'linear' : 'ease-in-out'
     });
   }
 
-  // Retag rows inserted by shortcodes or scripts, then refresh
+  // 4. Re-tag and refresh if content changes dynamically
   var scheduled = false;
   function schedule() {
     if (scheduled) return;
@@ -74,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }).observe(document.body, { childList: true, subtree: true });
 
-  // If MathJax typesets later, refresh positions
+  // 5. Refresh AOS after MathJax finishes typesetting
   if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
     MathJax.startup.promise.then(function () {
       if (window.AOS && typeof AOS.refreshHard === 'function') AOS.refreshHard();
