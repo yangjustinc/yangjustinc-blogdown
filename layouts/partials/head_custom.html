@@ -10,21 +10,20 @@
 <link rel="stylesheet" href="//unpkg.com/aos@2.3.4/dist/aos.css">
 
 <style>
-/* Gentle fade only when reduced motion is on */
-@media (prefers-reduced-motion: reduce) {
-  [data-aos] {
-    opacity: 0;
-    transform: none !important;
-    transition: opacity 200ms linear !important;
-  }
-  [data-aos].aos-animate {
-    opacity: 1 !important;
-  }
-}
-
-/* Safety: prevent AOS adding unexpected transforms globally */
-[data-aos] {
+/* Lightweight fade-in */
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 500ms ease, transform 500ms ease;
   will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+/* Respect reduced motion with a gentle opacity only */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transform: none; transition: opacity 200ms linear; }
 }
 </style>
 
