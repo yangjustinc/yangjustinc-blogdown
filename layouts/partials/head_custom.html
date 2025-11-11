@@ -10,6 +10,25 @@
 <link rel="stylesheet" href="//unpkg.com/aos@2.3.4/dist/aos.css">
 
 <style>
+/* Gentle fade only when reduced motion is on */
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    opacity: 0;
+    transform: none !important;
+    transition: opacity 200ms linear !important;
+  }
+  [data-aos].aos-animate {
+    opacity: 1 !important;
+  }
+}
+
+/* Safety: prevent AOS adding unexpected transforms globally */
+[data-aos] {
+  will-change: opacity, transform;
+}
+</style>
+
+<style>
 /* Add consistent gaps between header links no matter how HTML is minified */
 header nav a + a,
 header .menu a + a,
