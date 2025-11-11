@@ -6,75 +6,79 @@
 <!-- littlefoot -->
 <script src="//unpkg.com/littlefoot/dist/littlefoot.js" type="application/javascript" defer></script>
 
-<!-- AOS JS (keep aos.css in head as you already have) -->
+<!-- AOS JS -->
 <script src="//unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
 
 <script defer>
 document.addEventListener('DOMContentLoaded', function () {
-  // Helper to add data-aos to common content but not header/nav/footer
-  function tagTargets(root) {
+  // Initialise littlefoot
+  if (window.littlefoot && typeof littlefoot.default === 'function') {
+    try { littlefoot.default(); } catch (e) { console.warn('littlefoot init failed:', e); }
+  }
+
+  function tagBlocks(root) {
     var scope = root || document;
 
-    var selectors = [
-      // Typical page content
-      'main p','main li','main img','main figure','main blockquote',
-      'main h1','main h2','main h3','main h4','main section',
-      'main a',               // for link-only lines
-      // Publications/Teaching tables
-      'main table','main thead','main tbody',
-      'main tr','main td','main th','main caption',
-      // Fallbacks if a page lacks <main>
-      '.content p','.content li','.content img','.content figure','.content blockquote',
-      '.content h1','.content h2','.content h3','.content h4','.content section',
-      'article p','article li','article img','article figure','article blockquote',
-      'article h1','article h2','article h3','article h4','article section'
-    ];
+    // Animate block-level sections rather than every child
+    var blocks = scope.querySelectorAll([
+      // direct blocks under main/content/article
+      'main > *',
+      '.content > *',
+      'article > *',
 
-    var els = scope.querySelectorAll(selectors.join(','));
-    els.forEach(function (el) {
+      // important structures
+      'main table','main table > tbody > tr','main table > thead',
+      '.content table','.content table > tbody > tr','.content table > thead',
+
+      // fallbacks if a page lacks <main>/<article>
+      'body .page > *','body .single > *','body .post > *'
+    ].join(','));
+
+    blocks.forEach(function (el) {
       if (el.closest('header, nav, footer')) return;
-      if (!el.hasAttribute('data-aos')) el.setAttribute('data-aos', 'fade-up');
+      if (!el.hasAttribute('data-aos')) {
+        el.setAttribute('data-aos', 'fade-up');
+        el.setAttribute('data-aos-anchor-placement', 'top-bottom');
+      }
     });
   }
 
-  // Initial tagging
-  tagTargets();
+  tagBlocks();
 
-  // Init AOS, respecting reduced motion gently
+  // AOS with gentle reduced-motion handling
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (window.AOS && typeof AOS.init === 'function') {
     AOS.init({
-      disable: false,                 // do not fully disable
+      disable: false,
       once: true,
-      offset: reduce ? 0 : 80,
-      duration: reduce ? 0 : 600,
+      offset: reduce ? 0 : 60,
+      duration: reduce ? 0 : 500,
       easing: 'ease-in-out'
     });
   }
 
-  // Refresh after MathJax typesets or other late changes
+  // Retag rows inserted by shortcodes or scripts, then refresh
+  var scheduled = false;
+  function schedule() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(function () {
+      scheduled = false;
+      tagBlocks();
+      if (window.AOS && typeof AOS.refreshHard === 'function') AOS.refreshHard();
+    });
+  }
+  new MutationObserver(function (muts) {
+    for (var m of muts) {
+      if (m.addedNodes && m.addedNodes.length) { schedule(); break; }
+    }
+  }).observe(document.body, { childList: true, subtree: true });
+
+  // If MathJax typesets later, refresh positions
   if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
     MathJax.startup.promise.then(function () {
       if (window.AOS && typeof AOS.refreshHard === 'function') AOS.refreshHard();
     }).catch(function(){});
   }
-
-  // Watch for late-added nodes (e.g., kePrint, shortcodes); re-tag + refresh
-  var scheduled = false;
-  function scheduleRefresh() {
-    if (scheduled) return;
-    scheduled = true;
-    requestAnimationFrame(function () {
-      scheduled = false;
-      tagTargets();
-      if (window.AOS && typeof AOS.refreshHard === 'function') AOS.refreshHard();
-    });
-  }
-  var mo = new MutationObserver(function (mutations) {
-    for (var m of mutations) {
-      if (m.addedNodes && m.addedNodes.length) { scheduleRefresh(); break; }
-    }
-  });
-  mo.observe(document.body, { childList: true, subtree: true });
 });
 </script>
