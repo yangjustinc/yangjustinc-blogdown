@@ -3,53 +3,79 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script defer src="//yihui.org/js/center-img.js"></script>
 
-<!-- littlefoot -->
+<!-- littlefoot (kept) -->
 <script src="//unpkg.com/littlefoot/dist/littlefoot.js" defer></script>
-
-<!-- AOS -->
-<script src="//unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
 
 <script defer>
 document.addEventListener('DOMContentLoaded', function () {
-  // 1. Initialise littlefoot safely
+  // Initialise littlefoot safely
   if (window.littlefoot && typeof littlefoot.default === 'function') {
     try { littlefoot.default(); } catch (e) { console.warn('littlefoot init failed:', e); }
   }
 
-  // 2. Tag logical content blocks for fade-in
+  // Pick sensible containers across xmin pages
+  var containers = document.querySelectorAll('main, .content, article, .page, .single, .post');
+  if (!containers.length) containers = [document.body];
+
+  // Tag logical blocks rather than every tiny node
   function tagBlocks(root) {
-    var scope = root || document;
-    var blocks = scope.querySelectorAll([
-      'main > *', '.content > *', 'article > *',
-      'main table','main table > tbody > tr','main table > thead',
-      '.content table','.content table > tbody > tr','.content table > thead',
-      'body .page > *','body .single > *','body .post > *'
-    ].join(','));
+    var scopes = root ? [root] : Array.from(containers);
+    var sel = [
+      // direct blocks
+      '> *',
+      // tables and rows for pages like Teaching
+      'table', 'table > thead', 'table > tbody > tr',
+      // typical content for pages like Publications
+      'p', 'li', 'h1', 'h2', 'h3', 'h4', 'figure', 'blockquote', 'section', 'a'
+    ];
 
-    blocks.forEach(function (el) {
-      if (el.closest('header, nav, footer')) return;
-      if (!el.hasAttribute('data-aos')) {
-        el.setAttribute('data-aos', 'fade-up');
-        el.setAttribute('data-aos-anchor-placement', 'top-bottom');
-      }
+    scopes.forEach(function (scope) {
+      // Skip header/nav/footer areas
+      if (scope.closest && scope.closest('header, nav, footer')) return;
+
+      var nodes = scope.querySelectorAll(sel.join(','));
+      nodes.forEach(function (el) {
+        if (el.closest('header, nav, footer')) return;
+        if (!el.classList.contains('reveal')) el.classList.add('reveal');
+      });
     });
   }
 
-  tagBlocks();
-
-  // 3. Initialise AOS with gentle reduced-motion handling
+  // IntersectionObserver fade-in
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (window.AOS && typeof AOS.init === 'function') {
-    AOS.init({
-      disable: false,
-      once: true,
-      offset: reduce ? 0 : 60,
-      duration: reduce ? 200 : 500,   // short but visible fade
-      easing: reduce ? 'linear' : 'ease-in-out'
-    });
+  var io = null;
+
+  function setupObserver() {
+    if (reduce) {
+      // Show immediately, still with gentle opacity transition from CSS
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        el.classList.add('is-visible');
+      });
+      return;
+    }
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        el.classList.add('is-visible');
+      });
+      return;
+    }
+    io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
   }
 
-  // 4. Re-tag and refresh if content changes dynamically
+  // Initial tag + observe
+  tagBlocks();
+  setupObserver();
+
+  // Refresh when content changes (e.g., shortcodes, tables)
   var scheduled = false;
   function schedule() {
     if (scheduled) return;
@@ -57,20 +83,21 @@ document.addEventListener('DOMContentLoaded', function () {
     requestAnimationFrame(function () {
       scheduled = false;
       tagBlocks();
-      if (window.AOS && typeof AOS.refreshHard === 'function') AOS.refreshHard();
+      if (io) {
+        document.querySelectorAll('.reveal:not(.is-visible)').forEach(function (el) { io.observe(el); });
+      } else {
+        // Reduced motion or no IO
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+      }
     });
   }
   new MutationObserver(function (muts) {
-    for (var m of muts) {
-      if (m.addedNodes && m.addedNodes.length) { schedule(); break; }
-    }
+    for (var m of muts) { if (m.addedNodes && m.addedNodes.length) { schedule(); break; } }
   }).observe(document.body, { childList: true, subtree: true });
 
-  // 5. Refresh AOS after MathJax finishes typesetting
+  // After MathJax typesets, reveal anything newly sized
   if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
-    MathJax.startup.promise.then(function () {
-      if (window.AOS && typeof AOS.refreshHard === 'function') AOS.refreshHard();
-    }).catch(function(){});
+    MathJax.startup.promise.then(schedule).catch(function(){});
   }
 });
 </script>
