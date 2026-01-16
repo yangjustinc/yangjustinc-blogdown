@@ -16,15 +16,16 @@ output:
 
 ### External
 
-- Associate Editor, [Addiction](https://onlinelibrary.wiley.com/page/journal/13600443/homepage/editorialboard.html)
-- Editorial Board, [Substance Use: Research and Treatment](https://journals.sagepub.com/editorial-board/SAT)
-- Steering Committee, Addiction Healthcare Goals 
-- Expert Assessor, Administrative Data Research UK
-- Assessor College, Economic and Social Research Council
-- Reviewer Development Scheme, National Institute for Health and Care Research
-- Public Member, British Society for Immunology Patient and Public Involvement Network
-- Data Access Committee Public Member, East of England Secure Data Environment
-- Ambassador, Protocols.io
+- Associate Editor, [Addiction](https://onlinelibrary.wiley.com/page/journal/13600443/homepage/editorialboard.html) 
+- Editorial Board, [Substance Use: Research and Treatment](https://journals.sagepub.com/editorial-board/SAT) 
+- Steering Committee Member, Addiction Healthcare Goals 
+- Expert Assessor, Administrative Data Research UK 
+- Assessor College, Economic and Social Research Council 
+- Reviewer Development Scheme, National Institute for Health and Care Research 
+- Expert Member, Confidentiality Advisory Group, Health Research Authority 
+- Data Access Committee Public Member, East of England Secure Data Environment 
+- Public Member, British Society for Immunology Patient and Public Involvement Network 
+- Ambassador, Protocols.io 
 
 ## Peer Review
 

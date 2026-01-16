@@ -1,36 +1,36 @@
-Student,Degree,Year(s),Topic
-Yara Nassar,MSc,2020-2022,Retrospective health policy analysis on smoking-free and smoking cessation policies in the Netherlands
-Rutendo Florence Kudenga,MSc,2021-2022,Knowledge and attitude of adolescents regarding electronic cigarettes
-Jon Daly,MSc,2021-2022,Impact of predominantly plant based and vegan diets on gestational diabetes
-Nathalie Rich,PhD,2021-2025,Race disparities in pathways through psychiatric care and service engagement
-Lea Bastian,MSc,2022,Impact of access barriers to abortion on the health of pregnant people in progressive legal settings
-Matios Haile,MSc,2022,Socio-demographic and clinical characteristics of patients with psychosis readmitted to crisis care
-Luke Aladenika,MSc,2022,Outcomes of electroconvulsive therapy among inpatients with serious depression
-Madonna Fekry,MSc,2022-2023,Social determinants associated with the advanced stage diagnosis of breast cancer in Egypt in the previous ten years
-Jameela Syed Roshanuddin,MSc,2022-2023,Central-line associated bloodstream infection among hospitalized patients with hematologic malignancies
-Victoria Skala,BSc,2022-2023,Animal and social models for the risk factors of cocaine use disorder in adolescents
-Haneen Hakeem,MSc,2023,Integrated psychological treatment approach for co-occurring substance use disorder and post-traumatic stress disorder
-Bhavya Gupta,MSc,2023,The effectiveness of psychological therapy for comorbid post-traumatic stress disorder and substance use disorders
-Ridha Mahmood,MSc,2023,Differential impacts of climate change on mental health outcomes in vulnerable groups
-Justina Cao,MSc,2023,Exposure to urban heat island effect and psychosis
-Jessica Ann Marie Jamieson,MSc,2023,"Examining trends in DMFT scores for England,  Japan and the United States across 40 years using an age,  period and cohort studies and reflecting on the health policies introduced"
-Aiden Patrick Malone,MSc,2023,A scoping review of population health management activities and contextual factors for considerations in the implementation and policy underpinned by big data
-Fitya Syarifa Mozar,MSc,2023-2024,Healthcare service quality impacts on Indonesia Workers' Social Security Program (BPJS) users'  satisfaction
-Deryn Khaffaf,MSc,2023-2024,A scoping review to find the menstrual health challenges faced by women in the Middle East and North America
-Carolina Goncalves Schmidt,MSc,2023-2024,Is the frequency of STI screening influencing STI incidence amongst MSM in England and Wales? A statistical analysis of epidemiological data
-Fatima Aroob Afzal,MSc,2024,The impact of COVID-19 on physician burn out in Canada
-Alara Egeli,MSc,2024,Treatment options for co-occurring substance use disorder and severe mental illness
-Eleanor Edgar,MSc,2024,Psychopharmacological interventions for rapid cycling bipolar disorder
-Jasmine Malty,MSc,2024,How does depression impact physical intimacy in romantic relationships? 
-Jieyu Zan,MSc,2024,What are the sex differences in the response to antidepressants for depression?
-Tamara Moon,MSc,2024,Examining rates and predictors of readmission to acute mental health services following Crisis Team intervention among individuals with a ‘personality disorder’ diagnosis
-Ebenezer Smith,MSc,2024-2025,Comparing social prescribing to conventional medical care for elders in India
-Agnes Iwegbu,MSc,2024-2025,Evaluating BMI and BMI alternatives for Predicting Health Outcomes and Addressing Health Equity in Diverse Populations
-Olumide Adeyefa,MSc,2024-2025,Health policy and diabetes prevalence in sub-Saharan Africa
-Lucia Fernandes Saiegh,MSc,2025,Key drivers of diabetes in sub-Saharan Africa
-Osemen Elizabeth Usifo,MSc,2025,Policies and strategies in Africa for electronic cigarette cessation
-Cameron Tefft,MSc,2025,Psychotherapeutic and pharmacological treatment for co-occurring cannabis use disorder and psychotic disorders
-Thea Nelson,MSc,2025,Variations in special educational needs and disabilities (SEND) support and educational outcomes by local and unitary authority
-Sonya Rudra,PhD,2025-Present,Health service use and health characteristics of parents with a learning disability and their children in England: a mixed-methods study of outcomes and experiences
-Vanessa Cieplinska,PhD,2025-Present,School attendance problems and educational attainment in children with neurodevelopmental conditions
-Alua Yeskendir,PhD,2025-Present,Causes of health and social inequalities in psychiatric disorders
+Student,Degree,Year(s),Role,Topic
+Yara Nassar,MSc,2020-2022,Primary Supervisor,Retrospective health policy analysis on smoking-free and smoking cessation policies in the Netherlands
+Rutendo Florence Kudenga,MSc,2021-2022,Primary Supervisor,Knowledge and attitude of adolescents regarding electronic cigarettes
+Jon Daly,MSc,2021-2022,Primary Supervisor,Impact of predominantly plant based and vegan diets on gestational diabetes
+Nathalie Rich,PhD,2021-2025,Thesis Committee,Race disparities in pathways through psychiatric care and service engagement
+Lea Bastian,MSc,2022,Primary Supervisor,Impact of access barriers to abortion on the health of pregnant people in progressive legal settings
+Matios Haile,MSc,2022,Primary Supervisor,Socio-demographic and clinical characteristics of patients with psychosis readmitted to crisis care
+Luke Aladenika,MSc,2022,Primary Supervisor,Outcomes of electroconvulsive therapy among inpatients with serious depression
+Madonna Fekry,MSc,2022-2023,Primary Supervisor,Social determinants associated with the advanced stage diagnosis of breast cancer in Egypt in the previous ten years
+Jameela Syed Roshanuddin,MSc,2022-2023,Primary Supervisor,Central-line associated bloodstream infection among hospitalized patients with hematologic malignancies
+Victoria Skala,BSc,2022-2023,Secondary Supervisor,Animal and social models for the risk factors of cocaine use disorder in adolescents
+Haneen Hakeem,MSc,2023,Primary Supervisor,Integrated psychological treatment approach for co-occurring substance use disorder and post-traumatic stress disorder
+Bhavya Gupta,MSc,2023,Primary Supervisor,The effectiveness of psychological therapy for comorbid post-traumatic stress disorder and substance use disorders
+Ridha Mahmood,MSc,2023,Secondary Supervisor,Differential impacts of climate change on mental health outcomes in vulnerable groups
+Justina Cao,MSc,2023,Secondary Supervisor,Exposure to urban heat island effect and psychosis
+Jessica Ann Marie Jamieson,MSc,2023,Primary Supervisor,"Examining trends in DMFT scores for England,  Japan and the United States across 40 years using an age,  period and cohort studies and reflecting on the health policies introduced"
+Aiden Patrick Malone,MSc,2023,Primary Supervisor,A scoping review of population health management activities and contextual factors for considerations in the implementation and policy underpinned by big data
+Fitya Syarifa Mozar,MSc,2023-2024,Primary Supervisor,Healthcare service quality impacts on Indonesia Workers' Social Security Program (BPJS) users'  satisfaction
+Deryn Khaffaf,MSc,2023-2024,Primary Supervisor,A scoping review to find the menstrual health challenges faced by women in the Middle East and North America
+Carolina Goncalves Schmidt,MSc,2023-2024,Primary Supervisor,Is the frequency of STI screening influencing STI incidence amongst MSM in England and Wales? A statistical analysis of epidemiological data
+Fatima Aroob Afzal,MSc,2024,Primary Supervisor,The impact of COVID-19 on physician burn out in Canada
+Alara Egeli,MSc,2024,Primary Supervisor,Treatment options for co-occurring substance use disorder and severe mental illness
+Eleanor Edgar,MSc,2024,Secondary Supervisor,Psychopharmacological interventions for rapid cycling bipolar disorder
+Jasmine Malty,MSc,2024,Secondary Supervisor,How does depression impact physical intimacy in romantic relationships? 
+Jieyu Zan,MSc,2024,Secondary Supervisor,What are the sex differences in the response to antidepressants for depression?
+Tamara Moon,MSc,2024,Secondary Supervisor,Examining rates and predictors of readmission to acute mental health services following Crisis Team intervention among individuals with a ‘personality disorder’ diagnosis
+Ebenezer Smith,MSc,2024-2025,Primary Supervisor,Comparing social prescribing to conventional medical care for elders in India
+Agnes Iwegbu,MSc,2024-2025,Primary Supervisor,Evaluating BMI and BMI alternatives for Predicting Health Outcomes and Addressing Health Equity in Diverse Populations
+Olumide Adeyefa,MSc,2024-2025,Primary Supervisor,Health policy and diabetes prevalence in sub-Saharan Africa
+Lucia Fernandes Saiegh,MSc,2025,Primary Supervisor,Key drivers of diabetes in sub-Saharan Africa
+Osemen Elizabeth Usifo,MSc,2025,Primary Supervisor,Policies and strategies in Africa for electronic cigarette cessation
+Cameron Tefft,MSc,2025,Primary Supervisor,Psychotherapeutic and pharmacological treatment for co-occurring cannabis use disorder and psychotic disorders
+Thea Nelson,MSc,2025,Primary Supervisor,Variations in special educational needs and disabilities (SEND) support and educational outcomes by local and unitary authority
+Sonya Rudra,PhD,2025-Present,Thesis Committee,Health service use and health characteristics of parents with a learning disability and their children in England: a mixed-methods study of outcomes and experiences
+Vanessa Cieplinska,PhD,2025-Present,Secondary Supervisor,School attendance problems and educational attainment in children with neurodevelopmental conditions
+Alua Yeskendir,PhD,2025-Present,Secondary Supervisor,Causes of health and social inequalities in psychiatric disorders
