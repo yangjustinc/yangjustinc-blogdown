@@ -6,7 +6,7 @@ output:
     keep_md: yes
 ---
 ## Teaching
-Dr Yang primarily teaches epidemiology, statistics, and open science at the postgraduate level. He has taught on the Core Principles of Mental Health Research and Practical Statistics for Mental Health Research modules at UCL. More recently, he has co-developed curricula around open science and public involvement and engagement with research.
+Dr Yang primarily teaches epidemiology, statistics, and open science at the postgraduate level. He has taught on the [Core Principles of Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/core-principles-of-mental-health-research-PSBS0002), [Practical Statistics for Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research-PSBS0008), and [Epidemiological Research Methods in Mental Health](https://www.ucl.ac.uk/module-catalogue/modules/epidemiological-research-methods-in-mental-health-PSBS0013) modules at UCL. More recently, he has co-developed curricula around open science and public involvement and engagement with research.
 
 ## Supervision
 ```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
