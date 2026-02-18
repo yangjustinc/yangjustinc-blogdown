@@ -13,6 +13,7 @@ output:
 - Culture Change Action Group, Division of Psychiatry, University College London
 - LGBTQ+ Equity Action Group, Division of Psychiatry, University College London
 - Open Science Champion, Faculty of Brain Science, University College London
+- Committee Member, Child and Young People's Mental Health ECR Network, University College London
 
 ### External
 
