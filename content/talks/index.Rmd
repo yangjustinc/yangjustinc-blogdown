@@ -1,0 +1,17 @@
+---
+title: Talks
+
+output:
+  html_document:
+    keep_md: yes
+---
+## Talks
+```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
+library(tidyverse)
+library(kableExtra)
+
+read_csv('talks.csv') |> 
+  arrange(desc(Date)) |> 
+  knitr::kable() |> 
+  kable_styling(fixed_thead = T)
+```

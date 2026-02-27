@@ -22,18 +22,21 @@ menu:
     - name: Funding
       url: "funding/"
       weight: 4
+    - name: Talks
+      url: "talks/"
+      weight: 5
     - name: Presentations
       url: "presentations/"
-      weight: 5
+      weight: 6
     - name: Teaching
       url: "teaching/"
-      weight: 6
+      weight: 7
     - name: Service
       url: "service/"
-      weight: 7
+      weight: 8
     - name: Contact
       url: "contact/"
-      weight: 8
+      weight: 9
 
 params:
   description: "MINDSET: Multimodal INference and Data science for pSychiatric Epidemiology and Treatment"
