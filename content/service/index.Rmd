@@ -21,7 +21,8 @@ output:
 - Editorial Board, [Substance Use: Research and Treatment](https://journals.sagepub.com/editorial-board/SAT) 
 - Steering Committee Member, Addiction Healthcare Goals 
 - Expert Assessor, Administrative Data Research UK 
-- Assessor College, Economic and Social Research Council 
+- Assessor College, Economic and Social Research Council
+- Reviewer College, Society for the Study of Addiction
 - Reviewer Development Scheme, National Institute for Health and Care Research 
 - Expert Member, Confidentiality Advisory Group, Health Research Authority 
 - Data Access Committee Public Member, East of England Secure Data Environment 

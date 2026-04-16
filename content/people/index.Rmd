@@ -1,0 +1,110 @@
+---
+title: People
+
+output:
+  html_document:
+    keep_md: yes
+---
+
+<style>
+.people-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.team-card {
+  width: calc(33.333% - 16px);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.partner-card {
+  width: calc(50% - 12px);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.team-card img,
+.partner-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.team-card img {
+  max-height: 220px;
+}
+
+.partner-card img {
+  max-height: 140px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.partner-card p {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .team-card {
+    width: calc(50% - 12px);
+  }
+
+  .partner-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .team-card,
+  .partner-card {
+    width: 100%;
+  }
+}
+</style>
+
+## Team
+
+<div class="people-grid">
+
+<div class="team-card">
+<img src="pictures/justinyang.png" alt="Headshot of Justin C Yang">
+<br><b>Dr Justin Yang</b>
+<br>Senior Research Fellow
+<br><a href="https://profiles.ucl.ac.uk/75514-justin-yang">Profile</a>
+</div>
+
+<div class="team-card">
+<img src="pictures/nathalierich.png" alt="Headshot of Nathalie Rich">
+<br><b>Dr Nathalie Rich</b>
+<br>Research Fellow (2025-)
+<br><a href="https://profiles.ucl.ac.uk/80231-nathalie-rich">Profile</a>
+</div>
+
+<div class="team-card">
+<img src="pictures/yunsookim.png" alt="Headshot of Yunsoo Kim">
+<br><b>Yunsoo Kim</b>
+<br>Research Assistant (2026-)
+<br><a href="https://bluesky333.github.io/">Website</a>
+</div>
+
+</div>
+
+## Community Partners
+
+<div class="people-grid">
+
+<div class="partner-card">
+<img src="pictures/changegrowlive.png" alt="Change Grow Live Logo">
+<p><b>Change, Grow, Live</b> provides a range of services to support individuals, families and communities whose lives are adversely affected by crime, substance misuse, homelessness, anti-social behaviour, domestic violence, social deprivation and lack of opportunity. The charity works with challenging service users with complex needs, including those with entrenched drug habits and offending behaviour.</p>
+</div>
+
+<div class="partner-card">
+<img src="pictures/turningpoint.png" alt="Turning Point Logo">
+<p><b>Turning Point</b> provides health and social care services for people with a learning disability and also people at risk of, or with a mental health diagnosis, mental health issues, drug or alcohol use, misuse or dependency, or other addictive behaviours.</p>
+</div>
+
+</div>

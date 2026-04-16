@@ -13,9 +13,9 @@ menu:
     - name: About
       url: "/"
       weight: 1
-    # - name: Team
-    #   url: "team/"
-    #   weight: 2
+    - name: People
+      url: "people/"
+      weight: 2
     - name: Publications
       url: "publications/"
       weight: 3
