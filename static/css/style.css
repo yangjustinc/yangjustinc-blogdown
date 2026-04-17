@@ -1,3 +1,9 @@
+/* ── Page entrance ───────────────────────────────────── */
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 /* ── Layout ──────────────────────────────────────────── */
 body {
   max-width: 800px;
@@ -5,6 +11,7 @@ body {
   padding: 1.5em 1em;
   line-height: 1.65;
   color: #222;
+  animation: fadein 0.35s ease-out both;
 }
 
 /* ── Navigation ──────────────────────────────────────── */
@@ -24,7 +31,7 @@ body {
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 0.9em;
-  transition: color 0.15s, background 0.15s;
+  transition: color 0.15s ease, background 0.15s ease;
 }
 
 .menu a:hover {
@@ -187,6 +194,22 @@ h1 {
   font-size: 1.75rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  position: relative;
+  padding-bottom: 0.4em;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background: #005f73;
+  margin-top: 0.3em;
+}
+
+.article-meta h1::after {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h2 {
@@ -208,6 +231,7 @@ p {
 /* ── Links ───────────────────────────────────────────── */
 a {
   color: #005f73;
+  transition: color 0.15s ease;
 }
 
 a:hover {
@@ -222,6 +246,41 @@ main a {
 
 main a:hover {
   text-decoration-color: #005f73;
+}
+
+/* ── People card hover ───────────────────────────────── */
+.team-card,
+.partner-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.team-card:hover,
+.partner-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Team headshots ──────────────────────────────────── */
+.team-card img {
+  border-radius: 8px;
+}
+
+/* ── Reduced motion ──────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .team-card,
+  .partner-card,
+  a,
+  .menu a {
+    animation: none;
+    transition: none;
+  }
+
+  .team-card:hover,
+  .partner-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 /* ── Mobile tweaks ───────────────────────────────────── */
