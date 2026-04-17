@@ -5,7 +5,8 @@ output:
   html_document:
     keep_md: yes
 ---
-## Talks
+Dr Yang is available for invited talks, seminars, and keynotes in psychiatric epidemiology, causal inference, mental health data science, and open science. [Contact](../contact/) to enquire.
+
 ```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
 library(tidyverse)
 library(kableExtra)

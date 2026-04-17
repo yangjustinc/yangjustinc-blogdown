@@ -1,65 +1,210 @@
+/* ── Layout ──────────────────────────────────────────── */
 body {
   max-width: 800px;
   margin: auto;
-  padding: 1em;
-  line-height: 1.5;
+  padding: 1.5em 1em;
+  line-height: 1.65;
+  color: #222;
 }
 
-/* header and footer areas */
-.menu { padding: 0; }
-.menu li { display: inline-block; }
-.article-meta, .menu a {
+/* ── Navigation ──────────────────────────────────────── */
+.menu {
+  padding: 0;
+  margin-bottom: 0.5em;
+}
+
+.menu li {
+  display: inline-block;
+  margin: 0 0.1em;
+}
+
+.menu a {
   text-decoration: none;
-  background: #eee;
-  padding: 5px;
-  border-radius: 5px;
-}
-.menu, .article-meta, footer { text-align: center; }
-.title { font-size: 1.1em; }
-footer a { text-decoration: none; }
-hr {
-  border-style: dashed;
-  color: #ddd;
+  color: #444;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  transition: color 0.15s, background 0.15s;
 }
 
-/* code */
+.menu a:hover {
+  color: #005f73;
+  background: #f0f4f4;
+}
+
+/* ── Header / Footer text alignment ─────────────────── */
+.article-meta {
+  text-decoration: none;
+  padding: 0;
+  background: none;
+}
+
+.menu,
+.article-meta,
+footer {
+  text-align: center;
+}
+
+.title {
+  font-size: 1.1em;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+/* ── Horizontal rule ─────────────────────────────────── */
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 1em 0;
+}
+
+/* ── Code ────────────────────────────────────────────── */
 pre {
-  border: 1px solid #ddd;
-  box-shadow: 5px 5px 5px #eee;
+  border: 1px solid #e0e0e0;
+  box-shadow: none;
   padding: 1em;
   overflow-x: auto;
+  border-radius: 4px;
+  background: #fafafa;
 }
-code { background: #f9f9f9; }
-pre code { background: none; }
 
-/* misc elements */
-img, iframe, video { max-width: 100%; }
-main { hyphens: auto; }
+code {
+  background: #f5f5f5;
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ── Media ───────────────────────────────────────────── */
+img,
+iframe,
+video {
+  max-width: 100%;
+}
+
+main {
+  hyphens: auto;
+}
+
+/* ── Blockquote ──────────────────────────────────────── */
 blockquote {
   background: #f9f9f9;
-  border-left: 5px solid #ccc;
-  padding: 3px 1em 3px;
+  border-left: 3px solid #005f73;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  color: #444;
 }
 
+/* ── Tables ──────────────────────────────────────────── */
 table {
-  margin: auto;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
+  margin: 1em auto;
+  border-top: 2px solid #444;
+  border-bottom: 2px solid #444;
+  width: 100%;
+  font-size: 0.9em;
 }
-table thead th { border-bottom: 1px solid #ddd; }
-th, td { padding: 5px; }
-thead, tfoot, tr:nth-child(even) { background: #eee; }
-#profile {
-  align:center;
-  float:right; 
-  max-width:30%;
-  min-width:140px;}
 
-@media screen and (max-width: 600px) {
-  #profile { 
-  align:center;
-  float:none; 
-  max-width:100%;
-  min-width:80px;
+table thead th {
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+  padding: 8px 10px;
+}
+
+th,
+td {
+  padding: 7px 10px;
+  text-align: left;
+}
+
+thead {
+  background: #f0f4f4;
+}
+
+tr:nth-child(even) {
+  background: #fafafa;
+}
+
+tfoot {
+  background: #f0f4f4;
+}
+
+/* ── Homepage profile block ──────────────────────────── */
+#profile {
+  float: right;
+  max-width: 28%;
+  min-width: 120px;
+  text-align: center;
+  margin: 0 0 1rem 1.5rem;
+}
+
+/* ── Footer social icons ─────────────────────────────── */
+.footer-social {
+  margin: 0.75em 0 0.25em;
+  text-align: center;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 0.35em;
+  color: #555;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  color: #005f73;
+}
+
+/* ── Vertical rhythm ─────────────────────────────────── */
+h1 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  margin-top: 1.4em;
+  margin-bottom: 0.4em;
+}
+
+h3 {
+  margin-top: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+p {
+  margin-bottom: 0.9em;
+}
+
+/* ── Links ───────────────────────────────────────────── */
+a {
+  color: #005f73;
+}
+
+a:hover {
+  color: #003d4d;
+}
+
+/* ── Mobile tweaks ───────────────────────────────────── */
+@media screen and (max-width: 640px) {
+  #profile {
+    float: none;
+    max-width: 60%;
+    min-width: 80px;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+  }
+
+  table {
+    font-size: 0.82em;
+  }
+
+  th,
+  td {
+    padding: 5px 7px;
   }
 }

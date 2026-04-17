@@ -1,0 +1,25 @@
+<footer>
+  {{ partial "foot_custom.html" . }}
+
+  {{ with .Site.Params.footer }}
+  <hr/>
+  {{ replace . "{Year}" now.Year | markdownify }}
+  {{ end }}
+
+  <div class="footer-social">
+    <a href="https://bsky.app/profile/justinyang.me" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
+      <i class="fa-brands fa-bluesky fa-lg"></i>
+    </a>
+    <a href="https://orcid.org/0000-0003-2881-4906" target="_blank" rel="noopener noreferrer" aria-label="ORCID">
+      <i class="ai ai-orcid fa-lg"></i>
+    </a>
+    <a href="https://scholar.google.com/citations?user=o-MsbBYAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+      <i class="ai ai-google-scholar fa-lg"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/yangjustinc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <i class="fa-brands fa-linkedin fa-lg"></i>
+    </a>
+  </div>
+</footer>
+</body>
+</html>

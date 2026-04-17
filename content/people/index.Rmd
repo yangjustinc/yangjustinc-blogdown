@@ -12,10 +12,11 @@ output:
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  justify-content: center;
 }
 
 .team-card {
-  width: calc(33.333% - 16px);
+  width: calc(25% - 18px);
   text-align: center;
   box-sizing: border-box;
 }
@@ -34,7 +35,7 @@ output:
 }
 
 .team-card img {
-  max-height: 220px;
+  max-height: 180px;
 }
 
 .partner-card img {
@@ -80,26 +81,56 @@ output:
 <div class="team-card">
 <img src="pictures/nathalierich.png" alt="Headshot of Nathalie Rich">
 <br><b>Dr Nathalie Rich</b>
-<br>Research Fellow (2025-)
+<br>Research Fellow
 <br><a href="https://profiles.ucl.ac.uk/80231-nathalie-rich">Profile</a>
 </div>
 
 <div class="team-card">
 <img src="pictures/yunsookim.png" alt="Headshot of Yunsoo Kim">
 <br><b>Yunsoo Kim</b>
-<br>Research Assistant (2026-)
+<br>Research Assistant
 <br><a href="https://bluesky333.github.io/">Website</a>
 </div>
 
 </div>
 
-## Community Partners
+## Students and Trainees
+
+<div class="people-grid">
+
+<div class="team-card">
+<img src="pictures/vanessacieplinska.png" alt="Headshot of Vanessa Cieplinska">
+<br><b>Vanessa Cieplinska</b>
+<br>PhD student
+<br>Funded by ADR UK
+</div>
+
+<div class="team-card">
+<img src="pictures/aluayeskendir.png" alt="Headshot of Alua Yeskendir">
+<br><b>Alua Yeskendir</b>
+<br>PhD student
+<br>Funded by MHR UK
+</div>
+
+</div>
+
+## Partners
 
 <div class="people-grid">
 
 <div class="partner-card">
 <img src="pictures/changegrowlive.png" alt="Change Grow Live Logo">
 <p><b>Change, Grow, Live</b> provides a range of services to support individuals, families and communities whose lives are adversely affected by crime, substance misuse, homelessness, anti-social behaviour, domestic violence, social deprivation and lack of opportunity. The charity works with challenging service users with complex needs, including those with entrenched drug habits and offending behaviour.</p>
+</div>
+
+<div class="partner-card">
+<img src="pictures/nlft.png" alt="North London NHS Foundation Trust Logo">
+<p><b>North London NHS Foundation Trust</b> provides specialist mental health and community health services for children, young people, adults and older people across North London, including support for those experiencing severe and enduring mental illness, crisis, or complex psychological and social needs.</p>
+</div>
+
+<div class="partner-card">
+<img src="pictures/slam.png" alt="South London and Maudsley NHS Foundation Trust Logo">
+<p><b>South London and Maudsley NHS Foundation Trust</b> provides specialist mental health and substance use services for children, young people, adults and older people, serving local communities in Croydon, Lambeth, Lewisham and Southwark as well as people referred from across the UK to its national specialist units.</p>
 </div>
 
 <div class="partner-card">

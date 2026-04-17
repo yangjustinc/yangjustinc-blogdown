@@ -1,10 +1,32 @@
-<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" rel="stylesheet">
-<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
-<link href="//cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" rel="stylesheet">
-<link href="//unpkg.com/littlefoot/dist/littlefoot.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<!-- SEO: page-level or site-level description -->
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+{{ with .Site.Params.ogImage }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+
+<!-- Twitter card -->
 {{ template "_internal/twitter_cards.html" . }}
 
-<link rel="stylesheet" href="//unpkg.com/aos@2.3.4/dist/aos.css">
+<!-- Fonts: preconnect first, then load -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap">
+
+<!-- Icons and academicons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+
+<!-- Footnotes -->
+<link rel="stylesheet" href="https://unpkg.com/littlefoot/dist/littlefoot.css">
+
+<!-- AOS scroll animations (only load if you use them) -->
+{{/* Remove the AOS line below if you are not actively using data-aos attributes anywhere */}}
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">

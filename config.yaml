@@ -1,6 +1,6 @@
 baseurl: "https://justinyang.me"
 languageCode: "en-us"
-title: "MINDSET: Multimodal INference and Data science for pSychiatric Epidemiology and Treatment"
+title: "Justin C Yang | MINDSET"
 theme: "hugo-xmin"
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 footnotereturnlinkcontents: "↩"
@@ -10,7 +10,7 @@ permalinks:
 
 menu:
   main:
-    - name: About
+    - name: Home
       url: "/"
       weight: 1
     - name: People
@@ -39,9 +39,10 @@ menu:
       weight: 9
 
 params:
-  description: "MINDSET: Multimodal INference and Data science for pSychiatric Epidemiology and Treatment"
+  description: "MINDSET is a research programme led by Dr Justin C Yang at UCL, combining psychiatric epidemiology, causal inference, and data science to improve mental health outcomes."
   footer: "Published using [blogdown](https://bookdown.org/yihui/blogdown) and [Hugo](https://gohugo.io) <br> &copy; [Justin C Yang](https://justinyang.me) 2019-{Year}"
   githubSource: "https://github.com/yangjustinc/yangjustinc-blogdown/blob/main/content/"
+  ogImage: "twitter_card.jpg"
 
 markup:
   highlight:
@@ -50,5 +51,5 @@ markup:
     renderer:
       unsafe: true
       
-  env:
-    ORCID_TOKEN: "a273e212-bcdf-4131-b60b-54317eab2910"
+env:
+  ORCID_TOKEN: "a273e212-bcdf-4131-b60b-54317eab2910"
