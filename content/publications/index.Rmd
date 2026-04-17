@@ -1,5 +1,6 @@
 ---
 title: Publications
+description: "Peer-reviewed publications by Dr Justin C Yang and the MINDSET research programme, spanning psychiatric epidemiology, causal inference, substance use, and mental health data science."
 
 output:
   html_document:

@@ -1,8 +1,11 @@
 ---
 title: Contact
+description: "Contact Dr Justin C Yang to enquire about research collaborations, PhD and MSc supervision, speaking invitations, or media and policy engagement."
 
 output:
   html_document:
     keep_md: yes
 ---
+Dr Yang welcomes enquiries about collaborations, MSc and PhD supervision, speaking invitations, and media or policy engagement.
+
 <div id="contact">`r blogdown::shortcode("contact")`</div>

@@ -1,5 +1,6 @@
 ---
 title: Funding
+description: "Current and completed research funding awarded to the MINDSET programme, including projects supported by UKRI, ADR UK, and NIHR."
 
 output:
   html_document:
@@ -57,11 +58,7 @@ funding <- bind_rows(rorcid::orcid_fundings(orcid)[[1]]$group$`funding-summary`)
       " for ",
       currency,
       " ",
-      prettyNum(
-        as.numeric(amount),
-        big.mark = ",",
-        scientific = FALSE
-      ),
+      paste0("£", formatC(as.numeric(amount), format="f", digits=0, big.mark=",")),
       " from ",
       month(as.numeric(start_month), label = TRUE, abbr = FALSE),
       " ",

@@ -1,5 +1,6 @@
 ---
 title: Talks
+description: "Invited talks, seminars, and keynotes by Dr Justin C Yang in psychiatric epidemiology, causal inference, mental health data science, and open science."
 
 output:
   html_document:

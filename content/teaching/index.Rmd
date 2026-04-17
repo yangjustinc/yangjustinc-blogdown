@@ -1,5 +1,6 @@
 ---
 title: Teaching
+description: "Teaching and supervision by Dr Justin C Yang at UCL, covering epidemiology, statistics, and open science at the postgraduate level."
 
 output:
   html_document:
