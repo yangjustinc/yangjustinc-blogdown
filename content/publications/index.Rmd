@@ -11,8 +11,19 @@ Dr Yang's publications span psychiatric epidemiology, causal inference, substanc
 ```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 library(scholar)
 library(tidyverse)
+pubs_raw <- get_publications("o-MsbBYAAAAJ")
+saveRDS(pubs_raw, "content/publications/publications_cache.rds")
 
-publications <- get_publications("o-MsbBYAAAAJ") |>
+cache_file <- "publications_cache.rds"
+
+if (!file.exists(cache_file)) {
+  pubs_raw <- get_publications("o-MsbBYAAAAJ")
+  saveRDS(pubs_raw, cache_file)
+} else {
+  pubs_raw <- readRDS(cache_file)
+}
+
+publications <- pubs_raw |>
   as_tibble() |>
   dplyr::arrange(dplyr::desc(.data$year)) %>%
   mutate(author_long =
