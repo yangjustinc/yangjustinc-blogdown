@@ -42,7 +42,7 @@ library(rorcid)
 library(rcrossref)
 library(stringi)
 
-ORCID_TOKEN="a273e212-bcdf-4131-b60b-54317eab2910"
+ORCID_TOKEN <- Sys.getenv("ORCID_TOKEN")
 
 reviews <-
   orcid_peer_reviews("0000-0003-2881-4906")[[1]]$group$`peer-review-group` %>%

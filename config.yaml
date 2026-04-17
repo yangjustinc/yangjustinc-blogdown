@@ -1,6 +1,6 @@
 baseurl: "https://justinyang.me"
 languageCode: "en-us"
-title: "Justin C Yang | MINDSET"
+title: "MINDSET"
 theme: "hugo-xmin"
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 footnotereturnlinkcontents: "↩"

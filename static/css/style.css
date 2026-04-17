@@ -35,12 +35,12 @@ body {
 }
 
 .menu a:hover {
-  color: #005f73;
-  background: #f0f4f4;
+  color: #1f7fc4;
+  background: #eef6fb;
 }
 
 .menu a.active {
-  color: #005f73;
+  color: #1f7fc4;
   font-weight: 700;
 }
 
@@ -102,8 +102,8 @@ main {
 
 /* ── Blockquote ──────────────────────────────────────── */
 blockquote {
-  background: #f9f9f9;
-  border-left: 3px solid #005f73;
+  background: #f9fbfd;
+  border-left: 3px solid #1f7fc4;
   padding: 0.5em 1em;
   margin: 1em 0;
   color: #444;
@@ -136,7 +136,7 @@ td {
 }
 
 thead {
-  background: #f0f4f4;
+  background: #eef6fb;
 }
 
 tr:nth-child(even) {
@@ -144,7 +144,7 @@ tr:nth-child(even) {
 }
 
 tfoot {
-  background: #f0f4f4;
+  background: #eef6fb;
 }
 
 /* ── Homepage profile block ──────────────────────────── */
@@ -169,7 +169,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #005f73;
+  color: #1f7fc4;
 }
 
 /* ── Footer social icons ─────────────────────────────── */
@@ -186,7 +186,7 @@ footer a:hover {
 }
 
 .footer-social a:hover {
-  color: #005f73;
+  color: #1f7fc4;
 }
 
 /* ── Headings ────────────────────────────────────────── */
@@ -203,7 +203,7 @@ h1::after {
   display: block;
   width: 2.5rem;
   height: 2px;
-  background: #005f73;
+  background: #1f7fc4;
   margin-top: 0.3em;
 }
 
@@ -230,34 +230,22 @@ p {
 
 /* ── Links ───────────────────────────────────────────── */
 a {
-  color: #005f73;
+  color: #1f7fc4;
   transition: color 0.15s ease;
 }
 
 a:hover {
-  color: #003d4d;
+  color: #155d94;
 }
 
 main a {
   text-decoration: underline;
-  text-decoration-color: rgba(0, 95, 115, 0.35);
+  text-decoration-color: rgba(31, 127, 196, 0.35);
   text-underline-offset: 3px;
 }
 
 main a:hover {
-  text-decoration-color: #005f73;
-}
-
-/* ── People card hover ───────────────────────────────── */
-.team-card,
-.partner-card {
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-
-.team-card:hover,
-.partner-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  text-decoration-color: #1f7fc4;
 }
 
 /* ── Team headshots ──────────────────────────────────── */
@@ -268,18 +256,10 @@ main a:hover {
 /* ── Reduced motion ──────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   body,
-  .team-card,
-  .partner-card,
   a,
   .menu a {
     animation: none;
     transition: none;
-  }
-
-  .team-card:hover,
-  .partner-card:hover {
-    transform: none;
-    box-shadow: none;
   }
 }
 
