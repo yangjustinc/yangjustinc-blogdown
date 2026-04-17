@@ -15,5 +15,6 @@ library(kableExtra)
 read_csv('talks.csv') |> 
   arrange(desc(Date)) |> 
   knitr::kable() |> 
-  kable_styling(fixed_thead = T)
+  kable_styling(fixed_thead = TRUE) |>
+  scroll_box(width = "100%")
 ```

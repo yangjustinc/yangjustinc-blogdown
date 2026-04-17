@@ -1,12 +1,8 @@
 <footer>
   {{ partial "foot_custom.html" . }}
-
   {{ with .Site.Params.footer }}
   <hr/>
-  {{ replace . "{Year}" now.Year | markdownify }}
-  {{ end }}
-
-  <div class="footer-social">
+    <div class="footer-social">
     <a href="https://bsky.app/profile/justinyang.me" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
       <i class="fa-brands fa-bluesky fa-lg"></i>
     </a>
@@ -20,6 +16,8 @@
       <i class="fa-brands fa-linkedin fa-lg"></i>
     </a>
   </div>
+  {{ replace . "{Year}" now.Year | markdownify }}
+  {{ end }}
 </footer>
 </body>
 </html>

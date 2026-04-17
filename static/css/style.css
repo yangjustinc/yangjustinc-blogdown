@@ -32,6 +32,11 @@ body {
   background: #f0f4f4;
 }
 
+.menu a.active {
+  color: #005f73;
+  font-weight: 700;
+}
+
 /* ── Header / Footer text alignment ─────────────────── */
 .article-meta {
   text-decoration: none;
@@ -47,10 +52,6 @@ footer {
 
 .title {
   font-size: 1.1em;
-}
-
-footer a {
-  text-decoration: none;
 }
 
 /* ── Horizontal rule ─────────────────────────────────── */
@@ -102,6 +103,11 @@ blockquote {
 }
 
 /* ── Tables ──────────────────────────────────────────── */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 table {
   margin: 1em auto;
   border-top: 2px solid #444;
@@ -143,6 +149,22 @@ tfoot {
   margin: 0 0 1rem 1.5rem;
 }
 
+/* ── Footer ──────────────────────────────────────────── */
+footer {
+  font-size: 0.85em;
+  color: #888;
+  margin-top: 2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #888;
+}
+
+footer a:hover {
+  color: #005f73;
+}
+
 /* ── Footer social icons ─────────────────────────────── */
 .footer-social {
   margin: 0.75em 0 0.25em;
@@ -152,7 +174,7 @@ tfoot {
 .footer-social a {
   display: inline-block;
   margin: 0 0.35em;
-  color: #555;
+  color: #888;
   text-decoration: none;
 }
 
@@ -160,18 +182,21 @@ tfoot {
   color: #005f73;
 }
 
-/* ── Vertical rhythm ─────────────────────────────────── */
+/* ── Headings ────────────────────────────────────────── */
 h1 {
+  font-size: 1.75rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 
 h2 {
+  font-size: 1.25rem;
   margin-top: 1.4em;
   margin-bottom: 0.4em;
 }
 
 h3 {
+  font-size: 1.05rem;
   margin-top: 1.2em;
   margin-bottom: 0.3em;
 }
@@ -187,6 +212,16 @@ a {
 
 a:hover {
   color: #003d4d;
+}
+
+main a {
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 95, 115, 0.35);
+  text-underline-offset: 3px;
+}
+
+main a:hover {
+  text-decoration-color: #005f73;
 }
 
 /* ── Mobile tweaks ───────────────────────────────────── */
