@@ -7,11 +7,10 @@ output:
     keep_md: yes
 ---
 # MINDSET
-
 <div id="profile">
   <img src="logo.png"
        alt="MINDSET logo"
-       style="width:100%; border-radius:50%; max-width:180px;">
+       style="width:100%; border-radius:50%; max-width:240px;">
 </div>
 
 **Multimodal INference and Data science for pSychiatric Epidemiology and Treatment** (MINDSET) is a research programme bringing together advanced data science, epidemiology, and mental health research to improve outcomes for people with mental health conditions. This research is led by Dr Justin C Yang, a senior research fellow based in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk). Our funders include [Administrative Data Research UK (ADR UK)](https://www.adruk.org), the [UKRI Mental Health Platform](https://www.mentalhealthplatform.ac.uk), and the [National Institute for Health and Care Research (NIHR)](https://www.nihr.ac.uk). 

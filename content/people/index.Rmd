@@ -155,3 +155,10 @@ output:
 </div>
 
 </div>
+
+## Collaborators
+- [applied informatics for Mental Health](https://aimhlab.research.st/) (Professor Joseph Hayes, University College London)
+- [Exploring Mental Illness Using Systems Thinking](https://www.mentalhealthepi.com/) (Dr Jennifer Dykxhoorn, University College London)
+- [Improving Mental and Physical health Analytics through RobusT Epi and Data sci](https://naomilaunders.co.uk/) (Dr Naomi Launders, University College London)
+- [Mental Health | Policy | Economics Group](https://www.mentalhealthpolicyeconomicsgroup.com/) (Dr Andres Roman-Urrestarazu, University of Cambridge)
+- [Psylife](https://www.psylife.eu/) (Professor James Kirkbride, University College London)
