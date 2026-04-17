@@ -6,6 +6,8 @@ output:
   html_document:
     keep_md: yes
 ---
+Dr Yang's publications span psychiatric epidemiology, causal inference, substance use, and mental health data science. His name appears in **bold** in author lists below. For a complete record, see his [Google Scholar profile](https://scholar.google.com/citations?user=o-MsbBYAAAAJ).
+
 ```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 library(scholar)
 library(tidyverse)

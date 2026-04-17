@@ -58,7 +58,7 @@ funding <- bind_rows(rorcid::orcid_fundings(orcid)[[1]]$group$`funding-summary`)
       " for ",
       currency,
       " ",
-      paste0("£", formatC(as.numeric(amount), format="f", digits=0, big.mark=",")),
+      paste0(formatC(as.numeric(amount), format="f", digits=0, big.mark=",")),
       " from ",
       month(as.numeric(start_month), label = TRUE, abbr = FALSE),
       " ",
