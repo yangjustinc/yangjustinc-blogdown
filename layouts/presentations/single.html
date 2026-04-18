@@ -1,57 +1,21 @@
 {{ partial "header.html" . }}
-<div class="article-meta">
-<h1><span class="title">{{ .Title | markdownify }}</span></h1>
-{{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
-{{ if (gt .Params.date 0) }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
-<p class="terms">
-  {{ range $i := (slice "categories" "tags") }}
-    {{ with ($.Param $i) }}
-      {{ if eq $i "categories" }}
-        <i class="fas fa-folder"></i>
-        {{ else }}
-        <i class="fas fa-tags"></i>
-      {{ end }}
-      {{ range $k := . }}
-        <a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a>
-      {{ end }}
-      &nbsp;
-    {{ end }}
-  {{ end }}
-  &nbsp;
-  {{ if not .Params.disable_reading }}
-  <i class="fas fa-book-reader"></i> {{ .ReadingTime }} min
-  {{ end }}
-  &nbsp;
-  {{ if .File.Path }}
-    {{ $.Scratch.Set "FilePath" .File.Path }}
-    {{ $RmdFile := (print .File.BaseFileName ".Rmd") }}
-    {{ $Files := readDir (print "content/" .File.Dir) }}
-    {{ if (where $Files "Name" $RmdFile) }}
-      {{ $.Scratch.Set "FilePath" (print .File.Dir $RmdFile) }}
-    {{ else }}
-      {{ $RmdFile := (print .File.BaseFileName ".Rmarkdown") }}
-      {{ if (where $Files "Name" $RmdFile) }}
-        {{ $.Scratch.Set "FilePath" (print .File.Dir $RmdFile) }}
-      {{ end }}
-    {{ end }}
-    {{ with .Site.Params.GithubSource}}
-    <i class="fas fa-code-branch"></i>
-    <a href="{{ . }}{{ $.Scratch.Get "FilePath" }}">{{ "source" }}</a>
-    {{ end }}
-  {{ end }}
-</p>
-</div>
-
 <main>
 {{ .Content }}
 </main>
 
 {{ if not .Params.disable_comments }}
-<script src="https://utteranc.es/client.js"
-        repo="yangjustinc/yangjustinc-blogdown"
-        issue-term="title"
-        label="💬"
-        theme="github-light"
+<script src="https://giscus.app/client.js"
+        data-repo="yangjustinc/yangjustinc-blogdown"
+        data-repo-id="R_kgDOHB-ZEA"
+        data-category="General"
+        data-category-id="DIC_kwDOHB-ZEM4C7IH5"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
         crossorigin="anonymous"
         async>
 </script>

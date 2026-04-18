@@ -74,9 +74,6 @@ publications <- bind_rows(
 ) %>%
   distinct(put_code, .keep_all = TRUE) %>%
   mutate(
-    citation = str_replace_all(citation, "JC Yang",       "**JC Yang**"),
-    citation = str_replace_all(citation, "J\\.C\\. Yang", "**J.C. Yang**"),
-    citation = str_replace_all(citation, "J Yang",        "**J Yang**"),
     citation = if_else(str_detect(citation, "\\.$"), citation, paste0(citation, "."))
   ) %>%
   arrange(desc(year)) %>%
