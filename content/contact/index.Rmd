@@ -6,6 +6,10 @@ output:
   html_document:
     keep_md: yes
 ---
-Dr Yang welcomes enquiries about collaborations, MSc and PhD supervision, speaking invitations, and media or policy engagement.
+Dr Justin C Yang welcomes enquiries about research collaborations, doctoral and master's supervision, speaking invitations, and media or policy engagement.
+
+MINDSET's work spans psychiatric epidemiology, causal inference, data science, and mental health research. Enquiries are particularly welcome from potential collaborators in academia, health and social care, policy, and the voluntary sector.
+
+Please use the form below to get in touch.
 
 <div id="contact">`r blogdown::shortcode("contact")`</div>

@@ -1,20 +1,23 @@
 ---
 title: Home
 description: "MINDSET is a UCL research programme led by Dr Justin C Yang, using psychiatric epidemiology, causal inference, and data science to improve mental health outcomes."
-
 output:
-  html_document:
-    keep_md: yes
+ html_document:
+  keep_md: yes
 ---
+
 # MINDSET
+
 <div id="profile">
-  <img src="logo.png"
-       alt="MINDSET logo"
-       style="width:100%; max-width:360px;">
+ <img src="logo.png"
+ alt="MINDSET logo"
+ style="width:100%; max-width:360px;">
 </div>
 
-**Multimodal INference and Data science for pSychiatric Epidemiology and Treatment** (MINDSET) is a research programme bringing together advanced data science, epidemiology, and mental health research to improve outcomes for people with mental health conditions. This research is led by Dr Justin C Yang, a senior research fellow based in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk). Our funders include [Administrative Data Research UK (ADR UK)](https://www.adruk.org), the [UKRI Mental Health Platform](https://www.mentalhealthplatform.ac.uk), and the [National Institute for Health and Care Research (NIHR)](https://www.nihr.ac.uk). 
+**Multimodal INference and Data science for pSychiatric Epidemiology and Treatment** (MINDSET) is a research programme led by Dr Justin C Yang, Senior Research Fellow in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk). It brings together psychiatric epidemiology, causal inference, and data science to improve mental health outcomes.
 
-We specialise in proximal causal inference, natural language processing/large language models, and spatial analysis applied to mental health research. Our work involves the transformation and combination of large, complex, and multimodal datasets into actionable insights leading to better care and outcomes for people with a range of mental health needs, including severe and enduring mental illness, substance use disorders, and neurodevelopmental conditions. For instance, our [ADR UK-funded project](https://www.adruk.org/news-publications/news-blogs/linking-data-to-improve-outcomes-for-neurodivergent-young-people) uses [linked health and education data](https://www.echild.ac.uk/) to better understand what puts neurodivergent young people at risk for poor outcomes. As well, [our project](https://www.mentalhealthplatform.ac.uk/blog/meet-cross-hub-research-fellow-justin) funded through the [UKRI Mental Health Platform](https://www.mentalhealthplatform.ac.uk) will examine how socioemotional factors, such as relationships, belonging, adversity, and institutional contact, shape trajectories into severe mental illness by triangulating across routine mental health records, linked administrative and cohort data, and ecological momentary assessment. Working globally across the public, private, and third/voluntary sectors, we generate and drive new insights that shape thinking about and treatment for mental health conditions. 
+Our work focuses on making better use of large, complex, and multimodal data to generate insights that can inform research, policy, and care. We specialise in proximal causal inference, natural language processing and large language models, and spatial analysis, with applications across severe mental illness, substance use, and neurodevelopmental conditions.
 
-Our research interests span the spectrum of social and spatial determinants of mental health, advanced epidemiological methodology, and applied health and social care research. We are committed to open science, equitable and diverse research inclusion and engagement, and participatory research co-production. More recently, we have also been interested in health mis/disinformation and the role of online health discourse in civil society. 
+Current projects include an [ADR UK-funded study](https://www.adruk.org/news-publications/news-blogs/linking-data-to-improve-outcomes-for-neurodivergent-young-people) using [linked health and education data](https://www.echild.ac.uk/) to understand risks for poor outcomes among neurodivergent young people, and a [UKRI Mental Health Platform-funded project](https://www.mentalhealthplatform.ac.uk/blog/meet-cross-hub-research-fellow-justin) examining how socioemotional experiences shape trajectories into severe mental illness.
+
+MINDSET works across the public, private, and voluntary sectors, with a commitment to open science, equitable research inclusion and engagement, and participatory co-production. Our broader interests also include social and spatial determinants of mental health, applied health and social care research, and the role of online health discourse and mis/disinformation in civil society.

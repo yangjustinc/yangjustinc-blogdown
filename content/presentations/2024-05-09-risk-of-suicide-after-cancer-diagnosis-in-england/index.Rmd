@@ -11,4 +11,4 @@ categories:
   - NCRAS
 ---
 
-<iframe width="100%" height="1200" name="iframe" src="https://yangjustinc.github.io/2024-ncras/"></iframe>
+`r blogdown::shortcode("embed-html", url="https://yangjustinc.github.io/2024-ncras/")`

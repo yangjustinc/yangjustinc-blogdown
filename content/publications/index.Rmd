@@ -29,15 +29,29 @@ extract_doi <- function(ext_id_df) {
   doi_row$`external-id-value`[1]
 }
 
+normalise_title <- function(x) {
+  x %>%
+    str_to_lower() %>%
+    str_replace_all("[[:punct:]]", " ") %>%
+    str_squish()
+}
+
 df <- tibble(
-  put_code = w$`put-code`,
-  title    = w$`title.title.value`,
-  year     = as.integer(w$`publication-date.year.value`),
-  journal  = w$`journal-title.value`,
-  doi      = map_chr(w$`external-ids.external-id`, extract_doi)
+  put_code  = w$`put-code`,
+  title     = w$`title.title.value`,
+  year      = as.integer(w$`publication-date.year.value`),
+  journal   = w$`journal-title.value`,
+  doi       = map_chr(w$`external-ids.external-id`, extract_doi),
+  work_type = w$type
 ) %>%
-  group_by(doi) %>% slice(1) %>% ungroup() %>%
-  group_by(title) %>% slice(1) %>% ungroup()
+  mutate(
+    title_key = normalise_title(title),
+    is_preprint = work_type %in% c("preprint", "posted-content", "working-paper", "dissertation-thesis"),
+    has_doi = !is.na(doi)
+  ) %>%
+  arrange(title_key, is_preprint, desc(has_doi), desc(year)) %>%
+  distinct(title_key, .keep_all = TRUE) %>%
+  distinct(doi, .keep_all = TRUE)
 
 with_doi <- df %>% filter(!is.na(doi))
 no_doi   <- df %>% filter(is.na(doi))
