@@ -6,7 +6,6 @@ output:
   html_document:
     keep_md: yes
 ---
-
 <style>
 .people-grid {
   width: 100%;
@@ -68,97 +67,80 @@ output:
 }
 </style>
 
-## Team
+## Research Team
 
 <div class="people-grid">
-
 <div class="team-card">
 <img src="pictures/justinyang.png" alt="Headshot of Justin C Yang">
 <br><b>Dr Justin Yang</b>
 <br>Senior Research Fellow
 <br><a href="https://profiles.ucl.ac.uk/75514-justin-yang">Profile</a>
 </div>
-
 <div class="team-card">
 <img src="pictures/nathalierich.png" alt="Headshot of Nathalie Rich">
 <br><b>Dr Nathalie Rich</b>
 <br>Research Fellow
 <br><a href="https://profiles.ucl.ac.uk/80231-nathalie-rich">Profile</a>
 </div>
-
 <div class="team-card">
 <img src="pictures/yunsookim.png" alt="Headshot of Yunsoo Kim">
 <br><b>Yunsoo Kim</b>
 <br>Research Assistant
 <br><a href="https://bluesky333.github.io/">Website</a>
 </div>
-
 </div>
 
 ## Students and Trainees
 
 <div class="people-grid">
-
 <div class="team-card">
 <img src="pictures/vanessacieplinska.png" alt="Headshot of Vanessa Cieplinska">
 <br><b>Vanessa Cieplinska</b>
 <br>PhD student
-<br>Funded by ADR UK
 </div>
-
 <div class="team-card">
 <img src="pictures/aluayeskendir.png" alt="Headshot of Alua Yeskendir">
 <br><b>Alua Yeskendir</b>
 <br>PhD student
-<br>Funded by MHR UK
 </div>
-
 </div>
 
 ## Partners
 
 <div class="people-grid">
-
 <div class="partner-card">
 <a href ="https://www.changegrowlive.org/"><img src="pictures/changegrowlive.png" alt="Change Grow Live Logo"></a>
 <p><b>Change, Grow, Live</b> provides a range of services to support individuals, families and communities whose lives are adversely affected by crime, substance misuse, homelessness, anti-social behaviour, domestic violence, social deprivation and lack of opportunity. The charity works with challenging service users with complex needs, including those with entrenched drug habits and offending behaviour.</p>
 </div>
-
 <div class="partner-card">
 <a href = "https://www.complexemotionshub.co.uk/"><img src="pictures/complexemotions.png" alt="Complex Emotions Hub Logo"></a>
 <p>The <b>Complex Emotions Hub</b>, based at the University of Sheffield and led by Professor Scott Weich, is focused on improving the understanding and care of individuals who experience complex emotional difficulties, such as difficulty managing relationships, emotional regulation, and impulsivity.</p>
 </div>
-
 <div class="partner-card">
 <a href = "https://datamind.org.uk/"><img src="pictures/datamind.png" alt="Datamind Logo"></a>
 <p><b>DATAMIND</b>, coordinated from Swansea University and led by Professors Ann John and Robert Stewart, is the mental health data science hub of the Mental Health Platform. It’s a multi-site data organisation which has been a resource for researchers, the NHS, charities, policy makers and industry since 2021, and is now one of the six Hubs of the Mental Health Platform.</p>
 </div>
-
 <div class="partner-card">
 <a href = "https://www.northlondonmentalhealth.nhs.uk/"><img src="pictures/nlft.png" alt="North London NHS Foundation Trust Logo"></a>
 <p><b>North London NHS Foundation Trust</b> provides specialist mental health and community health services for children, young people, adults and older people across North London, including support for those experiencing severe and enduring mental illness, crisis, or complex psychological and social needs.</p>
 </div>
-
 <div class="partner-card">
 <a href = "https://slam.nhs.uk/"><img src="pictures/slam.png" alt="South London and Maudsley NHS Foundation Trust Logo"></a>
 <p><b>South London and Maudsley NHS Foundation Trust</b> provides specialist mental health and substance use services for children, young people, adults and older people, serving local communities in Croydon, Lambeth, Lewisham and Southwark as well as people referred from across the UK to its national specialist units.</p>
 </div>
-
 <div class="partner-card">
 <a href = "https://www.socialhealthhub.org/"><img src="pictures/socialhealth.png" alt="Social Health Hub Logo"></a>
-<p>The <b>Social Health Hub</b>, based at Queen Mary University of London and led by Professor Jennifer Yau, is generating new knowledge on how the conditions in which people are born, grow, work, live, and age influence how severe mental illnesses affect people over time, and shape how people respond to their conditions.</p>
+<p>The <b>Social Health Hub</b>, based at Queen Mary University of London and led by Professor Jennifer Lau, is generating new knowledge on how the conditions in which people are born, grow, work, live, and age influence how severe mental illnesses affect people over time, and shape how people respond to their conditions.</p>
 </div>
-
 <div class="partner-card">
 <a href = "https://www.turning-point.co.uk/"><img src="pictures/turningpoint.png" alt="Turning Point Logo"></a>
 <p><b>Turning Point</b> provides health and social care services for people with a learning disability and also people at risk of, or with a mental health diagnosis, mental health issues, drug or alcohol use, misuse or dependency, or other addictive behaviours.</p>
 </div>
-
 </div>
 
 ## Collaborators
 - [applied informatics for Mental Health](https://aimhlab.research.st/) (Professor Joseph Hayes, University College London)
-- [Exploring Mental Illness Using Systems Thinking](https://www.mentalhealthepi.com/) (Dr Jennifer Dykxhoorn, University College London)
+- [Exploring Mental Illness Using Systems Thinking](https://www.mentalhealthepi.com/) (Dr Jen Dykxhoorn, University College London)
 - [Improving Mental and Physical health Analytics through RobusT Epi and Data sci](https://naomilaunders.co.uk/) (Dr Naomi Launders, University College London)
 - [Mental Health | Policy | Economics Group](https://www.mentalhealthpolicyeconomicsgroup.com/) (Dr Andres Roman-Urrestarazu, University of Cambridge)
 - [Psylife](https://www.psylife.eu/) (Professor James Kirkbride, University College London)
