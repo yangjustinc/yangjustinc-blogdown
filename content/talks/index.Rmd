@@ -8,13 +8,49 @@ output:
 ---
 Dr Yang is available for invited talks, seminars, and keynotes in psychiatric epidemiology, causal inference, mental health data science, and open science. [Contact](../contact/) to enquire.
 
-```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, results='asis'}
 library(tidyverse)
-library(kableExtra)
+library(glue)
 
-read_csv('talks.csv') |> 
-  arrange(desc(Date)) |> 
-  knitr::kable() |> 
-  kable_styling(fixed_thead = TRUE) |>
-  scroll_box(width = "100%")
+talks <- read_csv('talks.csv') |> mutate(Date = as.Date(Date))
+
+upcoming <- talks |> filter(Date >= Sys.Date()) |> arrange(Date)
+past <- talks |>
+  filter(Date < Sys.Date(), Date >= Sys.Date() - (365 * 3)) |>
+  arrange(desc(Date))
+
+if (nrow(upcoming) > 0) {
+  cat("## Upcoming\n\n")
+  upcoming |>
+    mutate(Date = format(Date, "%d %B %Y")) |>
+    pmap(function(Host, Title, Event, Date, ...) {
+      glue(
+        '<div class="talk-card">',
+        '  <div class="talk-meta">{Date} &middot; {Host}</div>',
+        '  <div class="talk-title">{Title}</div>',
+        '  <div class="talk-event">{Event}</div>',
+        '</div>'
+      )
+    }) |>
+    paste(collapse = "\n") |>
+    cat()
+  cat("\n\n")
+}
+
+if (nrow(past) > 0) {
+  cat("## Past\n\n")
+  past |>
+    mutate(Date = format(Date, "%d %B %Y")) |>
+    pmap(function(Host, Title, Event, Date, ...) {
+      glue(
+        '<div class="talk-card">',
+        '  <div class="talk-meta">{Date} &middot; {Host}</div>',
+        '  <div class="talk-title">{Title}</div>',
+        '  <div class="talk-event">{Event}</div>',
+        '</div>'
+      )
+    }) |>
+    paste(collapse = "\n") |>
+    cat()
+}
 ```

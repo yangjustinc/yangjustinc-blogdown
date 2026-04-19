@@ -11,13 +11,12 @@ Dr Yang primarily teaches epidemiology, statistics, and open science at the post
 ## Supervision
 Dr Yang welcomes enquiries from prospective PhD, MSc, and undergraduate students interested in psychiatric epidemiology, causal inference, mental health data science, and related areas. Please [get in touch](../contact/) to discuss potential supervision, project ideas, or opportunities for collaboration.
 
+<div class="site-table-wrap">
 ```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
 library(tidyverse)
-library(kableExtra)
 
-read_csv('students.csv') |> 
-  arrange(desc(`Year(s)`), Student) |> 
-  knitr::kable() |> 
-  kable_styling(fixed_thead = TRUE) |>
-  scroll_box(width = "100%")
+read_csv('students.csv') |>
+  arrange(desc(`Year(s)`), Student) |>
+  knitr::kable(format = "html", table.attr = 'class="site-table"')
 ```
+</div>

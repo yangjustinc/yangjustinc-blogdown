@@ -297,3 +297,73 @@ main a:hover {
     height: clamp(420px, 70vh, 900px);
   }
 }
+
+/* ── Site tables (talks, teaching) ───────────────────── */
+.site-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88em;
+  margin: 1.25em 0;
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222;
+}
+
+.site-table thead tr {
+  background: #eef6fb;
+  border-bottom: 1px solid #c5dff0;
+}
+
+.site-table th {
+  padding: 9px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #222;
+  white-space: nowrap;
+}
+
+.site-table td {
+  padding: 8px 12px;
+  vertical-align: top;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.site-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.site-table tbody tr:hover {
+  background: #f5fafd;
+}
+
+/* Wrap long tables on mobile */
+.site-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ── Talk cards ──────────────────────────────────────── */
+.talk-card {
+  padding: 0.75em 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+.talk-card:last-child { border-bottom: none; }
+
+.talk-meta {
+  font-size: 0.8em;
+  color: #888;
+  margin-bottom: 0.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.talk-title {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.15em;
+}
+
+.talk-event {
+  font-size: 0.88em;
+  color: #555;
+}
