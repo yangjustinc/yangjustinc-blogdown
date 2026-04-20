@@ -1,14 +1,33 @@
+# RStudio
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# R secrets / env
 .httr-oauth
+.Renviron
+.Rprofile
+
+# OS cruft
 .DS_Store
 Thumbs.db
+
+# Hugo
 .hugo_build.lock
 /public/
 /resources/
-.Rproj
-.RDataTmp
-.Rprofile
-.Renviron
+
+# R Markdown / knitr intermediates
+*_cache/
+*_files/
+*.knit.md
+*.utf8.md
+
+# Editor backups & lock files
+*~
+*.swp
+*.swo
+.#*
+*.lock
+*.lock~
