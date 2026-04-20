@@ -12,11 +12,6 @@ Dr Yang's publications span psychiatric epidemiology, causal inference, substanc
 library(rorcid)
 library(rcrossref)
 library(tidyverse)
-library(progressr)
-
-handlers(handler_progress(
-  format = "[:bar] :current/:total (:percent) ETA: :eta"
-))
 
 orcid_id <- "0000-0003-2881-4906"
 
@@ -56,19 +51,15 @@ df <- tibble(
 with_doi <- df %>% filter(!is.na(doi))
 no_doi   <- df %>% filter(is.na(doi))
 
-with_progress({
-  p <- progressor(steps = nrow(with_doi))
-  cr_cites <- with_doi %>%
-    mutate(
-      citation = map_chr(doi, function(d) {
-        p()
-        tryCatch(
-          cr_cn(dois = d, format = "text"),
-          error = function(e) NA_character_
-        )
-      })
-    )
-})
+cr_cites <- with_doi %>%
+  mutate(
+    citation = map_chr(doi, function(d) {
+      tryCatch(
+        cr_cn(dois = d, format = "text"),
+        error = function(e) NA_character_
+      )
+    })
+  )
 
 fallback <- bind_rows(
   no_doi,
