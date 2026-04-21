@@ -1,28 +1,15 @@
-<!-- SEO: page-level or site-level description -->
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-
-<!-- Canonical URL -->
 <link rel="canonical" href="{{ .Permalink }}">
-
-<!-- Open Graph -->
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 {{ with .Site.Params.ogImage }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
-
-<!-- Twitter card -->
 {{ template "_internal/twitter_cards.html" . }}
-
-<!-- Fonts: preconnect first, then load -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500&display=swap">
-
-<!-- Icons and academicons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
-
-<!-- Footnotes -->
 <link rel="stylesheet" href="https://unpkg.com/littlefoot/dist/littlefoot.css">

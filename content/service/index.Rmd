@@ -9,6 +9,7 @@ output:
 Dr Yang contributes to academic governance, open science, and peer review across UCL and the broader research community.
 
 ## Institutional Service
+Unless otherwise indicated, service roles are current and/or ongoing.
 
 ### Internal
 
@@ -22,17 +23,18 @@ Dr Yang contributes to academic governance, open science, and peer review across
 
 - Associate Editor, [Addiction](https://onlinelibrary.wiley.com/page/journal/13600443/homepage/editorialboard.html) 
 - Editorial Board, [Substance Use: Research and Treatment](https://journals.sagepub.com/editorial-board/SAT) 
-- Steering Committee Member, Addiction Healthcare Goals 
-- Expert Member, Confidentiality Advisory Group, Health Research Authority 
-- Data Access Committee Public Member, East of England Secure Data Environment 
-- Public Member, British Society for Immunology Patient and Public Involvement Network 
-- Expert Assessor, Administrative Data Research UK 
-- Assessor College, Economic and Social Research Council
-- Reviewer College, Society for the Study of Addiction
-- Reviewer Development Scheme, National Institute for Health and Care Research 
-- Ambassador, Protocols.io 
+- Steering Committee Member, [Addiction Healthcare Goals ](https://www.gov.uk/government/publications/life-sciences-healthcare-goals/addiction-healthcare-goals)
+- Expert Member, [Confidentiality Advisory Group, Health Research Authority ](https://www.hra.nhs.uk/about-us/committees-and-services/confidentiality-advisory-group/)
+- Data Access Committee Public Member, [Eastern England Secure Data Environment](https://easternsde.nhs.uk/)
+- Public Member, [British Society for Immunology](https://www.immunology.org/) Patient and Public Involvement Network 
+- Expert Assessor, [Administrative Data Research UK](https://www.adruk.org/)
+- Assessor College, [Economic and Social Research Council](https://www.ukri.org/councils/esrc/)
+- Reviewer College, [Society for the Study of Addiction](https://www.addiction-ssa.org/)
+- Reviewer Development Scheme, [National Institute for Health and Care Research ](https://www.nihr.ac.uk/)
+- Ambassador, [Protocols.io ](https://www.protocols.io/)
 
-## Peer Review
+## Peer Review Service
+Publications for which I have served as a peer referee include:
 
 ```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
 remotes::install_github("ropensci/rcrossref")
