@@ -139,8 +139,26 @@ output:
 </div>
 
 ## Collaborators
-- [applied informatics for Mental Health](https://aimhlab.research.st/) (Professor Joseph Hayes, University College London)
-- [Exploring Mental Illness Using Systems Thinking](https://www.mentalhealthepi.com/) (Dr Jen Dykxhoorn, University College London)
-- [Improving Mental and Physical health Analytics through RobusT Epi and Data sci](https://naomilaunders.co.uk/) (Dr Naomi Launders, University College London)
-- [Mental Health | Policy | Economics Group](https://www.mentalhealthpolicyeconomicsgroup.com/) (Dr Andres Roman-Urrestarazu, University of Cambridge)
-- [Psylife](https://www.psylife.eu/) (Professor James Kirkbride, University College London)
+<div class="people-grid">
+<div class="partner-card">
+<a href ="https://aimhlab.research.st/"><img src="pictures/aimh.png" alt="applied informatics for Mental Health Logo"></a>
+<p>The <b>applied informatics for Mental Health</b> lab, led by Professor Joseph Hayes, uses data science, electronic health records, and digital health methods to improve physical and mental health outcomes, focusing on personalised medicine, drug repurposing, and ecological momentary assessment for people with mental illness.
+</p>
+</div>
+<div class="partner-card">
+<a href ="https://www.mentalhealthepi.com/"><img src="pictures/mist.png" alt="Exploring Mental Illness Using Systems Thinking Logo"></a>
+<p><b>Exploring Mental Illness Using Systems Thinking</b>, led by Dr Jen Dykxhoorn, uses systems thinking to study the social and environmental causes of severe mental illness, self-harm, and suicide, with a particular focus on socially excluded and marginalised populations such as migrants and minority ethnic groups.</p>
+</div>
+<div class="partner-card">
+<a href ="https://naomilaunders.co.uk/"><img src="pictures/imparted.png" alt="Improving Mental and Physical health Analytics through RobusT Epi and Data sci Logo"></a>
+<p><b>Improving Mental and Physical health Analytics through RobusT Epi and Data sci</b>, led by Dr Naomi Launders, uses electronic health records, census, and cohort data to understand and reduce inequalities in the detection, treatment, and physical health outcomes of people with severe mental illness, with a strong focus on improving access to evidence-based care and leveraging advanced causal methods in observational data.</p>
+</div>
+<div class="partner-card">
+<a href ="https://www.mentalhealthpolicyeconomicsgroup.com/"><img src="pictures/mhpeg.png" alt="Mental Health | Policy | Economics Group Logo"></a>
+<p>The <b>Mental Health | Policy | Economics Group</b>, led by Dr Andres Roman-Urrestarazu, integrates psychiatry, public health, economics, and policy to understand how socio-economic determinants and digital-era challenges shape mental health, focusing on marginalised populations and global mental health.</p>
+</div>
+<div class="partner-card">
+<a href ="https://www.psylife.eu/"><img src="pictures/psylife.png" alt="Psylife Logo"></a>
+<p><b>Psylife</b>, led by Professor James Kirkbride, is an epidemiological research group that applies causal inference and population health methods to investigate and prevent social inequalities in the determinants of psychosis and other mental health problems across the life course, with work that directly informs NICE guidelines and mental health policy and service planning.</p>
+</div>
+</div>

@@ -1,0 +1,13 @@
+---
+title: Considerations for hierarchical and spatial modelling in ECHILD
+date: '2026-03-24'
+
+draft: false
+output:
+  html_document:
+    keep_md: yes  
+
+---
+
+`r blogdown::shortcode("embed-pdf", url = "presentation.pdf")`
+
