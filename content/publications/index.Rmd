@@ -6,12 +6,11 @@ output:
   html_document:
     keep_md: yes
 ---
-Dr Yang's publications span psychiatric epidemiology, causal inference, substance use, and mental health data science. For a complete record, see his [Google Scholar profile](https://scholar.google.com/citations?user=o-MsbBYAAAAJ).
-
 ```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 library(orcidtr)
 library(rcrossref)
 library(tidyverse)
+library(httr2)
 
 orcid_id <- "0000-0003-2881-4906"
 
@@ -24,12 +23,10 @@ df <- as_tibble(w) |>
       str_to_lower() |>
       str_replace_all("[[:punct:]]", " ") |>
       str_squish(),
-    is_preprint = type %in% c("preprint", "posted-content", "working-paper", "dissertation-thesis"),
+    is_preprint = type %in% c("preprint", "posted-content"),
     has_doi     = !is.na(doi)
   ) |>
-  arrange(title_key, is_preprint, desc(has_doi), desc(year)) |>
-  distinct(title_key, .keep_all = TRUE) |>
-  filter(!(has_doi & duplicated(doi)))
+  arrange(title_key, is_preprint, desc(has_doi), desc(year))
 
 with_doi <- df |> filter(has_doi)
 no_doi   <- df |> filter(!has_doi)
@@ -57,13 +54,76 @@ publications <- bind_rows(
   cr_cites |> filter(!is.na(citation)),
   fallback
 ) |>
-  distinct(put_code, .keep_all = TRUE) |>
   mutate(
-    citation = if_else(str_ends(citation, "\\."), citation, paste0(citation, "."))
+    citation = if_else(str_ends(citation, "\\."), citation, paste0(citation, ".")),
+    citation = str_replace_all(citation, "Yang,\\s*J\\.\\s*C\\.", "**Yang, J. C.**"),
+    citation = str_replace_all(citation, "(?<!C\\.)\\bYang,\\s*J\\.(?!\\s*C)", "**Yang, J.**")
   ) |>
   arrange(desc(year), title)
+
+get_published_doi <- function(doi) {
+  tryCatch({
+    resp <- request(paste0("https://api.crossref.org/works/", URLencode(doi, reserved = TRUE))) |>
+      req_headers(Accept = "application/json") |>
+      req_error(is_error = \(r) FALSE) |>
+      req_perform()
+    if (resp_status(resp) != 200) return(NA_character_)
+    body <- resp_body_json(resp)
+    relations <- body$message$relation
+    published <- relations$`is-preprint-of` %||% relations$`is-version-of`
+    if (is.null(published) || length(published) == 0) return(NA_character_)
+    published[]$id %||% NA_character_
+  }, error = \(e) NA_character_)
+}
+
+excluded_preprint_dois <- c(
+  "10.1101/2024.06.25.24309483",
+  "10.1101/2023.03.29.23287850"
+)
+
+peer_reviewed <- publications |> filter(type == "journal-article") |>
+  distinct(title_key, .keep_all = TRUE)
+
+published_dois <- str_to_lower(peer_reviewed$doi)
+
+book_chapters <- publications |> filter(type == "book-chapter") |>
+  filter(!title_key %in% peer_reviewed$title_key) |>
+  distinct(title_key, .keep_all = TRUE) |>
+  mutate(
+    citation = str_to_title(citation),
+    citation = str_replace_all(citation, "Yang,\\s*J\\.\\s*C\\.", "**Yang, J. C.**"),
+    citation = str_replace_all(citation, "(?<!C\\.)\\bYang,\\s*J\\.(?!\\s*C)", "**Yang, J.**")
+  )
+
+preprints_raw <- publications |>
+  filter(type %in% c("preprint", "posted-content")) |>
+  filter(!title_key %in% peer_reviewed$title_key) |>
+  distinct(title_key, .keep_all = TRUE)
+
+preprints <- preprints_raw |>
+  mutate(
+    published_doi = map_chr(doi, \(d) {
+      if (is.na(d)) return(NA_character_)
+      get_published_doi(d)
+    }),
+    has_published_version = (
+      !is.na(published_doi) & str_to_lower(published_doi) %in% published_dois
+    ) | str_to_lower(doi) %in% str_to_lower(excluded_preprint_dois)
+  ) |>
+  filter(!has_published_version)
 ```
 
 ```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
-cat(paste0(publications$citation), sep = "\r  \n")
+cat("## Peer-Reviewed Publications\n\n")
+cat(paste0(peer_reviewed$citation), sep = "\r  \n")
+
+if (nrow(book_chapters) > 0) {
+  cat("\n\n## Book Chapters\n\n")
+  cat(paste0(book_chapters$citation), sep = "\r  \n")
+}
+
+if (nrow(preprints) > 0) {
+  cat("\n\n## Preprints\n\n")
+  cat(paste0(preprints$citation), sep = "\r  \n")
+}
 ```

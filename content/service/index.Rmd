@@ -6,8 +6,6 @@ output:
   html_document:
     keep_md: yes
 ---
-Dr Yang contributes to academic governance, open science, and peer review across UCL and the broader research community.
-
 ## Institutional Service
 Unless otherwise indicated, service roles are current and/or ongoing.
 
