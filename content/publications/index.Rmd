@@ -9,84 +9,61 @@ output:
 Dr Yang's publications span psychiatric epidemiology, causal inference, substance use, and mental health data science. For a complete record, see his [Google Scholar profile](https://scholar.google.com/citations?user=o-MsbBYAAAAJ).
 
 ```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
-library(rorcid)
+library(orcidtr)
 library(rcrossref)
 library(tidyverse)
 
 orcid_id <- "0000-0003-2881-4906"
 
-w <- works(orcid_id)
+w <- orcid_works(orcid_id)
 
-extract_doi <- function(ext_id_df) {
-  if (is.null(ext_id_df) || nrow(ext_id_df) == 0) return(NA_character_)
-  doi_row <- ext_id_df[ext_id_df$`external-id-type` %in% c("doi", "DOI"), ]
-  if (nrow(doi_row) == 0) return(NA_character_)
-  doi_row$`external-id-value`[1]
-}
-
-normalise_title <- function(x) {
-  x %>%
-    str_to_lower() %>%
-    str_replace_all("[[:punct:]]", " ") %>%
-    str_squish()
-}
-
-df <- tibble(
-  put_code  = w$`put-code`,
-  title     = w$`title.title.value`,
-  year      = as.integer(w$`publication-date.year.value`),
-  journal   = w$`journal-title.value`,
-  doi       = map_chr(w$`external-ids.external-id`, extract_doi),
-  work_type = w$type
-) %>%
+df <- as_tibble(w) |>
   mutate(
-    title_key = normalise_title(title),
-    is_preprint = work_type %in% c("preprint", "posted-content", "working-paper", "dissertation-thesis"),
-    has_doi = !is.na(doi)
-  ) %>%
-  arrange(title_key, is_preprint, desc(has_doi), desc(year)) %>%
-  distinct(title_key, .keep_all = TRUE) %>%
-  distinct(doi, .keep_all = TRUE)
+    year      = as.integer(substr(publication_date, 1, 4)),
+    title_key = title |>
+      str_to_lower() |>
+      str_replace_all("[[:punct:]]", " ") |>
+      str_squish(),
+    is_preprint = type %in% c("preprint", "posted-content", "working-paper", "dissertation-thesis"),
+    has_doi     = !is.na(doi)
+  ) |>
+  arrange(title_key, is_preprint, desc(has_doi), desc(year)) |>
+  distinct(title_key, .keep_all = TRUE) |>
+  filter(!(has_doi & duplicated(doi)))
 
-with_doi <- df %>% filter(!is.na(doi))
-no_doi   <- df %>% filter(is.na(doi))
+with_doi <- df |> filter(has_doi)
+no_doi   <- df |> filter(!has_doi)
 
-cr_cites <- with_doi %>%
+cr_cites <- with_doi |>
   mutate(
-    citation = map_chr(doi, function(d) {
-      tryCatch(
-        cr_cn(dois = d, format = "text"),
-        error = function(e) NA_character_
-      )
+    citation = map_chr(doi, \(d) {
+      tryCatch(cr_cn(dois = d, format = "text"), error = \(e) NA_character_)
     })
   )
 
 fallback <- bind_rows(
   no_doi,
-  cr_cites %>% filter(is.na(citation)) %>% select(-citation)
-) %>%
+  cr_cites |> filter(is.na(citation)) |> select(-citation)
+) |>
   mutate(
     citation = str_trim(paste0(
       title,
-      ifelse(is.na(journal) | journal == "", "", paste0(". *", journal, "*")),
-      ifelse(is.na(year), "", paste0(" (", year, ")."))
+      if_else(is.na(journal) | journal == "", "", paste0(". *", journal, "*")),
+      if_else(is.na(year), "", paste0(" (", year, ")."))
     ))
   )
 
 publications <- bind_rows(
-  cr_cites %>% filter(!is.na(citation)),
+  cr_cites |> filter(!is.na(citation)),
   fallback
-) %>%
-  distinct(put_code, .keep_all = TRUE) %>%
+) |>
+  distinct(put_code, .keep_all = TRUE) |>
   mutate(
-    citation = if_else(str_detect(citation, "\\.$"), citation, paste0(citation, "."))
-  ) %>%
-  arrange(desc(year)) %>%
-  split(.$year) %>%
-  rev() %>%
-  map(function(x) tibble(value = x$citation)) %>%
-  bind_rows()
+    citation = if_else(str_ends(citation, "\\."), citation, paste0(citation, "."))
+  ) |>
+  arrange(desc(year), title)
 ```
+
 ```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
-cat(paste0(publications$value), sep = "\r  \n")
+cat(paste0(publications$citation), sep = "\r  \n")
 ```

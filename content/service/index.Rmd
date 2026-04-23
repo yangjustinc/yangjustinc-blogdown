@@ -36,38 +36,42 @@ Unless otherwise indicated, service roles are current and/or ongoing.
 ## Peer Review Service
 Publications for which I have served as a peer referee include:
 
-```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
-remotes::install_github("ropensci/rcrossref")
+```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(tidyverse)
-library(janitor)
-library(rorcid)
+library(httr2)
 library(rcrossref)
-library(stringi)
 
-ORCID_TOKEN <- Sys.getenv("ORCID_TOKEN")
+orcid_id <- "0000-0003-2881-4906"
 
-reviews <-
-  orcid_peer_reviews("0000-0003-2881-4906")[[1]]$group$`peer-review-group` %>%
-  map_dfr(pluck, "peer-review-summary") %>%
-  as_tibble() %>%
-  clean_names() %>%
-  select(review_group_id) %>%
-  distinct() %>%
-  mutate(issn = stri_enc_toutf8(str_replace(review_group_id, "issn:", ""))) %>%
-  select(issn)
+resp <- request(paste0("https://pub.orcid.org/v3.0/", orcid_id, "/peer-reviews")) |>
+  req_headers(Accept = "application/json") |>
+  req_perform()
 
+body <- resp_body_json(resp)
+
+raw <- map_chr(body$group, \(g) {
+  val <- g$`external-ids`$`external-id`[[1]]$`external-id-value`
+  if (is.null(val)) NA_character_ else val
+})
+
+issns_clean <- raw[!is.na(raw) & str_starts(raw, "issn:")] |>
+  str_remove("^issn:") |>
+  unique()
 
 get_title_from_issn <- function(issn) {
-  tryCatch(
-    issn_title[[issn]],
-    error = function(e) {
-      rcrossref::cr_journals(issn)$data$title
-    }
-  )
+  tryCatch({
+    result <- rcrossref::cr_journals(issn)$data$title
+    if (is.null(result) || length(result) == 0) return(NA_character_)
+    result[[1]]
+  }, error = \(e) NA_character_)
 }
 
-journal_names <-
-  reviews %>% purrr::map( ~ get_title_from_issn(.x)) %>% unlist() %>% as_tibble() %>% mutate(value = gsub("Men s", "Men's", value)) %>% mutate(sort_value = str_remove(value, regex("^(the|a|an)\\s+", ignore_case = TRUE))) %>% arrange(sort_value) %>% select(-sort_value) %>% mutate(value = str_squish(value)) %>% pivot_wider(names_from = value)
+journal_names <- map_chr(issns_clean, get_title_from_issn) |>
+  (\(x) x[!is.na(x)])() |>
+  unique() |>
+  str_squish() |>
+  str_replace("Men s", "Men's") |>
+  (\(x) x[order(str_remove(x, regex("^(the|a|an)\\s+", ignore_case = TRUE)))])()
 
-cat(paste0("- ", names(journal_names)), sep = "\n")
-```  
+cat(paste0("- ", journal_names), sep = "\n")
+```

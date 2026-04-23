@@ -6,74 +6,72 @@ output:
   html_document:
     keep_md: yes
 ---
-```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
+```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+library(orcidtr)
 library(tidyverse)
-library(janitor)
-library(rorcid)
+library(httr2)
 library(lubridate)
 
-orcid <- "0000-0003-2881-4906"
+orcid_id <- "0000-0003-2881-4906"
 
-# Must have all variables or function will report error
+fetch_funding_detail <- function(orcid_id, put_code) {
+  url <- paste0("https://pub.orcid.org/v3.0/", orcid_id, "/funding/", put_code)
+  resp <- request(url) |>
+    req_headers(Accept = "application/json") |>
+    req_error(is_error = \(r) FALSE) |>
+    req_perform()
+  if (resp_status(resp) != 200) return(list(description = NA, amount = NA, currency = NA, url = NA))
+  b <- resp_body_json(resp)
+  list(
+    description = b$`short-description` %||% NA_character_,
+    amount      = b$amount$value %||% NA_character_,
+    currency    = b$amount$`currency-code` %||% NA_character_,
+    url         = b$url$value %||% NA_character_
+  )
+}
 
-funding <- bind_rows(rorcid::orcid_fundings(orcid)[[1]]$group$`funding-summary`) %>%
-  clean_names() %>%
-  select(
-    put_code,
-    title_title_value,
-    url_value,
-    start_date_month_value,
-    start_date_year_value,
-    end_date_month_value,
-    end_date_year_value,
-    organization_name
-  ) %>%
-  rename(
-    title = title_title_value,
-    url = url_value,
-    start_month = start_date_month_value,
-    start_year = start_date_year_value,
-    end_month = end_date_month_value,
-    end_year = end_date_year_value,
-    funder_name = organization_name
-  ) %>%
-  rowwise() %>%
+funding_raw <- as_tibble(orcid_funding(orcid_id))
+
+details <- map(funding_raw$put_code, \(pc) fetch_funding_detail(orcid_id, pc))
+
+funding <- funding_raw |>
   mutate(
-    description = rorcid::orcid_fundings(orcid, put_code = put_code)[[1]]$`short-description`,
-    currency = rorcid::orcid_fundings(orcid, put_code = put_code)[[1]]$amount$`currency-code`,
-    amount = rorcid::orcid_fundings(orcid, put_code = put_code)[[1]]$amount$value
-  ) %>%
-  ungroup() %>%
-  mutate(
-    currency_symbol = recode(currency, GBP = "£", USD = "$", EUR = "€", .default = currency),
+    description     = map_chr(details, "description"),
+    amount          = map_chr(details, "amount"),
+    currency        = map_chr(details, "currency"),
+    url             = map_chr(details, "url"),
+    start_year      = as.integer(substr(start_date, 1, 4)),
+    start_month     = as.integer(substr(start_date, 6, 7)),
+    end_year        = as.integer(substr(end_date,   1, 4)),
+    end_month       = as.integer(substr(end_date,   6, 7)),
+    currency_symbol = recode(coalesce(currency, ""), GBP = "£", USD = "$", EUR = "€", .default = coalesce(currency, "")),
+    amount_fmt = if_else(
+      !is.na(amount) & !is.na(currency),
+      paste0(" for ", currency_symbol,
+             formatC(as.numeric(amount), format = "f", digits = 0, big.mark = ",")),
+      ""
+    ),
+    date_range = paste0(
+      if_else(!is.na(start_month), as.character(month(start_month, label = TRUE, abbr = FALSE)), ""),
+      if_else(!is.na(start_year),  paste0(" ", start_year), ""),
+      " to ",
+      if_else(!is.na(end_month), as.character(month(end_month, label = TRUE, abbr = FALSE)), ""),
+      if_else(!is.na(end_year),  paste0(" ", end_year), "")
+    ),
     title_html = if_else(
-      is.na(url) | str_trim(url) == "",
+      is.na(url) | str_trim(coalesce(url, "")) == "",
       paste0("<h2>", title, "</h2>"),
       paste0("<a href=\"", url, "\"><h2>", title, "</h2></a>")
     ),
-    funding = paste0(
+    funding_html = paste0(
       title_html,
-      "<em>",
-      "Funded by ",
-      funder_name,
-      " for ",
-      currency_symbol,
-      formatC(as.numeric(amount), format = "f", digits = 0, big.mark = ","),
-      " from ",
-      month(as.numeric(start_month), label = TRUE, abbr = FALSE),
-      " ",
-      as.numeric(start_year),
-      " to ",
-      month(as.numeric(end_month), label = TRUE, abbr = FALSE),
-      " ",
-      as.numeric(end_year),
-      "</em>",
-      "<br />",
-      as.character(description)
+      "<em>Funded by ", organization, amount_fmt, " from ", date_range, "</em>",
+      if_else(!is.na(description) & description != "",
+              paste0("<br />", description), "")
     )
-  ) %>%
-  arrange(desc(as.numeric(start_year)), desc(as.numeric(start_month))) %>%
-  select(funding)
+  ) |>
+  arrange(desc(start_year), desc(start_month)) |>
+  pull(funding_html)
 
-cat(str_c(funding$funding))
-```  
+cat(str_c(funding))
+```
