@@ -109,6 +109,10 @@ output:
 
 <div class="people-grid">
 <div class="partner-card">
+<a href ="https://www.adruk.org/"><img src="pictures/administrativedataresearchuk.png" alt="Administrative Data Research UK Logo"></a>
+<p><b>Administrative Data Research UK</b> is a UK-wide partnership that links and safely shares de-identified public sector administrative data with accredited researchers to generate policy-relevant insights and improve people’s lives.</p>
+</div>
+<div class="partner-card">
 <a href ="https://www.changegrowlive.org/"><img src="pictures/changegrowlive.png" alt="Change Grow Live Logo"></a>
 <p><b>Change, Grow, Live</b> provides a range of services to support individuals, families and communities whose lives are adversely affected by crime, substance misuse, homelessness, anti-social behaviour, domestic violence, social deprivation and lack of opportunity. The charity works with challenging service users with complex needs, including those with entrenched drug habits and offending behaviour.</p>
 </div>
@@ -119,6 +123,10 @@ output:
 <div class="partner-card">
 <a href = "https://datamind.org.uk/"><img src="pictures/datamind.png" alt="Datamind Logo"></a>
 <p><b>DATAMIND</b>, coordinated from Swansea University and led by Professors Ann John and Robert Stewart, is the mental health data science hub of the Mental Health Platform. It’s a multi-site data organisation which has been a resource for researchers, the NHS, charities, policy makers and industry since 2021, and is now one of the six Hubs of the Mental Health Platform.</p>
+</div>
+<div class="partner-card">
+<a href = "https://www.hdruk.ac.uk/"><img src="pictures/healthdataresearchuk.png" alt="Health Data Research UK Logo"></a>
+<p><b>Health Data Research UK</b> is the national institute for health data science, uniting and improving health and care datasets across the UK to enable trustworthy, large-scale data-driven research that advances understanding of disease and improves health and care.</p>
 </div>
 <div class="partner-card">
 <a href = "https://www.northlondonmentalhealth.nhs.uk/"><img src="pictures/nlft.png" alt="North London NHS Foundation Trust Logo"></a>
