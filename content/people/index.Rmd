@@ -84,8 +84,8 @@ output:
 </div>
 <div class="team-card">
 <img src="pictures/yunsookim.png" alt="Headshot of Yunsoo Kim">
-<br><b>Yunsoo Kim</b>
-<br>Research Assistant
+<br><b>Dr Yunsoo Kim</b>
+<br>Research Fellow
 <br><a href="https://bluesky333.github.io/">Website</a>
 </div>
 </div>
