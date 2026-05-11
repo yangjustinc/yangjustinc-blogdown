@@ -1,6 +1,6 @@
 ---
 title: Home
-description: "MINDSET is a UCL research programme led by Dr Justin C Yang, using psychiatric epidemiology, causal inference, and data science to improve mental health outcomes."
+description: "MINDSET is a research programme led by Dr Justin C Yang, using psychiatric epidemiology, causal inference, and data science to improve mental health outcomes."
 output:
  html_document:
   keep_md: yes
@@ -14,7 +14,7 @@ output:
  style="width:100%; max-width:360px;">
 </div>
 
-**Multimodal INference and Data science for pSychiatric Epidemiology and Treatment** (MINDSET) is a research programme led by Dr Justin C Yang, Senior Research Fellow in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk). We use psychiatric epidemiology, causal inference, and data science to understand mental health across the different layers of people’s lives: biological, clinical, social, institutional, and environmental.
+**Multimodal INference and Data Science for Epidemiology and Treatment** (MINDSET) is a research programme led by Dr Justin C Yang, Senior Research Fellow in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk). We use psychiatric epidemiology, causal inference, and data science to understand mental health across the different layers of people’s lives: biological, clinical, social, institutional, and environmental.
 
 Mental health is shaped by more than any single diagnosis, dataset, exposure, or service contact can capture. MINDSET brings together different forms of evidence to study how distress emerges, how people encounter systems of care and support, and why outcomes are so uneven across groups and places.
 
