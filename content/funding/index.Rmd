@@ -6,7 +6,7 @@ output:
     keep_md: yes
 ---
 
-My research is supported through competitive fellowships, investigator-led awards, collaborative programmes, and research-development funding. Funding records are drawn automatically from my [ORCID record](https://orcid.org/0000-0003-2881-4906), with a small local annotation file used to clarify my role and provide concise website descriptions where externally supplied metadata are incomplete or overly detailed.
+My research is supported through competitive fellowships, investigator-led awards, collaborative programmes, and research-development funding. Funding information is maintained through my [ORCID record](https://orcid.org/0000-0003-2881-4906), with my role and contribution shown where relevant.
 
 ```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(orcidtr)
@@ -249,7 +249,7 @@ funding <- funding |>
     ),
 
     date_range = case_when(
-      start_label != "" & end_label != "" ~ paste0(start_label, " – ", end_label),
+      start_label != "" & end_label != "" ~ paste0(start_label, " to ", end_label),
       start_label != "" ~ start_label,
       TRUE ~ ""
     )
@@ -272,58 +272,6 @@ if (nrow(unclassified) > 0) {
 }
 ```
 
-<style>
-.funding-section-intro {
-  margin-bottom: 1.5rem;
-}
-
-.funding-card {
-  padding: 1.15rem 0 1.25rem 0;
-  border-bottom: 1px solid #e6e6e6;
-}
-
-.funding-card:last-child {
-  border-bottom: none;
-}
-
-.funding-title {
-  font-size: 1.08rem;
-  font-weight: 600;
-  line-height: 1.35;
-  margin-bottom: 0.35rem;
-}
-
-.funding-title a {
-  text-decoration: none;
-}
-
-.funding-role {
-  display: inline-block;
-  font-size: 0.88rem;
-  font-weight: 600;
-  padding: 0.12rem 0.45rem;
-  margin: 0 0 0.45rem 0;
-  border: 1px solid #d7d7d7;
-  border-radius: 3px;
-}
-
-.funding-meta {
-  font-size: 0.92rem;
-  line-height: 1.45;
-  margin-bottom: 0.45rem;
-}
-
-.funding-description {
-  margin: 0.35rem 0 0 0;
-  line-height: 1.55;
-}
-
-.funding-reference {
-  font-size: 0.82rem;
-  margin-top: 0.45rem;
-  opacity: 0.72;
-}
-</style>
 
 ```{r include=FALSE}
 render_funding <- function(df) {

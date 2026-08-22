@@ -1,12 +1,12 @@
 ---
 title: Leadership & Recognition
-description: "Editorial leadership, national advisory roles, peer review, research infrastructure, and institutional service by Dr Justin C Yang."
+description: "Editorial leadership, national advisory roles, research assessment, research infrastructure, and institutional contributions by Dr Justin C Yang."
 output:
   html_document:
     keep_md: yes
 ---
 
-My academic service centres on **research leadership, external peer review, research infrastructure, and improving the culture and governance of research**. I contribute to journals, funders, national advisory groups, NHS research infrastructure, and institutional initiatives supporting researchers and inclusive research environments.
+My academic leadership spans **editorial work, national research governance, funding and peer review, NHS research infrastructure, and research culture**. These roles reflect increasing external responsibility for academic judgement, research quality, access to sensitive data, and the development of research environments.
 
 ## Editorial and scholarly leadership
 
@@ -19,16 +19,14 @@ My academic service centres on **research leadership, external peer review, rese
 - **Steering Committee Member**, [Addiction Healthcare Goals](https://www.gov.uk/government/publications/life-sciences-healthcare-goals/addiction-healthcare-goals)
 - **Steering Group Member**, [Mental Health Research Incubator](https://mentalhealthresearch.org.uk/)
 - **Data Access Committee Public Member**, [Eastern England Secure Data Environment](https://easternsde.nhs.uk/)
-- **Public Member**, [British Society for Immunology Patient and Public Involvement Network](https://www.immunology.org/)
 
 These roles involve contributing independent academic, methodological, governance, and public-interest perspectives to decisions about research priorities, access to sensitive data, and the development of health research.
 
-## Funding and peer-review leadership
+## Research assessment and peer review
 
 - **Assessor College**, [Economic and Social Research Council](https://www.ukri.org/councils/esrc/)
 - **Expert Assessor**, [Administrative Data Research UK](https://www.adruk.org/)
 - **Reviewer College**, [Society for the Study of Addiction](https://www.addiction-ssa.org/)
-- **Reviewer Development Scheme**, [National Institute for Health and Care Research](https://www.nihr.ac.uk/)
 
 I also regularly review manuscripts for journals across psychiatry, epidemiology, substance use, public health, and health-services research.
 
@@ -126,7 +124,12 @@ At UCL, I contribute to initiatives aimed at improving research culture, equity,
 - **Culture Change Action Group Lead**, Division of Psychiatry, UCL
 - **LGBTQ+ Equity Action Group**, Division of Psychiatry, UCL
 - **Committee Member**, Child and Young People's Mental Health ECR Network, UCL
+
+## Additional contributions
+
+- **Public Member**, [British Society for Immunology Patient and Public Involvement Network](https://www.immunology.org/)
+- **Reviewer Development Scheme**, [National Institute for Health and Care Research](https://www.nihr.ac.uk/)
 - **Personal Tutor**, Division of Psychiatry, UCL
 - **Certified Instructor**, [The Carpentries](https://carpentries.org/)
 
-These roles complement my research by supporting inclusive research environments, reproducible and open research practice, and the development of researchers at different career stages.
+These activities complement my wider research leadership through contributions to inclusive research environments, public involvement, reproducible research practice, teaching, and researcher development.

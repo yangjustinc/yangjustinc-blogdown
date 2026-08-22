@@ -96,4 +96,4 @@ This includes a commitment to:
 - meaningful public and lived-experience involvement
 - developing researchers and collaborative research capacity
 
-See also the [research team](../people/), [publications](../publications/), [research funding](../funding/), and [academic and professional leadership](../service/).
+See also the [research team](../people/), [publications](../publications/), [research funding](../funding/), and [leadership and recognition](../leadership/).

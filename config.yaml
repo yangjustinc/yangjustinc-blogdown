@@ -46,7 +46,7 @@ menu:
       weight: 7
 
     - name: Leadership
-      url: "service/"
+      url: "leadership/"
       weight: 8
 
     - name: Contact

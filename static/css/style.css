@@ -1,10 +1,16 @@
-/* ── Page entrance ───────────────────────────────────── */
+/* Page entrance */
 @keyframes fadein {
   from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Layout ──────────────────────────────────────────── */
+/* Layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   max-width: 800px;
   margin: auto;
@@ -14,18 +20,27 @@ body {
   animation: fadein 0.35s ease-out both;
 }
 
-/* ── Navigation ──────────────────────────────────────── */
+main {
+  hyphens: none;
+}
+
+/* Navigation */
 .menu {
   padding: 0;
-  margin-bottom: 0.5em;
+  margin: 0 0 0.5em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.15em;
 }
 
 .menu li {
   display: inline-block;
-  margin: 0 0.1em;
+  margin: 0;
 }
 
 .menu a {
+  display: inline-block;
   text-decoration: none;
   color: #444;
   padding: 4px 8px;
@@ -44,7 +59,14 @@ body {
   font-weight: 700;
 }
 
-/* ── Header / Footer text alignment ─────────────────── */
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #1f7fc4;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Header and footer alignment */
 .article-meta {
   text-decoration: none;
   padding: 0;
@@ -61,14 +83,14 @@ footer {
   font-size: 1.1em;
 }
 
-/* ── Horizontal rule ─────────────────────────────────── */
+/* Horizontal rule */
 hr {
   border: none;
   border-top: 1px solid #e0e0e0;
   margin: 1em 0;
 }
 
-/* ── Code ────────────────────────────────────────────── */
+/* Code */
 pre {
   border: 1px solid #e0e0e0;
   box-shadow: none;
@@ -89,18 +111,14 @@ pre code {
   padding: 0;
 }
 
-/* ── Media ───────────────────────────────────────────── */
+/* Media */
 img,
 iframe,
 video {
   max-width: 100%;
 }
 
-main {
-  hyphens: auto;
-}
-
-/* ── Blockquote ──────────────────────────────────────── */
+/* Blockquote */
 blockquote {
   background: #f9fbfd;
   border-left: 3px solid #1f7fc4;
@@ -109,8 +127,9 @@ blockquote {
   color: #444;
 }
 
-/* ── Tables ──────────────────────────────────────────── */
-.table-responsive {
+/* Tables */
+.table-responsive,
+.site-table-wrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -121,6 +140,7 @@ table {
   border-bottom: 2px solid #444;
   width: 100%;
   font-size: 0.9em;
+  border-collapse: collapse;
 }
 
 table thead th {
@@ -135,7 +155,8 @@ td {
   text-align: left;
 }
 
-thead {
+thead,
+tfoot {
   background: #eef6fb;
 }
 
@@ -143,162 +164,7 @@ tr:nth-child(even) {
   background: #fafafa;
 }
 
-tfoot {
-  background: #eef6fb;
-}
-
-/* ── Homepage profile block ──────────────────────────── */
-#profile {
-  float: right;
-  max-width: 28%;
-  min-width: 120px;
-  text-align: center;
-  margin: 0 0 1rem 1.5rem;
-}
-
-/* ── Footer ──────────────────────────────────────────── */
-footer {
-  font-size: 0.85em;
-  color: #888;
-  margin-top: 2rem;
-}
-
-footer a {
-  text-decoration: none;
-  color: #888;
-}
-
-footer a:hover {
-  color: #1f7fc4;
-}
-
-/* ── Footer social icons ─────────────────────────────── */
-.footer-social {
-  margin: 0.75em 0 0.25em;
-  text-align: center;
-}
-
-.footer-social a {
-  display: inline-block;
-  margin: 0 0.35em;
-  color: #888;
-  text-decoration: none;
-}
-
-.footer-social a:hover {
-  color: #1f7fc4;
-}
-
-/* ── Headings ────────────────────────────────────────── */
-h1 {
-  font-size: 1.75rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  position: relative;
-  padding-bottom: 0.4em;
-}
-
-h1::after {
-  content: '';
-  display: block;
-  width: 2.5rem;
-  height: 2px;
-  background: #1f7fc4;
-  margin-top: 0.3em;
-}
-
-.article-meta h1::after {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-h2 {
-  font-size: 1.25rem;
-  margin-top: 1.4em;
-  margin-bottom: 0.4em;
-}
-
-h3 {
-  font-size: 1.05rem;
-  margin-top: 1.2em;
-  margin-bottom: 0.3em;
-}
-
-p {
-  margin-bottom: 0.9em;
-}
-
-/* ── Links ───────────────────────────────────────────── */
-a {
-  color: #1f7fc4;
-  transition: color 0.15s ease;
-}
-
-a:hover {
-  color: #155d94;
-}
-
-main a {
-  text-decoration: underline;
-  text-decoration-color: rgba(31, 127, 196, 0.35);
-  text-underline-offset: 3px;
-}
-
-main a:hover {
-  text-decoration-color: #1f7fc4;
-}
-
-/* ── Team headshots ──────────────────────────────────── */
-.team-card img {
-  border-radius: 8px;
-}
-
-/* ── Reduced motion ──────────────────────────────────── */
-@media (prefers-reduced-motion: reduce) {
-  body,
-  a,
-  .menu a {
-    animation: none;
-    transition: none;
-  }
-}
-
-/* ── Mobile tweaks ───────────────────────────────────── */
-@media screen and (max-width: 640px) {
-  #profile {
-    float: none;
-    max-width: 60%;
-    min-width: 80px;
-    margin: 0 auto 1.5rem auto;
-    display: block;
-  }
-
-  table {
-    font-size: 0.82em;
-  }
-
-  th,
-  td {
-    padding: 5px 7px;
-  }
-}
-
-/* ── Embeds / iframes ────────────────────────────────── */
-.embed-frame {
-  width: 100%;
-  height: clamp(650px, 85vh, 1200px);
-  border: 0;
-  display: block;
-  background: #fff;
-}
-
-@media screen and (max-width: 640px) {
-  .embed-frame {
-    height: clamp(420px, 70vh, 900px);
-  }
-}
-
-/* ── Site tables (talks, teaching) ───────────────────── */
+/* Site tables */
 .site-table {
   width: 100%;
   border-collapse: collapse;
@@ -336,34 +202,404 @@ main a:hover {
   background: #f5fafd;
 }
 
-/* Wrap long tables on mobile */
-.site-table-wrap {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+.supervision-summary {
+  margin: 1.1rem 0 1.4rem 0;
+  padding: 0.75rem 0;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  line-height: 1.6;
 }
 
-/* ── Talk cards ──────────────────────────────────────── */
-.talk-card {
-  padding: 0.75em 0;
-  border-bottom: 1px solid #e8e8e8;
+/* Homepage profile block */
+#profile {
+  float: right;
+  max-width: 28%;
+  min-width: 120px;
+  text-align: center;
+  margin: 0 0 1rem 1.5rem;
 }
-.talk-card:last-child { border-bottom: none; }
 
-.talk-meta {
-  font-size: 0.8em;
-  color: #888;
-  margin-bottom: 0.2em;
+/* Headings */
+h1 {
+  font-size: 1.75rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  position: relative;
+  padding-bottom: 0.4em;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background: #1f7fc4;
+  margin-top: 0.3em;
+}
+
+.article-meta h1::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-top: 1.55em;
+  margin-bottom: 0.45em;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin-top: 1.25em;
+  margin-bottom: 0.3em;
+}
+
+p {
+  margin-bottom: 0.9em;
+}
+
+/* Links */
+a {
+  color: #1f7fc4;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: #155d94;
+}
+
+main a {
+  text-decoration: underline;
+  text-decoration-color: rgba(31, 127, 196, 0.35);
+  text-underline-offset: 3px;
+}
+
+main a:hover {
+  text-decoration-color: #1f7fc4;
+}
+
+/* People */
+.people-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.team-card {
+  width: calc(33.333% - 16px);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.partner-card {
+  width: calc(50% - 12px);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.team-card img,
+.partner-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.team-card img {
+  max-height: 180px;
+  border-radius: 8px;
+}
+
+.partner-card img {
+  max-height: 120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.partner-card p {
+  margin-top: 0;
+}
+
+/* Funding */
+.funding-section-intro {
+  margin-bottom: 1.2rem;
+  color: #444;
+}
+
+.funding-card {
+  padding: 1.05rem 0 1.2rem 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.funding-card:last-child {
+  border-bottom: none;
+}
+
+.funding-title {
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+.funding-title a {
+  text-decoration: none;
+}
+
+.funding-role {
+  display: inline-block;
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 0.12rem 0.45rem;
+  margin: 0 0 0.45rem 0;
+  border: 1px solid #d7d7d7;
+  border-radius: 3px;
+  background: #fafafa;
+}
+
+.funding-meta {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  margin-bottom: 0.45rem;
+  color: #555;
+}
+
+.funding-description {
+  margin: 0.35rem 0 0 0;
+  line-height: 1.55;
+}
+
+.funding-reference {
+  font-size: 0.82rem;
+  margin-top: 0.45rem;
+  color: #777;
+}
+
+/* Publications */
+.selected-publication {
+  padding: 1.05rem 0 1.2rem 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.selected-publication:last-child {
+  border-bottom: none;
+}
+
+.selected-theme {
+  font-size: 0.81rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.035em;
+  margin-bottom: 0.25rem;
+  color: #666;
+}
+
+.selected-title {
+  font-size: 1.06rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+}
+
+.selected-title a {
+  text-decoration: none;
+}
+
+.selected-meta {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.selected-publication p {
+  margin: 0.35rem 0 0 0;
+  line-height: 1.55;
+}
+
+.selected-contribution {
+  font-size: 0.94rem;
+}
+
+.recent-publication {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #ededed;
+}
+
+.recent-publication:last-child {
+  border-bottom: none;
+}
+
+.recent-publication p {
+  margin: 0;
+}
+
+.publication-list p {
+  line-height: 1.6;
+}
+
+/* Talks */
+.talk-card {
+  padding: 1rem 0 1.1rem 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.talk-card:last-child {
+  border-bottom: none;
+}
+
+.talk-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
+  color: #666;
+  margin-bottom: 0.2rem;
 }
 
 .talk-title {
+  font-size: 1.04rem;
   font-weight: 600;
+  line-height: 1.4;
   color: #222;
-  margin-bottom: 0.15em;
+  margin-bottom: 0.25rem;
 }
 
 .talk-event {
-  font-size: 0.88em;
+  font-size: 0.93rem;
+  line-height: 1.45;
   color: #555;
+  margin-bottom: 0.15rem;
+}
+
+.talk-date {
+  font-size: 0.87rem;
+  color: #777;
+}
+
+.talk-materials {
+  font-size: 0.9rem;
+  margin-top: 0.35rem;
+}
+
+/* Collapsible sections */
+details {
+  margin: 1rem 0;
+}
+
+summary {
+  cursor: pointer;
+  color: #333;
+}
+
+summary:hover {
+  color: #1f7fc4;
+}
+
+/* Embeds and iframes */
+.embed-frame {
+  width: 100%;
+  height: clamp(650px, 85vh, 1200px);
+  border: 0;
+  display: block;
+  background: #fff;
+}
+
+/* Footer */
+footer {
+  font-size: 0.85em;
+  color: #888;
+  margin-top: 2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #888;
+}
+
+footer a:hover {
+  color: #1f7fc4;
+}
+
+.footer-social {
+  margin: 0.75em 0 0.25em;
+  text-align: center;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 0.35em;
+  color: #888;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  color: #1f7fc4;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  body,
+  a,
+  .menu a {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+  .team-card {
+    width: calc(50% - 12px);
+  }
+
+  .partner-card {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  body {
+    padding: 1em 0.8em;
+  }
+
+  #profile {
+    float: none;
+    max-width: 60%;
+    min-width: 80px;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+  }
+
+  .team-card,
+  .partner-card {
+    width: 100%;
+  }
+
+  .people-grid {
+    gap: 18px;
+  }
+
+  table {
+    font-size: 0.82em;
+  }
+
+  th,
+  td {
+    padding: 5px 7px;
+  }
+
+  .embed-frame {
+    height: clamp(420px, 70vh, 900px);
+  }
+
+  h1 {
+    font-size: 1.55rem;
+  }
+
+  h2 {
+    font-size: 1.18rem;
+  }
 }

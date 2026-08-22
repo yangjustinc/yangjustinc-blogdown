@@ -6,7 +6,7 @@ output:
     keep_md: yes
 ---
 
-My publications span psychiatric epidemiology, linked administrative and clinical data, mental health inequalities, neurodivergence, addiction, and population health. A small selection of papers that illustrate the development of this programme is highlighted below; the complete publication list is generated automatically from my [ORCID record](https://orcid.org/0000-0003-2881-4906).
+My publications span psychiatric epidemiology, linked administrative and clinical data, mental-health inequalities, neurodivergence, addiction, and population health. The programme-defining outputs highlighted below are complemented by a dynamically generated view of recent work and my complete publication record from [ORCID](https://orcid.org/0000-0003-2881-4906).
 
 ```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(orcidtr)
@@ -18,10 +18,6 @@ library(purrr)
 library(htmltools)
 
 orcid_id <- "0000-0003-2881-4906"
-
-# -----------------------------------------------------------------------------
-# Selected publications
-# -----------------------------------------------------------------------------
 
 selected <- read_csv(
   "selected_publications.csv",
@@ -38,10 +34,6 @@ selected <- read_csv(
     doi = str_to_lower(str_squish(doi))
   ) |>
   arrange(order)
-
-# -----------------------------------------------------------------------------
-# Complete publication data from ORCID
-# -----------------------------------------------------------------------------
 
 w <- orcid_works(orcid_id)
 
@@ -125,10 +117,6 @@ publications <- bind_rows(
   ) |>
   arrange(desc(year), title)
 
-# -----------------------------------------------------------------------------
-# Publication categories
-# -----------------------------------------------------------------------------
-
 excluded_preprint_dois <- c(
   "10.1101/2024.06.25.24309483",
   "10.1101/2023.03.29.23287850"
@@ -211,10 +199,6 @@ preprints <- preprints_raw |>
   ) |>
   filter(!has_published_version)
 
-# -----------------------------------------------------------------------------
-# Join curated annotations to automatically retrieved publication metadata
-# -----------------------------------------------------------------------------
-
 selected_display <- selected |>
   left_join(
     peer_reviewed |>
@@ -228,71 +212,16 @@ selected_display <- selected |>
     by = "doi"
   )
 
-missing_selected <- selected_display |>
-  filter(is.na(title))
-
-if (nrow(missing_selected) > 0) {
-  message(
-    "\nSelected publication DOI(s) not found in ORCID:\n- ",
-    paste(missing_selected$doi, collapse = "\n- "),
-    "\n"
-  )
-}
+recent_display <- peer_reviewed |>
+  filter(!doi %in% selected$doi) |>
+  arrange(desc(year), desc(publication_date)) |>
+  slice_head(n = 5)
 ```
 
-<style>
-.selected-publication {
-  padding: 1.15rem 0 1.3rem 0;
-  border-bottom: 1px solid #e6e6e6;
-}
 
-.selected-publication:last-child {
-  border-bottom: none;
-}
+## Programme-defining outputs
 
-.selected-theme {
-  font-size: 0.83rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.035em;
-  margin-bottom: 0.25rem;
-  opacity: 0.72;
-}
-
-.selected-title {
-  font-size: 1.06rem;
-  font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 0.3rem;
-}
-
-.selected-title a {
-  text-decoration: none;
-}
-
-.selected-meta {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  opacity: 0.82;
-}
-
-.selected-publication p {
-  margin: 0.35rem 0 0 0;
-  line-height: 1.55;
-}
-
-.selected-contribution {
-  font-size: 0.94rem;
-}
-
-.publication-list p {
-  line-height: 1.6;
-}
-</style>
-
-## Selected research
-
-These papers illustrate several of the main strands of my research programme and the progression of my work across linked data, psychiatric epidemiology, mental health inequalities, neurodivergence, and addiction.
+These papers illustrate the development of the main strands of my research programme and areas in which I have held substantial intellectual or analytical responsibility.
 
 ```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 selected_display |>
@@ -380,6 +309,53 @@ selected_display |>
         significance_html,
         contribution_html,
         "</div>"
+      )
+    }
+  ) |>
+  paste(collapse = "\n") |>
+  cat()
+```
+
+## Recent peer-reviewed work
+
+The most recent peer-reviewed publications not already highlighted above are shown automatically from ORCID.
+
+```{r results='asis', echo=FALSE}
+recent_display |>
+  mutate(
+    doi_link = if_else(
+      !is.na(doi),
+      paste0("https://doi.org/", doi),
+      NA_character_
+    )
+  ) |>
+  pmap_chr(
+    function(title, journal, year, doi_link, ...) {
+      title_html <- if (!is.na(doi_link)) {
+        paste0(
+          '<a href="',
+          htmlEscape(doi_link),
+          '"><b>',
+          htmlEscape(title),
+          "</b></a>"
+        )
+      } else {
+        paste0("<b>", htmlEscape(title), "</b>")
+      }
+
+      meta <- paste(
+        c(
+          if (!is.na(journal) && journal != "") htmlEscape(journal),
+          if (!is.na(year)) as.character(year)
+        ),
+        collapse = " · "
+      )
+
+      paste0(
+        '<div class="recent-publication"><p>',
+        title_html,
+        if (meta != "") paste0("<br><span class=\"selected-meta\">", meta, "</span>") else "",
+        "</p></div>"
       )
     }
   ) |>

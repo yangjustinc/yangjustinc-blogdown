@@ -1,16 +1,15 @@
 ---
 title: Talks & Presentations
-description: "Invited talks, seminars, conference presentations, workshops, and methods training by Dr Justin C Yang."
+description: "Talks, seminars, conference presentations, workshops, and methods training by Dr Justin C Yang."
 output:
   html_document:
     keep_md: yes
 ---
 
-I regularly present work in psychiatric epidemiology, linked data, mental health data science, neurodivergence, addiction, and research methods to academic, policy, and interdisciplinary audiences.
+I regularly present work in psychiatric epidemiology, linked data, mental health data science, neurodivergence, addiction, and research methods to academic, policy, clinical, and interdisciplinary audiences.
 
 ```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(tidyverse)
-library(glue)
 library(htmltools)
 library(lubridate)
 
@@ -134,49 +133,6 @@ render_talks <- function(df) {
   cat(paste(cards, collapse = "\n"))
 }
 ```
-
-<style>
-.talk-card {
-  padding: 1.05rem 0 1.2rem 0;
-  border-bottom: 1px solid #e6e6e6;
-}
-
-.talk-card:last-child {
-  border-bottom: none;
-}
-
-.talk-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.035em;
-  opacity: 0.7;
-  margin-bottom: 0.2rem;
-}
-
-.talk-title {
-  font-size: 1.04rem;
-  font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 0.25rem;
-}
-
-.talk-event {
-  font-size: 0.93rem;
-  line-height: 1.45;
-  margin-bottom: 0.15rem;
-}
-
-.talk-date {
-  font-size: 0.87rem;
-  opacity: 0.72;
-}
-
-.talk-materials {
-  font-size: 0.9rem;
-  margin-top: 0.35rem;
-}
-</style>
 
 ```{r results='asis', echo=FALSE}
 if (nrow(upcoming) > 0) {
