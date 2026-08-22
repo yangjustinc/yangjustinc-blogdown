@@ -1,110 +1,95 @@
-# Justin C. Yang — Personal Academic Website
+# MINDSET academic website
 
-Source code for my personal academic website:
+Source for [www.justinyang.me](https://www.justinyang.me/), the academic website for **MINDSET (Multimodal INference and Data Science for Epidemiology and Treatment)**, the research programme led by Dr Justin C Yang at University College London.
 
-**https://www.justinyang.me/**
+The site presents the programme's research, people and collaborations, publications, funding, talks, teaching and supervision, academic leadership, and contact information.
 
-The site contains information about my research, publications, presentations, teaching and other academic activities.
+## Site structure
 
-It is built with **Hugo** through the R [`blogdown`](https://pkgs.rstudio.com/blogdown/) package and deployed automatically via **Netlify**.
+| Path | Purpose |
+| --- | --- |
+| [`content/_index.Rmarkdown`](./content/_index.Rmarkdown) | Homepage |
+| [`content/research/`](./content/research/) | Research programme |
+| [`content/people/`](./content/people/) | Research team, doctoral researchers, partners, and collaborators |
+| [`content/publications/`](./content/publications/) | Selected and complete publications |
+| [`content/funding/`](./content/funding/) | Research funding |
+| [`content/talks/`](./content/talks/) | Talks and presentations |
+| [`content/teaching/`](./content/teaching/) | Teaching, supervision, and researcher development |
+| [`content/leadership/`](./content/leadership/) | Academic leadership and recognition |
+| [`content/contact/`](./content/contact/) | Contact information |
+| [`layouts/`](./layouts/) | Custom Hugo layouts, partials, and shortcodes |
+| [`static/css/style.css`](./static/css/style.css) | Site-wide styling |
+| [`config.yaml`](./config.yaml) | Hugo configuration and navigation |
+| [`netlify.toml`](./netlify.toml) | Netlify build configuration |
 
 ## Technology
 
-The site uses:
+The site is built with:
 
-* **Hugo** as the static site generator;
-* **blogdown** for managing and building the site from R;
-* a customised version of the [`hugo-xmin`](https://github.com/yihui/hugo-xmin) theme;
-* **Netlify** for continuous deployment from the `main` branch; and
-* **Cloudflare** for DNS.
+- [Hugo](https://gohugo.io/) using the [`hugo-xmin`](https://github.com/yihui/hugo-xmin) theme
+- R and [`blogdown`](https://pkgs.rstudio.com/blogdown/) for R Markdown content
+- Netlify for deployment from the `main` branch
+- Cloudflare for DNS
 
-## Repository structure
+The Netlify production build runs Hugo only. R Markdown pages therefore need to be rendered locally before changes are pushed so that their generated `.html` or `.markdown` counterparts are committed alongside the source files.
 
-| Path                                                         | Purpose                                                                 |
-| ------------------------------------------------------------ | ----------------------------------------------------------------------- |
-| [`content/`](./content/)                                     | Website content, including posts, publications, presentations and talks |
-| [`layouts/`](./layouts/)                                     | Custom Hugo layouts, template overrides and shortcodes                  |
-| [`static/`](./static/)                                       | Static assets such as images, documents and stylesheets                 |
-| [`static/css/`](./static/css/)                               | Custom CSS                                                              |
-| [`themes/hugo-xmin/`](./themes/hugo-xmin/)                   | Base Hugo theme                                                         |
-| [`archetypes/`](./archetypes/)                               | Hugo content templates                                                  |
-| [`R/`](./R/)                                                 | R scripts used in the site build workflow                               |
-| [`config.yaml`](./config.yaml)                               | Main Hugo site configuration                                            |
-| [`netlify.toml`](./netlify.toml)                             | Netlify build and deployment configuration                              |
-| [`index.Rmd`](./index.Rmd)                                   | Root blogdown document                                                  |
-| [`yangjustinc-blogdown.Rproj`](./yangjustinc-blogdown.Rproj) | RStudio project file                                                    |
+## Data-driven pages
+
+Several sections are designed to minimise manual duplication:
+
+- **Publications** are retrieved from ORCID, with [`selected_publications.csv`](./content/publications/selected_publications.csv) providing the curated programme-defining selection and contribution notes.
+- **Funding** is retrieved from ORCID, with [`funding_overrides.csv`](./content/funding/funding_overrides.csv) used to clarify roles and concise descriptions where needed.
+- **Teaching and supervision** uses [`students.csv`](./content/teaching/students.csv).
+- **Talks and presentations** uses [`talks.csv`](./content/talks/talks.csv).
 
 ## Local development
 
-### Requirements
-
-To work with the site locally, you will need:
-
-* R;
-* the `blogdown` package; and
-* Hugo.
-
-Install `blogdown` and Hugo from R:
-
-```r
-install.packages("blogdown")
-blogdown::install_hugo()
-```
-
-Clone the repository:
+Clone the repository and open the RStudio project:
 
 ```bash
 git clone https://github.com/yangjustinc/yangjustinc-blogdown.git
 cd yangjustinc-blogdown
 ```
 
-Then start a local development server from R:
+Install `blogdown` if required:
+
+```r
+install.packages("blogdown")
+```
+
+The production deployment currently uses Hugo `0.160.1`, as specified in [`netlify.toml`](./netlify.toml). For a matching local Hugo installation:
+
+```r
+blogdown::install_hugo(version = "0.160.1")
+```
+
+Preview the site locally with:
 
 ```r
 blogdown::serve_site()
 ```
 
-By default, the site is served locally at:
-
-```text
-http://localhost:4321
-```
-
-Changes to site content, layouts and styling can then be previewed locally before being committed.
+When editing an R Markdown page, render it locally and confirm that the generated output has also changed before committing. The production build does not run R.
 
 ## Deployment
 
-The production site is deployed through **Netlify**.
+Pushes to `main` trigger a Netlify deployment using:
 
-Changes pushed to the `main` branch trigger a new build and deployment automatically according to the configuration in [`netlify.toml`](./netlify.toml).
+```bash
+hugo --gc
+```
 
-The public site is available at:
+The public site is available at [www.justinyang.me](https://www.justinyang.me/).
 
-**https://www.justinyang.me/**
+## Repository scope
 
-## Content
-
-Most site content lives under [`content/`](./content/) and includes material such as:
-
-* research and academic interests;
-* publications;
-* presentations and talks;
-* teaching and training materials; and
-* blog posts and other professional material.
-
-The site also includes custom Hugo layouts and styling layered on top of the `hugo-xmin` theme.
-
-## Contributing
-
-This repository contains the source for a personal website and is not maintained as a general-purpose software project.
-
-Issues and pull requests are therefore not generally expected, although the code and site structure may be useful as a reference for others building academic websites with Hugo and `blogdown`.
+This repository is maintained as the source for a personal academic and research programme website rather than as a general-purpose software package. The code and structure may nevertheless be useful as a reference for academic websites built with Hugo and `blogdown`.
 
 ## Author
 
-**Justin C. Yang**
-
+**Justin C Yang**  
 University College London
 
-* Website: https://www.justinyang.me/
-* GitHub: https://github.com/yangjustinc
+- [Website](https://www.justinyang.me/)
+- [GitHub](https://github.com/yangjustinc)
+- [ORCID](https://orcid.org/0000-0003-2881-4906)
