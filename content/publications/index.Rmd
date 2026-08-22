@@ -1,99 +1,192 @@
 ---
 title: Publications
-description: "Peer-reviewed publications by Dr Justin C Yang and the MINDSET research programme, spanning psychiatric epidemiology, causal inference, substance use, and mental health data science."
-
+description: "Selected and complete publications from the MINDSET research programme, spanning psychiatric epidemiology, linked data, mental health data science, neurodivergence, addiction, and health inequalities."
 output:
   html_document:
     keep_md: yes
 ---
-```{r include = FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+
+My publications span psychiatric epidemiology, linked administrative and clinical data, mental health inequalities, neurodivergence, addiction, and population health. A small selection of papers that illustrate the development of this programme is highlighted below; the complete publication list is generated automatically from my [ORCID record](https://orcid.org/0000-0003-2881-4906).
+
+```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(orcidtr)
 library(rcrossref)
 library(tidyverse)
 library(httr2)
+library(stringr)
+library(purrr)
+library(htmltools)
 
 orcid_id <- "0000-0003-2881-4906"
+
+# -----------------------------------------------------------------------------
+# Selected publications
+# -----------------------------------------------------------------------------
+
+selected <- read_csv(
+  "selected_publications.csv",
+  show_col_types = FALSE,
+  col_types = cols(
+    order = col_double(),
+    doi = col_character(),
+    theme = col_character(),
+    significance = col_character(),
+    contribution = col_character()
+  )
+) |>
+  mutate(
+    doi = str_to_lower(str_squish(doi))
+  ) |>
+  arrange(order)
+
+# -----------------------------------------------------------------------------
+# Complete publication data from ORCID
+# -----------------------------------------------------------------------------
 
 w <- orcid_works(orcid_id)
 
 df <- as_tibble(w) |>
   mutate(
-    year      = as.integer(substr(publication_date, 1, 4)),
+    doi = str_to_lower(doi),
+    year = as.integer(substr(publication_date, 1, 4)),
     title_key = title |>
       str_to_lower() |>
       str_replace_all("[[:punct:]]", " ") |>
       str_squish(),
     is_preprint = type %in% c("preprint", "posted-content"),
-    has_doi     = !is.na(doi)
+    has_doi = !is.na(doi)
   ) |>
   arrange(title_key, is_preprint, desc(has_doi), desc(year))
 
-with_doi <- df |> filter(has_doi)
-no_doi   <- df |> filter(!has_doi)
+with_doi <- df |>
+  filter(has_doi)
+
+no_doi <- df |>
+  filter(!has_doi)
 
 cr_cites <- with_doi |>
   mutate(
-    citation = map_chr(doi, \(d) {
-      tryCatch(cr_cn(dois = d, format = "text"), error = \(e) NA_character_)
-    })
+    citation = map_chr(
+      doi,
+      \(d) {
+        tryCatch(
+          cr_cn(dois = d, format = "text"),
+          error = \(e) NA_character_
+        )
+      }
+    )
   )
 
 fallback <- bind_rows(
   no_doi,
-  cr_cites |> filter(is.na(citation)) |> select(-citation)
+  cr_cites |>
+    filter(is.na(citation)) |>
+    select(-citation)
 ) |>
   mutate(
-    citation = str_trim(paste0(
-      title,
-      if_else(is.na(journal) | journal == "", "", paste0(". *", journal, "*")),
-      if_else(is.na(year), "", paste0(" (", year, ")."))
-    ))
+    citation = str_trim(
+      paste0(
+        title,
+        if_else(
+          is.na(journal) | journal == "",
+          "",
+          paste0(". *", journal, "*")
+        ),
+        if_else(
+          is.na(year),
+          "",
+          paste0(" (", year, ").")
+        )
+      )
+    )
   )
 
 publications <- bind_rows(
-  cr_cites |> filter(!is.na(citation)),
+  cr_cites |>
+    filter(!is.na(citation)),
   fallback
 ) |>
   mutate(
-    citation = if_else(str_ends(citation, "\\."), citation, paste0(citation, ".")),
-    citation = str_replace_all(citation, "Yang,\\s*J\\.\\s*C\\.", "**Yang, J. C.**"),
-    citation = str_replace_all(citation, "(?<!C\\.)\\bYang,\\s*J\\.(?!\\s*C)", "**Yang, J.**")
+    citation = if_else(
+      str_ends(citation, "\\."),
+      citation,
+      paste0(citation, ".")
+    ),
+    citation = str_replace_all(
+      citation,
+      "Yang,\\s*J\\.\\s*C\\.",
+      "**Yang, J. C.**"
+    ),
+    citation = str_replace_all(
+      citation,
+      "(?<!C\\.)\\bYang,\\s*J\\.(?!\\s*C)",
+      "**Yang, J.**"
+    )
   ) |>
   arrange(desc(year), title)
 
-get_published_doi <- function(doi) {
-  tryCatch({
-    resp <- request(paste0("https://api.crossref.org/works/", URLencode(doi, reserved = TRUE))) |>
-      req_headers(Accept = "application/json") |>
-      req_error(is_error = \(r) FALSE) |>
-      req_perform()
-    if (resp_status(resp) != 200) return(NA_character_)
-    body <- resp_body_json(resp)
-    relations <- body$message$relation
-    published <- relations$`is-preprint-of` %||% relations$`is-version-of`
-    if (is.null(published) || length(published) == 0) return(NA_character_)
-    published[]$id %||% NA_character_
-  }, error = \(e) NA_character_)
-}
+# -----------------------------------------------------------------------------
+# Publication categories
+# -----------------------------------------------------------------------------
 
 excluded_preprint_dois <- c(
   "10.1101/2024.06.25.24309483",
   "10.1101/2023.03.29.23287850"
 )
 
-peer_reviewed <- publications |> filter(type == "journal-article") |>
+peer_reviewed <- publications |>
+  filter(type == "journal-article") |>
   distinct(title_key, .keep_all = TRUE)
 
 published_dois <- str_to_lower(peer_reviewed$doi)
 
-book_chapters <- publications |> filter(type == "book-chapter") |>
+book_chapters <- publications |>
+  filter(type == "book-chapter") |>
   filter(!title_key %in% peer_reviewed$title_key) |>
   distinct(title_key, .keep_all = TRUE) |>
   mutate(
     citation = str_to_title(citation),
-    citation = str_replace_all(citation, "Yang,\\s*J\\.\\s*C\\.", "**Yang, J. C.**"),
-    citation = str_replace_all(citation, "(?<!C\\.)\\bYang,\\s*J\\.(?!\\s*C)", "**Yang, J.**")
+    citation = str_replace_all(
+      citation,
+      "Yang,\\s*J\\.\\s*C\\.",
+      "**Yang, J. C.**"
+    ),
+    citation = str_replace_all(
+      citation,
+      "(?<!C\\.)\\bYang,\\s*J\\.(?!\\s*C)",
+      "**Yang, J.**"
+    )
   )
+
+get_published_doi <- function(doi) {
+  tryCatch({
+    resp <- request(
+      paste0(
+        "https://api.crossref.org/works/",
+        URLencode(doi, reserved = TRUE)
+      )
+    ) |>
+      req_headers(Accept = "application/json") |>
+      req_error(is_error = \(r) FALSE) |>
+      req_perform()
+
+    if (resp_status(resp) != 200) {
+      return(NA_character_)
+    }
+
+    body <- resp_body_json(resp)
+    relations <- body$message$relation
+    published <- relations$`is-preprint-of` %||%
+      relations$`is-version-of`
+
+    if (is.null(published) || length(published) == 0) {
+      return(NA_character_)
+    }
+
+    published[[1]]$id %||% NA_character_
+
+  }, error = \(e) NA_character_)
+}
 
 preprints_raw <- publications |>
   filter(type %in% c("preprint", "posted-content")) |>
@@ -102,28 +195,224 @@ preprints_raw <- publications |>
 
 preprints <- preprints_raw |>
   mutate(
-    published_doi = map_chr(doi, \(d) {
-      if (is.na(d)) return(NA_character_)
-      get_published_doi(d)
-    }),
+    published_doi = map_chr(
+      doi,
+      \(d) {
+        if (is.na(d)) return(NA_character_)
+        get_published_doi(d)
+      }
+    ),
     has_published_version = (
-      !is.na(published_doi) & str_to_lower(published_doi) %in% published_dois
-    ) | str_to_lower(doi) %in% str_to_lower(excluded_preprint_dois)
+      !is.na(published_doi) &
+        str_to_lower(published_doi) %in% published_dois
+    ) |
+      str_to_lower(doi) %in%
+        str_to_lower(excluded_preprint_dois)
   ) |>
   filter(!has_published_version)
+
+# -----------------------------------------------------------------------------
+# Join curated annotations to automatically retrieved publication metadata
+# -----------------------------------------------------------------------------
+
+selected_display <- selected |>
+  left_join(
+    peer_reviewed |>
+      select(
+        doi,
+        title,
+        year,
+        journal,
+        citation
+      ),
+    by = "doi"
+  )
+
+missing_selected <- selected_display |>
+  filter(is.na(title))
+
+if (nrow(missing_selected) > 0) {
+  message(
+    "\nSelected publication DOI(s) not found in ORCID:\n- ",
+    paste(missing_selected$doi, collapse = "\n- "),
+    "\n"
+  )
+}
 ```
 
-```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE}
-cat("## Peer-Reviewed Publications\n\n")
-cat(paste0(peer_reviewed$citation), sep = "\r  \n")
+<style>
+.selected-publication {
+  padding: 1.15rem 0 1.3rem 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.selected-publication:last-child {
+  border-bottom: none;
+}
+
+.selected-theme {
+  font-size: 0.83rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
+  margin-bottom: 0.25rem;
+  opacity: 0.72;
+}
+
+.selected-title {
+  font-size: 1.06rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+}
+
+.selected-title a {
+  text-decoration: none;
+}
+
+.selected-meta {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.82;
+}
+
+.selected-publication p {
+  margin: 0.35rem 0 0 0;
+  line-height: 1.55;
+}
+
+.selected-contribution {
+  font-size: 0.94rem;
+}
+
+.publication-list p {
+  line-height: 1.6;
+}
+</style>
+
+## Selected research
+
+These papers illustrate several of the main strands of my research programme and the progression of my work across linked data, psychiatric epidemiology, mental health inequalities, neurodivergence, and addiction.
+
+```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+selected_display |>
+  filter(!is.na(title)) |>
+  pmap_chr(
+    function(
+      order,
+      doi,
+      theme,
+      significance,
+      contribution,
+      title,
+      year,
+      journal,
+      citation,
+      ...
+    ) {
+
+      title_html <- paste0(
+        '<div class="selected-title">',
+        '<a href="https://doi.org/',
+        htmlEscape(doi),
+        '">',
+        htmlEscape(title),
+        "</a></div>"
+      )
+
+      meta_parts <- c(
+        if (!is.na(journal) && journal != "")
+          htmlEscape(journal),
+        if (!is.na(year))
+          as.character(year)
+      )
+
+      meta_html <- paste0(
+        '<div class="selected-meta">',
+        paste(meta_parts, collapse = " &middot; "),
+        "</div>"
+      )
+
+      theme_html <- if (
+        !is.na(theme) &&
+        str_trim(theme) != ""
+      ) {
+        paste0(
+          '<div class="selected-theme">',
+          htmlEscape(theme),
+          "</div>"
+        )
+      } else {
+        ""
+      }
+
+      significance_html <- if (
+        !is.na(significance) &&
+        str_trim(significance) != ""
+      ) {
+        paste0(
+          "<p>",
+          htmlEscape(significance),
+          "</p>"
+        )
+      } else {
+        ""
+      }
+
+      contribution_html <- if (
+        !is.na(contribution) &&
+        str_trim(contribution) != ""
+      ) {
+        paste0(
+          '<p class="selected-contribution"><b>My contribution:</b> ',
+          htmlEscape(contribution),
+          "</p>"
+        )
+      } else {
+        ""
+      }
+
+      paste0(
+        '<div class="selected-publication">',
+        theme_html,
+        title_html,
+        meta_html,
+        significance_html,
+        contribution_html,
+        "</div>"
+      )
+    }
+  ) |>
+  paste(collapse = "\n") |>
+  cat()
+```
+
+## Complete publication list
+
+<div class="publication-list">
+
+```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE}
+cat("### Peer-reviewed publications\n\n")
+cat(
+  paste0(peer_reviewed$citation),
+  sep = "\r  \n"
+)
 
 if (nrow(book_chapters) > 0) {
-  cat("\n\n## Book Chapters\n\n")
-  cat(paste0(book_chapters$citation), sep = "\r  \n")
+  cat("\n\n### Book chapters\n\n")
+  cat(
+    paste0(book_chapters$citation),
+    sep = "\r  \n"
+  )
 }
 
 if (nrow(preprints) > 0) {
-  cat("\n\n## Preprints\n\n")
-  cat(paste0(preprints$citation), sep = "\r  \n")
+  cat("\n\n### Preprints\n\n")
+  cat(
+    paste0(preprints$citation),
+    sep = "\r  \n"
+  )
 }
 ```
+
+</div>

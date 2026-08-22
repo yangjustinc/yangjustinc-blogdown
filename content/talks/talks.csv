@@ -1,10 +1,10 @@
-Host,Title,Event,Date
-University College London,Investigating risk of suicide in patients with cancer using routine data,Special Interest Group in Self-Harm and Suicide Seminar,2024-05-27
-Administrative Data Research UK,"An ADR UK fellowship to examine Health-related Outcomes, alternative Provision, and Exclusion among pupils with neurodivergent Special Educational Needs",PhD Annual Gathering,2025-02-06
-UCL R Users' Group,Mapping and spatial analysis in R: A tutorial,Group meeting,2025-10-02
-UCL Institute of Child Health,Risk factors for school absence and hospital admissions among pupils with neurodivergent SEND,ECHILD User Day,2026-03-17
-UCL Institute of Child Health,Considerations for hierarchical and spatial modelling in ECHILD,Institute of Child Health Informatics Group Seminar,2026-03-26
-University of Sheffield,Working collaboratively to investigate the socioemotional drivers of severe and enduring mental health needs,Complex Emotions Hub Launch,2026-02-25
-University of Liverpool,Across Education and Health: Using Linked Data to Study Inequalities Among Children with Special Educational Needs, Children's Health Equity Research Group Seminar, 2026-07-06
-DATAMIND,Risk factors for school absence and hospital admission among pupils with neurodivergent SEND provision,Mental Health Driver Programme Workshop, 2026-04-29
-British Society for Population Studies, Influencing policy with administrative data: turning research into real-world impact, British Society for Population Studies Conference,2026-09-10
+Host,Title,Event,Date,Type,Invited,Materials
+University College London,Investigating risk of suicide in patients with cancer using routine data,Special Interest Group in Self-Harm and Suicide Seminar,2024-05-27,Seminar,,
+Administrative Data Research UK,"An ADR UK fellowship to examine Health-related Outcomes, alternative Provision, and Exclusion among pupils with neurodivergent Special Educational Needs",PhD Annual Gathering,2025-02-06,Presentation,,
+UCL R Users' Group,Mapping and spatial analysis in R: A tutorial,Group meeting,2025-10-02,Tutorial,,
+University of Sheffield,Working collaboratively to investigate the socioemotional drivers of severe and enduring mental health needs,Complex Emotions Hub Launch,2026-02-25,Presentation,,
+UCL Institute of Child Health,Risk factors for school absence and hospital admissions among pupils with neurodivergent SEND,ECHILD User Day,2026-03-17,Presentation,,
+UCL Institute of Child Health,Considerations for hierarchical and spatial modelling in ECHILD,Institute of Child Health Informatics Group Seminar,2026-03-26,Seminar,,
+DATAMIND,Risk factors for school absence and hospital admission among pupils with neurodivergent SEND provision,Mental Health Driver Programme Workshop,2026-04-29,Workshop,,
+University of Liverpool,Across Education and Health: Using Linked Data to Study Inequalities Among Children with Special Educational Needs,Children's Health Equity Research Group Seminar,2026-07-06,Seminar,,
+British Society for Population Studies,Influencing policy with administrative data: turning research into real-world impact,British Society for Population Studies Conference,2026-09-10,Conference presentation,,

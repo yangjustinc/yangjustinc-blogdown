@@ -1,77 +1,475 @@
 ---
 title: Funding
-description: "Current and completed research funding awarded to the MINDSET programme, including projects supported by UKRI, ADR UK, and NIHR."
-
+description: "Competitive research funding supporting the MINDSET programme, including fellowships and collaborative awards from UKRI, ADR UK, NIHR, and other funders."
 output:
   html_document:
     keep_md: yes
 ---
-```{r results = 'asis', echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+
+My research is supported through competitive fellowships, investigator-led awards, collaborative programmes, and research-development funding. Funding records are drawn automatically from my [ORCID record](https://orcid.org/0000-0003-2881-4906), with a small local annotation file used to clarify my role and provide concise website descriptions where externally supplied metadata are incomplete or overly detailed.
+
+```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(orcidtr)
 library(tidyverse)
 library(httr2)
 library(lubridate)
+library(stringr)
+library(purrr)
+library(htmltools)
 
 orcid_id <- "0000-0003-2881-4906"
 
+# -----------------------------------------------------------------------------
+# Local annotations
+# -----------------------------------------------------------------------------
+
+funding_overrides <- read_csv(
+  "funding_overrides.csv",
+  show_col_types = FALSE,
+  col_types = cols(
+    grant_number = col_character(),
+    match_title = col_character(),
+    role = col_character(),
+    description_override = col_character()
+  )
+) |>
+  mutate(
+    across(everything(), ~ na_if(str_squish(.x), "")),
+    match_title_key = match_title |>
+      str_to_lower() |>
+      str_replace_all("[[:punct:]]", " ") |>
+      str_squish()
+  )
+
+# -----------------------------------------------------------------------------
+# Retrieve full funding records from ORCID
+# -----------------------------------------------------------------------------
+
 fetch_funding_detail <- function(orcid_id, put_code) {
-  url <- paste0("https://pub.orcid.org/v3.0/", orcid_id, "/funding/", put_code)
+
+  url <- paste0(
+    "https://pub.orcid.org/v3.0/",
+    orcid_id,
+    "/funding/",
+    put_code
+  )
+
   resp <- request(url) |>
     req_headers(Accept = "application/json") |>
     req_error(is_error = \(r) FALSE) |>
     req_perform()
-  if (resp_status(resp) != 200) return(list(description = NA, amount = NA, currency = NA, url = NA))
+
+  if (resp_status(resp) != 200) {
+    return(list(
+      description = NA_character_,
+      amount = NA_character_,
+      currency = NA_character_,
+      url = NA_character_,
+      grant_number = NA_character_
+    ))
+  }
+
   b <- resp_body_json(resp)
+
+  external_ids <- b$`external-ids`$`external-id`
+
+  grant_number <- if (!is.null(external_ids) && length(external_ids) > 0) {
+    ids <- map_chr(
+      external_ids,
+      \(x) x$`external-id-value` %||% NA_character_
+    )
+    ids <- ids[!is.na(ids) & str_trim(ids) != ""]
+    if (length(ids) > 0) ids[[1]] else NA_character_
+  } else {
+    NA_character_
+  }
+
   list(
     description = b$`short-description` %||% NA_character_,
-    amount      = b$amount$value %||% NA_character_,
-    currency    = b$amount$`currency-code` %||% NA_character_,
-    url         = b$url$value %||% NA_character_
+    amount = b$amount$value %||% NA_character_,
+    currency = b$amount$`currency-code` %||% NA_character_,
+    url = b$url$value %||% NA_character_,
+    grant_number = grant_number
   )
 }
 
 funding_raw <- as_tibble(orcid_funding(orcid_id))
 
-details <- map(funding_raw$put_code, \(pc) fetch_funding_detail(orcid_id, pc))
+details <- map(
+  funding_raw$put_code,
+  \(pc) fetch_funding_detail(orcid_id, pc)
+)
 
 funding <- funding_raw |>
   mutate(
-    description     = map_chr(details, "description"),
-    amount          = map_chr(details, "amount"),
-    currency        = map_chr(details, "currency"),
-    url             = map_chr(details, "url"),
-    start_year      = as.integer(substr(start_date, 1, 4)),
-    start_month     = as.integer(substr(start_date, 6, 7)),
-    end_year        = as.integer(substr(end_date,   1, 4)),
-    end_month       = as.integer(substr(end_date,   6, 7)),
-    currency_symbol = recode(coalesce(currency, ""), GBP = "£", USD = "$", EUR = "€", .default = coalesce(currency, "")),
-    amount_fmt = if_else(
-      !is.na(amount) & !is.na(currency),
-      paste0(" for ", currency_symbol,
-             formatC(as.numeric(amount), format = "f", digits = 0, big.mark = ",")),
-      ""
+    description = map_chr(details, "description"),
+    amount = map_chr(details, "amount"),
+    currency = map_chr(details, "currency"),
+    url = map_chr(details, "url"),
+    grant_number = map_chr(details, "grant_number")
+  )
+
+# -----------------------------------------------------------------------------
+# Clean ORCID metadata
+# -----------------------------------------------------------------------------
+
+funding <- funding |>
+  mutate(
+    title_key = title |>
+      str_to_lower() |>
+      str_replace_all("[[:punct:]]", " ") |>
+      str_squish(),
+
+    grant_number = na_if(str_squish(grant_number), ""),
+
+    start_year = suppressWarnings(as.integer(substr(start_date, 1, 4))),
+    start_month = suppressWarnings(as.integer(substr(start_date, 6, 7))),
+    end_year = suppressWarnings(as.integer(substr(end_date, 1, 4))),
+    end_month = suppressWarnings(as.integer(substr(end_date, 6, 7))),
+
+    orcid_role = case_when(
+      str_detect(coalesce(description, ""), "^\\s*\\[[^]]+\\]") ~
+        str_match(description, "^\\s*\\[([^]]+)\\]")[, 2],
+      TRUE ~ NA_character_
     ),
-    date_range = paste0(
-      if_else(!is.na(start_month), as.character(month(start_month, label = TRUE, abbr = FALSE)), ""),
-      if_else(!is.na(start_year),  paste0(" ", start_year), ""),
-      " to ",
-      if_else(!is.na(end_month), as.character(month(end_month, label = TRUE, abbr = FALSE)), ""),
-      if_else(!is.na(end_year),  paste0(" ", end_year), "")
+
+    description_clean = description |>
+      str_remove("^\\s*\\[[^]]+\\]\\s*") |>
+      str_squish()
+  )
+
+# -----------------------------------------------------------------------------
+# Apply overrides
+#
+# Grant number is the preferred key. Title matching is only a fallback.
+# -----------------------------------------------------------------------------
+
+overrides_by_grant <- funding_overrides |>
+  filter(!is.na(grant_number)) |>
+  distinct(grant_number, .keep_all = TRUE) |>
+  select(
+    grant_number,
+    role_grant = role,
+    description_grant = description_override
+  )
+
+overrides_by_title <- funding_overrides |>
+  filter(!is.na(match_title_key)) |>
+  distinct(match_title_key, .keep_all = TRUE) |>
+  select(
+    match_title_key,
+    role_title = role,
+    description_title = description_override
+  )
+
+funding <- funding |>
+  left_join(overrides_by_grant, by = "grant_number") |>
+  left_join(
+    overrides_by_title,
+    by = c("title_key" = "match_title_key")
+  ) |>
+  mutate(
+    role = coalesce(role_grant, role_title, orcid_role),
+    description_display = coalesce(
+      description_grant,
+      description_title,
+      description_clean
+    )
+  )
+
+# -----------------------------------------------------------------------------
+# Classify by role
+# -----------------------------------------------------------------------------
+
+funding <- funding |>
+  mutate(
+    funding_group = case_when(
+      str_detect(
+        coalesce(role, ""),
+        regex(
+          "(Principal Investigator|\\bPI\\b|Fellow|Fellowship Lead|Programme Lead)",
+          ignore_case = TRUE
+        )
+      ) ~ "lead",
+
+      str_detect(
+        coalesce(role, ""),
+        regex(
+          "(Co-Investigator|Co-I|Work Package Lead|WP Lead|Workstream Lead|Co-Lead)",
+          ignore_case = TRUE
+        )
+      ) ~ "collaborative",
+
+      TRUE ~ "other"
+    )
+  )
+
+# -----------------------------------------------------------------------------
+# Format metadata
+# -----------------------------------------------------------------------------
+
+funding <- funding |>
+  mutate(
+    currency_symbol = recode(
+      coalesce(currency, ""),
+      GBP = "£",
+      USD = "$",
+      EUR = "€",
+      .default = coalesce(currency, "")
     ),
-    title_html = if_else(
-      is.na(url) | str_trim(coalesce(url, "")) == "",
-      paste0("<h2>", title, "</h2>"),
-      paste0("<a href=\"", url, "\"><h2>", title, "</h2></a>")
+
+    amount_numeric = suppressWarnings(as.numeric(amount)),
+
+    amount_fmt = case_when(
+      !is.na(amount_numeric) & !is.na(currency) & currency != "" ~
+        paste0(
+          currency_symbol,
+          formatC(
+            amount_numeric,
+            format = "f",
+            digits = 0,
+            big.mark = ","
+          )
+        ),
+      TRUE ~ NA_character_
     ),
-    funding_html = paste0(
-      title_html,
-      "<em>Funded by ", organization, amount_fmt, " from ", date_range, "</em>",
-      if_else(!is.na(description) & description != "",
-              paste0("<br />", description), "")
+
+    start_label = case_when(
+      !is.na(start_year) & !is.na(start_month) ~
+        paste(month(start_month, label = TRUE, abbr = TRUE), start_year),
+      !is.na(start_year) ~ as.character(start_year),
+      TRUE ~ ""
+    ),
+
+    end_label = case_when(
+      !is.na(end_year) & !is.na(end_month) ~
+        paste(month(end_month, label = TRUE, abbr = TRUE), end_year),
+      !is.na(end_year) ~ as.character(end_year),
+      TRUE ~ "Present"
+    ),
+
+    date_range = case_when(
+      start_label != "" & end_label != "" ~ paste0(start_label, " – ", end_label),
+      start_label != "" ~ start_label,
+      TRUE ~ ""
     )
   ) |>
-  arrange(desc(start_year), desc(start_month)) |>
-  pull(funding_html)
+  arrange(desc(start_year), desc(start_month))
 
-cat(str_c(funding))
+# -----------------------------------------------------------------------------
+# Alert during knitting if anything has no role annotation
+# -----------------------------------------------------------------------------
+
+unclassified <- funding |>
+  filter(is.na(role) | str_trim(role) == "")
+
+if (nrow(unclassified) > 0) {
+  message(
+    "\nFunding records without a classified role:\n- ",
+    paste(unclassified$title, collapse = "\n- "),
+    "\n\nAdd a row to funding_overrides.csv if you want these classified.\n"
+  )
+}
+```
+
+<style>
+.funding-section-intro {
+  margin-bottom: 1.5rem;
+}
+
+.funding-card {
+  padding: 1.15rem 0 1.25rem 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.funding-card:last-child {
+  border-bottom: none;
+}
+
+.funding-title {
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+.funding-title a {
+  text-decoration: none;
+}
+
+.funding-role {
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.12rem 0.45rem;
+  margin: 0 0 0.45rem 0;
+  border: 1px solid #d7d7d7;
+  border-radius: 3px;
+}
+
+.funding-meta {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  margin-bottom: 0.45rem;
+}
+
+.funding-description {
+  margin: 0.35rem 0 0 0;
+  line-height: 1.55;
+}
+
+.funding-reference {
+  font-size: 0.82rem;
+  margin-top: 0.45rem;
+  opacity: 0.72;
+}
+</style>
+
+```{r include=FALSE}
+render_funding <- function(df) {
+
+  if (nrow(df) == 0) {
+    return(invisible(NULL))
+  }
+
+  cards <- pmap_chr(
+    df,
+    function(
+      title,
+      organization,
+      description_display,
+      amount_fmt,
+      url,
+      role,
+      date_range,
+      grant_number,
+      ...
+    ) {
+
+      safe_title <- htmlEscape(title)
+
+      title_html <- if (!is.na(url) && str_trim(url) != "") {
+        paste0(
+          '<div class="funding-title"><a href="',
+          htmlEscape(url),
+          '">',
+          safe_title,
+          "</a></div>"
+        )
+      } else {
+        paste0(
+          '<div class="funding-title">',
+          safe_title,
+          "</div>"
+        )
+      }
+
+      role_html <- if (!is.na(role) && str_trim(role) != "") {
+        paste0(
+          '<div class="funding-role">',
+          htmlEscape(role),
+          "</div>"
+        )
+      } else {
+        ""
+      }
+
+      meta_parts <- c(
+        if (!is.na(organization) && organization != "")
+          htmlEscape(organization),
+        if (!is.na(amount_fmt) && amount_fmt != "")
+          htmlEscape(amount_fmt),
+        if (!is.na(date_range) && date_range != "")
+          htmlEscape(date_range)
+      )
+
+      meta_parts <- meta_parts[!is.na(meta_parts) & meta_parts != ""]
+
+      meta_html <- if (length(meta_parts) > 0) {
+        paste0(
+          '<div class="funding-meta">',
+          paste(meta_parts, collapse = " &middot; "),
+          "</div>"
+        )
+      } else {
+        ""
+      }
+
+      description_html <- if (
+        !is.na(description_display) &&
+        str_trim(description_display) != ""
+      ) {
+        paste0(
+          '<p class="funding-description">',
+          htmlEscape(description_display),
+          "</p>"
+        )
+      } else {
+        ""
+      }
+
+      reference_html <- if (
+        !is.na(grant_number) &&
+        str_trim(grant_number) != ""
+      ) {
+        paste0(
+          '<div class="funding-reference">',
+          "Award ",
+          htmlEscape(grant_number),
+          "</div>"
+        )
+      } else {
+        ""
+      }
+
+      paste0(
+        '<div class="funding-card">',
+        title_html,
+        role_html,
+        meta_html,
+        description_html,
+        reference_html,
+        "</div>"
+      )
+    }
+  )
+
+  cat(paste(cards, collapse = "\n"))
+}
+```
+
+## Fellowships and lead investigator awards
+
+<div class="funding-section-intro">
+Awards for which I hold primary responsibility for the intellectual direction and delivery of the research.
+</div>
+
+```{r results='asis', echo=FALSE}
+funding |>
+  filter(funding_group == "lead") |>
+  render_funding()
+```
+
+## Collaborative research awards
+
+<div class="funding-section-intro">
+Major collaborative programmes in which I hold a defined investigator or work-package leadership role.
+</div>
+
+```{r results='asis', echo=FALSE}
+funding |>
+  filter(funding_group == "collaborative") |>
+  render_funding()
+```
+
+## Research development and enabling awards
+
+<div class="funding-section-intro">
+Additional funding supporting research infrastructure, public involvement, methodological development, training, and research culture.
+</div>
+
+```{r results='asis', echo=FALSE}
+funding |>
+  filter(funding_group == "other") |>
+  render_funding()
 ```

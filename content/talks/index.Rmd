@@ -1,54 +1,201 @@
 ---
-title: Talks
-description: "Invited talks, seminars, and keynotes by Dr Justin C Yang in psychiatric epidemiology, causal inference, mental health data science, and open science."
-
+title: Talks & Presentations
+description: "Invited talks, seminars, conference presentations, workshops, and methods training by Dr Justin C Yang."
 output:
   html_document:
     keep_md: yes
 ---
-```{r echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, results='asis'}
+
+I regularly present work in psychiatric epidemiology, linked data, mental health data science, neurodivergence, addiction, and research methods to academic, policy, and interdisciplinary audiences.
+
+```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(tidyverse)
 library(glue)
+library(htmltools)
+library(lubridate)
 
-talks <- read_csv('talks.csv') |> mutate(Date = as.Date(Date))
+talks <- read_csv(
+  "talks.csv",
+  show_col_types = FALSE,
+  col_types = cols(
+    Host = col_character(),
+    Title = col_character(),
+    Event = col_character(),
+    Date = col_date(),
+    Type = col_character(),
+    Invited = col_logical(),
+    Materials = col_character()
+  )
+) |>
+  mutate(
+    Type = na_if(str_squish(Type), ""),
+    Materials = na_if(str_squish(Materials), "")
+  )
 
-upcoming <- talks |> filter(Date >= Sys.Date()) |> arrange(Date)
-past <- talks |>
-  filter(Date < Sys.Date(), Date >= Sys.Date() - (365 * 3)) |>
+today <- Sys.Date()
+
+upcoming <- talks |>
+  filter(Date >= today) |>
+  arrange(Date)
+
+recent <- talks |>
+  filter(
+    Date < today,
+    Date >= today - years(3)
+  ) |>
   arrange(desc(Date))
 
-if (nrow(upcoming) > 0) {
-  cat("## Upcoming\n\n")
-  upcoming |>
-    mutate(Date = format(Date, "%d %B %Y")) |>
-    pmap(function(Host, Title, Event, Date, ...) {
-      glue(
-        '<div class="talk-card">',
-        '  <div class="talk-meta">{Date} &middot; {Host}</div>',
-        '  <div class="talk-title">{Title}</div>',
-        '  <div class="talk-event">{Event}</div>',
-        '</div>'
+older <- talks |>
+  filter(Date < today - years(3)) |>
+  arrange(desc(Date))
+
+render_talks <- function(df) {
+
+  if (nrow(df) == 0) {
+    return(invisible(NULL))
+  }
+
+  cards <- pmap_chr(
+    df,
+    function(
+      Host,
+      Title,
+      Event,
+      Date,
+      Type,
+      Invited,
+      Materials,
+      ...
+    ) {
+
+      labels <- c(
+        if (!is.na(Invited) && Invited) "Invited",
+        if (!is.na(Type) && Type != "") Type
       )
-    }) |>
-    paste(collapse = "\n") |>
-    cat()
-  cat("\n\n")
+
+      label_html <- if (length(labels) > 0) {
+        paste0(
+          '<div class="talk-label">',
+          htmlEscape(paste(labels, collapse = " · ")),
+          "</div>"
+        )
+      } else {
+        ""
+      }
+
+      title_html <- paste0(
+        '<div class="talk-title">',
+        htmlEscape(Title),
+        "</div>"
+      )
+
+      event_parts <- c(
+        if (!is.na(Event) && Event != "") htmlEscape(Event),
+        if (!is.na(Host) && Host != "") htmlEscape(Host)
+      )
+
+      event_html <- paste0(
+        '<div class="talk-event">',
+        paste(event_parts, collapse = " · "),
+        "</div>"
+      )
+
+      date_html <- paste0(
+        '<div class="talk-date">',
+        format(Date, "%d %B %Y"),
+        "</div>"
+      )
+
+      materials_html <- if (
+        !is.na(Materials) &&
+        Materials != ""
+      ) {
+        paste0(
+          '<div class="talk-materials"><a href="',
+          htmlEscape(Materials),
+          '">View presentation materials</a></div>'
+        )
+      } else {
+        ""
+      }
+
+      paste0(
+        '<div class="talk-card">',
+        label_html,
+        title_html,
+        event_html,
+        date_html,
+        materials_html,
+        "</div>"
+      )
+    }
+  )
+
+  cat(paste(cards, collapse = "\n"))
+}
+```
+
+<style>
+.talk-card {
+  padding: 1.05rem 0 1.2rem 0;
+  border-bottom: 1px solid #e6e6e6;
 }
 
-if (nrow(past) > 0) {
-  cat("## Past\n\n")
-  past |>
-    mutate(Date = format(Date, "%d %B %Y")) |>
-    pmap(function(Host, Title, Event, Date, ...) {
-      glue(
-        '<div class="talk-card">',
-        '  <div class="talk-meta">{Date} &middot; {Host}</div>',
-        '  <div class="talk-title">{Title}</div>',
-        '  <div class="talk-event">{Event}</div>',
-        '</div>'
-      )
-    }) |>
-    paste(collapse = "\n") |>
-    cat()
+.talk-card:last-child {
+  border-bottom: none;
+}
+
+.talk-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
+  opacity: 0.7;
+  margin-bottom: 0.2rem;
+}
+
+.talk-title {
+  font-size: 1.04rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+
+.talk-event {
+  font-size: 0.93rem;
+  line-height: 1.45;
+  margin-bottom: 0.15rem;
+}
+
+.talk-date {
+  font-size: 0.87rem;
+  opacity: 0.72;
+}
+
+.talk-materials {
+  font-size: 0.9rem;
+  margin-top: 0.35rem;
+}
+</style>
+
+```{r results='asis', echo=FALSE}
+if (nrow(upcoming) > 0) {
+  cat("## Upcoming\n\n")
+  render_talks(upcoming)
+}
+```
+
+## Recent talks and presentations
+
+```{r results='asis', echo=FALSE}
+render_talks(recent)
+```
+
+```{r results='asis', echo=FALSE}
+if (nrow(older) > 0) {
+  cat("\n\n<details>\n")
+  cat("<summary><b>Earlier talks and presentations</b></summary>\n\n")
+  render_talks(older)
+  cat("\n\n</details>\n")
 }
 ```

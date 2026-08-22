@@ -1,26 +1,154 @@
 ---
-title: Teaching
-description: "Teaching and supervision by Dr Justin C Yang at UCL, covering epidemiology, statistics, and open science at the postgraduate level."
-
+title: Teaching & Supervision
+description: "Teaching, doctoral supervision, researcher development, and quantitative methods training by Dr Justin C Yang at UCL."
 output:
   html_document:
     keep_md: yes
 ---
-Dr Yang primarily teaches epidemiology, statistics, and open science at the postgraduate level. He has taught on the [Core Principles of Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/core-principles-of-mental-health-research-PSBS0002), [Practical Statistics for Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research-PSBS0008), and [Epidemiological Research Methods in Mental Health](https://www.ucl.ac.uk/module-catalogue/modules/epidemiological-research-methods-in-mental-health-PSBS0013) modules at UCL. More recently, he has co-developed curricula around open science and public involvement and engagement with research. 
 
-Dr Yang is a certified instructor with [The Carpentries](https://carpentries.org/), a nonprofit building global capacity in essential data and computational skills for conducting efficient, open, and reproducible research.
+My teaching and supervision focus on **epidemiology, quantitative methods, open and reproducible research, and the development of early-career researchers**. I teach primarily at postgraduate level and supervise students working across psychiatric epidemiology, mental health data science, causal inference, public health, and related areas.
 
-Dr Yang’s teaching is shaped by the belief that epidemiology and psychiatric research matter because they influence how we understand inequality, improve care, and support people to live meaningful and fulfilling lives. He teaches quantitative methods not simply as a set of technical skills, but as a way of thinking carefully about evidence: what a study can and cannot tell us, when stronger or causal conclusions are justified, and how findings can be communicated clearly and honestly to diverse audiences. Drawing on his own research, he uses real examples to show how analytical decisions can change the answers we reach, while keeping questions of fairness and equity firmly in view. He is also especially mindful of students who feel less confident with quantitative methods, and works to build confidence through practical, step-by-step problem-solving grounded in real-world questions.
+## Doctoral supervision
 
-## Supervision
-Dr Yang welcomes enquiries from prospective PhD, MSc, and undergraduate students interested in psychiatric epidemiology, causal inference, mental health data science, and related areas. Please [get in touch](../contact/) to discuss potential supervision, project ideas, or opportunities for collaboration.
+I currently contribute to the supervision of doctoral researchers working on neurodevelopment, psychiatric inequalities, and population mental health.
 
 <div class="site-table-wrap">
-```{r results = 'asis',echo=FALSE, message=FALSE, warning=FALSE, error = FALSE}
-library(tidyverse)
 
-read_csv('students.csv') |>
-  arrange(desc(`Year(s)`), Student) |>
-  knitr::kable(format = "html", table.attr = 'class="site-table"')
+```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+library(tidyverse)
+library(stringr)
+
+students <- read_csv(
+  "students.csv",
+  show_col_types = FALSE
+)
+
+doctoral_current <- students |>
+  filter(
+    Degree == "PhD",
+    str_detect(`Year(s)`, "Present")
+  ) |>
+  arrange(Student) |>
+  select(
+    Student,
+    Role,
+    Topic
+  )
+
+if (nrow(doctoral_current) > 0) {
+  doctoral_current |>
+    knitr::kable(
+      format = "html",
+      col.names = c(
+        "Researcher",
+        "Supervisory role",
+        "Research"
+      ),
+      table.attr = 'class="site-table"'
+    ) |>
+    cat()
+}
 ```
+
 </div>
+
+I also serve on doctoral thesis committees, contributing methodological and substantive expertise to projects beyond those I formally co-supervise.
+
+## Researcher development
+
+Developing researchers is an important part of my academic work. My contributions include mentoring and supporting early-career researchers, developing training in quantitative and reproducible research methods, and creating opportunities for researchers to build confidence, independence, and collaborative networks.
+
+I am a certified instructor with [The Carpentries](https://carpentries.org/), an international organisation focused on building practical data and computational skills for open and reproducible research.
+
+My teaching and researcher-development work also includes contributions to open science, public involvement and engagement, and research culture within UCL and wider collaborative programmes.
+
+## Postgraduate teaching
+
+At UCL, I teach epidemiology, statistics, and research methods across postgraduate mental-health programmes. Teaching has included:
+
+- [Core Principles of Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/core-principles-of-mental-health-research-PSBS0002)
+- [Practical Statistics for Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research-PSBS0008)
+- [Epidemiological Research Methods in Mental Health](https://www.ucl.ac.uk/module-catalogue/modules/epidemiological-research-methods-in-mental-health-PSBS0013)
+
+I have also contributed to curriculum development around **open science** and **public involvement and engagement with research**.
+
+My approach to quantitative teaching emphasises careful reasoning about evidence: what a study can and cannot support, when stronger or causal conclusions are justified, how analytical decisions influence results, and how findings can be communicated clearly and responsibly. I use applied examples from epidemiology and mental-health research and place particular emphasis on making quantitative methods accessible to students with different levels of prior experience.
+
+## MSc and undergraduate supervision
+
+I have supervised a wide range of student research projects across psychiatric epidemiology, public health, mental health, health inequalities, substance use, policy, and quantitative methods. Several supervised projects have contributed to peer-reviewed publications.
+
+<div class="site-table-wrap">
+
+```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+non_doctoral <- students |>
+  filter(Degree != "PhD") |>
+  arrange(
+    desc(`Year(s)`),
+    Student
+  ) |>
+  select(
+    Student,
+    Degree,
+    `Year(s)`,
+    Role,
+    Topic
+  )
+
+non_doctoral |>
+  knitr::kable(
+    format = "html",
+    col.names = c(
+      "Student",
+      "Degree",
+      "Year(s)",
+      "Role",
+      "Project"
+    ),
+    table.attr = 'class="site-table"'
+  ) |>
+  cat()
+```
+
+</div>
+
+## Previous doctoral committee roles
+
+<div class="site-table-wrap">
+
+```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+doctoral_previous <- students |>
+  filter(
+    Degree == "PhD",
+    !str_detect(`Year(s)`, "Present")
+  ) |>
+  arrange(
+    desc(`Year(s)`),
+    Student
+  ) |>
+  select(
+    Student,
+    `Year(s)`,
+    Role,
+    Topic
+  )
+
+if (nrow(doctoral_previous) > 0) {
+  doctoral_previous |>
+    knitr::kable(
+      format = "html",
+      col.names = c(
+        "Researcher",
+        "Year(s)",
+        "Role",
+        "Research"
+      ),
+      table.attr = 'class="site-table"'
+    ) |>
+    cat()
+}
+```
+
+</div>
+
+Prospective PhD, MSc, and undergraduate students interested in psychiatric epidemiology, causal inference, mental health data science, or related areas are welcome to [get in touch](../contact/) to discuss potential supervision or project ideas.

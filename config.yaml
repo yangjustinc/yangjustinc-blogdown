@@ -2,7 +2,14 @@ baseurl: "https://www.justinyang.me"
 languageCode: "en-us"
 title: "MINDSET"
 theme: "hugo-xmin"
-ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
+
+ignoreFiles:
+  - "\\.Rmd$"
+  - "\\.Rmarkdown$"
+  - "_cache$"
+  - "\\.knit\\.md$"
+  - "\\.utf8\\.md$"
+
 footnotereturnlinkcontents: "↩"
 
 permalinks:
@@ -13,34 +20,42 @@ menu:
     - name: Home
       url: "/"
       weight: 1
+
+    - name: Research
+      url: "research/"
+      weight: 2
+
     - name: People
       url: "people/"
-      weight: 2
+      weight: 3
+
     - name: Publications
       url: "publications/"
-      weight: 3
+      weight: 4
+
     - name: Funding
       url: "funding/"
-      weight: 4
+      weight: 5
+
     - name: Talks
       url: "talks/"
-      weight: 5
-    - name: Presentations
-      url: "presentations/"
       weight: 6
+
     - name: Teaching
       url: "teaching/"
       weight: 7
-    - name: Service
+
+    - name: Leadership
       url: "service/"
       weight: 8
+
     - name: Contact
       url: "contact/"
       weight: 9
 
 params:
-  description: "MINDSET is a research programme led by Dr Justin C Yang at UCL, studying how mental health, vulnerability, and care trajectories can be understood from fragmented real-world data."
-  footer: "Published using [blogdown](https://bookdown.org/yihui/blogdown) and [Hugo](https://gohugo.io) <br> &copy; [Justin C Yang](https://www.justinyang.me) 2019-{Year}"
+  description: "MINDSET is the research programme led by Dr Justin C Yang at UCL, using psychiatric epidemiology, linked data, causal inference, and data science to understand mental health, inequalities, and care."
+  footer: "MINDSET · Dr Justin C Yang · University College London <br> &copy; [Justin C Yang](https://www.justinyang.me) 2019-{Year}"
   githubSource: "https://github.com/yangjustinc/yangjustinc-blogdown/blob/main/content/"
   ogImage: "twitter_card.jpg"
 

@@ -1,11 +1,11 @@
 ---
 title: People
-description: "Meet the MINDSET team, students, and partners working on psychiatric epidemiology and mental health data science at UCL and beyond."
-
+description: "Researchers, doctoral students, partners, and collaborators contributing to the MINDSET research programme in psychiatric epidemiology and mental health data science."
 output:
   html_document:
     keep_md: yes
 ---
+
 <style>
 .people-grid {
   width: 100%;
@@ -67,106 +67,184 @@ output:
 }
 </style>
 
+MINDSET is a collaborative research programme bringing together researchers, doctoral students, academic groups, NHS organisations, public-sector data partners, treatment providers, and people with lived experience.
+
 ## Research Team
 
 <div class="people-grid">
+
 <div class="team-card">
 <img src="pictures/justinyang.png" alt="Headshot of Justin C Yang">
 <br><b>Dr Justin Yang</b>
 <br>Senior Research Fellow
-<br><a href="https://profiles.ucl.ac.uk/75514-justin-yang">Profile</a>
+<br>Programme Lead
+<br><a href="https://profiles.ucl.ac.uk/75514-justin-yang">UCL Profile</a>
 </div>
+
 <div class="team-card">
 <img src="pictures/nathalierich.png" alt="Headshot of Nathalie Rich">
 <br><b>Dr Nathalie Rich</b>
 <br>Research Fellow
-<br><a href="https://profiles.ucl.ac.uk/80231-nathalie-rich">Profile</a>
+<br><a href="https://profiles.ucl.ac.uk/80231-nathalie-rich">UCL Profile</a>
 </div>
+
 <div class="team-card">
 <img src="pictures/yunsookim.png" alt="Headshot of Yunsoo Kim">
 <br><b>Dr Yunsoo Kim</b>
 <br>Research Fellow
 <br><a href="https://bluesky333.github.io/">Website</a>
 </div>
+
 </div>
 
-## Students and Trainees
+## Doctoral Researchers
 
 <div class="people-grid">
+
 <div class="team-card">
 <img src="pictures/vanessacieplinska.png" alt="Headshot of Vanessa Cieplinska">
 <br><b>Vanessa Cieplinska</b>
-<br>PhD student
+<br>PhD Researcher
+<br>School attendance and educational attainment in children with neurodevelopmental conditions
+<br><i>Secondary supervisor: Justin Yang</i>
 </div>
+
 <div class="team-card">
 <img src="pictures/aluayeskendir.png" alt="Headshot of Alua Yeskendir">
 <br><b>Alua Yeskendir</b>
-<br>PhD student
-</div>
+<br>PhD Researcher
+<br>Health and social inequalities in psychiatric disorders
+<br><i>Secondary supervisor: Justin Yang</i>
 </div>
 
-## Partners
+</div>
+
+I also contribute to doctoral supervision and research development through thesis committees and wider mentoring. Further information is available on the [Teaching and Supervision](../teaching/) page.
+
+## Selected Partnerships
+
+The programme works with organisations whose data, expertise, services, or communities are central to the research questions we address.
 
 <div class="people-grid">
+
 <div class="partner-card">
-<a href ="https://www.adruk.org/"><img src="pictures/administrativedataresearchuk.png" alt="Administrative Data Research UK Logo"></a>
-<p><b>Administrative Data Research UK</b> is a UK-wide partnership that links and safely shares de-identified public sector administrative data with accredited researchers to generate policy-relevant insights and improve people’s lives.</p>
-</div>
-<div class="partner-card">
-<a href ="https://www.changegrowlive.org/"><img src="pictures/changegrowlive.png" alt="Change Grow Live Logo"></a>
-<p><b>Change, Grow, Live</b> provides a range of services to support individuals, families and communities whose lives are adversely affected by crime, substance misuse, homelessness, anti-social behaviour, domestic violence, social deprivation and lack of opportunity. The charity works with challenging service users with complex needs, including those with entrenched drug habits and offending behaviour.</p>
-</div>
-<div class="partner-card">
-<a href = "https://www.complexemotionshub.co.uk/"><img src="pictures/complexemotions.png" alt="Complex Emotions Hub Logo"></a>
-<p>The <b>Complex Emotions Hub</b>, based at the University of Sheffield and led by Professor Scott Weich, is focused on improving the understanding and care of individuals who experience complex emotional difficulties, such as difficulty managing relationships, emotional regulation, and impulsivity.</p>
-</div>
-<div class="partner-card">
-<a href = "https://datamind.org.uk/"><img src="pictures/datamind.png" alt="Datamind Logo"></a>
-<p><b>DATAMIND</b>, coordinated from Swansea University and led by Professors Ann John and Robert Stewart, is the mental health data science hub of the Mental Health Platform. It’s a multi-site data organisation which has been a resource for researchers, the NHS, charities, policy makers and industry since 2021, and is now one of the six Hubs of the Mental Health Platform.</p>
-</div>
-<div class="partner-card">
-<a href = "https://www.hdruk.ac.uk/"><img src="pictures/healthdataresearchuk.png" alt="Health Data Research UK Logo"></a>
-<p><b>Health Data Research UK</b> is the national institute for health data science, uniting and improving health and care datasets across the UK to enable trustworthy, large-scale data-driven research that advances understanding of disease and improves health and care.</p>
-</div>
-<div class="partner-card">
-<a href = "https://www.northlondonmentalhealth.nhs.uk/"><img src="pictures/nlft.png" alt="North London NHS Foundation Trust Logo"></a>
-<p><b>North London NHS Foundation Trust</b> provides specialist mental health and community health services for children, young people, adults and older people across North London, including support for those experiencing severe and enduring mental illness, crisis, or complex psychological and social needs.</p>
-</div>
-<div class="partner-card">
-<a href = "https://slam.nhs.uk/"><img src="pictures/slam.png" alt="South London and Maudsley NHS Foundation Trust Logo"></a>
-<p><b>South London and Maudsley NHS Foundation Trust</b> provides specialist mental health and substance use services for children, young people, adults and older people, serving local communities in Croydon, Lambeth, Lewisham and Southwark as well as people referred from across the UK to its national specialist units.</p>
-</div>
-<div class="partner-card">
-<a href = "https://www.socialhealthhub.org/"><img src="pictures/socialhealth.png" alt="Social Health Hub Logo"></a>
-<p>The <b>Social Health Hub</b>, based at Queen Mary University of London and led by Professor Jennifer Lau, is generating new knowledge on how the conditions in which people are born, grow, work, live, and age influence how severe mental illnesses affect people over time, and shape how people respond to their conditions.</p>
-</div>
-<div class="partner-card">
-<a href = "https://www.turning-point.co.uk/"><img src="pictures/turningpoint.png" alt="Turning Point Logo"></a>
-<p><b>Turning Point</b> provides health and social care services for people with a learning disability and also people at risk of, or with a mental health diagnosis, mental health issues, drug or alcohol use, misuse or dependency, or other addictive behaviours.</p>
-</div>
+<a href="https://www.adruk.org/">
+<img src="pictures/administrativedataresearchuk.png" alt="Administrative Data Research UK logo">
+</a>
+<p><b>Administrative Data Research UK</b><br>
+My ADR UK Fellowship uses linked health and education data to study inequalities in the experiences and outcomes of neurodivergent children and young people. The programme also supports my wider work on responsible and policy-relevant use of administrative data.</p>
 </div>
 
-## Collaborators
+<div class="partner-card">
+<a href="https://www.northlondonmentalhealth.nhs.uk/">
+<img src="pictures/nlft.png" alt="North London NHS Foundation Trust logo">
+</a>
+<p><b>North London NHS Foundation Trust</b><br>
+I serve as Deputy Lead of the Trust's Research Database, supporting research using routinely collected mental-health records and collaboration across UCL, NHS clinicians, informatics teams, researchers, and public contributors.</p>
+</div>
+
+<div class="partner-card">
+<a href="https://datamind.org.uk/">
+<img src="pictures/datamind.png" alt="DATAMIND logo">
+</a>
+<p><b>DATAMIND</b><br>
+I work with DATAMIND through the UKRI Mental Health Platform, developing research that links mental-health data science with questions about severe mental illness, inequalities, clinical records, and wider population data.</p>
+</div>
+
+<div class="partner-card">
+<a href="https://www.complexemotionshub.co.uk/">
+<img src="pictures/complexemotions.png" alt="Complex Emotions Hub logo">
+</a>
+<p><b>Complex Emotions Hub</b><br>
+Through WISDOM, I collaborate with the Complex Emotions Hub to investigate how relationships, emotional experiences, adversity, and other socioemotional factors may shape trajectories into and through severe mental illness.</p>
+</div>
+
+<div class="partner-card">
+<a href="https://www.socialhealthhub.org/">
+<img src="pictures/socialhealth.png" alt="Social Health Hub logo">
+</a>
+<p><b>Social Health Hub</b><br>
+My work with the Social Health Hub contributes to WISDOM's focus on the social conditions and experiences that shape severe mental illness and its course over time.</p>
+</div>
+
+<div class="partner-card">
+<a href="https://www.hdruk.ac.uk/">
+<img src="pictures/healthdataresearchuk.png" alt="Health Data Research UK logo">
+</a>
+<p><b>Health Data Research UK</b><br>
+I contribute to the HDR UK Mental Health Driver Programme, helping shape national work on the use of health data for mental-health research and connecting methodological, infrastructure, and applied research priorities across partner organisations.</p>
+</div>
+
+<div class="partner-card">
+<a href="https://slam.nhs.uk/">
+<img src="pictures/slam.png" alt="South London and Maudsley NHS Foundation Trust logo">
+</a>
+<p><b>South London and Maudsley NHS Foundation Trust</b><br>
+I work with colleagues at SLaM to harmonise research access across the North London and South London CRIS infrastructures, including approaches that make cross-site replication and comparative studies easier to conduct using routinely collected mental-health records.</p>
+</div>
+
+<div class="partner-card">
+<a href="https://www.changegrowlive.org/">
+<img src="pictures/changegrowlive.png" alt="Change Grow Live logo">
+</a>
+<p><b>Change Grow Live</b><br>
+Change Grow Live is a partner in UNITED, contributing treatment-provider expertise, public involvement, site-based learning, and research support to work aimed at improving the use of national addiction-treatment data.</p>
+</div>
+
+<div class="partner-card">
+<a href="https://www.turning-point.co.uk/">
+<img src="pictures/turningpoint.png" alt="Turning Point logo">
+</a>
+<p><b>Turning Point</b><br>
+Turning Point is a partner in UNITED, supporting engagement with treatment services and people with lived experience and helping ensure that work on national treatment data remains relevant to practice and service delivery.</p>
+</div>
+
+</div>
+
+## Research Collaborations
+
+MINDSET also connects with complementary research groups whose methodological and substantive expertise strengthens the programme.
+
 <div class="people-grid">
+
 <div class="partner-card">
-<a href ="https://aimhlab.research.st/"><img src="pictures/aimh.png" alt="applied informatics for Mental Health Logo"></a>
-<p>The <b>applied informatics for Mental Health</b> lab, led by Professor Joseph Hayes, uses data science, electronic health records, and digital health methods to improve physical and mental health outcomes, focusing on personalised medicine, drug repurposing, and ecological momentary assessment for people with mental illness.
-</p>
+<a href="https://aimhlab.research.st/">
+<img src="pictures/aimh.png" alt="applied informatics for Mental Health logo">
+</a>
+<p><b>applied informatics for Mental Health</b><br>
+Collaboration around electronic health records, clinical data science, digital methods, and the use of intensive longitudinal data in mental-health research.</p>
 </div>
+
 <div class="partner-card">
-<a href ="https://www.mentalhealthepi.com/"><img src="pictures/mist.png" alt="Exploring Mental Illness Using Systems Thinking Logo"></a>
-<p><b>Exploring Mental Illness Using Systems Thinking</b>, led by Dr Jen Dykxhoorn, uses systems thinking to study the social and environmental causes of severe mental illness, self-harm, and suicide, with a particular focus on socially excluded and marginalised populations such as migrants and minority ethnic groups.</p>
+<a href="https://www.mentalhealthepi.com/">
+<img src="pictures/mist.png" alt="Exploring Mental Illness Using Systems Thinking logo">
+</a>
+<p><b>Exploring Mental Illness Using Systems Thinking</b><br>
+Collaboration around psychiatric epidemiology, social and environmental determinants of mental health, and inequalities affecting marginalised populations.</p>
 </div>
+
 <div class="partner-card">
-<a href ="https://naomilaunders.co.uk/"><img src="pictures/imparted.png" alt="Improving Mental and Physical health Analytics through RobusT Epi and Data sci Logo"></a>
-<p><b>Improving Mental and Physical health Analytics through RobusT Epi and Data sci</b>, led by Dr Naomi Launders, uses electronic health records, census, and cohort data to understand and reduce inequalities in the detection, treatment, and physical health outcomes of people with severe mental illness, with a strong focus on improving access to evidence-based care and leveraging advanced causal methods in observational data.</p>
+<a href="https://naomilaunders.co.uk/">
+<img src="pictures/imparted.png" alt="Improving Mental and Physical health Analytics through RobusT Epi and Data sci logo">
+</a>
+<p><b>Improving Mental and Physical health Analytics through RobusT Epi and Data sci</b><br>
+Collaboration around causal inference, electronic health records, inequalities, and physical-health outcomes among people with severe mental illness.</p>
 </div>
+
 <div class="partner-card">
-<a href ="https://www.mentalhealthpolicyeconomicsgroup.com/"><img src="pictures/mhpeg.png" alt="Mental Health | Policy | Economics Group Logo"></a>
-<p>The <b>Mental Health | Policy | Economics Group</b>, led by Dr Andres Roman-Urrestarazu, integrates psychiatry, public health, economics, and policy to understand how socio-economic determinants and digital-era challenges shape mental health, focusing on marginalised populations and global mental health.</p>
+<a href="https://www.mentalhealthpolicyeconomicsgroup.com/">
+<img src="pictures/mhpeg.png" alt="Mental Health Policy Economics Group logo">
+</a>
+<p><b>Mental Health | Policy | Economics Group</b><br>
+Longstanding collaboration spanning psychiatric epidemiology, substance use, health inequalities, policy, and population-health research.</p>
 </div>
+
 <div class="partner-card">
-<a href ="https://www.psylife.eu/"><img src="pictures/psylife.png" alt="Psylife Logo"></a>
-<p><b>Psylife</b>, led by Professor James Kirkbride, is an epidemiological research group that applies causal inference and population health methods to investigate and prevent social inequalities in the determinants of psychosis and other mental health problems across the life course, with work that directly informs NICE guidelines and mental health policy and service planning.</p>
+<a href="https://www.psylife.eu/">
+<img src="pictures/psylife.png" alt="PsyLife logo">
+</a>
+<p><b>PsyLife</b><br>
+Collaboration around population and social epidemiology, psychosis, causal inference, and inequalities in the determinants and outcomes of severe mental illness.</p>
 </div>
+
 </div>

@@ -1,0 +1,132 @@
+---
+title: Leadership & Recognition
+description: "Editorial leadership, national advisory roles, peer review, research infrastructure, and institutional service by Dr Justin C Yang."
+output:
+  html_document:
+    keep_md: yes
+---
+
+My academic service centres on **research leadership, external peer review, research infrastructure, and improving the culture and governance of research**. I contribute to journals, funders, national advisory groups, NHS research infrastructure, and institutional initiatives supporting researchers and inclusive research environments.
+
+## Editorial and scholarly leadership
+
+- **Associate Editor**, [*Addiction*](https://onlinelibrary.wiley.com/page/journal/13600443/homepage/editorialboard.html)
+- **Editorial Board Member**, [*Substance Use: Research and Treatment*](https://journals.sagepub.com/editorial-board/SAT)
+
+## National advisory and governance roles
+
+- **Expert Member**, [Confidentiality Advisory Group, Health Research Authority](https://www.hra.nhs.uk/about-us/committees-and-services/confidentiality-advisory-group/)
+- **Steering Committee Member**, [Addiction Healthcare Goals](https://www.gov.uk/government/publications/life-sciences-healthcare-goals/addiction-healthcare-goals)
+- **Steering Group Member**, [Mental Health Research Incubator](https://mentalhealthresearch.org.uk/)
+- **Data Access Committee Public Member**, [Eastern England Secure Data Environment](https://easternsde.nhs.uk/)
+- **Public Member**, [British Society for Immunology Patient and Public Involvement Network](https://www.immunology.org/)
+
+These roles involve contributing independent academic, methodological, governance, and public-interest perspectives to decisions about research priorities, access to sensitive data, and the development of health research.
+
+## Funding and peer-review leadership
+
+- **Assessor College**, [Economic and Social Research Council](https://www.ukri.org/councils/esrc/)
+- **Expert Assessor**, [Administrative Data Research UK](https://www.adruk.org/)
+- **Reviewer College**, [Society for the Study of Addiction](https://www.addiction-ssa.org/)
+- **Reviewer Development Scheme**, [National Institute for Health and Care Research](https://www.nihr.ac.uk/)
+
+I also regularly review manuscripts for journals across psychiatry, epidemiology, substance use, public health, and health-services research.
+
+```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+library(tidyverse)
+library(httr2)
+library(rcrossref)
+
+orcid_id <- "0000-0003-2881-4906"
+
+resp <- request(
+  paste0(
+    "https://pub.orcid.org/v3.0/",
+    orcid_id,
+    "/peer-reviews"
+  )
+) |>
+  req_headers(Accept = "application/json") |>
+  req_error(is_error = \(r) FALSE) |>
+  req_perform()
+
+if (resp_status(resp) == 200) {
+
+  body <- resp_body_json(resp)
+
+  raw <- map_chr(body$group, \(g) {
+    val <- tryCatch(
+      g$`external-ids`$`external-id`[[1]]$`external-id-value`,
+      error = \(e) NA_character_
+    )
+
+    if (is.null(val)) NA_character_ else val
+  })
+
+  issns_clean <- raw[
+    !is.na(raw) &
+      str_starts(raw, "issn:")
+  ] |>
+    str_remove("^issn:") |>
+    unique()
+
+  get_title_from_issn <- function(issn) {
+    tryCatch({
+      result <- rcrossref::cr_journals(issn)$data$title
+      if (is.null(result) || length(result) == 0) {
+        return(NA_character_)
+      }
+      result[[1]]
+    }, error = \(e) NA_character_)
+  }
+
+  journal_names <- map_chr(
+    issns_clean,
+    get_title_from_issn
+  ) |>
+    (\(x) x[!is.na(x)])() |>
+    unique() |>
+    str_squish() |>
+    str_replace("Men s", "Men's") |>
+    (\(x) x[
+      order(
+        str_remove(
+          x,
+          regex(
+            "^(the|a|an)\\s+",
+            ignore_case = TRUE
+          )
+        )
+      )
+    ])()
+
+  if (length(journal_names) > 0) {
+    cat(
+      "<details>\n",
+      "<summary><b>Selected journals for which I have served as a peer reviewer</b></summary>\n\n",
+      paste0("- ", journal_names, collapse = "\n"),
+      "\n\n</details>\n"
+    )
+  }
+}
+```
+
+## Research infrastructure and enabling leadership
+
+- **Deputy Lead**, [North London NHS Foundation Trust Research Database](https://www.northlondonmentalhealth.nhs.uk/research-database-)
+
+Through the Research Database, I help enable ethically governed research using routinely collected mental-health records. My work spans research development, data governance, methodological support, collaboration with NHS and academic researchers, and efforts to improve harmonisation and access across mental-health research data infrastructures.
+
+I also work with colleagues at South London and Maudsley NHS Foundation Trust to support harmonisation across CRIS sites, including approaches that make cross-site replication and comparative studies easier to undertake.
+
+## Research culture and institutional leadership
+
+At UCL, I contribute to initiatives aimed at improving research culture, equity, researcher development, and the experience of early-career colleagues.
+
+- **Culture Change Action Group Lead**, Division of Psychiatry, UCL
+- **LGBTQ+ Equity Action Group**, Division of Psychiatry, UCL
+- **Committee Member**, Child and Young People's Mental Health ECR Network, UCL
+- **Personal Tutor**, Division of Psychiatry, UCL
+- **Certified Instructor**, [The Carpentries](https://carpentries.org/)
+
+These roles complement my research by supporting inclusive research environments, reproducible and open research practice, and the development of researchers at different career stages.
