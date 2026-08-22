@@ -24,6 +24,7 @@ Unless otherwise indicated, service roles are current and/or ongoing.
 - Steering Committee Member, [Addiction Healthcare Goals ](https://www.gov.uk/government/publications/life-sciences-healthcare-goals/addiction-healthcare-goals)
 - Steering Group Member, [Mental Health Research Incubator](https://mentalhealthresearch.org.uk/)
 - Expert Member, [Confidentiality Advisory Group, Health Research Authority ](https://www.hra.nhs.uk/about-us/committees-and-services/confidentiality-advisory-group/)
+- Certified Instructor, [The Carpentries](https://carpentries.org/)
 - Data Access Committee Public Member, [Eastern England Secure Data Environment](https://easternsde.nhs.uk/)
 - Public Member, [British Society for Immunology](https://www.immunology.org/) Patient and Public Involvement Network 
 - Expert Assessor, [Administrative Data Research UK](https://www.adruk.org/)
