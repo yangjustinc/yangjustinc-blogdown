@@ -28,6 +28,7 @@ These roles involve contributing independent academic, methodological, governanc
 - **Assessor College**, [Economic and Social Research Council](https://www.ukri.org/councils/esrc/)
 - **Expert Assessor**, [Administrative Data Research UK](https://www.adruk.org/)
 - **Reviewer College**, [Society for the Study of Addiction](https://www.addiction-ssa.org/)
+- **Expert Reviewer**, [Eating Disorders Clinical Research Network](https://www.kcl.ac.uk/research/eating-disorders-clinical-research-network)
 
 I also regularly review manuscripts for journals across psychiatry, epidemiology, substance use, public health, and health-services research.
 

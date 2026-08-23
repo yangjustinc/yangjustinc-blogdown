@@ -25,7 +25,7 @@ MINDSET is a collaborative research programme bringing together researchers, doc
 <img src="pictures/nathalierich.png" alt="Headshot of Nathalie Rich">
 <br><b>Dr Nathalie Rich</b>
 <br>Research Fellow
-<br>Electronic health records
+<br>Expertise: Electronic health records and epidemiology
 <br><a href="https://profiles.ucl.ac.uk/80231-nathalie-rich">UCL Profile</a>
 </div>
 
@@ -33,7 +33,7 @@ MINDSET is a collaborative research programme bringing together researchers, doc
 <img src="pictures/yunsookim.png" alt="Headshot of Yunsoo Kim">
 <br><b>Dr Yunsoo Kim</b>
 <br>Research Fellow
-<br>Natural language processing
+<br>Expertise: Natural language processing and large language models
 <br><a href="https://bluesky333.github.io/">Website</a>
 </div>
 

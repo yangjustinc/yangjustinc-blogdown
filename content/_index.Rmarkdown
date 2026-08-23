@@ -16,7 +16,7 @@ output:
 
 **Multimodal INference and Data Science for Epidemiology and Treatment** (MINDSET) is the research programme led by **Dr Justin C Yang**, Senior Research Fellow in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk).
 
-I am a psychiatric epidemiologist using complex real-world data to understand mental health, inequalities, and care across the life course. My research combines linked administrative data, electronic health records, longitudinal and environmental data, clinical free text, and intensive measures of lived experience, using methods from epidemiology, causal inference, spatial analysis, and data science.
+I am a psychiatric epidemiologist using complex real-world data to understand mental health, inequalities, and care across the life course. My research combines linked administrative data, electronic health records, longitudinal and environmental data, clinical free text, and intensive measures of lived experience, using methods from epidemiology, causal inference, spatial/network analysis, and data science.
 
 Across MINDSET, I lead and contribute to research programmes spanning **severe mental illness, neurodivergence, addiction, and mental-health services**, while also helping develop the data infrastructure, governance, and collaborative methods needed to make this research possible.
 
