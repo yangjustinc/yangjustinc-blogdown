@@ -30,9 +30,3 @@ for = '/*'
   X-Frame-Options = 'SAMEORIGIN'
   Referrer-Policy = 'strict-origin-when-cross-origin'
   Permissions-Policy = 'camera=(), geolocation=(), microphone=(), payment=(), usb=()'
-
-[[headers]]
-for = '/css/*'
-
-  [headers.values]
-  Cache-Control = 'public, max-age=604800'
