@@ -20,7 +20,7 @@ library(htmltools)
 orcid_id <- "0000-0003-2881-4906"
 
 selected <- read_csv(
-  "selected_publications.csv",
+  "../../data/site/selected_publications.csv",
   show_col_types = FALSE,
   col_types = cols(
     order = col_double(),

@@ -14,7 +14,7 @@ library(htmltools)
 library(lubridate)
 
 talks <- read_csv(
-  "talks.csv",
+  "../../data/site/talks.csv",
   show_col_types = FALSE,
   col_types = cols(
     Host = col_character(),

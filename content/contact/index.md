@@ -1,9 +1,6 @@
 ---
 title: Contact
 description: "Contact Dr Justin C Yang about research collaborations, supervision, speaking invitations, advisory work, or media and policy engagement."
-output:
-  html_document:
-    keep_md: yes
 ---
 
 I welcome enquiries about **research collaborations, doctoral and master's supervision, invited talks and workshops, advisory opportunities, and media or policy engagement**.
@@ -14,4 +11,4 @@ For prospective students, it is helpful to include a short description of your p
 
 For speaking, advisory, or collaboration enquiries, please include a brief description of the opportunity, relevant dates, and the type of contribution you are seeking.
 
-<div id="contact">`r blogdown::shortcode("contact")`</div>
+{{< contact >}}

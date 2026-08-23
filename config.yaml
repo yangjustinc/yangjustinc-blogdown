@@ -1,7 +1,13 @@
 baseurl: "https://www.justinyang.me"
+enableRobotsTXT: true
 locale: "en-GB"
 title: "MINDSET"
 theme: "hugo-xmin"
+
+disableKinds:
+  - RSS
+  - taxonomy
+  - term
 
 security:
   allowContent:
@@ -58,8 +64,12 @@ menu:
 params:
   description: "MINDSET is the research programme led by Dr Justin C Yang at UCL, using psychiatric epidemiology, linked data, causal inference, and data science to understand mental health, inequalities, and care."
   footer: "MINDSET · Dr Justin C Yang · University College London <br> &copy; [Justin C Yang](https://www.justinyang.me) 2019-{Year}"
-  githubSource: "https://github.com/yangjustinc/yangjustinc-blogdown/blob/main/content/"
   ogImage: "twitter_card.jpg"
+  person:
+    affiliation: "University College London"
+    jobTitle: "Senior Research Fellow"
+    name: "Dr Justin C Yang"
+    orcid: "https://orcid.org/0000-0003-2881-4906"
 
 markup:
   highlight:

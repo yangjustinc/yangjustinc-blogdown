@@ -24,6 +24,22 @@ main {
   hyphens: none;
 }
 
+.skip-link {
+  position: absolute;
+  z-index: 100;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 /* Navigation */
 .menu {
   padding: 0;
@@ -217,6 +233,12 @@ tr:nth-child(even) {
   min-width: 120px;
   text-align: center;
   margin: 0 0 1rem 1.5rem;
+}
+
+#profile img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* Headings */
@@ -513,6 +535,10 @@ footer {
   margin-top: 2rem;
 }
 
+footer p {
+  margin: 0.65rem 0 0;
+}
+
 footer a {
   text-decoration: none;
   color: #888;
@@ -523,19 +549,92 @@ footer a:hover {
 }
 
 .footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 0.8rem;
   margin: 0.75em 0 0.25em;
-  text-align: center;
 }
 
 .footer-social a {
-  display: inline-block;
-  margin: 0 0.35em;
   color: #888;
   text-decoration: none;
 }
 
 .footer-social a:hover {
   color: #1f7fc4;
+}
+
+/* Contact form */
+.contact-form {
+  margin: 1.5rem 0 0;
+  padding: 1.25rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.form-field {
+  margin-bottom: 1rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 0.7rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background: #fff;
+  color: #222;
+  font: inherit;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: #1f7fc4;
+  outline: 2px solid rgba(31, 127, 196, 0.3);
+  outline-offset: 1px;
+}
+
+.contact-form button {
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-radius: 4px;
+  background: #1f7fc4;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #155d94;
+}
+
+.form-honeypot {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.form-captcha {
+  margin-bottom: 1rem;
+}
+
+.contact-form__note {
+  color: #666;
+  font-size: 0.86rem;
 }
 
 /* Reduced motion */

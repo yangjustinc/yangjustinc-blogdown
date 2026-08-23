@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+<main id="main">
+  <header class="article-meta">
+    <h1>{{ .Title | markdownify }}</h1>
+  </header>
+  {{ .Content }}
+  {{ with .Pages }}
+    <ul>
+      {{ range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></li>
+      {{ end }}
+    </ul>
+  {{ end }}
+</main>
+{{ partial "footer.html" . }}

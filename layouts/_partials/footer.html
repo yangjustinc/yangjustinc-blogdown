@@ -1,0 +1,17 @@
+<footer>
+  <hr>
+  <nav class="footer-social" aria-label="Professional profiles">
+    <a href="https://bsky.app/profile/justinyang.me" rel="me noopener">Bluesky</a>
+    <a href="https://orcid.org/0000-0003-2881-4906" rel="me noopener">ORCID</a>
+    <a href="https://scholar.google.com/citations?user=o-MsbBYAAAAJ" rel="noopener">Google Scholar</a>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Yang+JC&cauthor_id=37862224" rel="noopener">PubMed</a>
+    <a href="https://osf.io/qz9xm/" rel="noopener">OSF</a>
+    <a href="https://github.com/yangjustinc" rel="me noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/yangjustinc" rel="me noopener">LinkedIn</a>
+  </nav>
+  {{ with .Site.Params.footer }}
+    <p>{{ replace . "{Year}" now.Year | markdownify }}</p>
+  {{ end }}
+</footer>
+</body>
+</html>

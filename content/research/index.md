@@ -1,9 +1,6 @@
 ---
 title: Research
 description: "Research led by Dr Justin C Yang across psychiatric epidemiology, linked administrative data, mental health data science, addiction, neurodivergence, and research infrastructure."
-output:
-  html_document:
-    keep_md: yes
 ---
 
 My research examines how complex real-world data can be used to understand mental health, inequalities, and care across the life course. I work at the intersection of **psychiatric epidemiology, causal inference, population data science, and health services research**, with a particular interest in questions that cannot be answered adequately using any single dataset or methodological approach.

@@ -24,7 +24,7 @@ orcid_id <- "0000-0003-2881-4906"
 # -----------------------------------------------------------------------------
 
 funding_overrides <- read_csv(
-  "funding_overrides.csv",
+  "../../data/site/funding_overrides.csv",
   show_col_types = FALSE,
   col_types = cols(
     grant_number = col_character(),

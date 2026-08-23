@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
+    {{ partial "head_custom.html" . }}
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <nav aria-label="Primary navigation">
+        <ul class="menu">
+          {{ range .Site.Menus.main }}
+            {{ $url := .URL | relURL }}
+            {{ $active := eq $.RelPermalink $url }}
+            <li><a href="{{ $url }}"{{ if $active }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+      <hr>
+    </header>
