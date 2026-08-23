@@ -17,8 +17,9 @@ The site presents the programme's research, people and collaborations, publicati
 | [`content/teaching/`](./content/teaching/) | Teaching, supervision, and researcher development |
 | [`content/leadership/`](./content/leadership/) | Academic leadership and recognition |
 | [`content/contact/`](./content/contact/) | Contact information |
-| [`layouts/`](./layouts/) | Custom Hugo layouts, partials, and shortcodes |
+| [`layouts/`](./layouts/) | Site-level Hugo layouts, partials, and shortcodes |
 | [`static/css/style.css`](./static/css/style.css) | Site-wide styling |
+| [`themes/hugo-xmin/`](./themes/hugo-xmin/) | `hugo-xmin` theme, tracked as a Git submodule |
 | [`config.yaml`](./config.yaml) | Hugo configuration and navigation |
 | [`netlify.toml`](./netlify.toml) | Netlify build configuration |
 
@@ -31,6 +32,8 @@ The site is built with:
 - Netlify for deployment from the `main` branch
 - Cloudflare for DNS
 
+The `hugo-xmin` theme is tracked as a Git submodule so that upstream updates can be adopted deliberately while site-specific overrides remain in the top-level `layouts/` and `static/` directories.
+
 The Netlify production build runs Hugo only. R Markdown pages therefore need to be rendered locally before changes are pushed so that their generated `.html` or `.markdown` counterparts are committed alongside the source files.
 
 ## Data-driven pages
@@ -39,16 +42,22 @@ Several sections are designed to minimise manual duplication:
 
 - **Publications** are retrieved from ORCID, with [`selected_publications.csv`](./content/publications/selected_publications.csv) providing the curated programme-defining selection and contribution notes.
 - **Funding** is retrieved from ORCID, with [`funding_overrides.csv`](./content/funding/funding_overrides.csv) used to clarify roles and concise descriptions where needed.
-- **Teaching and supervision** uses [`students.csv`](./content/teaching/students.csv).
+- **Teaching and supervision** uses [`students.csv`](./content/teaching/students.csv`).
 - **Talks and presentations** uses [`talks.csv`](./content/talks/talks.csv).
 
 ## Local development
 
-Clone the repository and open the RStudio project:
+Clone the repository, including the theme submodule, and open the RStudio project:
 
 ```bash
-git clone https://github.com/yangjustinc/yangjustinc-blogdown.git
+git clone --recurse-submodules https://github.com/yangjustinc/yangjustinc-blogdown.git
 cd yangjustinc-blogdown
+```
+
+If the repository was cloned without submodules, initialise the theme with:
+
+```bash
+git submodule update --init --recursive
 ```
 
 Install `blogdown` if required:
@@ -70,6 +79,18 @@ blogdown::serve_site()
 ```
 
 When editing an R Markdown page, render it locally and confirm that the generated output has also changed before committing. The production build does not run R.
+
+## Updating the theme
+
+Update `hugo-xmin` deliberately rather than on every build:
+
+```bash
+git submodule update --remote themes/hugo-xmin
+git add themes/hugo-xmin
+git commit -m "Update hugo-xmin theme"
+```
+
+After updating the theme, build the site locally and confirm that there are no Hugo warnings or layout regressions before pushing.
 
 ## Deployment
 
