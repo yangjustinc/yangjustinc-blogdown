@@ -329,12 +329,15 @@ main a:hover {
 }
 
 .team-card img {
-  max-height: 180px;
+  display: block;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 8px;
 }
 
 .partner-card img {
-  max-height: 120px;
+  width: 120px;
   display: block;
   margin-left: auto;
   margin-right: auto;
