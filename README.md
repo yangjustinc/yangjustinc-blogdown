@@ -42,7 +42,7 @@ Several sections are designed to minimise manual duplication:
 
 - **Publications** are retrieved from ORCID, with [`selected_publications.csv`](./content/publications/selected_publications.csv) providing the curated programme-defining selection and contribution notes.
 - **Funding** is retrieved from ORCID, with [`funding_overrides.csv`](./content/funding/funding_overrides.csv) used to clarify roles and concise descriptions where needed.
-- **Teaching and supervision** uses [`students.csv`](./content/teaching/students.csv`).
+- **Teaching and supervision** uses [`students.csv`](./content/teaching/students.csv).
 - **Talks and presentations** uses [`talks.csv`](./content/talks/talks.csv).
 
 ## Local development
