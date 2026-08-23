@@ -128,22 +128,41 @@ peer_reviewed <- publications |>
 
 published_dois <- str_to_lower(peer_reviewed$doi)
 
-book_chapters <- publications |>
+book_chapters_raw <- publications |>
   filter(type == "book-chapter") |>
   filter(!title_key %in% peer_reviewed$title_key) |>
-  distinct(title_key, .keep_all = TRUE) |>
+  distinct(title_key, .keep_all = TRUE)
+
+doi_chapter_titles <- book_chapters_raw |>
+  filter(!is.na(doi)) |>
+  pull(title_key)
+
+book_chapters <- book_chapters_raw |>
   mutate(
-    citation = str_to_title(citation),
-    citation = str_replace_all(
-      citation,
-      "Yang,\\s*J\\.\\s*C\\.",
-      "**Yang, J. C.**"
-    ),
-    citation = str_replace_all(
-      citation,
-      "(?<!C\\.)\\bYang,\\s*J\\.(?!\\s*C)",
-      "**Yang, J.**"
+    redundant_no_doi = map_lgl(
+      seq_len(n()),
+      \(i) {
+        if (!is.na(doi[[i]]) || length(doi_chapter_titles) == 0) {
+          return(FALSE)
+        }
+
+        x <- title_key[[i]]
+
+        any(
+          map_lgl(
+            doi_chapter_titles,
+            \(y) str_detect(x, fixed(y)) || str_detect(y, fixed(x))
+          )
+        )
+      }
     )
+  ) |>
+  filter(!redundant_no_doi) |>
+  select(-redundant_no_doi) |>
+  mutate(
+    citation = citation |>
+      str_replace_all("\\*{3,}", "**") |>
+      str_squish()
   )
 
 get_published_doi <- function(doi) {

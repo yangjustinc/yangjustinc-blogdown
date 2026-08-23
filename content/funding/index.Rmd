@@ -30,7 +30,8 @@ funding_overrides <- read_csv(
     grant_number = col_character(),
     match_title = col_character(),
     role = col_character(),
-    description_override = col_character()
+    description_override = col_character(),
+    end_date_override = col_character()
   )
 ) |>
   mutate(
@@ -150,7 +151,8 @@ overrides_by_grant <- funding_overrides |>
   select(
     grant_number,
     role_grant = role,
-    description_grant = description_override
+    description_grant = description_override,
+    end_date_grant = end_date_override
   )
 
 overrides_by_title <- funding_overrides |>
@@ -159,7 +161,8 @@ overrides_by_title <- funding_overrides |>
   select(
     match_title_key,
     role_title = role,
-    description_title = description_override
+    description_title = description_override,
+    end_date_title = end_date_override
   )
 
 funding <- funding |>
@@ -174,7 +177,14 @@ funding <- funding |>
       description_grant,
       description_title,
       description_clean
-    )
+    ),
+    end_date_display = coalesce(
+      end_date_grant,
+      end_date_title,
+      end_date
+    ),
+    end_year = suppressWarnings(as.integer(substr(end_date_display, 1, 4))),
+    end_month = suppressWarnings(as.integer(substr(end_date_display, 6, 7)))
   )
 
 # -----------------------------------------------------------------------------

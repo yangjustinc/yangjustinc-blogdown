@@ -26,7 +26,7 @@ Across MINDSET, I lead and contribute to research programmes spanning **severe m
 My UKRI Mental Health Platform-funded programme examines how social, emotional, environmental, and institutional experiences shape trajectories into and through severe and enduring mental illness.
 
 **HOPE-SEN: administrative data and neurodivergence.**  
-Through my ADR UK Fellowship, I use linked national health and education data from ECHILD to investigate inequalities in school attendance, exclusion, alternative provision, health outcomes, and related experiences among neurodivergent children and young people.
+My HOPE-SEN programme, developed through an ADR UK Fellowship, uses linked national health and education data from ECHILD to investigate inequalities in school attendance, exclusion, alternative provision, health outcomes, and related experiences among neurodivergent children and young people.
 
 **UNITED: addiction treatment, services, and data.**  
 Within this NIHR Team Science programme, I lead work examining how England's National Drug Treatment Monitoring System can better support research, policy, clinical practice, and service improvement.

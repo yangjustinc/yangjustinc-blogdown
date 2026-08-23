@@ -33,11 +33,11 @@ Related interests include:
 
 Linked administrative data provide opportunities to study health, education, and social outcomes across entire populations, including groups who are often underrepresented in conventional research.
 
-Through an **Administrative Data Research UK Fellowship**, I lead research using the [ECHILD database](https://www.echild.ac.uk/), which links national health and education records for children and young people in England.
+**HOPE-SEN**, developed through an **Administrative Data Research UK Fellowship**, uses the [ECHILD database](https://www.echild.ac.uk/), which links national health and education records for children and young people in England.
 
 My work examines inequalities in the experiences and outcomes of children with neurodivergent special educational needs, including patterns of school attendance, exclusion, alternative provision, educational participation, and health-care use. I am particularly interested in how individual characteristics interact with schools, local systems, and place to shape these outcomes.
 
-This programme also provides a setting for developing and applying methods for analysing large, hierarchical administrative datasets, including:
+HOPE-SEN also provides a setting for developing and applying methods for analysing large, hierarchical administrative datasets, including:
 
 - longitudinal population-based cohort designs
 - multilevel and fixed-effects approaches
