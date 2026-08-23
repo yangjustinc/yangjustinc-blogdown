@@ -1,7 +1,12 @@
 baseurl: "https://www.justinyang.me"
-languageCode: "en-us"
+locale: "en-GB"
 title: "MINDSET"
 theme: "hugo-xmin"
+
+security:
+  allowContent:
+    - "text/html"
+    - "text/markdown"
 
 ignoreFiles:
   - "\\.Rmd$"

@@ -57,10 +57,10 @@ Install `blogdown` if required:
 install.packages("blogdown")
 ```
 
-The production deployment currently uses Hugo `0.160.1`, as specified in [`netlify.toml`](./netlify.toml). For a matching local Hugo installation:
+The production deployment currently uses Hugo `0.165.0`, as specified in [`netlify.toml`](./netlify.toml). For a matching local Hugo installation:
 
 ```r
-blogdown::install_hugo(version = "0.160.1")
+blogdown::install_hugo(version = "0.165.0")
 ```
 
 Preview the site locally with:
