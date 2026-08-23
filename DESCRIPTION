@@ -1,0 +1,22 @@
+Package: mindsetwebsite
+Title: MINDSET Academic Website
+Version: 0.0.0.9000
+Authors@R: person("Justin", "Yang", role = c("aut", "cre"))
+Description: Reproducible R dependencies for rendering the data-driven pages
+    of the MINDSET academic website.
+License: MIT
+Encoding: UTF-8
+Depends:
+    R (>= 4.6.0)
+Imports:
+    blogdown,
+    htmltools,
+    httr2,
+    knitr,
+    lubridate,
+    orcidtr,
+    purrr,
+    rcrossref,
+    rmarkdown,
+    stringr,
+    tidyverse

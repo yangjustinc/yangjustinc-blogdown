@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+<main id="main">
+  <article>
+    <header class="article-meta">
+      <h1><span class="title">{{ .Title | markdownify }}</span></h1>
+      {{ with .Params.author }}<p class="author">{{ . }}</p>{{ end }}
+      {{ with .Date }}{{ if gt .Year 1 }}<p class="date">{{ .Format "2 January 2006" }}</p>{{ end }}{{ end }}
+    </header>
+    {{ if .Params.toc }}{{ .TableOfContents }}{{ end }}
+    {{ .Content }}
+  </article>
+</main>
+{{ partial "footer.html" . }}

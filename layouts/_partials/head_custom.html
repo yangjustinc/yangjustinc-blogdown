@@ -1,0 +1,40 @@
+{{- $description := .Site.Params.description -}}
+{{- with .Description }}{{ $description = . }}{{ end -}}
+{{- $title := .Site.Title -}}
+{{- if not .IsHome }}{{ $title = printf "%s | %s" .Title .Site.Title }}{{ end -}}
+{{- $image := .Site.Params.ogImage | absURL -}}
+<meta name="description" content="{{ $description | plainify }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description | plainify }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:image" content="{{ $image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:image:alt" content="MINDSET research programme">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description | plainify }}">
+<meta name="twitter:image" content="{{ $image }}">
+<script type="application/ld+json">
+{{ dict
+  "@context" "https://schema.org"
+  "@type" "Person"
+  "name" .Site.Params.person.name
+  "jobTitle" .Site.Params.person.jobTitle
+  "url" .Site.BaseURL
+  "affiliation" (dict "@type" "Organization" "name" .Site.Params.person.affiliation "url" "https://www.ucl.ac.uk")
+  "sameAs" (slice
+    .Site.Params.person.orcid
+    "https://github.com/yangjustinc"
+    "https://bsky.app/profile/justinyang.me"
+    "https://www.linkedin.com/in/yangjustinc"
+  )
+  | jsonify | safeJS
+}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500&display=swap">

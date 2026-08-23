@@ -13,7 +13,7 @@ library(tidyverse)
 library(stringr)
 
 students <- read_csv(
-  "students.csv",
+  "../../data/site/students.csv",
   show_col_types = FALSE
 )
 

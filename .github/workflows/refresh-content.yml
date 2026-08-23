@@ -1,0 +1,86 @@
+name: Refresh ORCID content
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: orcid-content-refresh
+  cancel-in-progress: false
+
+env:
+  HUGO_VERSION: "0.165.0"
+  R_VERSION: "4.6.1"
+  REFRESH_BRANCH: "automation/refresh-orcid-content"
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository and theme
+        uses: actions/checkout@v5
+        with:
+          submodules: recursive
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: ${{ env.R_VERSION }}
+          use-public-rspm: true
+
+      - name: Set up Pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+
+      - name: Install declared R dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          cache-version: 1
+
+      - name: Install Hugo
+        run: |
+          curl --fail --location --silent --show-error \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb" \
+            --output /tmp/hugo.deb
+          sudo dpkg --install /tmp/hugo.deb
+
+      - name: Render data-driven pages
+        run: Rscript scripts/render_data_pages.R
+
+      - name: Validate refreshed site
+        run: |
+          hugo --gc --minify --destination public
+          python3 scripts/check_internal_links.py public --base-url https://www.justinyang.me/
+
+      - name: Create or update refresh pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- content; then
+            echo "ORCID and Crossref produced no content changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin "$REFRESH_BRANCH:refs/remotes/origin/$REFRESH_BRANCH" || true
+          git switch -C "$REFRESH_BRANCH"
+          git add content
+          git commit -m "Refresh ORCID-derived website content"
+          git push --force-with-lease origin "$REFRESH_BRANCH"
+
+          pr_url="$(gh pr list --head "$REFRESH_BRANCH" --base main --state open --json url --jq '.[0].url')"
+          if [ -n "$pr_url" ]; then
+            gh pr edit "$pr_url" \
+              --title "Refresh ORCID-derived website content" \
+              --body "Automated refresh of the generated publications, funding and peer-review content. Review the factual changes before merging."
+          else
+            gh pr create \
+              --base main \
+              --head "$REFRESH_BRANCH" \
+              --title "Refresh ORCID-derived website content" \
+              --body "Automated refresh of the generated publications, funding and peer-review content. Review the factual changes before merging."
+          fi

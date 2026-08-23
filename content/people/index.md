@@ -1,9 +1,6 @@
 ---
 title: People
 description: "Researchers, doctoral students, partners, and collaborators contributing to the MINDSET research programme in psychiatric epidemiology and mental health data science."
-output:
-  html_document:
-    keep_md: yes
 ---
 
 
@@ -14,7 +11,7 @@ MINDSET is a collaborative research programme bringing together researchers, doc
 <div class="people-grid">
 
 <div class="team-card">
-<img src="pictures/justinyang.png" alt="Headshot of Justin C Yang">
+<img src="pictures/justinyang.png" alt="Headshot of Justin C Yang" width="256" height="256" decoding="async">
 <br><b>Dr Justin C Yang</b>
 <br>Senior Research Fellow
 <br>MINDSET Lead
@@ -22,7 +19,7 @@ MINDSET is a collaborative research programme bringing together researchers, doc
 </div>
 
 <div class="team-card">
-<img src="pictures/nathalierich.png" alt="Headshot of Nathalie Rich">
+<img src="pictures/nathalierich.png" alt="Headshot of Nathalie Rich" width="256" height="256" loading="lazy" decoding="async">
 <br><b>Dr Nathalie Rich</b>
 <br>Research Fellow
 <br>Expertise: Electronic health records and epidemiology
@@ -30,7 +27,7 @@ MINDSET is a collaborative research programme bringing together researchers, doc
 </div>
 
 <div class="team-card">
-<img src="pictures/yunsookim.png" alt="Headshot of Yunsoo Kim">
+<img src="pictures/yunsookim.png" alt="Headshot of Yunsoo Kim" width="256" height="256" loading="lazy" decoding="async">
 <br><b>Dr Yunsoo Kim</b>
 <br>Research Fellow
 <br>Expertise: Natural language processing and large language models
@@ -44,7 +41,7 @@ MINDSET is a collaborative research programme bringing together researchers, doc
 <div class="people-grid">
 
 <div class="team-card">
-<img src="pictures/vanessacieplinska.png" alt="Headshot of Vanessa Cieplinska">
+<img src="pictures/vanessacieplinska.png" alt="Headshot of Vanessa Cieplinska" width="256" height="256" loading="lazy" decoding="async">
 <br><b>Vanessa Cieplinska</b>
 <br>PhD Researcher
 <br>School attendance and educational attainment in children with neurodevelopmental conditions
@@ -52,7 +49,7 @@ MINDSET is a collaborative research programme bringing together researchers, doc
 </div>
 
 <div class="team-card">
-<img src="pictures/aluayeskendir.png" alt="Headshot of Alua Yeskendir">
+<img src="pictures/aluayeskendir.png" alt="Headshot of Alua Yeskendir" width="256" height="256" loading="lazy" decoding="async">
 <br><b>Alua Yeskendir</b>
 <br>PhD Researcher
 <br>Health and social inequalities in psychiatric disorders
@@ -71,7 +68,7 @@ MINDSET connects with organisations and research groups that contribute data, me
 
 <div class="partner-card">
 <a href="https://www.adruk.org/">
-<img src="pictures/administrativedataresearchuk.png" alt="Administrative Data Research UK logo">
+<img src="pictures/administrativedataresearchuk.png" alt="Administrative Data Research UK logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>Administrative Data Research UK</b><br>
 My HOPE-SEN programme, developed through an ADR UK Fellowship, uses linked health and education data to study inequalities in the experiences and outcomes of neurodivergent children and young people. This work also informs my wider research on responsible and policy-relevant use of administrative data.</p>
@@ -79,7 +76,7 @@ My HOPE-SEN programme, developed through an ADR UK Fellowship, uses linked healt
 
 <div class="partner-card">
 <a href="https://www.northlondonmentalhealth.nhs.uk/">
-<img src="pictures/nlft.png" alt="North London NHS Foundation Trust logo">
+<img src="pictures/nlft.png" alt="North London NHS Foundation Trust logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>North London NHS Foundation Trust</b><br>
 I serve as Deputy Lead of the Trust's Research Database, supporting research using routinely collected mental-health records and collaboration across UCL, NHS clinicians, informatics teams, researchers, and public contributors.</p>
@@ -87,7 +84,7 @@ I serve as Deputy Lead of the Trust's Research Database, supporting research usi
 
 <div class="partner-card">
 <a href="https://datamind.org.uk/">
-<img src="pictures/datamind.png" alt="DATAMIND logo">
+<img src="pictures/datamind.png" alt="DATAMIND logo" width="512" height="512" loading="lazy" decoding="async">
 </a>
 <p><b>DATAMIND</b><br>
 I work with DATAMIND through the UKRI Mental Health Platform, developing research that links mental-health data science with questions about severe mental illness, inequalities, clinical records, and wider population data.</p>
@@ -95,7 +92,7 @@ I work with DATAMIND through the UKRI Mental Health Platform, developing researc
 
 <div class="partner-card">
 <a href="https://www.complexemotionshub.co.uk/">
-<img src="pictures/complexemotions.png" alt="Complex Emotions Hub logo">
+<img src="pictures/complexemotions.png" alt="Complex Emotions Hub logo" width="512" height="512" loading="lazy" decoding="async">
 </a>
 <p><b>Complex Emotions Hub</b><br>
 Through WISDOM, I collaborate with the Complex Emotions Hub to investigate how relationships, emotional experiences, adversity, and other socioemotional factors may shape trajectories into and through severe mental illness.</p>
@@ -103,7 +100,7 @@ Through WISDOM, I collaborate with the Complex Emotions Hub to investigate how r
 
 <div class="partner-card">
 <a href="https://www.socialhealthhub.org/">
-<img src="pictures/socialhealth.png" alt="Social Health Hub logo">
+<img src="pictures/socialhealth.png" alt="Social Health Hub logo" width="512" height="512" loading="lazy" decoding="async">
 </a>
 <p><b>Social Health Hub</b><br>
 My work with the Social Health Hub contributes to WISDOM's focus on the social conditions and experiences that shape severe mental illness and its course over time.</p>
@@ -111,7 +108,7 @@ My work with the Social Health Hub contributes to WISDOM's focus on the social c
 
 <div class="partner-card">
 <a href="https://www.hdruk.ac.uk/">
-<img src="pictures/healthdataresearchuk.png" alt="Health Data Research UK logo">
+<img src="pictures/healthdataresearchuk.png" alt="Health Data Research UK logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>Health Data Research UK</b><br>
 I contribute to the HDR UK Mental Health Driver Programme, connecting methodological, infrastructure, and applied research priorities across partner organisations working with health data for mental-health research.</p>
@@ -119,7 +116,7 @@ I contribute to the HDR UK Mental Health Driver Programme, connecting methodolog
 
 <div class="partner-card">
 <a href="https://slam.nhs.uk/">
-<img src="pictures/slam.png" alt="South London and Maudsley NHS Foundation Trust logo">
+<img src="pictures/slam.png" alt="South London and Maudsley NHS Foundation Trust logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>South London and Maudsley NHS Foundation Trust</b><br>
 I work with colleagues at SLaM to harmonise research access across the North London and South London CRIS infrastructures, including approaches that make cross-site replication and comparative studies easier to conduct using routinely collected mental-health records.</p>
@@ -127,7 +124,7 @@ I work with colleagues at SLaM to harmonise research access across the North Lon
 
 <div class="partner-card">
 <a href="https://www.changegrowlive.org/">
-<img src="pictures/changegrowlive.png" alt="Change Grow Live logo">
+<img src="pictures/changegrowlive.png" alt="Change Grow Live logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>Change Grow Live</b><br>
 Change Grow Live is a partner in UNITED, contributing treatment-provider expertise, public involvement, site-based learning, and research support to work aimed at improving the use of national addiction-treatment data.</p>
@@ -135,7 +132,7 @@ Change Grow Live is a partner in UNITED, contributing treatment-provider experti
 
 <div class="partner-card">
 <a href="https://www.turning-point.co.uk/">
-<img src="pictures/turningpoint.png" alt="Turning Point logo">
+<img src="pictures/turningpoint.png" alt="Turning Point logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>Turning Point</b><br>
 Turning Point is a partner in UNITED, supporting engagement with treatment services and people with lived experience and helping ensure that work on national treatment data remains relevant to practice and service delivery.</p>
@@ -143,7 +140,7 @@ Turning Point is a partner in UNITED, supporting engagement with treatment servi
 
 <div class="partner-card">
 <a href="https://aimhlab.research.st/">
-<img src="pictures/aimh.png" alt="applied informatics for Mental Health logo">
+<img src="pictures/aimh.png" alt="applied informatics for Mental Health logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>applied informatics for Mental Health</b><br>
 Collaboration around electronic health records, clinical data science, digital methods, and the use of intensive longitudinal data in mental-health research.</p>
@@ -151,7 +148,7 @@ Collaboration around electronic health records, clinical data science, digital m
 
 <div class="partner-card">
 <a href="https://www.mentalhealthepi.com/">
-<img src="pictures/mist.png" alt="Exploring Mental Illness Using Systems Thinking logo">
+<img src="pictures/mist.png" alt="Exploring Mental Illness Using Systems Thinking logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>Exploring Mental Illness Using Systems Thinking</b><br>
 Collaboration around psychiatric epidemiology, social and environmental determinants of mental health, and inequalities affecting marginalised populations.</p>
@@ -159,7 +156,7 @@ Collaboration around psychiatric epidemiology, social and environmental determin
 
 <div class="partner-card">
 <a href="https://naomilaunders.co.uk/">
-<img src="pictures/imparted.png" alt="Improving Mental and Physical health Analytics through RobusT Epi and Data sci logo">
+<img src="pictures/imparted.png" alt="Improving Mental and Physical health Analytics through RobusT Epi and Data sci logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>Improving Mental and Physical health Analytics through RobusT Epi and Data sci</b><br>
 Collaboration around causal inference, electronic health records, inequalities, and physical-health outcomes among people with severe mental illness.</p>
@@ -167,7 +164,7 @@ Collaboration around causal inference, electronic health records, inequalities, 
 
 <div class="partner-card">
 <a href="https://www.mentalhealthpolicyeconomicsgroup.com/">
-<img src="pictures/mhpeg.png" alt="Mental Health Policy Economics Group logo">
+<img src="pictures/mhpeg.png" alt="Mental Health Policy Economics Group logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>Mental Health | Policy | Economics Group</b><br>
 Longstanding collaboration spanning psychiatric epidemiology, substance use, health inequalities, policy, and population-health research.</p>
@@ -175,7 +172,7 @@ Longstanding collaboration spanning psychiatric epidemiology, substance use, hea
 
 <div class="partner-card">
 <a href="https://www.psylife.eu/">
-<img src="pictures/psylife.png" alt="PsyLife logo">
+<img src="pictures/psylife.png" alt="PsyLife logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>PsyLife</b><br>
 Collaboration around population and social epidemiology, psychosis, causal inference, and inequalities in the determinants and outcomes of severe mental illness.</p>

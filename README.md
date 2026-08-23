@@ -1,88 +1,136 @@
 # MINDSET academic website
 
-Source for [www.justinyang.me](https://www.justinyang.me/), the academic website for **MINDSET (Multimodal INference and Data Science for Epidemiology and Treatment)**, the research programme led by Dr Justin C Yang at University College London.
+Source for [www.justinyang.me](https://www.justinyang.me/), the academic
+website for **MINDSET (Multimodal INference and Data Science for Epidemiology
+and Treatment)**, the research programme led by Dr Justin C Yang at University
+College London.
 
-The site presents the programme's research, people and collaborations, publications, funding, talks, teaching and supervision, academic leadership, and contact information.
+The site presents the programme's research, people and collaborations,
+publications, funding, talks, teaching and supervision, academic leadership,
+and contact information.
 
 ## Site structure
 
 | Path | Purpose |
 | --- | --- |
-| [`content/_index.Rmarkdown`](./content/_index.Rmarkdown) | Homepage |
+| [`content/_index.md`](./content/_index.md) | Homepage |
 | [`content/research/`](./content/research/) | Research programme |
-| [`content/people/`](./content/people/) | Research team, doctoral researchers, partners, and collaborators |
+| [`content/people/`](./content/people/) | Research team, doctoral researchers, partners and collaborators |
 | [`content/publications/`](./content/publications/) | Selected and complete publications |
 | [`content/funding/`](./content/funding/) | Research funding |
 | [`content/talks/`](./content/talks/) | Talks and presentations |
-| [`content/teaching/`](./content/teaching/) | Teaching, supervision, and researcher development |
+| [`content/teaching/`](./content/teaching/) | Teaching, supervision and researcher development |
 | [`content/leadership/`](./content/leadership/) | Academic leadership and recognition |
 | [`content/contact/`](./content/contact/) | Contact information |
-| [`layouts/`](./layouts/) | Site-level Hugo layouts, partials, and shortcodes |
+| [`data/site/`](./data/site/) | Curated CSV inputs used by R Markdown pages |
+| [`layouts/`](./layouts/) | Site-level Hugo layouts, partials and shortcodes |
 | [`static/css/style.css`](./static/css/style.css) | Site-wide styling |
-| [`themes/hugo-xmin/`](./themes/hugo-xmin/) | `hugo-xmin` theme, tracked as a Git submodule |
-| [`config.yaml`](./config.yaml) | Hugo configuration and navigation |
-| [`netlify.toml`](./netlify.toml) | Netlify build configuration |
+| [`themes/hugo-xmin/`](./themes/hugo-xmin/) | Pinned `hugo-xmin` Git submodule |
+| [`scripts/`](./scripts/) | Rendering and validation utilities |
+| [`.github/workflows/`](./.github/workflows/) | Build validation and content refresh workflows |
 
-## Technology
+## Technology and build boundary
 
-The site is built with:
+The site uses:
 
-- [Hugo](https://gohugo.io/) using the [`hugo-xmin`](https://github.com/yihui/hugo-xmin) theme
-- R and [`blogdown`](https://pkgs.rstudio.com/blogdown/) for R Markdown content
-- Netlify for deployment from the `main` branch
-- Cloudflare for DNS
+- [Hugo](https://gohugo.io/) with the
+  [`hugo-xmin`](https://github.com/yihui/hugo-xmin) theme;
+- R and [`blogdown`](https://pkgs.rstudio.com/blogdown/) for pages that
+  generate structured content;
+- Netlify for production and pull-request preview deployments;
+- GitHub Actions for clean builds, link checks and controlled content refreshes;
+- Cloudflare for DNS.
 
-The `hugo-xmin` theme is tracked as a Git submodule so that upstream updates can be adopted deliberately while site-specific overrides remain in the top-level `layouts/` and `static/` directories.
+Netlify runs Hugo only. Ordinary prose pages are therefore Markdown files that
+Hugo can build directly. Data-driven R Markdown pages are rendered separately,
+and their generated `index.html` files are committed alongside the source.
 
-The Netlify production build runs Hugo only. R Markdown pages therefore need to be rendered locally before changes are pushed so that their generated `.html` or `.markdown` counterparts are committed alongside the source files.
+The direct R dependencies are declared in [`DESCRIPTION`](./DESCRIPTION).
+The automated refresh workflow pins R 4.6.1 and Hugo 0.165.0. A full
+`renv.lock` should only be generated from a tested local R installation; it
+has not been fabricated by hand.
 
 ## Data-driven pages
 
-Several sections are designed to minimise manual duplication:
+Several sections minimise manual duplication:
 
-- **Publications** are retrieved from ORCID, with [`selected_publications.csv`](./content/publications/selected_publications.csv) providing the curated programme-defining selection and contribution notes.
-- **Funding** is retrieved from ORCID, with [`funding_overrides.csv`](./content/funding/funding_overrides.csv) used to clarify roles and concise descriptions where needed.
-- **Teaching and supervision** uses [`students.csv`](./content/teaching/students.csv).
-- **Talks and presentations** uses [`talks.csv`](./content/talks/talks.csv).
+- **Publications** are retrieved from ORCID, with
+  [`selected_publications.csv`](./data/site/selected_publications.csv)
+  providing the curated programme-defining selection and contribution notes.
+- **Funding** is retrieved from ORCID, with
+  [`funding_overrides.csv`](./data/site/funding_overrides.csv) clarifying
+  roles and concise descriptions where needed.
+- **Teaching and supervision** uses
+  [`students.csv`](./data/site/students.csv).
+- **Talks and presentations** uses [`talks.csv`](./data/site/talks.csv).
+
+The CSV inputs live under `data/`, so Hugo does not copy them into the
+published website.
 
 ## Local development
 
-Clone the repository, including the theme submodule, and open the RStudio project:
+Clone the repository with the theme:
 
 ```bash
 git clone --recurse-submodules https://github.com/yangjustinc/yangjustinc-blogdown.git
 cd yangjustinc-blogdown
 ```
 
-If the repository was cloned without submodules, initialise the theme with:
+If the repository was cloned without submodules:
 
 ```bash
 git submodule update --init --recursive
 ```
 
-Install `blogdown` if required:
+Install the declared R packages and the pinned Hugo release:
 
 ```r
-install.packages("blogdown")
+install.packages(c(
+  "blogdown", "htmltools", "httr2", "knitr", "lubridate", "orcidtr",
+  "purrr", "rcrossref", "rmarkdown", "stringr", "tidyverse"
+))
+blogdown::install_hugo(version = "0.165.0", extended = TRUE)
 ```
 
-The production deployment currently uses Hugo `0.165.0`, as specified in [`netlify.toml`](./netlify.toml). For a matching local Hugo installation:
-
-```r
-blogdown::install_hugo(version = "0.165.0")
-```
-
-Preview the site locally with:
+Preview the site with:
 
 ```r
 blogdown::serve_site()
 ```
 
-When editing an R Markdown page, render it locally and confirm that the generated output has also changed before committing. The production build does not run R.
+## Rendering data-driven pages
+
+Refresh every R-generated page:
+
+```bash
+Rscript scripts/render_data_pages.R
+```
+
+The script renders Funding, Leadership, Publications, Talks and Teaching
+without running Hugo. Review the generated HTML diff before committing it.
+ORCID and Crossref are external services, so transient API failures should not
+be treated as evidence that the Hugo site itself is broken.
+
+Alternatively, open the repository's **Actions** tab and run **Refresh ORCID
+content**. The workflow renders and validates the pages, then opens or updates a
+pull request only when the generated content changes.
+
+## Build and validation
+
+Build the production site locally:
+
+```bash
+hugo --gc --minify
+python3 scripts/check_internal_links.py public --base-url https://www.justinyang.me/
+```
+
+The **Build site** GitHub Action performs the same clean build and internal-link
+check on every pull request and every push to `main`. Netlify then deploys
+the merged `main` branch using the same Hugo release.
 
 ## Updating the theme
 
-Update `hugo-xmin` deliberately rather than on every build:
+Update `hugo-xmin` deliberately:
 
 ```bash
 git submodule update --remote themes/hugo-xmin
@@ -90,21 +138,27 @@ git add themes/hugo-xmin
 git commit -m "Update hugo-xmin theme"
 ```
 
-After updating the theme, build the site locally and confirm that there are no Hugo warnings or layout regressions before pushing.
+Dependabot checks monthly for an upstream submodule change and opens a pull
+request rather than changing the theme automatically. After an update, run the
+production build and inspect the Netlify preview before merging.
 
-## Deployment
+## Deployment and security
 
-Pushes to `main` trigger a Netlify deployment using:
+Netlify publishes `public/`, redirects the apex domain to
+`www.justinyang.me`, and supplies baseline content-type, framing, referrer
+and browser-permission headers. A strict Content Security Policy is deferred
+until the remaining Google Fonts dependency is either self-hosted or explicitly
+allowed.
 
-```bash
-hugo --gc
-```
+Production continuous deployment should remain enabled. Development work is
+performed on branches, so the production site changes only after a pull request
+is merged into `main`.
 
-The public site is available at [www.justinyang.me](https://www.justinyang.me/).
+## Repository history
 
-## Repository scope
-
-This repository is maintained as the source for a personal academic and research programme website rather than as a general-purpose software package. The code and structure may nevertheless be useful as a reference for academic websites built with Hugo and `blogdown`.
+The current tree is small, but older Git history contains large generated data
+and presentation files. Rewriting that history would change every historical
+commit identifier, so it is intentionally outside routine site maintenance.
 
 ## Author
 

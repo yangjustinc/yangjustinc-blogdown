@@ -1,0 +1,62 @@
+name: Build site
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-build-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  HUGO_VERSION: "0.165.0"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository and theme
+        uses: actions/checkout@v5
+        with:
+          submodules: recursive
+          persist-credentials: false
+
+      - name: Verify pinned versions and theme
+        run: |
+          test -f themes/hugo-xmin/theme.toml
+          grep -F "HUGO_VERSION = '$HUGO_VERSION'" netlify.toml
+          grep -F "blogdown.hugo.version = \"$HUGO_VERSION\"" .Rprofile
+          test -z "$(git ls-files -ci --exclude-standard)"
+          for source in content/*/index.Rmd; do
+            test -f "${source%.Rmd}.html"
+          done
+
+      - name: Install Hugo
+        run: |
+          curl --fail --location --silent --show-error \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb" \
+            --output /tmp/hugo.deb
+          sudo dpkg --install /tmp/hugo.deb
+          hugo version
+
+      - name: Build production site
+        run: hugo --gc --minify --destination public
+
+      - name: Check internal links
+        run: python3 scripts/check_internal_links.py public --base-url https://www.justinyang.me/
+
+      - name: Upload build for troubleshooting
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: failed-site-build
+          path: public/
+          if-no-files-found: ignore
+          retention-days: 7

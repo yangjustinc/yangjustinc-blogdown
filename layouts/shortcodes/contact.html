@@ -1,97 +1,33 @@
-<style type="text/css">
-.form-style-1 {
-	margin:10px auto;
-	max-width: 100%;
-	padding: 20px 12px 10px 20px;
-}
-.form-style-1 li {
-	padding: 0;
-	display: block;
-	list-style: none;
-	margin: 10px 0 0 0;
-}
-.form-style-1 label{
-	margin:0 0 3px 0;
-	padding:0px;
-	display:block;
-	font-weight: bold;
-}
-.form-style-1 input[type=text], 
-.form-style-1 input[type=date],
-.form-style-1 input[type=datetime],
-.form-style-1 input[type=number],
-.form-style-1 input[type=search],
-.form-style-1 input[type=time],
-.form-style-1 input[type=url],
-.form-style-1 input[type=email],
-textarea, 
-select{
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	border:1px solid #BEBEBE;
-	padding: 7px;
-	margin:0px;
-	-webkit-transition: all 0.30s ease-in-out;
-	-moz-transition: all 0.30s ease-in-out;
-	-ms-transition: all 0.30s ease-in-out;
-	-o-transition: all 0.30s ease-in-out;
-	outline: none;	
-}
-.form-style-1 input[type=text]:focus, 
-.form-style-1 input[type=date]:focus,
-.form-style-1 input[type=datetime]:focus,
-.form-style-1 input[type=number]:focus,
-.form-style-1 input[type=search]:focus,
-.form-style-1 input[type=time]:focus,
-.form-style-1 input[type=url]:focus,
-.form-style-1 input[type=email]:focus,
-.form-style-1 textarea:focus, 
-.form-style-1 select:focus{
-	-moz-box-shadow: 0 0 8px #88D5E9;
-	-webkit-box-shadow: 0 0 8px #88D5E9;
-	box-shadow: 0 0 8px #88D5E9;
-	border: 1px solid #88D5E9;
-}
-.form-style-1 .field-divided{
-	width: 49%;
-}
+<form
+  class="contact-form"
+  name="contact"
+  method="POST"
+  action="/thank-you/"
+  data-netlify="true"
+  data-netlify-honeypot="website"
+  data-netlify-recaptcha="true">
+  <input type="hidden" name="form-name" value="contact">
+  <p class="form-honeypot">
+    <label>Leave this field empty: <input name="website" autocomplete="off" tabindex="-1"></label>
+  </p>
 
-.form-style-1 .field-long{
-	width: 100%;
-}
-.form-style-1 .field-select{
-	width: 100%;
-}
-.form-style-1 .field-textarea{
-	height: 100px;
-}
-.form-style-1 input[type=submit], .form-style-1 input[type=button]{
-	padding: 8px 15px 8px 15px;
-	border: none;
-}
-.form-style-1 .required{
-	color:red;
-}
-</style>
+  <div class="form-field">
+    <label for="contact-name">Name <span aria-hidden="true">*</span></label>
+    <input id="contact-name" name="Name" type="text" autocomplete="name" required>
+  </div>
 
-<form data-netlify="true" 
-      method="POST"
-      accept-charset="UTF-8"
-      data-netlify-recaptcha="true">
-<ul class="form-style-1">
-    <li><label>Name <span class="required">*</span></label><input type="text" name="Name" placeholder="Florence Nightingale" class="field-long" /></li>
-    <li>
-        <label>Email <span class="required">*</span></label>
-        <input type="email" name="Email" placeholder="florence@statistics.nhs.uk" class="field-long" />
-    </li>
-    <li>
-        <label>Message <span class="required">*</span></label>
-        <textarea name="Message" id="Message" placeholder="I've read your work on causal inference and have some thoughts. Also, your confidence intervals are impeccable." class="field-long field-textarea"></textarea>
-    </li>
-    <div data-netlify-recaptcha="true"></div>
-    <li>
-        <input type="submit" value="Send" />
-    </li>
-</ul>
+  <div class="form-field">
+    <label for="contact-email">Email <span aria-hidden="true">*</span></label>
+    <input id="contact-email" name="Email" type="email" autocomplete="email" inputmode="email" required>
+  </div>
+
+  <div class="form-field">
+    <label for="contact-message">Message <span aria-hidden="true">*</span></label>
+    <textarea id="contact-message" name="Message" rows="7" required></textarea>
+  </div>
+
+  <div class="form-captcha" data-netlify-recaptcha="true"></div>
+  <button type="submit">Send message</button>
 </form>
+
+<p class="contact-form__note">Please do not include sensitive personal or health information in this form.</p>

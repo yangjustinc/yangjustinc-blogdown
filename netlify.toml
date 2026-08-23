@@ -1,5 +1,5 @@
 [build]
-command = 'hugo --gc'
+command = 'hugo --gc --minify'
 publish = 'public'
 
 [build.environment]
@@ -7,11 +7,32 @@ HUGO_VERSION = '0.165.0'
 
 [context]
 [context.branch-deploy]
-command = 'hugo -F -b $DEPLOY_PRIME_URL'
+command = 'hugo --gc --minify -F -b $DEPLOY_PRIME_URL'
 
 [context.deploy-preview]
-command = 'hugo -F -b $DEPLOY_PRIME_URL'
+command = 'hugo --gc --minify -F -b $DEPLOY_PRIME_URL'
 
 [context.production]
 [context.production.environment]
 HUGO_ENV = 'production'
+
+[[redirects]]
+from = 'https://justinyang.me/*'
+to = 'https://www.justinyang.me/:splat'
+status = 301
+force = true
+
+[[headers]]
+for = '/*'
+
+  [headers.values]
+  X-Content-Type-Options = 'nosniff'
+  X-Frame-Options = 'SAMEORIGIN'
+  Referrer-Policy = 'strict-origin-when-cross-origin'
+  Permissions-Policy = 'camera=(), geolocation=(), microphone=(), payment=(), usb=()'
+
+[[headers]]
+for = '/css/*'
+
+  [headers.values]
+  Cache-Control = 'public, max-age=604800'
