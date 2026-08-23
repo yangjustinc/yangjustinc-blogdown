@@ -4,10 +4,9 @@
 .RData
 .Ruserdata
 
-# R secrets / env
+# R secrets / environment
 .httr-oauth
 .Renviron
-.Rprofile
 
 # OS cruft
 .DS_Store
