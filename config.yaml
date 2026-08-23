@@ -17,9 +17,6 @@ ignoreFiles:
 
 footnotereturnlinkcontents: "↩"
 
-permalinks:
-  presentations: "/presentations/:year/:month/:day/:title/"
-
 menu:
   main:
     - name: Home
