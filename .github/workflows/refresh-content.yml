@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Check out repository and theme
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           submodules: recursive
 
