@@ -7,8 +7,10 @@
     {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
     <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
-    {{ $headingLinks := resources.Get "js/heading-links.js" | minify | fingerprint }}
-    <script src="{{ $headingLinks.RelPermalink }}" integrity="{{ $headingLinks.Data.Integrity }}" defer></script>
+    {{ if not .IsHome }}
+      {{ $headingLinks := resources.Get "js/heading-links.js" | minify | fingerprint }}
+      <script src="{{ $headingLinks.RelPermalink }}" integrity="{{ $headingLinks.Data.Integrity }}" defer></script>
+    {{ end }}
     {{ partial "head_custom.html" . }}
   </head>
 
