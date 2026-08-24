@@ -555,17 +555,50 @@ footer a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.35rem 0.8rem;
+  gap: 0.45rem 0.9rem;
   margin: 0.75em 0 0.25em;
 }
 
 .footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #888;
   text-decoration: none;
 }
 
-.footer-social a:hover {
+.footer-social a:hover,
+.footer-social a:focus-visible {
   color: #1f7fc4;
+}
+
+.footer-icon {
+  width: 1.55rem;
+  height: 1.55rem;
+  fill: currentColor;
+}
+
+/* Section permalinks */
+.heading-anchor {
+  color: #888;
+  font-family: Inter, sans-serif;
+  font-size: 0.72em;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.42;
+}
+
+.heading-anchor:hover,
+.heading-anchor:focus-visible {
+  color: #1f7fc4;
+  opacity: 1;
+}
+
+main h2[id],
+main h3[id],
+main h4[id],
+main .section[id] {
+  scroll-margin-top: 1rem;
 }
 
 /* Contact form */
@@ -682,6 +715,11 @@ footer a:hover {
 
   .people-grid {
     gap: 18px;
+  }
+
+  .contact-form {
+    margin-top: 1rem;
+    padding: 1rem;
   }
 
   table {
