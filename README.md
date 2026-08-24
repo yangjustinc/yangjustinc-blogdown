@@ -24,7 +24,7 @@ and contact information.
 | [`content/contact/`](./content/contact/) | Contact information |
 | [`data/site/`](./data/site/) | Curated CSV inputs used by R Markdown pages |
 | [`layouts/`](./layouts/) | Site-level Hugo layouts, partials and shortcodes |
-| [`static/css/style.css`](./static/css/style.css) | Site-wide styling |
+| [`assets/css/style.css`](./assets/css/style.css) | Site-wide styling, processed and fingerprinted by Hugo |
 | [`themes/hugo-xmin/`](./themes/hugo-xmin/) | Pinned `hugo-xmin` Git submodule |
 | [`scripts/`](./scripts/) | Rendering and validation utilities |
 | [`.github/workflows/`](./.github/workflows/) | Build validation and content refresh workflows |
@@ -111,9 +111,14 @@ without running Hugo. Review the generated HTML diff before committing it.
 ORCID and Crossref are external services, so transient API failures should not
 be treated as evidence that the Hugo site itself is broken.
 
-Alternatively, open the repository's **Actions** tab and run **Refresh ORCID
-content**. The workflow renders and validates the pages, then opens or updates a
-pull request only when the generated content changes.
+The **Refresh data-driven content** workflow runs automatically at 06:17 UTC on
+the first day of each month. It can also be run manually from the repository's
+**Actions** tab. The workflow renders and validates the pages, then opens or
+updates a pull request only when the generated content changes.
+
+Changing a curated CSV does not itself trigger the workflow. After updating a
+CSV, run the workflow manually or render the pages locally so that the generated
+HTML can be reviewed alongside the source change.
 
 ## Build and validation
 
