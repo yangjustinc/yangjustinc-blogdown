@@ -22,6 +22,9 @@ concurrency:
 env:
   R_VERSION: "4.6.1"
   UPDATE_BRANCH: "automation/update-r-dependencies"
+  # Work around the current renv/setup-renv restore-ordering issue on R 4.6.
+  RENV_CONFIG_INSTALL_TRANSACTIONAL: "FALSE"
+  RENV_CONFIG_INSTALL_JOBS: "1"
 
 jobs:
   update:
