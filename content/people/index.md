@@ -142,7 +142,7 @@ Turning Point is a partner in UNITED, supporting engagement with treatment servi
 <a href="https://aimhlab.research.st/">
 <img src="pictures/aimh.png" alt="applied informatics for Mental Health logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
-<p><b>applied informatics for Mental Health</b><br>
+<p><b>applied informatics for Mental Health (aiMH)</b><br>
 Collaboration around electronic health records, clinical data science, digital methods, and the use of intensive longitudinal data in mental-health research.</p>
 </div>
 
@@ -150,7 +150,7 @@ Collaboration around electronic health records, clinical data science, digital m
 <a href="https://www.mentalhealthepi.com/">
 <img src="pictures/mist.png" alt="Exploring Mental Illness Using Systems Thinking logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
-<p><b>Exploring Mental Illness Using Systems Thinking</b><br>
+<p><b>Exploring Mental Illness Using Systems Thinking (MIST)</b><br>
 Collaboration around psychiatric epidemiology, social and environmental determinants of mental health, and inequalities affecting marginalised populations.</p>
 </div>
 
@@ -158,8 +158,16 @@ Collaboration around psychiatric epidemiology, social and environmental determin
 <a href="https://naomilaunders.co.uk/">
 <img src="pictures/imparted.png" alt="Improving Mental and Physical health Analytics through RobusT Epi and Data sci logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
-<p><b>Improving Mental and Physical health Analytics through RobusT Epi and Data sci</b><br>
+<p><b>Improving Mental and Physical health Analytics through RobusT Epi and Data sci (IMPARTED)</b><br>
 Collaboration around causal inference, electronic health records, inequalities, and physical-health outcomes among people with severe mental illness.</p>
+</div>
+
+<div class="partner-card">
+<a href="https://katemerritt.github.io/map-lab/">
+<img src="pictures/map.png" alt="Mechanisms and Prediction of Psychosis Lab logo" width="256" height="256" loading="lazy" decoding="async">
+</a>
+<p><b>Mechanisms and Prediction of Psychosis (MAP) Lab</b><br>
+Collaboration around psychosis, neuroimaging, biological and environmental mechanisms, and prediction of severe mental illness.</p>
 </div>
 
 <div class="partner-card">

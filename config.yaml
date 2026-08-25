@@ -63,7 +63,7 @@ menu:
 
 params:
   description: "MINDSET is the research programme led by Dr Justin C Yang at UCL, using psychiatric epidemiology, linked data, causal inference, and data science to understand mental health, inequalities, and care."
-  footer: "MINDSET · Dr Justin C Yang · University College London <br> &copy; [Justin C Yang](https://www.justinyang.me) 2019-{Year}"
+  footer: "MINDSET · Division of Psychiatry · Faculty of Brain Sciences · University College London <br> &copy; [Justin C Yang](https://www.justinyang.me) 2019-{Year}"
   ogImage: "social-card.jpg"
   ogImageAlt: "MINDSET: Psychiatric epidemiology and mental health data science, Dr Justin C Yang"
   person:
