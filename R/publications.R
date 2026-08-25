@@ -318,7 +318,11 @@ fetch_crossref_bibtex <- function(doi) {
       raw = TRUE
     )
     result <- paste(as.character(result), collapse = "\n") |>
-      stringr::str_trim()
+      stringr::str_trim() |>
+      stringr::str_replace_all(
+        stringr::fixed("&amp;"),
+        "\\\\&"
+      )
     if (!stringr::str_detect(result, "^@[[:alnum:]_:-]+\\{")) {
       return(NA_character_)
     }
