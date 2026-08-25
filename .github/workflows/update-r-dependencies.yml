@@ -10,6 +10,7 @@ on:
       - chore/futureproof-dependencies
     paths:
       - ".github/workflows/update-r-dependencies.yml"
+      - ".gitignore"
 
 permissions:
   contents: write
