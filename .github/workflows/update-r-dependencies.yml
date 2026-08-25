@@ -42,17 +42,13 @@ jobs:
       - name: Set up Pandoc
         uses: r-lib/actions/setup-pandoc@v2
 
-      - name: Install current declared dependencies
-        uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          cache-version: 1
-          dependencies: 'c("Depends", "Imports", "LinkingTo")'
-          upgrade: "TRUE"
-
-      - name: Create reproducible renv lockfile
+      - name: Resolve current dependency lockfile
         run: |
           Rscript -e 'install.packages("renv")'
-          Rscript -e 'renv::snapshot(project = ".", library = .libPaths(), lockfile = "renv.lock", type = "explicit", prompt = FALSE, force = TRUE)'
+          Rscript scripts/update_renv_lock.R
+
+      - name: Restore resolved dependency graph
+        uses: r-lib/actions/setup-renv@v2
 
       - name: Validate publications with cached external metadata
         env:
