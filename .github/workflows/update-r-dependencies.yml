@@ -46,6 +46,7 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           cache-version: 1
+          dependencies: 'c("Depends", "Imports", "LinkingTo")'
           upgrade: "TRUE"
 
       - name: Create reproducible renv lockfile
