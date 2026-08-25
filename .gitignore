@@ -30,6 +30,7 @@ Thumbs.db
 .#*
 *.lock
 *.lock~
+!renv.lock
 
 # Python validation scripts
 __pycache__/
