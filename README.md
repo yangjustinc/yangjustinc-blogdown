@@ -45,10 +45,12 @@ Netlify runs Hugo only. Ordinary prose pages are therefore Markdown files that
 Hugo can build directly. Data-driven R Markdown pages are rendered separately,
 and their generated `index.html` files are committed alongside the source.
 
-The direct R dependencies are declared in [`DESCRIPTION`](./DESCRIPTION).
-The automated refresh workflow pins R 4.6.1 and Hugo 0.165.0. A full
-`renv.lock` should only be generated from a tested local R installation; it
-has not been fabricated by hand.
+The direct R dependencies are declared in [`DESCRIPTION`](./DESCRIPTION), while
+[`renv.lock`](./renv.lock) records the exact dependency graph tested by the R
+rendering workflows. CI uses R 4.6.1 and restores that lockfile for routine
+renders. The **Update R dependencies** workflow runs monthly on the 15th and
+proposes a pull request when a newer tested dependency graph is available; it
+does not merge package updates automatically.
 
 ## Data-driven pages
 
@@ -82,13 +84,11 @@ If the repository was cloned without submodules:
 git submodule update --init --recursive
 ```
 
-Install the declared R packages and the pinned Hugo release:
+Restore the tested R environment and install the pinned Hugo release:
 
 ```r
-install.packages(c(
-  "blogdown", "htmltools", "httr2", "knitr", "lubridate", "orcidtr",
-  "purrr", "rcrossref", "rmarkdown", "stringr", "tidyverse"
-))
+install.packages("renv")
+renv::restore()
 blogdown::install_hugo(version = "0.165.0", extended = TRUE)
 ```
 
@@ -113,8 +113,9 @@ be treated as evidence that the Hugo site itself is broken.
 
 The **Refresh data-driven content** workflow runs automatically at 06:17 UTC on
 the first day of each month. It can also be run manually from the repository's
-**Actions** tab. The workflow renders and validates the pages, then opens or
-updates a pull request only when the generated content changes.
+**Actions** tab. The workflow restores the tested R dependencies, renders and
+validates the pages, then opens or updates a pull request only when the
+generated content changes.
 
 Changing a curated CSV does not itself trigger the workflow. After updating a
 CSV, run the workflow manually or render the pages locally so that the generated
@@ -133,9 +134,23 @@ The **Build site** GitHub Action performs the same clean build and internal-link
 check on every pull request and every push to `main`. Netlify then deploys
 the merged `main` branch using the same Hugo release.
 
-## Updating the theme
+Publication rendering has one additional deliberately small sanity check. It
+requires the generated publication files to be non-empty and checks that both
+the OpenAlex cache and BibTeX export retain a plausible number of records, so a
+transient upstream failure cannot silently replace the publication list with an
+empty or near-empty result.
 
-Update `hugo-xmin` deliberately:
+## Updating dependencies and the theme
+
+`DESCRIPTION` is the source of truth for direct R dependencies. The committed
+`renv.lock` is the tested resolved graph. The monthly **Update R dependencies**
+workflow resolves current package releases, renders the publications page from
+committed external-metadata caches, runs the publication sanity check and opens
+or updates a reviewable dependency pull request when the lockfile changes.
+
+Dependabot separately checks GitHub Actions and the `hugo-xmin` submodule. Theme
+updates are proposed rather than applied automatically. To update the theme
+manually:
 
 ```bash
 git submodule update --remote themes/hugo-xmin
@@ -143,9 +158,8 @@ git add themes/hugo-xmin
 git commit -m "Update hugo-xmin theme"
 ```
 
-Dependabot checks monthly for an upstream submodule change and opens a pull
-request rather than changing the theme automatically. After an update, run the
-production build and inspect the Netlify preview before merging.
+After a dependency or theme update, inspect the normal CI results and Netlify
+preview before merging.
 
 ## Deployment and security
 
