@@ -58,17 +58,12 @@ with_doi <- df |>
 no_doi <- df |>
   filter(!has_doi)
 
+crossref_cache_path <- "../../data/generated/crossref-bibtex.json"
+
 cr_cites <- with_doi |>
-  mutate(
-    citation = map_chr(
-      doi,
-      \(d) {
-        tryCatch(
-          cr_cn(dois = d, format = "text"),
-          error = \(e) NA_character_
-        )
-      }
-    )
+  left_join(
+    refresh_crossref_citations(doi, crossref_cache_path),
+    by = "doi"
   )
 
 fallback <- bind_rows(
@@ -282,7 +277,7 @@ publication_sections <- publication_sections |>
 
 bibtex_records <- generate_bibtex_records(
   publication_sections,
-  "../../data/generated/crossref-bibtex.json"
+  crossref_cache_path
 )
 
 writeLines(
