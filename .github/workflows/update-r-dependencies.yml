@@ -52,7 +52,7 @@ jobs:
       - name: Create reproducible renv lockfile
         run: |
           Rscript -e 'install.packages("renv")'
-          Rscript -e 'renv::init(project = ".", bare = TRUE, restart = FALSE); renv::snapshot(project = ".", lockfile = "renv.lock", type = "explicit", prompt = FALSE)'
+          Rscript -e 'renv::snapshot(project = ".", library = .libPaths(), lockfile = "renv.lock", type = "explicit", prompt = FALSE, force = TRUE)'
 
       - name: Validate publications with cached external metadata
         env:
