@@ -9,7 +9,6 @@ Encoding: UTF-8
 Depends:
     R (>= 4.6.0)
 Imports:
-    bibtex,
     blogdown,
     htmltools,
     httr2,
