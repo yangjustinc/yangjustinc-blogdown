@@ -100,7 +100,7 @@ jobs:
           git commit -m "Update R dependency lockfile"
           git push --force-with-lease origin "$UPDATE_BRANCH"
 
-          pr_url="$(gh pr list --head "$UPDATE_BRANCH" --base main --state open --json url --jq '.[0].url')"
+          pr_url="$(gh pr list --head "$UPDATE_BRANCH" --base main --state open --json url --jq '.[0].url // ""')"
           if [ -n "$pr_url" ]; then
             gh pr edit "$pr_url" \
               --title "Update R dependencies" \
