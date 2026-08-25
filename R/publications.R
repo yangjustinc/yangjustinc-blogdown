@@ -127,6 +127,11 @@ fetch_openalex_enrichment <- function(dois, chunk_size = 20L) {
     dplyr::distinct(.data$doi, .keep_all = TRUE)
 }
 
+publication_cache_only <- function() {
+  tolower(Sys.getenv("PUBLICATIONS_USE_CACHE_ONLY", unset = "false")) %in%
+    c("1", "true", "yes")
+}
+
 refresh_openalex_enrichment <- function(dois, cache_path) {
   requested_dois <- unique(stats::na.omit(normalize_doi(dois)))
 
@@ -151,7 +156,11 @@ refresh_openalex_enrichment <- function(dois, cache_path) {
     dplyr::mutate(doi = normalize_doi(.data$doi)) |>
     dplyr::filter(.data$doi %in% requested_dois)
 
-  fresh <- fetch_openalex_enrichment(requested_dois)
+  fresh <- if (publication_cache_only()) {
+    empty_openalex_enrichment()
+  } else {
+    fetch_openalex_enrichment(requested_dois)
+  }
 
   enrichment <- dplyr::bind_rows(
     fresh |>
@@ -321,7 +330,7 @@ fetch_crossref_bibtex <- function(doi) {
       stringr::str_trim() |>
       stringr::str_replace_all(
         stringr::fixed("&amp;"),
-        "\\\\&"
+        function(match) paste0(intToUtf8(92), "&")
       )
     if (!stringr::str_detect(result, "^@[[:alnum:]_:-]+\\{")) {
       return(NA_character_)
@@ -330,7 +339,76 @@ fetch_crossref_bibtex <- function(doi) {
   }, error = function(e) NA_character_)
 }
 
-generate_bibtex_records <- function(publications) {
+empty_crossref_bibtex_cache <- function() {
+  tibble::tibble(
+    doi = character(),
+    bibtex = character()
+  )
+}
+
+generate_bibtex_records <- function(publications, cache_path) {
+  publication_dois <- unique(stats::na.omit(normalize_doi(publications$doi)))
+
+  cached <- if (file.exists(cache_path)) {
+    tryCatch(
+      jsonlite::read_json(
+        cache_path,
+        simplifyVector = TRUE
+      ) |>
+        tibble::as_tibble(),
+      error = function(e) empty_crossref_bibtex_cache()
+    )
+  } else {
+    empty_crossref_bibtex_cache()
+  }
+
+  if (!all(c("doi", "bibtex") %in% names(cached))) {
+    cached <- empty_crossref_bibtex_cache()
+  }
+
+  cached <- cached |>
+    dplyr::mutate(doi = normalize_doi(.data$doi)) |>
+    dplyr::filter(.data$doi %in% publication_dois)
+
+  fresh <- if (publication_cache_only()) {
+    empty_crossref_bibtex_cache()
+  } else {
+    tibble::tibble(
+      doi = publication_dois,
+      bibtex = purrr::map_chr(
+        publication_dois,
+        fetch_crossref_bibtex
+      )
+    ) |>
+      dplyr::filter(!is.na(.data$bibtex))
+  }
+
+  bibtex_cache <- dplyr::bind_rows(
+    fresh |>
+      dplyr::mutate(cache_priority = 1L),
+    cached |>
+      dplyr::mutate(cache_priority = 2L)
+  ) |>
+    dplyr::arrange(.data$cache_priority) |>
+    dplyr::distinct(.data$doi, .keep_all = TRUE) |>
+    dplyr::select(-.data$cache_priority) |>
+    dplyr::arrange(.data$doi)
+
+  dir.create(dirname(cache_path), recursive = TRUE, showWarnings = FALSE)
+  jsonlite::write_json(
+    bibtex_cache,
+    cache_path,
+    dataframe = "rows",
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    na = "null"
+  )
+
+  cached_lookup <- stats::setNames(
+    bibtex_cache$bibtex,
+    bibtex_cache$doi
+  )
+
   raw_records <- purrr::pmap_chr(
     publications |>
       dplyr::select(
@@ -339,11 +417,14 @@ generate_bibtex_records <- function(publications) {
         .data$year,
         .data$doi,
         .data$type
-      ),
+    ),
     function(title, journal, year, doi, type) {
-      crossref_record <- fetch_crossref_bibtex(doi)
-      if (!is.na(crossref_record)) {
-        return(crossref_record)
+      normalised_doi <- normalize_doi(doi)
+      if (
+        !is.na(normalised_doi) &&
+        normalised_doi %in% names(cached_lookup)
+      ) {
+        return(unname(cached_lookup[[normalised_doi]]))
       }
       fallback_bibtex(title, journal, year, doi, type)
     }

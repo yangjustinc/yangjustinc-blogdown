@@ -8,6 +8,7 @@ on:
       - "content/publications/index.Rmd"
       - "content/publications/index.html"
       - "content/publications/*.bib"
+      - "data/generated/crossref-bibtex.json"
       - "data/generated/openalex-publications.json"
       - "data/site/selected_publications.csv"
 
@@ -16,6 +17,7 @@ permissions:
 
 env:
   R_VERSION: "4.6.1"
+  PUBLICATIONS_USE_CACHE_ONLY: "true"
 
 jobs:
   render:
@@ -56,6 +58,7 @@ jobs:
           path: |
             content/publications/index.html
             content/publications/justin-yang-publications.bib
+            data/generated/crossref-bibtex.json
             data/generated/openalex-publications.json
           if-no-files-found: error
           retention-days: 7
@@ -65,4 +68,5 @@ jobs:
           git diff --exit-code -- \
             content/publications/index.html \
             content/publications/justin-yang-publications.bib \
+            data/generated/crossref-bibtex.json \
             data/generated/openalex-publications.json

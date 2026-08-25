@@ -281,7 +281,8 @@ publication_sections <- publication_sections |>
   select(-selected_strand, -automatic_strand)
 
 bibtex_records <- generate_bibtex_records(
-  publication_sections
+  publication_sections,
+  "../../data/generated/crossref-bibtex.json"
 )
 
 writeLines(
