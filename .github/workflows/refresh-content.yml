@@ -62,7 +62,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet -- content; then
+          if git diff --quiet -- content data/generated; then
             echo "The data sources produced no generated content changes."
             exit 0
           fi
@@ -71,7 +71,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin "$REFRESH_BRANCH:refs/remotes/origin/$REFRESH_BRANCH" || true
           git switch -C "$REFRESH_BRANCH"
-          git add content
+          git add content data/generated
           git commit -m "Refresh data-driven website content"
           git push --force-with-lease origin "$REFRESH_BRANCH"
 
@@ -79,11 +79,11 @@ jobs:
           if [ -n "$pr_url" ]; then
             gh pr edit "$pr_url" \
               --title "Refresh data-driven website content" \
-              --body "Automated refresh of generated publications, funding, peer-review, talks and teaching content from ORCID, Crossref and curated CSV inputs. Review the factual changes before merging."
+              --body "Automated refresh of generated publications, funding, peer-review, talks and teaching content from ORCID, Crossref, OpenAlex and curated inputs. Review the factual changes before merging."
           else
             gh pr create \
               --base main \
               --head "$REFRESH_BRANCH" \
               --title "Refresh data-driven website content" \
-              --body "Automated refresh of generated publications, funding, peer-review, talks and teaching content from ORCID, Crossref and curated CSV inputs. Review the factual changes before merging."
+              --body "Automated refresh of generated publications, funding, peer-review, talks and teaching content from ORCID, Crossref, OpenAlex and curated inputs. Review the factual changes before merging."
           fi

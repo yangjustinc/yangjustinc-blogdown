@@ -464,6 +464,240 @@ main a:hover {
   line-height: 1.6;
 }
 
+.publication-explorer {
+  --strand-clinical: #1f7fc4;
+  --strand-administrative: #137f76;
+  --strand-addiction: #b85c00;
+  --strand-inequalities: #76549f;
+  --strand-population: #4f7d32;
+  margin: 1.25rem 0 2rem;
+}
+
+.publication-strand-clinical {
+  --strand-color: var(--strand-clinical);
+}
+
+.publication-strand-administrative {
+  --strand-color: var(--strand-administrative);
+}
+
+.publication-strand-addiction {
+  --strand-color: var(--strand-addiction);
+}
+
+.publication-strand-inequalities {
+  --strand-color: var(--strand-inequalities);
+}
+
+.publication-strand-population {
+  --strand-color: var(--strand-population);
+}
+
+.publication-filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1rem;
+}
+
+.publication-filter,
+.publication-action {
+  appearance: none;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font: inherit;
+  font-size: 0.83rem;
+  line-height: 1.3;
+  padding: 0.38rem 0.62rem;
+  text-decoration: none;
+}
+
+.publication-filter:hover,
+.publication-action:hover {
+  background: #eef6fb;
+  border-color: #a9cce4;
+  color: #145b8c;
+}
+
+.publication-filter[aria-pressed="true"] {
+  background: #222;
+  border-color: #222;
+  color: #fff;
+}
+
+.publication-filter:focus-visible,
+.publication-action:focus-visible,
+.publication-control input:focus-visible,
+.publication-control select:focus-visible,
+.publication-timeline-mark:focus-visible {
+  outline: 2px solid #1f7fc4;
+  outline-offset: 2px;
+}
+
+.publication-strand-dot {
+  background: var(--strand-color);
+  border-radius: 50%;
+  display: inline-block;
+  flex: 0 0 auto;
+  height: 0.62rem;
+  width: 0.62rem;
+}
+
+.publication-timeline-scroll {
+  margin: 0.5rem 0 0.65rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.publication-timeline {
+  display: block;
+  min-width: 680px;
+  width: 100%;
+}
+
+.publication-timeline-grid {
+  stroke: #e2e2e2;
+  stroke-width: 1;
+}
+
+.publication-timeline-year,
+.publication-timeline-lane {
+  fill: #666;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+}
+
+.publication-timeline-mark {
+  fill: var(--strand-color);
+  stroke: #fff;
+  stroke-width: 2;
+  cursor: pointer;
+  transition: opacity 0.15s ease, r 0.15s ease;
+}
+
+.publication-timeline-mark:hover,
+.publication-timeline-mark.is-selected {
+  r: 8;
+}
+
+.publication-timeline-mark.is-muted {
+  opacity: 0.12;
+}
+
+.publication-selected-paper {
+  color: #555;
+  font-size: 0.9rem;
+  min-height: 1.5rem;
+  margin: 0 0 1.35rem;
+}
+
+.publication-toolbar {
+  align-items: end;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: minmax(0, 1fr) minmax(9rem, 0.35fr) auto;
+  margin: 1rem 0 0.6rem;
+}
+
+.publication-control {
+  color: #555;
+  display: grid;
+  font-size: 0.82rem;
+  font-weight: 600;
+  gap: 0.25rem;
+}
+
+.publication-control input,
+.publication-control select {
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  background: #fff;
+  color: #222;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 400;
+  min-height: 2.35rem;
+  padding: 0.42rem 0.55rem;
+  width: 100%;
+}
+
+.publication-download-all {
+  justify-content: center;
+  min-height: 2.35rem;
+  white-space: nowrap;
+}
+
+.publication-result-count {
+  color: #666;
+  font-size: 0.86rem;
+  margin: 0 0 1rem;
+}
+
+.publication-section {
+  margin-top: 1.5rem;
+}
+
+.publication-entry {
+  border-bottom: 1px solid #ededed;
+  padding: 0.85rem 0 0.95rem;
+}
+
+.publication-entry:last-child {
+  border-bottom: none;
+}
+
+.publication-citation {
+  line-height: 1.58;
+}
+
+.publication-entry-meta {
+  align-items: center;
+  color: #666;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  gap: 0.38rem 0.65rem;
+  margin-top: 0.45rem;
+}
+
+.publication-strand-label {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.publication-open-access {
+  border: 1px solid #b7d8c0;
+  border-radius: 3px;
+  color: #28623a;
+  padding: 0.08rem 0.34rem;
+}
+
+.publication-entry-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.55rem;
+}
+
+@media (max-width: 640px) {
+  .publication-toolbar {
+    align-items: stretch;
+    grid-template-columns: 1fr;
+  }
+
+  .publication-download-all {
+    width: 100%;
+  }
+}
+
 /* Talks */
 .talk-card {
   padding: 1rem 0 1.1rem 0;

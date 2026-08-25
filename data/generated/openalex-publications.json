@@ -1,0 +1,254 @@
+[
+  {
+    "doi": "10.1016/j.healthpol.2019.04.005",
+    "openalex_id": "https://openalex.org/W2938870592",
+    "openalex_source": "Health Policy",
+    "openalex_topics": "HIV, Drug Use, Sexual Risk | Epidemiology | Medicine | Health Sciences | Crime, Illicit Activities, and Governance | Sociology and Political Science | Social Sciences | Census and Population Estimation | Statistics and Probability | Mathematics | Physical Sciences",
+    "is_open_access": true,
+    "open_access_status": "hybrid",
+    "open_access_url": "https://www.sciencedirect.com/science/article/pii/S0168851019301046/pdf"
+  },
+  {
+    "doi": "10.1016/j.jpsychires.2020.12.023",
+    "openalex_id": "https://openalex.org/W3111009006",
+    "openalex_source": "Journal of Psychiatric Research",
+    "openalex_topics": "LGBTQ Health, Identity, and Policy | Social Psychology | Psychology | Social Sciences | HIV/AIDS Research and Interventions | Infectious Diseases | Medicine | Health Sciences | African Sexualities and LGBTQ+ Issues | Sociology and Political Science",
+    "is_open_access": true,
+    "open_access_status": "hybrid",
+    "open_access_url": "https://www.sciencedirect.com/science/article/pii/S0022395620311316/pdf"
+  },
+  {
+    "doi": "10.1016/s2352-4642(22)00247-4",
+    "openalex_id": "https://openalex.org/W4307296948",
+    "openalex_source": "The Lancet Child & Adolescent Health",
+    "openalex_topics": "Autism Spectrum Disorder Research | Cognitive Neuroscience | Neuroscience | Life Sciences | Child Nutrition and Feeding Issues | Psychiatry and Mental health | Medicine | Health Sciences | Language Development and Disorders | Developmental and Educational Psychology | Psychology | Social Sciences",
+    "is_open_access": true,
+    "open_access_status": "hybrid",
+    "open_access_url": "http://www.thelancet.com/article/S2352464222002474/pdf"
+  },
+  {
+    "doi": "10.1017/s0033291722000952",
+    "openalex_id": "https://openalex.org/W4226323586",
+    "openalex_source": "Psychological Medicine",
+    "openalex_topics": "Schizophrenia research and treatment | Psychiatry and Mental health | Medicine | Health Sciences | Pharmacovigilance and Adverse Drug Reactions | Toxicology | Pharmacology, Toxicology and Pharmaceutics | Life Sciences | Pharmaceutical Practices and Patient Outcomes | Geriatrics and Gerontology",
+    "is_open_access": true,
+    "open_access_status": "hybrid",
+    "open_access_url": "https://doi.org/10.1017/s0033291722000952"
+  },
+  {
+    "doi": "10.1080/02791072.2024.2367614",
+    "openalex_id": "https://openalex.org/W4400334441",
+    "openalex_source": "Journal of Psychoactive Drugs",
+    "openalex_topics": "Adolescent Sexual and Reproductive Health | General Health Professions | Health Professions | Health Sciences | HIV, Drug Use, Sexual Risk | Epidemiology | Medicine | HIV/AIDS Research and Interventions | Infectious Diseases",
+    "is_open_access": false,
+    "open_access_status": "green",
+    "open_access_url": "https://researchonline.lshtm.ac.uk/id/eprint/4673166/1/Muschialli%20et%20al.%202024.pdf"
+  },
+  {
+    "doi": "10.1089/lgbt.2023.0085",
+    "openalex_id": "https://openalex.org/W4387807414",
+    "openalex_source": "LGBT Health",
+    "openalex_topics": "LGBTQ Health, Identity, and Policy | Social Psychology | Psychology | Social Sciences | Sexuality, Behavior, and Technology | Clinical Psychology | Substance Abuse Treatment and Outcomes | Epidemiology | Medicine | Health Sciences",
+    "is_open_access": false,
+    "open_access_status": "green",
+    "open_access_url": "https://discovery.ucl.ac.uk/10180280/3/Yang_LGBT-2023-0085_ACCEPTED.pdf"
+  },
+  {
+    "doi": "10.1101/2023.11.27.23298057",
+    "openalex_id": "https://openalex.org/W4389040905",
+    "openalex_source": "medRxiv",
+    "openalex_topics": "Healthcare Decision-Making and Restraints | Clinical Psychology | Psychology | Social Sciences | Emergency and Acute Care Studies | Emergency Medicine | Medicine | Health Sciences | Schizophrenia research and treatment | Psychiatry and Mental health",
+    "is_open_access": true,
+    "open_access_status": "green",
+    "open_access_url": "https://www.medrxiv.org/content/medrxiv/early/2023/11/27/2023.11.27.23298057.full.pdf"
+  },
+  {
+    "doi": "10.1136/bmj.k4003",
+    "openalex_id": "https://openalex.org/W2892920200",
+    "openalex_source": "BMJ",
+    "openalex_topics": "Healthcare Systems and Challenges | General Health Professions | Health Professions | Health Sciences | Health Services Management and Policy | Healthcare cost, quality, practices",
+    "is_open_access": true,
+    "open_access_status": "bronze",
+    "open_access_url": "https://www.bmj.com/content/bmj/362/bmj.k4003.full.pdf"
+  },
+  {
+    "doi": "10.1136/bmjopen-2025-099771",
+    "openalex_id": "https://openalex.org/W4415425884",
+    "openalex_source": "BMJ Open",
+    "openalex_topics": "Climate Change and Health Impacts | Health, Toxicology and Mutagenesis | Environmental Science | Physical Sciences | Urban Heat Island Mitigation | Environmental Engineering | Urban Green Space and Health",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://bmjopen.bmj.com/content/bmjopen/15/10/e099771.full.pdf"
+  },
+  {
+    "doi": "10.1161/circoutcomes.125.012724",
+    "openalex_id": "https://openalex.org/W7119470659",
+    "openalex_source": "Circulation Population Health and Outcomes",
+    "openalex_topics": "Sex and Gender in Healthcare | Public Health, Environmental and Occupational Health | Medicine | Health Sciences | Sexual function and dysfunction studies | Psychiatry and Mental health | Menopause: Health Impacts and Treatments | Endocrinology, Diabetes and Metabolism",
+    "is_open_access": true,
+    "open_access_status": "hybrid",
+    "open_access_url": "https://doi.org/10.1161/circoutcomes.125.012724"
+  },
+  {
+    "doi": "10.1177/13623613251342310",
+    "openalex_id": "https://openalex.org/W4412906778",
+    "openalex_source": "Autism",
+    "openalex_topics": "Autism Spectrum Disorder Research | Cognitive Neuroscience | Neuroscience | Life Sciences | Family and Disability Support Research | Clinical Psychology | Psychology | Social Sciences | Public Health and Social Inequalities | Health",
+    "is_open_access": true,
+    "open_access_status": "hybrid",
+    "open_access_url": "https://doi.org/10.1177/13623613251342310"
+  },
+  {
+    "doi": "10.1177/17579139261433889",
+    "openalex_id": "https://openalex.org/W7155071080",
+    "openalex_source": "Perspectives in Public Health",
+    "openalex_topics": "LGBTQ Health, Identity, and Policy | Social Psychology | Psychology | Social Sciences | HIV/AIDS Research and Interventions | Infectious Diseases | Medicine | Health Sciences | African Sexualities and LGBTQ+ Issues | Sociology and Political Science",
+    "is_open_access": true,
+    "open_access_status": "hybrid",
+    "open_access_url": "https://doi.org/10.1177/17579139261433889"
+  },
+  {
+    "doi": "10.1186/s12939-018-0831-z",
+    "openalex_id": "https://openalex.org/W2886377756",
+    "openalex_source": "International Journal for Equity in Health",
+    "openalex_topics": "Healthcare Systems and Reforms | Finance | Economics, Econometrics and Finance | Social Sciences | Healthcare Policy and Management | Economics and Econometrics | Insurance, Mortality, Demography, Risk Management | Demography",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://equityhealthj.biomedcentral.com/track/pdf/10.1186/s12939-018-0831-z"
+  },
+  {
+    "doi": "10.1186/s12939-019-1026-y",
+    "openalex_id": "https://openalex.org/W2965715822",
+    "openalex_source": "International Journal for Equity in Health",
+    "openalex_topics": "Mental Health Treatment and Access | Social Psychology | Psychology | Social Sciences | Health Systems, Economic Evaluations, Quality of Life | Economics and Econometrics | Economics, Econometrics and Finance | Healthcare Systems and Reforms | Finance",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://equityhealthj.biomedcentral.com/track/pdf/10.1186/s12939-019-1026-y"
+  },
+  {
+    "doi": "10.1186/s13011-023-00568-5",
+    "openalex_id": "https://openalex.org/W4387965094",
+    "openalex_source": "Substance Abuse Treatment Prevention and Policy",
+    "openalex_topics": "Opioid Use Disorder Treatment | Public Health, Environmental and Occupational Health | Medicine | Health Sciences | HIV, Drug Use, Sexual Risk | Epidemiology | Substance Abuse Treatment and Outcomes",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://substanceabusepolicy.biomedcentral.com/counter/pdf/10.1186/s13011-023-00568-5"
+  },
+  {
+    "doi": "10.1186/s40359-025-03497-z",
+    "openalex_id": "https://openalex.org/W4415731094",
+    "openalex_source": "BMC Psychology",
+    "openalex_topics": "Climate Change and Health Impacts | Health, Toxicology and Mutagenesis | Environmental Science | Physical Sciences | Climate Change Communication and Perception | Sociology and Political Science | Social Sciences | COVID-19 and Mental Health | Clinical Psychology | Psychology",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://bmcpsychology.biomedcentral.com/counter/pdf/10.1186/s40359-025-03497-z"
+  },
+  {
+    "doi": "10.1186/s41256-021-00190-7",
+    "openalex_id": "https://openalex.org/W3134574480",
+    "openalex_source": "Global Health Research and Policy",
+    "openalex_topics": "Healthcare Systems and Reforms | Finance | Economics, Econometrics and Finance | Social Sciences | Global Maternal and Child Health | Pediatrics, Perinatology and Child Health | Medicine | Health Sciences | Global Health Care Issues | General Health Professions | Health Professions",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://ghrp.biomedcentral.com/counter/pdf/10.1186/s41256-021-00190-7"
+  },
+  {
+    "doi": "10.1192/bjo.2025.31",
+    "openalex_id": "https://openalex.org/W4409035351",
+    "openalex_source": "BJPsych Open",
+    "openalex_topics": "Schizophrenia research and treatment | Psychiatry and Mental health | Medicine | Health Sciences | Healthcare Decision-Making and Restraints | Clinical Psychology | Psychology | Social Sciences | Psychiatric care and mental health services",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://doi.org/10.1192/bjo.2025.31"
+  },
+  {
+    "doi": "10.1200/go-25-00108",
+    "openalex_id": "https://openalex.org/W4413964894",
+    "openalex_source": "JCO Global Oncology",
+    "openalex_topics": "Global Cancer Incidence and Screening | Oncology | Medicine | Health Sciences | Breast Cancer Treatment Studies | Cancer Research | Biochemistry, Genetics and Molecular Biology | Life Sciences | Cancer Risks and Factors",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://ascopubs.org/doi/pdfdirect/10.1200/GO-25-00108"
+  },
+  {
+    "doi": "10.1371/journal.pone.0199741",
+    "openalex_id": "https://openalex.org/W2811390491",
+    "openalex_source": "PLoS ONE",
+    "openalex_topics": "Employment and Welfare Studies | General Health Professions | Health Professions | Health Sciences | Health disparities and outcomes | Health | Social Sciences | Homelessness and Social Issues",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0199741&type=printable"
+  },
+  {
+    "doi": "10.1371/journal.pone.0218011",
+    "openalex_id": "https://openalex.org/W2953795194",
+    "openalex_source": "PLoS ONE",
+    "openalex_topics": "Forensic Toxicology and Drug Analysis | Toxicology | Pharmacology, Toxicology and Pharmaceutics | Life Sciences | HIV, Drug Use, Sexual Risk | Epidemiology | Medicine | Health Sciences | Substance Abuse Treatment and Outcomes",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pone.0218011/1/pone.0218011.pdf?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=wombat-sa%40plos-prod.iam.gserviceaccount.com%2F20210222%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20210222T181209Z&X-Goog-Expires=3600&X-Goog-SignedHeaders=host&X-Goog-Signature=5c4a09237e2b5378d2e781e34c2184c62549e1136976fe8dbe5215d46316d6ab256491f359cbda8c15b1fce4ae8b071f066353e6c53f523284839c2562f2c8ca669265191586773c2e46f91a0a7ef69c28de16af615af6473ba1c8428336e7932fe2fc1b682e803087f8821f9da92553aab8ed8df0dcda783829482349179326be9265d4eb10d6d110f30db3a5b4668617c5dffc6bc9897b676f45021b9321d7411ef081bdab8b417b25c69da80c8961f03765b59e96b0e0e5f855bb7099136105bed9836af69a61dcb38294542097ebf5bc7be41ed734ecfdde0d7fdcee6a437fe2703789927c1edbfd0a07279babfd258e5fb42c1e5cf7c49affb2ed4a1387"
+  },
+  {
+    "doi": "10.1371/journal.pone.0221153",
+    "openalex_id": "https://openalex.org/W2970380183",
+    "openalex_source": "PLoS ONE",
+    "openalex_topics": "Opioid Use Disorder Treatment | Public Health, Environmental and Occupational Health | Medicine | Health Sciences | Pain Management and Opioid Use | Anesthesiology and Pain Medicine | HIV, Drug Use, Sexual Risk | Epidemiology",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0221153&type=printable"
+  },
+  {
+    "doi": "10.1371/journal.pone.0226349",
+    "openalex_id": "https://openalex.org/W2996410797",
+    "openalex_source": "PLoS ONE",
+    "openalex_topics": "Opioid Use Disorder Treatment | Public Health, Environmental and Occupational Health | Medicine | Health Sciences | Substance Abuse Treatment and Outcomes | Epidemiology | HIV, Drug Use, Sexual Risk",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0226349&type=printable"
+  },
+  {
+    "doi": "10.1371/journal.pone.0229787",
+    "openalex_id": "https://openalex.org/W3010243874",
+    "openalex_source": "PLoS ONE",
+    "openalex_topics": "Opioid Use Disorder Treatment | Public Health, Environmental and Occupational Health | Medicine | Health Sciences | HIV, Drug Use, Sexual Risk | Epidemiology | Substance Abuse Treatment and Outcomes",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0229787&type=printable"
+  },
+  {
+    "doi": "10.1371/journal.pone.0241056",
+    "openalex_id": "https://openalex.org/W4206201205",
+    "openalex_source": "PLoS ONE",
+    "openalex_topics": "Forensic Toxicology and Drug Analysis | Toxicology | Pharmacology, Toxicology and Pharmaceutics | Life Sciences | Opioid Use Disorder Treatment | Public Health, Environmental and Occupational Health | Medicine | Health Sciences | Substance Abuse Treatment and Outcomes | Epidemiology",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://doi.org/10.1371/journal.pone.0241056"
+  },
+  {
+    "doi": "10.1371/journal.pone.0251006",
+    "openalex_id": "https://openalex.org/W3097391887",
+    "openalex_source": "PLoS ONE",
+    "openalex_topics": "Forensic Toxicology and Drug Analysis | Toxicology | Pharmacology, Toxicology and Pharmaceutics | Life Sciences | Substance Abuse Treatment and Outcomes | Epidemiology | Medicine | Health Sciences | Opioid Use Disorder Treatment | Public Health, Environmental and Occupational Health",
+    "is_open_access": true,
+    "open_access_status": "gold",
+    "open_access_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0251006&type=printable"
+  },
+  {
+    "doi": "10.17159/sadj.v78i08.16095",
+    "openalex_id": "https://openalex.org/W4389484994",
+    "openalex_source": "South African Dental Journal",
+    "openalex_topics": "Public Health and Nutrition | Pediatrics, Perinatology and Child Health | Medicine | Health Sciences | Smoking Behavior and Cessation | Physiology",
+    "is_open_access": true,
+    "open_access_status": "diamond",
+    "open_access_url": "https://www.africanentomology.com/index.php/sadj/article/download/17414/20844"
+  },
+  {
+    "doi": "10.4324/9781315158082-10",
+    "openalex_id": "https://openalex.org/W2947692393",
+    "openalex_source": null,
+    "openalex_topics": "Forensic Toxicology and Drug Analysis | Toxicology | Pharmacology, Toxicology and Pharmaceutics | Life Sciences | Cannabis and Cannabinoid Research | Pharmacology | Medicine | Health Sciences | Opioid Use Disorder Treatment | Public Health, Environmental and Occupational Health",
+    "is_open_access": false,
+    "open_access_status": "closed",
+    "open_access_url": null
+  }
+]
