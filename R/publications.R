@@ -259,7 +259,7 @@ add_publication_ids <- function(publications) {
 bibtex_escape <- function(x) {
   x <- dplyr::coalesce(x, "")
   x <- gsub("\\\\", "\\\\textbackslash{}", x)
-  gsub("([#$%&_{}])", "\\\\\\1", x, perl = TRUE)
+  gsub("([#$%&_])", "\\\\\\1", x, perl = TRUE)
 }
 
 fallback_bibtex <- function(title, journal, year, doi, type) {
