@@ -59,6 +59,7 @@
       var visible = Boolean(visibleIds[mark.dataset.publicationId]);
       mark.classList.toggle("is-muted", !visible);
       mark.setAttribute("aria-hidden", String(!visible));
+      mark.setAttribute("tabindex", visible ? "0" : "-1");
     });
 
     updateSections();
