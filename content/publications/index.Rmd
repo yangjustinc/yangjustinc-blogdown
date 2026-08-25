@@ -246,6 +246,10 @@ publication_sections <- publication_sections |>
   left_join(openalex_enrichment, by = "doi") |>
   left_join(selected_strand_overrides, by = "doi") |>
   mutate(
+    journal = coalesce(
+      na_if(journal, ""),
+      openalex_source
+    ),
     automatic_strand = classify_research_strand(
       title,
       openalex_topics
@@ -266,11 +270,11 @@ publication_sections <- publication_sections |>
     ),
     publication_search = str_to_lower(
       paste(
-        title,
-        journal,
-        year,
-        research_strand_label,
-        openalex_topics
+        coalesce(title, ""),
+        coalesce(journal, ""),
+        coalesce(as.character(year), ""),
+        coalesce(research_strand_label, ""),
+        coalesce(openalex_topics, "")
       )
     )
   ) |>
@@ -631,12 +635,12 @@ if (nrow(timeline_data) > 0) {
         mark_y,
         ...
       ) {
-        label <- paste(
+        label <- c(
           title,
-          journal,
-          year,
-          sep = " · "
-        )
+          if (!is.na(journal) && journal != "") journal,
+          year
+        ) |>
+          paste(collapse = " · ")
         paste0(
           '<circle class="publication-timeline-mark publication-strand-',
           htmlEscape(research_strand, attribute = TRUE),
@@ -749,9 +753,15 @@ render_publication_section <- function(data, heading) {
           ""
         }
 
+        open_access_duplicates_doi <-
+          !is.na(doi) &&
+          !is.na(open_access_url) &&
+          normalize_doi(open_access_url) == normalize_doi(doi)
+
         open_access_action <- if (
           !is.na(open_access_url) &&
-          open_access_url != ""
+          open_access_url != "" &&
+          !open_access_duplicates_doi
         ) {
           paste0(
             '<a class="publication-action" href="',

@@ -22,7 +22,7 @@ collapse_openalex_topics <- function(x) {
   }
   keep <- stringr::str_detect(
     value_names,
-    "(^|\\.)(display_name|field|subfield|domain)(\\.|$)"
+    "(^|\\.)display_name$"
   )
 
   if (any(keep)) {
@@ -41,6 +41,7 @@ empty_openalex_enrichment <- function() {
   tibble::tibble(
     doi = character(),
     openalex_id = character(),
+    openalex_source = character(),
     openalex_topics = character(),
     is_open_access = logical(),
     open_access_status = character(),
@@ -95,6 +96,9 @@ fetch_openalex_chunk <- function(dois) {
     doi = normalize_doi(raw_doi),
     openalex_id = as.character(
       openalex_column(result, c("id", "id_oa"), NA_character_)
+    ),
+    openalex_source = as.character(
+      openalex_column(result, "source_display_name", NA_character_)
     ),
     openalex_topics = purrr::map_chr(
       topic_values,
@@ -184,12 +188,12 @@ classify_research_strand <- function(title, openalex_topics = NA_character_) {
   dplyr::case_when(
     stringr::str_detect(
       text,
-      "sexual orientation|gender identity|lgbt|minority|inequal|unmet need|depriv|socioeconomic|social determinant"
-    ) ~ "inequalities",
-    stringr::str_detect(
-      text,
       "autis|neurodiver|special education|school registry|school-age|pupil|record-linked|administrative data|spatial analysis"
     ) ~ "administrative",
+    stringr::str_detect(
+      text,
+      "sexual orientation|gender identity|lgbt|minority|inequal|unmet need|depriv|socioeconomic|social determinant"
+    ) ~ "inequalities",
     stringr::str_detect(
       text,
       "addiction|substance|alcohol|opioid|drug use|e-cigarette|tobacco|buprenorphine|methadone|chemsex|psychoactive"
@@ -308,7 +312,11 @@ fetch_crossref_bibtex <- function(doi) {
   }
 
   tryCatch({
-    result <- rcrossref::cr_cn(dois = doi, format = "bibtex")
+    result <- rcrossref::cr_cn(
+      dois = doi,
+      format = "bibtex",
+      raw = TRUE
+    )
     result <- paste(as.character(result), collapse = "\n")
     if (!stringr::str_detect(result, "^@[[:alnum:]_:-]+\\{")) {
       return(NA_character_)
