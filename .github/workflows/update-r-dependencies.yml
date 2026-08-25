@@ -22,9 +22,10 @@ concurrency:
 env:
   R_VERSION: "4.6.1"
   UPDATE_BRANCH: "automation/update-r-dependencies"
-  # Work around the current renv/setup-renv restore-ordering issue on R 4.6.
-  RENV_CONFIG_INSTALL_TRANSACTIONAL: "FALSE"
-  RENV_CONFIG_INSTALL_JOBS: "1"
+  # Use renv's supported pak restore path while setup-renv's native installer
+  # has a known restore-ordering issue on current R 4.6 runners.
+  RENV_CONFIG_PAK_ENABLED: "TRUE"
+  RENV_CONFIG_SANDBOX_ENABLED: "FALSE"
 
 jobs:
   update:
@@ -49,6 +50,12 @@ jobs:
         run: |
           Rscript -e 'install.packages("renv", repos = "https://cloud.r-project.org")'
           Rscript scripts/update_renv_lock.R
+
+      - name: Install pak for renv restore
+        run: >-
+          Rscript -e 'install.packages("pak", repos = sprintf(
+          "https://r-lib.github.io/p/pak/stable/%s/%s/%s",
+          .Platform$pkgType, R.Version()$os, R.Version()$arch))'
 
       - name: Restore resolved dependency graph
         uses: r-lib/actions/setup-renv@v2
