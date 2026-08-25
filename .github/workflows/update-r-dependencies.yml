@@ -44,7 +44,7 @@ jobs:
 
       - name: Resolve current dependency lockfile
         run: |
-          Rscript -e 'install.packages("renv")'
+          Rscript -e 'install.packages("renv", repos = "https://cloud.r-project.org")'
           Rscript scripts/update_renv_lock.R
 
       - name: Restore resolved dependency graph
