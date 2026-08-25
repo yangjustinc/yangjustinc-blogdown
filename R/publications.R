@@ -22,7 +22,7 @@ collapse_openalex_topics <- function(x) {
   }
   keep <- stringr::str_detect(
     value_names,
-    "(^|\\.)display_name$"
+    "display_name"
   )
 
   if (any(keep)) {
@@ -317,7 +317,8 @@ fetch_crossref_bibtex <- function(doi) {
       format = "bibtex",
       raw = TRUE
     )
-    result <- paste(as.character(result), collapse = "\n")
+    result <- paste(as.character(result), collapse = "\n") |>
+      stringr::str_trim()
     if (!stringr::str_detect(result, "^@[[:alnum:]_:-]+\\{")) {
       return(NA_character_)
     }
