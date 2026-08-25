@@ -1,0 +1,68 @@
+name: Check publications render
+
+on:
+  pull_request:
+    paths:
+      - "DESCRIPTION"
+      - "R/publications.R"
+      - "content/publications/index.Rmd"
+      - "content/publications/index.html"
+      - "content/publications/*.bib"
+      - "data/generated/openalex-publications.json"
+      - "data/site/selected_publications.csv"
+
+permissions:
+  contents: read
+
+env:
+  R_VERSION: "4.6.1"
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository and theme
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+          persist-credentials: false
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: ${{ env.R_VERSION }}
+          use-public-rspm: true
+
+      - name: Set up Pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+
+      - name: Install declared R dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          cache-version: 2
+
+      - name: Render publications
+        run: >-
+          Rscript -e
+          'blogdown::build_site(run_hugo = FALSE,
+          build_rmd = "content/publications/index.Rmd")'
+
+      - name: Upload rendered publications
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: rendered-publications
+          path: |
+            content/publications/index.html
+            content/publications/justin-yang-publications.bib
+            data/generated/openalex-publications.json
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Verify generated files are current
+        run: |
+          git diff --exit-code -- \
+            content/publications/index.html \
+            content/publications/justin-yang-publications.bib \
+            data/generated/openalex-publications.json

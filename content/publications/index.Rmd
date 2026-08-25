@@ -17,6 +17,8 @@ library(stringr)
 library(purrr)
 library(htmltools)
 
+source("../../R/publications.R")
+
 orcid_id <- "0000-0003-2881-4906"
 
 selected <- read_csv(
@@ -31,7 +33,7 @@ selected <- read_csv(
   )
 ) |>
   mutate(
-    doi = str_to_lower(str_squish(doi))
+    doi = normalize_doi(doi)
   ) |>
   arrange(order)
 
@@ -39,7 +41,7 @@ w <- orcid_works(orcid_id)
 
 df <- as_tibble(w) |>
   mutate(
-    doi = str_to_lower(doi),
+    doi = normalize_doi(doi),
     year = as.integer(substr(publication_date, 1, 4)),
     title_key = title |>
       str_to_lower() |>
@@ -218,6 +220,100 @@ preprints <- preprints_raw |>
   ) |>
   filter(!has_published_version)
 
+publication_sections <- bind_rows(
+  peer_reviewed |>
+    mutate(publication_section = "peer-reviewed"),
+  book_chapters |>
+    mutate(publication_section = "book-chapter"),
+  preprints |>
+    mutate(publication_section = "preprint")
+) |>
+  distinct(title_key, publication_section, .keep_all = TRUE) |>
+  add_publication_ids()
+
+openalex_enrichment <- refresh_openalex_enrichment(
+  publication_sections$doi,
+  "../../data/generated/openalex-publications.json"
+)
+
+selected_strand_overrides <- selected |>
+  transmute(
+    doi,
+    selected_strand = classify_selected_strand(theme)
+  )
+
+publication_sections <- publication_sections |>
+  left_join(openalex_enrichment, by = "doi") |>
+  left_join(selected_strand_overrides, by = "doi") |>
+  mutate(
+    automatic_strand = classify_research_strand(
+      title,
+      openalex_topics
+    ),
+    research_strand = coalesce(
+      selected_strand,
+      automatic_strand
+    ),
+    research_strand_label = unname(
+      research_strand_labels[research_strand]
+    ),
+    open_access_url = if_else(
+      is_open_access %in% TRUE &
+        !is.na(open_access_url) &
+        open_access_url != "",
+      open_access_url,
+      NA_character_
+    ),
+    publication_search = str_to_lower(
+      paste(
+        title,
+        journal,
+        year,
+        research_strand_label,
+        openalex_topics
+      )
+    )
+  ) |>
+  select(-selected_strand, -automatic_strand)
+
+bibtex_records <- generate_bibtex_records(
+  publication_sections
+)
+
+writeLines(
+  paste(bibtex_records$bibtex, collapse = "\n\n"),
+  "justin-yang-publications.bib",
+  useBytes = TRUE
+)
+
+publication_sections <- publication_sections |>
+  left_join(bibtex_records, by = "publication_id")
+
+peer_reviewed <- publication_sections |>
+  filter(publication_section == "peer-reviewed") |>
+  arrange(desc(year), title)
+
+book_chapters <- publication_sections |>
+  filter(publication_section == "book-chapter") |>
+  arrange(desc(year), title)
+
+preprints <- publication_sections |>
+  filter(publication_section == "preprint") |>
+  arrange(desc(year), title)
+
+bibtex_json <- bibtex_records |>
+  select(
+    publication_id,
+    bibtex,
+    bibtex_filename
+  ) |>
+  jsonlite::toJSON(
+    dataframe = "rows",
+    auto_unbox = TRUE,
+    na = "null"
+  ) |>
+  str_replace_all("</", "<\\/")
+
 selected_display <- selected |>
   left_join(
     peer_reviewed |>
@@ -382,32 +478,357 @@ recent_display |>
   cat()
 ```
 
-## Complete publication list
+## Explore my research
 
-<div class="publication-list">
+The timeline and filters organise my publications into broad research strands using OpenAlex topics, with curated classifications retained for the programme-defining outputs above. Open-access links are included where OpenAlex identifies an accessible copy.
+
+<div id="publication-explorer" class="publication-explorer">
 
 ```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE}
-cat("### Peer-reviewed publications\n\n")
-cat(
-  paste0(peer_reviewed$citation),
-  sep = "\r  \n"
+strand_buttons <- c(
+  '<button type="button" class="publication-filter" data-strand-filter="all" aria-pressed="true">All strands</button>',
+  imap_chr(
+    research_strand_labels,
+    function(label, strand) {
+      paste0(
+        '<button type="button" class="publication-filter publication-strand-',
+        htmlEscape(strand, attribute = TRUE),
+        '" data-strand-filter="',
+        htmlEscape(strand, attribute = TRUE),
+        '" aria-pressed="false">',
+        '<span class="publication-strand-dot" aria-hidden="true"></span>',
+        htmlEscape(label),
+        '</button>'
+      )
+    }
+  )
 )
 
-if (nrow(book_chapters) > 0) {
-  cat("\n\n### Book chapters\n\n")
+cat(
+  '<div class="publication-filter-group" aria-label="Filter publications by research strand">',
+  paste(strand_buttons, collapse = "\n"),
+  '</div>',
+  sep = "\n"
+)
+
+timeline_data <- peer_reviewed |>
+  filter(
+    !is.na(year),
+    !is.na(research_strand)
+  )
+
+if (nrow(timeline_data) > 0) {
+  plot_left <- 165
+  plot_right <- 875
+  plot_top <- 48
+  lane_gap <- 42
+  timeline_height <- plot_top +
+    (length(research_strand_labels) - 1) * lane_gap +
+    32
+
+  first_year <- min(timeline_data$year)
+  last_year <- max(timeline_data$year)
+  year_span <- max(last_year - first_year, 1)
+  x_for_year <- function(x) {
+    plot_left +
+      ((x - first_year) / year_span) *
+      (plot_right - plot_left)
+  }
+
+  year_breaks <- pretty(
+    c(first_year, last_year),
+    n = 8
+  ) |>
+    as.integer() |>
+    keep(\(x) x >= first_year && x <= last_year) |>
+    unique()
+
+  if (!first_year %in% year_breaks) {
+    year_breaks <- c(first_year, year_breaks)
+  }
+  if (!last_year %in% year_breaks) {
+    year_breaks <- c(year_breaks, last_year)
+  }
+
+  lane_positions <- set_names(
+    plot_top +
+      (seq_along(research_strand_labels) - 1) *
+      lane_gap,
+    names(research_strand_labels)
+  )
+
+  timeline_data <- timeline_data |>
+    group_by(year, research_strand) |>
+    arrange(title, .by_group = TRUE) |>
+    mutate(
+      mark_number = row_number(),
+      marks_in_cell = n(),
+      mark_offset = (
+        mark_number -
+          (marks_in_cell + 1) / 2
+      ) * pmin(10, 42 / pmax(marks_in_cell, 1))
+    ) |>
+    ungroup() |>
+    mutate(
+      mark_x = x_for_year(year) + mark_offset,
+      mark_y = unname(lane_positions[research_strand])
+    )
+
+  vertical_grid <- map_chr(
+    year_breaks,
+    function(year_value) {
+      x <- x_for_year(year_value)
+      paste0(
+        '<line class="publication-timeline-grid" x1="',
+        round(x, 2),
+        '" y1="28" x2="',
+        round(x, 2),
+        '" y2="',
+        timeline_height - 12,
+        '"></line>',
+        '<text class="publication-timeline-year" x="',
+        round(x, 2),
+        '" y="18" text-anchor="middle">',
+        year_value,
+        '</text>'
+      )
+    }
+  )
+
+  horizontal_grid <- imap_chr(
+    research_strand_labels,
+    function(label, strand) {
+      y <- lane_positions[[strand]]
+      paste0(
+        '<line class="publication-timeline-grid" x1="',
+        plot_left,
+        '" y1="',
+        y,
+        '" x2="',
+        plot_right,
+        '" y2="',
+        y,
+        '"></line>',
+        '<text class="publication-timeline-lane" x="0" y="',
+        y + 4,
+        '">',
+        htmlEscape(label),
+        '</text>'
+      )
+    }
+  )
+
+  timeline_marks <- timeline_data |>
+    pmap_chr(
+      function(
+        publication_id,
+        title,
+        journal,
+        year,
+        research_strand,
+        research_strand_label,
+        mark_x,
+        mark_y,
+        ...
+      ) {
+        label <- paste(
+          title,
+          journal,
+          year,
+          sep = " · "
+        )
+        paste0(
+          '<circle class="publication-timeline-mark publication-strand-',
+          htmlEscape(research_strand, attribute = TRUE),
+          '" cx="',
+          round(mark_x, 2),
+          '" cy="',
+          round(mark_y, 2),
+          '" r="6" role="button" tabindex="0" data-publication-id="',
+          htmlEscape(publication_id, attribute = TRUE),
+          '" data-label="',
+          htmlEscape(label, attribute = TRUE),
+          '" aria-label="',
+          htmlEscape(label, attribute = TRUE),
+          '"></circle>'
+        )
+      }
+    )
+
   cat(
-    paste0(book_chapters$citation),
-    sep = "\r  \n"
+    '<div class="publication-timeline-scroll">',
+    paste0(
+      '<svg class="publication-timeline" viewBox="0 0 900 ',
+      timeline_height,
+      '" role="img" aria-labelledby="publication-timeline-title publication-timeline-description">'
+    ),
+    '<title id="publication-timeline-title">Publication timeline by research strand</title>',
+    '<desc id="publication-timeline-description">Each point represents a peer-reviewed publication. Select a point to identify the paper.</desc>',
+    paste(vertical_grid, collapse = "\n"),
+    paste(horizontal_grid, collapse = "\n"),
+    paste(timeline_marks, collapse = "\n"),
+    '</svg>',
+    '</div>',
+    '<p id="publication-selected-paper" class="publication-selected-paper" aria-live="polite">Select a point to identify the publication.</p>',
+    sep = "\n"
+  )
+}
+```
+
+## Complete publication list
+
+```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE}
+publication_years <- publication_sections$year |>
+  stats::na.omit() |>
+  unique() |>
+  sort(decreasing = TRUE)
+
+year_options <- c(
+  '<option value="all">All years</option>',
+  map_chr(
+    publication_years,
+    \(year_value) paste0(
+      '<option value="',
+      year_value,
+      '">',
+      year_value,
+      '</option>'
+    )
+  )
+)
+
+cat(
+  '<div class="publication-toolbar">',
+  '<label class="publication-control" for="publication-search">Search publications',
+  '<input id="publication-search" type="search" placeholder="Title, journal or topic">',
+  '</label>',
+  '<label class="publication-control" for="publication-year">Publication year',
+  '<select id="publication-year">',
+  paste(year_options, collapse = "\n"),
+  '</select>',
+  '</label>',
+  '<a class="publication-action publication-download-all" href="justin-yang-publications.bib" download>Export all (.bib)</a>',
+  '</div>',
+  paste0(
+    '<p id="publication-result-count" class="publication-result-count" aria-live="polite">',
+    nrow(publication_sections),
+    ' publications</p>'
+  ),
+  sep = "\n"
+)
+
+render_publication_section <- function(data, heading) {
+  if (nrow(data) == 0) {
+    return(invisible(NULL))
+  }
+
+  entries <- data |>
+    pmap_chr(
+      function(
+        publication_id,
+        title,
+        journal,
+        year,
+        doi,
+        citation,
+        research_strand,
+        research_strand_label,
+        publication_search,
+        is_open_access,
+        open_access_url,
+        open_access_status,
+        ...
+      ) {
+        doi_action <- if (!is.na(doi) && doi != "") {
+          paste0(
+            '<a class="publication-action" href="https://doi.org/',
+            htmlEscape(doi, attribute = TRUE),
+            '">DOI</a>'
+          )
+        } else {
+          ""
+        }
+
+        open_access_action <- if (
+          !is.na(open_access_url) &&
+          open_access_url != ""
+        ) {
+          paste0(
+            '<a class="publication-action" href="',
+            htmlEscape(open_access_url, attribute = TRUE),
+            '">Open-access copy</a>'
+          )
+        } else {
+          ""
+        }
+
+        open_access_badge <- if (is_open_access %in% TRUE) {
+          '<span class="publication-open-access">Open access</span>'
+        } else {
+          ""
+        }
+
+        paste0(
+          '<article id="',
+          htmlEscape(publication_id, attribute = TRUE),
+          '" class="publication-entry publication-strand-',
+          htmlEscape(research_strand, attribute = TRUE),
+          '" data-strand="',
+          htmlEscape(research_strand, attribute = TRUE),
+          '" data-year="',
+          if_else(is.na(year), "", as.character(year)),
+          '" data-search="',
+          htmlEscape(publication_search, attribute = TRUE),
+          '">',
+          '<div class="publication-citation">',
+          citation_to_html(citation),
+          '</div>',
+          '<div class="publication-entry-meta">',
+          '<span class="publication-strand-label"><span class="publication-strand-dot" aria-hidden="true"></span>',
+          htmlEscape(research_strand_label),
+          '</span>',
+          open_access_badge,
+          '</div>',
+          '<div class="publication-entry-actions">',
+          doi_action,
+          open_access_action,
+          '<button type="button" class="publication-action" data-bibtex-id="',
+          htmlEscape(publication_id, attribute = TRUE),
+          '">BibTeX</button>',
+          '</div>',
+          '</article>'
+        )
+      }
+    )
+
+  cat(
+    '<section class="publication-section" data-publication-section>',
+    paste0('<h3>', htmlEscape(heading), '</h3>'),
+    paste(entries, collapse = "\n"),
+    '</section>',
+    sep = "\n"
   )
 }
 
-if (nrow(preprints) > 0) {
-  cat("\n\n### Preprints\n\n")
-  cat(
-    paste0(preprints$citation),
-    sep = "\r  \n"
-  )
-}
+render_publication_section(
+  peer_reviewed,
+  "Peer-reviewed publications"
+)
+render_publication_section(
+  book_chapters,
+  "Book chapters"
+)
+render_publication_section(
+  preprints,
+  "Preprints"
+)
+
+cat(
+  '<script id="publication-bibtex-data" type="application/json">',
+  bibtex_json,
+  '</script>',
+  sep = "\n"
+)
 ```
 
 </div>
