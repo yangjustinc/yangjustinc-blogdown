@@ -62,7 +62,7 @@ crossref_cache_path <- "../../data/generated/crossref-bibtex.json"
 
 cr_cites <- with_doi |>
   left_join(
-    refresh_crossref_citations(doi, crossref_cache_path),
+    refresh_crossref_citations(with_doi$doi, crossref_cache_path),
     by = "doi"
   )
 
