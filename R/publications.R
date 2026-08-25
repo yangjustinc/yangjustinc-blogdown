@@ -395,7 +395,11 @@ fetch_crossref_citation <- function(doi) {
   if (length(result) != 1 || is.na(result) || result == "") {
     return(NA_character_)
   }
-  as.character(result)
+  as.character(result) |>
+    stringr::str_replace_all(
+      stringr::regex("&amp;", ignore_case = TRUE),
+      "&"
+    )
 }
 
 refresh_crossref_citations <- function(dois, cache_path) {
