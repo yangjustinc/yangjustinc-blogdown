@@ -52,7 +52,7 @@ jobs:
       - name: Create reproducible renv lockfile
         run: |
           Rscript -e 'install.packages("renv")'
-          Rscript -e 'renv::snapshot(lockfile = "renv.lock", type = "explicit", prompt = FALSE)'
+          Rscript -e 'renv::init(project = ".", bare = TRUE, restart = FALSE); renv::snapshot(project = ".", lockfile = "renv.lock", type = "explicit", prompt = FALSE)'
 
       - name: Validate publications with cached external metadata
         env:
@@ -65,7 +65,7 @@ jobs:
       - name: Bootstrap lockfile on hardening branch
         if: github.event_name == 'push'
         run: |
-          if git diff --quiet -- renv.lock; then
+          if [ -z "$(git status --porcelain -- renv.lock)" ]; then
             echo "renv.lock is already current."
             exit 0
           fi
@@ -80,7 +80,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet -- renv.lock; then
+          if [ -z "$(git status --porcelain -- renv.lock)" ]; then
             echo "No R dependency updates are available."
             exit 0
           fi
