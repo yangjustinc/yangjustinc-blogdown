@@ -15,11 +15,11 @@ open research resources, and contact information.
 | --- | --- |
 | [`content/_index.md`](./content/_index.md) | Homepage |
 | [`content/research/`](./content/research/) | Research programme |
-| [`content/people/`](./content/people/) | Core team, researchers in training, programme/data partners, service partners and collaborating research groups |
+| [`content/people/`](./content/people/) | Research team, trainees, programme/data partners, service partners and collaborating research groups |
 | [`content/publications/`](./content/publications/) | Selected and complete publications |
 | [`content/funding/`](./content/funding/) | Research funding |
 | [`content/talks/`](./content/talks/) | Talks and presentations |
-| [`content/teaching/`](./content/teaching/) | Teaching, supervision and researcher development |
+| [`content/teaching/`](./content/teaching/) | Teaching, supervision and trainee development |
 | [`content/resources/`](./content/resources/) | Selected open research, code and reusable teaching materials |
 | [`content/leadership/`](./content/leadership/) | Academic leadership and recognition |
 | [`content/contact/`](./content/contact/) | Contact information |
@@ -59,29 +59,25 @@ Several sections minimise manual duplication:
 
 - **Publications** are retrieved from ORCID, with
   [`selected_publications.csv`](./data/site/selected_publications.csv)
-  providing the curated programme-defining selection and contribution notes.
+  providing the curated selection and contribution notes.
 - **Funding** is retrieved from ORCID, with
   [`funding_overrides.csv`](./data/site/funding_overrides.csv) clarifying
   roles and concise descriptions where needed.
 - **Teaching and supervision** uses
-  [`students.csv`](./data/site/students.csv).
+  [`students.csv`](./data/site/students.csv) and generates a downloadable
+  [`supervision-record.csv`](./content/teaching/supervision-record.csv).
 - **Talks and presentations** uses [`talks.csv`](./data/site/talks.csv).
 
 The CSV inputs live under `data/`, so Hugo does not copy them into the
-published website.
+published website unless an explicit public export is generated from them.
 
-The **People & Partnerships** page remains intentionally curated rather than
-automatically generated. It distinguishes the core team and researchers in
-training from programme/data-infrastructure partners, service partners and
-collaborating research groups. Relationships are included because they are
-current or longstanding parts of the research network; the page should not be
-used as an automatic directory of every collaboration or affiliation.
+The **People & Partnerships** page is curated rather than automatically
+generated. It presents the research team, trainees, programme/data-infrastructure
+partners, service partners and collaborating research groups.
 
-The **Open Research & Resources** page is likewise curated rather than
-automatically generated from GitHub. Inclusion indicates that a resource is
-reasonably documented, reusable, or useful beyond the project for which it was
-created. This prevents the website from exposing every public repository
-regardless of maturity or intended audience.
+The **Open Research & Resources** page is also curated rather than automatically
+generated from GitHub, so only documented and reusable materials intended for a
+wider audience are highlighted.
 
 ## Local development
 
@@ -153,6 +149,10 @@ requires the generated publication files to be non-empty and checks that both
 the OpenAlex cache and BibTeX export retain a plausible number of records, so a
 transient upstream failure cannot silently replace the publication list with an
 empty or near-empty result.
+
+Teaching has a separate render-consistency check when its R Markdown source or
+student data change. This verifies that the committed HTML and downloadable
+supervision record still match the maintained source data.
 
 ## Updating dependencies and the theme
 
