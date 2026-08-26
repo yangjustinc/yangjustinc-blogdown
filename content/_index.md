@@ -55,7 +55,7 @@ These are time-bounded parts of a wider research agenda. As individual awards co
 
 ## Work with MINDSET
 
-MINDSET is collaborative by design, connecting a small research team with a wider network of researchers, NHS organisations, public-sector data providers, treatment services, charities, people with lived experience, and policy and research partners.
+MINDSET is collaborative by design, connecting researchers, NHS organisations, public-sector data providers, treatment services, charities, people with lived experience, and policy and research partners across a wider research network.
 
 - **Researchers and research groups:** collaboration on psychiatric epidemiology, linked data, electronic health records, causal inference, mental-health data science, and related substantive questions.
 - **NHS, policy, data, and service partners:** work on the responsible use of routinely collected data, research infrastructure, evaluation, and questions with practical relevance to services and public decision-making.
