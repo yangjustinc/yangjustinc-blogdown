@@ -1,12 +1,12 @@
 ---
 title: Teaching & Supervision
-description: "Researcher development, supervision, teaching, and quantitative methods training by Dr Justin C Yang at UCL."
+description: "Teaching, supervision, trainee development, and quantitative methods training by Dr Justin C Yang at UCL."
 output:
   html_document:
     keep_md: yes
 ---
 
-My teaching and supervision focus on **developing researchers who can work critically, confidently, and responsibly with complex health and population data**. This includes doctoral and master's supervision, quantitative methods teaching, open and reproducible research training, and wider mentoring of early-career researchers.
+My teaching and supervision are organised around a simple aim: **helping trainees become thoughtful, independent researchers who can reason clearly with complex health and population data**. I teach quantitative methods, supervise research across mental health and population health, and contribute to open and reproducible research training.
 
 ```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(tidyverse)
@@ -17,9 +17,23 @@ students <- read_csv(
   show_col_types = FALSE
 )
 
-current_phd <- students |>
+current_phd_students <- students |>
   filter(
     Degree == "PhD",
+    str_detect(`Year(s)`, "Present"),
+    str_detect(str_to_lower(Role), "supervisor")
+  )
+
+current_phd_committees <- students |>
+  filter(
+    Degree == "PhD",
+    str_detect(`Year(s)`, "Present"),
+    str_detect(str_to_lower(Role), "committee")
+  )
+
+current_taught <- students |>
+  filter(
+    Degree != "PhD",
     str_detect(`Year(s)`, "Present")
   )
 
@@ -36,27 +50,32 @@ published_projects <- students |>
   )
 ```
 
-## Researcher development & supervision
+## How I teach and supervise
 
-I currently contribute to the supervision and development of doctoral researchers across neurodevelopment, health inequalities, population mental health, learning disability, and the effects of extreme heat on severe mental illness.
+<div class="teaching-principles">
+<div class="teaching-principle"><b>Reason from the question</b><br>Start with the scientific question and the assumptions needed to answer it, rather than treating statistical methods as recipes.</div>
+<div class="teaching-principle"><b>Work reproducibly</b><br>Use transparent computational workflows that make analytical decisions inspectable, repeatable, and easier to communicate.</div>
+<div class="teaching-principle"><b>Know the limits of the data</b><br>Take selection, measurement, missingness, institutional data-generating processes, and causal assumptions seriously.</div>
+<div class="teaching-principle"><b>Develop independence</b><br>Supervision should progressively shift ownership of decisions, interpretation, and communication to the trainee.</div>
+</div>
+
+These principles cut across my teaching in epidemiology, statistics, data science, and research methods. I use applied examples from mental-health and population research and aim to make quantitative reasoning accessible to trainees with different levels of prior experience.
+
+## Current trainees
+
+### PhD students
+
+I currently contribute as secondary supervisor to PhD work spanning neurodevelopment, educational experiences, and inequalities in psychiatric disorders.
 
 <div class="site-table-wrap">
 
 ```{r results='asis', echo=FALSE}
-current_phd |>
+current_phd_students |>
   arrange(Student) |>
-  select(
-    Student,
-    Role,
-    Topic
-  ) |>
+  select(Student, Role, Topic) |>
   knitr::kable(
     format = "html",
-    col.names = c(
-      "Researcher",
-      "Role",
-      "Research"
-    ),
+    col.names = c("PhD student", "Role", "Research"),
     table.attr = 'class="site-table"'
   ) |>
   cat()
@@ -64,61 +83,83 @@ current_phd |>
 
 </div>
 
-Alongside doctoral supervision, I have substantial experience as a primary and secondary supervisor for master's and undergraduate research. The supervision record below is generated from a maintained project list; several student projects have subsequently contributed to peer-reviewed outputs.
+### Thesis committees
+
+I also contribute to doctoral research through thesis-committee roles where my methodological or substantive expertise is relevant.
+
+<div class="site-table-wrap">
+
+```{r results='asis', echo=FALSE}
+current_phd_committees |>
+  arrange(Student) |>
+  select(Student, Topic) |>
+  knitr::kable(
+    format = "html",
+    col.names = c("PhD student", "Research"),
+    table.attr = 'class="site-table"'
+  ) |>
+  cat()
+```
+
+</div>
+
+### MSc supervision
+
+```{r results='asis', echo=FALSE}
+if (nrow(current_taught) > 0) {
+  current_taught |>
+    arrange(Student) |>
+    select(Student, Degree, Role, Topic) |>
+    knitr::kable(
+      format = "html",
+      col.names = c("Student", "Degree", "Role", "Project"),
+      table.attr = 'class="site-table"'
+    ) |>
+    cat()
+}
+```
+
+## Teaching & training
+
+At UCL, I teach epidemiology, statistics, and research methods across postgraduate mental-health programmes. Current and recent teaching includes:
+
+<div class="teaching-module-grid">
+<div class="teaching-module"><a href="https://www.ucl.ac.uk/module-catalogue/modules/core-principles-of-mental-health-research-PSBS0002"><b>Core Principles of Mental Health Research</b></a><br>Research design, critical appraisal, and the foundations of mental-health research.</div>
+<div class="teaching-module"><a href="https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research-PSBS0008"><b>Practical Statistics for Mental Health Research</b></a><br>Applied quantitative reasoning and statistical analysis for mental-health research.</div>
+<div class="teaching-module"><a href="https://www.ucl.ac.uk/module-catalogue/modules/epidemiological-research-methods-in-mental-health-PSBS0013"><b>Epidemiological Research Methods in Mental Health</b></a><br>Epidemiological designs, measures, inference, and interpretation in psychiatric research.</div>
+</div>
+
+I have also contributed to curriculum development around **open science** and **public involvement and engagement with research**. As a certified instructor with [The Carpentries](https://carpentries.org/), I teach practical data and computational skills for open and reproducible research. Selected reusable teaching materials are available through [Open Research & Resources](../resources/).
+
+## Supervision in practice
 
 ```{r results='asis', echo=FALSE}
 cat(
   '<div class="supervision-summary">',
   '<b>', nrow(primary_projects), '</b> primary-supervised postgraduate or undergraduate projects',
   ' &middot; ',
-  '<b>', nrow(current_phd), '</b> current doctoral supervision or thesis-committee roles',
+  '<b>', nrow(current_phd_students), '</b> current PhD students',
   ' &middot; ',
-  '<b>', nrow(published_projects), '</b> listed student projects linked to published outputs',
+  '<b>', nrow(current_phd_committees), '</b> current thesis-committee roles',
+  ' &middot; ',
+  '<b>', nrow(published_projects), '</b> student projects linked to published outputs',
   '</div>'
 )
 ```
 
-I also mentor and support early-career researchers through collaborative projects, methods training, research-culture initiatives, and informal research development. I am a certified instructor with [The Carpentries](https://carpentries.org/), with a focus on practical data and computational skills for open and reproducible research.
+The supervision portfolio spans mental health, addiction, neurodivergence, climate and health, health inequalities, public health, and health policy. Several projects have developed into peer-reviewed outputs.
 
-## Postgraduate teaching
-
-At UCL, I teach epidemiology, statistics, and research methods across postgraduate mental-health programmes. Teaching has included:
-
-- [Core Principles of Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/core-principles-of-mental-health-research-PSBS0002)
-- [Practical Statistics for Mental Health Research](https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research-PSBS0008)
-- [Epidemiological Research Methods in Mental Health](https://www.ucl.ac.uk/module-catalogue/modules/epidemiological-research-methods-in-mental-health-PSBS0013)
-
-I have also contributed to curriculum development around **open science** and **public involvement and engagement with research**.
-
-My approach to quantitative teaching emphasises reasoning about evidence: what a study can and cannot support, when stronger or causal conclusions are justified, how analytical decisions influence results, and how findings can be communicated clearly and responsibly. I use applied examples from epidemiology and mental-health research and place particular emphasis on making quantitative methods accessible to students with different levels of prior experience.
-
-## MSc and undergraduate research supervision
+### Student work linked to publications
 
 <div class="site-table-wrap">
 
 ```{r results='asis', echo=FALSE}
-students |>
-  filter(Degree != "PhD") |>
-  arrange(
-    desc(`Year(s)`),
-    Student
-  ) |>
-  select(
-    Student,
-    Degree,
-    `Year(s)`,
-    Role,
-    Topic
-  ) |>
+published_projects |>
+  arrange(desc(`Year(s)`), Student) |>
+  select(Student, Degree, Role, Topic) |>
   knitr::kable(
     format = "html",
-    col.names = c(
-      "Student",
-      "Degree",
-      "Year(s)",
-      "Role",
-      "Project"
-    ),
+    col.names = c("Student", "Degree", "Role", "Published work"),
     table.attr = 'class="site-table"'
   ) |>
   cat()
@@ -126,7 +167,30 @@ students |>
 
 </div>
 
-## Previous doctoral committee role
+<details>
+<summary><b>View full MSc and undergraduate supervision record</b></summary>
+
+<div class="site-table-wrap">
+
+```{r results='asis', echo=FALSE}
+students |>
+  filter(Degree != "PhD") |>
+  arrange(desc(`Year(s)`), Student) |>
+  select(Student, Degree, `Year(s)`, Role, Topic) |>
+  knitr::kable(
+    format = "html",
+    col.names = c("Student", "Degree", "Year(s)", "Role", "Project"),
+    table.attr = 'class="site-table"'
+  ) |>
+  cat()
+```
+
+</div>
+
+</details>
+
+<details>
+<summary><b>View previous doctoral committee roles</b></summary>
 
 <div class="site-table-wrap">
 
@@ -136,27 +200,14 @@ doctoral_previous <- students |>
     Degree == "PhD",
     !str_detect(`Year(s)`, "Present")
   ) |>
-  arrange(
-    desc(`Year(s)`),
-    Student
-  ) |>
-  select(
-    Student,
-    `Year(s)`,
-    Role,
-    Topic
-  )
+  arrange(desc(`Year(s)`), Student) |>
+  select(Student, `Year(s)`, Role, Topic)
 
 if (nrow(doctoral_previous) > 0) {
   doctoral_previous |>
     knitr::kable(
       format = "html",
-      col.names = c(
-        "Researcher",
-        "Year(s)",
-        "Role",
-        "Research"
-      ),
+      col.names = c("PhD student", "Year(s)", "Role", "Research"),
       table.attr = 'class="site-table"'
     ) |>
     cat()
@@ -165,4 +216,8 @@ if (nrow(doctoral_previous) > 0) {
 
 </div>
 
-Prospective PhD, MSc, and undergraduate students interested in psychiatric epidemiology, causal inference, mental-health data science, or related areas are welcome to [get in touch](../contact/) to discuss potential supervision or project ideas.
+</details>
+
+## Prospective trainees
+
+I am interested in supervising PhD, MSc, and undergraduate projects that fit the wider MINDSET agenda, particularly in psychiatric epidemiology, linked administrative or clinical data, causal inference, mental-health data science, neurodivergence, addiction, and inequalities. Prospective trainees are welcome to [get in touch](../contact/) with a brief outline of their interests and the type of project or supervision they are seeking.
