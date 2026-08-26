@@ -47,10 +47,15 @@ As Deputy Lead of the North London NHS Foundation Trust Research Database, I hel
 
 These programmes are time-bounded parts of a wider research agenda. As individual awards conclude and new work develops, the underlying questions remain the organising principles of MINDSET.
 
-## Collaboration and research culture
+## Work with MINDSET
 
 MINDSET is collaborative by design. I work with researchers, doctoral students, NHS organisations, public-sector data providers, charities, people with lived experience, and policy and research partners across the UK and internationally.
 
-Across this work, I aim to develop research that is methodologically rigorous, transparent and reproducible, attentive to inequalities, and accountable to the people and communities represented in the data.
+- **Researchers and research groups:** collaboration on psychiatric epidemiology, linked data, electronic health records, causal inference, mental-health data science, and related substantive questions.
+- **NHS, policy, data, and service partners:** work on the responsible use of routinely collected data, research infrastructure, evaluation, and questions with practical relevance to services and public decision-making.
+- **People with lived experience and public partners:** involvement in shaping research questions, interpretation, governance, and the use of evidence about health and care.
+- **Students and researchers in training:** postgraduate supervision, methods collaboration, teaching, and researcher development where there is a strong fit with the programme.
 
-Explore the [research programme](research/), [people and partnerships](people/), [publications](publications/), [research funding](funding/), and [leadership and recognition](leadership/).
+Across this work, I aim to develop research that is methodologically rigorous, transparent and reproducible, attentive to inequalities, and accountable to the people and communities represented in the data. See [people and partnerships](people/), [teaching and supervision](teaching/), [open research and resources](resources/), or [get in touch](contact/).
+
+Explore the [research programme](research/), [publications](publications/), [research funding](funding/), and [leadership and recognition](leadership/).
