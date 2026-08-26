@@ -64,12 +64,11 @@ Several sections minimise manual duplication:
   [`funding_overrides.csv`](./data/site/funding_overrides.csv) clarifying
   roles and concise descriptions where needed.
 - **Teaching and supervision** uses
-  [`students.csv`](./data/site/students.csv) and generates a downloadable
-  [`supervision-record.csv`](./content/teaching/supervision-record.csv).
+  [`students.csv`](./data/site/students.csv).
 - **Talks and presentations** uses [`talks.csv`](./data/site/talks.csv).
 
 The CSV inputs live under `data/`, so Hugo does not copy them into the
-published website unless an explicit public export is generated from them.
+published website.
 
 The **People & Partnerships** page is curated rather than automatically
 generated. It presents the research team, trainees, programme/data-infrastructure
@@ -145,14 +144,14 @@ check on every pull request and every push to `main`. Netlify then deploys
 the merged `main` branch using the same Hugo release.
 
 Publication rendering has one additional deliberately small sanity check. It
-requires the generated publication files to be non-empty and checks that both
-the OpenAlex cache and BibTeX export retain a plausible number of records, so a
-transient upstream failure cannot silently replace the publication list with an
-empty or near-empty result.
+requires the generated publication artefacts to remain non-empty and checks
+that cached metadata retain a plausible number of records, so a transient
+upstream failure cannot silently replace the publication list with an empty or
+near-empty result.
 
 Teaching has a separate render-consistency check when its R Markdown source or
-student data change. This verifies that the committed HTML and downloadable
-supervision record still match the maintained source data.
+student data change. This verifies that the committed HTML and generated record
+remain aligned with the maintained source data.
 
 ## Updating dependencies and the theme
 
