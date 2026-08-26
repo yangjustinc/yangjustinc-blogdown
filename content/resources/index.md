@@ -27,4 +27,4 @@ The repository documents the build, dependency-management, content-refresh, and 
 
 Additional public repositories are available through my [GitHub profile](https://github.com/yangjustinc). I keep this page selective rather than automatically listing every repository: inclusion here is intended to indicate material that is reasonably documented, reusable, or useful beyond the project for which it was created.
 
-Where project-specific code or materials can be shared, they may also be linked from the relevant [research](../research/), [publication](../publications/), or [teaching](../teaching/) pages.
+Where project-specific code or materials can be shared, they may also be linked from the relevant [research](../research/), [publications](../publications/), or [teaching](../teaching/) pages.
