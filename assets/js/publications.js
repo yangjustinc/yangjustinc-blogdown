@@ -98,6 +98,69 @@
     return (value || "").toLowerCase().trim();
   }
 
+  function inferYear(entry) {
+    var explicitYear = parseInt(entry.dataset.year, 10);
+    if (Number.isFinite(explicitYear)) return explicitYear;
+
+    var citation = entry.querySelector(".publication-citation");
+    var match = citation && citation.textContent.match(/\(((?:19|20)\d{2})\)/);
+    return match ? parseInt(match[1], 10) : null;
+  }
+
+  function normalisePublicationYears() {
+    entries.forEach(function (entry) {
+      var resolvedYear = inferYear(entry);
+      if (resolvedYear !== null) entry.dataset.year = String(resolvedYear);
+    });
+
+    document.querySelectorAll("[data-publication-section]").forEach(function (section) {
+      var sectionEntries = Array.prototype.slice.call(
+        section.querySelectorAll(".publication-entry")
+      );
+
+      sectionEntries.sort(function (a, b) {
+        var yearA = inferYear(a) || -Infinity;
+        var yearB = inferYear(b) || -Infinity;
+        if (yearA !== yearB) return yearB - yearA;
+
+        var citationA = normalise(
+          (a.querySelector(".publication-citation") || {}).textContent
+        );
+        var citationB = normalise(
+          (b.querySelector(".publication-citation") || {}).textContent
+        );
+        return citationA.localeCompare(citationB);
+      });
+
+      sectionEntries.forEach(function (entry) {
+        section.appendChild(entry);
+      });
+    });
+
+    if (year) {
+      var years = entries
+        .map(inferYear)
+        .filter(function (value) { return value !== null; })
+        .filter(function (value, index, values) {
+          return values.indexOf(value) === index;
+        })
+        .sort(function (a, b) { return b - a; });
+
+      var allOption = year.querySelector('option[value="all"]');
+      year.textContent = "";
+      if (allOption) year.appendChild(allOption);
+
+      years.forEach(function (value) {
+        var option = document.createElement("option");
+        option.value = String(value);
+        option.textContent = String(value);
+        year.appendChild(option);
+      });
+    }
+  }
+
+  normalisePublicationYears();
+
   function matchesFilters(entry) {
     var strandMatches =
       activeStrand === "all" || entry.dataset.strand === activeStrand;
