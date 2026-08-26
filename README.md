@@ -6,9 +6,8 @@ and Treatment)**, the research programme led by Dr Justin C Yang at University
 College London.
 
 The site presents the programme's research, people and collaborations,
-publications, funding, talks, teaching and supervision, research contribution
-and engagement, academic leadership, open research resources, and contact
-information.
+publications, funding, talks, teaching and supervision, academic leadership,
+open research resources, and contact information.
 
 ## Site structure
 
@@ -22,7 +21,6 @@ information.
 | [`content/talks/`](./content/talks/) | Talks and presentations |
 | [`content/teaching/`](./content/teaching/) | Teaching, supervision and researcher development |
 | [`content/resources/`](./content/resources/) | Selected open research, code and reusable teaching materials |
-| [`content/contribution/`](./content/contribution/) | Research infrastructure, engagement, advisory contribution and capacity building |
 | [`content/leadership/`](./content/leadership/) | Academic leadership and recognition |
 | [`content/contact/`](./content/contact/) | Contact information |
 | [`data/site/`](./data/site/) | Curated CSV inputs used by R Markdown pages |
@@ -77,14 +75,6 @@ automatically generated from GitHub. Inclusion indicates that a resource is
 reasonably documented, reusable, or useful beyond the project for which it was
 created. This prevents the website from exposing every public repository
 regardless of maturity or intended audience.
-
-The **Research Contribution & Engagement** page similarly distinguishes enabling
-and engagement activity from demonstrated downstream impact. It should describe
-infrastructure, advisory contribution, public-interest governance, capacity
-building and engagement on their own terms, and reserve impact claims for cases
-where uptake, use or change can be evidenced. It is intentionally a prose page
-for now: a structured impact dataset should only be introduced when there is
-enough evidence to justify maintaining one rather than creating an empty schema.
 
 ## Local development
 
