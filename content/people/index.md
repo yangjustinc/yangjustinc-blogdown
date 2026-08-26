@@ -187,4 +187,4 @@ Population and social epidemiology, psychosis, causal inference, and inequalitie
 
 </div>
 
-MINDSET is intentionally networked rather than organised as a large standalone laboratory. The core team provides continuity, while the wider partnerships bring the data, methods, clinical and service expertise, public involvement, and disciplinary perspectives needed for different research questions.
+The core team provides continuity, while the wider partnerships bring the data, methods, clinical and service expertise, public involvement, and disciplinary perspectives needed for different research questions.
