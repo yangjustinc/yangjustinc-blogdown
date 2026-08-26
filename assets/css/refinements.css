@@ -220,6 +220,7 @@
 
 .supervision-stat {
   min-width: 8rem;
+  flex: 1 1 10rem;
 }
 
 .supervision-stat b {
