@@ -6,8 +6,6 @@
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
-    {{ $refinements := resources.Get "css/refinements.css" | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $refinements.RelPermalink }}" integrity="{{ $refinements.Data.Integrity }}">
     <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
     {{ if not .IsHome }}
       {{ $headingLinks := resources.Get "js/heading-links.js" | minify | fingerprint }}
