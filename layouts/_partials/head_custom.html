@@ -71,4 +71,6 @@
 {{- if eq .RelPermalink "/publications/" }}
   {{- $publicationsJS := resources.Get "js/publications.js" | minify | fingerprint }}
   <script src="{{ $publicationsJS.RelPermalink }}" integrity="{{ $publicationsJS.Data.Integrity }}" defer></script>
+  {{- $recentPublicationsJS := resources.Get "js/publications-recent.js" | minify | fingerprint }}
+  <script src="{{ $recentPublicationsJS.RelPermalink }}" integrity="{{ $recentPublicationsJS.Data.Integrity }}" defer></script>
 {{- end }}
