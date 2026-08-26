@@ -15,7 +15,7 @@ open research resources, and contact information.
 | --- | --- |
 | [`content/_index.md`](./content/_index.md) | Homepage |
 | [`content/research/`](./content/research/) | Research programme |
-| [`content/people/`](./content/people/) | Research team, doctoral researchers, partners and collaborators |
+| [`content/people/`](./content/people/) | Core team, researchers in training, programme/data partners, service partners and collaborating research groups |
 | [`content/publications/`](./content/publications/) | Selected and complete publications |
 | [`content/funding/`](./content/funding/) | Research funding |
 | [`content/talks/`](./content/talks/) | Talks and presentations |
@@ -53,7 +53,7 @@ renders. The **Update R dependencies** workflow runs monthly on the 15th and
 proposes a pull request when a newer tested dependency graph is available; it
 does not merge package updates automatically.
 
-## Data-driven pages
+## Data-driven and curated pages
 
 Several sections minimise manual duplication:
 
@@ -70,7 +70,14 @@ Several sections minimise manual duplication:
 The CSV inputs live under `data/`, so Hugo does not copy them into the
 published website.
 
-The **Open Research & Resources** page is deliberately curated rather than
+The **People & Partnerships** page remains intentionally curated rather than
+automatically generated. It distinguishes the core team and researchers in
+training from programme/data-infrastructure partners, service partners and
+collaborating research groups. Relationships are included because they are
+current or longstanding parts of the research network; the page should not be
+used as an automatic directory of every collaboration or affiliation.
+
+The **Open Research & Resources** page is likewise curated rather than
 automatically generated from GitHub. Inclusion indicates that a resource is
 reasonably documented, reusable, or useful beyond the project for which it was
 created. This prevents the website from exposing every public repository
