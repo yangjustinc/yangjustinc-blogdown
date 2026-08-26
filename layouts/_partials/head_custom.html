@@ -3,6 +3,9 @@
 {{- $title := .Site.Title -}}
 {{- if not .IsHome }}{{ $title = printf "%s | %s" .Title .Site.Title }}{{ end -}}
 {{- $image := .Site.Params.ogImage | absURL -}}
+{{- $personID := printf "%s#person" .Site.BaseURL -}}
+{{- $websiteID := printf "%s#website" .Site.BaseURL -}}
+{{- $pageID := printf "%s#webpage" .Permalink -}}
 <meta name="description" content="{{ $description | plainify }}">
 <link rel="canonical" href="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
@@ -23,16 +26,41 @@
 <script type="application/ld+json">
 {{ dict
   "@context" "https://schema.org"
-  "@type" "Person"
-  "name" .Site.Params.person.name
-  "jobTitle" .Site.Params.person.jobTitle
-  "url" .Site.BaseURL
-  "affiliation" (dict "@type" "Organization" "name" .Site.Params.person.affiliation "url" "https://www.ucl.ac.uk")
-  "sameAs" (slice
-    .Site.Params.person.orcid
-    "https://github.com/yangjustinc"
-    "https://bsky.app/profile/justinyang.me"
-    "https://www.linkedin.com/in/yangjustinc"
+  "@graph" (slice
+    (dict
+      "@type" "Person"
+      "@id" $personID
+      "name" .Site.Params.person.name
+      "jobTitle" .Site.Params.person.jobTitle
+      "url" .Site.BaseURL
+      "affiliation" (dict "@type" "Organization" "name" .Site.Params.person.affiliation "url" "https://www.ucl.ac.uk")
+      "sameAs" (slice
+        .Site.Params.person.orcid
+        "https://scholar.google.com/citations?user=o-MsbBYAAAAJ"
+        "https://github.com/yangjustinc"
+        "https://bsky.app/profile/justinyang.me"
+        "https://www.linkedin.com/in/yangjustinc"
+      )
+    )
+    (dict
+      "@type" "WebSite"
+      "@id" $websiteID
+      "url" .Site.BaseURL
+      "name" .Site.Title
+      "description" .Site.Params.description
+      "inLanguage" "en-GB"
+      "author" (dict "@id" $personID)
+    )
+    (dict
+      "@type" "WebPage"
+      "@id" $pageID
+      "url" .Permalink
+      "name" $title
+      "description" ($description | plainify)
+      "inLanguage" "en-GB"
+      "isPartOf" (dict "@id" $websiteID)
+      "about" (dict "@id" $personID)
+    )
   )
   | jsonify | safeJS
 }}
@@ -43,4 +71,6 @@
 {{- if eq .RelPermalink "/publications/" }}
   {{- $publicationsJS := resources.Get "js/publications.js" | minify | fingerprint }}
   <script src="{{ $publicationsJS.RelPermalink }}" integrity="{{ $publicationsJS.Data.Integrity }}" defer></script>
+  {{- $recentPublicationsJS := resources.Get "js/publications-recent.js" | minify | fingerprint }}
+  <script src="{{ $recentPublicationsJS.RelPermalink }}" integrity="{{ $recentPublicationsJS.Data.Integrity }}" defer></script>
 {{- end }}

@@ -4,6 +4,81 @@
   var explorer = document.getElementById("publication-explorer");
   if (!explorer) return;
 
+  var areaLabels = {
+    clinical: "Clinical records & services",
+    administrative: "Linked data & neurodivergence",
+    addiction: "Addiction & treatment",
+    inequalities: "Inequalities & social determinants",
+    population: "Population health & methods"
+  };
+
+  var legacyLabels = {
+    "Clinical data": areaLabels.clinical,
+    "Administrative data": areaLabels.administrative,
+    "Addiction": areaLabels.addiction,
+    "Inequalities": areaLabels.inequalities,
+    "Population health": areaLabels.population
+  };
+
+  function setLabelWithDot(element, label) {
+    var dot = element.querySelector(".publication-strand-dot");
+    element.textContent = "";
+    if (dot) element.appendChild(dot);
+    element.appendChild(document.createTextNode(label));
+  }
+
+  function applyResearchAreaLanguage() {
+    var selectedSection = document.getElementById("programme-defining-outputs");
+    if (selectedSection) {
+      var selectedHeading = selectedSection.querySelector("h2");
+      var selectedIntro = selectedSection.querySelector("p");
+      if (selectedHeading) selectedHeading.textContent = "Selected publications";
+      if (selectedIntro) {
+        selectedIntro.textContent =
+          "A curated selection of papers spanning the main substantive and methodological areas of my research.";
+      }
+    }
+
+    var exploreSection = document.getElementById("explore-my-research");
+    if (exploreSection) {
+      var exploreIntro = exploreSection.querySelector("p");
+      if (exploreIntro) {
+        exploreIntro.textContent =
+          "The timeline and filters group publications into broad research areas using OpenAlex topics, with curated classifications retained for selected papers. Open-access links are included where available.";
+      }
+    }
+
+    var filterGroup = explorer.querySelector(".publication-filter-group");
+    if (filterGroup) {
+      filterGroup.setAttribute("aria-label", "Filter publications by research area");
+    }
+
+    explorer.querySelectorAll("[data-strand-filter]").forEach(function (button) {
+      var key = button.dataset.strandFilter;
+      if (key === "all") {
+        button.textContent = "All areas";
+      } else if (areaLabels[key]) {
+        setLabelWithDot(button, areaLabels[key]);
+      }
+    });
+
+    explorer.querySelectorAll(".publication-timeline-lane").forEach(function (lane) {
+      var label = lane.textContent.trim();
+      if (legacyLabels[label]) lane.textContent = legacyLabels[label];
+    });
+
+    explorer.querySelectorAll(".publication-entry").forEach(function (entry) {
+      var key = entry.dataset.strand;
+      var label = entry.querySelector(".publication-strand-label");
+      if (label && areaLabels[key]) setLabelWithDot(label, areaLabels[key]);
+    });
+
+    var timelineTitle = document.getElementById("publication-timeline-title");
+    if (timelineTitle) timelineTitle.textContent = "Publication timeline by research area";
+  }
+
+  applyResearchAreaLanguage();
+
   var activeStrand = "all";
   var searchTerm = "";
   var activeYear = "all";
@@ -22,6 +97,69 @@
   function normalise(value) {
     return (value || "").toLowerCase().trim();
   }
+
+  function inferYear(entry) {
+    var explicitYear = parseInt(entry.dataset.year, 10);
+    if (Number.isFinite(explicitYear)) return explicitYear;
+
+    var citation = entry.querySelector(".publication-citation");
+    var match = citation && citation.textContent.match(/\(((?:19|20)\d{2})\)/);
+    return match ? parseInt(match[1], 10) : null;
+  }
+
+  function normalisePublicationYears() {
+    entries.forEach(function (entry) {
+      var resolvedYear = inferYear(entry);
+      if (resolvedYear !== null) entry.dataset.year = String(resolvedYear);
+    });
+
+    document.querySelectorAll("[data-publication-section]").forEach(function (section) {
+      var sectionEntries = Array.prototype.slice.call(
+        section.querySelectorAll(".publication-entry")
+      );
+
+      sectionEntries.sort(function (a, b) {
+        var yearA = inferYear(a) || -Infinity;
+        var yearB = inferYear(b) || -Infinity;
+        if (yearA !== yearB) return yearB - yearA;
+
+        var citationA = normalise(
+          (a.querySelector(".publication-citation") || {}).textContent
+        );
+        var citationB = normalise(
+          (b.querySelector(".publication-citation") || {}).textContent
+        );
+        return citationA.localeCompare(citationB);
+      });
+
+      sectionEntries.forEach(function (entry) {
+        section.appendChild(entry);
+      });
+    });
+
+    if (year) {
+      var years = entries
+        .map(inferYear)
+        .filter(function (value) { return value !== null; })
+        .filter(function (value, index, values) {
+          return values.indexOf(value) === index;
+        })
+        .sort(function (a, b) { return b - a; });
+
+      var allOption = year.querySelector('option[value="all"]');
+      year.textContent = "";
+      if (allOption) year.appendChild(allOption);
+
+      years.forEach(function (value) {
+        var option = document.createElement("option");
+        option.value = String(value);
+        option.textContent = String(value);
+        year.appendChild(option);
+      });
+    }
+  }
+
+  normalisePublicationYears();
 
   function matchesFilters(entry) {
     var strandMatches =

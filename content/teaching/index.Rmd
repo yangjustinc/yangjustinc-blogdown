@@ -51,6 +51,14 @@ published_projects <- students |>
     Degree != "PhD",
     str_detect(Topic, "\\]\\(https?://")
   )
+
+recent_projects <- students |>
+  filter(
+    Degree != "PhD",
+    !str_detect(`Year(s)`, "Present")
+  ) |>
+  arrange(desc(`Year(s)`), Student) |>
+  slice_head(n = 8)
 ```
 
 ## How I teach and supervise
@@ -108,6 +116,8 @@ current_phd_committees |>
 
 ### MSc supervision
 
+<div class="site-table-wrap">
+
 ```{r results='asis', echo=FALSE}
 if (nrow(current_taught) > 0) {
   current_taught |>
@@ -121,6 +131,8 @@ if (nrow(current_taught) > 0) {
     cat()
 }
 ```
+
+</div>
 
 ## Teaching & training
 
@@ -139,20 +151,15 @@ I have also contributed to curriculum development around **open science** and **
 ```{r results='asis', echo=FALSE}
 cat(
   '<div class="supervision-summary">',
-  '<b>', nrow(primary_projects), '</b> primary-supervised postgraduate or undergraduate projects',
-  ' &middot; ',
-  '<b>', nrow(current_phd_students), '</b> current PhD students',
-  ' &middot; ',
-  '<b>', nrow(current_phd_committees), '</b> current thesis-committee roles',
-  ' &middot; ',
-  '<b>', nrow(published_projects), '</b> student projects linked to published outputs',
+  '<div class="supervision-stat"><b>', nrow(primary_projects), '</b><span>primary-supervised postgraduate or undergraduate projects</span></div>',
+  '<div class="supervision-stat"><b>', nrow(current_phd_students), '</b><span>current PhD students</span></div>',
+  '<div class="supervision-stat"><b>', nrow(current_phd_committees), '</b><span>current thesis-committee roles</span></div>',
+  '<div class="supervision-stat"><b>', nrow(published_projects), '</b><span>student projects linked to published outputs</span></div>',
   '</div>'
 )
 ```
 
 The supervision portfolio spans mental health, addiction, neurodivergence, climate and health, health inequalities, public health, and health policy. Several projects have developed into peer-reviewed outputs.
-
-[**Download the complete supervision record (.csv)**](supervision-record.csv) for a portable list of all PhD, MSc, and undergraduate students and committee roles. The file is generated from the same maintained source as this page.
 
 ### Student work linked to publications
 
@@ -172,15 +179,12 @@ published_projects |>
 
 </div>
 
-<details>
-<summary><b>View full MSc and undergraduate supervision record</b></summary>
+### Selected recent supervision
 
 <div class="site-table-wrap">
 
 ```{r results='asis', echo=FALSE}
-students |>
-  filter(Degree != "PhD") |>
-  arrange(desc(`Year(s)`), Student) |>
+recent_projects |>
   select(Student, Degree, `Year(s)`, Role, Topic) |>
   knitr::kable(
     format = "html",
@@ -191,37 +195,6 @@ students |>
 ```
 
 </div>
-
-</details>
-
-<details>
-<summary><b>View previous doctoral committee roles</b></summary>
-
-<div class="site-table-wrap">
-
-```{r results='asis', echo=FALSE}
-doctoral_previous <- students |>
-  filter(
-    Degree == "PhD",
-    !str_detect(`Year(s)`, "Present")
-  ) |>
-  arrange(desc(`Year(s)`), Student) |>
-  select(Student, `Year(s)`, Role, Topic)
-
-if (nrow(doctoral_previous) > 0) {
-  doctoral_previous |>
-    knitr::kable(
-      format = "html",
-      col.names = c("PhD student", "Year(s)", "Role", "Research"),
-      table.attr = 'class="site-table"'
-    ) |>
-    cat()
-}
-```
-
-</div>
-
-</details>
 
 ## Prospective trainees
 
