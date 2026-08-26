@@ -57,13 +57,17 @@ menu:
       url: "resources/"
       weight: 8
 
+    - name: Contribution
+      url: "contribution/"
+      weight: 9
+
     - name: Leadership
       url: "leadership/"
-      weight: 9
+      weight: 10
 
     - name: Contact
       url: "contact/"
-      weight: 10
+      weight: 11
 
 params:
   description: "MINDSET is the research programme led by Dr Justin C Yang at UCL, using psychiatric epidemiology, linked data, causal inference, and data science to understand mental health, inequalities, and care."
