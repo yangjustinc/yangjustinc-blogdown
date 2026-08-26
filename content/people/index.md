@@ -5,7 +5,7 @@ description: "The people, partnerships, and collaborative capabilities that make
 
 MINDSET brings together researchers, trainees, NHS and public-sector data partners, treatment services, and collaborating academic groups around a shared aim: **drawing credible, useful, and responsible inference about mental health from complex real-world data**.
 
-The programme is deliberately collaborative. Different questions draw on different combinations of epidemiology, data science, clinical and service knowledge, population data, research infrastructure, and lived-experience expertise. The people and organisations below show how those capabilities connect across MINDSET; inclusion reflects an active or longstanding research relationship rather than formal membership of a single laboratory.
+Different projects draw on combinations of epidemiology, data science, clinical and service knowledge, population data, research infrastructure, and lived-experience expertise. The people and organisations below reflect active or longstanding research relationships across the programme.
 
 ## Research team
 
@@ -63,7 +63,7 @@ I also contribute to doctoral supervision, thesis committees, and wider trainee 
 
 ## The MINDSET research ecosystem
 
-The wider network is most useful understood by **what it enables**, rather than as a flat list of affiliations. Many partners contribute to more than one area.
+Many partners contribute across more than one area of the programme.
 
 <div class="collaboration-map">
 
@@ -118,8 +118,6 @@ The wider network is most useful understood by **what it enables**, rather than 
 
 ## Featured programme partnerships
 
-Some relationships provide the organisational setting for major parts of the current programme.
-
 <div class="people-grid partner-showcase-grid">
 
 <div class="partner-card partner-showcase-card">
@@ -168,5 +166,3 @@ Some relationships provide the organisational setting for major parts of the cur
 </div>
 
 </div>
-
-The result is a programme that can connect questions about mental-health trajectories with the data, methods, infrastructure, services, and disciplinary perspectives needed to answer them.
