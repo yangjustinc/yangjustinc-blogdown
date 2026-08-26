@@ -3,7 +3,7 @@ title: People & Partnerships
 description: "The people, partnerships, and collaborative capabilities that make up the MINDSET research programme."
 ---
 
-MINDSET brings together researchers, researchers in training, NHS and public-sector data partners, treatment services, and collaborating academic groups around a shared aim: **drawing credible, useful, and responsible inference about mental health from complex real-world data**.
+MINDSET brings together researchers, trainees, NHS and public-sector data partners, treatment services, and collaborating academic groups around a shared aim: **drawing credible, useful, and responsible inference about mental health from complex real-world data**.
 
 The programme is deliberately collaborative. Different questions draw on different combinations of epidemiology, data science, clinical and service knowledge, population data, research infrastructure, and lived-experience expertise. The people and organisations below show how those capabilities connect across MINDSET; inclusion reflects an active or longstanding research relationship rather than formal membership of a single laboratory.
 
@@ -37,14 +37,14 @@ The programme is deliberately collaborative. Different questions draw on differe
 
 </div>
 
-## Researchers in training
+## Trainees
 
 <div class="people-grid people-training-grid">
 
 <div class="team-card people-feature-card">
 <img src="pictures/vanessacieplinska.png" alt="Headshot of Vanessa Cieplinska" width="256" height="256" loading="lazy" decoding="async">
 <div class="people-name">Vanessa Cieplinska</div>
-<div class="people-role">PhD Researcher</div>
+<div class="people-role">PhD Student</div>
 <div class="people-expertise">School attendance and educational attainment in children with neurodevelopmental conditions</div>
 <div class="people-note">Justin contributes as secondary supervisor</div>
 </div>
@@ -52,14 +52,14 @@ The programme is deliberately collaborative. Different questions draw on differe
 <div class="team-card people-feature-card">
 <img src="pictures/aluayeskendir.png" alt="Headshot of Alua Yeskendir" width="256" height="256" loading="lazy" decoding="async">
 <div class="people-name">Alua Yeskendir</div>
-<div class="people-role">PhD Researcher</div>
+<div class="people-role">PhD Student</div>
 <div class="people-expertise">Health and social inequalities in psychiatric disorders</div>
 <div class="people-note">Justin contributes as secondary supervisor</div>
 </div>
 
 </div>
 
-I also contribute to doctoral supervision, thesis committees, and wider researcher development. See [Teaching & Supervision](../teaching/) for the broader training programme.
+I also contribute to doctoral supervision, thesis committees, and wider trainee development. See [Teaching & Supervision](../teaching/) for the broader training programme.
 
 ## The MINDSET research ecosystem
 
