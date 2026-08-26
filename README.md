@@ -6,8 +6,8 @@ and Treatment)**, the research programme led by Dr Justin C Yang at University
 College London.
 
 The site presents the programme's research, people and collaborations,
-publications, funding, talks, teaching and supervision, academic leadership,
-and contact information.
+publications, funding, talks, teaching and supervision, open research resources,
+academic leadership, and contact information.
 
 ## Site structure
 
@@ -20,6 +20,7 @@ and contact information.
 | [`content/funding/`](./content/funding/) | Research funding |
 | [`content/talks/`](./content/talks/) | Talks and presentations |
 | [`content/teaching/`](./content/teaching/) | Teaching, supervision and researcher development |
+| [`content/resources/`](./content/resources/) | Selected open research, code and reusable materials |
 | [`content/leadership/`](./content/leadership/) | Academic leadership and recognition |
 | [`content/contact/`](./content/contact/) | Contact information |
 | [`data/site/`](./data/site/) | Curated CSV inputs used by R Markdown pages |
@@ -68,6 +69,10 @@ Several sections minimise manual duplication:
 
 The CSV inputs live under `data/`, so Hugo does not copy them into the
 published website.
+
+Open research resources are deliberately curated rather than automatically
+imported from GitHub: the public profile contains project-specific and working
+repositories that should not all be presented as reusable research outputs.
 
 ## Local development
 
