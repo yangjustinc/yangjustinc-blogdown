@@ -82,7 +82,9 @@ The **Research Contribution & Engagement** page similarly distinguishes enabling
 and engagement activity from demonstrated downstream impact. It should describe
 infrastructure, advisory contribution, public-interest governance, capacity
 building and engagement on their own terms, and reserve impact claims for cases
-where uptake, use or change can be evidenced.
+where uptake, use or change can be evidenced. It is intentionally a prose page
+for now: a structured impact dataset should only be introduced when there is
+enough evidence to justify maintaining one rather than creating an empty schema.
 
 ## Local development
 
