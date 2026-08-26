@@ -1,20 +1,21 @@
 ---
-title: People
-description: "Researchers, doctoral students, partners, and collaborators contributing to the MINDSET research programme in psychiatric epidemiology and mental health data science."
+title: People & Partnerships
+description: "The core MINDSET research team, researchers in training, programme partners, data infrastructure, service partners, and collaborating research groups."
 ---
 
+MINDSET combines a **small core research team with a wider collaborative network** spanning psychiatric epidemiology, population data science, linked administrative data, clinical informatics, mental-health services, and public and lived-experience involvement.
 
-MINDSET is a collaborative research programme bringing together researchers, doctoral students, academic groups, NHS organisations, public-sector data partners, treatment providers, and people with lived experience.
+The organisations and groups below are included because they contribute to current or longstanding research collaborations, infrastructure, data, methods, service insight, or public involvement. Inclusion does not imply formal membership of MINDSET.
 
-## Research team
+## Core team
 
 <div class="people-grid">
 
 <div class="team-card">
 <img src="pictures/justinyang.png" alt="Headshot of Justin C Yang" width="256" height="256" decoding="async">
 <br><b>Dr Justin C Yang</b>
-<br>Senior Research Fellow
-<br>MINDSET Lead
+<br>Senior Research Fellow · MINDSET Lead
+<br>Psychiatric epidemiology · linked data · causal inference
 <br><a href="https://profiles.ucl.ac.uk/75514-justin-yang">UCL Profile</a>
 </div>
 
@@ -22,7 +23,7 @@ MINDSET is a collaborative research programme bringing together researchers, doc
 <img src="pictures/nathalierich.png" alt="Headshot of Nathalie Rich" width="256" height="256" loading="lazy" decoding="async">
 <br><b>Dr Nathalie Rich</b>
 <br>Research Fellow
-<br>Expertise: Electronic health records and epidemiology
+<br>Electronic health records · psychiatric epidemiology
 <br><a href="https://profiles.ucl.ac.uk/80231-nathalie-rich">UCL Profile</a>
 </div>
 
@@ -30,13 +31,13 @@ MINDSET is a collaborative research programme bringing together researchers, doc
 <img src="pictures/yunsookim.png" alt="Headshot of Yunsoo Kim" width="256" height="256" loading="lazy" decoding="async">
 <br><b>Dr Yunsoo Kim</b>
 <br>Research Fellow
-<br>Expertise: Natural language processing and large language models
+<br>Natural language processing · large language models
 <br><a href="https://bluesky333.github.io/">Website</a>
 </div>
 
 </div>
 
-## Doctoral researchers
+## Researchers in training
 
 <div class="people-grid">
 
@@ -45,7 +46,7 @@ MINDSET is a collaborative research programme bringing together researchers, doc
 <br><b>Vanessa Cieplinska</b>
 <br>PhD Researcher
 <br>School attendance and educational attainment in children with neurodevelopmental conditions
-<br><i>Secondary supervisor: Justin Yang</i>
+<br><i>Supervision contribution: secondary supervisor</i>
 </div>
 
 <div class="team-card">
@@ -53,16 +54,16 @@ MINDSET is a collaborative research programme bringing together researchers, doc
 <br><b>Alua Yeskendir</b>
 <br>PhD Researcher
 <br>Health and social inequalities in psychiatric disorders
-<br><i>Secondary supervisor: Justin Yang</i>
+<br><i>Supervision contribution: secondary supervisor</i>
 </div>
 
 </div>
 
-I also contribute to doctoral supervision and research development through thesis committees and wider mentoring. Further information is available on the [Teaching & Supervision](../teaching/) page.
+I also contribute to doctoral supervision, thesis committees, and wider researcher development. Further information is available on the [Teaching & Supervision](../teaching/) page.
 
-## Partners and collaborators
+## Programme and data-infrastructure partners
 
-MINDSET connects with organisations and research groups that contribute data, methodological expertise, clinical and service perspectives, public involvement, policy insight, or complementary research strengths. These relationships are collaborative and overlapping, and are presented together rather than ranked by importance.
+These relationships connect MINDSET to national data resources, mental-health research infrastructure, and the wider programmes through which current work is delivered.
 
 <div class="people-grid">
 
@@ -71,7 +72,7 @@ MINDSET connects with organisations and research groups that contribute data, me
 <img src="pictures/administrativedataresearchuk.png" alt="Administrative Data Research UK logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>Administrative Data Research UK</b><br>
-My HOPE-SEN programme, developed through an ADR UK Fellowship, uses linked health and education data to study inequalities in the experiences and outcomes of neurodivergent children and young people. This work also informs my wider research on responsible and policy-relevant use of administrative data.</p>
+Supports linked administrative-data research through HOPE-SEN and wider work on responsible, policy-relevant use of population data.</p>
 </div>
 
 <div class="partner-card">
@@ -79,7 +80,7 @@ My HOPE-SEN programme, developed through an ADR UK Fellowship, uses linked healt
 <img src="pictures/nlft.png" alt="North London NHS Foundation Trust logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>North London NHS Foundation Trust</b><br>
-I serve as Deputy Lead of the Trust's Research Database, supporting research using routinely collected mental-health records and collaboration across UCL, NHS clinicians, informatics teams, researchers, and public contributors.</p>
+Home of the Research Database, where I serve as Deputy Lead and support governed research using routinely collected mental-health records.</p>
 </div>
 
 <div class="partner-card">
@@ -87,7 +88,7 @@ I serve as Deputy Lead of the Trust's Research Database, supporting research usi
 <img src="pictures/datamind.png" alt="DATAMIND logo" width="512" height="512" loading="lazy" decoding="async">
 </a>
 <p><b>DATAMIND</b><br>
-I work with DATAMIND through the UKRI Mental Health Platform, developing research that links mental-health data science with questions about severe mental illness, inequalities, clinical records, and wider population data.</p>
+Connects MINDSET to UK-wide mental-health data science through the UKRI Mental Health Platform and related work on clinical and population data.</p>
 </div>
 
 <div class="partner-card">
@@ -95,7 +96,7 @@ I work with DATAMIND through the UKRI Mental Health Platform, developing researc
 <img src="pictures/complexemotions.png" alt="Complex Emotions Hub logo" width="512" height="512" loading="lazy" decoding="async">
 </a>
 <p><b>Complex Emotions Hub</b><br>
-Through WISDOM, I collaborate with the Complex Emotions Hub to investigate how relationships, emotional experiences, adversity, and other socioemotional factors may shape trajectories into and through severe mental illness.</p>
+Collaboration through WISDOM on relationships, adversity, emotional experiences, and other socioemotional influences on severe mental illness.</p>
 </div>
 
 <div class="partner-card">
@@ -103,7 +104,7 @@ Through WISDOM, I collaborate with the Complex Emotions Hub to investigate how r
 <img src="pictures/socialhealth.png" alt="Social Health Hub logo" width="512" height="512" loading="lazy" decoding="async">
 </a>
 <p><b>Social Health Hub</b><br>
-My work with the Social Health Hub contributes to WISDOM's focus on the social conditions and experiences that shape severe mental illness and its course over time.</p>
+Collaboration through WISDOM on social conditions, relationships, and inequalities shaping trajectories in severe mental illness.</p>
 </div>
 
 <div class="partner-card">
@@ -111,7 +112,7 @@ My work with the Social Health Hub contributes to WISDOM's focus on the social c
 <img src="pictures/healthdataresearchuk.png" alt="Health Data Research UK logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>Health Data Research UK</b><br>
-I contribute to the HDR UK Mental Health Driver Programme, connecting methodological, infrastructure, and applied research priorities across partner organisations working with health data for mental-health research.</p>
+Connection through the Mental Health Driver Programme across methodological, infrastructure, and applied priorities for health-data research.</p>
 </div>
 
 <div class="partner-card">
@@ -119,15 +120,23 @@ I contribute to the HDR UK Mental Health Driver Programme, connecting methodolog
 <img src="pictures/slam.png" alt="South London and Maudsley NHS Foundation Trust logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>South London and Maudsley NHS Foundation Trust</b><br>
-I work with colleagues at SLaM to harmonise research access across the North London and South London CRIS infrastructures, including approaches that make cross-site replication and comparative studies easier to conduct using routinely collected mental-health records.</p>
+Collaboration on harmonising mental-health research databases to support cross-site replication and comparative research.</p>
 </div>
+
+</div>
+
+## Service and implementation partners
+
+These partnerships help connect work on addiction-treatment data to service delivery, practitioner expertise, and lived experience.
+
+<div class="people-grid">
 
 <div class="partner-card">
 <a href="https://www.changegrowlive.org/">
 <img src="pictures/changegrowlive.png" alt="Change Grow Live logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>Change Grow Live</b><br>
-Change Grow Live is a partner in UNITED, contributing treatment-provider expertise, public involvement, site-based learning, and research support to work aimed at improving the use of national addiction-treatment data.</p>
+UNITED partner contributing treatment-provider expertise, public involvement, site-based learning, and research support.</p>
 </div>
 
 <div class="partner-card">
@@ -135,55 +144,47 @@ Change Grow Live is a partner in UNITED, contributing treatment-provider experti
 <img src="pictures/turningpoint.png" alt="Turning Point logo" width="256" height="256" loading="lazy" decoding="async">
 </a>
 <p><b>Turning Point</b><br>
-Turning Point is a partner in UNITED, supporting engagement with treatment services and people with lived experience and helping ensure that work on national treatment data remains relevant to practice and service delivery.</p>
+UNITED partner supporting engagement with treatment services and people with lived experience and keeping work relevant to practice.</p>
+</div>
+
+</div>
+
+## Collaborating research groups
+
+These are longstanding or complementary academic collaborations rather than constituent parts of MINDSET. They extend the programme's methodological and substantive reach across clinical data science, psychosis, causal inference, inequalities, systems thinking, and policy.
+
+<div class="people-grid">
+
+<div class="partner-card">
+<p><b><a href="https://aimhlab.research.st/">applied informatics for Mental Health (aiMH)</a></b><br>
+Electronic health records, clinical data science, digital methods, and intensive longitudinal data.</p>
 </div>
 
 <div class="partner-card">
-<a href="https://aimhlab.research.st/">
-<img src="pictures/aimh.png" alt="applied informatics for Mental Health logo" width="256" height="256" loading="lazy" decoding="async">
-</a>
-<p><b>applied informatics for Mental Health (aiMH)</b><br>
-Collaboration around electronic health records, clinical data science, digital methods, and the use of intensive longitudinal data in mental-health research.</p>
+<p><b><a href="https://www.mentalhealthepi.com/">Exploring Mental Illness Using Systems Thinking (MIST)</a></b><br>
+Psychiatric epidemiology, social and environmental determinants, systems thinking, and inequalities.</p>
 </div>
 
 <div class="partner-card">
-<a href="https://www.mentalhealthepi.com/">
-<img src="pictures/mist.png" alt="Exploring Mental Illness Using Systems Thinking logo" width="256" height="256" loading="lazy" decoding="async">
-</a>
-<p><b>Exploring Mental Illness Using Systems Thinking (MIST)</b><br>
-Collaboration around psychiatric epidemiology, social and environmental determinants of mental health, and inequalities affecting marginalised populations.</p>
+<p><b><a href="https://naomilaunders.co.uk/">Improving Mental and Physical health Analytics through RobusT Epi and Data sci (IMPARTED)</a></b><br>
+Causal inference, electronic health records, inequalities, and physical-health outcomes in severe mental illness.</p>
 </div>
 
 <div class="partner-card">
-<a href="https://naomilaunders.co.uk/">
-<img src="pictures/imparted.png" alt="Improving Mental and Physical health Analytics through RobusT Epi and Data sci logo" width="256" height="256" loading="lazy" decoding="async">
-</a>
-<p><b>Improving Mental and Physical health Analytics through RobusT Epi and Data sci (IMPARTED)</b><br>
-Collaboration around causal inference, electronic health records, inequalities, and physical-health outcomes among people with severe mental illness.</p>
+<p><b><a href="https://katemerritt.github.io/map-lab/">Mechanisms and Prediction of Psychosis (MAP) Lab</a></b><br>
+Psychosis, prediction, neuroimaging, and biological and environmental mechanisms in severe mental illness.</p>
 </div>
 
 <div class="partner-card">
-<a href="https://katemerritt.github.io/map-lab/">
-<img src="pictures/map.png" alt="Mechanisms and Prediction of Psychosis Lab logo" width="256" height="256" loading="lazy" decoding="async">
-</a>
-<p><b>Mechanisms and Prediction of Psychosis (MAP) Lab</b><br>
-Collaboration around psychosis, neuroimaging, biological and environmental mechanisms, and prediction of severe mental illness.</p>
+<p><b><a href="https://www.mentalhealthpolicyeconomicsgroup.com/">Mental Health | Policy | Economics Group</a></b><br>
+Longstanding collaboration across psychiatric epidemiology, substance use, health inequalities, policy, and population health.</p>
 </div>
 
 <div class="partner-card">
-<a href="https://www.mentalhealthpolicyeconomicsgroup.com/">
-<img src="pictures/mhpeg.png" alt="Mental Health Policy Economics Group logo" width="256" height="256" loading="lazy" decoding="async">
-</a>
-<p><b>Mental Health | Policy | Economics Group</b><br>
-Longstanding collaboration spanning psychiatric epidemiology, substance use, health inequalities, policy, and population-health research.</p>
-</div>
-
-<div class="partner-card">
-<a href="https://www.psylife.eu/">
-<img src="pictures/psylife.png" alt="PsyLife logo" width="256" height="256" loading="lazy" decoding="async">
-</a>
-<p><b>PsyLife</b><br>
-Collaboration around population and social epidemiology, psychosis, causal inference, and inequalities in the determinants and outcomes of severe mental illness.</p>
+<p><b><a href="https://www.psylife.eu/">PsyLife</a></b><br>
+Population and social epidemiology, psychosis, causal inference, and inequalities in severe mental illness.</p>
 </div>
 
 </div>
+
+MINDSET is intentionally networked rather than organised as a large standalone laboratory. The core team provides continuity, while the wider partnerships bring the data, methods, clinical and service expertise, public involvement, and disciplinary perspectives needed for different research questions.
