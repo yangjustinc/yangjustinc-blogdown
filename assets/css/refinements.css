@@ -159,6 +159,81 @@
   line-height: 1.5;
 }
 
+/* Teaching & Supervision */
+.teaching-principles,
+.teaching-module-grid {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1.1rem 0 1.45rem;
+}
+
+.teaching-principles {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.teaching-principle {
+  border-top: 2px solid #1f7fc4;
+  background: #fafafa;
+  padding: 0.8rem 0.9rem 0.9rem;
+  color: #444;
+  font-size: 0.91rem;
+  line-height: 1.5;
+}
+
+.teaching-principle b {
+  display: inline-block;
+  margin-bottom: 0.15rem;
+  color: #222;
+}
+
+.teaching-module-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.teaching-module {
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  padding: 0.85rem 0.9rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.teaching-module a {
+  text-decoration: none;
+}
+
+.teaching-module:hover {
+  border-color: #c5dff0;
+  background: #fafcfe;
+}
+
+.supervision-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+  margin: 1.1rem 0 1.4rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  line-height: 1.5;
+}
+
+.supervision-stat {
+  min-width: 8rem;
+}
+
+.supervision-stat b {
+  display: block;
+  color: #222;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.supervision-stat span {
+  color: #666;
+  font-size: 0.82rem;
+}
+
 /* Keep professional-profile links visibly present in the footer. */
 footer .footer-social {
   display: flex;
@@ -172,7 +247,9 @@ footer .footer-icon {
 
 @media (max-width: 700px) {
   .mindset-questions,
-  .collaboration-map {
+  .collaboration-map,
+  .teaching-principles,
+  .teaching-module-grid {
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
