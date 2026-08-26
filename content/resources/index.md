@@ -23,8 +23,8 @@ The [**MINDSET website source**](https://github.com/yangjustinc/yangjustinc-blog
 
 The repository documents the build, dependency-management, content-refresh, and validation workflow and may be useful as an example of a maintainable academic website built around reproducible research practices.
 
-## More code and materials
+## More code, talks, and materials
 
-Additional public repositories are available through my [GitHub profile](https://github.com/yangjustinc). I keep this page selective rather than automatically listing every repository: inclusion here is intended to indicate material that is reasonably documented, reusable, or useful beyond the project for which it was created.
+Additional public repositories are available through my [GitHub profile](https://github.com/yangjustinc), and selected academic and methods presentations are listed under [Talks & Presentations](../talks/). I keep this page selective rather than automatically listing every repository: inclusion here is intended to indicate material that is reasonably documented, reusable, or useful beyond the project for which it was created.
 
-Where project-specific code or materials can be shared, they may also be linked from the relevant [research](../research/), [publication](../publications/), or [teaching](../teaching/) pages. See also [Research Contribution & Engagement](../contribution/) for the wider infrastructure, advisory, engagement, and capacity-building work around the programme.
+Where project-specific code or materials can be shared, they may also be linked from the relevant [research](../research/), [publication](../publications/), or [teaching](../teaching/) pages.
