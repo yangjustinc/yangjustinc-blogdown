@@ -161,8 +161,6 @@ cat(
 
 The supervision portfolio spans mental health, addiction, neurodivergence, climate and health, health inequalities, public health, and health policy. Several projects have developed into peer-reviewed outputs.
 
-[**Download the complete supervision record (.csv)**](supervision-record.csv) for a portable list of all PhD, MSc, and undergraduate students and committee roles. The file is generated from the same maintained source as this page.
-
 ### Student work linked to publications
 
 <div class="site-table-wrap">
