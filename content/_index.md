@@ -20,34 +20,21 @@ I study how mental health, inequalities, and care unfold across the life course 
 MINDSET develops and applies methods for drawing **credible, useful, and responsible inference about mental health from complex real-world data**. The programme is organised around three enduring questions.
 
 <div class="mindset-questions">
-
-<div class="mindset-question">
-<span class="mindset-question-number">01</span>
-
-## What shapes mental health and inequalities over time?
-
-Understanding how social, relational, environmental, educational, and institutional experiences influence mental health, service use, and wider outcomes across people, populations, and places.
-
-</div>
-
-<div class="mindset-question">
-<span class="mindset-question-number">02</span>
-
-## How can complex real-world data tell us what is actually happening?
-
-Making better use of linked records, electronic health records, clinical free text, longitudinal data, and other sources while remaining attentive to selection, measurement, missingness, and the limits of inference.
-
-</div>
-
-<div class="mindset-question">
-<span class="mindset-question-number">03</span>
-
-## How can data systems better support research, services, and public decision-making?
-
-Improving the infrastructures, governance, and analytical practices through which routinely collected data become useful evidence for research, policy, services, and the public.
-
-</div>
-
+  <section class="mindset-question">
+    <span class="mindset-question-number">01</span>
+    <h2>What shapes mental health and inequalities over time?</h2>
+    <p>Understanding how social, relational, environmental, educational, and institutional experiences influence mental health, service use, and wider outcomes across people, populations, and places.</p>
+  </section>
+  <section class="mindset-question">
+    <span class="mindset-question-number">02</span>
+    <h2>How can complex real-world data tell us what is actually happening?</h2>
+    <p>Making better use of linked records, electronic health records, clinical free text, longitudinal data, and other sources while remaining attentive to selection, measurement, missingness, and the limits of inference.</p>
+  </section>
+  <section class="mindset-question">
+    <span class="mindset-question-number">03</span>
+    <h2>How can data systems better support research, services, and public decision-making?</h2>
+    <p>Improving the infrastructures, governance, and analytical practices through which routinely collected data become useful evidence for research, policy, services, and the public.</p>
+  </section>
 </div>
 
 ## Current programmes
