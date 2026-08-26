@@ -1,0 +1,340 @@
+/* Final hierarchy and accessibility refinements */
+
+.site-header {
+  text-align: center;
+}
+
+.site-brand {
+  display: inline-block;
+  margin: 0 0 0.45rem;
+  color: #222;
+  font-family: Inter, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.site-brand:hover {
+  color: #1f7fc4;
+}
+
+.mindset-questions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.35rem 0 1.8rem;
+}
+
+.mindset-question {
+  padding: 0.95rem 1rem 1rem;
+  border-top: 2px solid #1f7fc4;
+  background: #fafafa;
+}
+
+.mindset-question-number {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #777;
+  font-family: Inter, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.mindset-question h2 {
+  margin-top: 0;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.mindset-question p:last-child {
+  margin-bottom: 0;
+}
+
+/* Research */
+.research-programme-map {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem 1rem;
+  margin: 1.1rem 0 1.5rem;
+}
+
+.research-programme-item {
+  padding: 0.8rem 0.9rem 0.9rem;
+  border-top: 2px solid #1f7fc4;
+  background: #fafafa;
+}
+
+.research-programme-name {
+  margin-bottom: 0.25rem;
+  color: #222;
+  font-family: Inter, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+}
+
+.research-programme-item p {
+  margin: 0;
+  color: #555;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* People & Partnerships */
+.people-feature-card {
+  padding-bottom: 0.4rem;
+}
+
+.people-name {
+  margin-top: 0.15rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.people-role {
+  margin-top: 0.15rem;
+  color: #444;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.people-expertise {
+  margin: 0.35rem 0 0.45rem;
+  color: #666;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.people-note {
+  margin-top: 0.35rem;
+  color: #777;
+  font-size: 0.82rem;
+  font-style: italic;
+}
+
+.collaboration-map {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 1.7rem;
+}
+
+.collaboration-cluster {
+  border-top: 2px solid #1f7fc4;
+  background: #fafafa;
+  padding: 0.95rem 1rem 1rem;
+}
+
+.collaboration-kicker {
+  color: #666;
+  font-family: Inter, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.collaboration-cluster h3 {
+  margin: 0.35rem 0 0.4rem;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.collaboration-cluster p {
+  margin: 0 0 0.7rem;
+  color: #444;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.collaboration-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.45rem;
+}
+
+.collaboration-links a {
+  border: 1px solid #d7d7d7;
+  border-radius: 999px;
+  background: #fff;
+  padding: 0.2rem 0.5rem;
+  color: #444;
+  font-size: 0.78rem;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.collaboration-links a:hover,
+.collaboration-links a:focus-visible {
+  border-color: #a9cce4;
+  background: #eef6fb;
+  color: #155d94;
+}
+
+.partner-showcase-card {
+  border-top: 1px solid #e4e4e4;
+  padding-top: 0.8rem;
+}
+
+.partner-showcase-card img {
+  max-height: 72px;
+  width: auto;
+  object-fit: contain;
+}
+
+.partner-showcase-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Teaching & Supervision */
+.teaching-principles,
+.teaching-module-grid {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1.1rem 0 1.45rem;
+}
+
+.teaching-principles {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.teaching-principle {
+  border-top: 2px solid #1f7fc4;
+  background: #fafafa;
+  padding: 0.8rem 0.9rem 0.9rem;
+  color: #444;
+  font-size: 0.91rem;
+  line-height: 1.5;
+}
+
+.teaching-principle b {
+  display: inline-block;
+  margin-bottom: 0.15rem;
+  color: #222;
+}
+
+.teaching-module-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.teaching-module {
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  padding: 0.85rem 0.9rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.teaching-module a {
+  text-decoration: none;
+}
+
+.teaching-module:hover {
+  border-color: #c5dff0;
+  background: #fafcfe;
+}
+
+.supervision-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+  margin: 1.1rem 0 1.4rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  line-height: 1.5;
+}
+
+.supervision-stat {
+  min-width: 8rem;
+  flex: 1 1 10rem;
+}
+
+.supervision-stat b {
+  display: block;
+  color: #222;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.supervision-stat span {
+  color: #666;
+  font-size: 0.82rem;
+}
+
+/* Leadership */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem 1rem;
+  margin: 1.15rem 0 1.55rem;
+}
+
+.leadership-card {
+  border-top: 2px solid #1f7fc4;
+  background: #fafafa;
+  padding: 0.9rem 1rem 1rem;
+}
+
+.leadership-kicker {
+  color: #666;
+  font-family: Inter, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.leadership-card h3 {
+  margin: 0.35rem 0 0.45rem;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.leadership-card p {
+  margin: 0.35rem 0 0;
+  color: #444;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+/* Keep professional-profile links visibly present in the footer. */
+footer .footer-social {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+
+footer .footer-icon {
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .mindset-questions,
+  .research-programme-map,
+  .collaboration-map,
+  .teaching-principles,
+  .teaching-module-grid,
+  .leadership-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

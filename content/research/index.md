@@ -1,96 +1,83 @@
 ---
 title: Research
-description: "Research led by Dr Justin C Yang across psychiatric epidemiology, linked administrative data, mental health data science, addiction, neurodivergence, and research infrastructure."
+description: "Research led by Dr Justin C Yang using psychiatric epidemiology, linked administrative and clinical data, causal inference, and data science to understand mental health, inequalities, and care."
 ---
 
-My research examines how complex real-world data can be used to understand mental health, inequalities, and care across the life course. I work at the intersection of **psychiatric epidemiology, causal inference, population data science, and health services research**, with a particular interest in questions that cannot be answered adequately using any single dataset or methodological approach.
+My research asks a connected question: **what can we credibly learn about mental health, inequalities, and care when people's experiences are distributed across different systems, datasets, places, and forms of evidence?**
 
-Across the MINDSET programme, I combine linked administrative records, electronic health records, longitudinal and environmental data, clinical free text, and intensive measures of lived experience. Alongside substantive epidemiological questions, I am interested in the methodological and governance challenges involved in drawing meaningful inference from data that were often collected for purposes other than research.
+I work at the intersection of **psychiatric epidemiology, causal inference, population data science, and health services research**. Across MINDSET, I combine linked administrative records, electronic health records, longitudinal and environmental data, clinical free text, and intensive measures of lived experience. The programme is organised around three enduring questions.
 
-My current work is organised around four connected areas.
+## What shapes mental health and inequalities over time?
 
-## Mental health trajectories and inequalities
+Mental health develops within social, relational, environmental, educational, and institutional contexts. I study how these experiences accumulate and interact over time, how they shape service contact and wider outcomes, and why trajectories differ between people, populations, and places.
 
-Severe mental illness develops and unfolds within social, relational, environmental, and institutional contexts. I am interested in understanding how these experiences combine over time to influence the onset, course, and consequences of mental ill health, and why outcomes differ between people and populations.
+This work spans severe mental illness, neurodivergence, addiction, and mental-health services. Across those areas, recurring questions include how disadvantage accumulates, how institutions respond to different needs, how exclusion and service contact shape later outcomes, and how social and geographic context modifies risk and recovery.
 
-I lead **WISDOM**, a UKRI Mental Health Platform-funded research programme examining the social and emotional drivers of severe and enduring mental health needs. The programme brings together expertise and data resources across the Mental Health Platform, including work spanning social health, complex emotions, mental health data science, and other complementary perspectives.
+Current programmes include **WISDOM**, examining social, emotional, environmental, and institutional influences on severe and enduring mental illness, and **HOPE-SEN**, using linked health and education data to investigate inequalities in the experiences and outcomes of neurodivergent children and young people.
 
-This work is developing approaches that integrate evidence across different scales and forms of data, including linked population data, electronic health records, environmental exposures, longitudinal cohorts, and intensive longitudinal methods. A central aim is to understand not only which factors are associated with poor mental health outcomes, but how combinations of experiences and exposures may shape trajectories of vulnerability, resilience, service contact, and recovery.
+Key areas of interest include:
 
-Related interests include:
-
-- social and environmental determinants of severe mental illness
-- inequalities in access to and outcomes of mental health care
-- longitudinal and life-course approaches to psychiatric epidemiology
-- ecological momentary assessment and intensive longitudinal data
+- longitudinal and life-course psychiatric epidemiology
+- social and environmental determinants of mental health
+- inequalities in access to and outcomes of care
+- severe mental illness and co-occurring health and social needs
+- neurodivergence, education, and health
+- addiction, treatment pathways, and service use
 - spatial and environmental epidemiology
-- integration of evidence across heterogeneous data sources
+- ecological momentary assessment and other intensive longitudinal data
 
-## Administrative data and neurodivergence
+## How can complex real-world data tell us what is actually happening?
 
-Linked administrative data provide opportunities to study health, education, and social outcomes across entire populations, including groups who are often underrepresented in conventional research.
+Administrative and clinical data are produced through interactions with schools, health services, treatment systems, public agencies, and other institutions. They therefore capture both the phenomena we want to study and the processes through which those phenomena become recorded.
 
-**HOPE-SEN**, developed through an **Administrative Data Research UK Fellowship**, uses the [ECHILD database](https://www.echild.ac.uk/), which links national health and education records for children and young people in England.
+That makes selection, measurement, missingness, coding, linkage, and data quality part of the substantive problem. A recorded school absence reflects both a child's experience and the practices of an educational system; a diagnosis reflects illness and processes of recognition and documentation; treatment records reflect both need and the organisation of care.
 
-My work examines inequalities in the experiences and outcomes of children with neurodivergent special educational needs, including patterns of school attendance, exclusion, alternative provision, educational participation, and health-care use. I am particularly interested in how individual characteristics interact with schools, local systems, and place to shape these outcomes.
+My methodological work includes:
 
-HOPE-SEN also provides a setting for developing and applying methods for analysing large, hierarchical administrative datasets, including:
+- linked administrative and population data
+- electronic health records and clinical free text
+- natural language processing and large language models in governed research environments
+- longitudinal, repeated-measures, multilevel, and fixed-effects designs
+- causal inference and observational epidemiology
+- spatial and network analysis
+- triangulation across heterogeneous data sources
+- transparent and reproducible research in secure environments
 
-- longitudinal population-based cohort designs
-- multilevel and fixed-effects approaches
-- spatial analysis
-- analysis of repeated and correlated outcomes
-- linked health and education records
-- transparent and reproducible research in secure data environments
+I use these approaches to clarify what data represent, strengthen inference, recover information that would otherwise remain inaccessible, and identify where the available evidence cannot support a particular claim.
 
-More broadly, this work asks how administrative data can be used to identify inequalities without reducing people's experiences to the categories through which public systems record them.
+## How can data systems better support research, services, and public decision-making?
 
-## Addiction treatment, services, and data
+What can be learned from routinely collected data depends on how those data are collected, governed, linked, accessed, documented, and interpreted.
 
-A longstanding strand of my research concerns substance use, addiction treatment, and inequalities in access to care.
+As Deputy Lead of the **North London NHS Foundation Trust Research Database**, I support ethically governed research using routinely collected mental-health records, spanning research development, data governance, methodological support, and collaboration with clinicians, informatics teams, researchers, public contributors, and other research databases.
 
-My earlier work examined opioid treatment systems, access to evidence-based treatment, substance use inequalities, and variation in treatment provision across populations and places. My current work increasingly focuses on the **data infrastructure through which addiction treatment is understood, evaluated, and improved**.
+I also work with colleagues at South London and Maudsley NHS Foundation Trust on harmonisation across mental-health research infrastructures, including approaches that make cross-site replication and comparative studies easier to undertake.
 
-I am part of the leadership team for **UNITED (Using a National, Interdisciplinary Team to Enhance Drug and alcohol treatment data)**, an NIHR Team Science programme bringing together researchers, treatment providers, people with lived experience, and other partners.
+Within **UNITED (Using a National, Interdisciplinary Team to Enhance Drug and alcohol treatment data)**, I lead work examining how England's **National Drug Treatment Monitoring System (NDTMS)** is used for research and how routinely collected treatment data can better support epidemiology, service improvement, policy, and clinical practice.
 
-I lead work examining the use of England's **National Drug Treatment Monitoring System (NDTMS)** for research and the development of principles for good practice in the use of treatment data. This includes consideration of how routinely collected treatment information can better support epidemiological research, service improvement, policy, and clinical practice while remaining attentive to data quality, interpretation, governance, and the experiences of people represented within those data.
+This work includes data quality, governance, interpretation, harmonisation, reproducibility, and public involvement in research using sensitive records.
 
-My broader interests in this area include:
+## Current programmes
 
-- access to and inequalities in addiction treatment
-- treatment pathways and outcomes
-- co-occurring substance use and severe mental illness
-- routinely collected addiction treatment data
-- linkage between treatment, health, mortality, and other administrative records
-- participatory and interdisciplinary approaches to improving treatment data
+<div class="research-programme-map">
+  <div class="research-programme-item">
+    <div class="research-programme-name">WISDOM</div>
+    <p>Severe mental illness, social and emotional experience, environmental and institutional context, and multimodal longitudinal evidence.</p>
+  </div>
+  <div class="research-programme-item">
+    <div class="research-programme-name">HOPE-SEN</div>
+    <p>Neurodivergence, education and health inequalities using linked national administrative data through ECHILD.</p>
+  </div>
+  <div class="research-programme-item">
+    <div class="research-programme-name">UNITED</div>
+    <p>Addiction treatment, national monitoring data, service context, and principles for credible and useful use of routinely collected treatment data.</p>
+  </div>
+  <div class="research-programme-item">
+    <div class="research-programme-name">Clinical data & infrastructure</div>
+    <p>Electronic health records, clinical free text, cross-site harmonisation, governance, and the infrastructure needed for reproducible mental-health research.</p>
+  </div>
+</div>
 
-## Clinical data and research infrastructure
+Across diagnoses and settings, many of the same problems recur: important experiences are fragmented across systems; populations are represented differently depending on who collected the data and why; and social and institutional contexts shape both outcomes and what becomes visible in data.
 
-Electronic health records contain rich longitudinal information about mental health and clinical care, but much of their value is distributed across structured records, free text, organisational systems, and local practices.
-
-Since 2019, I have worked with the **North London NHS Foundation Trust Research Database**, and I currently serve as its Deputy Lead. The database enables ethically governed research using routinely collected mental-health records and forms part of the research partnership between the Trust and UCL.
-
-My role spans research development, data governance, methodological support, and collaboration with researchers, clinicians, informatics teams, public contributors, and other NHS research databases. I also work with colleagues across the UK to improve approaches to the use and accessibility of electronic mental-health records for research.
-
-Methodologically, I am interested in extracting information that is poorly captured in conventional structured fields. This includes work using **natural language processing and clinical free text**, as well as emerging approaches using large language models within appropriately governed research environments.
-
-This strand of the programme therefore combines substantive psychiatric research with research infrastructure: not only asking questions using clinical data, but helping to create the conditions in which high-quality research using those data can take place.
-
-## Connecting the programme
-
-These areas are deliberately connected rather than separate programmes of work.
-
-Across neurodivergence, severe mental illness, and addiction, many of the same challenges recur: important experiences are fragmented across systems; populations are represented differently depending on who collected the data and why; social and institutional contexts shape outcomes; and analytical convenience can easily be mistaken for meaningful inference.
-
-My aim is therefore to develop a research programme in which **methods, infrastructure, substantive epidemiology, and engagement with the people represented in data inform one another**.
-
-This includes a commitment to:
-
-- interdisciplinary and team-based research
-- methodological rigour and appropriate causal inference
-- open and reproducible research
-- responsible use of sensitive and routinely collected data
-- meaningful public and lived-experience involvement
-- developing researchers and collaborative research capacity
-
-See also the [research team](../people/), [publications](../publications/), [research funding](../funding/), and [leadership and recognition](../leadership/).
+See also [people and partnerships](../people/), [publications](../publications/), [research funding](../funding/), [open research and resources](../resources/), and [leadership and recognition](../leadership/).
