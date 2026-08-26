@@ -6,31 +6,58 @@ output:
     keep_md: yes
 ---
 
-My academic leadership spans **editorial work, national research governance, funding and peer review, NHS research infrastructure, and research culture**. These roles reflect increasing external responsibility for academic judgement, research quality, access to sensitive data, and the development of research environments.
+My leadership work centres on **academic judgement, research governance, data access, research infrastructure, and the development of research environments**. I contribute where decisions affect what research is supported, how sensitive data can be used, how evidence is judged, and how researchers and institutions work together.
 
-## Editorial and scholarly leadership
+## Editorial, advisory & governance leadership
 
-- **Associate Editor**, [*Addiction*](https://onlinelibrary.wiley.com/page/journal/13600443/homepage/editorialboard.html)
-- **Editorial Board Member**, [*Substance Use: Research and Treatment*](https://journals.sagepub.com/editorial-board/SAT)
+<div class="leadership-grid">
 
-## National advisory and governance roles
+<div class="leadership-card">
+<div class="leadership-kicker">Editorial leadership</div>
+<h3>Shaping scholarly standards</h3>
+<p><b>Associate Editor</b>, <a href="https://onlinelibrary.wiley.com/page/journal/13600443/homepage/editorialboard.html"><i>Addiction</i></a><br>
+<b>Editorial Board Member</b>, <a href="https://journals.sagepub.com/editorial-board/SAT"><i>Substance Use: Research and Treatment</i></a></p>
+</div>
 
-- **Expert Member**, [Confidentiality Advisory Group, Health Research Authority](https://www.hra.nhs.uk/about-us/committees-and-services/confidentiality-advisory-group/)
-- **Steering Committee Member**, [Addiction Healthcare Goals](https://www.gov.uk/government/publications/life-sciences-healthcare-goals/addiction-healthcare-goals)
-- **Steering Group Member**, [NIHR Mental Health Research (MHR) Incubator](https://mentalhealthresearch.org.uk/)
-- **Data Access Committee Public Member**, [Eastern England Secure Data Environment](https://easternsde.nhs.uk/)
-- **Task & Finish Group Member**, [Administrative Data Research UK](https://www.adruk.org/)
+<div class="leadership-card">
+<div class="leadership-kicker">National research governance</div>
+<h3>Research access, priorities & public interest</h3>
+<p><b>Expert Member</b>, <a href="https://www.hra.nhs.uk/about-us/committees-and-services/confidentiality-advisory-group/">Confidentiality Advisory Group, Health Research Authority</a><br>
+<b>Steering Committee Member</b>, <a href="https://www.gov.uk/government/publications/life-sciences-healthcare-goals/addiction-healthcare-goals">Addiction Healthcare Goals</a><br>
+<b>Steering Group Member</b>, <a href="https://mentalhealthresearch.org.uk/">NIHR Mental Health Research Incubator</a><br>
+<b>Data Access Committee Public Member</b>, <a href="https://easternsde.nhs.uk/">Eastern England Secure Data Environment</a><br>
+<b>Task & Finish Group Member</b>, <a href="https://www.adruk.org/">Administrative Data Research UK</a></p>
+</div>
 
-These roles involve contributing independent academic, methodological, governance, and public-interest perspectives to decisions about research priorities, access to sensitive data, and the development of health research.
+<div class="leadership-card">
+<div class="leadership-kicker">Research assessment</div>
+<h3>Funding and research-quality decisions</h3>
+<p><b>Assessor College</b>, <a href="https://www.ukri.org/councils/esrc/">Economic and Social Research Council</a><br>
+<b>Expert Assessor</b>, <a href="https://www.adruk.org/">Administrative Data Research UK</a><br>
+<b>Reviewer College</b>, <a href="https://www.addiction-ssa.org/">Society for the Study of Addiction</a><br>
+<b>Expert Reviewer</b>, <a href="https://www.kcl.ac.uk/research/eating-disorders-clinical-research-network">Eating Disorders Clinical Research Network</a></p>
+</div>
 
-## Research assessment and peer review
+<div class="leadership-card">
+<div class="leadership-kicker">Research infrastructure</div>
+<h3>Enabling governed mental-health research</h3>
+<p><b>Deputy Lead</b>, <a href="https://www.northlondonmentalhealth.nhs.uk/research-database-">North London NHS Foundation Trust Research Database</a></p>
+<p>I contribute to research development, governance, methodological support, and collaboration across NHS, academic, informatics, and public partners, including work on harmonisation and cross-site research with other mental-health data infrastructures.</p>
+</div>
 
-- **Assessor College**, [Economic and Social Research Council](https://www.ukri.org/councils/esrc/)
-- **Expert Assessor**, [Administrative Data Research UK](https://www.adruk.org/)
-- **Reviewer College**, [Society for the Study of Addiction](https://www.addiction-ssa.org/)
-- **Expert Reviewer**, [Eating Disorders Clinical Research Network](https://www.kcl.ac.uk/research/eating-disorders-clinical-research-network)
+</div>
 
-I also regularly review manuscripts for journals across psychiatry, epidemiology, substance use, public health, and health-services research.
+## Research culture & institutional leadership
+
+At UCL, I contribute to work on research culture, equity, and researcher development where this involves responsibility for shaping the local research environment rather than simply participating in it.
+
+- **Culture Change Action Group Lead**, Division of Psychiatry, UCL
+- **LGBTQ+ Equity Action Group**, Division of Psychiatry, UCL
+- **Committee Member**, Child and Young People's Mental Health ECR Network, UCL
+
+## Scholarly service
+
+I regularly review manuscripts across psychiatry, epidemiology, substance use, public health, and health-services research. Peer-review activity is drawn from ORCID so that the underlying record remains maintainable without turning the page into a journal-by-journal CV.
 
 ```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(tidyverse)
@@ -111,27 +138,18 @@ if (resp_status(resp) == 200) {
 }
 ```
 
-## Research infrastructure and enabling leadership
+## Wider contributions
 
-- **Deputy Lead**, [North London NHS Foundation Trust Research Database](https://www.northlondonmentalhealth.nhs.uk/research-database-)
+Some roles are important parts of academic citizenship or researcher development but are better understood as supporting contributions than as headline leadership positions.
 
-Through the Research Database, I help enable ethically governed research using routinely collected mental-health records. My work spans research development, data governance, methodological support, collaboration with NHS and academic researchers, and efforts to improve harmonisation and access across mental-health research data infrastructures.
-
-I also work with colleagues at South London and Maudsley NHS Foundation Trust to support harmonisation across CRIS sites, including approaches that make cross-site replication and comparative studies easier to undertake.
-
-## Research culture and institutional leadership
-
-At UCL, I contribute to initiatives aimed at improving research culture, equity, researcher development, and the experience of early-career colleagues.
-
-- **Culture Change Action Group Lead**, Division of Psychiatry, UCL
-- **LGBTQ+ Equity Action Group**, Division of Psychiatry, UCL
-- **Committee Member**, Child and Young People's Mental Health ECR Network, UCL
-
-## Additional contributions
+<details>
+<summary><b>View additional academic and public contributions</b></summary>
 
 - **Public Member**, [British Society for Immunology Patient and Public Involvement Network](https://www.immunology.org/)
 - **Reviewer Development Scheme**, [National Institute for Health and Care Research](https://www.nihr.ac.uk/)
 - **Personal Tutor**, Division of Psychiatry, UCL
 - **Certified Instructor**, [The Carpentries](https://carpentries.org/)
 
-These activities complement my wider research leadership through contributions to inclusive research environments, public involvement, reproducible research practice, teaching, and researcher development.
+</details>
+
+Across these roles, the common thread is responsibility for **how research is judged, governed, enabled, and sustained** rather than leadership as a collection of titles. See also [research](../research/), [people and partnerships](../people/), and [teaching and supervision](../teaching/).
