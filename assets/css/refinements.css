@@ -1,0 +1,75 @@
+/* Final hierarchy and accessibility refinements */
+
+.site-header {
+  text-align: center;
+}
+
+.site-brand {
+  display: inline-block;
+  margin: 0 0 0.45rem;
+  color: #222;
+  font-family: Inter, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.site-brand:hover {
+  color: #1f7fc4;
+}
+
+.mindset-questions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.35rem 0 1.8rem;
+}
+
+.mindset-question {
+  padding: 0.95rem 1rem 1rem;
+  border-top: 2px solid #1f7fc4;
+  background: #fafafa;
+}
+
+.mindset-question-number {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #777;
+  font-family: Inter, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.mindset-question h2 {
+  margin-top: 0;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.mindset-question p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .mindset-questions {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
