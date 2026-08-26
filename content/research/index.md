@@ -96,4 +96,4 @@ This includes a commitment to:
 - meaningful public and lived-experience involvement
 - developing researchers and collaborative research capacity
 
-See also [people and partnerships](../people/), [research contribution and engagement](../contribution/), [publications](../publications/), [research funding](../funding/), [open research and resources](../resources/), and [leadership and recognition](../leadership/).
+See also [people and partnerships](../people/), [publications](../publications/), [research funding](../funding/), [open research and resources](../resources/), and [leadership and recognition](../leadership/).
