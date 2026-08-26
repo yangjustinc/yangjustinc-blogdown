@@ -32,7 +32,7 @@ Administrative and clinical data are produced through interactions with schools,
 
 That makes selection, measurement, missingness, coding, linkage, and data quality part of the substantive problem. A recorded school absence reflects both a child's experience and the practices of an educational system; a diagnosis reflects illness and processes of recognition and documentation; treatment records reflect both need and the organisation of care.
 
-My methodological work focuses on making credible inferences from data that were often collected for purposes other than research. I use and develop approaches spanning:
+My methodological work includes:
 
 - linked administrative and population data
 - electronic health records and clinical free text
@@ -43,23 +43,21 @@ My methodological work focuses on making credible inferences from data that were
 - triangulation across heterogeneous data sources
 - transparent and reproducible research in secure environments
 
-The aim is not methodological novelty for its own sake. Methods are useful when they clarify what the data represent, strengthen the credibility of inference, recover information that would otherwise remain inaccessible, or show where the available evidence cannot support the claim we would like to make.
+I use these approaches to clarify what data represent, strengthen inference, recover information that would otherwise remain inaccessible, and identify where the available evidence cannot support a particular claim.
 
 ## How can data systems better support research, services, and public decision-making?
 
-Some research problems cannot be solved by better statistical analysis alone. What can be learned also depends on how data are collected, governed, linked, accessed, documented, and interpreted.
+What can be learned from routinely collected data depends on how those data are collected, governed, linked, accessed, documented, and interpreted.
 
-I therefore work on research infrastructure as well as research using that infrastructure. As Deputy Lead of the **North London NHS Foundation Trust Research Database**, I support ethically governed research using routinely collected mental-health records, spanning research development, data governance, methodological support, and collaboration with clinicians, informatics teams, researchers, public contributors, and other research databases.
+As Deputy Lead of the **North London NHS Foundation Trust Research Database**, I support ethically governed research using routinely collected mental-health records, spanning research development, data governance, methodological support, and collaboration with clinicians, informatics teams, researchers, public contributors, and other research databases.
 
 I also work with colleagues at South London and Maudsley NHS Foundation Trust on harmonisation across mental-health research infrastructures, including approaches that make cross-site replication and comparative studies easier to undertake.
 
 Within **UNITED (Using a National, Interdisciplinary Team to Enhance Drug and alcohol treatment data)**, I lead work examining how England's **National Drug Treatment Monitoring System (NDTMS)** is used for research and how routinely collected treatment data can better support epidemiology, service improvement, policy, and clinical practice.
 
-Across these activities, the objective is to improve the conditions under which sensitive real-world data can support research that is useful, reproducible, interpretable, and accountable to the people represented in those data.
+This work includes data quality, governance, interpretation, harmonisation, reproducibility, and public involvement in research using sensitive records.
 
-## How the current programme fits together
-
-Individual awards contribute to more than one of the questions above. They are time-bounded parts of a wider research agenda rather than separate permanent strands.
+## Current programmes
 
 <div class="research-programme-map">
   <div class="research-programme-item">
@@ -80,8 +78,6 @@ Individual awards contribute to more than one of the questions above. They are t
   </div>
 </div>
 
-Across the programme, substantive epidemiology, methods, infrastructure, and engagement with the people represented in data are intended to inform one another. The same underlying challenge recurs across diagnoses and settings: **important experiences are fragmented across systems, and credible inference depends on understanding both people's lives and the processes that make them visible in data.**
-
-This work is grounded in interdisciplinary collaboration, methodological rigour, open and reproducible research, responsible use of sensitive data, meaningful public and lived-experience involvement, and the development of trainees and collaborative research capacity.
+Across diagnoses and settings, many of the same problems recur: important experiences are fragmented across systems; populations are represented differently depending on who collected the data and why; and social and institutional contexts shape both outcomes and what becomes visible in data.
 
 See also [people and partnerships](../people/), [publications](../publications/), [research funding](../funding/), [open research and resources](../resources/), and [leadership and recognition](../leadership/).
