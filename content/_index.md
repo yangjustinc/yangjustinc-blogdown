@@ -6,10 +6,10 @@ description: "MINDSET is the research programme led by Dr Justin C Yang, using p
 # MINDSET
 
 <div id="profile">
- <img src="logo.png"
+ <img src="logo-v2.svg"
  alt="MINDSET logo"
- width="768"
- height="387"
+ width="512"
+ height="512"
  decoding="async">
 </div>
 
