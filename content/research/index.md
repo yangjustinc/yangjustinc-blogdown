@@ -58,20 +58,29 @@ This work includes data quality, governance, interpretation, harmonisation, repr
 ## Current programmes
 
 <div class="research-programme-map">
+  <div class="programme-map-key" aria-label="MINDSET questions">
+    <span><b>01</b> Trajectories</span>
+    <span><b>02</b> Inference</span>
+    <span><b>03</b> Data systems</span>
+  </div>
   <div class="research-programme-item">
     <div class="research-programme-name">WISDOM</div>
+    <div class="programme-connections" aria-label="Connects to questions 1 and 2"><span class="is-active">01</span><span class="is-active">02</span><span>03</span></div>
     <p>Severe mental illness, social and emotional experience, environmental and institutional context, and multimodal longitudinal evidence.</p>
   </div>
   <div class="research-programme-item">
     <div class="research-programme-name">HOPE-SEN</div>
+    <div class="programme-connections" aria-label="Connects to questions 1 and 2"><span class="is-active">01</span><span class="is-active">02</span><span>03</span></div>
     <p>Neurodivergence, education and health inequalities using linked national administrative data through ECHILD.</p>
   </div>
   <div class="research-programme-item">
     <div class="research-programme-name">UNITED</div>
+    <div class="programme-connections" aria-label="Connects to all three questions"><span class="is-active">01</span><span class="is-active">02</span><span class="is-active">03</span></div>
     <p>Addiction treatment, national monitoring data, service context, and the use of routinely collected treatment data.</p>
   </div>
   <div class="research-programme-item">
     <div class="research-programme-name">Clinical data & infrastructure</div>
+    <div class="programme-connections" aria-label="Connects to questions 2 and 3"><span>01</span><span class="is-active">02</span><span class="is-active">03</span></div>
     <p>Electronic health records, clinical free text, cross-site harmonisation, governance, and mental-health research infrastructure.</p>
   </div>
 </div>
