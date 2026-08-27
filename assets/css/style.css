@@ -253,9 +253,16 @@ h1 {
 h1::after {
   content: '';
   display: block;
-  width: 2.5rem;
-  height: 2px;
-  background: #1f7fc4;
+  width: 3.75rem;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    #1f7fc4 0 20%,
+    #137f76 20% 40%,
+    #b85c00 40% 60%,
+    #76549f 60% 80%,
+    #4f7d32 80% 100%
+  );
   margin-top: 0.3em;
 }
 
@@ -927,8 +934,28 @@ main .section[id] {
 
 .mindset-question {
   padding: 0.95rem 1rem 1rem;
-  border-top: 2px solid #1f7fc4;
+  border-top: 2px solid #173b57;
   background: #fafafa;
+}
+
+.mindset-question-glyph {
+  display: block;
+  width: 3.5rem;
+  height: 2rem;
+  margin: 0 0 0.45rem;
+  fill: none;
+  stroke: #1f7fc4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5;
+}
+
+.mindset-question-glyph-secondary {
+  stroke: #137f76;
+}
+
+.mindset-question-glyph-bracket {
+  stroke: #173b57;
 }
 
 .mindset-question-number {
