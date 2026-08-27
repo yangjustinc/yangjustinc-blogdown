@@ -78,9 +78,9 @@ Many partners contribute across more than one area of the programme.
 <p>National administrative data, population data science, linkage, and infrastructure for studying trajectories and inequalities at scale.</p>
 <div class="collaboration-links">
 <a href="https://www.adruk.org/">Administrative Data Research UK</a>
-<a href="https://datamind.org.uk/">DATAMIND: The Hub for Mental Health Informatics Research Development</a>
 <a href="https://www.hdruk.ac.uk/">Health Data Research UK</a>
-<a href="https://www.psylife.eu/">PsyLife: Social inequalities in mental health across the life course</a>
+<a href="https://www.psylife.eu/">Social inequalities in mental health across the life course (PsyLife)</a>
+<a href="https://datamind.org.uk/">The Hub for Mental Health Informatics Research Development (DATAMIND)</a>
 </div>
 </div>
 
