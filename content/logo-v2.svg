@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">MINDSET logo</title>
+  <desc id="desc">A connected M formed from five coloured data points within a blue circle.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="256" cy="256" r="202" stroke="#1f7fc4" stroke-width="20"/>
+    <path d="M126 337V177l130 145 130-145v160" stroke="#173b57" stroke-width="32"/>
+  </g>
+  <g stroke="#fff" stroke-width="10">
+    <circle cx="126" cy="337" r="25" fill="#1f7fc4"/>
+    <circle cx="126" cy="177" r="25" fill="#137f76"/>
+    <circle cx="256" cy="322" r="25" fill="#b85c00"/>
+    <circle cx="386" cy="177" r="25" fill="#76549f"/>
+    <circle cx="386" cy="337" r="25" fill="#4f7d32"/>
+  </g>
+</svg>
