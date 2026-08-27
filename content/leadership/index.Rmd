@@ -19,7 +19,7 @@ I hold editorial, advisory, research-assessment, infrastructure, and institution
 </div>
 
 <div class="leadership-card">
-<h3 class="leadership-kicker">National research governance</h3>
+<h3 class="leadership-kicker">National and regional research governance</h3>
 <p><b>Expert Member</b>, <a href="https://www.hra.nhs.uk/about-us/committees-and-services/confidentiality-advisory-group/">Confidentiality Advisory Group, Health Research Authority</a><br>
 <b>Steering Committee Member</b>, <a href="https://www.gov.uk/government/publications/life-sciences-healthcare-goals/addiction-healthcare-goals">Addiction Healthcare Goals</a><br>
 <b>Steering Group Member</b>, <a href="https://mentalhealthresearch.org.uk/">NIHR Mental Health Research Incubator</a><br>
@@ -139,41 +139,5 @@ if (resp_status(resp) == 200) {
 - **Reviewer Development Scheme**, [National Institute for Health and Care Research](https://www.nihr.ac.uk/)
 - **Personal Tutor**, Division of Psychiatry, UCL
 - **Certified Instructor**, [The Carpentries](https://carpentries.org/)
-
-<details>
-<summary><b>View complete leadership and service record</b></summary>
-
-### Editorial
-- **Associate Editor**, *Addiction*
-- **Editorial Board Member**, *Substance Use: Research and Treatment*
-
-### Advisory and governance
-- **Expert Member**, Confidentiality Advisory Group, Health Research Authority
-- **Steering Committee Member**, Addiction Healthcare Goals
-- **Steering Group Member**, NIHR Mental Health Research Incubator
-- **Data Access Committee Public Member**, Eastern England Secure Data Environment
-- **Task & Finish Group Member**, Administrative Data Research UK
-
-### Research assessment
-- **Assessor College**, Economic and Social Research Council
-- **Expert Assessor**, Administrative Data Research UK
-- **Reviewer College**, Society for the Study of Addiction
-- **Expert Reviewer**, Eating Disorders Clinical Research Network
-
-### Research infrastructure
-- **Deputy Lead**, North London NHS Foundation Trust Research Database
-
-### Research culture and institutional roles
-- **Culture Change Action Group Lead**, Division of Psychiatry, UCL
-- **LGBTQ+ Equity Action Group**, Division of Psychiatry, UCL
-- **Committee Member**, Child and Young People's Mental Health ECR Network, UCL
-- **Personal Tutor**, Division of Psychiatry, UCL
-
-### Public, reviewing and training contributions
-- **Public Member**, British Society for Immunology Patient and Public Involvement Network
-- **Reviewer Development Scheme**, National Institute for Health and Care Research
-- **Certified Instructor**, The Carpentries
-
-</details>
 
 See also [research](../research/), [people and partnerships](../people/), and [teaching and supervision](../teaching/).

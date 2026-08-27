@@ -327,10 +327,6 @@ selected_display <- selected |>
     by = "doi"
   )
 
-recent_display <- peer_reviewed |>
-  filter(!doi %in% selected$doi) |>
-  arrange(desc(year), desc(publication_date)) |>
-  slice_head(n = 5)
 ```
 
 
@@ -424,53 +420,6 @@ selected_display |>
         significance_html,
         contribution_html,
         "</div>"
-      )
-    }
-  ) |>
-  paste(collapse = "\n") |>
-  cat()
-```
-
-## Recent peer-reviewed work
-
-The most recent peer-reviewed publications not already highlighted above are shown automatically from ORCID.
-
-```{r results='asis', echo=FALSE}
-recent_display |>
-  mutate(
-    doi_link = if_else(
-      !is.na(doi),
-      paste0("https://doi.org/", doi),
-      NA_character_
-    )
-  ) |>
-  pmap_chr(
-    function(title, journal, year, doi_link, ...) {
-      title_html <- if (!is.na(doi_link)) {
-        paste0(
-          '<a href="',
-          htmlEscape(doi_link),
-          '"><b>',
-          htmlEscape(title),
-          "</b></a>"
-        )
-      } else {
-        paste0("<b>", htmlEscape(title), "</b>")
-      }
-
-      meta <- paste(
-        c(
-          if (!is.na(journal) && journal != "") htmlEscape(journal),
-          if (!is.na(year)) as.character(year)
-        ),
-        collapse = " · "
-      )
-
-      paste0(
-        '<div class="recent-publication"><p>',
-        title_html,
-        if (meta != "") paste0("<br><span class=\"selected-meta\">", meta, "</span>") else "",
-        "</p></div>"
       )
     }
   ) |>

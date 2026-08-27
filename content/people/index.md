@@ -69,7 +69,7 @@ Many partners contribute across more than one area of the programme.
 
 <div class="ecosystem-core">
 <b>MINDSET</b>
-<span>Shared questions, methods, data and public purpose</span>
+<span>Partners and expertise across four connected areas</span>
 </div>
 
 <div class="collaboration-cluster">
@@ -116,6 +116,7 @@ Many partners contribute across more than one area of the programme.
 <div class="collaboration-links">
 <a href="https://www.changegrowlive.org/">Change Grow Live</a>
 <a href="https://www.turning-point.co.uk/">Turning Point</a>
+<a href="https://mcpin.org/">McPin Foundation</a>
 </div>
 </div>
 

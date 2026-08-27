@@ -183,39 +183,45 @@ tr:nth-child(even) {
 /* Site tables */
 .site-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: 0.88em;
   margin: 1.25em 0;
-  border-top: 2px solid #222;
-  border-bottom: 2px solid #222;
+  border-top: 2px solid #173b57;
+  border-bottom: 0;
 }
 
 .site-table thead tr {
-  background: #eef6fb;
-  border-bottom: 1px solid #c5dff0;
+  background: transparent;
 }
 
 .site-table th {
-  padding: 9px 12px;
+  padding: 0.65rem 0.7rem 0.55rem;
+  border-bottom: 1px solid #a9cce4;
   text-align: left;
-  font-weight: 600;
-  color: #222;
+  color: #173b57;
+  font-family: Inter, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
   white-space: nowrap;
 }
 
 .site-table td {
-  padding: 8px 12px;
+  padding: 0.65rem 0.7rem;
   vertical-align: top;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #e8edf0;
   color: #333;
+  line-height: 1.45;
 }
 
-.site-table tbody tr:last-child td {
-  border-bottom: none;
+.site-table tbody td:first-child {
+  color: #222;
+  font-weight: 600;
 }
 
 .site-table tbody tr:hover {
-  background: #f5fafd;
+  background: #f7fafc;
 }
 
 .supervision-summary {
@@ -478,19 +484,6 @@ main a:hover {
 
 .selected-contribution {
   font-size: 0.94rem;
-}
-
-.recent-publication {
-  padding: 0.7rem 0;
-  border-bottom: 1px solid #ededed;
-}
-
-.recent-publication:last-child {
-  border-bottom: none;
-}
-
-.recent-publication p {
-  margin: 0;
 }
 
 .publication-list p {
