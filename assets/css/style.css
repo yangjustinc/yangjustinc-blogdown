@@ -1121,27 +1121,39 @@ main .section[id] {
 }
 
 .collaboration-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 0.45rem;
+  display: grid;
+  margin-top: 0.8rem;
+  border-top: 1px solid #e2e7ea;
 }
 
 .collaboration-links a {
-  border: 1px solid #d7d7d7;
-  border-radius: 999px;
-  background: #fff;
-  padding: 0.2rem 0.5rem;
-  color: #444;
-  font-size: 0.78rem;
-  line-height: 1.3;
+  position: relative;
+  padding: 0.42rem 1.25rem 0.42rem 0;
+  border-bottom: 1px solid #e2e7ea;
+  color: #33434e;
+  font-size: 0.8rem;
+  line-height: 1.35;
   text-decoration: none;
+}
+
+.collaboration-links a::after {
+  content: '↗';
+  position: absolute;
+  top: 0.42rem;
+  right: 0.1rem;
+  color: #7a8a94;
+  font-size: 0.72rem;
 }
 
 .collaboration-links a:hover,
 .collaboration-links a:focus-visible {
-  border-color: #a9cce4;
-  background: #eef6fb;
   color: #155d94;
+  background: linear-gradient(to right, #eef6fb, transparent 75%);
+}
+
+.collaboration-links a:hover::after,
+.collaboration-links a:focus-visible::after {
+  color: #1f7fc4;
 }
 
 /* Teaching & Supervision */
