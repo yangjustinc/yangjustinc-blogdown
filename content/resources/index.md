@@ -5,12 +5,6 @@ description: "Open research, code, teaching materials, and reproducible resource
 
 Open and reproducible research is part of how I work, particularly where methods, code, and teaching materials can be reused beyond a single study. Selected resources are listed below.
 
-<nav class="resource-map" aria-label="Resource types">
-  <a href="#routine-data-analysis-across-r-python-and-stata"><span>01</span>Routine data</a>
-  <a href="#mapping-and-spatial-analysis-in-r"><span>02</span>Spatial analysis</a>
-  <a href="#reproducible-website-infrastructure"><span>03</span>Research infrastructure</a>
-</nav>
-
 ## Routine data analysis across R, Python, and Stata
 
 [**Risk of Suicide After Cancer Diagnosis in England**](https://yangjustinc.github.io/2024-ncras/) is a worked teaching resource demonstrating approaches to analysing routinely collected health data. It covers survival-analysis workflows, person-time, standardised mortality ratios, and absolute excess risks, with examples in R, Python, and Stata.

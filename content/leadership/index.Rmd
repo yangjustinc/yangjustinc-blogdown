@@ -13,15 +13,13 @@ I hold editorial, advisory, research-assessment, infrastructure, and institution
 <div class="leadership-grid">
 
 <div class="leadership-card">
-<div class="leadership-kicker">Editorial leadership</div>
-<h3>Addiction and substance-use publishing</h3>
+<h3 class="leadership-kicker">Editorial leadership</h3>
 <p><b>Associate Editor</b>, <a href="https://onlinelibrary.wiley.com/page/journal/13600443/homepage/editorialboard.html"><i>Addiction</i></a><br>
 <b>Editorial Board Member</b>, <a href="https://journals.sagepub.com/editorial-board/SAT"><i>Substance Use: Research and Treatment</i></a></p>
 </div>
 
 <div class="leadership-card">
-<div class="leadership-kicker">National research governance</div>
-<h3>Research access, priorities & public interest</h3>
+<h3 class="leadership-kicker">National research governance</h3>
 <p><b>Expert Member</b>, <a href="https://www.hra.nhs.uk/about-us/committees-and-services/confidentiality-advisory-group/">Confidentiality Advisory Group, Health Research Authority</a><br>
 <b>Steering Committee Member</b>, <a href="https://www.gov.uk/government/publications/life-sciences-healthcare-goals/addiction-healthcare-goals">Addiction Healthcare Goals</a><br>
 <b>Steering Group Member</b>, <a href="https://mentalhealthresearch.org.uk/">NIHR Mental Health Research Incubator</a><br>
@@ -30,8 +28,7 @@ I hold editorial, advisory, research-assessment, infrastructure, and institution
 </div>
 
 <div class="leadership-card">
-<div class="leadership-kicker">Research assessment</div>
-<h3>Funding and research review</h3>
+<h3 class="leadership-kicker">Research assessment</h3>
 <p><b>Assessor College</b>, <a href="https://www.ukri.org/councils/esrc/">Economic and Social Research Council</a><br>
 <b>Expert Assessor</b>, <a href="https://www.adruk.org/">Administrative Data Research UK</a><br>
 <b>Reviewer College</b>, <a href="https://www.addiction-ssa.org/">Society for the Study of Addiction</a><br>
@@ -39,10 +36,8 @@ I hold editorial, advisory, research-assessment, infrastructure, and institution
 </div>
 
 <div class="leadership-card">
-<div class="leadership-kicker">Research infrastructure</div>
-<h3>Mental-health research data</h3>
+<h3 class="leadership-kicker">Research infrastructure</h3>
 <p><b>Deputy Lead</b>, <a href="https://www.northlondonmentalhealth.nhs.uk/research-database-">North London NHS Foundation Trust Research Database</a></p>
-<p>My work includes research development, governance, methodological support, and collaboration across NHS, academic, informatics, and public partners, including harmonisation and cross-site research with other mental-health data infrastructures.</p>
 </div>
 
 </div>
