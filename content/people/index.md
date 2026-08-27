@@ -79,8 +79,8 @@ Many partners contribute across more than one area of the programme.
 <div class="collaboration-links">
 <a href="https://www.adruk.org/">Administrative Data Research UK</a>
 <a href="https://www.hdruk.ac.uk/">Health Data Research UK</a>
-<a href="https://datamind.org.uk/">DATAMIND</a>
-<a href="https://www.psylife.eu/">PsyLife</a>
+<a href="https://www.psylife.eu/">Social inequalities in mental health across the life course (PsyLife)</a>
+<a href="https://datamind.org.uk/">The Hub for Mental Health Informatics Research Development (DATAMIND)</a>
 </div>
 </div>
 
@@ -89,10 +89,11 @@ Many partners contribute across more than one area of the programme.
 <h3>Turning routinely collected records into research evidence</h3>
 <p>Electronic health records, clinical text, governed data access, harmonisation, and methods for research across mental-health services.</p>
 <div class="collaboration-links">
+<a href="https://aimhlab.research.st/">Applied Informatics for Mental Health (aiMH)</a>
+<a href="https://naomilaunders.co.uk/">Improving Mental and Physical Health Analytics through Robust Epidemiology and Data Science (IMPARTED)</a>
 <a href="https://www.northlondonmentalhealth.nhs.uk/">North London NHS Foundation Trust</a>
 <a href="https://slam.nhs.uk/">South London and Maudsley NHS Foundation Trust</a>
-<a href="https://aimhlab.research.st/">applied informatics for Mental Health (aiMH)</a>
-<a href="https://naomilaunders.co.uk/">IMPARTED</a>
+<a href="https://smwu.github.io/">Dr Stephanie Wu</a>
 </div>
 </div>
 
@@ -102,10 +103,10 @@ Many partners contribute across more than one area of the programme.
 <p>Psychosis, severe mental illness, social and environmental determinants, causal inference, systems thinking, prediction, and inequalities.</p>
 <div class="collaboration-links">
 <a href="https://www.complexemotionshub.co.uk/">Complex Emotions Hub</a>
-<a href="https://www.socialhealthhub.org/">Social Health Hub</a>
-<a href="https://www.mentalhealthepi.com/">MIST</a>
-<a href="https://katemerritt.github.io/map-lab/">MAP Lab</a>
+<a href="https://katemerritt.github.io/map-lab/">Mechanisms and Prediction of Psychosis Lab (MAP Lab)</a>
 <a href="https://www.mentalhealthpolicyeconomicsgroup.com/">Mental Health | Policy | Economics Group</a>
+<a href="https://www.mentalhealthepi.com/">Mental Illness through Systems Thinking (MIST) Psychiatric Epidemiology</a>
+<a href="https://www.socialhealthhub.org/">Social Health Hub</a>
 </div>
 </div>
 
@@ -115,8 +116,8 @@ Many partners contribute across more than one area of the programme.
 <p>Treatment-provider expertise, public involvement, service context, and partnerships that help make questions and interpretation useful beyond academia.</p>
 <div class="collaboration-links">
 <a href="https://www.changegrowlive.org/">Change Grow Live</a>
-<a href="https://www.turning-point.co.uk/">Turning Point</a>
 <a href="https://mcpin.org/">McPin Foundation</a>
+<a href="https://www.turning-point.co.uk/">Turning Point</a>
 </div>
 </div>
 
