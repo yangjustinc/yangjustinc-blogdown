@@ -55,25 +55,4 @@ Within **UNITED (Using a National, Interdisciplinary Team to Enhance Drug and al
 
 This work includes data quality, governance, interpretation, harmonisation, reproducibility, and public involvement in research using sensitive records.
 
-## Current programmes
-
-<div class="research-programme-map">
-  <div class="research-programme-item">
-    <div class="research-programme-name">WISDOM</div>
-    <p>Severe mental illness, social and emotional experience, environmental and institutional context, and multimodal longitudinal evidence.</p>
-  </div>
-  <div class="research-programme-item">
-    <div class="research-programme-name">HOPE-SEN</div>
-    <p>Neurodivergence, education and health inequalities using linked national administrative data through ECHILD.</p>
-  </div>
-  <div class="research-programme-item">
-    <div class="research-programme-name">UNITED</div>
-    <p>Addiction treatment, national monitoring data, service context, and the use of routinely collected treatment data.</p>
-  </div>
-  <div class="research-programme-item">
-    <div class="research-programme-name">Clinical data & infrastructure</div>
-    <p>Electronic health records, clinical free text, cross-site harmonisation, governance, and mental-health research infrastructure.</p>
-  </div>
-</div>
-
 See also [people and partnerships](../people/), [publications](../publications/), [research funding](../funding/), [open research and resources](../resources/), and [leadership and recognition](../leadership/).

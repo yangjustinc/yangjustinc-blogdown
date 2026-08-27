@@ -67,6 +67,11 @@ Many partners contribute across more than one area of the programme.
 
 <div class="collaboration-map">
 
+<div class="ecosystem-core">
+<b>MINDSET</b>
+<span>Partners and expertise across four connected areas</span>
+</div>
+
 <div class="collaboration-cluster">
 <div class="collaboration-kicker">Population & linked data</div>
 <h3>Following mental health across systems and populations</h3>
@@ -111,58 +116,8 @@ Many partners contribute across more than one area of the programme.
 <div class="collaboration-links">
 <a href="https://www.changegrowlive.org/">Change Grow Live</a>
 <a href="https://www.turning-point.co.uk/">Turning Point</a>
+<a href="https://mcpin.org/">McPin Foundation</a>
 </div>
-</div>
-
-</div>
-
-## Featured programme partnerships
-
-<div class="people-grid partner-showcase-grid">
-
-<div class="partner-card partner-showcase-card">
-<a href="https://www.adruk.org/"><img src="pictures/administrativedataresearchuk.png" alt="Administrative Data Research UK logo" width="256" height="256" loading="lazy" decoding="async"></a>
-<p><b>Administrative Data Research UK</b><br>HOPE-SEN and wider work on responsible, policy-relevant use of linked population data.</p>
-</div>
-
-<div class="partner-card partner-showcase-card">
-<a href="https://www.northlondonmentalhealth.nhs.uk/"><img src="pictures/nlft.png" alt="North London NHS Foundation Trust logo" width="256" height="256" loading="lazy" decoding="async"></a>
-<p><b>North London NHS Foundation Trust</b><br>Home of the Research Database, where I serve as Deputy Lead and support governed mental-health research.</p>
-</div>
-
-<div class="partner-card partner-showcase-card">
-<a href="https://datamind.org.uk/"><img src="pictures/datamind.png" alt="DATAMIND logo" width="512" height="512" loading="lazy" decoding="async"></a>
-<p><b>DATAMIND</b><br>Mental-health data science collaboration through the UKRI Mental Health Platform and related clinical and population-data work.</p>
-</div>
-
-<div class="partner-card partner-showcase-card">
-<a href="https://www.complexemotionshub.co.uk/"><img src="pictures/complexemotions.png" alt="Complex Emotions Hub logo" width="512" height="512" loading="lazy" decoding="async"></a>
-<p><b>Complex Emotions Hub</b><br>WISDOM collaboration on relationships, adversity, emotional experiences, and trajectories in severe mental illness.</p>
-</div>
-
-<div class="partner-card partner-showcase-card">
-<a href="https://www.socialhealthhub.org/"><img src="pictures/socialhealth.png" alt="Social Health Hub logo" width="512" height="512" loading="lazy" decoding="async"></a>
-<p><b>Social Health Hub</b><br>WISDOM collaboration on social conditions, relationships, and inequalities shaping severe mental illness.</p>
-</div>
-
-<div class="partner-card partner-showcase-card">
-<a href="https://www.hdruk.ac.uk/"><img src="pictures/healthdataresearchuk.png" alt="Health Data Research UK logo" width="256" height="256" loading="lazy" decoding="async"></a>
-<p><b>Health Data Research UK</b><br>Mental Health Driver Programme links across methodological, infrastructure, and applied health-data research.</p>
-</div>
-
-<div class="partner-card partner-showcase-card">
-<a href="https://slam.nhs.uk/"><img src="pictures/slam.png" alt="South London and Maudsley NHS Foundation Trust logo" width="256" height="256" loading="lazy" decoding="async"></a>
-<p><b>South London and Maudsley NHS Foundation Trust</b><br>Collaboration on harmonising mental-health research databases for cross-site replication and comparative research.</p>
-</div>
-
-<div class="partner-card partner-showcase-card">
-<a href="https://www.changegrowlive.org/"><img src="pictures/changegrowlive.png" alt="Change Grow Live logo" width="256" height="256" loading="lazy" decoding="async"></a>
-<p><b>Change Grow Live</b><br>UNITED partner contributing treatment-provider expertise, public involvement, site-based learning, and research support.</p>
-</div>
-
-<div class="partner-card partner-showcase-card">
-<a href="https://www.turning-point.co.uk/"><img src="pictures/turningpoint.png" alt="Turning Point logo" width="256" height="256" loading="lazy" decoding="async"></a>
-<p><b>Turning Point</b><br>UNITED partner connecting work on national treatment data with services and people with lived experience.</p>
 </div>
 
 </div>

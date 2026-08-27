@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">MINDSET logo</title>
+  <desc id="desc">Fragmented observations pass through an inference aperture and resolve into five continuous evidence strands.</desc>
+
+  <!-- Heterogeneous observations: deliberately different marks on each row. -->
+  <g stroke-linecap="round" stroke-width="22">
+    <path d="M54 128h17m27 0h30" stroke="#1f7fc4"/>
+    <path d="M54 192h36m26 0h12" stroke="#137f76"/>
+    <path d="M54 256h12m26 0h36" stroke="#b85c00"/>
+    <path d="M54 320h27m28 0h19" stroke="#76549f"/>
+    <path d="M54 384h20m24 0h30" stroke="#4f7d32"/>
+  </g>
+
+  <!-- Five data modes are preserved while their relationships are inferred. -->
+  <g fill="none" stroke-linecap="round" stroke-width="22">
+    <path d="M128 128c76 0 74 88 128 108s83-108 202-108" stroke="#1f7fc4"/>
+    <path d="M128 192c70 0 79 38 128 52s84-52 202-52" stroke="#137f76"/>
+    <path d="M128 256h330" stroke="#b85c00"/>
+    <path d="M128 320c70 0 79-38 128-52s84 52 202 52" stroke="#76549f"/>
+    <path d="M128 384c76 0 74-88 128-108s83 108 202 108" stroke="#4f7d32"/>
+  </g>
+
+  <!-- The paired brackets denote an analytical aperture, not a closed system. -->
+  <g fill="none" stroke="#173b57" stroke-linecap="round" stroke-width="18">
+    <path d="M213 78c-42 51-55 109-55 178s13 127 55 178"/>
+    <path d="M299 78c42 51 55 109 55 178s-13 127-55 178"/>
+  </g>
+</svg>

@@ -6,10 +6,10 @@ description: "MINDSET is the research programme led by Dr Justin C Yang, using p
 # MINDSET
 
 <div id="profile">
- <img src="logo.png"
+ <img src="logo-v2.svg"
  alt="MINDSET logo"
- width="768"
- height="387"
+ width="512"
+ height="512"
  decoding="async">
 </div>
 
@@ -21,16 +21,30 @@ MINDSET develops and applies methods for drawing **credible, useful, and respons
 
 <div class="mindset-questions">
   <section class="mindset-question">
+    <svg class="mindset-question-glyph" viewBox="0 0 64 36" aria-hidden="true" focusable="false">
+      <path d="M3 27c10 0 10-18 20-18s10 18 20 18 10-18 18-18"/>
+      <path class="mindset-question-glyph-secondary" d="M3 18c12 0 12 9 24 9s12-18 24-18h10"/>
+    </svg>
     <span class="mindset-question-number">01</span>
     <h2>What shapes mental health and inequalities over time?</h2>
     <p>Understanding how social, relational, environmental, educational, and institutional experiences influence mental health, service use, and wider outcomes across people, populations, and places.</p>
   </section>
   <section class="mindset-question">
+    <svg class="mindset-question-glyph" viewBox="0 0 64 36" aria-hidden="true" focusable="false">
+      <path d="M3 10h7m5 0h8m18 0h20M3 26h12m5 0h3m18 0h20"/>
+      <path class="mindset-question-glyph-bracket" d="M29 4c-4 6-5 12-5 14s1 8 5 14M35 4c4 6 5 12 5 14s-1 8-5 14"/>
+    </svg>
     <span class="mindset-question-number">02</span>
     <h2>How can complex real-world data tell us what is actually happening?</h2>
     <p>Making better use of linked records, electronic health records, clinical free text, longitudinal data, and other sources while remaining attentive to selection, measurement, missingness, and the limits of inference.</p>
   </section>
   <section class="mindset-question">
+    <svg class="mindset-question-glyph" viewBox="0 0 64 36" aria-hidden="true" focusable="false">
+      <rect x="3" y="8" width="14" height="20" rx="2"/>
+      <rect x="25" y="3" width="14" height="30" rx="2"/>
+      <rect x="47" y="8" width="14" height="20" rx="2"/>
+      <path class="mindset-question-glyph-secondary" d="M17 18h8m14 0h8"/>
+    </svg>
     <span class="mindset-question-number">03</span>
     <h2>How can data systems better support research, services, and public decision-making?</h2>
     <p>Improving the infrastructures, governance, and analytical practices through which routinely collected data become useful evidence for research, policy, services, and the public.</p>
