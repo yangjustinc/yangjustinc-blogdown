@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="628" viewBox="0 0 1200 628" role="img" aria-labelledby="title desc">
+  <title id="title">MINDSET</title>
+  <desc id="desc">The MINDSET inference-aperture mark alongside the programme name, its full title and Dr Justin C Yang.</desc>
+
+  <rect width="1200" height="628" fill="#f7f5ef"/>
+  <rect x="0" y="0" width="16" height="628" fill="#173b57"/>
+
+  <!-- Inference-aperture mark -->
+  <g transform="translate(72 132) scale(.71)">
+    <g stroke-linecap="round" stroke-width="22">
+      <path d="M54 128h17m27 0h30" stroke="#1f7fc4"/>
+      <path d="M54 192h36m26 0h12" stroke="#137f76"/>
+      <path d="M54 256h12m26 0h36" stroke="#b85c00"/>
+      <path d="M54 320h27m28 0h19" stroke="#76549f"/>
+      <path d="M54 384h20m24 0h30" stroke="#4f7d32"/>
+    </g>
+    <g fill="none" stroke-linecap="round" stroke-width="22">
+      <path d="M128 128c76 0 74 88 128 108s83-108 202-108" stroke="#1f7fc4"/>
+      <path d="M128 192c70 0 79 38 128 52s84-52 202-52" stroke="#137f76"/>
+      <path d="M128 256h330" stroke="#b85c00"/>
+      <path d="M128 320c70 0 79-38 128-52s84 52 202 52" stroke="#76549f"/>
+      <path d="M128 384c76 0 74-88 128-108s83 108 202 108" stroke="#4f7d32"/>
+    </g>
+    <g fill="none" stroke="#173b57" stroke-linecap="round" stroke-width="18">
+      <path d="M213 78c-42 51-55 109-55 178s13 127 55 178"/>
+      <path d="M299 78c42 51 55 109 55 178s-13 127-55 178"/>
+    </g>
+  </g>
+
+  <line x1="485" y1="126" x2="485" y2="502" stroke="#d9d5ca" stroke-width="2"/>
+
+  <g fill="#173b57" font-family="Inter, Arial, sans-serif">
+    <text x="550" y="240" font-size="102" font-weight="600" letter-spacing="2">MINDSET</text>
+    <text x="555" y="300" font-size="25" font-weight="500" letter-spacing="1.3">MULTIMODAL INFERENCE AND DATA SCIENCE</text>
+    <text x="555" y="340" font-size="25" font-weight="500" letter-spacing="1.3">FOR EPIDEMIOLOGY AND TREATMENT</text>
+  </g>
+
+  <line x1="555" y1="390" x2="655" y2="390" stroke="#137f76" stroke-width="5"/>
+  <text x="555" y="453" fill="#173b57" font-family="Source Serif 4, Georgia, serif" font-size="38">Dr Justin C Yang</text>
+  <text x="555" y="494" fill="#52606a" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing=".4">Psychiatric epidemiology · Mental health data science</text>
+</svg>
