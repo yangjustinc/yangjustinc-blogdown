@@ -5,7 +5,31 @@ description: "Research led by Dr Justin C Yang using psychiatric epidemiology, l
 
 My research examines how mental health, inequalities, and care can be understood using complex real-world data. I work across **psychiatric epidemiology, population data science, causal inference, and health services research**, drawing on linked administrative records, electronic health records, clinical free text, longitudinal data, environmental information, and intensive measures of lived experience.
 
-The programme is organised around three connected questions.
+## How the programme connects
+
+Each project enters the programme at a different point, but the work moves between three connected forms of enquiry.
+
+<div class="programme-cycle" role="list" aria-label="How the MINDSET research programme connects">
+  <section class="programme-cycle-stage" role="listitem">
+    <span class="programme-cycle-kicker">Substantive questions</span>
+    <h3>Mental health across lives and services</h3>
+    <p>Identify consequential patterns, trajectories, inequalities, and experiences that existing evidence does not adequately explain.</p>
+  </section>
+  <span class="programme-cycle-connector" aria-hidden="true">→</span>
+  <section class="programme-cycle-stage" role="listitem">
+    <span class="programme-cycle-kicker">Inference and measurement</span>
+    <h3>What the data can support</h3>
+    <p>Examine how selection, recording, linkage, missingness, and analytical design shape the claims that can credibly be made.</p>
+  </section>
+  <span class="programme-cycle-connector" aria-hidden="true">→</span>
+  <section class="programme-cycle-stage" role="listitem">
+    <span class="programme-cycle-kicker">Systems and practice</span>
+    <h3>Better evidence infrastructure</h3>
+    <p>Improve governance, data systems, implementation, and analytical practice so that future research and decisions rest on stronger evidence.</p>
+  </section>
+</div>
+
+This is a cycle rather than a hierarchy. Findings from services and populations expose weaknesses in measurement and infrastructure; methodological work improves how evidence is produced and interpreted; and better systems create new possibilities for substantive research. The programme is organised around three questions that sustain this cycle across individual grants and studies.
 
 ## What shapes mental health and inequalities over time?
 
@@ -13,7 +37,7 @@ I study how social, relational, environmental, educational, and institutional ex
 
 This work spans severe mental illness, neurodivergence, addiction, and mental-health services. Recurring questions include how disadvantage accumulates, how service contact and exclusion shape later outcomes, and why trajectories differ between people, populations, and places.
 
-Current work includes **WISDOM**, examining social, emotional, environmental, and institutional influences on severe and enduring mental illness, and **HOPE-SEN**, using linked health and education data to investigate inequalities in the experiences and outcomes of neurodivergent children and young people.
+Current work includes **WISDOM**, examining social, emotional, environmental, and institutional influences on severe and enduring mental illness; **HOPE-SEN**, using linked health and education data to investigate inequalities in the experiences and outcomes of neurodivergent children and young people; and a process evaluation of a co-produced **anti-stigma intervention** for health and care staff working with people who use substances.
 
 Areas of interest include:
 

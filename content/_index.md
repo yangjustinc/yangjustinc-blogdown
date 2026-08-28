@@ -15,9 +15,14 @@ description: "MINDSET is the research programme led by Dr Justin C Yang, using p
 
 **Multimodal INference and Data Science for Epidemiology and Treatment** (MINDSET) is the research programme led by **Dr Justin C Yang**, Senior Research Fellow in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk).
 
-I study how mental health, inequalities, and care unfold across the life course using complex real-world data. People's experiences are distributed across health services, schools, treatment systems, communities, and environments, while routinely collected data provide incomplete representations of those experiences.
+<aside class="research-vision" aria-label="Research vision">
+  <span class="research-vision-label">Research vision</span>
+  <p>To understand how mental health, inequalities, and care unfold across the life course, and to make the real-world data used for that purpose more informative, credible, and accountable.</p>
+</aside>
 
-MINDSET develops and applies methods for drawing **credible, useful, and responsible inference about mental health from complex real-world data**. The programme is organised around three enduring questions.
+The central challenge is that people's experiences are distributed across health services, schools, treatment systems, communities, and environments, while routinely collected data offer partial and institutionally produced representations of those experiences. MINDSET therefore connects substantive psychiatric epidemiology with methodological and infrastructure work. Selection, measurement, missingness, governance, and implementation are treated as part of the scientific problem, not as separate technical concerns.
+
+The programme develops and applies methods for drawing **credible, useful, and responsible inference about mental health from complex real-world data**. It is organised around three enduring questions.
 
 <div class="mindset-questions">
   <section class="mindset-question">
@@ -51,21 +56,11 @@ MINDSET develops and applies methods for drawing **credible, useful, and respons
   </section>
 </div>
 
-## Current programmes
+## A connected research agenda
 
-**WISDOM: mental health trajectories and inequalities.**  
-My UKRI Mental Health Platform-funded programme examines how social, emotional, environmental, and institutional experiences shape trajectories into and through severe and enduring mental illness.
+MINDSET develops through time-bounded studies that approach the same questions from different settings. **WISDOM** and **HOPE-SEN** examine mental-health trajectories and inequalities using complementary longitudinal data. **UNITED** and a new **anti-stigma intervention process evaluation** extend this agenda into addiction treatment, professional practice, and service improvement. Work with the **North London NHS Foundation Trust Research Database** turns methodological and substantive lessons into better governed research infrastructure.
 
-**HOPE-SEN: administrative data and neurodivergence.**  
-Developed through an ADR UK Fellowship, HOPE-SEN uses linked national health and education data from ECHILD to investigate inequalities in school attendance, exclusion, alternative provision, health outcomes, and related experiences among neurodivergent children and young people.
-
-**UNITED: addiction treatment, services, and data.**  
-Within this NIHR Team Science programme, I lead work examining how England's National Drug Treatment Monitoring System can better support research, policy, clinical practice, and service improvement.
-
-**Clinical data and research infrastructure.**  
-As Deputy Lead of the North London NHS Foundation Trust Research Database, I help enable research using routinely collected mental-health records and work with NHS and academic partners to improve access, governance, harmonisation, and cross-site research.
-
-These are time-bounded parts of a wider research agenda. As individual awards conclude and new work develops, the underlying questions remain the organising principles of MINDSET.
+The relationship runs in both directions: substantive questions reveal limitations in existing data; methodological work clarifies what can credibly be inferred; and infrastructure work improves the evidence available for the next study. Individual awards start and finish, but this cycle provides continuity across the wider programme.
 
 ## Work with MINDSET
 
