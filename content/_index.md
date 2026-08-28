@@ -1,6 +1,6 @@
 ---
 title: Home
-description: "MINDSET is the research programme led by Dr Justin C Yang, using psychiatric epidemiology, linked data, causal inference, and data science to understand mental health, inequalities, and care."
+description: "MINDSET is the research programme established and led by Dr Justin C Yang, connecting psychiatric epidemiology, causal inference, data science, and research infrastructure to study mental health trajectories, inequalities, and care."
 ---
 
 # MINDSET
@@ -13,16 +13,16 @@ description: "MINDSET is the research programme led by Dr Justin C Yang, using p
  decoding="async">
 </div>
 
-**Multimodal INference and Data Science for Epidemiology and Treatment** (MINDSET) is the research programme led by **Dr Justin C Yang**, Senior Research Fellow in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk).
+**Multimodal INference and Data Science for Epidemiology and Treatment** (MINDSET) is the research programme established and led by **Dr Justin C Yang**, Senior Research Fellow in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk).
 
 <aside class="research-vision" aria-label="Research vision">
   <span class="research-vision-label">Research vision</span>
-  <p>To understand how mental health, inequalities, and care unfold across the life course, and to make the real-world data used for that purpose more informative, credible, and accountable.</p>
+  <p>To understand how mental health, inequalities, and care unfold across the life course without treating fragmented data as complete accounts of people's lives, and to improve how those data are produced, connected, and interpreted.</p>
 </aside>
 
-The central challenge is that people's experiences are distributed across health services, schools, treatment systems, communities, and environments, while routinely collected data offer partial and institutionally produced representations of those experiences. MINDSET therefore connects substantive psychiatric epidemiology with methodological and infrastructure work. Selection, measurement, missingness, governance, and implementation are treated as part of the scientific problem, not as separate technical concerns.
+People's experiences are distributed across health services, schools, treatment systems, communities, and environments, while real-world data provide partial and institutionally produced representations of those experiences. MINDSET treats those limitations as part of the scientific question: who becomes visible to services and datasets, what is recorded or missing, and how those processes shape conclusions. It brings psychiatric epidemiology, causal inference, and data science together with work on governance and research infrastructure.
 
-The programme develops and applies methods for drawing **credible, useful, and responsible inference about mental health from complex real-world data**. It is organised around three enduring questions.
+This combination supports **credible, useful, and responsible inference about mental health from complex real-world data**. It makes it possible to investigate whether observed inequalities reflect differences in need, access, recognition, recording, or care, and to examine trajectories that no single source can represent. The programme is organised around three enduring questions.
 
 <div class="mindset-questions">
   <section class="mindset-question">

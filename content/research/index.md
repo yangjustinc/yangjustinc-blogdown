@@ -29,7 +29,9 @@ Each project enters the programme at a different point, but the work moves betwe
   </section>
 </div>
 
-This is a cycle rather than a hierarchy. Findings from services and populations expose weaknesses in measurement and infrastructure; methodological work improves how evidence is produced and interpreted; and better systems create new possibilities for substantive research. The programme is organised around three questions that sustain this cycle across individual grants and studies.
+This is a cycle rather than a hierarchy. The programme holds these three levels together: it treats the processes through which people become visible to services and datasets as part of both the substantive question and the inferential problem, while using the findings to improve the systems that produce future evidence.
+
+That combination makes it possible to examine whether observed inequalities reflect differences in need, access, recognition, recording, or care; to follow trajectories across settings and evidence types; and to test how conclusions change when sources are linked or triangulated. The three questions below sustain this work across individual grants and studies.
 
 ## What shapes mental health and inequalities over time?
 
