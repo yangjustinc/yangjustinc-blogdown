@@ -1421,7 +1421,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem 1.25rem;
+  gap: 1rem 0.75rem;
   min-height: 5.35rem;
   border-bottom: 1px solid var(--line);
   text-align: left;
