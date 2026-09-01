@@ -54,11 +54,17 @@ published_projects <- students |>
 
 recent_projects <- students |>
   filter(
-    Degree != "PhD",
-    !str_detect(`Year(s)`, "Present")
+    Student %in% c(
+      "Cameron Tefft",
+      "Thea Nelson",
+      "Alara Egeli",
+      "Eleanor Edgar",
+      "Jasmine Malty",
+      "Jieyu Zan",
+      "Tamara Moon"
+    )
   ) |>
-  arrange(desc(`Year(s)`), Student) |>
-  slice_head(n = 8)
+  arrange(desc(`Year(s)`), Student)
 ```
 
 ## Current trainees
@@ -174,10 +180,10 @@ published_projects |>
 
 ```{r results='asis', echo=FALSE}
 recent_projects |>
-  select(Student, Degree, `Year(s)`, Role, Topic) |>
+  select(Student, Degree, Role, Topic) |>
   knitr::kable(
     format = "html",
-    col.names = c("Student", "Degree", "Year(s)", "Role", "Project"),
+    col.names = c("Student", "Degree", "Role", "Project"),
     table.attr = 'class="site-table"'
   ) |>
   cat()
