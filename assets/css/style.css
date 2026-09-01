@@ -1594,3 +1594,118 @@ main li::marker { color: var(--teal); }
 .footer-social a:nth-child(4):focus-visible { color: var(--purple); }
 .footer-social a:nth-child(5):hover,
 .footer-social a:nth-child(5):focus-visible { color: var(--green); }
+
+/* Final editorial and small-screen refinements */
+#profile {
+  max-width: 22%;
+  min-width: 108px;
+  margin: 0.15rem 0 1rem 1.75rem;
+}
+
+.research-vision {
+  clear: both;
+  margin-top: 1.4rem;
+}
+
+main > p:first-of-type {
+  color: #253744;
+  font-size: 1.015rem;
+}
+
+@media (max-width: 820px) {
+  .site-header {
+    min-height: 0;
+  }
+
+  .site-header nav {
+    width: 100%;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .menu li {
+    display: block;
+  }
+
+  .menu a {
+    text-align: center;
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    background: #fff;
+  }
+
+  .site-header {
+    gap: 0.85rem;
+    padding-top: 0.9rem;
+  }
+
+  .site-brand-mark {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .site-brand-tagline {
+    font-size: 0.55rem;
+  }
+
+  .menu {
+    gap: 0.2rem 0.35rem;
+    border-top: 1px solid var(--line);
+    padding-top: 0.55rem;
+  }
+
+  .menu a {
+    padding: 0.38rem 0.25rem;
+    font-size: 0.72rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #profile {
+    max-width: 5.6rem;
+    min-width: 0;
+    margin: 0.25rem 0 0.65rem 1rem;
+  }
+
+  .research-vision {
+    padding: 0.8rem 0.85rem;
+  }
+
+  .mindset-question {
+    padding: 1rem;
+    box-shadow: none;
+  }
+
+  .programme-cycle-stage,
+  .collaboration-cluster,
+  .leadership-card,
+  .teaching-module {
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu a {
+    text-align: left;
+  }
+
+  #profile {
+    float: none;
+    width: 4.75rem;
+    margin: 0 0 0.75rem auto;
+  }
+}
