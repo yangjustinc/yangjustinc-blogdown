@@ -54,6 +54,7 @@ published_projects <- students |>
 
 recent_projects <- students |>
   filter(
+    Institution == "UCL",
     Degree != "PhD",
     !str_detect(`Year(s)`, "Present")
   ) |>
@@ -174,10 +175,10 @@ published_projects |>
 
 ```{r results='asis', echo=FALSE}
 recent_projects |>
-  select(Student, Degree, `Year(s)`, Role, Topic) |>
+  select(Student, Degree, Role, Topic) |>
   knitr::kable(
     format = "html",
-    col.names = c("Student", "Degree", "Year(s)", "Role", "Project"),
+    col.names = c("Student", "Degree", "Role", "Project"),
     table.attr = 'class="site-table"'
   ) |>
   cat()
