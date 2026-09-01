@@ -1382,7 +1382,8 @@ footer .footer-icon {
   }
 }
 
-/* Refined MINDSET identity and responsive page frame */
+/* MINDSET design layer: intentional late overrides for the inherited theme rules above.
+   Keep identity and responsive refinements together here until the base theme is retired. */
 :root {
   --ink: #18252e;
   --ink-soft: #53636e;
@@ -1465,6 +1466,7 @@ main {
 .menu {
   justify-content: flex-end;
   gap: 0.1rem;
+  margin: 0;
 }
 
 .menu a {
