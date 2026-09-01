@@ -3,7 +3,7 @@ title: People & Partnerships
 description: "The people, partnerships, and collaborative capabilities that make up the MINDSET research programme."
 ---
 
-MINDSET brings together researchers, trainees, NHS and public-sector data partners, treatment services, and collaborating academic groups around a shared aim: **drawing credible, useful, and responsible inference about mental health from partial evidence across experience, behaviour, biology, place, and care**.
+MINDSET brings together researchers, trainees, NHS and public-sector data partners, treatment services, and collaborating academic groups around a shared aim: **understanding how mental health develops by drawing credible, useful, and responsible inferences from heterogeneous evidence across levels, settings, and timescales**.
 
 Different projects draw on combinations of epidemiology, data science, lived-experience expertise, clinical and service knowledge, population and environmental data, intensive longitudinal measurement, biological science, and research infrastructure. The people and organisations below reflect active or longstanding relationships; no single project or partner is expected to cover every part of the programme.
 
