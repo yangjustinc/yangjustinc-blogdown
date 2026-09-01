@@ -112,10 +112,10 @@ current_phd_committees |>
 if (nrow(current_taught) > 0) {
   current_taught |>
     arrange(Student) |>
-    select(Student, Degree, Role, Topic) |>
+    select(Student, Role, Topic) |>
     knitr::kable(
       format = "html",
-      col.names = c("Student", "Degree", "Role", "Project"),
+      col.names = c("Student", "Role", "Project"),
       table.attr = 'class="site-table"'
     ) |>
     cat()
@@ -189,3 +189,5 @@ recent_projects |>
 ## Prospective trainees
 
 I am interested in supervising PhD, MSc, and undergraduate projects that fit the wider MINDSET agenda, particularly work connecting mental-health questions with longitudinal, administrative, clinical, environmental, behavioural, or biological data; causal and multimodal inference; neurodivergence; addiction; and inequalities. Prospective trainees are welcome to [get in touch](../contact/) with a brief outline of their interests and the type of project or supervision they are seeking.
+
+Prospective PhD applicants should also consider likely funding routes and eligibility before making contact. We can discuss realistic options together, but an initial view of possible schemes, deadlines, and fit is helpful.

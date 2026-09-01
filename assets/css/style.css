@@ -1108,6 +1108,59 @@ main .section[id] {
   font-size: 1.1rem;
 }
 
+/* Open research and resources */
+.resource-feature {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.9fr) minmax(0, 1.35fr);
+  gap: 1.15rem;
+  align-items: start;
+  margin: 1.35rem 0 1.65rem;
+  padding: 1rem;
+  border: 1px solid var(--line, #dce5ea);
+  border-top: 3px solid var(--teal, #137f76);
+  border-radius: 0 0 var(--radius, 8px) var(--radius, 8px);
+  background: linear-gradient(180deg, #fbfdfe, #f7fafb);
+  box-shadow: 0 8px 24px rgba(23, 59, 87, 0.05);
+}
+
+.resource-feature:nth-of-type(2) { border-top-color: var(--purple, #76549f); }
+.resource-feature:nth-of-type(3) { border-top-color: var(--green, #4f7d32); }
+
+.resource-feature-preview {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #d4dfe5;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 5px 16px rgba(23, 59, 87, 0.09);
+}
+
+.resource-feature-preview img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.455 / 1;
+  object-fit: cover;
+  object-position: top left;
+  transition: transform 180ms ease;
+}
+
+.resource-feature-preview:hover img,
+.resource-feature-preview:focus-visible img {
+  transform: scale(1.015);
+}
+
+.resource-feature-copy h2 {
+  margin: 0 0 0.55rem;
+  font-size: 1.15rem;
+}
+
+.resource-feature-copy p {
+  margin: 0.55rem 0 0;
+  color: #44545f;
+  font-size: 0.91rem;
+  line-height: 1.58;
+}
+
 /* People & Partnerships */
 .people-feature-card {
   padding-bottom: 0.4rem;
@@ -1360,6 +1413,10 @@ footer .footer-icon {
     gap: 0.45rem;
   }
 
+  .resource-feature {
+    grid-template-columns: 1fr;
+  }
+
   .programme-cycle-connector {
     justify-self: center;
     line-height: 1;
@@ -1574,6 +1631,8 @@ footer {
 .mindset-question:nth-child(1) { border-top-color: var(--blue); }
 .mindset-question:nth-child(2) { border-top-color: var(--teal); }
 .mindset-question:nth-child(3) { border-top-color: var(--purple); }
+.mindset-question:nth-child(2) .mindset-question-glyph { stroke: var(--teal); }
+.mindset-question:nth-child(2) .mindset-question-glyph-bracket { stroke: var(--green); }
 .mindset-question:nth-child(3) .mindset-question-glyph { stroke: var(--purple); }
 
 .programme-cycle-stage,
@@ -1691,6 +1750,11 @@ main > p:first-of-type {
 
   .mindset-question {
     padding: 1rem;
+    box-shadow: none;
+  }
+
+  .resource-feature {
+    padding: 0.85rem;
     box-shadow: none;
   }
 

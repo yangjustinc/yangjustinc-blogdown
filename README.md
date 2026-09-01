@@ -8,14 +8,9 @@ College London.
 MINDSET studies how mental health develops across lives, places, and systems by
 drawing credible inferences from heterogeneous evidence across levels,
 settings, and timescales.
-It is not organised around a single data source. Its current empirical strengths
-include linked administrative records, electronic health records, clinical free
-text, longitudinal cohort and environmental data, and ecological momentary
-assessment and other intensive longitudinal measures. Its wider multimodal
-scope includes behavioural and physiological data from wearables,
-neuroimaging, biomarkers, and genomic and other molecular data where these
-modalities address the research question and can be developed through
-appropriate collaborations.
+It is not organised around a single data source. The programme works across
+social, behavioural, environmental, clinical, and biological evidence,
+selecting and developing measurements according to the substantive question.
 
 Multimodal inference means more than placing several datasets in one model.
 The programme uses principled integration and triangulation, causal and
