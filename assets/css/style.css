@@ -1481,7 +1481,7 @@ main {
 .menu a.active {
   color: var(--blue);
   background: transparent;
-  box-shadow: inset 0 -2px 0 currentColor;
+  box-shadow: none;
   font-weight: 500;
 }
 
