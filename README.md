@@ -5,6 +5,25 @@ website for **MINDSET (Multimodal INference and Data Science for Epidemiology
 and Treatment)**, the research programme led by Dr Justin C Yang at University
 College London.
 
+MINDSET studies how credible mental-health inferences can be drawn from
+partial, heterogeneous evidence across levels of analysis and the life course.
+It is not organised around a single data source. Its current empirical strengths
+include linked administrative records, electronic health records, clinical free
+text, longitudinal cohort and environmental data, and ecological momentary
+assessment and other intensive longitudinal measures. Its wider multimodal
+scope includes behavioural and physiological data from wearables,
+neuroimaging, biomarkers, and genomic and other molecular data where these
+modalities address the research question and can be developed through
+appropriate collaborations.
+
+Multimodal inference means more than placing several datasets in one model.
+The programme uses principled integration and triangulation, causal and
+longitudinal designs, and explicit attention to selection, measurement,
+missingness, and recording processes to establish what each source can and
+cannot support. The aim is to connect experience, context, biology, behaviour,
+and care without treating any one measurement as a complete account of a
+person's life.
+
 The site presents the programme's research, people and collaborations,
 publications, funding, talks, teaching and supervision, academic leadership,
 open research resources, and contact information.
@@ -57,9 +76,10 @@ does not merge package updates automatically.
 
 Several sections minimise manual duplication:
 
-- **Publications** are retrieved from ORCID, with
-  [`selected_publications.csv`](./data/site/selected_publications.csv)
-  providing the curated selection and contribution notes.
+- **Publications** are retrieved from ORCID, enriched with Crossref and
+  OpenAlex metadata, and organised using
+  [`selected_publications.csv`](./data/site/selected_publications.csv) for the
+  curated selection and contribution notes.
 - **Funding** is retrieved from ORCID, with
   [`funding_overrides.csv`](./data/site/funding_overrides.csv) clarifying
   roles and concise descriptions where needed.
@@ -117,8 +137,8 @@ Rscript scripts/render_data_pages.R
 
 The script renders Funding, Leadership, Publications, Talks and Teaching
 without running Hugo. Review the generated HTML diff before committing it.
-ORCID and Crossref are external services, so transient API failures should not
-be treated as evidence that the Hugo site itself is broken.
+ORCID, Crossref, and OpenAlex are external services, so transient API failures
+should not be treated as evidence that the Hugo site itself is broken.
 
 The **Refresh data-driven content** workflow runs automatically at 06:17 UTC on
 the first day of each month. It can also be run manually from the repository's
