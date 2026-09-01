@@ -5,7 +5,7 @@ description: "Research led by Dr Justin C Yang on how mental health develops acr
 
 My research examines how mental health develops across **lives, places, and systems**, why trajectories and outcomes differ, and which processes may be modifiable. I work across **psychiatric epidemiology, population data science, causal inference, and health services research**.
 
-MINDSET approaches these questions by integrating complementary evidence about **social, behavioural, biological, environmental, clinical, and institutional processes**, across different levels, settings, and timescales. The current portfolio has greatest empirical depth in linked administrative records, electronic health records, clinical free text, longitudinal cohorts and surveys, environmental information, and ecological momentary assessment and other intensive longitudinal measures. The programme's broader collaborative scope includes behavioural and physiological measures from wearables, neuroimaging, biomarkers, and genomic and other molecular data where they can answer a substantive question rather than merely add another data source.
+Within MINDSET, I approach these questions by integrating complementary evidence across different levels, settings, and timescales. The current portfolio has greatest empirical depth in linked administrative records, electronic health records, clinical free text, longitudinal cohorts and surveys, environmental information, and ecological momentary assessment and other intensive longitudinal measures. Collaborations add specialist behavioural and biological measurement where it can answer a substantive question rather than merely add another data source.
 
 ## How the programme connects
 
@@ -37,7 +37,7 @@ This structure makes it possible to examine whether observed inequalities reflec
 
 ## What shapes mental health and inequalities over time?
 
-I study how social, relational, environmental, biological, behavioural, educational, and institutional influences combine to shape mental health, service use, and wider outcomes across the life course.
+I study how conditions and experiences within people, between people, and across the environments and institutions they encounter combine to shape mental health, service use, and wider outcomes over the life course.
 
 This work spans severe mental illness, neurodivergence, addiction, and mental-health services. Recurring questions include how disadvantage accumulates, how service contact and exclusion shape later outcomes, and why trajectories differ between people, populations, and places.
 
