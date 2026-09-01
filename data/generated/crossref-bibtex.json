@@ -2,7 +2,7 @@
   {
     "doi": "10.1016/j.healthpol.2019.04.005",
     "bibtex": "@article{yang2019brexitthreatensuk, title={Brexit threatens the UK’s ability to tackle illicit drugs and organised crime: What needs to happen now?}, volume={123}, ISSN={0168-8510}, url={http://dx.doi.org/10.1016/j.healthpol.2019.04.005}, DOI={10.1016/j.healthpol.2019.04.005}, number={6}, journal={Health Policy}, publisher={Elsevier BV}, author={Roman-Urrestarazu, Andres and Yang, Justin and Robertson, Roy and McCallum, Alison and Gray, Christina and McKee, Martin and Middleton, John}, year={2019}, month=June, pages={521–525} }",
-    "citation": "Roman-Urrestarazu, A., Yang, J., Robertson, R., McCallum, A., Gray, C., McKee, M., & Middleton, J. (2019). Brexit threatens the UK’s ability to tackle illicit drugs and organised crime: What needs to happen now? Health Policy, 123(6), 521–525."
+    "citation": "Roman-Urrestarazu, A., Yang, J., Robertson, R., McCallum, A., Gray, C., McKee, M., & Middleton, J. (2019). Brexit threatens the UK’s ability to tackle illicit drugs and organised crime: What needs to happen now? Health Policy, 123(6), 521–525. https://doi.org/10.1016/j.healthpol.2019.04.005"
   },
   {
     "doi": "10.1016/j.jpsychires.2020.12.023",
@@ -12,12 +12,12 @@
   {
     "doi": "10.1016/s2352-4642(22)00247-4",
     "bibtex": "@article{yang2022autismincidencespatial, title={Autism incidence and spatial analysis in more than 7 million pupils in English schools: a retrospective, longitudinal, school registry study}, volume={6}, ISSN={2352-4642}, url={http://dx.doi.org/10.1016/s2352-4642(22)00247-4}, DOI={10.1016/s2352-4642(22)00247-4}, number={12}, journal={The Lancet Child \\& Adolescent Health}, publisher={Elsevier BV}, author={Roman-Urrestarazu, Andres and Yang, Justin C and van Kessel, Robin and Warrier, Varun and Dumas, Guillaume and Jongsma, Hannah and Gatica-Bahamonde, Gabriel and Allison, Carrie and Matthews, Fiona E and Baron-Cohen, Simon and Brayne, Carol}, year={2022}, month=Dec, pages={857–868} }",
-    "citation": "Roman-Urrestarazu, A., Yang, J. C., van Kessel, R., Warrier, V., Dumas, G., Jongsma, H., Gatica-Bahamonde, G., Allison, C., Matthews, F. E., Baron-Cohen, S., & Brayne, C. (2022). Autism incidence and spatial analysis in more than 7 million pupils in English schools: a retrospective, longitudinal, school registry study. The Lancet Child & Adolescent Health, 6(12), 857–868."
+    "citation": "Roman-Urrestarazu, A., Yang, J. C., van Kessel, R., Warrier, V., Dumas, G., Jongsma, H., Gatica-Bahamonde, G., Allison, C., Matthews, F. E., Baron-Cohen, S., & Brayne, C. (2022). Autism incidence and spatial analysis in more than 7 million pupils in English schools: a retrospective, longitudinal, school registry study. The Lancet Child & Adolescent Health, 6(12), 857–868. https://doi.org/10.1016/s2352-4642(22)00247-4"
   },
   {
     "doi": "10.1017/s0033291722000952",
     "bibtex": "@article{yang2023antipsychoticpolypharmacyadverse, title={Antipsychotic polypharmacy and adverse drug reactions among adults in a London mental health service, 2008–2018}, volume={53}, ISSN={1469-8978}, url={http://dx.doi.org/10.1017/s0033291722000952}, DOI={10.1017/s0033291722000952}, number={9}, journal={Psychological Medicine}, publisher={Cambridge University Press (CUP)}, author={Yang, Justin C. and Thygesen, Johan H. and Werbeloff, Nomi and Hayes, Joseph F. and Osborn, David P. J.}, year={2022}, month=Apr, pages={4220–4227} }",
-    "citation": "Yang, J. C., Thygesen, J. H., Werbeloff, N., Hayes, J. F., & Osborn, D. P. J. (2022). Antipsychotic polypharmacy and adverse drug reactions among adults in a London mental health service, 2008–2018. Psychological Medicine, 53(9), 4220–4227."
+    "citation": "Yang, J. C., Thygesen, J. H., Werbeloff, N., Hayes, J. F., & Osborn, D. P. J. (2022). Antipsychotic polypharmacy and adverse drug reactions among adults in a London mental health service, 2008–2018. Psychological Medicine, 53(9), 4220–4227. https://doi.org/10.1017/s0033291722000952"
   },
   {
     "doi": "10.1080/02791072.2024.2367614",
@@ -30,9 +30,19 @@
     "citation": "Connolly, D. J., Coduri-Fulford, S., Tugulu, C., Yalew, M., Moss, E., & Yang, J. C. (2024). Sexual Orientation and Gender Identity Reporting in Highly Cited Current Alcohol Research. LGBT Health, 11(5), 340–347."
   },
   {
+    "doi": "10.1101/2021.11.28.21266870",
+    "bibtex": null,
+    "citation": "Yang, J. C., Thygesen, J. H., Werbeloff, N., Hayes, J. F., & Osborn, D. P. J. (2021). Antipsychotic Polypharmacy and Adverse Drug Reactions Among Adults in a London Mental Health Service, 2008-2018. https://doi.org/10.1101/2021.11.28.21266870"
+  },
+  {
     "doi": "10.1101/2023.11.27.23298057",
     "bibtex": "@article{yang2023effectscommunitytreatment, title={The effects of community treatment orders (CTOs) on readmission to hospital using electronic health records}, url={http://dx.doi.org/10.1101/2023.11.27.23298057}, DOI={10.1101/2023.11.27.23298057}, publisher={openRxiv}, author={Yang, Justin C and Thygesen, Johan H and Werbeloff, Nomi and Kelsey, David and Merlande, Dominique and Hayes, Joseph and Osborn, David PJ}, year={2023}, month=Nov }",
     "citation": "Yang, J. C., Thygesen, J. H., Werbeloff, N., Kelsey, D., Merlande, D., Hayes, J., & Osborn, D. P. (2023). The effects of community treatment orders (CTOs) on readmission to hospital using electronic health records."
+  },
+  {
+    "doi": "10.1101/2024.06.25.24309483",
+    "bibtex": null,
+    "citation": "Roman-Urrestarazu, A., Tyson, A., Gatica-Bahamonde, G., van Kessel, R., Yang, J., Mansilla, C., Zuniga, I., Mendez-Fadol, A., Larrain, B., Garcia, R., Koch, D., Groot, W., Pavlova, M., Czabanowska, K., & Ford, T. (2024). Autism Prevalence in Chile: Unmet Special Education Needs using Data Linkage and Bayesian Analysis of Three Million School-Aged Children. https://doi.org/10.1101/2024.06.25.24309483"
   },
   {
     "doi": "10.1136/bmj.k4003",
@@ -41,17 +51,17 @@
   },
   {
     "doi": "10.1136/bmjopen-2025-099771",
-    "bibtex": "@article{yang2025longitudinalpopulationbased, title={A longitudinal, population-based, record-linked natural experiment on the effects of extreme heat events on mental health in urban communities: a study protocol}, volume={15}, ISSN={2044-6055}, url={http://dx.doi.org/10.1136/bmjopen-2025-099771}, DOI={10.1136/bmjopen-2025-099771}, number={10}, journal={BMJ Open}, publisher={BMJ}, author={Chukwusa, Emeka and Vivaldi, Giulia and Baecker, Lea and Bowerman, Emily and Bridge, Nick and Davidson, Neil and de la Cruz, Arturo and Gasparrini, Antonio and Gibbons, Johanna and Guerry, Anne and Hammoud, Ryan and Li, Yingjie and Lu, Yougeng and Mandle, Lisa and Osborn, David and Rydstrom, Anders and Smythe, Michael and Stewart, Robert and Tognin, Stefania and White, Matthew and Yang, Justin and Mechelli, Andrea and Bakolis, Ioannis}, year={2025}, month=Oct, pages={e099771} }",
-    "citation": "Chukwusa, E., Vivaldi, G., Baecker, L., Bowerman, E., Bridge, N., Davidson, N., de la Cruz, A., Gasparrini, A., Gibbons, J., Guerry, A., Hammoud, R., Li, Y., Lu, Y., Mandle, L., Osborn, D., Rydstrom, A., Smythe, M., Stewart, R., Tognin, S., et al. (2025). A longitudinal, population-based, record-linked natural experiment on the effects of extreme heat events on mental health in urban communities: a study protocol. BMJ Open, 15(10), e099771."
+    "bibtex": "@article{Chukwusa_2025, title={A longitudinal, population-based, record-linked natural experiment on the effects of extreme heat events on mental health in urban communities: a study protocol}, volume={15}, ISSN={2044-6055}, url={http://dx.doi.org/10.1136/bmjopen-2025-099771}, DOI={10.1136/bmjopen-2025-099771}, number={10}, journal={BMJ Open}, publisher={BMJ}, author={Chukwusa, Emeka and Vivaldi, Giulia and Baecker, Lea and Bowerman, Emily and Bridge, Nick and Davidson, Neil and de la Cruz, Arturo and Gasparrini, Antonio and Gibbons, Johanna and Guerry, Anne and Hammoud, Ryan and Li, Yingjie and Lu, Yougeng and Mandle, Lisa and Osborn, David and Rydstrom, Anders and Smythe, Michael and Stewart, Robert and Tognin, Stefania and White, Matthew and Yang, Justin and Mechelli, Andrea and Bakolis, Ioannis}, year={2025}, month=Oct, pages={e099771} }",
+    "citation": "Chukwusa, E., Vivaldi, G., Baecker, L., Bowerman, E., Bridge, N., Davidson, N., de la Cruz, A., Gasparrini, A., Gibbons, J., Guerry, A., Hammoud, R., Li, Y., Lu, Y., Mandle, L., Osborn, D., Rydstrom, A., Smythe, M., Stewart, R., Tognin, S., et al. (2025). A longitudinal, population-based, record-linked natural experiment on the effects of extreme heat events on mental health in urban communities: a study protocol. BMJ Open, 15(10), e099771. https://doi.org/10.1136/bmjopen-2025-099771"
   },
   {
     "doi": "10.1161/circoutcomes.125.012724",
-    "bibtex": "@article{yang2026collectionreportingadult, title={Collection and Reporting of Adult Sexual Orientation and Gender Identity Data in Highly Cited Cardiovascular Research}, volume={19}, ISSN={3068-563X}, url={http://dx.doi.org/10.1161/circoutcomes.125.012724}, DOI={10.1161/circoutcomes.125.012724}, number={2}, journal={Circulation: Population Health and Outcomes}, publisher={Ovid Technologies (Wolters Kluwer Health)}, author={Ponodath, George S. and Dewan, Hari and Saha, Trisha and Thomas, Sneha Sarah and Yang, Justin C. and Connolly, Dean J.}, year={2026}, month=Feb }",
+    "bibtex": "@article{Ponodath_2026, title={Collection and Reporting of Adult Sexual Orientation and Gender Identity Data in Highly Cited Cardiovascular Research}, volume={19}, ISSN={3068-563X}, url={http://dx.doi.org/10.1161/circoutcomes.125.012724}, DOI={10.1161/circoutcomes.125.012724}, number={2}, journal={Circulation: Population Health and Outcomes}, publisher={Ovid Technologies (Wolters Kluwer Health)}, author={Ponodath, George S. and Dewan, Hari and Saha, Trisha and Thomas, Sneha Sarah and Yang, Justin C. and Connolly, Dean J.}, year={2026}, month=Feb }",
     "citation": "Ponodath, G. S., Dewan, H., Saha, T., Thomas, S. S., Yang, J. C., & Connolly, D. J. (2026). Collection and Reporting of Adult Sexual Orientation and Gender Identity Data in Highly Cited Cardiovascular Research. Circulation: Population Health and Outcomes, 19(2)."
   },
   {
     "doi": "10.1177/13623613251342310",
-    "bibtex": "@article{yang2025bayesianprevalenceautism, title={Bayesian prevalence of autism and unmet special education needs in Chile in a sample of three million school-age children}, volume={29}, ISSN={1461-7005}, url={http://dx.doi.org/10.1177/13623613251342310}, DOI={10.1177/13623613251342310}, number={10}, journal={Autism}, publisher={SAGE Publications}, author={Roman-Urrestarazu, Andres and Tyson, Adele and Gatica-Bahamonde, Gabriel and van Kessel, Robin and Yang, Justin and Mansilla, Carola and Zuniga, Isabel and Méndez-Fadol, Alejandra and Larrain, Blanca and Garcia, Ricardo and Koch, Damaris and Ford, Tamsin and Groot, Wim and Pavlova, Milena and Czabanowska, Katarzyna}, year={2025}, month=Aug, pages={2501–2512} }",
+    "bibtex": "@article{Roman_Urrestarazu_2025, title={Bayesian prevalence of autism and unmet special education needs in Chile in a sample of three million school-age children}, volume={29}, ISSN={1461-7005}, url={http://dx.doi.org/10.1177/13623613251342310}, DOI={10.1177/13623613251342310}, number={10}, journal={Autism}, publisher={SAGE Publications}, author={Roman-Urrestarazu, Andres and Tyson, Adele and Gatica-Bahamonde, Gabriel and van Kessel, Robin and Yang, Justin and Mansilla, Carola and Zuniga, Isabel and Méndez-Fadol, Alejandra and Larrain, Blanca and Garcia, Ricardo and Koch, Damaris and Ford, Tamsin and Groot, Wim and Pavlova, Milena and Czabanowska, Katarzyna}, year={2025}, month=Aug, pages={2501–2512} }",
     "citation": "Roman-Urrestarazu, A., Tyson, A., Gatica-Bahamonde, G., van Kessel, R., Yang, J., Mansilla, C., Zuniga, I., Méndez-Fadol, A., Larrain, B., Garcia, R., Koch, D., Ford, T., Groot, W., Pavlova, M., & Czabanowska, K. (2025). Bayesian prevalence of autism and unmet special education needs in Chile in a sample of three million school-age children. Autism, 29(10), 2501–2512."
   },
   {
@@ -71,12 +81,12 @@
   },
   {
     "doi": "10.1186/s13011-023-00568-5",
-    "bibtex": "@article{yang2023investigatingsocialdeprivation, title={Investigating social deprivation and comorbid mental health diagnosis as predictors of treatment access among patients with an opioid use disorder using substance use services: a prospective cohort study}, volume={18}, ISSN={1747-597X}, url={http://dx.doi.org/10.1186/s13011-023-00568-5}, DOI={10.1186/s13011-023-00568-5}, number={1}, journal={Substance Abuse Treatment, Prevention, and Policy}, publisher={Springer Science and Business Media LLC}, author={Adams, Emma A and Yang, Justin C and O’Donnell, Amy and Minot, Sarah and Osborn, David and Kirkbride, James B}, year={2023}, month=Oct }",
+    "bibtex": "@article{Adams_2023, title={Investigating social deprivation and comorbid mental health diagnosis as predictors of treatment access among patients with an opioid use disorder using substance use services: a prospective cohort study}, volume={18}, ISSN={1747-597X}, url={http://dx.doi.org/10.1186/s13011-023-00568-5}, DOI={10.1186/s13011-023-00568-5}, number={1}, journal={Substance Abuse Treatment, Prevention, and Policy}, publisher={Springer Science and Business Media LLC}, author={Adams, Emma A and Yang, Justin C and O’Donnell, Amy and Minot, Sarah and Osborn, David and Kirkbride, James B}, year={2023}, month=Oct }",
     "citation": "Adams, E. A., Yang, J. C., O’Donnell, A., Minot, S., Osborn, D., & Kirkbride, J. B. (2023). Investigating social deprivation and comorbid mental health diagnosis as predictors of treatment access among patients with an opioid use disorder using substance use services: a prospective cohort study. Substance Abuse Treatment, Prevention, and Policy, 18(1)."
   },
   {
     "doi": "10.1186/s40359-025-03497-z",
-    "bibtex": "@article{yang2025impactclimatechange, title={The impact of climate change on mental health in vulnerable groups: a systematic review}, volume={13}, ISSN={2050-7283}, url={http://dx.doi.org/10.1186/s40359-025-03497-z}, DOI={10.1186/s40359-025-03497-z}, number={1}, journal={BMC Psychology}, publisher={Springer Science and Business Media LLC}, author={Mahmood, Ridha and Clery, Philippa and Yang, Justin C. and Cao, Liying and Dykxhoorn, Jennifer}, year={2025}, month=Oct }",
+    "bibtex": "@article{Mahmood_2025, title={The impact of climate change on mental health in vulnerable groups: a systematic review}, volume={13}, ISSN={2050-7283}, url={http://dx.doi.org/10.1186/s40359-025-03497-z}, DOI={10.1186/s40359-025-03497-z}, number={1}, journal={BMC Psychology}, publisher={Springer Science and Business Media LLC}, author={Mahmood, Ridha and Clery, Philippa and Yang, Justin C. and Cao, Liying and Dykxhoorn, Jennifer}, year={2025}, month=Oct }",
     "citation": "Mahmood, R., Clery, P., Yang, J. C., Cao, L., & Dykxhoorn, J. (2025). The impact of climate change on mental health in vulnerable groups: a systematic review. BMC Psychology, 13(1)."
   },
   {
@@ -86,18 +96,18 @@
   },
   {
     "doi": "10.1192/bjo.2025.31",
-    "bibtex": "@article{yang2025patientserviceuse, title={In-patient service use before and after a mental health in-patient rehabilitation admission}, volume={11}, ISSN={2056-4724}, url={http://dx.doi.org/10.1192/bjo.2025.31}, DOI={10.1192/bjo.2025.31}, number={3}, journal={BJPsych Open}, publisher={Royal College of Psychiatrists}, author={Dalton-Locke, Christian and Marston, Louise and Yang, Justin and Osborn, David and Killaspy, Helen}, year={2025}, month=Apr }",
+    "bibtex": "@article{Dalton_Locke_2025, title={In-patient service use before and after a mental health in-patient rehabilitation admission}, volume={11}, ISSN={2056-4724}, url={http://dx.doi.org/10.1192/bjo.2025.31}, DOI={10.1192/bjo.2025.31}, number={3}, journal={BJPsych Open}, publisher={Royal College of Psychiatrists}, author={Dalton-Locke, Christian and Marston, Louise and Yang, Justin and Osborn, David and Killaspy, Helen}, year={2025}, month=Apr }",
     "citation": "Dalton-Locke, C., Marston, L., Yang, J., Osborn, D., & Killaspy, H. (2025). In-patient service use before and after a mental health in-patient rehabilitation admission. BJPsych Open, 11(3)."
   },
   {
     "doi": "10.1200/go-25-00108",
-    "bibtex": "@article{yang2025socialdeterminantsassociated, title={Social Determinants Associated With the Advanced-Stage Diagnosis of Breast Cancer}, ISSN={2687-8941}, url={http://dx.doi.org/10.1200/go-25-00108}, DOI={10.1200/go-25-00108}, number={11}, journal={JCO Global Oncology}, publisher={American Society of Clinical Oncology (ASCO)}, author={Fekry, Madonna A. and Kassem, Loay and Yang, Justin C. and Azim, Hamdy A.}, year={2025}, month=Aug }",
+    "bibtex": "@article{Fekry_2025, title={Social Determinants Associated With the Advanced-Stage Diagnosis of Breast Cancer}, ISSN={2687-8941}, url={http://dx.doi.org/10.1200/go-25-00108}, DOI={10.1200/go-25-00108}, number={11}, journal={JCO Global Oncology}, publisher={American Society of Clinical Oncology (ASCO)}, author={Fekry, Madonna A. and Kassem, Loay and Yang, Justin C. and Azim, Hamdy A.}, year={2025}, month=Aug }",
     "citation": "Fekry, M. A., Kassem, L., Yang, J. C., & Azim, H. A. (2025). Social Determinants Associated With the Advanced-Stage Diagnosis of Breast Cancer. JCO Global Oncology, (11)."
   },
   {
     "doi": "10.1371/journal.pone.0199741",
     "bibtex": "@article{yang2018bingealcoholsubstance, title={Binge alcohol and substance use across birth cohorts and the global financial crisis in the United States}, volume={13}, ISSN={1932-6203}, url={http://dx.doi.org/10.1371/journal.pone.0199741}, DOI={10.1371/journal.pone.0199741}, number={6}, journal={PLOS ONE}, publisher={Public Library of Science (PLoS)}, author={Yang, Justin Christopher and Roman-Urrestarazu, Andres and Brayne, Carol}, editor={Cabieses, Baltica}, year={2018}, month=June, pages={e0199741} }",
-    "citation": "Yang, J. C., Roman-Urrestarazu, A., & Brayne, C. (2018). Binge alcohol and substance use across birth cohorts and the global financial crisis in the United States. Plos One, 13(6), e0199741."
+    "citation": "Yang, J. C., Roman-Urrestarazu, A., & Brayne, C. (2018). Binge alcohol and substance use across birth cohorts and the global financial crisis in the United States. Plos One, 13(6), e0199741. https://doi.org/10.1371/journal.pone.0199741"
   },
   {
     "doi": "10.1371/journal.pone.0218011",
