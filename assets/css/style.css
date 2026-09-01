@@ -1482,7 +1482,7 @@ main {
   color: var(--blue);
   background: transparent;
   box-shadow: none;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h1 {
