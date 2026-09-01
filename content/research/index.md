@@ -5,7 +5,7 @@ description: "Research led by Dr Justin C Yang on how mental health develops acr
 
 My research examines how mental health develops across **lives, places, and systems**, why trajectories and outcomes differ, and which processes may be modifiable. I work across **psychiatric epidemiology, population data science, causal inference, and health services research**.
 
-Within MINDSET, I approach these questions by integrating complementary evidence across different levels, settings, and timescales. The current portfolio has greatest empirical depth in linked administrative records, electronic health records, clinical free text, longitudinal cohorts and surveys, environmental information, and ecological momentary assessment and other intensive longitudinal measures. Collaborations add specialist behavioural and biological measurement where it can answer a substantive question rather than merely add another data source.
+Within MINDSET, I integrate complementary evidence across different levels, settings, and timescales. The programme works across social, behavioural, environmental, clinical, and biological evidence, selecting and developing measurements according to the substantive question.
 
 ## How the programme connects
 
@@ -33,7 +33,7 @@ Each project enters the programme at a different point, but the work connects th
 
 The hierarchy is deliberate: substantive questions determine which evidence and methods are needed; inferential work establishes what the measurements can support; and infrastructure work makes that science possible. The relationship is also iterative. Scientific questions reveal limitations in existing evidence, while better measurement, governance, and data systems create new possibilities for research.
 
-This structure makes it possible to examine whether observed inequalities reflect differences in need, biology, behaviour, exposure, access, recognition, recording, or care; to follow trajectories across settings, timescales, and levels of analysis; and to test how conclusions change when sources are linked or triangulated. The first two sections below define the scientific and inferential agenda. The final section describes the infrastructure that enables it.
+Together, these layers help distinguish processes underlying mental-health inequalities and trajectories from the ways they are measured, recorded, and observed.
 
 ## What shapes mental health and inequalities over time?
 
@@ -65,7 +65,7 @@ No source directly captures a person's mental health or the processes that shape
 - **place and context:** social, relational, environmental, spatial, and network information
 - **institutions and care:** linked administrative records, electronic health records, education data, and treatment or service systems
 
-The question is not how to include every modality, but which combination can reduce uncertainty about a particular mechanism, trajectory, intervention, or inequality. Each source is shaped by different selection processes, timescales, measurement error, missingness, and interpretation. Administrative and clinical records, for example, reflect recognition, access, documentation, coding, linkage, and institutional practice as well as the underlying phenomenon.
+Useful combinations depend on the question. Every source has distinct timescales, selection processes, measurement error, missingness, and interpretive limits. Administrative and clinical records, for example, reflect access, recognition, documentation, coding, linkage, and institutional practice as well as underlying phenomena.
 
 My methodological work therefore includes:
 

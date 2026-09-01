@@ -22,9 +22,9 @@ description: "MINDSET is the research programme established and led by Dr Justin
 
 Mental health develops through interacting processes within people, their environments, and the institutions they encounter. These operate from moments to lifetimes and across homes, communities, services, and population systems. Research observes them only indirectly, through measurements produced in different settings and for different purposes.
 
-**Inference is the organising idea in MINDSET.** Multimodal research does not mean including every available data type or combining them only for prediction. It means asking what each source reveals or obscures, how its measurements were generated and selected, and which combination of evidence can reduce uncertainty about a particular mechanism, trajectory, intervention, or inequality. I bring psychiatric epidemiology, causal inference, and data science together within MINDSET for that purpose.
+**Inference is the organising idea in MINDSET.** I ask what each source reveals or obscures, how its measurements were generated and selected, and which combinations of evidence can reduce uncertainty about a particular mechanism, trajectory, intervention, or inequality. I bring psychiatric epidemiology, causal inference, and data science together within MINDSET for that purpose.
 
-The programme's present empirical strengths lie in linked administrative and clinical data, clinical text, longitudinal cohorts and surveys, environmental information, and ecological momentary assessment and other intensive longitudinal measures. Collaborations extend this work to complementary behavioural and biological evidence where it is scientifically useful. Three enduring questions organise the programme.
+Empirical work spans experience, context, biology, behaviour, and care, using evidence at the level and timescale best suited to the question. Three enduring questions organise the programme.
 
 <div class="mindset-questions">
   <section class="mindset-question">

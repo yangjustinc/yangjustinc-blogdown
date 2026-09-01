@@ -30,7 +30,8 @@ I develop MINDSET collaboratively, maintaining a coherent long-term agenda while
 <b>Steering Committee Member</b>, <a href="https://www.gov.uk/government/publications/life-sciences-healthcare-goals/addiction-healthcare-goals">Addiction Healthcare Goals</a><br>
 <b>Steering Group Member</b>, <a href="https://mentalhealthresearch.org.uk/">NIHR Mental Health Research Incubator</a><br>
 <b>Data Access Committee Public Member</b>, <a href="https://easternsde.nhs.uk/">Eastern England Secure Data Environment</a><br>
-<b>Task & Finish Group Member</b>, <a href="https://www.adruk.org/">Administrative Data Research UK</a></p>
+<b>Task & Finish Group Member</b>, <a href="https://www.adruk.org/">Administrative Data Research UK</a><br>
+<b>Public Member</b>, <a href="https://www.immunology.org/">British Society for Immunology Patient and Public Involvement Network</a></p>
 </div>
 
 <div class="leadership-card">
@@ -38,12 +39,14 @@ I develop MINDSET collaboratively, maintaining a coherent long-term agenda while
 <p><b>Assessor College</b>, <a href="https://www.ukri.org/councils/esrc/">Economic and Social Research Council</a><br>
 <b>Expert Assessor</b>, <a href="https://www.adruk.org/">Administrative Data Research UK</a><br>
 <b>Reviewer College</b>, <a href="https://www.addiction-ssa.org/">Society for the Study of Addiction</a><br>
-<b>Expert Reviewer</b>, <a href="https://www.kcl.ac.uk/research/eating-disorders-clinical-research-network">Eating Disorders Clinical Research Network</a></p>
+<b>Expert Reviewer</b>, <a href="https://www.kcl.ac.uk/research/eating-disorders-clinical-research-network">Eating Disorders Clinical Research Network</a><br>
+<b>Reviewer Development Scheme</b>, <a href="https://www.nihr.ac.uk/">National Institute for Health and Care Research</a></p>
 </div>
 
 <div class="leadership-card">
-<h3 class="leadership-kicker">Research infrastructure</h3>
-<p><b>Deputy Lead</b>, <a href="https://www.northlondonmentalhealth.nhs.uk/research-database-">North London NHS Foundation Trust Research Database</a></p>
+<h3 class="leadership-kicker">Research infrastructure and skills development</h3>
+<p><b>Deputy Lead</b>, <a href="https://www.northlondonmentalhealth.nhs.uk/research-database-">North London NHS Foundation Trust Research Database</a><br>
+<b>Certified Instructor</b>, <a href="https://carpentries.org/">The Carpentries</a></p>
 </div>
 
 </div>
@@ -55,6 +58,7 @@ At UCL, I contribute to research culture, equity, and researcher development thr
 - **Culture Change Action Group Lead**, Division of Psychiatry, UCL
 - **LGBTQ+ Equity Action Group**, Division of Psychiatry, UCL
 - **Committee Member**, Child and Young People's Mental Health ECR Network, UCL
+- **Personal Tutor**, Division of Psychiatry, UCL
 
 ## Scholarly service
 
@@ -138,12 +142,5 @@ if (resp_status(resp) == 200) {
   }
 }
 ```
-
-## Other roles
-
-- **Public Member**, [British Society for Immunology Patient and Public Involvement Network](https://www.immunology.org/)
-- **Reviewer Development Scheme**, [National Institute for Health and Care Research](https://www.nihr.ac.uk/)
-- **Personal Tutor**, Division of Psychiatry, UCL
-- **Certified Instructor**, [The Carpentries](https://carpentries.org/)
 
 See also [research](../research/), [people and partnerships](../people/), and [teaching and supervision](../teaching/).
