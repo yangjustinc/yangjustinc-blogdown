@@ -1,6 +1,6 @@
 ---
 title: Home
-description: "MINDSET is the research programme established and led by Dr Justin C Yang, connecting evidence across experience, behaviour, biology, place, and care to study mental health trajectories, inequalities, and treatment."
+description: "MINDSET is the research programme established and led by Dr Justin C Yang, integrating heterogeneous evidence across levels, settings, and timescales to study how mental health develops."
 ---
 
 # MINDSET
@@ -17,12 +17,14 @@ description: "MINDSET is the research programme established and led by Dr Justin
 
 <aside class="research-vision" aria-label="Research vision">
   <span class="research-vision-label">Research vision</span>
-  <p>To understand how mental health, inequalities, and care unfold across the life course by connecting partial measurements across experience, behaviour, biology, place, and systems without treating any single source as a complete account of people's lives.</p>
+  <p>To understand how mental health develops across lives, places, and systems by integrating complementary evidence across levels, settings, and timescales.</p>
 </aside>
 
-People's mental health is shaped across experience, behaviour, biology, relationships, environments, and encounters with services. Research observes only partial traces of those processes: self-report and ecological momentary assessment; behavioural and physiological measures from wearables; biomarkers, genomic and other molecular data, and neuroimaging; longitudinal cohorts; environmental information; and records and text produced by institutions and care systems. Each source has its own selection, measurement, temporal, and interpretive limits.
+Mental health develops through interacting social, behavioural, biological, environmental, clinical, and institutional processes. These operate from moments to lifetimes and across homes, communities, services, and population systems. Research observes them only indirectly, through measurements produced in different settings and for different purposes.
 
-MINDSET brings psychiatric epidemiology, causal inference, and data science together to support **credible, useful, and responsible multimodal inference about mental health**. The programme asks what each source reveals or obscures, which combinations can resolve a research question, and how conclusions change when evidence is linked or triangulated across scales. Its present empirical strengths lie in population, administrative, clinical, textual, environmental, longitudinal, and intensive lived-experience data, while its wider collaborative scope connects these foundations with behavioural and biological measures. Three enduring questions organise the work.
+**Inference is the organising idea in MINDSET.** Multimodal research does not mean including every available data type or combining them only for prediction. It means asking what each source reveals or obscures, how its measurements were generated and selected, and which combination of evidence can reduce uncertainty about a particular mechanism, trajectory, intervention, or inequality. MINDSET brings psychiatric epidemiology, causal inference, and data science together for that purpose.
+
+The programme's present empirical strengths lie in linked administrative and clinical data, clinical text, longitudinal cohorts and surveys, environmental information, and ecological momentary assessment and other intensive longitudinal measures. Collaborations extend this work to complementary behavioural and biological evidence where it is scientifically useful. Three enduring questions organise the programme.
 
 <div class="mindset-questions">
   <section class="mindset-question">
@@ -40,8 +42,8 @@ MINDSET brings psychiatric epidemiology, causal inference, and data science toge
       <path class="mindset-question-glyph-bracket" d="M29 4c-4 6-5 12-5 14s1 8 5 14M35 4c4 6 5 12 5 14s-1 8-5 14"/>
     </svg>
     <span class="mindset-question-number">02</span>
-    <h2>How can partial and heterogeneous evidence support credible inference?</h2>
-    <p>Combining lived-experience, behavioural, biological, environmental, longitudinal, clinical, and population evidence while remaining explicit about selection, measurement, missingness, timescale, and the limits of inference.</p>
+    <h2>How can heterogeneous evidence support credible inference?</h2>
+    <p>Determining what different measurements can establish, and how evidence can be linked or triangulated across levels, settings, and timescales while remaining explicit about selection, measurement, missingness, and uncertainty.</p>
   </section>
   <section class="mindset-question">
     <svg class="mindset-question-glyph" viewBox="0 0 64 36" aria-hidden="true" focusable="false">
@@ -51,14 +53,14 @@ MINDSET brings psychiatric epidemiology, causal inference, and data science toge
       <path class="mindset-question-glyph-secondary" d="M17 18h8m14 0h8"/>
     </svg>
     <span class="mindset-question-number">03</span>
-    <h2>How can evidence systems better support research, services, and public decision-making?</h2>
-    <p>Improving the infrastructures, governance, and analytical practices through which sensitive health, behavioural, biological, and routinely collected data become useful evidence for research, policy, services, and the public.</p>
+    <h2>What evidence systems make rigorous and useful inference possible?</h2>
+    <p>Improving the infrastructures, governance, and analytical practices that enable sensitive human data to support research, services, policy, and public decision-making.</p>
   </section>
 </div>
 
 ## A connected research agenda
 
-MINDSET develops through time-bounded studies that approach the same questions from different settings and levels of analysis. **WISDOM** and **HOPE-SEN** examine mental-health trajectories and inequalities using complementary longitudinal data. Through the UKRI Mental Health Platform, WISDOM also creates collaborations across social, emotional, behavioural, biological, and data-science perspectives on severe mental illness. **UNITED** and a new **anti-stigma intervention process evaluation** extend the agenda into addiction treatment, professional practice, and service improvement. Work with the **North London NHS Foundation Trust Research Database** turns methodological and substantive lessons into better governed research infrastructure.
+MINDSET develops through time-bounded studies that approach the same questions across different settings, levels, and timescales. **WISDOM** and **HOPE-SEN** examine mental-health trajectories and inequalities using complementary longitudinal evidence. Through the UKRI Mental Health Platform, WISDOM also creates collaborations across social, emotional, behavioural, biological, and data-science perspectives on severe mental illness. **UNITED** and a new **anti-stigma intervention process evaluation** extend the agenda into addiction treatment, professional practice, and service improvement. Work with the **North London NHS Foundation Trust Research Database** turns methodological and substantive lessons into better governed research infrastructure.
 
 The relationship runs in both directions: substantive questions reveal limitations in existing data; methodological work clarifies what can credibly be inferred; and infrastructure work improves the evidence available for the next study. Individual awards start and finish, but this cycle provides continuity across the wider programme.
 
@@ -66,7 +68,7 @@ The relationship runs in both directions: substantive questions reveal limitatio
 
 MINDSET is collaborative by design, connecting researchers, NHS organisations, public-sector data providers, treatment services, charities, people with lived experience, and policy and research partners across a wider research network.
 
-- **Researchers and research groups:** collaboration on psychiatric epidemiology, causal and multimodal inference, longitudinal and intensive measurement, linked and textual data, environmental context, wearables, biomarkers, genomics, neuroimaging, and related mental-health questions.
+- **Researchers and research groups:** collaboration on substantive mental-health questions that benefit from psychiatric epidemiology, causal and multimodal inference, complementary measurement, and expertise spanning social, behavioural, biological, environmental, clinical, and institutional evidence.
 - **NHS, policy, data, and service partners:** work on the responsible use of routinely collected data, research infrastructure, evaluation, and questions with practical relevance to services and public decision-making.
 - **People with lived experience and public partners:** involvement in shaping research questions, interpretation, governance, and the use of evidence about health and care.
 - **Trainees:** PhD, MSc, and undergraduate supervision, methods collaboration, teaching, and researcher development where there is a strong fit with the programme.

@@ -1,15 +1,15 @@
 ---
 title: Research
-description: "Research led by Dr Justin C Yang connecting evidence across experience, behaviour, biology, place, and care through psychiatric epidemiology, causal inference, and data science."
+description: "Research led by Dr Justin C Yang on how mental health develops across lives, places, and systems, using multimodal inference across levels, settings, and timescales."
 ---
 
-My research asks how partial measurements across **experience, behaviour, biology, place, and care** can be combined to understand mental health, inequalities, and treatment. I work across **psychiatric epidemiology, population data science, causal inference, and health services research**.
+My research examines how mental health develops across **lives, places, and systems**, why trajectories and outcomes differ, and which processes may be modifiable. I work across **psychiatric epidemiology, population data science, causal inference, and health services research**.
 
-The current portfolio has greatest empirical depth in linked administrative records, electronic health records, clinical free text, longitudinal cohorts, environmental information, and ecological momentary assessment and other intensive longitudinal measures. MINDSET's broader collaborative scope includes behavioural and physiological measures from wearables, neuroimaging, biomarkers, and genomic and other molecular data where they can answer a substantive question rather than merely add another data source.
+MINDSET approaches these questions by integrating complementary evidence about **social, behavioural, biological, environmental, clinical, and institutional processes**, across different levels, settings, and timescales. The current portfolio has greatest empirical depth in linked administrative records, electronic health records, clinical free text, longitudinal cohorts and surveys, environmental information, and ecological momentary assessment and other intensive longitudinal measures. The programme's broader collaborative scope includes behavioural and physiological measures from wearables, neuroimaging, biomarkers, and genomic and other molecular data where they can answer a substantive question rather than merely add another data source.
 
 ## How the programme connects
 
-Each project enters the programme at a different point, but the work moves between three connected forms of enquiry.
+Each project enters the programme at a different point, but the work connects three layers, with substantive mental-health questions leading.
 
 <div class="programme-cycle" role="list" aria-label="How the MINDSET research programme connects">
   <section class="programme-cycle-stage" role="listitem">
@@ -25,15 +25,15 @@ Each project enters the programme at a different point, but the work moves betwe
   </section>
   <span class="programme-cycle-connector" aria-hidden="true">→</span>
   <section class="programme-cycle-stage" role="listitem">
-    <span class="programme-cycle-kicker">Systems and practice</span>
+    <span class="programme-cycle-kicker">Enabling systems</span>
     <h3>Better evidence infrastructure</h3>
     <p>Improve governance, data systems, implementation, and analytical practice so that future research and decisions rest on stronger evidence.</p>
   </section>
 </div>
 
-This is a cycle rather than a hierarchy. The programme holds these three levels together: it treats the processes through which experiences and mechanisms are measured, and through which people become visible to services and datasets, as part of both the substantive question and the inferential problem. Findings then inform the systems that produce future evidence.
+The hierarchy is deliberate: substantive questions determine which evidence and methods are needed; inferential work establishes what the measurements can support; and infrastructure work makes that science possible. The relationship is also iterative. Scientific questions reveal limitations in existing evidence, while better measurement, governance, and data systems create new possibilities for research.
 
-That combination makes it possible to examine whether observed inequalities reflect differences in need, biology, behaviour, exposure, access, recognition, recording, or care; to follow trajectories across settings, timescales, and levels of analysis; and to test how conclusions change when sources are linked or triangulated. The three questions below sustain this work across individual grants and studies.
+This structure makes it possible to examine whether observed inequalities reflect differences in need, biology, behaviour, exposure, access, recognition, recording, or care; to follow trajectories across settings, timescales, and levels of analysis; and to test how conclusions change when sources are linked or triangulated. The first two sections below define the scientific and inferential agenda. The final section describes the infrastructure that enables it.
 
 ## What shapes mental health and inequalities over time?
 
@@ -79,9 +79,11 @@ My methodological work therefore includes:
 
 These approaches are used to strengthen inference, recover information that would otherwise remain inaccessible, and clarify what each source, and each combination of sources, can and cannot establish.
 
-## How can data systems better support research and decision-making?
+## Research infrastructure as an enabling foundation
 
 Research using sensitive human data depends on the systems through which evidence is measured or recorded, governed, linked, accessed, documented, and interpreted.
+
+This work supports the substantive and methodological agenda by improving the quality, comparability, accessibility, and responsible use of the evidence on which research depends.
 
 As Deputy Lead of the **North London NHS Foundation Trust Research Database**, I support research using routinely collected mental-health records, including research development, governance, methodological support, and collaboration across clinical, informatics, academic, and public partners.
 

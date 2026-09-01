@@ -5,8 +5,9 @@ website for **MINDSET (Multimodal INference and Data Science for Epidemiology
 and Treatment)**, the research programme led by Dr Justin C Yang at University
 College London.
 
-MINDSET studies how credible mental-health inferences can be drawn from
-partial, heterogeneous evidence across levels of analysis and the life course.
+MINDSET studies how mental health develops across lives, places, and systems by
+drawing credible inferences from heterogeneous evidence across levels,
+settings, and timescales.
 It is not organised around a single data source. Its current empirical strengths
 include linked administrative records, electronic health records, clinical free
 text, longitudinal cohort and environmental data, and ecological momentary
