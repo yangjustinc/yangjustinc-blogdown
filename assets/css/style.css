@@ -1387,8 +1387,11 @@ footer .footer-icon {
   --ink: #18252e;
   --ink-soft: #53636e;
   --navy: #173b57;
-  --blue: #176fa8;
+  --blue: #1f7fc4;
   --teal: #137f76;
+  --orange: #b85c00;
+  --purple: #76549f;
+  --green: #4f7d32;
   --paper: #fff;
   --wash: #f4f8fa;
   --line: #dce5ea;
@@ -1433,28 +1436,10 @@ main {
 }
 
 .site-brand-mark {
-  position: relative;
-  width: 2rem;
-  height: 2rem;
-  border: 2px solid var(--blue);
-  border-radius: 50%;
-  background: radial-gradient(circle at center, var(--teal) 0 18%, transparent 20%);
-}
-
-.site-brand-mark::before,
-.site-brand-mark::after {
-  content: '';
-  position: absolute;
-  top: calc(50% - 0.5px);
-  left: 0.25rem;
-  right: 0.25rem;
-  height: 1px;
-  background: var(--blue);
-  transform: rotate(32deg);
-}
-
-.site-brand-mark::after {
-  transform: rotate(-32deg);
+  display: block;
+  width: 2.6rem;
+  height: 2.6rem;
+  object-fit: contain;
 }
 
 .site-brand-copy {
@@ -1493,8 +1478,7 @@ main {
 
 .menu a.active {
   color: var(--navy);
-  background: #eaf3f8;
-  font-weight: 600;
+  background: linear-gradient(135deg
 }
 
 h1 {
@@ -1576,3 +1560,37 @@ footer {
     margin-left: 1rem;
   }
 }
+
+/* Logo-palette accents */
+.mindset-question:nth-child(1) { border-top-color: var(--blue); }
+.mindset-question:nth-child(2) { border-top-color: var(--teal); }
+.mindset-question:nth-child(3) { border-top-color: var(--purple); }
+.mindset-question:nth-child(3) .mindset-question-glyph { stroke: var(--purple); }
+
+.programme-cycle-stage,
+.collaboration-cluster,
+.leadership-card,
+.teaching-module {
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 6px 18px rgba(23, 59, 87, 0.045);
+}
+
+.collaboration-cluster:nth-of-type(3n + 1),
+.leadership-card:nth-child(4n + 1) { border-top-color: var(--teal); }
+.collaboration-cluster:nth-of-type(3n + 2),
+.leadership-card:nth-child(4n + 2) { border-top-color: var(--purple); }
+.collaboration-cluster:nth-of-type(3n),
+.leadership-card:nth-child(4n + 3) { border-top-color: var(--green); }
+
+main li::marker { color: var(--teal); }
+
+.footer-social a:nth-child(1):hover,
+.footer-social a:nth-child(1):focus-visible { color: var(--blue); }
+.footer-social a:nth-child(2):hover,
+.footer-social a:nth-child(2):focus-visible { color: var(--teal); }
+.footer-social a:nth-child(3):hover,
+.footer-social a:nth-child(3):focus-visible { color: var(--orange); }
+.footer-social a:nth-child(4):hover,
+.footer-social a:nth-child(4):focus-visible { color: var(--purple); }
+.footer-social a:nth-child(5):hover,
+.footer-social a:nth-child(5):focus-visible { color: var(--green); }
