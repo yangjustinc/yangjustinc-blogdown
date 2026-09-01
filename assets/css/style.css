@@ -1381,3 +1381,424 @@ footer .footer-icon {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* MINDSET design layer: intentional late overrides for the inherited theme rules above.
+   Keep identity and responsive refinements together here until the base theme is retired. */
+:root {
+  --ink: #18252e;
+  --ink-soft: #53636e;
+  --navy: #173b57;
+  --blue: #1f7fc4;
+  --teal: #137f76;
+  --orange: #b85c00;
+  --purple: #76549f;
+  --green: #4f7d32;
+  --paper: #fff;
+  --wash: #f4f8fa;
+  --line: #dce5ea;
+  --radius: 8px;
+}
+
+html {
+  background: linear-gradient(180deg, #f7fafb 0, #fff 22rem);
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 920px;
+  padding: 0 1.5rem 2rem;
+  color: var(--ink);
+  line-height: 1.68;
+  background: var(--paper);
+  box-shadow: 0 0 0 1px rgba(23, 59, 87, 0.035), 0 18px 60px rgba(23, 59, 87, 0.06);
+}
+
+main {
+  padding-top: 1.35rem;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  min-height: 5.35rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 0.65rem;
+  margin: 0;
+  color: var(--navy);
+}
+
+.site-brand-mark {
+  display: block;
+  width: 2.6rem;
+  height: 2.6rem;
+  object-fit: contain;
+}
+
+.site-brand-copy {
+  display: grid;
+  line-height: 1;
+}
+
+.site-brand-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.site-brand-tagline {
+  margin-top: 0.32rem;
+  color: #6a7983;
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.menu {
+  justify-content: flex-end;
+  gap: 0.1rem;
+  margin: 0;
+}
+
+.menu a {
+  padding: 0.5rem 0.55rem;
+  border-radius: 6px;
+  color: var(--ink-soft);
+  font-family: Inter, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.menu a.active {
+  color: var(--blue);
+  background: transparent;
+  box-shadow: none;
+  font-weight: 700;
+}
+
+h1 {
+  color: var(--navy);
+  font-size: clamp(2rem, 5vw, 2.65rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+h2,
+h3 {
+  color: var(--navy);
+}
+
+h2 {
+  font-size: 1.38rem;
+  line-height: 1.25;
+}
+
+.mindset-question {
+  padding: 1.15rem 1.1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--navy);
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: linear-gradient(180deg, #fbfdfe, #f7fafb);
+  box-shadow: 0 8px 24px rgba(23, 59, 87, 0.055);
+}
+
+.research-vision {
+  border: 1px solid #d6e7e4;
+  border-left: 4px solid var(--teal);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: linear-gradient(90deg, #f1f8f6, #f8fbfa);
+}
+
+.contact-form {
+  border-radius: var(--radius);
+  background: var(--wash);
+}
+
+.team-card img {
+  box-shadow: 0 8px 22px rgba(23, 59, 87, 0.1);
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 0.25rem;
+}
+
+@media (max-width: 820px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.65rem;
+    padding: 1rem 0 0.75rem;
+  }
+
+  .menu {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 0 1rem 1.5rem;
+    box-shadow: none;
+  }
+
+  main {
+    padding-top: 0.9rem;
+  }
+
+  .menu a {
+    padding: 0.4rem 0.5rem;
+  }
+
+  #profile {
+    max-width: 34%;
+    margin-left: 1rem;
+  }
+}
+
+/* Logo-palette accents */
+.mindset-question:nth-child(1) { border-top-color: var(--blue); }
+.mindset-question:nth-child(2) { border-top-color: var(--teal); }
+.mindset-question:nth-child(3) { border-top-color: var(--purple); }
+.mindset-question:nth-child(3) .mindset-question-glyph { stroke: var(--purple); }
+
+.programme-cycle-stage,
+.collaboration-cluster,
+.leadership-card,
+.teaching-module {
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 6px 18px rgba(23, 59, 87, 0.045);
+}
+
+.collaboration-cluster:nth-of-type(3n + 1),
+.leadership-card:nth-child(4n + 1) { border-top-color: var(--teal); }
+.collaboration-cluster:nth-of-type(3n + 2),
+.leadership-card:nth-child(4n + 2) { border-top-color: var(--purple); }
+.collaboration-cluster:nth-of-type(3n),
+.leadership-card:nth-child(4n + 3) { border-top-color: var(--green); }
+
+main li::marker { color: var(--teal); }
+
+.footer-social a:nth-child(1):hover,
+.footer-social a:nth-child(1):focus-visible { color: var(--blue); }
+.footer-social a:nth-child(2):hover,
+.footer-social a:nth-child(2):focus-visible { color: var(--teal); }
+.footer-social a:nth-child(3):hover,
+.footer-social a:nth-child(3):focus-visible { color: var(--orange); }
+.footer-social a:nth-child(4):hover,
+.footer-social a:nth-child(4):focus-visible { color: var(--purple); }
+.footer-social a:nth-child(5):hover,
+.footer-social a:nth-child(5):focus-visible { color: var(--green); }
+
+/* Final editorial and small-screen refinements */
+#profile {
+  max-width: 22%;
+  min-width: 108px;
+  margin: 0.15rem 0 1rem 1.75rem;
+}
+
+.research-vision {
+  clear: both;
+  margin-top: 1.4rem;
+}
+
+main > p:first-of-type {
+  color: #253744;
+  font-size: 1.015rem;
+}
+
+@media (max-width: 820px) {
+  .site-header {
+    min-height: 0;
+  }
+
+  .site-header nav {
+    width: 100%;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .menu li {
+    display: block;
+  }
+
+  .menu a {
+    text-align: center;
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    background: #fff;
+  }
+
+  .site-header {
+    gap: 0.85rem;
+    padding-top: 0.9rem;
+  }
+
+  .site-brand-mark {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .site-brand-tagline {
+    font-size: 0.55rem;
+  }
+
+  .menu {
+    gap: 0.2rem 0.35rem;
+    border-top: 1px solid var(--line);
+    padding-top: 0.55rem;
+  }
+
+  .menu a {
+    padding: 0.38rem 0.25rem;
+    font-size: 0.72rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #profile {
+    max-width: 5.6rem;
+    min-width: 0;
+    margin: 0.25rem 0 0.65rem 1rem;
+  }
+
+  .research-vision {
+    padding: 0.8rem 0.85rem;
+  }
+
+  .mindset-question {
+    padding: 1rem;
+    box-shadow: none;
+  }
+
+  .programme-cycle-stage,
+  .collaboration-cluster,
+  .leadership-card,
+  .teaching-module {
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu a {
+    text-align: left;
+  }
+
+  #profile {
+    float: none;
+    width: 4.75rem;
+    margin: 0 0 0.75rem auto;
+  }
+}
+
+/* Responsive content-system refinements */
+@media (max-width: 700px) {
+  .people-grid {
+    gap: 1.25rem 0.9rem;
+  }
+
+  .team-card {
+    width: calc(50% - 0.45rem);
+  }
+
+  .partner-card {
+    width: 100%;
+  }
+
+  .team-card img {
+    width: min(9rem, 100%);
+  }
+
+  .funding-card,
+  .talk-card {
+    margin-left: 0.2rem;
+    padding-left: 1.35rem;
+  }
+
+  .site-table {
+    font-size: 0.82rem;
+  }
+
+  .site-table th,
+  .site-table td {
+    padding: 0.55rem 0.6rem;
+  }
+
+  .publication-filter,
+  .publication-action {
+    min-height: 2.4rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 540px) {
+  #profile {
+    display: none;
+  }
+
+  main > p:first-of-type {
+    font-size: 1rem;
+  }
+
+  .research-vision {
+    clear: none;
+    margin-top: 1.15rem;
+  }
+
+  .selected-publication,
+  .publication-entry {
+    padding-block: 0.8rem;
+  }
+
+  .footer-social {
+    gap: 0.55rem 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  body {
+    padding-inline: 0.85rem;
+  }
+
+  .site-brand-tagline {
+    display: none;
+  }
+
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu a {
+    text-align: left;
+  }
+
+  .team-card {
+    width: 100%;
+  }
+}
