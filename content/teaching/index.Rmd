@@ -6,7 +6,7 @@ output:
     keep_md: yes
 ---
 
-My teaching and supervision are organised around a simple aim: **helping trainees become thoughtful, independent researchers who can reason clearly with complex health and population data**. I teach quantitative methods, supervise research across mental health and population health, and contribute to open and reproducible research training.
+My teaching and supervision are organised around a simple aim: **helping trainees become thoughtful, independent researchers who can reason clearly with complex and heterogeneous evidence**. I teach quantitative methods, supervise research across mental health and population health, and contribute to open and reproducible research training.
 
 ```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(tidyverse)
@@ -188,4 +188,4 @@ recent_projects |>
 
 ## Prospective trainees
 
-I am interested in supervising PhD, MSc, and undergraduate projects that fit the wider MINDSET agenda, particularly in psychiatric epidemiology, linked administrative or clinical data, causal inference, mental-health data science, neurodivergence, addiction, and inequalities. Prospective trainees are welcome to [get in touch](../contact/) with a brief outline of their interests and the type of project or supervision they are seeking.
+I am interested in supervising PhD, MSc, and undergraduate projects that fit the wider MINDSET agenda, particularly work connecting mental-health questions with longitudinal, administrative, clinical, environmental, behavioural, or biological data; causal and multimodal inference; neurodivergence; addiction; and inequalities. Prospective trainees are welcome to [get in touch](../contact/) with a brief outline of their interests and the type of project or supervision they are seeking.

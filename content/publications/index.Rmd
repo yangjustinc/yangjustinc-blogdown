@@ -1,12 +1,12 @@
 ---
 title: Publications
-description: "Selected and complete publications from the MINDSET research programme, spanning psychiatric epidemiology, linked data, mental health data science, neurodivergence, addiction, and health inequalities."
+description: "Selected and complete publications underpinning MINDSET's work in psychiatric epidemiology, multimodal inference, mental health data science, neurodivergence, addiction, and health inequalities."
 output:
   html_document:
     keep_md: yes
 ---
 
-My publications span psychiatric epidemiology, linked administrative and clinical data, mental-health inequalities, neurodivergence, addiction, and population health. The programme-defining outputs highlighted below are complemented by a dynamically generated view of recent work and my complete publication record from [ORCID](https://orcid.org/0000-0003-2881-4906).
+My publications reflect the programme's current empirical foundations in psychiatric epidemiology, linked administrative and clinical data, mental-health inequalities, neurodivergence, addiction, spatial analysis, and population health. These foundations support a wider multimodal agenda connecting lived experience, behaviour, biology, place, and care through current and developing collaborations. The programme-defining outputs highlighted below are complemented by a dynamically generated view of recent work and my complete publication record from [ORCID](https://orcid.org/0000-0003-2881-4906).
 
 ```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(orcidtr)

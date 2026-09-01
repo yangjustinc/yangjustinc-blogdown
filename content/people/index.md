@@ -3,9 +3,9 @@ title: People & Partnerships
 description: "The people, partnerships, and collaborative capabilities that make up the MINDSET research programme."
 ---
 
-MINDSET brings together researchers, trainees, NHS and public-sector data partners, treatment services, and collaborating academic groups around a shared aim: **drawing credible, useful, and responsible inference about mental health from complex real-world data**.
+MINDSET brings together researchers, trainees, NHS and public-sector data partners, treatment services, and collaborating academic groups around a shared aim: **drawing credible, useful, and responsible inference about mental health from partial evidence across experience, behaviour, biology, place, and care**.
 
-Different projects draw on combinations of epidemiology, data science, clinical and service knowledge, population data, research infrastructure, and lived-experience expertise. The people and organisations below reflect active or longstanding research relationships across the programme.
+Different projects draw on combinations of epidemiology, data science, lived-experience expertise, clinical and service knowledge, population and environmental data, intensive longitudinal measurement, biological science, and research infrastructure. The people and organisations below reflect active or longstanding relationships; no single project or partner is expected to cover every part of the programme.
 
 ## Research team
 
@@ -15,7 +15,7 @@ Different projects draw on combinations of epidemiology, data science, clinical 
 <img src="pictures/justinyang.png" alt="Headshot of Justin C Yang" width="256" height="256" decoding="async">
 <div class="people-name">Dr Justin C Yang</div>
 <div class="people-role">Senior Research Fellow · MINDSET Lead</div>
-<div class="people-expertise">Psychiatric epidemiology · linked data · causal inference</div>
+<div class="people-expertise">Psychiatric epidemiology · multimodal data · causal inference</div>
 <a href="https://profiles.ucl.ac.uk/75514-justin-yang">UCL Profile</a>
 </div>
 
@@ -73,9 +73,9 @@ Many partners contribute across more than one area of the programme.
 </div>
 
 <div class="collaboration-cluster">
-<div class="collaboration-kicker">Population & linked data</div>
+<div class="collaboration-kicker">Population, place & linked data</div>
 <h3>Following mental health across systems and populations</h3>
-<p>National administrative data, population data science, linkage, and infrastructure for studying trajectories and inequalities at scale.</p>
+<p>National administrative, longitudinal, environmental, and spatial data; population data science; linkage; and infrastructure for studying trajectories and inequalities at scale.</p>
 <div class="collaboration-links">
 <a href="https://www.adruk.org/">Administrative Data Research UK</a>
 <a href="https://www.hdruk.ac.uk/">Health Data Research UK</a>
@@ -98,11 +98,12 @@ Many partners contribute across more than one area of the programme.
 </div>
 
 <div class="collaboration-cluster">
-<div class="collaboration-kicker">Mental health science & methods</div>
-<h3>Connecting mechanisms, context, and inference</h3>
-<p>Psychosis, severe mental illness, social and environmental determinants, causal inference, systems thinking, prediction, and inequalities.</p>
+<div class="collaboration-kicker">Experience, biology & methods</div>
+<h3>Connecting mechanisms, context, and measurement</h3>
+<p>Intensive longitudinal and lived-experience measures, social and environmental context, biomarkers and immunology, neuroimaging, causal inference, systems thinking, prediction, and inequalities.</p>
 <div class="collaboration-links">
 <a href="https://www.complexemotionshub.co.uk/">Complex Emotions Hub</a>
+<a href="https://www.mentalhealthplatform.ac.uk/research-hubs/immunomind">ImmunoMIND</a>
 <a href="https://katemerritt.github.io/map-lab/">Mechanisms and Prediction of Psychosis Lab (MAP Lab)</a>
 <a href="https://www.mentalhealthpolicyeconomicsgroup.com/">Mental Health | Policy | Economics Group</a>
 <a href="https://www.mentalhealthepi.com/">Mental Illness through Systems Thinking (MIST) Psychiatric Epidemiology</a>
