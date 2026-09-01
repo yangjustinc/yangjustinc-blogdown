@@ -1480,7 +1480,9 @@ main {
 
 .menu a.active {
   color: var(--navy);
-  background: linear-gradient(135deg
+  background: linear-gradient(135deg, #eaf3f8, #f2f8f6);
+  box-shadow: inset 0 -2px 0 var(--teal);
+  font-weight: 600;
 }
 
 h1 {
@@ -1709,5 +1711,98 @@ main > p:first-of-type {
     float: none;
     width: 4.75rem;
     margin: 0 0 0.75rem auto;
+  }
+}
+
+/* Responsive content-system refinements */
+@media (max-width: 700px) {
+  .people-grid {
+    gap: 1.25rem 0.9rem;
+  }
+
+  .team-card {
+    width: calc(50% - 0.45rem);
+  }
+
+  .partner-card {
+    width: 100%;
+  }
+
+  .team-card img {
+    width: min(9rem, 100%);
+  }
+
+  .funding-card,
+  .talk-card {
+    margin-left: 0.2rem;
+    padding-left: 1.35rem;
+  }
+
+  .site-table {
+    font-size: 0.82rem;
+  }
+
+  .site-table th,
+  .site-table td {
+    padding: 0.55rem 0.6rem;
+  }
+
+  .publication-filter,
+  .publication-action {
+    min-height: 2.4rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 540px) {
+  #profile {
+    display: none;
+  }
+
+  main > p:first-of-type {
+    font-size: 1rem;
+  }
+
+  .research-vision {
+    clear: none;
+    margin-top: 1.15rem;
+  }
+
+  .menu a.active {
+    box-shadow: inset 0 -2px 0 var(--teal);
+  }
+
+  .selected-publication,
+  .publication-entry {
+    padding-block: 0.8rem;
+  }
+
+  .footer-social {
+    gap: 0.55rem 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  body {
+    padding-inline: 0.85rem;
+  }
+
+  .site-brand-tagline {
+    display: none;
+  }
+
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu a {
+    text-align: left;
+  }
+
+  .team-card {
+    width: 100%;
   }
 }
