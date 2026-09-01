@@ -54,17 +54,12 @@ published_projects <- students |>
 
 recent_projects <- students |>
   filter(
-    Student %in% c(
-      "Cameron Tefft",
-      "Thea Nelson",
-      "Alara Egeli",
-      "Eleanor Edgar",
-      "Jasmine Malty",
-      "Jieyu Zan",
-      "Tamara Moon"
-    )
+    Institution == "UCL",
+    Degree != "PhD",
+    !str_detect(`Year(s)`, "Present")
   ) |>
-  arrange(desc(`Year(s)`), Student)
+  arrange(desc(`Year(s)`), Student) |>
+  slice_head(n = 8)
 ```
 
 ## Current trainees
