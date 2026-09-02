@@ -678,16 +678,16 @@ main a:hover {
 }
 
 .publication-toolbar {
+  margin: 1rem 0 0.6rem;
+}
+
+/* R Markdown inserts a semantic paragraph wrapper around these controls. */
+.publication-toolbar > p {
   align-items: end;
   display: grid;
   gap: 0.75rem;
   grid-template-columns: minmax(0, 1fr) minmax(9rem, 0.35fr) auto;
-  margin: 1rem 0 0.6rem;
-}
-
-/* R Markdown inserts a paragraph wrapper around these controls. */
-.publication-toolbar > p {
-  display: contents;
+  margin: 0;
 }
 
 .publication-control {
@@ -772,7 +772,7 @@ main a:hover {
 }
 
 @media (max-width: 640px) {
-  .publication-toolbar {
+  .publication-toolbar > p {
     align-items: stretch;
     grid-template-columns: 1fr;
   }
@@ -1676,7 +1676,7 @@ footer {
 
 /* Logo-palette accents */
 .mindset-question:nth-child(1) { border-top-color: var(--blue); }
-.mindset-question:nth-child(2) { border-top-color: var(--teal); }
+.mindset-question:nth-child(2) { border-top-color: var(--green); }
 .mindset-question:nth-child(3) { border-top-color: var(--purple); }
 .mindset-question:nth-child(2) .mindset-question-glyph { stroke: var(--green); }
 .mindset-question:nth-child(2) .mindset-question-glyph-bracket { stroke: var(--blue); }
