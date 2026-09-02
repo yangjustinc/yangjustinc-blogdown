@@ -72,7 +72,7 @@ Many partners contribute across more than one area of the programme.
 <span>Partners and expertise across four connected areas</span>
 </div>
 
-<div class="collaboration-cluster">
+<div class="collaboration-cluster hue-green">
 <div class="collaboration-kicker">Population, place & linked data</div>
 <h3>Following mental health across systems and populations</h3>
 <p>National administrative, longitudinal, environmental, and spatial data; population data science; linkage; and infrastructure for studying trajectories and inequalities at scale.</p>
@@ -84,7 +84,7 @@ Many partners contribute across more than one area of the programme.
 </div>
 </div>
 
-<div class="collaboration-cluster">
+<div class="collaboration-cluster hue-blue">
 <div class="collaboration-kicker">Clinical data & infrastructure</div>
 <h3>Turning routinely collected records into research evidence</h3>
 <p>Electronic health records, clinical text, governed data access, harmonisation, and methods for research across mental-health services.</p>
@@ -97,7 +97,7 @@ Many partners contribute across more than one area of the programme.
 </div>
 </div>
 
-<div class="collaboration-cluster">
+<div class="collaboration-cluster hue-teal">
 <div class="collaboration-kicker">Experience, biology & methods</div>
 <h3>Connecting mechanisms, context, and measurement</h3>
 <p>Intensive longitudinal and lived-experience measures, social and environmental context, biomarkers and immunology, neuroimaging, causal inference, systems thinking, prediction, and inequalities.</p>
@@ -111,10 +111,10 @@ Many partners contribute across more than one area of the programme.
 </div>
 </div>
 
-<div class="collaboration-cluster">
-<div class="collaboration-kicker">Services, policy & lived experience</div>
-<h3>Keeping research connected to care and decision-making</h3>
-<p>Treatment-provider expertise, public involvement, service context, and partnerships that help make questions and interpretation useful beyond academia.</p>
+<div class="collaboration-cluster hue-purple">
+<div class="collaboration-kicker">Services, policy & lived and living experience</div>
+<h3>Keeping research connected to lived and living experience, care, and decision-making</h3>
+<p>Lived- and living-experience expertise, treatment-provider expertise, public involvement, service context, and partnerships that help make questions and interpretation useful beyond academia.</p>
 <div class="collaboration-links">
 <a href="https://www.changegrowlive.org/">Change Grow Live</a>
 <a href="https://mcpin.org/">McPin Foundation</a>
