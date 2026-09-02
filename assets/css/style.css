@@ -1,3 +1,56 @@
+/*
+ * MINDSET design tokens
+ *
+ * The five strand hues are reserved for brand and research-category accents.
+ * Interface, typography, surface, and border colours use semantic roles.
+ */
+:root {
+  --ink: #18252e;
+  --ink-secondary: #44545f;
+  --ink-soft: #53636e;
+  --ink-muted: #6a7983;
+
+  --navy: #173b57;
+  --blue: #1f7fc4;
+  --teal: #137f76;
+  --orange: #b85c00;
+  --purple: #76549f;
+  --green: #4f7d32;
+
+  --action: #176fae;
+  --action-hover: #155d94;
+  --action-wash: #eef6fb;
+  --teal-wash: #f1f8f6;
+  --teal-surface: #f8fbfa;
+
+  --paper: #fff;
+  --surface: #fbfdfe;
+  --surface-muted: #f7fafb;
+  --wash: #f4f8fa;
+  --line: #dce5ea;
+  --line-subtle: #e8edf0;
+  --line-strong: #c8d4db;
+  --line-action: #a9cce4;
+  --line-teal: #d6e7e4;
+  --line-teal-strong: #b8ddd9;
+  --control-line: #aab7c0;
+
+  --success-ink: #28623a;
+  --success-line: #b7d8c0;
+  --focus-ring: rgba(23, 111, 174, 0.3);
+  --link-underline: rgba(23, 111, 174, 0.35);
+  --shadow-floating: rgba(0, 0, 0, 0.18);
+  --shadow-hairline: rgba(23, 59, 87, 0.035);
+  --shadow-subtle: rgba(23, 59, 87, 0.045);
+  --shadow-soft: rgba(23, 59, 87, 0.05);
+  --shadow-card: rgba(23, 59, 87, 0.055);
+  --shadow-page: rgba(23, 59, 87, 0.06);
+  --shadow-raised: rgba(23, 59, 87, 0.09);
+  --shadow-photo: rgba(23, 59, 87, 0.1);
+
+  --radius: 8px;
+}
+
 /* Page entrance */
 @keyframes fadein {
   from { opacity: 0; transform: translateY(6px); }
@@ -16,7 +69,7 @@ body {
   margin: auto;
   padding: 1.5em 1em;
   line-height: 1.65;
-  color: #222;
+  color: var(--ink);
   animation: fadein 0.35s ease-out both;
 }
 
@@ -31,8 +84,8 @@ main {
   left: 0.5rem;
   padding: 0.55rem 0.75rem;
   border-radius: 4px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  background: var(--paper);
+  box-shadow: 0 2px 8px var(--shadow-floating);
   transform: translateY(-150%);
 }
 
@@ -58,7 +111,7 @@ main {
 .menu a {
   display: inline-block;
   text-decoration: none;
-  color: #444;
+  color: var(--ink-secondary);
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 0.9em;
@@ -66,18 +119,18 @@ main {
 }
 
 .menu a:hover {
-  color: #1f7fc4;
-  background: #eef6fb;
+  color: var(--action);
+  background: var(--action-wash);
 }
 
 .menu a.active {
-  color: #1f7fc4;
+  color: var(--action);
   font-weight: 700;
 }
 
 a:focus-visible,
 summary:focus-visible {
-  outline: 2px solid #1f7fc4;
+  outline: 2px solid var(--action);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -102,22 +155,22 @@ footer {
 /* Horizontal rule */
 hr {
   border: none;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--line-subtle);
   margin: 1em 0;
 }
 
 /* Code */
 pre {
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--line-subtle);
   box-shadow: none;
   padding: 1em;
   overflow-x: auto;
   border-radius: 4px;
-  background: #fafafa;
+  background: var(--surface);
 }
 
 code {
-  background: #f5f5f5;
+  background: var(--wash);
   border-radius: 3px;
   padding: 0.1em 0.3em;
 }
@@ -136,11 +189,11 @@ video {
 
 /* Blockquote */
 blockquote {
-  background: #f9fbfd;
-  border-left: 3px solid #1f7fc4;
+  background: var(--surface);
+  border-left: 3px solid var(--action);
   padding: 0.5em 1em;
   margin: 1em 0;
-  color: #444;
+  color: var(--ink-secondary);
 }
 
 /* Tables */
@@ -152,15 +205,15 @@ blockquote {
 
 table {
   margin: 1em auto;
-  border-top: 2px solid #444;
-  border-bottom: 2px solid #444;
+  border-top: 2px solid var(--ink-secondary);
+  border-bottom: 2px solid var(--ink-secondary);
   width: 100%;
   font-size: 0.9em;
   border-collapse: collapse;
 }
 
 table thead th {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--line-strong);
   text-align: left;
   padding: 8px 10px;
 }
@@ -173,11 +226,11 @@ td {
 
 thead,
 tfoot {
-  background: #eef6fb;
+  background: var(--action-wash);
 }
 
 tr:nth-child(even) {
-  background: #fafafa;
+  background: var(--surface);
 }
 
 /* Site tables */
@@ -187,7 +240,7 @@ tr:nth-child(even) {
   border-spacing: 0;
   font-size: 0.88em;
   margin: 1.25em 0;
-  border-top: 2px solid #173b57;
+  border-top: 2px solid var(--navy);
   border-bottom: 0;
 }
 
@@ -197,9 +250,9 @@ tr:nth-child(even) {
 
 .site-table th {
   padding: 0.65rem 0.7rem 0.55rem;
-  border-bottom: 1px solid #a9cce4;
+  border-bottom: 1px solid var(--line-action);
   text-align: left;
-  color: #173b57;
+  color: var(--navy);
   font-family: Inter, sans-serif;
   font-size: 0.76rem;
   font-weight: 700;
@@ -210,25 +263,25 @@ tr:nth-child(even) {
 .site-table td {
   padding: 0.65rem 0.7rem;
   vertical-align: top;
-  border-bottom: 1px solid #e8edf0;
-  color: #333;
+  border-bottom: 1px solid var(--line-subtle);
+  color: var(--ink);
   line-height: 1.45;
 }
 
 .site-table tbody td:first-child {
-  color: #222;
+  color: var(--ink);
   font-weight: 600;
 }
 
 .site-table tbody tr:hover {
-  background: #f7fafc;
+  background: var(--surface-muted);
 }
 
 .supervision-summary {
   margin: 1.1rem 0 1.4rem 0;
   padding: 0.75rem 0;
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid var(--line-subtle);
+  border-bottom: 1px solid var(--line-subtle);
   line-height: 1.6;
 }
 
@@ -263,11 +316,11 @@ h1::after {
   height: 3px;
   background: linear-gradient(
     to right,
-    #1f7fc4 0 20%,
-    #137f76 20% 40%,
-    #b85c00 40% 60%,
-    #76549f 60% 80%,
-    #4f7d32 80% 100%
+    var(--blue) 0 20%,
+    var(--teal) 20% 40%,
+    var(--orange) 40% 60%,
+    var(--purple) 60% 80%,
+    var(--green) 80% 100%
   );
   margin-top: 0.3em;
 }
@@ -295,22 +348,22 @@ p {
 
 /* Links */
 a {
-  color: #1f7fc4;
+  color: var(--action);
   transition: color 0.15s ease;
 }
 
 a:hover {
-  color: #155d94;
+  color: var(--action-hover);
 }
 
 main a {
   text-decoration: underline;
-  text-decoration-color: rgba(31, 127, 196, 0.35);
+  text-decoration-color: var(--link-underline);
   text-underline-offset: 3px;
 }
 
 main a:hover {
-  text-decoration-color: #1f7fc4;
+  text-decoration-color: var(--action);
 }
 
 /* People */
@@ -363,7 +416,7 @@ main a:hover {
 /* Funding */
 .funding-section-intro {
   margin-bottom: 1.2rem;
-  color: #444;
+  color: var(--ink-secondary);
 }
 
 .funding-card {
@@ -381,10 +434,10 @@ main a:hover {
   left: -0.34rem;
   width: 0.62rem;
   height: 0.62rem;
-  border: 3px solid #fff;
+  border: 3px solid var(--paper);
   border-radius: 50%;
-  background: #1f7fc4;
-  box-shadow: 0 0 0 1px #1f7fc4;
+  background: var(--action);
+  box-shadow: 0 0 0 1px var(--action);
 }
 
 .funding-card::after {
@@ -394,7 +447,7 @@ main a:hover {
   bottom: -1.42rem;
   left: 0;
   width: 1px;
-  background: #c5dff0;
+  background: var(--line-action);
 }
 
 .funding-card:last-child::after {
@@ -418,16 +471,16 @@ main a:hover {
   font-weight: 600;
   padding: 0.12rem 0.45rem;
   margin: 0 0 0.45rem 0;
-  border: 1px solid #d7d7d7;
+  border: 1px solid var(--line);
   border-radius: 3px;
-  background: #fafafa;
+  background: var(--surface);
 }
 
 .funding-meta {
   font-size: 0.92rem;
   line-height: 1.45;
   margin-bottom: 0.45rem;
-  color: #555;
+  color: var(--ink-soft);
 }
 
 .funding-description {
@@ -438,13 +491,13 @@ main a:hover {
 .funding-reference {
   font-size: 0.82rem;
   margin-top: 0.45rem;
-  color: #777;
+  color: var(--ink-muted);
 }
 
 /* Publications */
 .selected-publication {
   padding: 1.05rem 0 1.2rem 0;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid var(--line-subtle);
 }
 
 .selected-publication:last-child {
@@ -457,7 +510,7 @@ main a:hover {
   text-transform: uppercase;
   letter-spacing: 0.035em;
   margin-bottom: 0.25rem;
-  color: #666;
+  color: var(--ink-soft);
 }
 
 .selected-title {
@@ -474,7 +527,7 @@ main a:hover {
 .selected-meta {
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
-  color: #666;
+  color: var(--ink-soft);
 }
 
 .selected-publication p {
@@ -491,11 +544,11 @@ main a:hover {
 }
 
 .publication-explorer {
-  --strand-clinical: #1f7fc4;
-  --strand-administrative: #137f76;
-  --strand-addiction: #b85c00;
-  --strand-inequalities: #76549f;
-  --strand-population: #4f7d32;
+  --strand-clinical: var(--blue);
+  --strand-administrative: var(--teal);
+  --strand-addiction: var(--orange);
+  --strand-inequalities: var(--purple);
+  --strand-population: var(--green);
   margin: 1.25rem 0 2rem;
 }
 
@@ -529,10 +582,10 @@ main a:hover {
 .publication-filter,
 .publication-action {
   appearance: none;
-  border: 1px solid #cfcfcf;
+  border: 1px solid var(--line-strong);
   border-radius: 4px;
-  background: #fff;
-  color: #333;
+  background: var(--paper);
+  color: var(--ink);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -546,15 +599,15 @@ main a:hover {
 
 .publication-filter:hover,
 .publication-action:hover {
-  background: #eef6fb;
-  border-color: #a9cce4;
-  color: #145b8c;
+  background: var(--action-wash);
+  border-color: var(--line-action);
+  color: var(--action-hover);
 }
 
 .publication-filter[aria-pressed="true"] {
-  background: #222;
-  border-color: #222;
-  color: #fff;
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
 }
 
 .publication-filter:focus-visible,
@@ -562,7 +615,7 @@ main a:hover {
 .publication-control input:focus-visible,
 .publication-control select:focus-visible,
 .publication-timeline-mark:focus-visible {
-  outline: 2px solid #1f7fc4;
+  outline: 2px solid var(--action);
   outline-offset: 2px;
 }
 
@@ -589,20 +642,20 @@ main a:hover {
 }
 
 .publication-timeline-grid {
-  stroke: #e2e2e2;
+  stroke: var(--line-subtle);
   stroke-width: 1;
 }
 
 .publication-timeline-year,
 .publication-timeline-lane {
-  fill: #666;
+  fill: var(--ink-soft);
   font-family: Inter, sans-serif;
   font-size: 12px;
 }
 
 .publication-timeline-mark {
   fill: var(--strand-color);
-  stroke: #fff;
+  stroke: var(--paper);
   stroke-width: 2;
   cursor: pointer;
   transition: opacity 0.15s ease, r 0.15s ease;
@@ -618,7 +671,7 @@ main a:hover {
 }
 
 .publication-selected-paper {
-  color: #555;
+  color: var(--ink-soft);
   font-size: 0.9rem;
   min-height: 1.5rem;
   margin: 0 0 1.35rem;
@@ -632,8 +685,13 @@ main a:hover {
   margin: 1rem 0 0.6rem;
 }
 
+/* R Markdown inserts a paragraph wrapper around these controls. */
+.publication-toolbar > p {
+  display: contents;
+}
+
 .publication-control {
-  color: #555;
+  color: var(--ink-soft);
   display: grid;
   font-size: 0.82rem;
   font-weight: 600;
@@ -642,10 +700,10 @@ main a:hover {
 
 .publication-control input,
 .publication-control select {
-  border: 1px solid #cfcfcf;
+  border: 1px solid var(--line-strong);
   border-radius: 4px;
-  background: #fff;
-  color: #222;
+  background: var(--paper);
+  color: var(--ink);
   font: inherit;
   font-size: 0.92rem;
   font-weight: 400;
@@ -661,7 +719,7 @@ main a:hover {
 }
 
 .publication-result-count {
-  color: #666;
+  color: var(--ink-soft);
   font-size: 0.86rem;
   margin: 0 0 1rem;
 }
@@ -671,7 +729,7 @@ main a:hover {
 }
 
 .publication-entry {
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid var(--line-subtle);
   padding: 0.85rem 0 0.95rem;
 }
 
@@ -685,7 +743,7 @@ main a:hover {
 
 .publication-entry-meta {
   align-items: center;
-  color: #666;
+  color: var(--ink-soft);
   display: flex;
   flex-wrap: wrap;
   font-size: 0.8rem;
@@ -700,9 +758,9 @@ main a:hover {
 }
 
 .publication-open-access {
-  border: 1px solid #b7d8c0;
+  border: 1px solid var(--success-line);
   border-radius: 3px;
-  color: #28623a;
+  color: var(--success-ink);
   padding: 0.08rem 0.34rem;
 }
 
@@ -740,10 +798,10 @@ main a:hover {
   left: -0.3rem;
   width: 0.52rem;
   height: 0.52rem;
-  border: 3px solid #fff;
+  border: 3px solid var(--paper);
   border-radius: 50%;
-  background: #137f76;
-  box-shadow: 0 0 0 1px #137f76;
+  background: var(--teal);
+  box-shadow: 0 0 0 1px var(--teal);
 }
 
 .talk-card::after {
@@ -753,7 +811,7 @@ main a:hover {
   bottom: -1.25rem;
   left: 0;
   width: 1px;
-  background: #b8ddd9;
+  background: var(--line-teal-strong);
 }
 
 .talk-card:last-child::after {
@@ -765,7 +823,7 @@ main a:hover {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.035em;
-  color: #666;
+  color: var(--ink-soft);
   margin-bottom: 0.2rem;
 }
 
@@ -773,20 +831,20 @@ main a:hover {
   font-size: 1.04rem;
   font-weight: 600;
   line-height: 1.4;
-  color: #222;
+  color: var(--ink);
   margin-bottom: 0.25rem;
 }
 
 .talk-event {
   font-size: 0.93rem;
   line-height: 1.45;
-  color: #555;
+  color: var(--ink-soft);
   margin-bottom: 0.15rem;
 }
 
 .talk-date {
   font-size: 0.87rem;
-  color: #777;
+  color: var(--ink-muted);
 }
 
 .talk-materials {
@@ -801,11 +859,11 @@ details {
 
 summary {
   cursor: pointer;
-  color: #333;
+  color: var(--ink);
 }
 
 summary:hover {
-  color: #1f7fc4;
+  color: var(--action);
 }
 
 /* Embeds and iframes */
@@ -814,13 +872,13 @@ summary:hover {
   height: clamp(650px, 85vh, 1200px);
   border: 0;
   display: block;
-  background: #fff;
+  background: var(--paper);
 }
 
 /* Footer */
 footer {
   font-size: 0.85em;
-  color: #888;
+  color: var(--ink-muted);
   margin-top: 2rem;
 }
 
@@ -830,11 +888,11 @@ footer p {
 
 footer a {
   text-decoration: none;
-  color: #888;
+  color: var(--ink-muted);
 }
 
 footer a:hover {
-  color: #1f7fc4;
+  color: var(--action);
 }
 
 .footer-social {
@@ -849,13 +907,13 @@ footer a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #888;
+  color: var(--ink-muted);
   text-decoration: none;
 }
 
 .footer-social a:hover,
 .footer-social a:focus-visible {
-  color: #1f7fc4;
+  color: var(--action);
 }
 
 .footer-icon {
@@ -866,7 +924,7 @@ footer a:hover {
 
 /* Section permalinks */
 .heading-anchor {
-  color: #888;
+  color: var(--ink-muted);
   font-family: Inter, sans-serif;
   font-size: 0.72em;
   font-weight: 400;
@@ -876,7 +934,7 @@ footer a:hover {
 
 .heading-anchor:hover,
 .heading-anchor:focus-visible {
-  color: #1f7fc4;
+  color: var(--action);
   opacity: 1;
 }
 
@@ -898,9 +956,9 @@ main .section[id] {
 .contact-form {
   margin: 1.5rem 0 0;
   padding: 1.25rem;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--line-subtle);
   border-radius: 6px;
-  background: #fafafa;
+  background: var(--surface);
 }
 
 .form-field {
@@ -918,17 +976,17 @@ main .section[id] {
   display: block;
   width: 100%;
   padding: 0.65rem 0.7rem;
-  border: 1px solid #aaa;
+  border: 1px solid var(--control-line);
   border-radius: 4px;
-  background: #fff;
-  color: #222;
+  background: var(--paper);
+  color: var(--ink);
   font: inherit;
 }
 
 .form-field input:focus,
 .form-field textarea:focus {
-  border-color: #1f7fc4;
-  outline: 2px solid rgba(31, 127, 196, 0.3);
+  border-color: var(--action);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 1px;
 }
 
@@ -936,15 +994,15 @@ main .section[id] {
   padding: 0.65rem 1rem;
   border: 0;
   border-radius: 4px;
-  background: #1f7fc4;
-  color: #fff;
+  background: var(--action);
+  color: var(--paper);
   font: inherit;
   font-weight: 600;
   cursor: pointer;
 }
 
 .contact-form button:hover {
-  background: #155d94;
+  background: var(--action-hover);
 }
 
 .form-honeypot {
@@ -965,7 +1023,7 @@ main .section[id] {
 .site-brand {
   display: inline-block;
   margin: 0 0 0.45rem;
-  color: #222;
+  color: var(--ink);
   font-family: Inter, sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
@@ -974,7 +1032,7 @@ main .section[id] {
 }
 
 .site-brand:hover {
-  color: #1f7fc4;
+  color: var(--action);
 }
 
 .mindset-questions {
@@ -986,8 +1044,8 @@ main .section[id] {
 
 .mindset-question {
   padding: 0.95rem 1rem 1rem;
-  border-top: 2px solid #173b57;
-  background: #fafafa;
+  border-top: 2px solid var(--navy);
+  background: var(--surface);
 }
 
 .mindset-question-glyph {
@@ -996,24 +1054,24 @@ main .section[id] {
   height: 2rem;
   margin: 0 0 0.45rem;
   fill: none;
-  stroke: #1f7fc4;
+  stroke: var(--blue);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2.5;
 }
 
 .mindset-question-glyph-secondary {
-  stroke: #137f76;
+  stroke: var(--teal);
 }
 
 .mindset-question-glyph-bracket {
-  stroke: #173b57;
+  stroke: var(--navy);
 }
 
 .mindset-question-number {
   display: block;
   margin-bottom: 0.3rem;
-  color: #777;
+  color: var(--ink-muted);
   font-family: Inter, sans-serif;
   font-size: 0.76rem;
   font-weight: 600;
@@ -1033,14 +1091,14 @@ main .section[id] {
 .research-vision {
   margin: 1.15rem 0 1.35rem;
   padding: 0.75rem 0 0.75rem 1rem;
-  border-left: 3px solid #137f76;
-  background: #f7faf9;
+  border-left: 3px solid var(--teal);
+  background: var(--teal-surface);
 }
 
 .research-vision-label {
   display: block;
   margin-bottom: 0.2rem;
-  color: #31534f;
+  color: var(--ink-secondary);
   font-family: Inter, sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
@@ -1050,7 +1108,7 @@ main .section[id] {
 
 .research-vision p {
   margin: 0;
-  color: #253b39;
+  color: var(--ink-secondary);
   font-size: 1.02rem;
   line-height: 1.55;
 }
@@ -1065,22 +1123,22 @@ main .section[id] {
 
 .programme-cycle-stage {
   padding: 0.9rem 0.85rem 0.95rem;
-  border-top: 2px solid #173b57;
-  background: #fafafa;
+  border-top: 2px solid var(--navy);
+  background: var(--surface);
 }
 
 .programme-cycle-stage:nth-of-type(2) {
-  border-top-color: #1f7fc4;
+  border-top-color: var(--action);
 }
 
 .programme-cycle-stage:nth-of-type(3) {
-  border-top-color: #137f76;
+  border-top-color: var(--teal);
 }
 
 .programme-cycle-kicker {
   display: block;
   margin-bottom: 0.35rem;
-  color: #666;
+  color: var(--ink-soft);
   font-family: Inter, sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
@@ -1096,14 +1154,14 @@ main .section[id] {
 
 .programme-cycle-stage p {
   margin: 0;
-  color: #444;
+  color: var(--ink-secondary);
   font-size: 0.87rem;
   line-height: 1.5;
 }
 
 .programme-cycle-connector {
   align-self: center;
-  color: #7d9aac;
+  color: var(--ink-muted);
   font-family: Inter, sans-serif;
   font-size: 1.1rem;
 }
@@ -1116,23 +1174,23 @@ main .section[id] {
   align-items: start;
   margin: 1.35rem 0 1.65rem;
   padding: 1rem;
-  border: 1px solid var(--line, #dce5ea);
-  border-top: 3px solid var(--teal, #137f76);
-  border-radius: 0 0 var(--radius, 8px) var(--radius, 8px);
-  background: linear-gradient(180deg, #fbfdfe, #f7fafb);
-  box-shadow: 0 8px 24px rgba(23, 59, 87, 0.05);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--teal);
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: linear-gradient(180deg, var(--surface), var(--surface-muted));
+  box-shadow: 0 8px 24px var(--shadow-soft);
 }
 
-.resource-feature:nth-of-type(2) { border-top-color: var(--purple, #76549f); }
-.resource-feature:nth-of-type(3) { border-top-color: var(--green, #4f7d32); }
+.resource-feature:nth-of-type(2) { border-top-color: var(--purple); }
+.resource-feature:nth-of-type(3) { border-top-color: var(--green); }
 
 .resource-feature-preview {
   display: block;
   overflow: hidden;
-  border: 1px solid #d4dfe5;
+  border: 1px solid var(--line);
   border-radius: 6px;
-  background: #fff;
-  box-shadow: 0 5px 16px rgba(23, 59, 87, 0.09);
+  background: var(--paper);
+  box-shadow: 0 5px 16px var(--shadow-raised);
 }
 
 .resource-feature-preview img {
@@ -1157,7 +1215,7 @@ main .section[id] {
 
 .resource-feature-copy p {
   margin: 0.55rem 0 0;
-  color: #44545f;
+  color: var(--ink-secondary);
   font-size: 0.91rem;
   line-height: 1.58;
 }
@@ -1175,21 +1233,21 @@ main .section[id] {
 
 .people-role {
   margin-top: 0.15rem;
-  color: #444;
+  color: var(--ink-secondary);
   font-size: 0.92rem;
   line-height: 1.4;
 }
 
 .people-expertise {
   margin: 0.35rem 0 0.45rem;
-  color: #666;
+  color: var(--ink-soft);
   font-size: 0.86rem;
   line-height: 1.45;
 }
 
 .people-note {
   margin-top: 0.35rem;
-  color: #777;
+  color: var(--ink-muted);
   font-size: 0.82rem;
   font-style: italic;
 }
@@ -1207,31 +1265,31 @@ main .section[id] {
   align-items: baseline;
   gap: 0.7rem;
   padding: 0.65rem 0.85rem;
-  border-left: 3px solid #173b57;
-  background: #eef6fb;
+  border-left: 3px solid var(--navy);
+  background: var(--action-wash);
 }
 
 .ecosystem-core b {
-  color: #173b57;
+  color: var(--navy);
   font-family: Inter, sans-serif;
   font-size: 0.82rem;
   letter-spacing: 0.07em;
 }
 
 .ecosystem-core span {
-  color: #555;
+  color: var(--ink-soft);
   font-size: 0.84rem;
 }
 
 .collaboration-cluster {
   position: relative;
-  border-top: 2px solid #1f7fc4;
-  background: #fafafa;
+  border-top: 2px solid var(--component-accent, var(--blue));
+  background: var(--surface);
   padding: 0.95rem 1rem 1rem;
 }
 
 .collaboration-kicker {
-  color: #666;
+  color: var(--component-accent-ink, var(--component-accent, var(--ink-soft)));
   font-family: Inter, sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
@@ -1247,7 +1305,7 @@ main .section[id] {
 
 .collaboration-cluster p {
   margin: 0 0 0.7rem;
-  color: #444;
+  color: var(--ink-secondary);
   font-size: 0.9rem;
   line-height: 1.5;
 }
@@ -1255,14 +1313,14 @@ main .section[id] {
 .collaboration-links {
   display: grid;
   margin-top: 0.8rem;
-  border-top: 1px solid #e2e7ea;
+  border-top: 1px solid var(--line-subtle);
 }
 
 .collaboration-links a {
   position: relative;
   padding: 0.42rem 1.25rem 0.42rem 0;
-  border-bottom: 1px solid #e2e7ea;
-  color: #33434e;
+  border-bottom: 1px solid var(--line-subtle);
+  color: var(--ink-secondary);
   font-size: 0.8rem;
   line-height: 1.35;
   text-decoration: none;
@@ -1273,19 +1331,19 @@ main .section[id] {
   position: absolute;
   top: 0.42rem;
   right: 0.1rem;
-  color: #7a8a94;
+  color: var(--ink-muted);
   font-size: 0.72rem;
 }
 
 .collaboration-links a:hover,
 .collaboration-links a:focus-visible {
-  color: #155d94;
-  background: linear-gradient(to right, #eef6fb, transparent 75%);
+  color: var(--action-hover);
+  background: linear-gradient(to right, var(--action-wash), transparent 75%);
 }
 
 .collaboration-links a:hover::after,
 .collaboration-links a:focus-visible::after {
-  color: #1f7fc4;
+  color: var(--action);
 }
 
 /* Teaching & Supervision */
@@ -1298,7 +1356,8 @@ main .section[id] {
 
 .teaching-module {
   position: relative;
-  border: 1px solid #e1e1e1;
+  border: 1px solid var(--line-subtle);
+  border-top: 2px solid var(--component-accent, var(--teal));
   border-radius: 4px;
   padding: 1.15rem 0.9rem 0.85rem;
   font-size: 0.88rem;
@@ -1311,7 +1370,7 @@ main .section[id] {
   height: 2.2rem;
   margin: 0 0 0.75rem;
   fill: none;
-  stroke: #137f76;
+  stroke: var(--component-accent, var(--teal));
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2.2;
@@ -1322,8 +1381,9 @@ main .section[id] {
 }
 
 .teaching-module:hover {
-  border-color: #c5dff0;
-  background: #fafcfe;
+  border-color: var(--line-action);
+  border-top-color: var(--component-accent, var(--teal));
+  background: var(--surface);
 }
 
 .supervision-summary {
@@ -1332,8 +1392,8 @@ main .section[id] {
   gap: 0.55rem 1rem;
   margin: 1.1rem 0 1.4rem;
   padding: 0.85rem 0;
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid var(--line-subtle);
+  border-bottom: 1px solid var(--line-subtle);
   line-height: 1.5;
 }
 
@@ -1344,13 +1404,13 @@ main .section[id] {
 
 .supervision-stat b {
   display: block;
-  color: #222;
+  color: var(--ink);
   font-size: 1.2rem;
   line-height: 1.2;
 }
 
 .supervision-stat span {
-  color: #666;
+  color: var(--ink-soft);
   font-size: 0.82rem;
 }
 
@@ -1363,14 +1423,14 @@ main .section[id] {
 }
 
 .leadership-card {
-  border-top: 2px solid #173b57;
-  background: #fafafa;
+  border-top: 2px solid var(--component-accent, var(--navy));
+  background: var(--surface);
   padding: 0.95rem 1rem 1rem;
 }
 
 .leadership-kicker {
   margin: 0 0 0.55rem;
-  color: #173b57;
+  color: var(--component-accent-ink, var(--component-accent, var(--navy)));
   font-family: Inter, sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
@@ -1380,7 +1440,7 @@ main .section[id] {
 
 .leadership-card p {
   margin: 0.35rem 0 0;
-  color: #444;
+  color: var(--ink-secondary);
   font-size: 0.9rem;
   line-height: 1.55;
 }
@@ -1442,23 +1502,9 @@ footer .footer-icon {
 
 /* MINDSET design layer: intentional late overrides for the inherited theme rules above.
    Keep identity and responsive refinements together here until the base theme is retired. */
-:root {
-  --ink: #18252e;
-  --ink-soft: #53636e;
-  --navy: #173b57;
-  --blue: #1f7fc4;
-  --teal: #137f76;
-  --orange: #b85c00;
-  --purple: #76549f;
-  --green: #4f7d32;
-  --paper: #fff;
-  --wash: #f4f8fa;
-  --line: #dce5ea;
-  --radius: 8px;
-}
 
 html {
-  background: linear-gradient(180deg, #f7fafb 0, #fff 22rem);
+  background: linear-gradient(180deg, var(--surface-muted) 0, var(--paper) 22rem);
   scroll-behavior: smooth;
 }
 
@@ -1468,7 +1514,7 @@ body {
   color: var(--ink);
   line-height: 1.68;
   background: var(--paper);
-  box-shadow: 0 0 0 1px rgba(23, 59, 87, 0.035), 0 18px 60px rgba(23, 59, 87, 0.06);
+  box-shadow: 0 0 0 1px var(--shadow-hairline), 0 18px 60px var(--shadow-page);
 }
 
 main {
@@ -1514,7 +1560,7 @@ main {
 
 .site-brand-tagline {
   margin-top: 0.32rem;
-  color: #6a7983;
+  color: var(--ink-muted);
   font-size: 0.58rem;
   font-weight: 500;
   letter-spacing: 0.055em;
@@ -1528,7 +1574,7 @@ main {
 }
 
 .menu a {
-  padding: 0.5rem 0.45rem;
+  padding: 0.5rem 0.35rem;
   border-radius: 6px;
   color: var(--ink-soft);
   font-family: Inter, sans-serif;
@@ -1537,7 +1583,7 @@ main {
 }
 
 .menu a.active {
-  color: var(--blue);
+  color: var(--action);
   background: transparent;
   box-shadow: none;
   font-weight: 500;
@@ -1565,15 +1611,15 @@ h2 {
   border: 1px solid var(--line);
   border-top: 3px solid var(--navy);
   border-radius: 0 0 var(--radius) var(--radius);
-  background: linear-gradient(180deg, #fbfdfe, #f7fafb);
-  box-shadow: 0 8px 24px rgba(23, 59, 87, 0.055);
+  background: linear-gradient(180deg, var(--surface), var(--surface-muted));
+  box-shadow: 0 8px 24px var(--shadow-card);
 }
 
 .research-vision {
-  border: 1px solid #d6e7e4;
+  border: 1px solid var(--line-teal);
   border-left: 4px solid var(--teal);
   border-radius: 0 var(--radius) var(--radius) 0;
-  background: linear-gradient(90deg, #f1f8f6, #f8fbfa);
+  background: linear-gradient(90deg, var(--teal-wash), var(--teal-surface));
 }
 
 .contact-form {
@@ -1582,7 +1628,7 @@ h2 {
 }
 
 .team-card img {
-  box-shadow: 0 8px 22px rgba(23, 59, 87, 0.1);
+  box-shadow: 0 8px 22px var(--shadow-photo);
 }
 
 footer {
@@ -1632,24 +1678,27 @@ footer {
 .mindset-question:nth-child(1) { border-top-color: var(--blue); }
 .mindset-question:nth-child(2) { border-top-color: var(--teal); }
 .mindset-question:nth-child(3) { border-top-color: var(--purple); }
-.mindset-question:nth-child(2) .mindset-question-glyph { stroke: var(--teal); }
-.mindset-question:nth-child(2) .mindset-question-glyph-bracket { stroke: var(--green); }
+.mindset-question:nth-child(2) .mindset-question-glyph { stroke: var(--green); }
+.mindset-question:nth-child(2) .mindset-question-glyph-bracket { stroke: var(--blue); }
 .mindset-question:nth-child(3) .mindset-question-glyph { stroke: var(--purple); }
+.mindset-question:nth-child(3) .mindset-question-glyph-secondary { stroke: var(--blue); }
+
+.hue-blue {
+  --component-accent: var(--blue);
+  --component-accent-ink: var(--action);
+}
+.hue-teal { --component-accent: var(--teal); }
+.hue-orange { --component-accent: var(--orange); }
+.hue-purple { --component-accent: var(--purple); }
+.hue-green { --component-accent: var(--green); }
 
 .programme-cycle-stage,
 .collaboration-cluster,
 .leadership-card,
 .teaching-module {
   border-radius: 0 0 var(--radius) var(--radius);
-  box-shadow: 0 6px 18px rgba(23, 59, 87, 0.045);
+  box-shadow: 0 6px 18px var(--shadow-subtle);
 }
-
-.collaboration-cluster:nth-of-type(3n + 1),
-.leadership-card:nth-child(4n + 1) { border-top-color: var(--teal); }
-.collaboration-cluster:nth-of-type(3n + 2),
-.leadership-card:nth-child(4n + 2) { border-top-color: var(--purple); }
-.collaboration-cluster:nth-of-type(3n),
-.leadership-card:nth-child(4n + 3) { border-top-color: var(--green); }
 
 main li::marker { color: var(--teal); }
 
@@ -1677,7 +1726,7 @@ main li::marker { color: var(--teal); }
 }
 
 main > p:first-of-type {
-  color: #253744;
+  color: var(--ink-secondary);
   font-size: 1.015rem;
 }
 
@@ -1707,7 +1756,7 @@ main > p:first-of-type {
 
 @media (max-width: 540px) {
   html {
-    background: #fff;
+    background: var(--paper);
   }
 
   .site-header {

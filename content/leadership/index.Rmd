@@ -18,13 +18,13 @@ I develop MINDSET collaboratively, maintaining a coherent long-term agenda while
 
 <div class="leadership-grid">
 
-<div class="leadership-card">
+<div class="leadership-card hue-orange">
 <h3 class="leadership-kicker">Editorial leadership</h3>
 <p><b>Associate Editor</b>, <a href="https://onlinelibrary.wiley.com/page/journal/13600443/homepage/editorialboard.html"><i>Addiction</i></a><br>
 <b>Editorial Board Member</b>, <a href="https://journals.sagepub.com/editorial-board/SAT"><i>Substance Use: Research and Treatment</i></a></p>
 </div>
 
-<div class="leadership-card">
+<div class="leadership-card hue-purple">
 <h3 class="leadership-kicker">National and regional research governance</h3>
 <p><b>Expert Member</b>, <a href="https://www.hra.nhs.uk/about-us/committees-and-services/confidentiality-advisory-group/">Confidentiality Advisory Group, Health Research Authority</a><br>
 <b>Steering Committee Member</b>, <a href="https://www.gov.uk/government/publications/life-sciences-healthcare-goals/addiction-healthcare-goals">Addiction Healthcare Goals</a><br>
@@ -34,7 +34,7 @@ I develop MINDSET collaboratively, maintaining a coherent long-term agenda while
 <b>Public Member</b>, <a href="https://www.immunology.org/">British Society for Immunology Patient and Public Involvement Network</a></p>
 </div>
 
-<div class="leadership-card">
+<div class="leadership-card hue-green">
 <h3 class="leadership-kicker">Research assessment</h3>
 <p><b>Assessor College</b>, <a href="https://www.ukri.org/councils/esrc/">Economic and Social Research Council</a><br>
 <b>Expert Assessor</b>, <a href="https://www.adruk.org/">Administrative Data Research UK</a><br>
@@ -43,7 +43,7 @@ I develop MINDSET collaboratively, maintaining a coherent long-term agenda while
 <b>Reviewer Development Scheme</b>, <a href="https://www.nihr.ac.uk/">National Institute for Health and Care Research</a></p>
 </div>
 
-<div class="leadership-card">
+<div class="leadership-card hue-blue">
 <h3 class="leadership-kicker">Research infrastructure and skills development</h3>
 <p><b>Deputy Lead</b>, <a href="https://www.northlondonmentalhealth.nhs.uk/research-database-">North London NHS Foundation Trust Research Database</a><br>
 <b>Certified Instructor</b>, <a href="https://carpentries.org/">The Carpentries</a></p>
