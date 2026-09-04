@@ -6,7 +6,7 @@ output:
     keep_md: yes
 ---
 
-I present research from across MINDSET on mental-health trajectories and inequalities, linked and heterogeneous evidence, neurodivergence, addiction, and the causal, spatial, and data-science methods that support this work. This page lists selected recent talks for academic, policy, clinical, service, and interdisciplinary audiences.
+I present research from across MINDSET on mental-health trajectories and inequalities, linked and heterogeneous evidence, neurodivergence, addiction, and the causal, spatial, and data-science methods that support this work. This page lists selected talks, presentations, workshops, and methods training for academic, policy, clinical, service, and interdisciplinary audiences.
 
 ```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(tidyverse)
@@ -109,10 +109,18 @@ render_talks <- function(df) {
         !is.na(Materials) &&
         Materials != ""
       ) {
+        link_text <- if (!is.na(Type) && Type == "Course") {
+          "View course"
+        } else {
+          "View presentation materials"
+        }
+
         paste0(
           '<div class="talk-materials"><a href="',
           htmlEscape(Materials),
-          '">View presentation materials</a></div>'
+          '">',
+          link_text,
+          "</a></div>"
         )
       } else {
         ""
