@@ -109,10 +109,18 @@ render_talks <- function(df) {
         !is.na(Materials) &&
         Materials != ""
       ) {
+        link_text <- if (!is.na(Type) && Type == "Course") {
+          "View course"
+        } else {
+          "View presentation materials"
+        }
+
         paste0(
           '<div class="talk-materials"><a href="',
           htmlEscape(Materials),
-          '">View presentation materials</a></div>'
+          '">',
+          link_text,
+          "</a></div>"
         )
       } else {
         ""
