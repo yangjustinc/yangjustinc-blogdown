@@ -34,12 +34,12 @@ talks <- read_csv(
 today <- Sys.Date()
 
 upcoming <- talks |>
-  filter(Date >= today) |>
+  filter(Date > today) |>
   arrange(Date)
 
 recent <- talks |>
   filter(
-    Date < today,
+    Date <= today,
     Date >= today - years(3)
   ) |>
   arrange(desc(Date))
