@@ -40,9 +40,9 @@
     "openalex_id": "https://openalex.org/W4400334441",
     "openalex_source": "Journal of Psychoactive Drugs",
     "openalex_topics": "Adolescent Sexual and Reproductive Health | General Health Professions | Health Professions | Health Sciences | HIV, Drug Use, Sexual Risk | Epidemiology | Medicine | HIV/AIDS Research and Interventions | Infectious Diseases",
-    "is_open_access": false,
-    "open_access_status": "green",
-    "open_access_url": "https://researchonline.lshtm.ac.uk/id/eprint/4673166/1/Muschialli%20et%20al.%202024.pdf"
+    "is_open_access": true,
+    "open_access_status": "hybrid",
+    "open_access_url": "https://doi.org/10.1080/02791072.2024.2367614"
   },
   {
     "doi": "10.1089/lgbt.2023.0085",
