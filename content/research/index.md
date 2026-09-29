@@ -1,11 +1,11 @@
 ---
 title: Research
-description: "Research led by Dr Justin C Yang on how mental health develops across lives, places, and systems, using multimodal inference across levels, settings, and timescales."
+description: "Research led by Dr Justin C Yang in psychiatric epidemiology and health data science, using linked population and clinical data, causal methods, and complementary evidence to study mental health."
 ---
 
-My research examines how mental health develops across **lives, places, and systems**, why trajectories and outcomes differ, and which processes may be modifiable. I work across **psychiatric epidemiology, population data science, causal inference, and health services research**.
+My research examines how mental health develops across **lives, places, and systems**, why trajectories and outcomes differ, and which processes may be modifiable. I work across **psychiatric epidemiology, health data science, causal inference, and health services research**.
 
-Within MINDSET, I integrate complementary evidence across different levels, settings, and timescales. The programme works across social, behavioural, environmental, clinical, and biological evidence, selecting and developing measurements according to the substantive question.
+Much of this work is grounded in **linked administrative and electronic health-record data, longitudinal studies, and routinely collected service data**. Within MINDSET, I extend that foundation by combining it, where useful, with intensive longitudinal, environmental, behavioural, and biological evidence. The substantive question determines the mix: multimodality is a means to stronger inference rather than an end in itself.
 
 ## How the programme connects
 
