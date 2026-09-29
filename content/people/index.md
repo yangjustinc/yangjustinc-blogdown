@@ -15,7 +15,7 @@ Different projects draw on combinations of epidemiology, data science, lived-exp
 <img src="pictures/justinyang.png" alt="Headshot of Justin C Yang" width="256" height="256" decoding="async">
 <div class="people-name">Dr Justin C Yang</div>
 <div class="people-role">Senior Research Fellow · MINDSET Lead</div>
-<div class="people-expertise">Psychiatric epidemiology · multimodal data · causal inference</div>
+<div class="people-expertise">Psychiatric epidemiology · health data science · causal inference</div>
 <a href="https://profiles.ucl.ac.uk/75514-justin-yang">UCL Profile</a>
 </div>
 
