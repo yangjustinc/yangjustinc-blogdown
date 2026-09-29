@@ -41,7 +41,7 @@ I study how conditions and experiences within people, between people, and across
 
 This work spans severe mental illness, neurodivergence, addiction, and mental-health services. Recurring questions include how disadvantage accumulates, how service contact and exclusion shape later outcomes, and why trajectories differ between people, populations, and places.
 
-Current work includes **WISDOM**, examining social, emotional, environmental, and institutional influences on severe and enduring mental illness; **HOPE-SEN**, using linked health and education data to investigate inequalities in the experiences and outcomes of neurodivergent children and young people; and a process evaluation of a co-produced **anti-stigma intervention** for health and care staff working with people who use substances.
+Current work includes **WISDOM**, examining social, emotional, environmental, and institutional influences on severe and enduring mental illness, and a process evaluation of a co-produced **anti-stigma intervention** for health and care staff working with people who use substances. Recent work through **HOPE-SEN** used linked health and education data to investigate inequalities in the experiences and outcomes of neurodivergent children and young people.
 
 Areas of interest include:
 
