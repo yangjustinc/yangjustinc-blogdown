@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Params.homeTitle }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <link rel="icon" href="{{ "logo-v2.svg" | relURL }}" type="image/svg+xml">
     <link rel="apple-touch-icon" href="{{ "logo.png" | relURL }}">
     {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
@@ -19,11 +19,11 @@
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header">
-      <a class="site-brand" href="{{ "/" | relURL }}" aria-label="MINDSET home">
+      <a class="site-brand" href="{{ "/" | relURL }}" aria-label="Justin C Yang home">
         <img class="site-brand-mark" src="{{ "logo-v2.svg" | relURL }}" alt="" width="42" height="42">
         <span class="site-brand-copy">
-          <span class="site-brand-name">MINDSET</span>
-          <span class="site-brand-tagline">Mental health · data · inference</span>
+          <span class="site-brand-name">Justin C Yang</span>
+          <span class="site-brand-tagline">Psychiatric epidemiology · health data science</span>
         </span>
       </a>
       <nav aria-label="Primary navigation">
