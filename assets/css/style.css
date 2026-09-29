@@ -1230,13 +1230,6 @@ main .section[id] {
   line-height: 1.45;
 }
 
-.people-note {
-  margin-top: 0.35rem;
-  color: var(--ink-muted);
-  font-size: 0.82rem;
-  font-style: italic;
-}
-
 .collaboration-map {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
