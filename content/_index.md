@@ -34,16 +34,16 @@ I am a **Senior Research Fellow** in the [Division of Psychiatry](https://www.uc
 
 ## MINDSET
 
-**Multimodal INference and Data Science for Epidemiology and Treatment** is the research programme I established and lead at UCL. Much of my work is grounded in linked population and clinical data, including administrative records and electronic health records. I combine these with longitudinal, intensive, environmental, and biological evidence where doing so can answer questions that a single source cannot resolve.
+**Multimodal INference and Data Science for Epidemiology and Treatment** is the research programme I established and lead at UCL. It is grounded in linked population and clinical data and extends across longitudinal, intensive, environmental, and biological evidence when those sources can answer questions that a single dataset cannot.
 
 <aside class="research-vision" aria-label="Research vision">
   <span class="research-vision-label">Research vision</span>
   <p>To understand how mental health develops across lives, places, and systems by integrating complementary evidence across levels, settings, and timescales.</p>
 </aside>
 
-Mental health develops through interacting processes within people, their environments, and the institutions they encounter. These operate from moments to lifetimes and across homes, communities, services, and population systems. Research observes them only indirectly, through measurements produced in different settings and for different purposes.
+Mental health develops through interacting processes within people, their environments, and the institutions they encounter. These operate from moments to lifetimes and across homes, communities, services, and population systems, while research observes them indirectly through measurements produced in different settings and for different purposes.
 
-**Inference is the organising idea in MINDSET.** I ask what each source reveals or obscures, how its measurements were generated and selected, and which combinations of evidence can reduce uncertainty about a particular mechanism, trajectory, intervention, or inequality. Psychiatric epidemiology, causal inference, and data science provide the methodological core.
+**Inference is the organising idea in MINDSET.** I ask what each source reveals or obscures, how measurements were generated and selected, and which combinations of evidence can reduce uncertainty about mechanisms, trajectories, interventions, or inequalities. Psychiatric epidemiology, causal inference, and data science provide the methodological core.
 
 Three enduring questions organise the programme.
 
@@ -91,10 +91,6 @@ Alongside research, I teach epidemiology, statistics, and research methods acros
 
 ## Collaboration
 
-Collaboration is part of how I develop MINDSET. I work with researchers, health and public-sector organisations, services, charities, people with lived experience, and trainees when complementary expertise or evidence can materially improve the research.
-
-Research collaborations centre on substantive mental-health questions, credible inference, and the responsible use of data. I also welcome public involvement, service and policy partnerships, and supervision enquiries where there is a clear fit with the programme.
-
-Across this work, I aim to develop research that is methodologically rigorous, transparent and reproducible, attentive to inequalities, and accountable to the people and communities whose lives and experiences the evidence represents.
+Collaboration is integral to MINDSET. I work with researchers, health and public-sector organisations, services, charities, people with lived experience, and trainees when complementary expertise or evidence can improve the work. I welcome research, public-involvement, service and policy partnerships, and supervision enquiries where there is a clear fit with the programme.
 
 Explore the [research programme](research/), [people and partnerships](people/), [publications](publications/), [research funding](funding/), [talks and presentations](talks/), [teaching and supervision](teaching/), [open research and resources](resources/), and [leadership and recognition](leadership/), or [get in touch](contact/).
