@@ -45,21 +45,17 @@ menu:
       url: "teaching/"
       weight: 5
 
-    - name: Talks
-      url: "talks/"
+    - name: Leadership
+      url: "leadership/"
       weight: 6
 
     - name: Resources
       url: "resources/"
       weight: 7
 
-    - name: Leadership
-      url: "leadership/"
-      weight: 8
-
     - name: Contact
       url: "contact/"
-      weight: 9
+      weight: 8
 
 params:
   homeTitle: "Justin C Yang | Psychiatric Epidemiology & Health Data Science"
