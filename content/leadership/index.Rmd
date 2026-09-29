@@ -1,6 +1,6 @@
 ---
 title: Leadership & Recognition
-description: "MINDSET programme leadership, editorial and advisory roles, research assessment, research infrastructure, and institutional contributions by Dr Justin C Yang."
+description: "Academic leadership, editorial and advisory roles, research assessment, research infrastructure, and institutional contributions by Dr Justin C Yang."
 output:
   html_document:
     keep_md: yes
