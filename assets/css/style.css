@@ -285,21 +285,6 @@ tr:nth-child(even) {
   line-height: 1.6;
 }
 
-/* Homepage profile block */
-#profile {
-  float: right;
-  max-width: 28%;
-  min-width: 120px;
-  text-align: center;
-  margin: 0 0 1rem 1.5rem;
-}
-
-#profile img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 /* Headings */
 h1 {
   font-size: 1.75rem;
@@ -1558,15 +1543,6 @@ main {
   letter-spacing: 0.065em;
 }
 
-.site-brand-tagline {
-  margin-top: 0.32rem;
-  color: var(--ink-muted);
-  font-size: 0.58rem;
-  font-weight: 500;
-  letter-spacing: 0.055em;
-  text-transform: uppercase;
-}
-
 .menu {
   justify-content: flex-end;
   flex-wrap: nowrap;
@@ -1669,10 +1645,6 @@ footer {
     padding: 0.4rem 0.5rem;
   }
 
-  #profile {
-    max-width: 34%;
-    margin-left: 1rem;
-  }
 }
 
 /* Logo-palette accents */
@@ -1715,12 +1687,6 @@ main li::marker { color: var(--teal); }
 .footer-social a:nth-child(5):focus-visible { color: var(--green); }
 
 /* Final editorial and small-screen refinements */
-#profile {
-  max-width: 22%;
-  min-width: 108px;
-  margin: 0.15rem 0 1rem 1.75rem;
-}
-
 .research-vision {
   clear: both;
   margin-top: 1.4rem;
@@ -1780,12 +1746,6 @@ main li::marker { color: var(--teal); }
     font-size: 2rem;
   }
 
-  #profile {
-    max-width: 5.6rem;
-    min-width: 0;
-    margin: 0.25rem 0 0.65rem 1rem;
-  }
-
   .research-vision {
     padding: 0.8rem 0.85rem;
   }
@@ -1817,11 +1777,6 @@ main li::marker { color: var(--teal); }
     text-align: left;
   }
 
-  #profile {
-    float: none;
-    width: 4.75rem;
-    margin: 0 0 0.75rem auto;
-  }
 }
 
 /* Responsive content-system refinements */
@@ -1868,10 +1823,6 @@ main li::marker { color: var(--teal); }
 }
 
 @media (max-width: 540px) {
-  #profile {
-    display: none;
-  }
-
   main > p:first-of-type {
     font-size: 1rem;
   }
