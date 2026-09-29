@@ -18,7 +18,7 @@ I am a **Senior Research Fellow** in the [Division of Psychiatry](https://www.uc
   <div class="academic-snapshot-item">
     <span class="academic-snapshot-label">Fellowship</span>
     <strong>UKRI Mental Health Platform</strong>
-    <span>Cross-hub ECR Fellow</span>
+    <span>Cross-hub Fellow</span>
   </div>
   <div class="academic-snapshot-item">
     <span class="academic-snapshot-label">Research infrastructure</span>
