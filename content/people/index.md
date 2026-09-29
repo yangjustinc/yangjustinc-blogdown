@@ -3,9 +3,7 @@ title: People & Partnerships
 description: "The people, partnerships, and collaborative capabilities that make up the MINDSET research programme."
 ---
 
-MINDSET brings together researchers, trainees, NHS and public-sector data partners, treatment services, and collaborating academic groups around a shared aim: **understanding how mental health develops by drawing credible, useful, and responsible inferences from heterogeneous evidence across levels, settings, and timescales**.
-
-Different projects draw on combinations of epidemiology, data science, lived-experience expertise, clinical and service knowledge, population and environmental data, intensive longitudinal measurement, biological science, and research infrastructure. The people and organisations below reflect active or longstanding relationships; no single project or partner is expected to cover every part of the programme.
+MINDSET is collaborative by design. Across different projects I work with researchers and trainees, NHS and public-sector data partners, treatment services, lived-experience contributors, and academic groups. The mix depends on the question; the people and organisations below represent active or longstanding relationships across the programme.
 
 ## Research team
 
@@ -15,7 +13,7 @@ Different projects draw on combinations of epidemiology, data science, lived-exp
 <img src="pictures/justinyang.png" alt="Headshot of Justin C Yang" width="256" height="256" decoding="async">
 <div class="people-name">Dr Justin C Yang</div>
 <div class="people-role">Senior Research Fellow · MINDSET Lead</div>
-<div class="people-expertise">Psychiatric epidemiology · multimodal data · causal inference</div>
+<div class="people-expertise">Psychiatric epidemiology · health data science · causal inference</div>
 <a href="https://profiles.ucl.ac.uk/75514-justin-yang">UCL Profile</a>
 </div>
 
@@ -46,7 +44,6 @@ Different projects draw on combinations of epidemiology, data science, lived-exp
 <div class="people-name">Vanessa Cieplinska</div>
 <div class="people-role">PhD Student</div>
 <div class="people-expertise">School attendance and educational attainment in children with neurodevelopmental conditions</div>
-<div class="people-note">Justin contributes as secondary supervisor</div>
 </div>
 
 <div class="team-card people-feature-card">
@@ -54,12 +51,11 @@ Different projects draw on combinations of epidemiology, data science, lived-exp
 <div class="people-name">Alua Yeskendir</div>
 <div class="people-role">PhD Student</div>
 <div class="people-expertise">Health and social inequalities in psychiatric disorders</div>
-<div class="people-note">Justin contributes as secondary supervisor</div>
 </div>
 
 </div>
 
-I also contribute to doctoral supervision, thesis committees, and wider trainee development. See [Teaching & Supervision](../teaching/) for the broader training programme.
+I also supervise taught projects and contribute to doctoral thesis committees and wider trainee development. See [Teaching & Supervision](../teaching/) for the broader training programme.
 
 ## The MINDSET research ecosystem
 

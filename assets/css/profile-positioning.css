@@ -1,0 +1,106 @@
+/* Academic positioning layer
+ *
+ * Keeps the person-first identity and homepage academic snapshot visually
+ * subordinate to the existing MINDSET design system.
+ */
+
+.academic-snapshot {
+  clear: both;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.15rem;
+  margin: 1.25rem 0 1.6rem;
+  padding: 0.78rem 0 0.82rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.academic-snapshot-item {
+  min-width: 0;
+  padding: 0;
+}
+
+.academic-snapshot-item:first-child {
+  padding-left: 0;
+}
+
+.academic-snapshot-item:last-child {
+  padding-right: 0;
+}
+
+.academic-snapshot-label {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--ink-muted);
+  font-family: Inter, sans-serif;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.academic-snapshot strong,
+.academic-snapshot-item > span:last-child {
+  display: block;
+}
+
+.academic-snapshot strong {
+  color: var(--navy);
+  font-size: 0.87rem;
+  line-height: 1.35;
+}
+
+.academic-snapshot-item > span:last-child {
+  margin-top: 0.1rem;
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 700px) {
+  .academic-snapshot {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .academic-snapshot-item {
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--line-subtle);
+  }
+
+  .academic-snapshot-item:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .academic-snapshot {
+    grid-template-columns: 1fr;
+  }
+
+  .academic-snapshot-item,
+  .academic-snapshot-item:nth-last-child(-n + 2) {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--line-subtle);
+  }
+
+  .academic-snapshot-item:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+/* Keep the desktop masthead compact and predictable. */
+.site-header nav {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.site-header .menu a {
+  white-space: nowrap;
+}
+
+@media (min-width: 761px) {
+  .site-brand {
+    flex: 0 0 auto;
+  }
+}

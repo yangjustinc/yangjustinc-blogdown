@@ -1,30 +1,51 @@
 ---
 title: Home
-description: "MINDSET is the research programme established and led by Dr Justin C Yang, integrating heterogeneous evidence across levels, settings, and timescales to study how mental health develops."
+description: "Dr Justin C Yang is a psychiatric epidemiologist and health data scientist at UCL, using linked population and clinical data to study mental-health trajectories, inequalities, and services."
 ---
 
-# MINDSET
+# Justin C Yang
 
-<div id="profile">
- <img src="logo-v2.svg"
- alt="MINDSET logo"
- width="512"
- height="512"
- decoding="async">
+**Psychiatric epidemiologist and health data scientist** studying mental-health trajectories and inequalities using linked administrative data, electronic health records, longitudinal studies, and causal and computational methods.
+
+I am a **Senior Research Fellow** in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk) and lead **MINDSET**, an independent research programme spanning severe mental illness, neurodivergence, addiction, and mental-health services.
+
+<div class="academic-snapshot" aria-label="Current academic roles">
+  <div class="academic-snapshot-item">
+    <span class="academic-snapshot-label">Position</span>
+    <strong>Senior Research Fellow</strong>
+    <span>UCL Division of Psychiatry</span>
+  </div>
+  <div class="academic-snapshot-item">
+    <span class="academic-snapshot-label">Fellowship</span>
+    <strong>UKRI Mental Health Platform</strong>
+    <span>Cross-hub Fellow</span>
+  </div>
+  <div class="academic-snapshot-item">
+    <span class="academic-snapshot-label">Research infrastructure</span>
+    <strong>Deputy Lead</strong>
+    <span>NLFT Research Database</span>
+  </div>
+  <div class="academic-snapshot-item">
+    <span class="academic-snapshot-label">Editorial</span>
+    <strong>Associate Editor</strong>
+    <span><i>Addiction</i></span>
+  </div>
 </div>
 
-**Multimodal INference and Data Science for Epidemiology and Treatment** (MINDSET) is the research programme established and led by **Dr Justin C Yang**, Senior Research Fellow in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk).
+## MINDSET
+
+**Multimodal INference and Data Science for Epidemiology and Treatment** is the research programme I established and lead at UCL. It is grounded in linked population and clinical data and extends across longitudinal, intensive, environmental, and biological evidence when those sources can answer questions that a single dataset cannot.
 
 <aside class="research-vision" aria-label="Research vision">
   <span class="research-vision-label">Research vision</span>
   <p>To understand how mental health develops across lives, places, and systems by integrating complementary evidence across levels, settings, and timescales.</p>
 </aside>
 
-Mental health develops through interacting processes within people, their environments, and the institutions they encounter. These operate from moments to lifetimes and across homes, communities, services, and population systems. Research observes them only indirectly, through measurements produced in different settings and for different purposes.
+Mental health develops through interacting processes within people, their environments, and the institutions they encounter. These operate from moments to lifetimes and across homes, communities, services, and population systems, while research observes them indirectly through measurements produced in different settings and for different purposes.
 
-**Inference is the organising idea in MINDSET.** I ask what each source reveals or obscures, how its measurements were generated and selected, and which combinations of evidence can reduce uncertainty about a particular mechanism, trajectory, intervention, or inequality. I bring psychiatric epidemiology, causal inference, and data science together within MINDSET for that purpose.
+**Inference is the organising idea in MINDSET.** I ask what each source reveals or obscures, how measurements were generated and selected, and which combinations of evidence can reduce uncertainty about mechanisms, trajectories, interventions, or inequalities. Psychiatric epidemiology, causal inference, and data science provide the methodological core.
 
-Empirical work spans experience, context, biology, behaviour, and care, using evidence at the level and timescale best suited to the question. Three enduring questions organise the programme.
+Three enduring questions organise the programme.
 
 <div class="mindset-questions">
   <section class="mindset-question">
@@ -64,12 +85,12 @@ I develop MINDSET through time-bounded studies that approach the same questions 
 
 The relationship runs in both directions: substantive questions reveal limitations in existing data; methodological work clarifies what can credibly be inferred; and infrastructure work improves the evidence available for the next study. Individual awards start and finish, but this cycle provides continuity across the wider programme.
 
+## Teaching and supervision
+
+Alongside research, I teach epidemiology, statistics, and research methods across postgraduate mental-health programmes at UCL, supervise doctoral and taught postgraduate research, and teach open and reproducible data-science skills as a certified [Carpentries](https://carpentries.org/) instructor. See [Teaching & Supervision](teaching/) for current teaching and trainees.
+
 ## Collaboration
 
-Collaboration is part of how I develop MINDSET. I work with researchers, health and public-sector organisations, services, charities, people with lived experience, and trainees when complementary expertise or evidence can materially improve the research.
-
-Research collaborations centre on substantive mental-health questions, credible inference, and the responsible use of data. I also welcome public involvement, service and policy partnerships, and supervision enquiries where there is a clear fit with the programme.
-
-Across this work, I aim to develop research that is methodologically rigorous, transparent and reproducible, attentive to inequalities, and accountable to the people and communities whose lives and experiences the evidence represents.
+Collaboration is integral to MINDSET. I work with researchers, health and public-sector organisations, services, charities, people with lived experience, and trainees when complementary expertise or evidence can improve the work. I welcome research, public-involvement, service and policy partnerships, and supervision enquiries where there is a clear fit with the programme.
 
 Explore the [research programme](research/), [people and partnerships](people/), [publications](publications/), [research funding](funding/), [talks and presentations](talks/), [teaching and supervision](teaching/), [open research and resources](resources/), and [leadership and recognition](leadership/), or [get in touch](contact/).

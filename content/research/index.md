@@ -1,11 +1,11 @@
 ---
 title: Research
-description: "Research led by Dr Justin C Yang on how mental health develops across lives, places, and systems, using multimodal inference across levels, settings, and timescales."
+description: "Research led by Dr Justin C Yang in psychiatric epidemiology and health data science, using linked population and clinical data, causal methods, and complementary evidence to study mental health."
 ---
 
-My research examines how mental health develops across **lives, places, and systems**, why trajectories and outcomes differ, and which processes may be modifiable. I work across **psychiatric epidemiology, population data science, causal inference, and health services research**.
+My research examines how mental health develops across **lives, places, and systems**, why trajectories and outcomes differ, and which processes may be modifiable. I work across **psychiatric epidemiology, health data science, causal inference, and health services research**.
 
-Within MINDSET, I integrate complementary evidence across different levels, settings, and timescales. The programme works across social, behavioural, environmental, clinical, and biological evidence, selecting and developing measurements according to the substantive question.
+Much of this work is grounded in **linked administrative and electronic health-record data, longitudinal studies, and routinely collected service data**. Within MINDSET, I extend that foundation by combining it, where useful, with intensive longitudinal, environmental, behavioural, and biological evidence. The substantive question determines the mix: multimodality is a means to stronger inference rather than an end in itself.
 
 ## How the programme connects
 
@@ -31,9 +31,7 @@ Each project enters the programme at a different point, but the work connects th
   </section>
 </div>
 
-The hierarchy is deliberate: substantive questions determine which evidence and methods are needed; inferential work establishes what the measurements can support; and infrastructure work makes that science possible. The relationship is also iterative. Scientific questions reveal limitations in existing evidence, while better measurement, governance, and data systems create new possibilities for research.
-
-Together, these layers help distinguish processes underlying mental-health inequalities and trajectories from the ways they are measured, recorded, and observed.
+The hierarchy is deliberate but iterative: substantive questions determine which evidence and methods are needed; inferential work establishes what the measurements can support; and better measurement, governance, and data systems create new possibilities for research. This helps distinguish processes underlying mental-health trajectories and inequalities from the ways they are measured, recorded, and observed.
 
 ## What shapes mental health and inequalities over time?
 
@@ -77,20 +75,16 @@ My methodological work therefore includes:
 - explicit analysis of selection, measurement, missingness, and data quality
 - transparent and reproducible research in secure environments
 
-These approaches are used to strengthen inference, recover information that would otherwise remain inaccessible, and clarify what each source, and each combination of sources, can and cannot establish.
+The aim is to strengthen inference and make explicit what each source, and each combination of sources, can and cannot establish.
 
 ## Research infrastructure as an enabling foundation
 
-Research using sensitive human data depends on the systems through which evidence is measured or recorded, governed, linked, accessed, documented, and interpreted.
-
-This work supports the substantive and methodological agenda by improving the quality, comparability, accessibility, and responsible use of the evidence on which research depends.
+Research using sensitive human data depends on how evidence is recorded, governed, linked, accessed, documented, and interpreted. I therefore treat research infrastructure as part of the scientific work, not simply a technical prerequisite.
 
 As Deputy Lead of the **North London NHS Foundation Trust Research Database**, I support research using routinely collected mental-health records, including research development, governance, methodological support, and collaboration across clinical, informatics, academic, and public partners.
 
 I also work with colleagues at South London and Maudsley NHS Foundation Trust on harmonisation across mental-health research infrastructures and approaches that support cross-site replication and comparative research.
 
 Within **UNITED (Using a National, Interdisciplinary Team to Enhance Drug and alcohol treatment data)**, I lead work examining how England's **National Drug Treatment Monitoring System (NDTMS)** is used for research and how treatment data can better support epidemiology, service improvement, policy, and clinical practice.
-
-This work includes data quality, governance, interpretation, harmonisation, reproducibility, and public involvement in research using sensitive records.
 
 See also [people and partnerships](../people/), [publications](../publications/), [research funding](../funding/), [open research and resources](../resources/), and [leadership and recognition](../leadership/).

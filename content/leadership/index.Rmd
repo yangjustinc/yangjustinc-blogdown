@@ -1,18 +1,16 @@
 ---
 title: Leadership & Recognition
-description: "MINDSET programme leadership, editorial and advisory roles, research assessment, research infrastructure, and institutional contributions by Dr Justin C Yang."
+description: "Academic leadership, editorial and advisory roles, research assessment, research infrastructure, and institutional contributions by Dr Justin C Yang."
 output:
   html_document:
     keep_md: yes
 ---
 
-I hold editorial, advisory, research-assessment, infrastructure, and institutional roles across addiction, mental health, health-data research, and research governance.
+My wider academic roles span editorial work, research governance and assessment, research infrastructure, and institutional leadership.
 
 ## MINDSET programme leadership
 
-I established and lead MINDSET to understand how mental health develops across lives, places, and systems by drawing credible inferences from complementary evidence. Inference is the programme's organising idea: substantive questions determine which measurements and methods are needed, while research infrastructure enables that work. I set its intellectual and methodological direction, develop collaborations and funding, and build the data, governance, and training relationships needed to deliver the research.
-
-I develop MINDSET collaboratively, maintaining a coherent long-term agenda while enabling researchers, trainees, partner organisations, and people with lived experience to shape its questions, methods, interpretation, and practical use.
+I established and lead MINDSET, setting its intellectual and methodological direction and developing the collaborations, funding, data, governance, and training relationships needed to deliver it. The programme is deliberately collaborative: researchers, trainees, partner organisations, and people with lived experience shape individual questions, methods, interpretation, and practical use within a coherent long-term agenda.
 
 ## Editorial, advisory & governance leadership
 
