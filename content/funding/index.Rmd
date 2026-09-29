@@ -1,12 +1,12 @@
 ---
 title: Funding
-description: "Competitive research funding supporting the MINDSET programme, including fellowships and collaborative awards from UKRI, ADR UK, NIHR, and other funders."
+description: "Competitive research funding held by Dr Justin C Yang, including fellowships and investigator roles supported by UKRI, ADR UK, NIHR, and other funders."
 output:
   html_document:
     keep_md: yes
 ---
 
-My research is supported through competitive fellowships, investigator-led awards, collaborative programmes, and research-development funding. Funding information is maintained through my [ORCID record](https://orcid.org/0000-0003-2881-4906), with my role and contribution shown where relevant.
+My research has been supported by competitive fellowships, investigator-led awards, collaborative programmes, and research-development funding. My role is shown for each award; the underlying record is maintained through [ORCID](https://orcid.org/0000-0003-2881-4906).
 
 ```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(orcidtr)
