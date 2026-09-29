@@ -5,14 +5,6 @@ description: "Dr Justin C Yang is a psychiatric epidemiologist and health data s
 
 # Justin C Yang
 
-<div id="profile">
- <img src="logo-v2.svg"
- alt="MINDSET research programme mark"
- width="512"
- height="512"
- decoding="async">
-</div>
-
 **Psychiatric epidemiologist and health data scientist** studying mental-health trajectories and inequalities using linked administrative data, electronic health records, longitudinal studies, and causal and computational methods.
 
 I am a **Senior Research Fellow** in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk) and lead **MINDSET**, an independent research programme spanning severe mental illness, neurodivergence, addiction, and mental-health services.
