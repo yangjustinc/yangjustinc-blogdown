@@ -1,9 +1,9 @@
 ---
 title: Open Research & Resources
-description: "Open research, analytical code, teaching materials, and reproducible resources from the MINDSET research programme led by Dr Justin C Yang."
+description: "Open research, analytical code, teaching materials, and reproducible resources by Dr Justin C Yang."
 ---
 
-Open and reproducible research is part of how I work, particularly where methods, analytical code, and teaching materials can be reused beyond a single study. Selected resources are listed below. Where a stable release is available, I provide a Zenodo DOI so that the resource can be cited independently of the live GitHub repository.
+I make analytical code, teaching materials, and selected research infrastructure public where they can be reused beyond a single study. Stable releases are archived with Zenodo DOIs where appropriate.
 
 ## Research code
 
@@ -15,8 +15,8 @@ Open and reproducible research is part of how I work, particularly where methods
   </a>
   <div class="resource-feature-copy">
     <h2>HOPESEN: SEND provision and secondary-school outcomes</h2>
-    <p><a href="https://github.com/yangjustinc/hopesen"><b>HOPESEN</b></a> provides the analytical code supporting population-based analyses of recorded special educational needs and disabilities (SEND) provision profiles and education and health outcomes among secondary-school pupils in England using the ECHILD Research Database.</p>
-    <p>The public repository is a cleaned and pedagogical implementation of the completed analysis, including linked-data cohort construction, outcome derivation, descriptive analyses, and functionalised fixed-effects Poisson regression workflows designed for use within the ONS Secure Research Service. It also documents the practical constraints of reproducible analysis in an air-gapped trusted research environment.</p>
+    <p><a href="https://github.com/yangjustinc/hopesen"><b>HOPESEN</b></a> provides the analytical code for population-based analyses of SEND provision profiles and education and health outcomes among secondary-school pupils in England using the ECHILD Research Database.</p>
+    <p>It includes linked-data cohort construction, outcome derivation, descriptive analyses, and fixed-effects Poisson regression workflows for the ONS Secure Research Service, while documenting practical reproducibility constraints in an air-gapped trusted research environment.</p>
     <p><a href="https://github.com/yangjustinc/hopesen">Source code and documentation</a> · <a href="https://doi.org/10.5281/zenodo.22710433">Archived v1.0.0 release and DOI</a></p>
   </div>
 </article>
@@ -53,7 +53,7 @@ Open and reproducible research is part of how I work, particularly where methods
   </a>
   <div class="resource-feature-copy">
     <h2>Reproducible website infrastructure</h2>
-    <p>The <a href="https://github.com/yangjustinc/yangjustinc-blogdown"><b>MINDSET website source</b></a> is public. The site uses Hugo, R, ORCID, OpenAlex, Crossref, GitHub Actions, and small curated data files to maintain publications, funding, talks, teaching, and other academic content with limited manual duplication.</p>
+    <p>The <a href="https://github.com/yangjustinc/yangjustinc-blogdown"><b>website source</b></a> is public. The site uses Hugo, R, ORCID, OpenAlex, Crossref, GitHub Actions, and small curated data files to maintain publications, funding, talks, teaching, and other academic content with limited manual duplication.</p>
     <p>The repository documents the build, dependency-management, content-refresh, and validation workflow.</p>
   </div>
 </article>
