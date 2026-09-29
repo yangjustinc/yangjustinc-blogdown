@@ -1,6 +1,6 @@
 {{- $description := .Site.Params.description -}}
 {{- with .Description }}{{ $description = . }}{{ end -}}
-{{- $title := .Site.Title -}}
+{{- $title := .Site.Params.homeTitle -}}
 {{- if not .IsHome }}{{ $title = printf "%s | %s" .Title .Site.Title }}{{ end -}}
 {{- $image := .Site.Params.ogImage | absURL -}}
 {{- $personID := printf "%s#person" .Site.BaseURL -}}
@@ -68,6 +68,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500&display=swap">
+{{- $profileCSS := resources.Get "css/profile-positioning.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $profileCSS.RelPermalink }}" integrity="{{ $profileCSS.Data.Integrity }}">
 {{- if eq .RelPermalink "/resources/" }}
   {{- $resourcesCSS := resources.Get "css/resources.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $resourcesCSS.RelPermalink }}" integrity="{{ $resourcesCSS.Data.Integrity }}">
