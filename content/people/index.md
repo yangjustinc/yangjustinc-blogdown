@@ -51,7 +51,6 @@ MINDSET is collaborative by design. Across different projects I work with resear
 <div class="people-name">Alua Yeskendir</div>
 <div class="people-role">PhD Student</div>
 <div class="people-expertise">Health and social inequalities in psychiatric disorders</div>
-<div class="people-note">Justin contributes as secondary supervisor</div>
 </div>
 
 </div>
