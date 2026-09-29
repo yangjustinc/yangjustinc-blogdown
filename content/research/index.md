@@ -31,9 +31,7 @@ Each project enters the programme at a different point, but the work connects th
   </section>
 </div>
 
-The hierarchy is deliberate: substantive questions determine which evidence and methods are needed; inferential work establishes what the measurements can support; and infrastructure work makes that science possible. The relationship is also iterative. Scientific questions reveal limitations in existing evidence, while better measurement, governance, and data systems create new possibilities for research.
-
-Together, these layers help distinguish processes underlying mental-health inequalities and trajectories from the ways they are measured, recorded, and observed.
+The hierarchy is deliberate but iterative: substantive questions determine which evidence and methods are needed; inferential work establishes what the measurements can support; and better measurement, governance, and data systems create new possibilities for research. This helps distinguish processes underlying mental-health trajectories and inequalities from the ways they are measured, recorded, and observed.
 
 ## What shapes mental health and inequalities over time?
 
@@ -77,20 +75,16 @@ My methodological work therefore includes:
 - explicit analysis of selection, measurement, missingness, and data quality
 - transparent and reproducible research in secure environments
 
-These approaches are used to strengthen inference, recover information that would otherwise remain inaccessible, and clarify what each source, and each combination of sources, can and cannot establish.
+The aim is to strengthen inference and make explicit what each source, and each combination of sources, can and cannot establish.
 
 ## Research infrastructure as an enabling foundation
 
-Research using sensitive human data depends on the systems through which evidence is measured or recorded, governed, linked, accessed, documented, and interpreted.
-
-This work supports the substantive and methodological agenda by improving the quality, comparability, accessibility, and responsible use of the evidence on which research depends.
+Research using sensitive human data depends on how evidence is recorded, governed, linked, accessed, documented, and interpreted. I therefore treat research infrastructure as part of the scientific work, not simply a technical prerequisite.
 
 As Deputy Lead of the **North London NHS Foundation Trust Research Database**, I support research using routinely collected mental-health records, including research development, governance, methodological support, and collaboration across clinical, informatics, academic, and public partners.
 
 I also work with colleagues at South London and Maudsley NHS Foundation Trust on harmonisation across mental-health research infrastructures and approaches that support cross-site replication and comparative research.
 
 Within **UNITED (Using a National, Interdisciplinary Team to Enhance Drug and alcohol treatment data)**, I lead work examining how England's **National Drug Treatment Monitoring System (NDTMS)** is used for research and how treatment data can better support epidemiology, service improvement, policy, and clinical practice.
-
-This work includes data quality, governance, interpretation, harmonisation, reproducibility, and public involvement in research using sensitive records.
 
 See also [people and partnerships](../people/), [publications](../publications/), [research funding](../funding/), [open research and resources](../resources/), and [leadership and recognition](../leadership/).
