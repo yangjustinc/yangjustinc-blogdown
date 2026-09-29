@@ -6,7 +6,7 @@ output:
     keep_md: yes
 ---
 
-My teaching and supervision are organised around a simple aim: **helping trainees become thoughtful, independent researchers who can reason clearly with complex and heterogeneous evidence**. I teach quantitative methods, supervise research across mental health and population health, and contribute to open and reproducible research training.
+My teaching and supervision centre on **helping trainees become thoughtful, independent researchers who can reason clearly with complex and heterogeneous evidence**. I teach quantitative methods, supervise research across mental health and population health, and contribute to open and reproducible research training.
 
 ```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(tidyverse)
@@ -66,17 +66,17 @@ recent_projects <- students |>
 
 ### PhD students
 
-I currently contribute as secondary supervisor to PhD work spanning neurodevelopment, educational experiences, and inequalities in psychiatric disorders.
+I currently supervise PhD work spanning neurodevelopment, educational experiences, and inequalities in psychiatric disorders.
 
 <div class="site-table-wrap">
 
 ```{r results='asis', echo=FALSE}
 current_phd_students |>
   arrange(Student) |>
-  select(Student, Role, Topic) |>
+  select(Student, Topic) |>
   knitr::kable(
     format = "html",
-    col.names = c("PhD student", "Role", "Research"),
+    col.names = c("PhD student", "Research"),
     table.attr = 'class="site-table"'
   ) |>
   cat()
@@ -112,10 +112,10 @@ current_phd_committees |>
 if (nrow(current_taught) > 0) {
   current_taught |>
     arrange(Student) |>
-    select(Student, Role, Topic) |>
+    select(Student, Topic) |>
     knitr::kable(
       format = "html",
-      col.names = c("Student", "Role", "Project"),
+      col.names = c("Student", "Project"),
       table.attr = 'class="site-table"'
     ) |>
     cat()
@@ -141,7 +141,7 @@ I have also contributed to curriculum development around **open science** and **
 ```{r results='asis', echo=FALSE}
 cat(
   '<div class="supervision-summary">',
-  '<div class="supervision-stat"><b>', nrow(primary_projects), '</b><span>primary-supervised postgraduate or undergraduate projects</span></div>',
+  '<div class="supervision-stat"><b>', nrow(primary_projects), '</b><span>postgraduate or undergraduate projects supervised</span></div>',
   '<div class="supervision-stat"><b>', nrow(current_phd_students), '</b><span>current PhD students</span></div>',
   '<div class="supervision-stat"><b>', nrow(current_phd_committees), '</b><span>current thesis-committee roles</span></div>',
   '<div class="supervision-stat"><b>', nrow(published_projects), '</b><span>student projects linked to published outputs</span></div>',
@@ -149,7 +149,7 @@ cat(
 )
 ```
 
-The supervision portfolio spans mental health, addiction, neurodivergence, climate and health, health inequalities, public health, and health policy. Several projects have developed into peer-reviewed outputs.
+My supervision has spanned mental health, addiction, neurodivergence, climate and health, health inequalities, public health, and health policy. Several projects have developed into peer-reviewed outputs.
 
 ### Student work linked to publications
 
@@ -158,10 +158,10 @@ The supervision portfolio spans mental health, addiction, neurodivergence, clima
 ```{r results='asis', echo=FALSE}
 published_projects |>
   arrange(desc(`Year(s)`), Student) |>
-  select(Student, Degree, Role, Topic) |>
+  select(Student, Degree, Topic) |>
   knitr::kable(
     format = "html",
-    col.names = c("Student", "Degree", "Role", "Published work"),
+    col.names = c("Student", "Degree", "Published work"),
     table.attr = 'class="site-table"'
   ) |>
   cat()
@@ -175,10 +175,10 @@ published_projects |>
 
 ```{r results='asis', echo=FALSE}
 recent_projects |>
-  select(Student, Degree, Role, Topic) |>
+  select(Student, Degree, Topic) |>
   knitr::kable(
     format = "html",
-    col.names = c("Student", "Degree", "Role", "Project"),
+    col.names = c("Student", "Degree", "Project"),
     table.attr = 'class="site-table"'
   ) |>
   cat()
@@ -188,6 +188,4 @@ recent_projects |>
 
 ## Prospective trainees
 
-I am interested in supervising PhD, MSc, and undergraduate projects that fit the wider MINDSET agenda, particularly work connecting mental-health questions with longitudinal, administrative, clinical, environmental, behavioural, or biological data; causal and multimodal inference; neurodivergence; addiction; and inequalities. Prospective trainees are welcome to [get in touch](../contact/) with a brief outline of their interests and the type of project or supervision they are seeking.
-
-Prospective PhD applicants should also consider likely funding routes and eligibility before making contact. We can discuss realistic options together, but an initial view of possible schemes, deadlines, and fit is helpful.
+I welcome enquiries about PhD, MSc, and undergraduate projects that fit the wider MINDSET agenda, particularly work connecting mental-health questions with longitudinal, administrative, clinical, environmental, behavioural, or biological data; causal inference; neurodivergence; addiction; and inequalities. Please [get in touch](../contact/) with a brief outline of the question, likely data or methods, and, for PhD enquiries, potential funding routes and eligibility.
