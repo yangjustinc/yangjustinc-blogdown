@@ -1526,7 +1526,7 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 1rem 0.75rem;
-  min-height: 5.35rem;
+  min-height: 4.5rem;
   border-bottom: 1px solid var(--line);
   text-align: left;
 }
@@ -1535,15 +1535,15 @@ main {
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
-  gap: 0.65rem;
+  gap: 0.5rem;
   margin: 0;
   color: var(--navy);
 }
 
 .site-brand-mark {
   display: block;
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2.15rem;
+  height: 2.15rem;
   object-fit: contain;
 }
 
@@ -1553,9 +1553,9 @@ main {
 }
 
 .site-brand-name {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.065em;
 }
 
 .site-brand-tagline {
@@ -1569,16 +1569,17 @@ main {
 
 .menu {
   justify-content: flex-end;
-  gap: 0.1rem;
+  flex-wrap: nowrap;
+  gap: 0;
   margin: 0;
 }
 
 .menu a {
-  padding: 0.5rem 0.35rem;
+  padding: 0.45rem 0.32rem;
   border-radius: 6px;
   color: var(--ink-soft);
   font-family: Inter, sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 500;
 }
 
@@ -1636,12 +1637,12 @@ footer {
   padding-top: 0.25rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 760px) {
   .site-header {
     align-items: flex-start;
     flex-direction: column;
-    gap: 0.65rem;
-    padding: 1rem 0 0.75rem;
+    gap: 0.6rem;
+    padding: 0.85rem 0 0.7rem;
   }
 
   .site-header nav {
@@ -1725,11 +1726,6 @@ main li::marker { color: var(--teal); }
   margin-top: 1.4rem;
 }
 
-main > p:first-of-type {
-  color: var(--ink-secondary);
-  font-size: 1.015rem;
-}
-
 @media (max-width: 700px) {
   .site-header {
     min-height: 0;
@@ -1765,12 +1761,8 @@ main > p:first-of-type {
   }
 
   .site-brand-mark {
-    width: 2.25rem;
-    height: 2.25rem;
-  }
-
-  .site-brand-tagline {
-    font-size: 0.55rem;
+    width: 2rem;
+    height: 2rem;
   }
 
   .menu {
@@ -1902,10 +1894,6 @@ main > p:first-of-type {
 @media (max-width: 380px) {
   body {
     padding-inline: 0.85rem;
-  }
-
-  .site-brand-tagline {
-    display: none;
   }
 
   .menu {
