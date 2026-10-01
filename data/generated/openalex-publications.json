@@ -243,6 +243,24 @@
     "open_access_url": "https://www.africanentomology.com/index.php/sadj/article/download/17414/20844"
   },
   {
+    "doi": "10.2139/ssrn.5207779",
+    "openalex_id": "https://openalex.org/W4409260117",
+    "openalex_source": "SSRN Electronic Journal",
+    "openalex_topics": "Treatment of Major Depression | Pharmacology | Medicine | Health Sciences | Child and Adolescent Psychosocial and Emotional Development | Clinical Psychology | Psychology | Social Sciences | Mental Health Research Topics | Experimental and Cognitive Psychology",
+    "is_open_access": true,
+    "open_access_status": "green",
+    "open_access_url": "https://doi.org/10.2139/ssrn.5207779"
+  },
+  {
+    "doi": "10.2139/ssrn.7505399",
+    "openalex_id": "https://openalex.org/W7214167589",
+    "openalex_source": "SSRN Electronic Journal",
+    "openalex_topics": "Substance Abuse Treatment and Outcomes | Epidemiology | Medicine | Health Sciences | HIV, Drug Use, Sexual Risk | Census and Population Estimation | Statistics and Probability | Mathematics | Physical Sciences",
+    "is_open_access": true,
+    "open_access_status": "green",
+    "open_access_url": "https://doi.org/10.2139/ssrn.7505399"
+  },
+  {
     "doi": "10.4324/9781315158082-10",
     "openalex_id": "https://openalex.org/W2947692393",
     "openalex_source": null,
