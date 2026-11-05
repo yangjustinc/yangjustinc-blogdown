@@ -111,6 +111,8 @@ render_talks <- function(df) {
       ) {
         link_text <- if (!is.na(Type) && Type == "Course") {
           "View course"
+        } else if (!is.na(Type) && Type == "Workshop") {
+          "View workshop materials"
         } else {
           "View presentation materials"
         }
