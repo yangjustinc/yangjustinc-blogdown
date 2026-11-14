@@ -10,7 +10,7 @@ MINDSET is collaborative by design. Across different projects I work with resear
 <div class="people-grid people-team-grid">
 
 <div class="team-card people-feature-card">
-<img src="pictures/justinyang.png" alt="Headshot of Justin C Yang" width="256" height="256" decoding="async">
+<img src="pictures/justinyang.webp" alt="Headshot of Justin C Yang" width="256" height="256" decoding="async">
 <div class="people-name">Dr Justin C Yang</div>
 <div class="people-role">Senior Research Fellow · MINDSET Lead</div>
 <div class="people-expertise">Psychiatric epidemiology · health data science · causal inference</div>
@@ -18,7 +18,7 @@ MINDSET is collaborative by design. Across different projects I work with resear
 </div>
 
 <div class="team-card people-feature-card">
-<img src="pictures/nathalierich.png" alt="Headshot of Nathalie Rich" width="256" height="256" loading="lazy" decoding="async">
+<img src="pictures/nathalierich.webp" alt="Headshot of Nathalie Rich" width="256" height="256" loading="lazy" decoding="async">
 <div class="people-name">Dr Nathalie Rich</div>
 <div class="people-role">Research Fellow</div>
 <div class="people-expertise">Electronic health records · psychiatric epidemiology</div>
@@ -26,7 +26,7 @@ MINDSET is collaborative by design. Across different projects I work with resear
 </div>
 
 <div class="team-card people-feature-card">
-<img src="pictures/yunsookim.png" alt="Headshot of Yunsoo Kim" width="256" height="256" loading="lazy" decoding="async">
+<img src="pictures/yunsookim.webp" alt="Headshot of Yunsoo Kim" width="256" height="256" loading="lazy" decoding="async">
 <div class="people-name">Dr Yunsoo Kim</div>
 <div class="people-role">Research Fellow</div>
 <div class="people-expertise">Natural language processing · large language models</div>
@@ -40,14 +40,14 @@ MINDSET is collaborative by design. Across different projects I work with resear
 <div class="people-grid people-training-grid">
 
 <div class="team-card people-feature-card">
-<img src="pictures/vanessacieplinska.png" alt="Headshot of Vanessa Cieplinska" width="256" height="256" loading="lazy" decoding="async">
+<img src="pictures/vanessacieplinska.webp" alt="Headshot of Vanessa Cieplinska" width="256" height="256" loading="lazy" decoding="async">
 <div class="people-name">Vanessa Cieplinska</div>
 <div class="people-role">PhD Student</div>
 <div class="people-expertise">School attendance and educational attainment in children with neurodevelopmental conditions</div>
 </div>
 
 <div class="team-card people-feature-card">
-<img src="pictures/aluayeskendir.png" alt="Headshot of Alua Yeskendir" width="256" height="256" loading="lazy" decoding="async">
+<img src="pictures/aluayeskendir.webp" alt="Headshot of Alua Yeskendir" width="256" height="256" loading="lazy" decoding="async">
 <div class="people-name">Alua Yeskendir</div>
 <div class="people-role">PhD Student</div>
 <div class="people-expertise">Health and social inequalities in psychiatric disorders</div>

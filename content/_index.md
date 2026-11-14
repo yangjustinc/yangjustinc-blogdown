@@ -1,6 +1,6 @@
 ---
 title: Home
-description: "Dr Justin C Yang is a psychiatric epidemiologist and health data scientist at UCL, using linked population and clinical data to study mental-health trajectories, inequalities, and services."
+description: "Dr Justin C Yang is a psychiatric epidemiologist and health data scientist at UCL studying mental-health trajectories, inequalities, and services."
 ---
 
 # Justin C Yang

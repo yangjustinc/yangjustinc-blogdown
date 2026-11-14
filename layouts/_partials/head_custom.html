@@ -7,6 +7,9 @@
 {{- $websiteID := printf "%s#website" .Site.BaseURL -}}
 {{- $pageID := printf "%s#webpage" .Permalink -}}
 <meta name="description" content="{{ $description | plainify }}">
+{{- with .Params.robots }}
+<meta name="robots" content="{{ . }}">
+{{- end }}
 <link rel="canonical" href="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:title" content="{{ $title }}">
@@ -67,9 +70,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500&display=swap">
-{{- $profileCSS := resources.Get "css/profile-positioning.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $profileCSS.RelPermalink }}" integrity="{{ $profileCSS.Data.Integrity }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap">
 {{- if eq .RelPermalink "/resources/" }}
   {{- $resourcesCSS := resources.Get "css/resources.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $resourcesCSS.RelPermalink }}" integrity="{{ $resourcesCSS.Data.Integrity }}">
