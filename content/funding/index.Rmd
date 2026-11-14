@@ -294,6 +294,28 @@ funding <- funding |>
   arrange(desc(start_year), desc(start_month))
 
 # -----------------------------------------------------------------------------
+# Awards confirmed but not yet recorded in ORCID (for example, contract
+# pending). Remove an entry here once it appears in ORCID.
+# -----------------------------------------------------------------------------
+
+pending_awards <- tibble(
+  title = "Linking social care data and health data for research, service planning and policy making: acceptability and practicality",
+  organization = "NIHR School for Social Care Research",
+  description_display = "Led by Professor Peter Bath at the University of Sheffield. Assesses the acceptability, practicality, and governance of linking health and social care records for research, service planning, and policy.",
+  amount_fmt = "£299,661",
+  url = NA_character_,
+  role = "Co-applicant; Work Package 2 Co-Lead",
+  date_range = "Awarded 2026; due to start 2027",
+  grant_number = NA_character_,
+  start_year = 2027L,
+  start_month = 1L,
+  funding_group = "collaborative"
+)
+
+funding <- bind_rows(funding, pending_awards) |>
+  arrange(desc(start_year), desc(start_month))
+
+# -----------------------------------------------------------------------------
 # Alert during knitting if anything has no role annotation
 # -----------------------------------------------------------------------------
 
@@ -446,13 +468,6 @@ funding |>
   filter(funding_group == "collaborative") |>
   render_funding()
 ```
-
-<div class="funding-card">
-<div class="funding-title">Linking social care data and health data for research, service planning and policy making: acceptability and practicality</div>
-<div class="funding-role">Co-applicant; Work Package 2 Co-Lead</div>
-<div class="funding-meta">NIHR School for Social Care Research · £299,661 · Awarded 2026; due to start 2027</div>
-<p class="funding-description">Led by Professor Peter Bath at the University of Sheffield. Assesses the acceptability, practicality, and governance of linking health and social care records for research, service planning, and policy.</p>
-</div>
 
 ```{r results='asis', echo=FALSE}
 other_funding <- funding |>
