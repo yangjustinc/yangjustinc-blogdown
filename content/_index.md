@@ -1,96 +1,78 @@
 ---
 title: Home
-description: "Dr Justin C Yang is a psychiatric epidemiologist and health data scientist at UCL studying mental-health trajectories, inequalities, and services."
+description: "Dr Justin C Yang is a psychiatric epidemiologist at UCL using linked health, education and addiction-treatment records to study inequalities in mental-health care."
 ---
 
-# Justin C Yang
+<div class="home-intro">
+<img class="home-portrait" src="team/pictures/justinyang.webp" alt="Portrait of Justin C Yang" width="256" height="256" decoding="async" fetchpriority="high">
+<div class="home-intro-text">
+<h1>Justin C Yang</h1>
+<p class="home-lede">I am a psychiatric epidemiologist. I lead research on why the identification, treatment and outcomes of mental-health, neurodevelopmental and substance-use needs differ between groups and places, using England's linked health, education and treatment records, and on making those records fit for research.</p>
+<p class="home-role">Senior Research Fellow, <a href="https://www.ucl.ac.uk/psychiatry">UCL Division of Psychiatry</a><br>Associate Editor, <a href="https://onlinelibrary.wiley.com/journal/13600443"><i>Addiction</i></a></p>
+</div>
+</div>
 
-**Psychiatric epidemiologist and health data scientist** studying mental-health trajectories and inequalities using linked administrative data, electronic health records, longitudinal studies, and causal and computational methods.
-
-I am a **Senior Research Fellow** in the [Division of Psychiatry](https://www.ucl.ac.uk/psychiatry) at [University College London](https://www.ucl.ac.uk) and lead **MINDSET**, an independent research programme spanning severe mental illness, neurodivergence, addiction, and mental-health services.
-
-<div class="academic-snapshot" aria-label="Current academic roles">
+<div class="academic-snapshot" aria-label="Research leadership at a glance">
   <div class="academic-snapshot-item">
-    <span class="academic-snapshot-label">Position</span>
-    <strong>Senior Research Fellow</strong>
-    <span>UCL Division of Psychiatry</span>
+    <span class="academic-snapshot-label">Principal investigator</span>
+    <strong>£562k</strong>
+    <span>UKRI, ESRC/ADR UK and NIHR awards since 2024</span>
   </div>
   <div class="academic-snapshot-item">
-    <span class="academic-snapshot-label">Fellowship</span>
-    <strong>UKRI Mental Health Platform</strong>
-    <span>Cross-hub Fellow</span>
+    <span class="academic-snapshot-label">Collaborative awards</span>
+    <strong>£1.9m</strong>
+    <span>Co-investigator or work-package lead</span>
   </div>
   <div class="academic-snapshot-item">
-    <span class="academic-snapshot-label">Research infrastructure</span>
-    <strong>Deputy Lead</strong>
-    <span>NLFT Research Database</span>
+    <span class="academic-snapshot-label">Data governance</span>
+    <strong>Expert Member</strong>
+    <span>HRA Confidentiality Advisory Group</span>
   </div>
   <div class="academic-snapshot-item">
-    <span class="academic-snapshot-label">Editorial</span>
-    <strong>Associate Editor</strong>
-    <span><i>Addiction</i></span>
+    <span class="academic-snapshot-label">Policy reach</span>
+    <strong>OECD and WHO</strong>
+    <span>Also the EU drugs agency and UNODC; about 35 policy documents</span>
   </div>
 </div>
 
-## MINDSET
+## Research
 
-**Multimodal INference and Data Science for Epidemiology and Treatment** is the research programme I established and lead at UCL. It is grounded in linked population and clinical data and extends across longitudinal, intensive, environmental, and biological evidence when those sources can answer questions that a single dataset cannot.
+My work follows three connected lines, each built over several years and each now led through a competitively funded award. See [Research](research/) and [Funding](funding/) for detail.
 
-<aside class="research-vision" aria-label="Research vision">
-  <span class="research-vision-label">Research vision</span>
-  <p>To understand how mental health develops across lives, places, and systems by integrating complementary evidence across levels, settings, and timescales.</p>
-</aside>
-
-Mental health develops through interacting processes within people, their environments, and the institutions they encounter. These operate from moments to lifetimes and across homes, communities, services, and population systems, while research observes them indirectly through measurements produced in different settings and for different purposes.
-
-**Inference is the organising idea in MINDSET.** I ask what each source reveals or obscures, how measurements were generated and selected, and which combinations of evidence can reduce uncertainty about mechanisms, trajectories, interventions, or inequalities. Psychiatric epidemiology, causal inference, and data science provide the methodological core.
-
-Three enduring questions organise the programme.
-
-<div class="mindset-questions">
+<div class="mindset-questions theme-cards">
   <section class="mindset-question">
-    <svg class="mindset-question-glyph" viewBox="0 0 64 36" aria-hidden="true" focusable="false">
-      <path d="M3 27c10 0 10-18 20-18s10 18 20 18 10-18 18-18"/>
-      <path class="mindset-question-glyph-secondary" d="M3 18c12 0 12 9 24 9s12-18 24-18h10"/>
-    </svg>
     <span class="mindset-question-number">01</span>
-    <h2>What shapes mental health and inequalities over time?</h2>
-    <p>Understanding how conditions and experiences within people, between people, and across the environments and institutions they encounter combine over the life course.</p>
+    <h3>Neurodevelopment, education and health</h3>
+    <p>How schools and health services identify and support autistic and other neurodivergent children, and what follows for attendance, exclusion and hospital admission.</p>
+    <p class="theme-evidence"><b>Track record:</b> recorded autism incidence in more than 7 million pupils (<a href="https://doi.org/10.1016/S2352-4642(22)00247-4"><i>Lancet Child &amp; Adolescent Health</i></a>, joint first author), cited in a 2026 OECD report.<br><b>Now leading:</b> HOPE-SEN, an ADR UK fellowship using linked national education and hospital records.</p>
   </section>
   <section class="mindset-question">
-    <svg class="mindset-question-glyph" viewBox="0 0 64 36" aria-hidden="true" focusable="false">
-      <path d="M3 10h7m5 0h8m18 0h20M3 26h12m5 0h3m18 0h20"/>
-      <path class="mindset-question-glyph-bracket" d="M29 4c-4 6-5 12-5 14s1 8 5 14M35 4c4 6 5 12 5 14s-1 8-5 14"/>
-    </svg>
     <span class="mindset-question-number">02</span>
-    <h2>How can heterogeneous evidence support credible inference?</h2>
-    <p>Determining what different measurements can establish, and how evidence can be linked or triangulated across levels, settings, and timescales while remaining explicit about selection, measurement, missingness, and uncertainty.</p>
+    <h3>Addiction treatment and services</h3>
+    <p>Who reaches evidence-based treatment for drug and alcohol problems, and how national treatment data can be used responsibly to find out.</p>
+    <p class="theme-evidence"><b>Track record:</b> national US studies of opioid agonist treatment provision and unmet need (first author).<br><b>Now leading:</b> UNITED, an NIHR Team Science award with Change Grow Live, Turning Point and lived-experience researchers on England's national treatment data.</p>
   </section>
   <section class="mindset-question">
-    <svg class="mindset-question-glyph" viewBox="0 0 64 36" aria-hidden="true" focusable="false">
-      <rect x="3" y="8" width="14" height="20" rx="2"/>
-      <rect x="25" y="3" width="14" height="30" rx="2"/>
-      <rect x="47" y="8" width="14" height="20" rx="2"/>
-      <path class="mindset-question-glyph-secondary" d="M17 18h8m14 0h8"/>
-    </svg>
     <span class="mindset-question-number">03</span>
-    <h2>What evidence systems make rigorous and useful inference possible?</h2>
-    <p>Improving the infrastructures, governance, and analytical practices that enable sensitive human data to support research, services, policy, and public decision-making.</p>
+    <h3>Severe mental illness in clinical records</h3>
+    <p>What routinely collected NHS records can show about treatment, harms and inequalities in severe mental illness, including through natural language processing of clinical text.</p>
+    <p class="theme-evidence"><b>Track record:</b> antipsychotic polypharmacy and adverse drug reactions in 13,391 patients (<a href="https://doi.org/10.1017/S0033291722000952"><i>Psychological Medicine</i></a>, first author).<br><b>Now leading:</b> WISDOM, a UKRI Mental Health Platform fellowship, and the clinical-records work package of a £1.5m NIHR study of patient observation on psychiatric wards.</p>
   </section>
 </div>
 
-## A connected research agenda
+**Making routine data fit for research.** Across all three lines, I work on how records come to exist: who is recorded, how, and what linkage and missing data mean for the conclusions drawn from them. I am Deputy Lead of the [North London NHS Foundation Trust research database](https://www.northlondonmentalhealth.nhs.uk/research-database-), where I led the integration of two Trusts' records after their merger and have advised on 31 research projects. I also sit on the Health Research Authority's Confidentiality Advisory Group, which advises on the use of confidential patient information without consent.
 
-I develop MINDSET through time-bounded studies that approach the same questions across different settings, levels, and timescales. **WISDOM** examines mental-health trajectories and inequalities using longitudinal evidence, while **HOPE-SEN** used linked health and education data to investigate inequalities among neurodivergent children and young people. Through the UKRI Mental Health Platform, WISDOM also connects perspectives on severe mental illness across the Platform's hubs. **UNITED** and a new **anti-stigma intervention process evaluation** extend the agenda into addiction treatment, professional practice, and service improvement. Work with the **North London NHS Foundation Trust Research Database** turns methodological and substantive lessons into better governed research infrastructure.
+## Recent
 
-The relationship runs in both directions: substantive questions reveal limitations in existing data; methodological work clarifies what can credibly be inferred; and infrastructure work improves the evidence available for the next study. Individual awards start and finish, but this cycle provides continuity across the wider programme.
+<ul class="news-list">
+  <li><span class="news-date">October 2026</span> Elected to UCL Academic Board, and awarded NIHR School for Social Care Research funding to study the linkage of health and social care data, as work-package co-lead.</li>
+  <li><span class="news-date">September 2026</span> Written evidence to the House of Commons Education Committee on persistent school absence among autistic pupils and pupils with intellectual disability, with Vanessa Cieplinska and Professor Vasiliki Totsika.</li>
+  <li><span class="news-date">2026</span> Scoping review of 83 research outputs using England's National Drug Treatment Monitoring System, from UNITED (<a href="https://doi.org/10.2139/ssrn.7505399">preprint</a>; under review).</li>
+  <li><span class="news-date">January 2026</span> WISDOM begins: a UKRI Mental Health Platform fellowship linking the Complex Emotions, DATAMIND and Social Health hubs.</li>
+</ul>
 
-## Teaching and supervision
+## Working together
 
-Alongside research, I teach epidemiology, statistics, and research methods across postgraduate mental-health programmes at UCL, supervise doctoral and taught postgraduate research, and teach open and reproducible data-science skills as a certified [Carpentries](https://carpentries.org/) instructor. See [Teaching & Supervision](teaching/) for current teaching and trainees.
+The MINDSET group brings together the postdoctoral researchers whose work I direct and the doctoral students I co-supervise; see [Team](team/). I collaborate with academic groups, NHS trusts, treatment providers and people with lived experience, and I am most useful to a project that needs NHS mental-health records, national linked education and health data, or national drug and alcohol treatment data.
 
-## Collaboration
-
-Collaboration is integral to MINDSET. I work with researchers, health and public-sector organisations, services, charities, people with lived experience, and trainees when complementary expertise or evidence can improve the work. I welcome research, public-involvement, service and policy partnerships, and supervision enquiries where there is a clear fit with the programme.
-
-Explore the [research programme](research/), [people and partnerships](people/), [publications](publications/), [research funding](funding/), [talks and presentations](talks/), [teaching and supervision](teaching/), [open research and resources](resources/), and [leadership and recognition](leadership/), or [get in touch](contact/).
+I welcome enquiries about research partnerships and doctoral supervision. [Get in touch](contact/).

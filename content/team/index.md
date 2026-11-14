@@ -1,9 +1,11 @@
 ---
-title: People & Partnerships
-description: "The people, partnerships, and collaborative capabilities that make up the MINDSET research programme."
+title: Team
+description: "The MINDSET group led by Dr Justin C Yang at UCL, and its partners across NHS trusts, national data programmes, treatment providers and lived-experience organisations."
+aliases:
+  - /people/
 ---
 
-MINDSET is collaborative by design. Across different projects I work with researchers and trainees, NHS and public-sector data partners, treatment services, lived-experience contributors, and academic groups. The mix depends on the question; the people and organisations below represent active or longstanding relationships across the programme.
+MINDSET is the research group I lead at UCL: two postdoctoral research fellows whose scientific work I direct, and two doctoral students I co-supervise. Our work runs through partnerships with NHS trusts, national data programmes, treatment providers, lived-experience organisations and other research groups, listed below.
 
 ## Research team
 
@@ -12,8 +14,8 @@ MINDSET is collaborative by design. Across different projects I work with resear
 <div class="team-card people-feature-card">
 <img src="pictures/justinyang.webp" alt="Headshot of Justin C Yang" width="256" height="256" decoding="async">
 <div class="people-name">Dr Justin C Yang</div>
-<div class="people-role">Senior Research Fellow · MINDSET Lead</div>
-<div class="people-expertise">Psychiatric epidemiology · health data science · causal inference</div>
+<div class="people-role">Senior Research Fellow · Group lead</div>
+<div class="people-expertise">Psychiatric epidemiology · linked data · clinical records</div>
 <a href="https://profiles.ucl.ac.uk/75514-justin-yang">UCL Profile</a>
 </div>
 
@@ -35,21 +37,21 @@ MINDSET is collaborative by design. Across different projects I work with resear
 
 </div>
 
-## Trainees
+## Doctoral researchers
 
 <div class="people-grid people-training-grid">
 
 <div class="team-card people-feature-card">
 <img src="pictures/vanessacieplinska.webp" alt="Headshot of Vanessa Cieplinska" width="256" height="256" loading="lazy" decoding="async">
 <div class="people-name">Vanessa Cieplinska</div>
-<div class="people-role">PhD Student</div>
+<div class="people-role">PhD student (co-supervised)</div>
 <div class="people-expertise">School attendance and educational attainment in children with neurodevelopmental conditions</div>
 </div>
 
 <div class="team-card people-feature-card">
 <img src="pictures/aluayeskendir.webp" alt="Headshot of Alua Yeskendir" width="256" height="256" loading="lazy" decoding="async">
 <div class="people-name">Alua Yeskendir</div>
-<div class="people-role">PhD Student</div>
+<div class="people-role">PhD student (co-supervised)</div>
 <div class="people-expertise">Health and social inequalities in psychiatric disorders</div>
 </div>
 
@@ -57,15 +59,15 @@ MINDSET is collaborative by design. Across different projects I work with resear
 
 I also supervise taught projects and contribute to doctoral thesis committees and wider trainee development. See [Teaching & Supervision](../teaching/) for the broader training programme.
 
-## The MINDSET research ecosystem
+## Partners and collaborators
 
-Many partners contribute across more than one area of the programme.
+Many partners contribute to more than one line of work.
 
 <div class="collaboration-map">
 
 <div class="ecosystem-core">
 <b>MINDSET</b>
-<span>Partners and expertise across four connected areas</span>
+<span>Partners and expertise across four areas</span>
 </div>
 
 <div class="collaboration-cluster hue-green">

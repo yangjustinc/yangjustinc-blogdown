@@ -1,0 +1,151 @@
+---
+title: About
+description: "Biography, editorial roles, national research governance and institutional leadership of Dr Justin C Yang, psychiatric epidemiologist at UCL."
+aliases:
+  - /leadership/
+output:
+  html_document:
+    keep_md: yes
+---
+
+## Biography
+
+<p class="bio-note">For event organisers and editors: this biography may be reused as written.</p>
+
+Dr Justin C Yang is a psychiatric epidemiologist and Senior Research Fellow in the Division of Psychiatry at University College London, and Associate Editor of *Addiction*. Dr Yang's research examines why the identification, treatment and outcomes of mental-health, neurodevelopmental and substance-use needs differ between groups and places, using England's linked health, education and treatment records.
+
+Dr Yang is principal investigator of WISDOM, a UKRI Mental Health Platform cross-hub fellowship; UNITED, an NIHR Team Science award on England's national drug and alcohol treatment data; and HOPE-SEN, an ADR UK fellowship on the education and health of neurodivergent pupils. Dr Yang is Deputy Lead of the North London NHS Foundation Trust research database and an Expert Member of the Health Research Authority's Confidentiality Advisory Group, and holds a PhD in Public Health and Primary Care from the University of Cambridge and an MSPH in Health Policy from Johns Hopkins University.
+
+## Roles and recognition
+
+<div class="leadership-grid">
+
+<div class="leadership-card hue-orange">
+<h3 class="leadership-kicker">Editorial and peer review</h3>
+<p><b>Associate Editor</b>, <a href="https://onlinelibrary.wiley.com/page/journal/13600443/homepage/editorialboard.html"><i>Addiction</i></a> (2025&ndash;)<br>
+<b>Editorial Board Member</b>, <a href="https://journals.sagepub.com/editorial-board/SAT"><i>Substance Use: Research and Treatment</i></a> (2022&ndash;)<br>
+<b>Member</b>, <a href="https://www.ukri.org/councils/esrc/">ESRC Peer Review College</a> (2025&ndash;)<br>
+<b>Expert Assessor</b>, <a href="https://www.adruk.org/">Administrative Data Research UK</a> (2025&ndash;)<br>
+<b>Member</b>, <a href="https://www.addiction-ssa.org/">Society for the Study of Addiction Reviewer College</a> (2025&ndash;)</p>
+</div>
+
+<div class="leadership-card hue-purple">
+<h3 class="leadership-kicker">National research governance and policy</h3>
+<p><b>Expert Member</b>, <a href="https://www.hra.nhs.uk/about-us/committees-and-services/confidentiality-advisory-group/">Confidentiality Advisory Group, Health Research Authority</a> (2026&ndash;)<br>
+<b>Steering Committee Member</b>, <a href="https://www.gov.uk/government/publications/life-sciences-healthcare-goals/addiction-healthcare-goals">Addiction Healthcare Goals</a> (2025&ndash;)<br>
+<b>Steering Group Member</b>, <a href="https://mentalhealthresearch.org.uk/">NIHR Mental Health Research Incubator</a> (2025&ndash;)<br>
+<b>Member</b>, ADR UK Task and Finish Group on the data-access journey (2026&ndash;)<br>
+<b>Public Member</b>, Data Access Committee, <a href="https://easternsde.nhs.uk/">Eastern England Secure Data Environment</a> (2026&ndash;)<br>
+<b>Written evidence</b>, House of Commons Education Committee, on persistent school absence among autistic pupils and pupils with intellectual disability (ECA0106, 2026)</p>
+</div>
+
+<div class="leadership-card hue-blue">
+<h3 class="leadership-kicker">Research infrastructure</h3>
+<p><b>Deputy Lead</b> (2024&ndash;), previously Database Manager (2019&ndash;2024), <a href="https://www.northlondonmentalhealth.nhs.uk/research-database-">North London NHS Foundation Trust research database</a>. Led the integration of two Trusts' research data after their merger; has advised on 31 research projects; contributes to harmonisation with the CRIS databases at South London and Maudsley, Oxford Health, and Cambridgeshire and Peterborough.<br>
+<b>Co-lead</b>, HDR UK and DARE UK project embedding national public-involvement standards in the database's governance (2025&ndash;26)</p>
+</div>
+
+<div class="leadership-card hue-green">
+<h3 class="leadership-kicker">Leadership at UCL</h3>
+<p><b>Elected Member</b>, <a href="https://www.ucl.ac.uk/about/leadership/governance/committees/ab-and-committees/academic-board">UCL Academic Board</a> (2026&ndash;)<br>
+<b>Lead</b>, Culture Change Action Group, Division of Psychiatry (2022&ndash;); designed and led the Division's Athena SWAN listening exercise on bullying, harassment and inclusion<br>
+<b>Founder and lead</b>, the Division's non-clinical early-career researcher community of 50&ndash;60 researchers (2022&ndash;), now led with colleagues<br>
+<b>Research Development Programme Lead</b>, Division of Psychiatry (2023&ndash;25)<br>
+<b>Open Science Champion</b>, Faculty of Brain Sciences (2025&ndash;)</p>
+</div>
+
+</div>
+
+## Education and career
+
+- **Senior Research Fellow**, Division of Psychiatry, UCL (2025&ndash;); Research Fellow (2019&ndash;2025)
+- **Visiting Lecturer**, Wolfson Institute of Population Health, Queen Mary University of London (2021&ndash;2025)
+- **Senior Associate**, Avalere Health, Washington DC (2014&ndash;2015)
+- **PhD**, Public Health and Primary Care, University of Cambridge (2019)
+- **MSPH**, Health Policy, Johns Hopkins Bloomberg School of Public Health (2015)
+- **BSc**, Cell Biology and Genetics, and **BA (Hons)**, English, University of British Columbia (2012)
+
+## Manuscript review
+
+I review manuscripts across psychiatry, epidemiology, substance use, public health and health-services research. The list below is generated from my ORCID peer-review record.
+
+```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+library(tidyverse)
+library(httr2)
+library(rcrossref)
+
+orcid_id <- "0000-0003-2881-4906"
+
+resp <- request(
+  paste0(
+    "https://pub.orcid.org/v3.0/",
+    orcid_id,
+    "/peer-reviews"
+  )
+) |>
+  req_headers(Accept = "application/json") |>
+  req_error(is_error = \(r) FALSE) |>
+  req_perform()
+
+if (resp_status(resp) == 200) {
+
+  body <- resp_body_json(resp)
+
+  raw <- map_chr(body$group, \(g) {
+    val <- tryCatch(
+      g$`external-ids`$`external-id`[[1]]$`external-id-value`,
+      error = \(e) NA_character_
+    )
+
+    if (is.null(val)) NA_character_ else val
+  })
+
+  issns_clean <- raw[
+    !is.na(raw) &
+      str_starts(raw, "issn:")
+  ] |>
+    str_remove("^issn:") |>
+    unique()
+
+  get_title_from_issn <- function(issn) {
+    tryCatch({
+      result <- rcrossref::cr_journals(issn)$data$title
+      if (is.null(result) || length(result) == 0) {
+        return(NA_character_)
+      }
+      result[[1]]
+    }, error = \(e) NA_character_)
+  }
+
+  journal_names <- map_chr(
+    issns_clean,
+    get_title_from_issn
+  ) |>
+    (\(x) x[!is.na(x)])() |>
+    unique() |>
+    str_squish() |>
+    str_replace("Men s", "Men's") |>
+    (\(x) x[
+      order(
+        str_remove(
+          x,
+          regex(
+            "^(the|a|an)\\s+",
+            ignore_case = TRUE
+          )
+        )
+      )
+    ])()
+
+  if (length(journal_names) > 0) {
+    cat(
+      "<details>\n",
+      "<summary><b>Selected journals for which I have served as a peer reviewer</b></summary>\n\n",
+      paste0("- ", journal_names, collapse = "\n"),
+      "\n\n</details>\n"
+    )
+  }
+}
+```
+
+See also [Research](../research/), [Funding](../funding/), [Team](../team/) and [Teaching](../teaching/).

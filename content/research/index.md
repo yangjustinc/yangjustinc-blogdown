@@ -87,4 +87,4 @@ I also work with colleagues at South London and Maudsley NHS Foundation Trust on
 
 Within **UNITED (Using a National, Interdisciplinary Team to Enhance Drug and alcohol treatment data)**, I lead work examining how England's **National Drug Treatment Monitoring System (NDTMS)** is used for research and how treatment data can better support epidemiology, service improvement, policy, and clinical practice.
 
-See also [people and partnerships](../people/), [publications](../publications/), [research funding](../funding/), [open research and resources](../resources/), and [leadership and recognition](../leadership/).
+See also [team and partners](../team/), [publications](../publications/), [research funding](../funding/), [open research and resources](../resources/), and [roles and recognition](../about/).
