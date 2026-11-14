@@ -1,15 +1,14 @@
-Host,Title,Event,Date,Type,Invited,Materials
-University College London,Investigating risk of suicide in patients with cancer using routine data,Special Interest Group in Self-Harm and Suicide Seminar,2024-05-27,Seminar,,
-Administrative Data Research UK,"An ADR UK fellowship to examine Health-related Outcomes, alternative Provision, and Exclusion among pupils with neurodivergent Special Educational Needs",PhD Annual Gathering,2025-02-06,Presentation,,
-UCL R Users' Group,Mapping and spatial analysis in R: A tutorial,Group meeting,2025-10-02,Tutorial,,
-University of Sheffield,Working collaboratively to investigate the socioemotional drivers of severe and enduring mental health needs,Complex Emotions Hub Launch,2026-02-25,Presentation,,
-UCL Institute of Child Health,Risk factors for school absence and hospital admissions among pupils with neurodivergent SEND,ECHILD User Day,2026-03-17,Presentation,,
-UCL Institute of Child Health,Considerations for hierarchical and spatial modelling in ECHILD,Institute of Child Health Informatics Group Seminar,2026-03-26,Seminar,,
-DATAMIND,Risk factors for school absence and hospital admission among pupils with neurodivergent SEND provision,Mental Health Driver Programme Workshop,2026-04-29,Workshop,,
-University of Liverpool,Across Education and Health: Using Linked Data to Study Inequalities Among Children with Special Educational Needs,Children's Health Equity Research Group Seminar,2026-07-06,Seminar,,
-British Society for Population Studies,Influencing policy with administrative data: turning research into real-world impact,British Society for Population Studies Conference,2026-09-10,Conference presentation,,
-UCL Division of Psychiatry,"R for Reproducible Scientific Analysis, Part 1",Reproducible Data Analysis for Mental Health Research,2026-10-14,Workshop,,https://yangjustinc.github.io/2026-10-14-ucldop-online/
-UCL Division of Psychiatry,"R for Reproducible Scientific Analysis, Part 2",Reproducible Data Analysis for Mental Health Research,2026-10-21,Workshop,,https://yangjustinc.github.io/2026-10-14-ucldop-online/
-UCL Division of Psychiatry,"Plotting and Programming in Python, Part 1",Reproducible Data Analysis for Mental Health Research,2026-10-28,Workshop,,https://yangjustinc.github.io/2026-10-14-ucldop-online/
-UCL Division of Psychiatry,"Plotting and Programming in Python, Part 2",Reproducible Data Analysis for Mental Health Research,2026-11-04,Workshop,,https://yangjustinc.github.io/2026-10-14-ucldop-online/
-Datacise Open Learning,Good practice for R users when working in the ONS SRS,Online course,2026-11-25,Course,,https://dataciseopenlearning.org/courses/good-practice-for-r-users-when-working-in-the-ons-srs/
+Host,Title,Event,Date,Type,Invited,Materials,Kind,DatePrecision
+British Columbia Concurrent Disorders Conference,Models of substance use treatment in the UK,British Columbia Concurrent Disorders Conference (Vancouver),2024-05-01,Conference presentation,TRUE,,talk,month
+University College London,Investigating risk of suicide in patients with cancer using routine data,Special Interest Group in Self-Harm and Suicide Seminar,2024-05-27,Seminar,TRUE,,talk,day
+Administrative Data Research UK,"An ADR UK fellowship to examine Health-related Outcomes, alternative Provision, and Exclusion among pupils with neurodivergent Special Educational Needs",PhD Annual Gathering,2025-02-06,Presentation,TRUE,,talk,day
+UCL R Users' Group,Mapping and spatial analysis in R: A tutorial,Group meeting,2025-10-02,Tutorial,,https://yangjustinc.github.io/2025-mapping-and-spatial-analysis-in-r/,training,day
+University of Sheffield,Working collaboratively to investigate the socioemotional drivers of severe and enduring mental health needs,Complex Emotions Hub Launch,2026-02-25,Presentation,TRUE,,talk,day
+UCL Great Ormond Street Institute of Child Health,Risk factors for school absence and hospital admissions among pupils with neurodivergent SEND,ECHILD User Day,2026-03-17,Presentation,TRUE,,talk,day
+UCL Great Ormond Street Institute of Child Health,Considerations for hierarchical and spatial modelling in ECHILD,Informatics Group Seminar,2026-03-26,Seminar,TRUE,,talk,day
+DATAMIND,Risk factors for school absence and hospital admission among pupils with neurodivergent SEND provision,Mental Health Driver Programme Workshop,2026-04-29,Workshop presentation,TRUE,,talk,day
+University of Liverpool,Across Education and Health: Using Linked Data to Study Inequalities Among Children with Special Educational Needs,Children's Health Equity Research Group Seminar,2026-07-06,Seminar,TRUE,,talk,day
+Addiction,Natural language processing and electronic health records in addiction research,Addiction Editors' Meeting,2026-08-01,Presentation,TRUE,,talk,month
+British Society for Population Studies,Influencing policy with administrative data: turning research into real-world impact,"British Society for Population Studies Conference (invited by ADR UK)",2026-09-10,Conference presentation,TRUE,,talk,day
+UCL Division of Psychiatry,"Reproducible Data Analysis for Mental Health Research: R and Python (four sessions)",Carpentries workshop,2026-10-14,Course,,https://yangjustinc.github.io/2026-10-14-ucldop-online/,training,day
+Datacise Open Learning,Good practice for R users when working in the ONS SRS,Online course,2026-11-25,Course,TRUE,https://dataciseopenlearning.org/courses/good-practice-for-r-users-when-working-in-the-ons-srs/,training,day

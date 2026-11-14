@@ -1,90 +1,50 @@
 ---
 title: Research
-description: "Research by Dr Justin C Yang using linked population and clinical data, longitudinal evidence, and causal methods to study mental-health trajectories."
+description: "Research by Dr Justin C Yang on what happens to people whose needs fall between school, health, addiction, and social care services."
 ---
 
-My research examines how mental health develops across **lives, places, and systems**, why trajectories and outcomes differ, and which processes may be modifiable. I work across **psychiatric epidemiology, health data science, causal inference, and health services research**.
+Many people with mental health, neurodevelopmental, or substance use needs are in contact with more than one service: schools and the NHS, mental health and addiction services, health and social care. My research asks what happens to them at the boundaries between services: who is identified, who reaches treatment or support, who falls through the gaps, and why this differs between groups and places.
 
-Much of this work is grounded in **linked administrative and electronic health-record data, longitudinal studies, and routinely collected service data**. Within MINDSET, I extend that foundation by combining it, where useful, with intensive longitudinal, environmental, behavioural, and biological evidence. The substantive question determines the mix: multimodality is a means to stronger inference rather than an end in itself.
+Each service sees only part of a person's experience, so answering these questions usually means bringing together records that services keep separately. How to do that well, and in ways the public can trust, is the subject of the last section below.
 
-## How the programme connects
+My work falls into three areas, each built over several years through a series of studies. Funding details are on the [Funding](../funding/) page, and the full record is on [Publications](../publications/).
 
-Each project enters the programme at a different point, but the work connects three layers, with substantive mental-health questions leading.
+## School and health
 
-<div class="programme-cycle" role="list" aria-label="How the MINDSET research programme connects">
-  <section class="programme-cycle-stage" role="listitem">
-    <span class="programme-cycle-kicker">Substantive questions</span>
-    <h3>Mental health across lives and services</h3>
-    <p>Identify consequential patterns, trajectories, inequalities, and experiences that existing evidence does not adequately explain.</p>
-  </section>
-  <span class="programme-cycle-connector" aria-hidden="true">→</span>
-  <section class="programme-cycle-stage" role="listitem">
-    <span class="programme-cycle-kicker">Inference and measurement</span>
-    <h3>What the data can support</h3>
-    <p>Examine how selection, measurement, recording, linkage, missingness, timescale, and analytical design shape claims across different sources and levels of analysis.</p>
-  </section>
-  <span class="programme-cycle-connector" aria-hidden="true">→</span>
-  <section class="programme-cycle-stage" role="listitem">
-    <span class="programme-cycle-kicker">Enabling systems</span>
-    <h3>Better evidence infrastructure</h3>
-    <p>Improve governance, data systems, implementation, and analytical practice so that future research and decisions rest on stronger evidence.</p>
-  </section>
-</div>
+Autistic and other neurodivergent children are identified, supported, and excluded from school at different rates depending on who they are and where they live. Much of what happens to them is recorded in education data, and much in health data.
 
-The hierarchy is deliberate but iterative: substantive questions determine which evidence and methods are needed; inferential work establishes what the measurements can support; and better measurement, governance, and data systems create new possibilities for research. This helps distinguish processes underlying mental-health trajectories and inequalities from the ways they are measured, recorded, and observed.
+- **Autism incidence in English schools.** With colleagues at the University of Cambridge, we studied recorded autism among more than 7 million pupils in English state schools and found that incidence differed sharply between social and ethnic groups and between areas ([*Lancet Child & Adolescent Health*, 2022](https://doi.org/10.1016/S2352-4642(22)00247-4)). I was joint first author and led the population and spatial analyses. A 2026 OECD report on rising childhood autism diagnoses cites the study as evidence of under-diagnosis among girls from minority ethnic groups.
+- **HOPE-SEN (2024 to 2026).** My ADR UK fellowship built on that study. It used linked national education and hospital records (ECHILD) to examine school absence, exclusion, alternative provision, and hospital admission among pupils receiving support for neurodevelopmental needs. Three first author papers are in preparation, and the analysis code is [openly archived](https://doi.org/10.5281/zenodo.22710433).
+- **Policy and doctoral research.** With Vanessa Cieplinska, a PhD student I co-supervise, and Professor Vasiliki Totsika, I submitted written evidence to the House of Commons Education Committee on persistent school absence among autistic pupils and pupils with intellectual disability (2026).
 
-## What shapes mental health and inequalities over time?
+## Mental health and addiction services
 
-I study how conditions and experiences within people, between people, and across the environments and institutions they encounter combine to shape mental health, service use, and wider outcomes over the life course.
+People with drug or alcohol problems often have mental health needs too, and the two are usually treated by different services. I study who reaches treatment and what stands in the way.
 
-This work spans severe mental illness, neurodivergence, addiction, and mental-health services. Recurring questions include how disadvantage accumulates, how service contact and exclusion shape later outcomes, and why trajectories differ between people, populations, and places.
+- **Access to treatment.** My doctoral research used national US data to show inequalities in unmet need for mental health treatment ([*International Journal for Equity in Health*, 2019](https://doi.org/10.1186/s12939-019-1026-y)) and in the provision of opioid agonist treatment by area, organisation, and payment ([*PLOS ONE*, 2020](https://doi.org/10.1371/journal.pone.0229787)); I was first author of both. In England, I contributed to a study of mental health diagnoses and deprivation as predictors of access to treatment for opioid use disorder ([*Substance Abuse Treatment, Prevention, and Policy*, 2023](https://doi.org/10.1186/s13011-023-00568-5)).
+- **UNITED (2026).** I am the named lead investigator of this NIHR Team Science award, which brings together researchers, the national treatment providers Change Grow Live and Turning Point, and lived experience researchers. It asks what England's National Drug Treatment Monitoring System can show about who reaches treatment. I led its scoping review of 83 research outputs that use these data ([preprint](https://doi.org/10.2139/ssrn.7505399), under review) and its work on principles for using them responsibly.
+- **Stigma in services (2026).** I lead the quantitative evaluation of a co-produced course for health and care staff who work with people who use drugs, funded through the NIHR School for Public Health Research.
+- I am an Associate Editor of *Addiction*.
 
-Current work includes **WISDOM**, examining social, emotional, environmental, and institutional influences on severe and enduring mental illness, and a process evaluation of a co-produced **anti-stigma intervention** for health and care staff working with people who use substances. Recent work through **HOPE-SEN** used linked health and education data to investigate inequalities in the experiences and outcomes of neurodivergent children and young people.
+## Health and social care in severe mental illness
 
-Areas of interest include:
+People with severe mental illness are supported in hospital, in the community, and by social care, and what happens to them in one setting shapes the others. I study treatment, harms, and inequalities in severe mental illness, including the support recorded outside the NHS.
 
-- longitudinal and life-course psychiatric epidemiology
-- social and environmental determinants of mental health
-- inequalities in access to and outcomes of care
-- severe mental illness and co-occurring health and social needs
-- neurodivergence, education, and health
-- addiction, treatment pathways, and service use
-- spatial and environmental epidemiology
-- ecological momentary assessment and intensive longitudinal data
-- multimodal measurement and integration across social, behavioural, and biological scales
+- **Medication harms.** Among 13,391 patients of a London mental health service, antipsychotic polypharmacy was associated with endocrine and metabolic adverse drug reactions recorded in routine care ([*Psychological Medicine*, 2023](https://doi.org/10.1017/S0033291722000952)). I was joint first author and led the analysis and writing.
+- **WISDOM (2026 to 2029).** My UKRI Mental Health Platform Cross-Hub Fellowship brings together the Complex Emotions, DATAMIND, and Social Health hubs to study the social, emotional, environmental, and institutional drivers of severe and enduring mental illness.
+- **Observation on psychiatric wards (2024 to 2028).** In this £1.5 million NIHR study led by Professor Alexandra Pitman, I lead the electronic health record work package, which uses natural language processing to identify enhanced patient observation in clinical notes.
+- **Linking health and social care data (from 2027).** I co-lead a work package on the acceptability and governance of linking health and social care records in a new NIHR School for Social Care Research study led by Professor Peter Bath.
 
-## How can heterogeneous evidence support credible inference?
+## How I work
 
-No source directly captures a person's mental health or the processes that shape it. Evidence may arise from:
+Following people across services depends on records that are governed, linked, accessed, and documented well, and used in ways the public can trust. I work on this directly.
 
-- **experience:** surveys, interviews, ecological momentary assessment, and narrative or clinical text
-- **behaviour and physiology:** repeated digital measures, sensors, and wearables
-- **biology:** biomarkers, genomic and other molecular data, and neuroimaging
-- **place and context:** social, relational, environmental, spatial, and network information
-- **institutions and care:** linked administrative records, electronic health records, education data, and treatment or service systems
+- **NHS research database.** Since 2019 I have helped run the research database of what is now North London NHS Foundation Trust, first as Database Manager and now as Deputy Lead. After the merger of Camden and Islington and Barnet, Enfield and Haringey mental health trusts, I led the integration of their records into a single research database, including the ethics and Confidentiality Advisory Group approvals and new access arrangements. I have advised on 31 research projects using the database and contribute to harmonisation with the equivalent databases at South London and Maudsley, Oxford Health, and Cambridgeshire and Peterborough.
+- **National data governance.** I am an Expert Member of the Health Research Authority's Confidentiality Advisory Group, which advises on when confidential patient information can be used without consent. I am also a public member of the Eastern England Secure Data Environment's Data Access Committee and a member of an ADR UK Task and Finish Group on researchers' access to data.
+- **Public involvement.** With colleagues, I co-led an HDR UK and DARE UK project embedding national public involvement standards in the research database's governance.
 
-Useful combinations depend on the question. Every source has distinct timescales, selection processes, measurement error, missingness, and interpretive limits. Administrative and clinical records, for example, reflect access, recognition, documentation, coding, linkage, and institutional practice as well as underlying phenomena.
+## Methods
 
-My methodological work therefore includes:
+I work mainly with linked national administrative data in trusted research environments; electronic health records and natural language processing of clinical text, including large language models used within governed environments; longitudinal, multilevel, and spatial models; and causal inference for observational data. As senior author, I also designed an audit of how alcohol research collects and reports data on sexual orientation and gender identity ([*LGBT Health*, 2024](https://doi.org/10.1089/lgbt.2023.0085)), which our team has since applied to cardiovascular research.
 
-- longitudinal, repeated-measures, multilevel, and fixed-effects designs
-- causal inference and observational epidemiology
-- data linkage and natural language processing, including large language models in governed research environments
-- spatial and network analysis
-- principled integration and triangulation across heterogeneous sources
-- explicit analysis of selection, measurement, missingness, and data quality
-- transparent and reproducible research in secure environments
-
-The aim is to strengthen inference and make explicit what each source, and each combination of sources, can and cannot establish.
-
-## Research infrastructure as an enabling foundation
-
-Research using sensitive human data depends on how evidence is recorded, governed, linked, accessed, documented, and interpreted. I therefore treat research infrastructure as part of the scientific work, not simply a technical prerequisite.
-
-As Deputy Lead of the **North London NHS Foundation Trust Research Database**, I support research using routinely collected mental-health records, including research development, governance, methodological support, and collaboration across clinical, informatics, academic, and public partners.
-
-I also work with colleagues at South London and Maudsley NHS Foundation Trust on harmonisation across mental-health research infrastructures and approaches that support cross-site replication and comparative research.
-
-Within **UNITED (Using a National, Interdisciplinary Team to Enhance Drug and alcohol treatment data)**, I lead work examining how England's **National Drug Treatment Monitoring System (NDTMS)** is used for research and how treatment data can better support epidemiology, service improvement, policy, and clinical practice.
-
-See also [people and partnerships](../people/), [publications](../publications/), [research funding](../funding/), [open research and resources](../resources/), and [leadership and recognition](../leadership/).
+Where data cannot be shared, I release analysis code and teaching materials; see [Code and resources](../resources/).

@@ -1,6 +1,6 @@
 pages <- c(
   "content/funding/index.Rmd",
-  "content/leadership/index.Rmd",
+  "content/about/index.Rmd",
   "content/publications/index.Rmd",
   "content/talks/index.Rmd",
   "content/teaching/index.Rmd"

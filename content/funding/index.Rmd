@@ -1,12 +1,35 @@
 ---
 title: Funding
-description: "Competitive research funding held by Dr Justin C Yang, including fellowships and investigator roles supported by UKRI, ADR UK, NIHR, and other funders."
+description: "Research funding led by Dr Justin C Yang: three competitive awards as principal investigator from UKRI, ESRC and ADR UK, and NIHR, and leadership roles on collaborative awards."
 output:
   html_document:
     keep_md: yes
 ---
 
-My research has been supported by competitive fellowships, investigator-led awards, collaborative programmes, and research-development funding. My role is shown for each award; the underlying record is maintained through [ORCID](https://orcid.org/0000-0003-2881-4906).
+<div class="academic-snapshot" aria-label="Funding at a glance">
+<div class="academic-snapshot-item">
+<span class="academic-snapshot-label">As principal investigator</span>
+<strong>£562,170</strong>
+<span>Three competitive awards since 2024</span>
+</div>
+<div class="academic-snapshot-item">
+<span class="academic-snapshot-label">Collaborative awards</span>
+<strong>£1.93 million</strong>
+<span>Full value of four awards on which I lead a work package</span>
+</div>
+<div class="academic-snapshot-item">
+<span class="academic-snapshot-label">Funders</span>
+<strong>UKRI and NIHR</strong>
+<span>Including ESRC, ADR UK, MRC, and HDR UK</span>
+</div>
+<div class="academic-snapshot-item">
+<span class="academic-snapshot-label">Partners</span>
+<strong>NHS and third sector</strong>
+<span>Trusts, national treatment providers, and lived experience researchers</span>
+</div>
+</div>
+
+Since 2024 I have secured three nationally competitive awards as principal investigator or fellow, each built on questions I formulated. I also lead work packages on collaborative NIHR and HDR UK awards. Amounts are the funder's contribution as published; my role is shown for each award, and the records are maintained through [ORCID](https://orcid.org/0000-0003-2881-4906).
 
 ```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(orcidtr)
@@ -271,6 +294,28 @@ funding <- funding |>
   arrange(desc(start_year), desc(start_month))
 
 # -----------------------------------------------------------------------------
+# Awards confirmed but not yet recorded in ORCID (for example, contract
+# pending). Remove an entry here once it appears in ORCID.
+# -----------------------------------------------------------------------------
+
+pending_awards <- tibble(
+  title = "Linking social care data and health data for research, service planning and policy making: acceptability and practicality",
+  organization = "NIHR School for Social Care Research",
+  description_display = "Led by Professor Peter Bath at the University of Sheffield. Assesses the acceptability, practicality, and governance of linking health and social care records for research, service planning, and policy.",
+  amount_fmt = "£299,661",
+  url = NA_character_,
+  role = "Co-applicant; Work Package 2 Co-Lead",
+  date_range = "Awarded 2026; due to start 2027",
+  grant_number = NA_character_,
+  start_year = 2027L,
+  start_month = 1L,
+  funding_group = "collaborative"
+)
+
+funding <- bind_rows(funding, pending_awards) |>
+  arrange(desc(start_year), desc(start_month))
+
+# -----------------------------------------------------------------------------
 # Alert during knitting if anything has no role annotation
 # -----------------------------------------------------------------------------
 
@@ -400,10 +445,10 @@ render_funding <- function(df) {
 }
 ```
 
-## Fellowships and lead investigator awards
+## As principal investigator
 
 <div class="funding-section-intro">
-Awards for which I hold primary responsibility for the intellectual direction and delivery of the research.
+Awards for which I hold, or held, responsibility for the scientific direction and delivery of the research.
 </div>
 
 ```{r results='asis', echo=FALSE}
@@ -412,10 +457,10 @@ funding |>
   render_funding()
 ```
 
-## Collaborative research awards
+## As co-investigator or work package lead
 
 <div class="funding-section-intro">
-Major collaborative programmes in which I hold a defined investigator or work-package leadership role.
+Collaborative awards on which I lead a defined work package or component.
 </div>
 
 ```{r results='asis', echo=FALSE}
@@ -424,14 +469,14 @@ funding |>
   render_funding()
 ```
 
-## Research development and enabling awards
-
-<div class="funding-section-intro">
-Additional funding supporting research infrastructure, public involvement, methodological development, training, and research culture.
-</div>
-
 ```{r results='asis', echo=FALSE}
-funding |>
-  filter(funding_group == "other") |>
-  render_funding()
+other_funding <- funding |>
+  filter(funding_group == "other")
+
+if (nrow(other_funding) > 0) {
+  cat("## Other research funding
+
+")
+  render_funding(other_funding)
+}
 ```

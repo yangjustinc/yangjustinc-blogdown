@@ -1,12 +1,12 @@
 ---
-title: Talks & Presentations
-description: "Talks, seminars, conference presentations, workshops, and methods training by Dr Justin C Yang."
+title: Talks
+description: "Invited talks, seminars, conference presentations, and methods training by Dr Justin C Yang."
 output:
   html_document:
     keep_md: yes
 ---
 
-I give talks and methods training across psychiatric epidemiology, health data science, linked data, neurodivergence, addiction, and quantitative research methods. Selected invited talks, conference presentations, workshops, and courses are listed below.
+I give talks on school absence and neurodivergence, access to treatment for drug and alcohol problems, severe mental illness, and the responsible research use of health and administrative records. I also teach methods courses for researchers working in secure data environments. For speaking invitations, please [get in touch](../contact/); a reusable biography is on the [About](../about/) page.
 
 ```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(tidyverse)
@@ -23,7 +23,9 @@ talks <- read_csv(
     Date = col_date(),
     Type = col_character(),
     Invited = col_logical(),
-    Materials = col_character()
+    Materials = col_character(),
+    Kind = col_character(),
+    DatePrecision = col_character()
   )
 ) |>
   mutate(
@@ -33,18 +35,25 @@ talks <- read_csv(
 
 today <- Sys.Date()
 
-upcoming <- talks |>
+talks_main <- talks |>
+  filter(Kind == "talk")
+
+training <- talks |>
+  filter(Kind == "training") |>
+  arrange(desc(Date))
+
+upcoming <- talks_main |>
   filter(Date > today) |>
   arrange(Date)
 
-recent <- talks |>
+recent <- talks_main |>
   filter(
     Date <= today,
     Date >= today - years(3)
   ) |>
   arrange(desc(Date))
 
-older <- talks |>
+older <- talks_main |>
   filter(Date < today - years(3)) |>
   arrange(desc(Date))
 
@@ -64,6 +73,7 @@ render_talks <- function(df) {
       Type,
       Invited,
       Materials,
+      DatePrecision,
       ...
     ) {
 
@@ -101,7 +111,11 @@ render_talks <- function(df) {
 
       date_html <- paste0(
         '<div class="talk-date">',
-        format(Date, "%d %B %Y"),
+        if (!is.na(DatePrecision) && DatePrecision == "month") {
+          format(Date, "%B %Y")
+        } else {
+          paste(as.integer(format(Date, "%d")), format(Date, "%B %Y"))
+        },
         "</div>"
       )
 
@@ -151,7 +165,7 @@ if (nrow(upcoming) > 0) {
 }
 ```
 
-## Recent talks and presentations
+## Invited talks and presentations
 
 ```{r results='asis', echo=FALSE}
 render_talks(recent)
@@ -164,4 +178,14 @@ if (nrow(older) > 0) {
   render_talks(older)
   cat("\n\n</details>\n")
 }
+```
+
+## Methods training
+
+<div class="funding-section-intro">
+Courses and tutorials I have designed and taught, including invited training for users of the ONS Secure Research Service.
+</div>
+
+```{r results='asis', echo=FALSE}
+render_talks(training)
 ```

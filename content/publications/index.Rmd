@@ -1,12 +1,14 @@
 ---
 title: Publications
-description: "Publications by Dr Justin C Yang in psychiatric epidemiology and mental-health data science, spanning linked data, neurodivergence, addiction, and inequalities."
+description: "Publications by Dr Justin C Yang in psychiatric epidemiology and mental health data science, spanning linked data, neurodivergence, addiction, and inequalities."
 output:
   html_document:
     keep_md: yes
 ---
 
-My publications span psychiatric epidemiology, linked administrative and clinical data, mental-health inequalities, neurodivergence, addiction, spatial analysis, and population health. I highlight a small set of programme-defining outputs below; the explorer and [ORCID](https://orcid.org/0000-0003-2881-4906)-fed list provide the complete record.
+I have published 25 journal articles and a book chapter, including joint first and senior author papers in *The Lancet Child & Adolescent Health*, *Psychological Medicine*, and *LGBT Health*. Work I have co-authored is cited in about 35 policy documents, including reports from the OECD, the World Health Organization, the EU drugs agency, and UNODC. All 25 journal articles are free to read.
+
+Five papers that show the main lines of my research are below, followed by an explorer and the complete list, which is updated from [ORCID](https://orcid.org/0000-0003-2881-4906).
 
 ```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(orcidtr)
@@ -330,9 +332,9 @@ selected_display <- selected |>
 ```
 
 
-## Programme-defining outputs
+## Selected papers
 
-These papers mark key strands of the programme and work for which I held substantial intellectual or analytical responsibility.
+Papers for which I led the analysis, the writing, or the study design.
 
 ```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 selected_display |>
@@ -427,9 +429,19 @@ selected_display |>
   cat()
 ```
 
+### Under review
+
+<div class="selected-publication">
+<div class="selected-theme">Addiction treatment and services</div>
+<div class="selected-title"><a href="https://doi.org/10.2139/ssrn.7505399">Research using the National Drug and Alcohol Treatment Monitoring System (NDTMS) in England: a scoping review of surveillance, analysis, and linkage (2005 to 2026)</a></div>
+<div class="selected-meta">SSRN preprint &middot; 2026 &middot; under review at <i>Addiction</i></div>
+<p>From UNITED: a review of 83 research outputs that use England's national drug and alcohol treatment data, setting out how the data have been used and where they can support more research.</p>
+<p class="selected-contribution"><b>My contribution:</b> First author; I led the review as principal investigator of UNITED.</p>
+</div>
+
 ## Explore my research
 
-The timeline and filters organise peer-reviewed publications into broad research strands using OpenAlex topics, with curated classifications retained for the selected outputs above. Open-access links are included where OpenAlex identifies an accessible copy.
+The timeline and filters group peer reviewed publications into broad research areas using OpenAlex topics, with my own classifications for the selected papers above. Open access links are included where OpenAlex identifies an accessible copy.
 
 <div id="publication-explorer" class="publication-explorer">
 
@@ -612,7 +624,7 @@ if (nrow(timeline_data) > 0) {
       '" role="img" aria-labelledby="publication-timeline-title publication-timeline-description">'
     ),
     '<title id="publication-timeline-title">Publication timeline by research strand</title>',
-    '<desc id="publication-timeline-description">Each point represents a peer-reviewed publication. Select a point to identify the paper.</desc>',
+    '<desc id="publication-timeline-description">Each point represents a peer reviewed publication. Select a point to identify the paper.</desc>',
     paste(vertical_grid, collapse = "\n"),
     paste(horizontal_grid, collapse = "\n"),
     paste(timeline_marks, collapse = "\n"),
@@ -649,7 +661,7 @@ year_options <- c(
 cat(
   '<div class="publication-toolbar">',
   '<label class="publication-control" for="publication-search">Search publications',
-  '<input id="publication-search" type="search" placeholder="Title, journal or topic">',
+  '<input id="publication-search" type="search" placeholder="Title, journal, or topic">',
   '</label>',
   '<label class="publication-control" for="publication-year">Publication year',
   '<select id="publication-year">',
@@ -711,7 +723,7 @@ render_publication_section <- function(data, heading) {
           paste0(
             '<a class="publication-action" href="',
             htmlEscape(open_access_url, attribute = TRUE),
-            '">Open-access copy</a>'
+            '">Open access copy</a>'
           )
         } else {
           ""
@@ -767,7 +779,7 @@ render_publication_section <- function(data, heading) {
 
 render_publication_section(
   peer_reviewed,
-  "Peer-reviewed publications"
+  "Peer reviewed publications"
 )
 render_publication_section(
   book_chapters,

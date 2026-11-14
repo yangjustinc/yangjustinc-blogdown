@@ -30,13 +30,13 @@ open research resources, and contact information.
 | --- | --- |
 | [`content/_index.md`](./content/_index.md) | Homepage |
 | [`content/research/`](./content/research/) | Research programme |
-| [`content/people/`](./content/people/) | Research team, trainees, programme/data partners, service partners and collaborating research groups |
+| [`content/team/`](./content/team/) | MINDSET group members, doctoral researchers, partners and collaborators |
 | [`content/publications/`](./content/publications/) | Selected and complete publications |
 | [`content/funding/`](./content/funding/) | Research funding |
 | [`content/talks/`](./content/talks/) | Talks and presentations |
 | [`content/teaching/`](./content/teaching/) | Teaching, supervision and trainee development |
 | [`content/resources/`](./content/resources/) | Selected open research, code and reusable teaching materials |
-| [`content/leadership/`](./content/leadership/) | Academic leadership and recognition |
+| [`content/about/`](./content/about/) | Biography, roles and recognition, education and career |
 | [`content/contact/`](./content/contact/) | Contact information |
 | [`data/site/`](./data/site/) | Curated CSV inputs used by R Markdown pages |
 | [`layouts/`](./layouts/) | Site-level Hugo layouts, partials and shortcodes |
