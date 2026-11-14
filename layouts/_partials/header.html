@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ if .IsHome }}{{ .Site.Params.homeTitle }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-    <link rel="icon" href="{{ "mark.svg" | relURL }}" type="image/svg+xml">
+    <link rel="icon" href="{{ "logo-v2.svg" | relURL }}" type="image/svg+xml">
     <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
     {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
@@ -20,7 +20,7 @@
     <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header">
       <a class="site-brand" href="{{ "/" | relURL }}" aria-label="Justin C Yang home">
-        <img class="site-brand-mark" src="{{ "mark.svg" | relURL }}" alt="" width="42" height="42">
+        <img class="site-brand-mark" src="{{ "logo-v2.svg" | relURL }}" alt="" width="42" height="42">
         <span class="site-brand-copy">
           <span class="site-brand-name">Justin C Yang</span>
         </span>

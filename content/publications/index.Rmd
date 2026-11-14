@@ -6,7 +6,7 @@ output:
     keep_md: yes
 ---
 
-I have published 25 journal articles and a book chapter, including joint first and senior author papers in *The Lancet Child & Adolescent Health*, *Psychological Medicine*, and *LGBT Health*. Work I have co-authored is cited in about 35 policy documents, including reports from the OECD, the World Health Organization, the EU drugs agency, and UNODC. Every article listed is free to read.
+I have published 25 journal articles and a book chapter, including joint first and senior author papers in *The Lancet Child & Adolescent Health*, *Psychological Medicine*, and *LGBT Health*. Work I have co-authored is cited in about 35 policy documents, including reports from the OECD, the World Health Organization, the EU drugs agency, and UNODC. All 25 journal articles are free to read.
 
 Five papers that show the main lines of my research are below, followed by an explorer and the complete list, which is updated from [ORCID](https://orcid.org/0000-0003-2881-4906).
 
@@ -435,7 +435,7 @@ selected_display |>
 <div class="selected-theme">Addiction treatment and services</div>
 <div class="selected-title"><a href="https://doi.org/10.2139/ssrn.7505399">Research using the National Drug and Alcohol Treatment Monitoring System (NDTMS) in England: a scoping review of surveillance, analysis, and linkage (2005 to 2026)</a></div>
 <div class="selected-meta">SSRN preprint &middot; 2026 &middot; under review at <i>Addiction</i></div>
-<p>The first output of UNITED: a review of 83 research outputs that use England's national drug and alcohol treatment data, setting out how the data have been used and where they can support more research.</p>
+<p>From UNITED: a review of 83 research outputs that use England's national drug and alcohol treatment data, setting out how the data have been used and where they can support more research.</p>
 <p class="selected-contribution"><b>My contribution:</b> First author; I led the review as principal investigator of UNITED.</p>
 </div>
 

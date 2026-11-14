@@ -6,7 +6,7 @@ output:
     keep_md: yes
 ---
 
-I speak on linked administrative data, NHS mental health records, neurodivergence and education, and addiction treatment data, and I teach methods courses for researchers working in secure data environments. For speaking invitations, please [get in touch](../contact/); a reusable biography is on the [About](../about/) page.
+I give talks on linked administrative data, NHS mental health records, neurodivergence and education, and addiction treatment data, and I teach methods courses for researchers working in secure data environments. For speaking invitations, please [get in touch](../contact/); a reusable biography is on the [About](../about/) page.
 
 ```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(tidyverse)

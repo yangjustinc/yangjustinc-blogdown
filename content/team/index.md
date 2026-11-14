@@ -5,7 +5,7 @@ aliases:
   - /people/
 ---
 
-MINDSET is the research group I lead at UCL: two postdoctoral research fellows whose scientific work I direct, and two doctoral students I co-supervise. Our work runs through partnerships with NHS trusts, national data programmes, treatment providers, lived experience organisations, and other research groups, listed below.
+MINDSET is the name of my research group at UCL. It includes the postdoctoral research fellows whose research I direct day to day and the doctoral students I co-supervise. Much of our work depends on partnerships with NHS trusts, national data programmes, treatment providers, lived experience organisations, and other research groups, listed below.
 
 ## Research team
 

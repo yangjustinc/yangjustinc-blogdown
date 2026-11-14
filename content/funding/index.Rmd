@@ -448,7 +448,7 @@ render_funding <- function(df) {
 ## As principal investigator
 
 <div class="funding-section-intro">
-Awards for which I am responsible for the scientific direction and delivery of the research.
+Awards for which I hold, or held, responsibility for the scientific direction and delivery of the research.
 </div>
 
 ```{r results='asis', echo=FALSE}
