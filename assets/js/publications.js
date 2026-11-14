@@ -44,7 +44,7 @@
       var exploreIntro = exploreSection.querySelector("p");
       if (exploreIntro) {
         exploreIntro.textContent =
-          "The timeline and filters group publications into broad research areas using OpenAlex topics, with curated classifications retained for selected papers. Open-access links are included where available.";
+          "The timeline and filters group publications into broad research areas using OpenAlex topics, with curated classifications retained for selected papers. Open access links are included where available.";
       }
     }
 

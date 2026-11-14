@@ -1,8 +1,10 @@
 ---
 title: Contact
-description: "Contact Dr Justin C Yang about research collaborations, supervision, speaking invitations, advisory work, or media and policy engagement."
+description: "Contact Dr Justin C Yang about research collaboration, doctoral supervision, speaking invitations, or advisory work."
 ---
 
-For enquiries about **research collaboration, supervision, speaking and training, or advisory and engagement work**, please use the form below. Prospective students should include a brief research question, likely methods or data, and the connection to my work.
+I welcome enquiries about **research collaboration**, particularly projects using NHS mental health records, linked education and health data, or national drug and alcohol treatment data; **doctoral supervision**; **speaking and methods training**; and **advisory work** on research data and governance.
+
+Please use the form below. Prospective PhD students should include a short outline of their question, the data or methods they have in mind, and their likely funding route.
 
 {{< contact >}}

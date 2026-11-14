@@ -1,9 +1,9 @@
 ---
-title: Open Research & Resources
-description: "Open research, analytical code, teaching materials, and reproducible resources by Dr Justin C Yang."
+title: Code & Resources
+description: "Open analysis code, teaching materials, and reproducible research resources by Dr Justin C Yang."
 ---
 
-I make analytical code, teaching materials, and selected research infrastructure public where they can be reused beyond a single study. Stable releases are archived with Zenodo DOIs where appropriate.
+Most of my research uses data that cannot be shared, so I release the analysis code and teaching materials instead. Stable releases are archived on Zenodo with DOIs. All 25 of my journal articles are free to read; see [Publications](../publications/).
 
 ## Research code
 
@@ -14,9 +14,9 @@ I make analytical code, teaching materials, and selected research infrastructure
     <span>linked administrative data<br>reproducible analysis</span>
   </a>
   <div class="resource-feature-copy">
-    <h2>HOPESEN: SEND provision and secondary-school outcomes</h2>
-    <p><a href="https://github.com/yangjustinc/hopesen"><b>HOPESEN</b></a> provides the analytical code for population-based analyses of SEND provision profiles and education and health outcomes among secondary-school pupils in England using the ECHILD Research Database.</p>
-    <p>It includes linked-data cohort construction, outcome derivation, descriptive analyses, and fixed-effects Poisson regression workflows for the ONS Secure Research Service, while documenting practical reproducibility constraints in an air-gapped trusted research environment.</p>
+    <h2>HOPESEN: SEND provision and secondary school outcomes</h2>
+    <p><a href="https://github.com/yangjustinc/hopesen"><b>HOPESEN</b></a> provides the analytical code for population-based analyses of SEND provision profiles and education and health outcomes among secondary school pupils in England using the ECHILD Research Database.</p>
+    <p>It includes linked data cohort construction, outcome derivation, descriptive analyses, and fixed effects Poisson regression workflows for the ONS Secure Research Service, while documenting practical reproducibility constraints in an air-gapped trusted research environment.</p>
     <p><a href="https://github.com/yangjustinc/hopesen">Source code and documentation</a> · <a href="https://doi.org/10.5281/zenodo.22710433">Archived v1.0.0 release and DOI</a></p>
   </div>
 </article>
@@ -29,7 +29,7 @@ I make analytical code, teaching materials, and selected research infrastructure
   </a>
   <div class="resource-feature-copy">
     <h2>Routine data analysis across R, Python, and Stata</h2>
-    <p><a href="https://yangjustinc.github.io/2024-ncras/"><b>Risk of Suicide After Cancer Diagnosis in England</b></a> is a worked teaching resource demonstrating approaches to analysing routinely collected health data. It covers survival-analysis workflows, person-time, standardised mortality ratios, and absolute excess risks, with examples in R, Python, and Stata.</p>
+    <p><a href="https://yangjustinc.github.io/2024-ncras/"><b>Risk of Suicide After Cancer Diagnosis in England</b></a> is a worked teaching resource demonstrating approaches to analysing routinely collected health data. It covers survival analysis workflows, person-time, standardised mortality ratios, and absolute excess risks, with examples in R, Python, and Stata.</p>
     <p>The material uses synthetic and published data for methodological and educational purposes. <a href="https://github.com/yangjustinc/2024-ncras">Source code and documentation</a> · <a href="https://doi.org/10.5281/zenodo.22710447">Archived v1.0.0 release and DOI</a></p>
   </div>
 </article>
@@ -48,18 +48,18 @@ I make analytical code, teaching materials, and selected research infrastructure
 ## Open infrastructure
 
 <article class="resource-feature">
-  <a class="resource-feature-preview" href="https://github.com/yangjustinc/yangjustinc-blogdown" aria-label="Open the MINDSET website source repository">
-    <img src="images/website-source-20260901.jpg" alt="Preview of the MINDSET website source repository on GitHub" width="1348" height="926" loading="lazy" decoding="async">
+  <a class="resource-feature-preview" href="https://github.com/yangjustinc/yangjustinc-blogdown" aria-label="Open the website source repository">
+    <img src="images/website-source-20260901.jpg" alt="Preview of the website source repository on GitHub" width="1348" height="926" loading="lazy" decoding="async">
   </a>
   <div class="resource-feature-copy">
     <h2>Reproducible website infrastructure</h2>
     <p>The <a href="https://github.com/yangjustinc/yangjustinc-blogdown"><b>website source</b></a> is public. The site uses Hugo, R, ORCID, OpenAlex, Crossref, GitHub Actions, and small curated data files to maintain publications, funding, talks, teaching, and other academic content with limited manual duplication.</p>
-    <p>The repository documents the build, dependency-management, content-refresh, and validation workflow.</p>
+    <p>The repository documents the build, dependency management, content refresh, and validation workflow.</p>
   </div>
 </article>
 
 ## More code, talks, and materials
 
-Additional public repositories are available through my [GitHub profile](https://github.com/yangjustinc), and selected academic and methods presentations are listed under [Talks & Presentations](../talks/).
+Additional public repositories are available through my [GitHub profile](https://github.com/yangjustinc), and talks and methods courses are listed under [Talks](../talks/).
 
-Project-specific code and materials are also linked from the relevant [research](../research/), [publication](../publications/), and [teaching](../teaching/) pages where available.
+Code and materials for specific projects are also linked from the relevant [research](../research/), [publication](../publications/), and [teaching](../teaching/) pages where available.

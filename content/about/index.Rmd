@@ -1,6 +1,6 @@
 ---
 title: About
-description: "Biography, editorial roles, national research governance and institutional leadership of Dr Justin C Yang, psychiatric epidemiologist at UCL."
+description: "Biography, editorial roles, national research governance, and institutional leadership of Dr Justin C Yang, psychiatric epidemiologist at UCL."
 aliases:
   - /leadership/
 output:
@@ -12,9 +12,9 @@ output:
 
 <p class="bio-note">For event organisers and editors: this biography may be reused as written.</p>
 
-Dr Justin C Yang is a psychiatric epidemiologist and Senior Research Fellow in the Division of Psychiatry at University College London, and Associate Editor of *Addiction*. Dr Yang's research examines why the identification, treatment and outcomes of mental-health, neurodevelopmental and substance-use needs differ between groups and places, using England's linked health, education and treatment records.
+Dr Justin C Yang is a psychiatric epidemiologist and Senior Research Fellow in the Division of Psychiatry at University College London, and Associate Editor of *Addiction*. Dr Yang's research examines why the identification, treatment, and outcomes of mental health, neurodevelopmental, and substance use needs differ between groups and places, using England's linked health, education, and treatment records.
 
-Dr Yang is principal investigator of WISDOM, a UKRI Mental Health Platform cross-hub fellowship; UNITED, an NIHR Team Science award on England's national drug and alcohol treatment data; and HOPE-SEN, an ADR UK fellowship on the education and health of neurodivergent pupils. Dr Yang is Deputy Lead of the North London NHS Foundation Trust research database and an Expert Member of the Health Research Authority's Confidentiality Advisory Group, and holds a PhD in Public Health and Primary Care from the University of Cambridge and an MSPH in Health Policy from Johns Hopkins University.
+Dr Yang is principal investigator of WISDOM, a UKRI Mental Health Platform Cross-Hub Fellowship; UNITED, an NIHR Team Science award on England's national drug and alcohol treatment data; and HOPE-SEN, an ADR UK fellowship on the education and health of neurodivergent pupils. Dr Yang is Deputy Lead of the North London NHS Foundation Trust research database and an Expert Member of the Health Research Authority's Confidentiality Advisory Group, and holds a PhD in Public Health and Primary Care from the University of Cambridge and an MSPH in Health Policy from Johns Hopkins University.
 
 ## Roles and recognition
 
@@ -34,7 +34,7 @@ Dr Yang is principal investigator of WISDOM, a UKRI Mental Health Platform cross
 <p><b>Expert Member</b>, <a href="https://www.hra.nhs.uk/about-us/committees-and-services/confidentiality-advisory-group/">Confidentiality Advisory Group, Health Research Authority</a> (2026&ndash;)<br>
 <b>Steering Committee Member</b>, <a href="https://www.gov.uk/government/publications/life-sciences-healthcare-goals/addiction-healthcare-goals">Addiction Healthcare Goals</a> (2025&ndash;)<br>
 <b>Steering Group Member</b>, <a href="https://mentalhealthresearch.org.uk/">NIHR Mental Health Research Incubator</a> (2025&ndash;)<br>
-<b>Member</b>, ADR UK Task and Finish Group on the data-access journey (2026&ndash;)<br>
+<b>Member</b>, ADR UK Task and Finish Group on the data access journey (2026&ndash;)<br>
 <b>Public Member</b>, Data Access Committee, <a href="https://easternsde.nhs.uk/">Eastern England Secure Data Environment</a> (2026&ndash;)<br>
 <b>Written evidence</b>, House of Commons Education Committee, on persistent school absence among autistic pupils and pupils with intellectual disability (ECA0106, 2026)</p>
 </div>
@@ -42,14 +42,14 @@ Dr Yang is principal investigator of WISDOM, a UKRI Mental Health Platform cross
 <div class="leadership-card hue-blue">
 <h3 class="leadership-kicker">Research infrastructure</h3>
 <p><b>Deputy Lead</b> (2024&ndash;), previously Database Manager (2019&ndash;2024), <a href="https://www.northlondonmentalhealth.nhs.uk/research-database-">North London NHS Foundation Trust research database</a>. Led the integration of two Trusts' research data after their merger; has advised on 31 research projects; contributes to harmonisation with the CRIS databases at South London and Maudsley, Oxford Health, and Cambridgeshire and Peterborough.<br>
-<b>Co-lead</b>, HDR UK and DARE UK project embedding national public-involvement standards in the database's governance (2025&ndash;26)</p>
+<b>Co-lead</b>, HDR UK and DARE UK project embedding national public involvement standards in the database's governance (2025&ndash;26)</p>
 </div>
 
 <div class="leadership-card hue-green">
 <h3 class="leadership-kicker">Leadership at UCL</h3>
 <p><b>Elected Member</b>, <a href="https://www.ucl.ac.uk/about/leadership/governance/committees/ab-and-committees/academic-board">UCL Academic Board</a> (2026&ndash;)<br>
-<b>Lead</b>, Culture Change Action Group, Division of Psychiatry (2022&ndash;); designed and led the Division's Athena SWAN listening exercise on bullying, harassment and inclusion<br>
-<b>Founder and lead</b>, the Division's non-clinical early-career researcher community of 50&ndash;60 researchers (2022&ndash;), now led with colleagues<br>
+<b>Lead</b>, Culture Change Action Group, Division of Psychiatry (2022&ndash;); designed and led the Division's Athena SWAN listening exercise on bullying, harassment, and inclusion<br>
+<b>Founder and lead</b>, the Division's non-clinical early career researcher community of 50&ndash;60 researchers (2022&ndash;), now led with colleagues<br>
 <b>Research Development Programme Lead</b>, Division of Psychiatry (2023&ndash;25)<br>
 <b>Open Science Champion</b>, Faculty of Brain Sciences (2025&ndash;)</p>
 </div>
@@ -67,7 +67,7 @@ Dr Yang is principal investigator of WISDOM, a UKRI Mental Health Platform cross
 
 ## Manuscript review
 
-I review manuscripts across psychiatry, epidemiology, substance use, public health and health-services research. The list below is generated from my ORCID peer-review record.
+I review manuscripts across psychiatry, epidemiology, substance use, public health, and health services research. The list below is generated from my ORCID peer-review record.
 
 ```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(tidyverse)

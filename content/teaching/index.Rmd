@@ -1,12 +1,12 @@
 ---
 title: Teaching & Supervision
-description: "Teaching, supervision, trainee development, and quantitative methods training by Dr Justin C Yang at UCL."
+description: "Doctoral supervision, MSc teaching, research supervision, and methods training by Dr Justin C Yang at UCL."
 output:
   html_document:
     keep_md: yes
 ---
 
-My teaching and supervision centre on **helping trainees become thoughtful, independent researchers who can reason clearly with complex and heterogeneous evidence**. I teach quantitative methods, supervise research across mental health and population health, and contribute to open and reproducible research training.
+I teach epidemiology, statistics, and research methods at UCL, supervise doctoral and taught postgraduate research, and lead training in reproducible data analysis for mental health researchers.
 
 ```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 library(tidyverse)
@@ -20,63 +20,49 @@ students <- read_csv(
 # Keep a complete portable supervision ledger alongside the curated page.
 write_csv(students, "supervision-record.csv", na = "")
 
-current_phd_students <- students |>
-  filter(
-    Degree == "PhD",
-    str_detect(`Year(s)`, "Present"),
-    str_detect(str_to_lower(Role), "supervisor")
-  )
-
-current_phd_committees <- students |>
-  filter(
-    Degree == "PhD",
-    str_detect(`Year(s)`, "Present"),
-    str_detect(str_to_lower(Role), "committee")
-  )
-
-current_taught <- students |>
-  filter(
-    Degree != "PhD",
-    str_detect(`Year(s)`, "Present")
-  )
-
-primary_projects <- students |>
-  filter(
-    str_to_lower(Role) == "primary supervisor",
-    Degree != "PhD"
-  )
-
-published_projects <- students |>
-  filter(
-    Degree != "PhD",
-    str_detect(Topic, "\\]\\(https?://")
-  )
-
-recent_projects <- students |>
-  filter(
-    Institution == "UCL",
-    Degree != "PhD",
-    !str_detect(`Year(s)`, "Present")
+doctoral <- students |>
+  filter(Degree == "PhD") |>
+  mutate(
+    role_label = case_when(
+      str_detect(str_to_lower(Role), "supervisor") ~ "Subsidiary supervisor",
+      str_detect(str_to_lower(Role), "committee") ~ "Thesis committee",
+      TRUE ~ Role
+    ),
+    role_order = if_else(role_label == "Subsidiary supervisor", 1L, 2L),
+    status = if_else(str_detect(`Year(s)`, "Present"), "Current", "Completed"),
+    years = str_replace(`Year(s)`, "-", "&ndash;") |>
+      str_replace("Present", "")
   ) |>
-  arrange(desc(`Year(s)`), Student) |>
-  slice_head(n = 8)
+  arrange(role_order, desc(status), Student)
+
+taught <- students |>
+  filter(Degree != "PhD")
+
+primary_projects <- taught |>
+  filter(str_to_lower(Role) == "primary supervisor")
+
+published_projects <- taught |>
+  filter(str_detect(Topic, "\\]\\(https?://"))
 ```
 
-## Current trainees
+## Doctoral supervision
 
-### PhD students
-
-I currently supervise PhD work spanning neurodevelopment, educational experiences, and inequalities in psychiatric disorders.
+I am subsidiary supervisor to two UCL PhD students and sit on three thesis committees. As subsidiary supervisor to Vanessa Cieplinska, I chaired her successful upgrade examination (March 2026), and we co-authored written evidence to the House of Commons Education Committee. I also served on Dr Nathalie Rich's thesis committee until she completed in 2025; she now works in my group as a postdoctoral research fellow.
 
 <div class="site-table-wrap">
 
 ```{r results='asis', echo=FALSE}
-current_phd_students |>
-  arrange(Student) |>
-  select(Student, Topic) |>
+doctoral |>
+  transmute(
+    Student,
+    Role = role_label,
+    Years = paste0(years, if_else(status == "Completed", " (completed)", "")),
+    Topic
+  ) |>
   knitr::kable(
     format = "html",
-    col.names = c("PhD student", "Research"),
+    escape = FALSE,
+    col.names = c("PhD student", "My role", "Years", "Research"),
     table.attr = 'class="site-table"'
   ) |>
   cat()
@@ -84,74 +70,39 @@ current_phd_students |>
 
 </div>
 
-### Thesis committees
+## Teaching
 
-I also contribute to doctoral research through thesis-committee roles where my methodological or substantive expertise is relevant.
-
-<div class="site-table-wrap">
-
-```{r results='asis', echo=FALSE}
-current_phd_committees |>
-  arrange(Student) |>
-  select(Student, Topic) |>
-  knitr::kable(
-    format = "html",
-    col.names = c("PhD student", "Research"),
-    table.attr = 'class="site-table"'
-  ) |>
-  cat()
-```
-
-</div>
-
-### MSc supervision
-
-<div class="site-table-wrap">
-
-```{r results='asis', echo=FALSE}
-if (nrow(current_taught) > 0) {
-  current_taught |>
-    arrange(Student) |>
-    select(Student, Topic) |>
-    knitr::kable(
-      format = "html",
-      col.names = c("Student", "Project"),
-      table.attr = 'class="site-table"'
-    ) |>
-    cat()
-}
-```
-
-</div>
-
-## Teaching & training
-
-At UCL, I teach epidemiology, statistics, and research methods across postgraduate mental-health programmes. Current and recent teaching includes:
+I teach on three MSc modules in the UCL Division of Psychiatry:
 
 <div class="teaching-module-grid">
-<div class="teaching-module hue-blue"><svg class="teaching-module-glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false"><circle cx="32" cy="6" r="4"/><path d="M32 10v8M10 18h44M10 18v10m22-10v10m22-10v10"/><circle cx="10" cy="32" r="4"/><circle cx="32" cy="32" r="4"/><circle cx="54" cy="32" r="4"/></svg><a href="https://www.ucl.ac.uk/module-catalogue/modules/core-principles-of-mental-health-research-PSBS0002"><b>Core Principles of Mental Health Research</b></a><br>Research design, critical appraisal, and the foundations of mental-health research.</div>
-<div class="teaching-module hue-teal"><svg class="teaching-module-glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false"><path d="M7 34V6M7 34h51M12 29l10-6 9 2 10-10 12-5"/><circle cx="15" cy="16" r="2.5"/><circle cx="26" cy="30" r="2.5"/><circle cx="36" cy="18" r="2.5"/><circle cx="49" cy="22" r="2.5"/></svg><a href="https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research-PSBS0008"><b>Practical Statistics for Mental Health Research</b></a><br>Applied quantitative reasoning and statistical analysis for mental-health research.</div>
+<div class="teaching-module hue-blue"><svg class="teaching-module-glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false"><circle cx="32" cy="6" r="4"/><path d="M32 10v8M10 18h44M10 18v10m22-10v10m22-10v10"/><circle cx="10" cy="32" r="4"/><circle cx="32" cy="32" r="4"/><circle cx="54" cy="32" r="4"/></svg><a href="https://www.ucl.ac.uk/module-catalogue/modules/core-principles-of-mental-health-research-PSBS0002"><b>Core Principles of Mental Health Research</b></a><br>Research design, critical appraisal, and the foundations of mental health research.</div>
+<div class="teaching-module hue-teal"><svg class="teaching-module-glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false"><path d="M7 34V6M7 34h51M12 29l10-6 9 2 10-10 12-5"/><circle cx="15" cy="16" r="2.5"/><circle cx="26" cy="30" r="2.5"/><circle cx="36" cy="18" r="2.5"/><circle cx="49" cy="22" r="2.5"/></svg><a href="https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research-PSBS0008"><b>Practical Statistics for Mental Health Research</b></a><br>Applied statistical analysis for mental health research.</div>
 <div class="teaching-module hue-green"><svg class="teaching-module-glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false"><circle cx="8" cy="11" r="4"/><circle cx="8" cy="29" r="4"/><path d="M12 11h18l9 9h17M12 29h18l9-9M48 14l8 6-8 6"/></svg><a href="https://www.ucl.ac.uk/module-catalogue/modules/epidemiological-research-methods-in-mental-health-PSBS0013"><b>Epidemiological Research Methods in Mental Health</b></a><br>Epidemiological designs, measures, inference, and interpretation in psychiatric research.</div>
 </div>
+From 2021 to 2025 I was a Visiting Lecturer at the Wolfson Institute of Population Health, Queen Mary University of London, where I supervised 17 MSc dissertations.
 
-I have also contributed to curriculum development around **open science** and **public involvement and engagement with research**. As a certified instructor with [The Carpentries](https://carpentries.org/), I teach practical data and computational skills for open and reproducible research. Selected reusable teaching materials are available through [Open Research & Resources](../resources/).
+## Research training and development
 
-## Supervision in practice
+- **Reproducible data analysis.** As a certified [Carpentries](https://carpentries.org/) instructor, I designed and teach a free four session course in reproducible analysis in R and Python for mental health researchers (2026), and I have been invited to teach good practice in R to users of the ONS Secure Research Service across England.
+- **Research Development Programme Lead**, Division of Psychiatry (2023 to 2025). I used annual needs assessments to shape the Division's training in quantitative methods, fellowship preparation, open science, public involvement, and research management.
+- **Early career researchers.** Since 2022 I have built and led the Division's community of non-clinical early career researchers (around 50 to 60 members), with regular fellowship development and peer feedback sessions. Its leadership is now shared with colleagues.
+
+Reusable teaching materials are listed under [Code and resources](../resources/), and courses I have delivered under [Talks](../talks/).
+
+## Taught research projects
 
 ```{r results='asis', echo=FALSE}
 cat(
   '<div class="supervision-summary">',
-  '<div class="supervision-stat"><b>', nrow(primary_projects), '</b><span>postgraduate or undergraduate projects supervised</span></div>',
-  '<div class="supervision-stat"><b>', nrow(current_phd_students), '</b><span>current PhD students</span></div>',
-  '<div class="supervision-stat"><b>', nrow(current_phd_committees), '</b><span>current thesis-committee roles</span></div>',
-  '<div class="supervision-stat"><b>', nrow(published_projects), '</b><span>student projects linked to published outputs</span></div>',
+  '<div class="supervision-stat"><b>', nrow(taught), '</b><span>MSc and BSc research projects supervised since 2020</span></div>',
+  '<div class="supervision-stat"><b>', nrow(primary_projects), '</b><span>as primary supervisor</span></div>',
+  '<div class="supervision-stat"><b>', nrow(published_projects), '</b><span>led to peer reviewed papers with the student as first author</span></div>',
+  '<div class="supervision-stat"><b>', sum(doctoral$status == "Current"), '</b><span>current doctoral supervision and committee roles</span></div>',
   '</div>'
 )
 ```
 
-My supervision has spanned mental health, addiction, neurodivergence, climate and health, health inequalities, public health, and health policy. Several projects have developed into peer-reviewed outputs.
-
-### Student work linked to publications
+My taught project supervision spans mental health, addiction, neurodivergence, climate and health, health inequalities, and health policy, at UCL and Queen Mary University of London.
 
 <div class="site-table-wrap">
 
@@ -169,23 +120,6 @@ published_projects |>
 
 </div>
 
-### Selected recent supervision
+## Prospective doctoral students
 
-<div class="site-table-wrap">
-
-```{r results='asis', echo=FALSE}
-recent_projects |>
-  select(Student, Degree, Topic) |>
-  knitr::kable(
-    format = "html",
-    col.names = c("Student", "Degree", "Project"),
-    table.attr = 'class="site-table"'
-  ) |>
-  cat()
-```
-
-</div>
-
-## Prospective trainees
-
-I welcome enquiries about PhD, MSc, and undergraduate projects that fit the wider MINDSET agenda, particularly work connecting mental-health questions with longitudinal, administrative, clinical, environmental, behavioural, or biological data; causal inference; neurodivergence; addiction; and inequalities. Please [get in touch](../contact/) with a brief outline of the question, likely data or methods, and, for PhD enquiries, potential funding routes and eligibility.
+I welcome enquiries from prospective PhD students whose questions fit my research on neurodivergence and education, addiction treatment, or severe mental illness, particularly projects using linked administrative data, NHS mental health records, or national treatment data. Please [get in touch](../contact/) with a short outline of your question, the data or methods you have in mind, and your likely funding route.

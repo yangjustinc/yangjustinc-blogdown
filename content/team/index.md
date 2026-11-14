@@ -1,11 +1,11 @@
 ---
 title: Team
-description: "The MINDSET group led by Dr Justin C Yang at UCL, and its partners across NHS trusts, national data programmes, treatment providers and lived-experience organisations."
+description: "The MINDSET group led by Dr Justin C Yang at UCL, and its partners across NHS trusts, national data programmes, treatment providers, and lived experience organisations."
 aliases:
   - /people/
 ---
 
-MINDSET is the research group I lead at UCL: two postdoctoral research fellows whose scientific work I direct, and two doctoral students I co-supervise. Our work runs through partnerships with NHS trusts, national data programmes, treatment providers, lived-experience organisations and other research groups, listed below.
+MINDSET is the research group I lead at UCL: two postdoctoral research fellows whose scientific work I direct, and two doctoral students I co-supervise. Our work runs through partnerships with NHS trusts, national data programmes, treatment providers, lived experience organisations, and other research groups, listed below.
 
 ## Research team
 
@@ -85,7 +85,7 @@ Many partners contribute to more than one line of work.
 <div class="collaboration-cluster hue-blue">
 <div class="collaboration-kicker">Clinical data & infrastructure</div>
 <h3>Turning routinely collected records into research evidence</h3>
-<p>Electronic health records, clinical text, governed data access, harmonisation, and methods for research across mental-health services.</p>
+<p>Electronic health records, clinical text, governed data access, harmonisation, and methods for research across mental health services.</p>
 <div class="collaboration-links">
 <a href="https://aimhlab.research.st/">Applied Informatics for Mental Health (aiMH)</a>
 <a href="https://naomilaunders.co.uk/">Improving Mental and Physical Health Analytics through Robust Epidemiology and Data Science (IMPARTED)</a>
@@ -98,7 +98,7 @@ Many partners contribute to more than one line of work.
 <div class="collaboration-cluster hue-teal">
 <div class="collaboration-kicker">Experience, biology & methods</div>
 <h3>Connecting mechanisms, context, and measurement</h3>
-<p>Intensive longitudinal and lived-experience measures, social and environmental context, biomarkers and immunology, neuroimaging, causal inference, systems thinking, prediction, and inequalities.</p>
+<p>Intensive longitudinal and lived experience measures, social and environmental context, biomarkers and immunology, neuroimaging, causal inference, systems thinking, prediction, and inequalities.</p>
 <div class="collaboration-links">
 <a href="https://www.complexemotionshub.co.uk/">Complex Emotions Hub</a>
 <a href="https://www.mentalhealthplatform.ac.uk/research-hubs/immunomind">ImmunoMIND</a>
@@ -111,8 +111,8 @@ Many partners contribute to more than one line of work.
 
 <div class="collaboration-cluster hue-purple">
 <div class="collaboration-kicker">Services, policy & lived and living experience</div>
-<h3>Keeping research connected to lived and living experience, care, and decision-making</h3>
-<p>Lived- and living-experience expertise, treatment-provider expertise, public involvement, service context, and partnerships that help make questions and interpretation useful beyond academia.</p>
+<h3>Keeping research connected to lived and living experience, care, and decision making</h3>
+<p>Lived- and living experience expertise, treatment provider expertise, public involvement, service context, and partnerships that help make questions and interpretation useful beyond academia.</p>
 <div class="collaboration-links">
 <a href="https://www.changegrowlive.org/">Change Grow Live</a>
 <a href="https://mcpin.org/">McPin Foundation</a>
