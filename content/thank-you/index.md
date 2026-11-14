@@ -1,8 +1,11 @@
 ---
 title: Message sent
-description: "Confirmation that a message has been submitted through the MINDSET website."
+description: "Confirmation that your message has been sent."
+robots: "noindex"
+sitemap:
+  disable: true
 ---
 
 Thank you. Your message has been submitted.
 
-[Return to the MINDSET homepage](/).
+[Return to the homepage](/).

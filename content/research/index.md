@@ -1,6 +1,6 @@
 ---
 title: Research
-description: "Research led by Dr Justin C Yang in psychiatric epidemiology and health data science, using linked population and clinical data, causal methods, and complementary evidence to study mental health."
+description: "Research by Dr Justin C Yang using linked population and clinical data, longitudinal evidence, and causal methods to study mental-health trajectories."
 ---
 
 My research examines how mental health develops across **lives, places, and systems**, why trajectories and outcomes differ, and which processes may be modifiable. I work across **psychiatric epidemiology, health data science, causal inference, and health services research**.

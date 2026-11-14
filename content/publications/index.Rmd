@@ -1,6 +1,6 @@
 ---
 title: Publications
-description: "Selected and complete publications by Dr Justin C Yang across psychiatric epidemiology, mental health data science, linked administrative and clinical data, neurodivergence, addiction, and inequalities."
+description: "Publications by Dr Justin C Yang in psychiatric epidemiology and mental-health data science, spanning linked data, neurodivergence, addiction, and inequalities."
 output:
   html_document:
     keep_md: yes
