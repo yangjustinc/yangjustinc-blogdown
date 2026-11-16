@@ -2050,3 +2050,46 @@ main li::marker { color: var(--teal); }
   font-size: 0.85rem;
   font-style: italic;
 }
+
+/* Touch, phone and tablet refinements */
+@media (max-width: 860px) {
+  /* Tablet portrait: three narrow research cards become one readable column. */
+  .mindset-questions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header .menu a {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.84rem;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Keep the portrait beside the name so the opening paragraph runs full width. */
+  .home-portrait {
+    width: 4.75rem;
+    margin: 0 0 0.75rem 1rem;
+  }
+
+  .home-lede {
+    clear: both;
+  }
+}
+
+@media (pointer: coarse) {
+  .site-header .menu a {
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+  }
+
+  .footer-social {
+    gap: 0.25rem 0.5rem;
+  }
+
+  .footer-social a {
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+  }
+}

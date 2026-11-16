@@ -29,7 +29,7 @@ code and teaching resources, and contact information.
 | [`layouts/`](./layouts/) | Site-level Hugo layouts, partials and shortcodes |
 | [`assets/css/style.css`](./assets/css/style.css) | Site-wide styling, processed and fingerprinted by Hugo |
 | [`themes/hugo-xmin/`](./themes/hugo-xmin/) | Pinned `hugo-xmin` Git submodule |
-| [`scripts/`](./scripts/) | Rendering and validation utilities |
+| [`scripts/`](./scripts/) | Rendering and validation utilities, and the social card source (`social-card.html`) |
 | [`.github/workflows/`](./.github/workflows/) | Build validation and content refresh workflows |
 
 ## Technology and build boundary
