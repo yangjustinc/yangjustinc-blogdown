@@ -6,7 +6,7 @@ output:
     keep_md: yes
 ---
 
-I have published 25 journal articles and a book chapter, including joint first and senior author papers in *The Lancet Child & Adolescent Health*, *Psychological Medicine*, and *LGBT Health*. Work I have co-authored is cited in about 35 policy documents, including reports from the OECD, the World Health Organization, the EU drugs agency, and UNODC. All 25 journal articles are free to read.
+My publications include joint first and senior author papers in *The Lancet Child & Adolescent Health*, *Psychological Medicine*, and *LGBT Health*. Work I have co-authored is cited in about 35 policy documents, including reports from the OECD, the World Health Organization, the EU drugs agency, and UNODC. Open access copies are linked where available.
 
 Five papers that show the main lines of my research are below, followed by an explorer and the complete list, which is updated from [ORCID](https://orcid.org/0000-0003-2881-4906).
 
@@ -239,10 +239,31 @@ selected_strand_overrides <- selected |>
     selected_strand = classify_selected_strand(theme)
   )
 
+# Preserve verified repository copies when OpenAlex lacks a usable OA link.
+open_access_overrides <- read_csv(
+  "../../data/site/open_access_overrides.csv",
+  col_types = cols(
+    doi = col_character(),
+    open_access_override_url = col_character()
+  ),
+  show_col_types = FALSE
+) |>
+  mutate(doi = normalize_doi(doi))
+
 publication_sections <- publication_sections |>
   left_join(openalex_enrichment, by = "doi") |>
   left_join(selected_strand_overrides, by = "doi") |>
+  left_join(open_access_overrides, by = "doi") |>
   mutate(
+    is_open_access = if_else(
+      !is.na(open_access_override_url) & open_access_override_url != "",
+      TRUE,
+      is_open_access
+    ),
+    open_access_url = coalesce(
+      na_if(open_access_override_url, ""),
+      open_access_url
+    ),
     journal = coalesce(
       na_if(journal, ""),
       openalex_source
