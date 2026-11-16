@@ -11,6 +11,7 @@ on:
       - "data/generated/crossref-bibtex.json"
       - "data/generated/openalex-publications.json"
       - "data/site/selected_publications.csv"
+      - "data/site/open_access_overrides.csv"
 
 permissions:
   contents: read
