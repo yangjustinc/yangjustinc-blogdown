@@ -1,13 +1,13 @@
 ---
 title: Research
-description: "Research by Dr Justin C Yang on what happens to people whose needs fall between school, health, addiction, and social care services."
+description: "Research by Dr Justin C Yang on mental health trajectories, inequalities, and care across education, health, addiction, and social care."
 ---
 
-Many people with mental health, neurodevelopmental, or substance use needs are in contact with more than one service: schools and the NHS, mental health and addiction services, health and social care. My research asks what happens to them at the boundaries between services: who is identified, who reaches treatment or support, who falls through the gaps, and why this differs between groups and places.
+My research examines mental health trajectories, inequalities, and care across the life course. I am particularly interested in people whose needs span different services, including schools and the NHS, mental health and addiction treatment, and health and social care. I study how needs are identified, who receives treatment or support, what happens afterwards, and why outcomes differ between groups and places.
 
-Each service sees only part of a person's experience, so answering these questions usually means bringing together records that services keep separately. How to do that well, and in ways the public can trust, is the subject of the last section below.
+Each service records only part of a person's experience. I often bring together population and clinical records to follow needs and outcomes over time, and work on how those data can be governed and used in ways the public can trust. That work is described below.
 
-My work falls into three areas, each built over several years through a series of studies. Funding details are on the [Funding](../funding/) page, and the full record is on [Publications](../publications/).
+These questions connect three research areas, each developed through a series of studies. Funding details are on the [Funding](../funding/) page, and the full record is on [Publications](../publications/).
 
 ## School and health
 
@@ -32,7 +32,7 @@ People with severe mental illness are supported in hospital, in the community, a
 
 - **Medication harms.** Among 13,391 patients of a London mental health service, antipsychotic polypharmacy was associated with endocrine and metabolic adverse drug reactions recorded in routine care ([*Psychological Medicine*, 2023](https://doi.org/10.1017/S0033291722000952)). I was joint first author and led the analysis and writing.
 - **WISDOM (2026 to 2029).** My UKRI Mental Health Platform Cross-Hub Fellowship brings together the Complex Emotions, DATAMIND, and Social Health hubs to study the social, emotional, environmental, and institutional drivers of severe and enduring mental illness.
-- **Observation on psychiatric wards (2024 to 2028).** In this £1.5 million NIHR study led by Professor Alexandra Pitman, I lead the electronic health record work package, which uses natural language processing to identify enhanced patient observation in clinical notes.
+- **Observation on psychiatric wards (2024 to 2027).** In this £1.5 million NIHR study led by Professor Alexandra Pitman, I lead the electronic health record work package, which uses natural language processing to identify enhanced patient observation in clinical notes.
 - **Linking health and social care data (from 2027).** I co-lead a work package on the acceptability and governance of linking health and social care records in a new NIHR School for Social Care Research study led by Professor Peter Bath.
 
 ## How I work
