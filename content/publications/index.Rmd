@@ -462,7 +462,7 @@ selected_display |>
 
 ## Explore my research
 
-The timeline and filters group peer reviewed publications into broad research areas using OpenAlex topics, with my own classifications for the selected papers above. Open access links are included where OpenAlex identifies an accessible copy.
+The timeline and filters group peer reviewed publications into broad research areas using OpenAlex topics, with my own classifications for the selected papers above. Open access links are included where OpenAlex or a verified institutional repository record identifies an accessible copy.
 
 <div id="publication-explorer" class="publication-explorer">
 

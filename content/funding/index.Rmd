@@ -1,6 +1,6 @@
 ---
 title: Funding
-description: "Research funding led by Dr Justin C Yang: three principal-investigator and fellowship awards, and leadership roles on collaborative research."
+description: "Research funding held by Dr Justin C Yang: three awards as principal investigator, from UKRI, ESRC and ADR UK, and NIHR, and leadership roles on four collaborative awards."
 output:
   html_document:
     keep_md: yes

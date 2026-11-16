@@ -1,6 +1,6 @@
 ---
 title: Home
-description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying mental health trajectories, inequalities, and care, particularly when people's needs span services."
+description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying inequalities in mental health and access to care, particularly when people's needs span services."
 ---
 
 <div class="home-intro">
@@ -50,7 +50,7 @@ My work spans three connected research areas, each developed through a series of
     <span class="mindset-question-number">02</span>
     <h3>Mental health and addiction services</h3>
     <p>Who reaches treatment for drug and alcohol problems, particularly people who also have a mental illness, and what stands in the way.</p>
-    <p class="theme-evidence"><b>Key findings:</b> national US studies of unmet need for mental health treatment and of access to opioid treatment (2019 and 2020; first author), and, in England, a study of mental health diagnoses and deprivation as predictors of access to opioid treatment (2023).<br><b>Projects:</b> UNITED, NIHR Team Science award (2026), on what England's national treatment data can show about who reaches treatment; evaluation of an anti-stigma course for health and care staff, NIHR (2026).</p>
+    <p class="theme-evidence"><b>Key findings:</b> cost was the barrier most often reported by US adults with unmet need for mental health treatment, and provision of opioid agonist treatment varied by region, organisation, and payment (2019 and 2020; first author). In London, people with opioid use disorder and a co-occurring mental health diagnosis had more crisis and inpatient contact (2023).<br><b>Projects:</b> UNITED, NIHR Team Science award (2026), on what England's national treatment data can show about who reaches treatment; evaluation of an anti-stigma course for health and care staff, NIHR (2026).</p>
   </section>
   <section class="mindset-question">
     <span class="mindset-question-number">03</span>

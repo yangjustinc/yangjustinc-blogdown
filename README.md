@@ -1,28 +1,15 @@
-# MINDSET academic website
+# Justin C Yang academic website
 
 Source for [www.justinyang.me](https://www.justinyang.me/), the academic
-website for **MINDSET (Multimodal INference and Data Science for Epidemiology
-and Treatment)**, the research programme led by Dr Justin C Yang at University
-College London.
+website of Dr Justin C Yang, a psychiatric epidemiologist in the UCL Division
+of Psychiatry. The research it describes asks why mental health outcomes and
+access to care differ between people and places, particularly when people's
+needs span services such as school and the NHS, mental health and addiction
+treatment, and health and social care.
 
-MINDSET studies how mental health develops across lives, places, and systems by
-drawing credible inferences from heterogeneous evidence across levels,
-settings, and timescales.
-It is not organised around a single data source. The programme works across
-social, behavioural, environmental, clinical, and biological evidence,
-selecting and developing measurements according to the substantive question.
-
-Multimodal inference means more than placing several datasets in one model.
-The programme uses principled integration and triangulation, causal and
-longitudinal designs, and explicit attention to selection, measurement,
-missingness, and recording processes to establish what each source can and
-cannot support. The aim is to connect experience, context, biology, behaviour,
-and care without treating any one measurement as a complete account of a
-person's life.
-
-The site presents the programme's research, people and collaborations,
-publications, funding, talks, teaching and supervision, academic leadership,
-open research resources, and contact information.
+The site presents research, publications, funding, the MINDSET research group
+and its partners, teaching and supervision, talks, roles and recognition, open
+code and teaching resources, and contact information.
 
 ## Site structure
 
@@ -76,21 +63,30 @@ Several sections minimise manual duplication:
   OpenAlex metadata, and organised using
   [`selected_publications.csv`](./data/site/selected_publications.csv) for the
   curated selection and contribution notes.
+  [`open_access_overrides.csv`](./data/site/open_access_overrides.csv) adds a
+  verified repository copy (for example, an accepted manuscript in UCL
+  Discovery) when OpenAlex does not identify a usable open access link.
 - **Funding** is retrieved from ORCID, with
   [`funding_overrides.csv`](./data/site/funding_overrides.csv) clarifying
-  roles and concise descriptions where needed.
+  roles and concise descriptions where needed. Awards not yet in ORCID are
+  listed in the `pending_awards` table in
+  [`content/funding/index.Rmd`](./content/funding/index.Rmd); remove an entry
+  there once the award appears in ORCID, and update the funding totals on the
+  Funding page and homepage when awards change.
+- **About** lists journals from the ORCID peer-review record.
 - **Teaching and supervision** uses
   [`students.csv`](./data/site/students.csv).
 - **Talks and presentations** uses [`talks.csv`](./data/site/talks.csv).
+  Upcoming talks and the "Forthcoming" label on training are decided when the
+  page is rendered, so re-render Talks after a listed date has passed.
 
 The CSV inputs live under `data/`, so Hugo does not copy them into the
 published website.
 
-The **People & Partnerships** page is curated rather than automatically
-generated. It presents the research team, trainees, programme/data-infrastructure
-partners, service partners and collaborating research groups.
+The **Team** page is curated rather than automatically generated. It presents
+the research group, doctoral researchers, and partners and collaborators.
 
-The **Open Research & Resources** page is also curated rather than automatically
+The **Code & Resources** page is also curated rather than automatically
 generated from GitHub, so only documented and reusable materials intended for a
 wider audience are highlighted.
 
@@ -131,8 +127,8 @@ Refresh every R-generated page:
 Rscript scripts/render_data_pages.R
 ```
 
-The script renders Funding, Leadership, Publications, Talks and Teaching
-without running Hugo. Review the generated HTML diff before committing it.
+The script renders Funding, About, Publications, Talks and Teaching without
+running Hugo. Review the generated HTML diff before committing it.
 ORCID, Crossref, and OpenAlex are external services, so transient API failures
 should not be treated as evidence that the Hugo site itself is broken.
 

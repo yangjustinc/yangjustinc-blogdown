@@ -1,11 +1,11 @@
 ---
 title: Research
-description: "Research by Dr Justin C Yang on mental health trajectories, inequalities, and care across education, health, addiction, and social care."
+description: "Research by Dr Justin C Yang on inequalities in mental health and access to care, particularly where needs span education, health, addiction, and social care services."
 ---
 
-My research examines mental health trajectories, inequalities, and care across the life course. I am particularly interested in people whose needs span different services, including schools and the NHS, mental health and addiction treatment, and health and social care. I study how needs are identified, who receives treatment or support, what happens afterwards, and why outcomes differ between groups and places.
+My research asks why mental health outcomes, and access to treatment and support, differ between people and places. I am particularly interested in people whose needs span different services: schools and the NHS, mental health and addiction treatment, and health and social care. Across this work I study how needs are identified, who receives treatment or support, and what happens to people over time.
 
-Each service records only part of a person's experience. I often bring together population and clinical records to follow needs and outcomes over time, and work on how those data can be governed and used in ways the public can trust. That work is described below.
+Each service records only part of a person's experience, so I often bring together population and clinical records that are kept separately. How to do that well, and in ways the public can trust, is described under [How I work](#how-i-work).
 
 These questions connect three research areas, each developed through a series of studies. Funding details are on the [Funding](../funding/) page, and the full record is on [Publications](../publications/).
 
@@ -21,7 +21,7 @@ Autistic and other neurodivergent children are identified, supported, and exclud
 
 People with drug or alcohol problems often have mental health needs too, and the two are usually treated by different services. I study who reaches treatment and what stands in the way.
 
-- **Access to treatment.** My doctoral research used national US data to show inequalities in unmet need for mental health treatment ([*International Journal for Equity in Health*, 2019](https://doi.org/10.1186/s12939-019-1026-y)) and in the provision of opioid agonist treatment by area, organisation, and payment ([*PLOS ONE*, 2020](https://doi.org/10.1371/journal.pone.0229787)); I was first author of both. In England, I contributed to a study of mental health diagnoses and deprivation as predictors of access to treatment for opioid use disorder ([*Substance Abuse Treatment, Prevention, and Policy*, 2023](https://doi.org/10.1186/s13011-023-00568-5)).
+- **Access to treatment.** My doctoral research used national US data to show inequalities in unmet need for mental health treatment ([*International Journal for Equity in Health*, 2019](https://doi.org/10.1186/s12939-019-1026-y)) and in the provision of opioid agonist treatment by area, organisation, and payment ([*PLOS ONE*, 2020](https://doi.org/10.1371/journal.pone.0229787)); I was first author of both. In a London cohort, I contributed to a study showing that people with opioid use disorder and co-occurring mental health diagnoses had earlier and more frequent contact with crisis and inpatient services ([*Substance Abuse Treatment, Prevention, and Policy*, 2023](https://doi.org/10.1186/s13011-023-00568-5)).
 - **UNITED (2026).** I am the named lead investigator of this NIHR Team Science award, which brings together researchers, the national treatment providers Change Grow Live and Turning Point, and lived experience researchers. It asks what England's National Drug Treatment Monitoring System can show about who reaches treatment. I led its scoping review of 83 research outputs that use these data ([preprint](https://doi.org/10.2139/ssrn.7505399), under review) and its work on principles for using them responsibly.
 - **Stigma in services (2026).** I lead the quantitative evaluation of a co-produced course for health and care staff who work with people who use drugs, funded through the NIHR School for Public Health Research.
 - I am an Associate Editor of *Addiction*.
