@@ -1,13 +1,13 @@
 ---
 title: Home
-description: "Dr Justin C Yang is a psychiatric epidemiologist at UCL who studies what happens to people whose needs fall between school, health, addiction, and social care services."
+description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying mental health trajectories, inequalities, and care, particularly when people's needs span services."
 ---
 
 <div class="home-intro">
 <img class="home-portrait" src="team/pictures/justinyang.webp" alt="Portrait of Justin C Yang" width="256" height="256" decoding="async" fetchpriority="high">
 <div class="home-intro-text">
 <h1>Justin C Yang</h1>
-<p class="home-lede">I study what happens to people whose needs fall between services: who is identified, who reaches treatment or support, and who falls through the gaps, and why this differs between groups and places. An autistic child's support is split between school and the NHS; someone with psychosis who also uses drugs moves between mental health and addiction services. Each service sees only part of the picture.</p>
+<p class="home-lede">I study why mental health outcomes and access to support differ between people and places, particularly when people's needs span services. An autistic child's support may involve both school and the NHS; someone with psychosis who uses drugs may encounter separate mental health and addiction services. I use linked population and clinical data to understand how needs are identified, what happens over time, and where gaps in support arise.</p>
 <p class="home-role">I am a psychiatric epidemiologist and Senior Research Fellow in the <a href="https://www.ucl.ac.uk/psychiatry">UCL Division of Psychiatry</a>, and an Associate Editor of <a href="https://onlinelibrary.wiley.com/journal/13600443"><i>Addiction</i></a>.</p>
 </div>
 </div>
@@ -21,7 +21,7 @@ description: "Dr Justin C Yang is a psychiatric epidemiologist at UCL who studie
   <div class="academic-snapshot-item">
     <span class="academic-snapshot-label">Collaborative awards</span>
     <strong>£1.9m</strong>
-    <span>Co-investigator or work package lead on four awards</span>
+    <span>Full value of four awards as co-investigator or work package lead</span>
   </div>
   <div class="academic-snapshot-item">
     <span class="academic-snapshot-label">Policy</span>
@@ -37,7 +37,7 @@ description: "Dr Justin C Yang is a psychiatric epidemiologist at UCL who studie
 
 ## Research
 
-I follow this question in three areas, each built over several years through a series of studies. See [Research](research/) for more detail.
+My work spans three connected research areas, each developed through a series of studies. See [Research](research/) for more detail.
 
 <div class="mindset-questions theme-cards">
   <section class="mindset-question">
@@ -56,7 +56,7 @@ I follow this question in three areas, each built over several years through a s
     <span class="mindset-question-number">03</span>
     <h3>Health and social care in severe mental illness</h3>
     <p>Treatment, harms, and inequalities for people with severe mental illness, in hospital and in the community, including the support recorded outside the NHS.</p>
-    <p class="theme-evidence"><b>Key finding:</b> antipsychotic polypharmacy was associated with endocrine and metabolic adverse drug reactions among 13,391 patients (<a href="https://doi.org/10.1017/S0033291722000952"><i>Psychological Medicine</i></a>, 2023; joint first author).<br><b>Projects:</b> WISDOM, UKRI fellowship (2026 to 2029), on the social and emotional drivers of severe mental illness; enhanced patient observation on psychiatric wards, NIHR (2024 to 2028); linking health and social care data, NIHR (from 2027).</p>
+    <p class="theme-evidence"><b>Key finding:</b> antipsychotic polypharmacy was associated with endocrine and metabolic adverse drug reactions among 13,391 patients (<a href="https://doi.org/10.1017/S0033291722000952"><i>Psychological Medicine</i></a>, 2023; joint first author).<br><b>Projects:</b> WISDOM, UKRI fellowship (2026 to 2029), on the social and emotional drivers of severe mental illness; enhanced patient observation on psychiatric wards, NIHR (2024 to 2027); linking health and social care data, NIHR (from 2027).</p>
   </section>
 </div>
 

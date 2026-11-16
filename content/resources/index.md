@@ -3,7 +3,7 @@ title: Code & Resources
 description: "Open analysis code, teaching materials, and reproducible research resources by Dr Justin C Yang."
 ---
 
-Most of my research uses data that cannot be shared, so I release the analysis code and teaching materials instead. Stable releases are archived on Zenodo with DOIs. All 25 of my journal articles are free to read; see [Publications](../publications/).
+Most of my research uses data that cannot be shared, so I release the analysis code and teaching materials instead. Stable releases are archived on Zenodo with DOIs. Many of my publications have freely accessible versions; see [Publications](../publications/) for DOI and open access links.
 
 ## Research code
 
