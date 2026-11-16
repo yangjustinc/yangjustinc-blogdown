@@ -74,10 +74,12 @@ render_talks <- function(df) {
       Invited,
       Materials,
       DatePrecision,
+      Kind,
       ...
     ) {
 
       labels <- c(
+        if (!is.na(Kind) && Kind == "training" && Date > today) "Forthcoming",
         if (!is.na(Invited) && Invited) "Invited",
         if (!is.na(Type) && Type != "") Type
       )
@@ -183,7 +185,7 @@ if (nrow(older) > 0) {
 ## Methods training
 
 <div class="funding-section-intro">
-Courses and tutorials I have designed and taught, including invited training for users of the ONS Secure Research Service.
+Courses and tutorials I have developed or delivered, including invited training for users of the ONS Secure Research Service.
 </div>
 
 ```{r results='asis', echo=FALSE}
