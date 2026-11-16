@@ -1,6 +1,6 @@
 ---
 title: Funding
-description: "Research funding led by Dr Justin C Yang: three competitive awards as principal investigator from UKRI, ESRC and ADR UK, and NIHR, and leadership roles on collaborative awards."
+description: "Research funding led by Dr Justin C Yang: three principal-investigator and fellowship awards, and leadership roles on collaborative research."
 output:
   html_document:
     keep_md: yes
@@ -9,7 +9,7 @@ output:
 <div class="academic-snapshot" aria-label="Funding at a glance">
 <div class="academic-snapshot-item">
 <span class="academic-snapshot-label">As principal investigator</span>
-<strong>£562,170</strong>
+<strong>£562,171</strong>
 <span>Three competitive awards since 2024</span>
 </div>
 <div class="academic-snapshot-item">
