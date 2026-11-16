@@ -1,0 +1,90 @@
+<!doctype html>
+<!--
+  Source for content/social-card-v4.jpg (1200 x 628 Open Graph image).
+  Regenerate with headless Edge or Chrome, then convert to JPEG:
+
+    msedge --headless=new --hide-scrollbars --force-device-scale-factor=1 \
+      --window-size=1200,628 --screenshot=card.png scripts/social-card.html
+    magick card.png -strip -quality 88 content/social-card-v4.jpg
+
+  When the wording changes, save the image under a new file name so social
+  platforms do not keep serving a cached copy, and update ogImage and
+  ogImageAlt in config.yaml to match.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&family=Inter:wght@400;500;600&display=block">
+<style>
+  html, body { margin: 0; width: 1200px; height: 628px; overflow: hidden; }
+  body {
+    background: #f6f5f0;
+    border-left: 16px solid #173a56;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 468px 1fr;
+    align-items: center;
+    font-family: Inter, sans-serif;
+  }
+  .mark { display: flex; justify-content: center; align-items: center; height: 100%; }
+  .mark svg { width: 340px; height: 340px; }
+  .copy {
+    border-left: 2px solid #d7d7cd;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 66px;
+    padding-right: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  h1 {
+    font-family: "Source Serif 4", serif;
+    font-weight: 600;
+    font-size: 76px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: #173b57;
+    margin: 0;
+  }
+  .rule { display: flex; margin: 22px 0 30px; }
+  .rule span { width: 20px; height: 4px; }
+  .lede { font-size: 27px; line-height: 1.45; color: #1f2933; margin: 0; text-wrap: balance; }
+  .roles { font-size: 20px; font-weight: 500; line-height: 1.5; color: #5d6770; margin: 26px 0 0; }
+  .url { font-size: 17px; font-weight: 600; letter-spacing: 0.14em; color: #8a9196; margin: 30px 0 0; }
+</style>
+</head>
+<body>
+  <div class="mark">
+    <svg viewBox="0 0 512 512" aria-hidden="true">
+      <g stroke-linecap="round" stroke-width="22">
+        <path d="M54 128h17m27 0h30" stroke="#1f7fc4"/>
+        <path d="M54 192h36m26 0h12" stroke="#137f76"/>
+        <path d="M54 256h12m26 0h36" stroke="#b85c00"/>
+        <path d="M54 320h27m28 0h19" stroke="#76549f"/>
+        <path d="M54 384h20m24 0h30" stroke="#4f7d32"/>
+      </g>
+      <g fill="none" stroke-linecap="round" stroke-width="22">
+        <path d="M128 128c76 0 74 88 128 108s83-108 202-108" stroke="#1f7fc4"/>
+        <path d="M128 192c70 0 79 38 128 52s84-52 202-52" stroke="#137f76"/>
+        <path d="M128 256h330" stroke="#b85c00"/>
+        <path d="M128 320c70 0 79-38 128-52s84 52 202 52" stroke="#76549f"/>
+        <path d="M128 384c76 0 74-88 128-108s83 108 202 108" stroke="#4f7d32"/>
+      </g>
+      <g fill="none" stroke="#173b57" stroke-linecap="round" stroke-width="18">
+        <path d="M213 78c-42 51-55 109-55 178s13 127 55 178"/>
+        <path d="M299 78c42 51 55 109 55 178s-13 127-55 178"/>
+      </g>
+    </svg>
+  </div>
+  <div class="copy">
+    <h1>Justin C Yang</h1>
+    <div class="rule" aria-hidden="true">
+      <span style="background:#1f7fc4"></span><span style="background:#137f76"></span><span style="background:#b85c00"></span><span style="background:#76549f"></span><span style="background:#4f7d32"></span>
+    </div>
+    <p class="lede">Psychiatric epidemiologist studying where inequalities in mental health arise as people’s needs are recognised, or missed, by services.</p>
+    <p class="roles">Senior Research Fellow, UCL Division of Psychiatry<br>Associate Editor, Addiction</p>
+    <p class="url">JUSTINYANG.ME</p>
+  </div>
+</body>
+</html>

@@ -1,13 +1,13 @@
 ---
 title: Home
-description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying mental health trajectories, inequalities, and care, particularly when people's needs span services."
+description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying where inequalities in mental health arise as people's needs are recognised, or missed, by services."
 ---
 
 <div class="home-intro">
 <img class="home-portrait" src="team/pictures/justinyang.webp" alt="Portrait of Justin C Yang" width="256" height="256" decoding="async" fetchpriority="high">
 <div class="home-intro-text">
 <h1>Justin C Yang</h1>
-<p class="home-lede">I study why mental health outcomes and access to support differ between people and places, particularly when people's needs span services. An autistic child's support may involve both school and the NHS; someone with psychosis who uses drugs may encounter separate mental health and addiction services. I use linked population and clinical data to understand how needs are identified, what happens over time, and where gaps in support arise.</p>
+<p class="home-lede">I study where inequalities in mental health arise: the points at which someone's needs are noticed or missed by services, and acted on or not. Whether a school recognises a child's autism, or whether someone with psychosis who uses drugs is treated by one service or passed between two, can shape what follows. Each service records only its part, so I use records from schools, the NHS, and addiction treatment services, linked where possible, to find where these inequalities arise and where services could act.</p>
 <p class="home-role">I am a psychiatric epidemiologist and Senior Research Fellow in the <a href="https://www.ucl.ac.uk/psychiatry">UCL Division of Psychiatry</a>, and an Associate Editor of <a href="https://onlinelibrary.wiley.com/journal/13600443"><i>Addiction</i></a>.</p>
 </div>
 </div>
@@ -37,7 +37,7 @@ description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying ment
 
 ## Research
 
-My work spans three connected research areas, each developed through a series of studies. See [Research](research/) for more detail.
+I follow this question in three areas, each developed through a series of studies. See [Research](research/) for more detail.
 
 <div class="mindset-questions theme-cards">
   <section class="mindset-question">
@@ -50,7 +50,7 @@ My work spans three connected research areas, each developed through a series of
     <span class="mindset-question-number">02</span>
     <h3>Mental health and addiction services</h3>
     <p>Who reaches treatment for drug and alcohol problems, particularly people who also have a mental illness, and what stands in the way.</p>
-    <p class="theme-evidence"><b>Key findings:</b> national US studies of unmet need for mental health treatment and of access to opioid treatment (2019 and 2020; first author), and, in England, a study of mental health diagnoses and deprivation as predictors of access to opioid treatment (2023).<br><b>Projects:</b> UNITED, NIHR Team Science award (2026), on what England's national treatment data can show about who reaches treatment; evaluation of an anti-stigma course for health and care staff, NIHR (2026).</p>
+    <p class="theme-evidence"><b>Key findings:</b> cost was the barrier most often reported by US adults with unmet need for mental health treatment, and provision of opioid agonist treatment varied by region, organisation, and payment (2019 and 2020; first author).<br><b>Projects:</b> UNITED, NIHR Team Science award (2026), on what England's national treatment data can show about who reaches treatment; evaluation of an anti-stigma course for health and care staff, NIHR (2026).</p>
   </section>
   <section class="mindset-question">
     <span class="mindset-question-number">03</span>
@@ -71,10 +71,10 @@ My work spans three connected research areas, each developed through a series of
 
 ## How I work
 
-Following people across services usually means bringing together records that each service keeps separately, in ways the public can trust. Since 2019 I have helped run the [research database](https://www.northlondonmentalhealth.nhs.uk/research-database-) of what is now North London NHS Foundation Trust, now as Deputy Lead, and I sit on the Health Research Authority's Confidentiality Advisory Group, which advises on when confidential patient information can be used without consent.
+Seeing where needs are recognised or missed usually means bringing together records that each service keeps separately, in ways the public can trust. Since 2019 I have helped run the [research database](https://www.northlondonmentalhealth.nhs.uk/research-database-) of what is now North London NHS Foundation Trust, now as Deputy Lead, and I sit on the Health Research Authority's Confidentiality Advisory Group, which advises on when confidential patient information can be used without consent.
 
 ## Working together
 
 MINDSET is the name of my research group: the postdoctoral researchers whose research I direct day to day, and the doctoral students I co-supervise. See [Team](team/). I collaborate with academic groups, NHS trusts, treatment providers, and people with lived experience.
 
-I welcome conversations about research on people whose needs span education, health, addiction, and social care services, and about doctoral supervision. [Get in touch](contact/).
+I welcome conversations about research on how mental health needs are recognised and acted on across education, health, addiction, and social care services, and about doctoral supervision. [Get in touch](contact/).

@@ -67,13 +67,13 @@ Many partners contribute to more than one line of work.
 
 <div class="ecosystem-core">
 <b>MINDSET</b>
-<span>Partners and expertise across four areas</span>
+<span>Partners across four areas</span>
 </div>
 
 <div class="collaboration-cluster hue-green">
-<div class="collaboration-kicker">Population, place & linked data</div>
-<h3>Following mental health across systems and populations</h3>
-<p>National administrative, longitudinal, environmental, and spatial data; population data science; linkage; and infrastructure for studying trajectories and inequalities at scale.</p>
+<div class="collaboration-kicker">Population and linked data</div>
+<h3>National data programmes and population research</h3>
+<p>Linked national administrative data, the infrastructure for using it, and research on social inequalities in mental health. This underpins the school and health work and the comparisons between groups and places.</p>
 <div class="collaboration-links">
 <a href="https://www.adruk.org/">Administrative Data Research UK</a>
 <a href="https://www.hdruk.ac.uk/">Health Data Research UK</a>
@@ -83,9 +83,9 @@ Many partners contribute to more than one line of work.
 </div>
 
 <div class="collaboration-cluster hue-blue">
-<div class="collaboration-kicker">Clinical data & infrastructure</div>
-<h3>Turning routinely collected records into research evidence</h3>
-<p>Electronic health records, clinical text, governed data access, harmonisation, and methods for research across mental health services.</p>
+<div class="collaboration-kicker">Clinical records</div>
+<h3>NHS trusts and clinical informatics</h3>
+<p>Electronic health records, natural language processing of clinical text, governed data access, and harmonisation across NHS research databases. This underpins the work on severe mental illness.</p>
 <div class="collaboration-links">
 <a href="https://aimhlab.research.st/">Applied Informatics for Mental Health (aiMH)</a>
 <a href="https://naomilaunders.co.uk/">Improving Mental and Physical Health Analytics through Robust Epidemiology and Data Science (IMPARTED)</a>
@@ -96,9 +96,9 @@ Many partners contribute to more than one line of work.
 </div>
 
 <div class="collaboration-cluster hue-teal">
-<div class="collaboration-kicker">Experience, biology & methods</div>
-<h3>Connecting mechanisms, context, and measurement</h3>
-<p>Intensive longitudinal and lived experience measures, social and environmental context, biomarkers and immunology, neuroimaging, causal inference, systems thinking, prediction, and inequalities.</p>
+<div class="collaboration-kicker">Complementary expertise</div>
+<h3>Groups whose expertise extends mine</h3>
+<p>Expertise in emotions, social connection, immunology, psychosis, health economics, and systems approaches to psychiatric epidemiology, brought to shared questions about severe mental illness. My WISDOM fellowship links three UKRI Mental Health Platform hubs: Complex Emotions, DATAMIND, and Social Health.</p>
 <div class="collaboration-links">
 <a href="https://www.complexemotionshub.co.uk/">Complex Emotions Hub</a>
 <a href="https://www.mentalhealthplatform.ac.uk/research-hubs/immunomind">ImmunoMIND</a>
@@ -110,9 +110,9 @@ Many partners contribute to more than one line of work.
 </div>
 
 <div class="collaboration-cluster hue-purple">
-<div class="collaboration-kicker">Services, policy & lived and living experience</div>
-<h3>Keeping research connected to lived and living experience, care, and decision making</h3>
-<p>Lived- and living experience expertise, treatment provider expertise, public involvement, service context, and partnerships that help make questions and interpretation useful beyond academia.</p>
+<div class="collaboration-kicker">Services and lived experience</div>
+<h3>Treatment providers and lived experience organisations</h3>
+<p>Partners who keep research questions and interpretation tied to how services work and to people's experience of them. Change Grow Live and Turning Point are partners in UNITED.</p>
 <div class="collaboration-links">
 <a href="https://www.changegrowlive.org/">Change Grow Live</a>
 <a href="https://mcpin.org/">McPin Foundation</a>

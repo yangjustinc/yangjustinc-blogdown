@@ -1,13 +1,13 @@
 ---
 title: Research
-description: "Research by Dr Justin C Yang on mental health trajectories, inequalities, and care across education, health, addiction, and social care."
+description: "Research by Dr Justin C Yang on where inequalities in mental health arise as needs are recognised, or missed, across education, health, addiction, and social care services."
 ---
 
-My research examines mental health trajectories, inequalities, and care across the life course. I am particularly interested in people whose needs span different services, including schools and the NHS, mental health and addiction treatment, and health and social care. I study how needs are identified, who receives treatment or support, what happens afterwards, and why outcomes differ between groups and places.
+My research asks where inequalities in mental health arise: the points at which someone's needs are noticed or missed by services, and acted on or not. Whether a school recognises a child's autism, whether someone with a drug problem and a mental illness reaches treatment, and what support a person with severe mental illness receives outside hospital can all shape what follows, and each differs between groups and places.
 
-Each service records only part of a person's experience. I often bring together population and clinical records to follow needs and outcomes over time, and work on how those data can be governed and used in ways the public can trust. That work is described below.
+Many people's needs span more than one service: schools and the NHS, mental health and addiction treatment, health and social care. Each service sees and records only its part, so these points are often invisible in any single dataset. I use records from schools, the NHS, and addiction treatment services, linked where possible, to find where inequalities arise, so that services and policy can act on them. In this sense the work extends the “pathways to care” tradition in psychiatric epidemiology beyond health services. How such records can be used well, and in ways the public can trust, is described under [How I work](#how-i-work).
 
-These questions connect three research areas, each developed through a series of studies. Funding details are on the [Funding](../funding/) page, and the full record is on [Publications](../publications/).
+I follow this question in three areas, each developed through a series of studies. Funding details are on the [Funding](../funding/) page, and the full record is on [Publications](../publications/).
 
 ## School and health
 
@@ -21,7 +21,7 @@ Autistic and other neurodivergent children are identified, supported, and exclud
 
 People with drug or alcohol problems often have mental health needs too, and the two are usually treated by different services. I study who reaches treatment and what stands in the way.
 
-- **Access to treatment.** My doctoral research used national US data to show inequalities in unmet need for mental health treatment ([*International Journal for Equity in Health*, 2019](https://doi.org/10.1186/s12939-019-1026-y)) and in the provision of opioid agonist treatment by area, organisation, and payment ([*PLOS ONE*, 2020](https://doi.org/10.1371/journal.pone.0229787)); I was first author of both. In England, I contributed to a study of mental health diagnoses and deprivation as predictors of access to treatment for opioid use disorder ([*Substance Abuse Treatment, Prevention, and Policy*, 2023](https://doi.org/10.1186/s13011-023-00568-5)).
+- **Access to treatment.** My doctoral research used national US data to show inequalities in unmet need for mental health treatment ([*International Journal for Equity in Health*, 2019](https://doi.org/10.1186/s12939-019-1026-y)) and in the provision of opioid agonist treatment by area, organisation, and payment ([*PLOS ONE*, 2020](https://doi.org/10.1371/journal.pone.0229787)); I was first author of both. In a London cohort, I contributed to a study showing that people with opioid use disorder and co-occurring mental health diagnoses had earlier and more frequent contact with crisis and inpatient services ([*Substance Abuse Treatment, Prevention, and Policy*, 2023](https://doi.org/10.1186/s13011-023-00568-5)).
 - **UNITED (2026).** I am the named lead investigator of this NIHR Team Science award, which brings together researchers, the national treatment providers Change Grow Live and Turning Point, and lived experience researchers. It asks what England's National Drug Treatment Monitoring System can show about who reaches treatment. I led its scoping review of 83 research outputs that use these data ([preprint](https://doi.org/10.2139/ssrn.7505399), under review) and its work on principles for using them responsibly.
 - **Stigma in services (2026).** I lead the quantitative evaluation of a co-produced course for health and care staff who work with people who use drugs, funded through the NIHR School for Public Health Research.
 - I am an Associate Editor of *Addiction*.
@@ -37,7 +37,7 @@ People with severe mental illness are supported in hospital, in the community, a
 
 ## How I work
 
-Following people across services depends on records that are governed, linked, accessed, and documented well, and used in ways the public can trust. I work on this directly.
+Seeing where needs are recognised or missed depends on records that are well governed, linked, and documented, and used in ways the public can trust. I work on this directly.
 
 - **NHS research database.** Since 2019 I have helped run the research database of what is now North London NHS Foundation Trust, first as Database Manager and now as Deputy Lead. After the merger of Camden and Islington and Barnet, Enfield and Haringey mental health trusts, I led the integration of their records into a single research database, including the ethics and Confidentiality Advisory Group approvals and new access arrangements. I have advised on 31 research projects using the database and contribute to harmonisation with the equivalent databases at South London and Maudsley, Oxford Health, and Cambridgeshire and Peterborough.
 - **National data governance.** I am an Expert Member of the Health Research Authority's Confidentiality Advisory Group, which advises on when confidential patient information can be used without consent. I am also a public member of the Eastern England Secure Data Environment's Data Access Committee and a member of an ADR UK Task and Finish Group on researchers' access to data.
