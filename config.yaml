@@ -59,10 +59,10 @@ menu:
 
 params:
   homeTitle: "Justin C Yang | Psychiatric Epidemiology & Health Data Science"
-  description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying inequalities in mental health and access to care, particularly when people's needs span services."
+  description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying where inequalities in mental health arise as people's needs are recognised, or missed, by services."
   footer: "[Justin C Yang](https://www.justinyang.me) · UCL Division of Psychiatry · [Code and resources](/resources/) <br> &copy; 2019-{Year}"
   ogImage: "social-card-v4.jpg"
-  ogImageAlt: "Mark of five coloured strands with the text: Justin C Yang, psychiatric epidemiologist studying inequalities in mental health and access to care, particularly when people's needs span services"
+  ogImageAlt: "Mark of five coloured strands with the text: Justin C Yang, psychiatric epidemiologist studying where inequalities in mental health arise as people's needs are recognised, or missed, by services"
   person:
     affiliation: "University College London"
     jobTitle: "Senior Research Fellow"

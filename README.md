@@ -2,10 +2,9 @@
 
 Source for [www.justinyang.me](https://www.justinyang.me/), the academic
 website of Dr Justin C Yang, a psychiatric epidemiologist in the UCL Division
-of Psychiatry. The research it describes asks why mental health outcomes and
-access to care differ between people and places, particularly when people's
-needs span services such as school and the NHS, mental health and addiction
-treatment, and health and social care.
+of Psychiatry. The research it describes asks where inequalities in mental
+health arise as people's needs are recognised, or missed, by services such as
+schools, the NHS, addiction treatment, and social care.
 
 The site presents research, publications, funding, the MINDSET research group
 and its partners, teaching and supervision, talks, roles and recognition, open

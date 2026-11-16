@@ -1,13 +1,13 @@
 ---
 title: Research
-description: "Research by Dr Justin C Yang on inequalities in mental health and access to care, particularly where needs span education, health, addiction, and social care services."
+description: "Research by Dr Justin C Yang on where inequalities in mental health arise as needs are recognised, or missed, across education, health, addiction, and social care services."
 ---
 
-My research asks why mental health outcomes, and access to treatment and support, differ between people and places. I am particularly interested in people whose needs span different services: schools and the NHS, mental health and addiction treatment, and health and social care. Across this work I study how needs are identified, who receives treatment or support, and what happens to people over time.
+My research asks where inequalities in mental health arise: the points at which someone's needs are noticed or missed by services, and acted on or not. Whether a school recognises a child's autism, whether someone with a drug problem and a mental illness reaches treatment, and what support a person with severe mental illness receives outside hospital can all shape what follows, and each differs between groups and places.
 
-Each service records only part of a person's experience, so I often bring together population and clinical records that are kept separately. How to do that well, and in ways the public can trust, is described under [How I work](#how-i-work).
+Many people's needs span more than one service: schools and the NHS, mental health and addiction treatment, health and social care. Each service sees and records only its part, so these points are often invisible in any single dataset. I use records from schools, the NHS, and addiction treatment services, linked where possible, to find where inequalities arise, so that services and policy can act on them. In this sense the work extends the “pathways to care” tradition in psychiatric epidemiology beyond health services. How such records can be used well, and in ways the public can trust, is described under [How I work](#how-i-work).
 
-These questions connect three research areas, each developed through a series of studies. Funding details are on the [Funding](../funding/) page, and the full record is on [Publications](../publications/).
+I follow this question in three areas, each developed through a series of studies. Funding details are on the [Funding](../funding/) page, and the full record is on [Publications](../publications/).
 
 ## School and health
 
@@ -37,7 +37,7 @@ People with severe mental illness are supported in hospital, in the community, a
 
 ## How I work
 
-Following people across services depends on records that are governed, linked, accessed, and documented well, and used in ways the public can trust. I work on this directly.
+Seeing where needs are recognised or missed depends on records that are well governed, linked, and documented, and used in ways the public can trust. I work on this directly.
 
 - **NHS research database.** Since 2019 I have helped run the research database of what is now North London NHS Foundation Trust, first as Database Manager and now as Deputy Lead. After the merger of Camden and Islington and Barnet, Enfield and Haringey mental health trusts, I led the integration of their records into a single research database, including the ethics and Confidentiality Advisory Group approvals and new access arrangements. I have advised on 31 research projects using the database and contribute to harmonisation with the equivalent databases at South London and Maudsley, Oxford Health, and Cambridgeshire and Peterborough.
 - **National data governance.** I am an Expert Member of the Health Research Authority's Confidentiality Advisory Group, which advises on when confidential patient information can be used without consent. I am also a public member of the Eastern England Secure Data Environment's Data Access Committee and a member of an ADR UK Task and Finish Group on researchers' access to data.
