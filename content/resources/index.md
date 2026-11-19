@@ -24,6 +24,19 @@ Most of my research uses data that cannot be shared, so I release the analysis c
 ## Teaching and methods resources
 
 <article class="resource-feature">
+  <a class="resource-feature-preview resource-feature-code" href="https://yangjustinc.github.io/good-practice-r-ons-srs/" aria-label="Open Good Practice for R Users When Working in the ONS SRS">
+    <span class="resource-code-label">ONS SRS · R</span>
+    <strong>Good practice in R</strong>
+    <span>large linked data<br>trusted research environments</span>
+  </a>
+  <div class="resource-feature-copy">
+    <h2>Good practice in R for secure research environments</h2>
+    <p><a href="https://yangjustinc.github.io/good-practice-r-ons-srs/"><b>Good Practice for R Users When Working in the ONS SRS</b></a> provides materials for a one hour workshop on writing efficient, reproducible, and robust R code for large linked administrative data in the ONS Secure Research Service and similar trusted research environments. It was developed for a workshop through <a href="https://dataciseopenlearning.org/courses/good-practice-for-r-users-when-working-in-the-ons-srs/">Datacise Open Learning</a> on 25 November 2026, and the lesson notes can be read without running any code.</p>
+    <p>It covers analytical units and join checks, reducing data early and letting the database do the work, managing memory and recomputation, telling missing records from true zeroes, and rerunnable pipelines. Because SRS data cannot leave the SRS, the worked example uses public New York City trip records with the same structural problems, about 240 million rows a year, in data.table, dplyr, Arrow, and dbplyr. <a href="https://github.com/yangjustinc/good-practice-r-ons-srs">Source code and lesson notes</a> · <a href="https://doi.org/10.5281/zenodo.24343725">Archived v1.0.0 release and DOI</a></p>
+  </div>
+</article>
+
+<article class="resource-feature">
   <a class="resource-feature-preview" href="https://yangjustinc.github.io/2024-ncras/" aria-label="Open Risk of Suicide After Cancer Diagnosis in England">
     <img src="images/routine-data-analysis-20260901.jpg" alt="Preview of the Risk of Suicide After Cancer Diagnosis in England teaching resource" width="1348" height="926" loading="lazy" decoding="async">
   </a>
@@ -60,6 +73,8 @@ Most of my research uses data that cannot be shared, so I release the analysis c
 
 ## More code, talks, and materials
 
-Additional public repositories are available through my [GitHub profile](https://github.com/yangjustinc), and talks and methods courses are listed under [Talks](../talks/).
+Additional public repositories are available through my [GitHub profile](https://github.com/yangjustinc), including the materials for a [four session course in reproducible analysis in R and Python](https://yangjustinc.github.io/2026-10-14-ucldop-online/) for mental health researchers. Talks and methods courses are listed under [Talks](../talks/).
+
+Outputs from UNITED, my NIHR Team Science award on England's national drug and alcohol treatment data, are collected on the [UNITED project website](https://yangjustinc.github.io/united/), including the scoping review preprint, a conference poster, and the recording and slides of a November 2026 Lunch and Learn with the NIHR Public Health Policy Research Unit.
 
 Code and materials for specific projects are also linked from the relevant [research](../research/), [publication](../publications/), and [teaching](../teaching/) pages where available.

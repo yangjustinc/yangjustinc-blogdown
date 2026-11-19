@@ -50,7 +50,7 @@ I follow this question in three areas, each developed through a series of studie
     <span class="mindset-question-number">02</span>
     <h3>Mental health and addiction services</h3>
     <p>Who reaches treatment for drug and alcohol problems, particularly people who also have a mental illness, and what stands in the way.</p>
-    <p class="theme-evidence"><b>Key findings:</b> cost was the barrier most often reported by US adults with unmet need for mental health treatment, and provision of opioid agonist treatment varied by region, organisation, and payment (2019 and 2020; first author).<br><b>Projects:</b> UNITED, NIHR Team Science award (2026), on what England's national treatment data can show about who reaches treatment; evaluation of an anti-stigma course for health and care staff, NIHR (2026).</p>
+    <p class="theme-evidence"><b>Key findings:</b> cost was the barrier most often reported by US adults with unmet need for mental health treatment, and provision of opioid agonist treatment varied by region, organisation, and payment (2019 and 2020; first author).<br><b>Projects:</b> <a href="https://yangjustinc.github.io/united/">UNITED</a>, NIHR Team Science award (2026), on what England's national treatment data can show about who reaches treatment; evaluation of an anti-stigma course for health and care staff, NIHR (2026).</p>
   </section>
   <section class="mindset-question">
     <span class="mindset-question-number">03</span>
@@ -63,6 +63,7 @@ I follow this question in three areas, each developed through a series of studie
 ## Recent
 
 <ul class="news-list">
+  <li><span class="news-date">November 2026</span> UNITED Lunch and Learn with the NIHR Public Health Policy Research Unit on how routine data can help us understand the needs of people who use drugs and alcohol (<a href="https://yangjustinc.github.io/united/#recording">recording and slides</a>). Workshop on good practice in R for users of the ONS Secure Research Service, through Datacise Open Learning on 25 November (<a href="https://yangjustinc.github.io/good-practice-r-ons-srs/">open materials</a>).</li>
   <li><span class="news-date">October 2026</span> Elected to UCL Academic Board. Funding awarded by the NIHR School for Social Care Research for a study of linking health and social care data, in which I co-lead a work package.</li>
   <li><span class="news-date">September 2026</span> Written evidence to the House of Commons Education Committee on persistent school absence among autistic pupils and pupils with intellectual disability, with Vanessa Cieplinska and Professor Vasiliki Totsika.</li>
   <li><span class="news-date">2026</span> Scoping review of 83 research outputs using England's National Drug Treatment Monitoring System, from UNITED (<a href="https://doi.org/10.2139/ssrn.7505399">preprint</a>; under review).</li>
