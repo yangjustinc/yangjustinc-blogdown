@@ -54,15 +54,6 @@
     "open_access_url": "https://discovery.ucl.ac.uk/10180280/3/Yang_LGBT-2023-0085_ACCEPTED.pdf"
   },
   {
-    "doi": "10.1097/01.ede.0001280248.27798.6a",
-    "openalex_id": "https://openalex.org/W7221538641",
-    "openalex_source": "Epidemiology",
-    "openalex_topics": "Suicide and Self-Harm Studies | Clinical Psychology | Psychology | Social Sciences | Health disparities and outcomes | Health | Racial and Ethnic Identity Research | Sociology and Political Science",
-    "is_open_access": false,
-    "open_access_status": "closed",
-    "open_access_url": null
-  },
-  {
     "doi": "10.1101/2023.11.27.23298057",
     "openalex_id": "https://openalex.org/W4389040905",
     "openalex_source": "medRxiv",
@@ -232,15 +223,6 @@
     "is_open_access": true,
     "open_access_status": "gold",
     "open_access_url": "https://doi.org/10.1371/journal.pone.0241056"
-  },
-  {
-    "doi": "10.1371/journal.pone.0251006",
-    "openalex_id": "https://openalex.org/W3097391887",
-    "openalex_source": "PLoS ONE",
-    "openalex_topics": "Forensic Toxicology and Drug Analysis | Toxicology | Pharmacology, Toxicology and Pharmaceutics | Life Sciences | Substance Abuse Treatment and Outcomes | Epidemiology | Medicine | Health Sciences | Psychedelics and Drug Studies | Clinical Psychology | Psychology | Social Sciences",
-    "is_open_access": true,
-    "open_access_status": "gold",
-    "open_access_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0251006&type=printable"
   },
   {
     "doi": "10.17159/sadj.v78i08.16095",

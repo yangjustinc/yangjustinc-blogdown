@@ -56,7 +56,7 @@ I follow this question in three areas, each developed through a series of studie
     <span class="mindset-question-number">03</span>
     <h3>Health and social care in severe mental illness</h3>
     <p>Treatment, harms, and inequalities for people with severe mental illness, in hospital and in the community, including the support recorded outside the NHS.</p>
-    <p class="theme-evidence"><b>Key finding:</b> antipsychotic polypharmacy was associated with endocrine and metabolic adverse drug reactions among 13,391 patients (<a href="https://doi.org/10.1017/S0033291722000952"><i>Psychological Medicine</i></a>, 2023; joint first author).<br><b>Projects:</b> WISDOM, UKRI fellowship (2026 to 2029), on the social and emotional drivers of severe mental illness; enhanced patient observation on psychiatric wards, NIHR (2024 to 2027); linking health and social care data, NIHR (from 2027).</p>
+    <p class="theme-evidence"><b>Key finding:</b> antipsychotic polypharmacy was associated with endocrine and metabolic adverse drug reactions among 13,391 patients (<a href="https://doi.org/10.1017/S0033291722000952"><i>Psychological Medicine</i></a>, 2022; joint first author).<br><b>Projects:</b> WISDOM, UKRI fellowship (2026 to 2029), on the social and emotional drivers of severe mental illness; enhanced patient observation on psychiatric wards, NIHR (2024 to 2027); linking health and social care data, NIHR (from 2027).</p>
   </section>
 </div>
 
