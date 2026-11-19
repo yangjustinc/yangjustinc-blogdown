@@ -83,7 +83,7 @@ From 2021 to 2025 I was a Visiting Lecturer at the Wolfson Institute of Populati
 
 ## Research training and development
 
-- **Reproducible data analysis.** As a certified [Carpentries](https://carpentries.org/) instructor, I designed and taught a free four session course in reproducible analysis in R and Python for mental health researchers (2026), and I was invited to teach good practice in R to users of the ONS Secure Research Service across England (November 2026).
+- **Reproducible data analysis.** As a certified [Carpentries](https://carpentries.org/) instructor, I designed and taught a free [four session course](https://yangjustinc.github.io/2026-10-14-ucldop-online/) in reproducible analysis in R and Python for mental health researchers (2026), and I was invited by Datacise Open Learning to teach [good practice in R](https://yangjustinc.github.io/good-practice-r-ons-srs/) to users of the ONS Secure Research Service across England (November 2026); the workshop materials are openly archived with a DOI.
 - **Research Development Programme Lead**, Division of Psychiatry (2023 to 2025). I used annual needs assessments to shape the Division's training in quantitative methods, fellowship preparation, open science, public involvement, and research management.
 - **Early career researchers.** Since 2022 I have built and coordinated the Division's community of non-clinical early career researchers (around 50 to 60 members), with regular fellowship development and peer feedback sessions, and have since shared its leadership with colleagues.
 

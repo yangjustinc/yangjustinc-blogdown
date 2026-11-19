@@ -112,7 +112,7 @@ Many partners contribute to more than one line of work.
 <div class="collaboration-cluster hue-purple">
 <div class="collaboration-kicker">Services and lived experience</div>
 <h3>Treatment providers and lived experience organisations</h3>
-<p>Partners who keep research questions and interpretation tied to how services work and to people's experience of them. Change Grow Live and Turning Point are partners in UNITED.</p>
+<p>Partners who keep research questions and interpretation tied to how services work and to people's experience of them. Change Grow Live and Turning Point are partners in <a href="https://yangjustinc.github.io/united/">UNITED</a>.</p>
 <div class="collaboration-links">
 <a href="https://www.changegrowlive.org/">Change Grow Live</a>
 <a href="https://mcpin.org/">McPin Foundation</a>
