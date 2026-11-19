@@ -92,12 +92,46 @@ fallback <- bind_rows(
     )
   )
 
+# Curated exclusions (for example conference abstracts), plus correction and
+# erratum notices, which are not separate publications.
+excluded_dois <- read_csv(
+  "../../data/site/excluded_publications.csv",
+  col_types = cols(doi = col_character(), reason = col_character()),
+  show_col_types = FALSE
+) |>
+  mutate(doi = normalize_doi(doi)) |>
+  pull(doi)
+
+# Papers on which I am joint first author, marked with a dagger in the list.
+joint_first_dois <- read_csv(
+  "../../data/site/joint_first_authorship.csv",
+  col_types = cols(doi = col_character()),
+  show_col_types = FALSE
+) |>
+  mutate(doi = normalize_doi(doi)) |>
+  pull(doi)
+
 publications <- bind_rows(
   cr_cites |>
     filter(!is.na(citation)),
   fallback
 ) |>
+  filter(
+    !doi %in% excluded_dois,
+    !str_detect(
+      coalesce(title, ""),
+      regex("^(correction|erratum|corrigendum)\\b", ignore_case = TRUE)
+    )
+  ) |>
   mutate(
+    # Use the year printed in the citation everywhere (list, selected papers,
+    # filters, timeline), so ORCID and Crossref dates cannot disagree.
+    year = coalesce(
+      as.integer(
+        str_match(citation, "\\(((?:19|20)\\d{2})[a-z]?\\)")[, 2]
+      ),
+      year
+    ),
     citation = if_else(
       str_ends(citation, "\\."),
       citation,
@@ -112,6 +146,15 @@ publications <- bind_rows(
       citation,
       "(?<!C\\.)\\bYang,\\s*J\\.(?!\\s*C)",
       "**Yang, J.**"
+    ),
+    citation = if_else(
+      doi %in% joint_first_dois,
+      str_replace(
+        citation,
+        "\\*\\*(Yang, J\\.(?: C\\.)?)\\*\\*",
+        "**\\1**†"
+      ),
+      citation
     )
   ) |>
   arrange(desc(year), title)
@@ -455,7 +498,7 @@ selected_display |>
 <div class="selected-publication">
 <div class="selected-theme">Addiction treatment and services</div>
 <div class="selected-title"><a href="https://doi.org/10.2139/ssrn.7505399">Research using the National Drug and Alcohol Treatment Monitoring System (NDTMS) in England: a scoping review of surveillance, analysis, and linkage (2005 to 2026)</a></div>
-<div class="selected-meta">SSRN preprint &middot; 2026 &middot; under review at <i>Addiction</i></div>
+<div class="selected-meta">SSRN preprint &middot; 2026 &middot; under review</div>
 <p>From UNITED: a review of 83 research outputs that use England's national drug and alcohol treatment data, setting out how the data have been used and where they can support more research.</p>
 <p class="selected-contribution"><b>My contribution:</b> First author; I led the review as principal investigator of UNITED.</p>
 </div>
@@ -658,6 +701,8 @@ if (nrow(timeline_data) > 0) {
 ```
 
 ## Complete publication list
+
+My name is in bold; &dagger; marks joint first authorship.
 
 ```{r results='asis', echo=FALSE, message=FALSE, warning=FALSE}
 publication_years <- publication_sections$year |>
