@@ -1,15 +1,15 @@
 ---
 title: Research
-description: "Research by Dr Justin C Yang on where inequalities in mental health arise as needs are recognised, or missed, across education, health, addiction, and social care services."
+description: "Research by Dr Justin C Yang on unmet need in mental health, across severe mental illness, addiction services, and neurodevelopment."
 ---
 
-Many people's needs span more than one service: health and social care, mental health and addiction treatment, the NHS and schools. Each service sees and records only its part, so the points at which needs are noticed or missed are often invisible in any single dataset. I use records from the NHS, addiction treatment services, and schools, linked where possible, to find where inequalities arise, so that services and policy can act on them. In this sense the work extends the “pathways to care” tradition in psychiatric epidemiology beyond health services. How such records can be used well, and in ways the public can trust, is described under [How I work](#how-i-work).
+My research is about unmet need in mental health: who needs care but is not recognised, counted, or treated, and how services, funding, and the data they keep produce that gap. Many people's needs span more than one service (health and social care, mental health and addiction treatment, the NHS and schools), and each service sees and records only its part, so the points at which needs are missed are often invisible in any single dataset. In this sense the work extends the “pathways to care” tradition in psychiatric epidemiology beyond health services.
 
-I follow this question in three areas, in order of my current funded work: severe mental illness, addiction services, and school and health. Funding details are on the [Funding](../funding/) page, and the full record is on [Publications](../publications/).
+I follow this question in three areas, in order of my current funded work: severe mental illness, addiction services, and school and health. A related strand asks who is counted in the evidence itself, for example whether research and public health needs assessments record sexual orientation and gender identity. Funding details are on the [Funding](../funding/) page, and the full record is on [Publications](../publications/).
 
 ## Health and social care in severe mental illness
 
-People with severe mental illness are supported in hospital, in the community, and by social care, and what happens to them in one setting shapes the others. I study treatment, harms, and inequalities in severe mental illness, including the support recorded outside the NHS.
+People with severe mental illness are supported in hospital, in the community, and by social care, and what happens to them in one setting shapes the others. I study treatment, harms, and unmet need in severe mental illness, including the support recorded outside the NHS.
 
 - **Medication harms.** Among 13,391 patients of a London mental health service, antipsychotic polypharmacy was associated with endocrine and metabolic adverse drug reactions recorded in routine care ([*Psychological Medicine*, 2022](https://doi.org/10.1017/S0033291722000952)). I was joint first author and led the analysis and writing.
 - **WISDOM (2026 to 2029).** My UKRI Mental Health Platform Cross-Hub Fellowship brings together the Complex Emotions, DATAMIND, and Social Health hubs to study the social, emotional, environmental, and institutional drivers of severe and enduring mental illness.

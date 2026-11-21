@@ -1,6 +1,6 @@
 ---
 title: Home
-description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying where inequalities in mental health arise as people's needs are recognised, or missed, by services."
+description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying unmet need in mental health: who needs care but is not recognised, counted, or treated, and why."
 ---
 
 <div class="home-intro">
@@ -11,8 +11,9 @@ description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying wher
 </aside>
 <div class="home-intro-text">
 <h1>Justin C Yang</h1>
-<p class="home-lede">I study where inequalities in mental health arise: the points at which someone's needs are noticed or missed by services, and acted on or not. Whether someone with psychosis who uses drugs is treated by one service or passed between two, or whether a school recognises a child's autism, can shape what follows. Each service records only its part, so I use records from the NHS, addiction treatment services, and schools, linked where possible, to find where these inequalities arise and where services could act.</p>
-<p>I lead <b>MINDSET</b> (Multimodal Inference and Data Science for Epidemiology and Treatment), my research group in the <a href="https://www.ucl.ac.uk/psychiatry">UCL Division of Psychiatry</a>. Because the work depends on confidential records, I also work on how they are governed and used in ways the public can trust.</p>
+<p class="home-lede">I study unmet need in mental health: who needs care but is not recognised, counted, or treated, and how services, funding, and the data they keep produce that gap.</p>
+<p>Needs are noticed or missed at particular points. Whether someone with psychosis who uses drugs is treated by one service or passed between two, or whether a school recognises a child's autism, can shape what follows. Each service records only its part, so I work with records from the NHS, addiction treatment services, and schools, alongside national surveys, to find where needs go unmet and where services and policy could act.</p>
+<p>I lead <b>MINDSET</b> (Multimodal Inference and Data Science for Epidemiology and Treatment), my research group in the <a href="https://www.ucl.ac.uk/psychiatry">UCL Division of Psychiatry</a>.</p>
 </div>
 </div>
 
@@ -36,7 +37,7 @@ Three areas, in order of my current funded work. [Research](research/) has the d
   <section class="area">
     <p class="margin-note"><span>WISDOM</span><span>UKRI, 2026–29</span><span>Ward observation</span><span>NIHR, 2024–27</span><span>Health and social care data</span><span>NIHR, from 2027</span></p>
     <h3><a href="research/#health-and-social-care-in-severe-mental-illness">Health and social care in severe mental illness</a></h3>
-    <p>Treatment, harms, and inequalities for people with severe mental illness, in hospital and in the community, including the support recorded outside the NHS.</p>
+    <p>Harms and needs that routine records miss for people with severe mental illness, in hospital, in the community, and in the support recorded outside the NHS.</p>
     <p class="theme-evidence"><b>Key finding:</b> antipsychotic polypharmacy was associated with endocrine and metabolic adverse drug reactions among 13,391 patients (<a href="https://doi.org/10.1017/S0033291722000952"><i>Psychological Medicine</i></a>, 2022; joint first author).</p>
   </section>
   <section class="area">
@@ -48,7 +49,7 @@ Three areas, in order of my current funded work. [Research](research/) has the d
   <section class="area">
     <p class="margin-note"><span>HOPE-SEN</span><span>ADR UK, 2024–26</span></p>
     <h3><a href="research/#school-and-health">School and health</a></h3>
-    <p>How schools and health services identify and support autistic and other neurodivergent children, and what follows for school attendance, exclusion, and hospital admission.</p>
+    <p>Which autistic and other neurodivergent children are recognised and supported by schools and health services, and what follows for attendance, exclusion, and hospital admission.</p>
     <p class="theme-evidence"><b>Key finding:</b> recorded autism incidence among more than 7 million pupils in England differed sharply between social and ethnic groups and between areas (<a href="https://doi.org/10.1016/S2352-4642(22)00247-4"><i>Lancet Child &amp; Adolescent Health</i></a>, 2022; joint first author). A 2026 OECD report cites it.</p>
   </section>
 </div>
