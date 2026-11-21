@@ -8,31 +8,8 @@ description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying wher
 <div class="home-intro-text">
 <h1>Justin C Yang</h1>
 <p class="home-lede">I study where inequalities in mental health arise: the points at which someone's needs are noticed or missed by services, and acted on or not. Whether a school recognises a child's autism, or whether someone with psychosis who uses drugs is treated by one service or passed between two, can shape what follows. Each service records only its part, so I use records from schools, the NHS, and addiction treatment services, linked where possible, to find where these inequalities arise and where services could act.</p>
-<p class="home-role">I am a psychiatric epidemiologist and Senior Research Fellow in the <a href="https://www.ucl.ac.uk/psychiatry">UCL Division of Psychiatry</a>, and an Associate Editor of <a href="https://onlinelibrary.wiley.com/journal/13600443"><i>Addiction</i></a>.</p>
+<p class="home-role">I am a psychiatric epidemiologist and Senior Research Fellow in the <a href="https://www.ucl.ac.uk/psychiatry">UCL Division of Psychiatry</a>, and an Associate Editor of <a href="https://onlinelibrary.wiley.com/journal/13600443"><i>Addiction</i></a>. Since 2024 I have led three competitive awards as principal investigator, from UKRI, ESRC, and NIHR (see <a href="funding/">Funding</a>), and about 35 policy documents, including OECD and WHO reports, cite work I have co-authored.</p>
 </div>
-</div>
-
-<div class="academic-snapshot" aria-label="Research record at a glance">
-  <div class="academic-snapshot-item">
-    <span class="academic-snapshot-label">Funding as principal investigator</span>
-    <strong>£562k</strong>
-    <span>Three competitive awards since 2024, from UKRI, ESRC, and NIHR</span>
-  </div>
-  <div class="academic-snapshot-item">
-    <span class="academic-snapshot-label">Collaborative awards</span>
-    <strong>£1.9m</strong>
-    <span>Full value of four awards as co-investigator or work package lead</span>
-  </div>
-  <div class="academic-snapshot-item">
-    <span class="academic-snapshot-label">Policy</span>
-    <strong>About 35</strong>
-    <span>Policy documents citing my co-authored work, including OECD and WHO reports</span>
-  </div>
-  <div class="academic-snapshot-item">
-    <span class="academic-snapshot-label">National role</span>
-    <strong>Expert Member</strong>
-    <span>Health Research Authority Confidentiality Advisory Group</span>
-  </div>
 </div>
 
 ## Research
@@ -41,19 +18,16 @@ I follow this question in three areas, each developed through a series of studie
 
 <div class="mindset-questions theme-cards">
   <section class="mindset-question">
-    <span class="mindset-question-number">01</span>
     <h3>School and health</h3>
     <p>How schools and health services identify and support autistic and other neurodivergent children, and what follows for school attendance, exclusion, and hospital admission.</p>
     <p class="theme-evidence"><b>Key finding:</b> recorded autism incidence among more than 7 million pupils in England differed sharply between social and ethnic groups and between areas (<a href="https://doi.org/10.1016/S2352-4642(22)00247-4"><i>Lancet Child &amp; Adolescent Health</i></a>, 2022; joint first author). A 2026 OECD report cites it.<br><b>Projects:</b> HOPE-SEN, ADR UK fellowship (2024 to 2026), on school absence, exclusion, and hospital admission among neurodivergent pupils.</p>
   </section>
   <section class="mindset-question">
-    <span class="mindset-question-number">02</span>
     <h3>Mental health and addiction services</h3>
     <p>Who reaches treatment for drug and alcohol problems, particularly people who also have a mental illness, and what stands in the way.</p>
     <p class="theme-evidence"><b>Key findings:</b> cost was the barrier most often reported by US adults with unmet need for mental health treatment, and provision of opioid agonist treatment varied by region, organisation, and payment (2019 and 2020; first author).<br><b>Projects:</b> <a href="https://yangjustinc.github.io/united/">UNITED</a>, NIHR Team Science award (2026), on what England's national treatment data can show about who reaches treatment; evaluation of an anti-stigma course for health and care staff, NIHR (2026).</p>
   </section>
   <section class="mindset-question">
-    <span class="mindset-question-number">03</span>
     <h3>Health and social care in severe mental illness</h3>
     <p>Treatment, harms, and inequalities for people with severe mental illness, in hospital and in the community, including the support recorded outside the NHS.</p>
     <p class="theme-evidence"><b>Key finding:</b> antipsychotic polypharmacy was associated with endocrine and metabolic adverse drug reactions among 13,391 patients (<a href="https://doi.org/10.1017/S0033291722000952"><i>Psychological Medicine</i></a>, 2022; joint first author).<br><b>Projects:</b> WISDOM, UKRI fellowship (2026 to 2029), on the social and emotional drivers of severe mental illness; enhanced patient observation on psychiatric wards, NIHR (2024 to 2027); linking health and social care data, NIHR (from 2027).</p>
