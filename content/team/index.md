@@ -86,7 +86,7 @@ Many partners contribute to more than one line of work.
 </section>
 <section class="partner-group">
 <h3>National data programmes and population research</h3>
-<p>Linked national administrative data, the infrastructure for using it, and research on social inequalities in mental health. This underpins the school and health work and the comparisons between groups and places.</p>
+<p>Linked national administrative data, the infrastructure for using it, and research on social inequalities in mental health. This underpins the work on neurodevelopmental conditions and the comparisons between groups and places.</p>
 <ul class="link-list">
 <li><a href="https://www.adruk.org/">Administrative Data Research UK</a></li>
 <li><a href="https://www.hdruk.ac.uk/">Health Data Research UK</a></li>

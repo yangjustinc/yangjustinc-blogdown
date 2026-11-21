@@ -250,8 +250,7 @@ h3:hover .heading-anchor,
 .margin-note,
 .talk-date,
 .funding-meta,
-.selected-meta,
-.publication-entry::before {
+.selected-meta {
   position: absolute;
   top: 1.25rem;
   left: calc(-1 * var(--hang));
@@ -907,11 +906,6 @@ th {
 .publication-strand-inequalities { --strand-color: var(--strand-inequalities); }
 .publication-strand-population { --strand-color: var(--strand-population); }
 
-/* Year of each publication in the margin. */
-.publication-entry::before {
-  content: attr(data-year);
-}
-
 .publication-strand-dot {
   display: inline-block;
   flex: none;
@@ -1272,8 +1266,11 @@ footer a {
     text-align: left;
   }
 
-  .publication-entry::before {
-    content: none;
+  /* Sideheads run into the sentence on narrow screens, so they need
+     their full stop back. */
+  .page-research article > ul > li > strong:first-child::after,
+  .page-teaching .section > ul > li > strong:first-child::after {
+    content: ".";
   }
 
 

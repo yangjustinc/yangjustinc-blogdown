@@ -84,9 +84,9 @@ From 2021 to 2025 I was a Visiting Lecturer at the Wolfson Institute of Populati
 
 ## Research training and development
 
-- **Reproducible data analysis.** As a certified [Carpentries](https://carpentries.org/) instructor, I designed and taught a free [four session course](https://yangjustinc.github.io/2026-10-14-ucldop-online/) in reproducible analysis in R and Python for mental health researchers (2026), and I was invited by Datacise Open Learning to teach [good practice in R](https://yangjustinc.github.io/good-practice-r-ons-srs/) to users of the ONS Secure Research Service across England (November 2026); the workshop materials are openly archived with a DOI.
-- **Research Development Programme Lead (2023 to 2025).** In the Division of Psychiatry, I used annual needs assessments to shape the Division's training in quantitative methods, fellowship preparation, open science, public involvement, and research management.
-- **Early career researchers.** Since 2022 I have built and coordinated the Division's community of non-clinical early career researchers (around 50 to 60 members), with regular fellowship development and peer feedback sessions, and have since shared its leadership with colleagues.
+- **Reproducible data analysis** As a certified [Carpentries](https://carpentries.org/) instructor, I designed and taught a free [four session course](https://yangjustinc.github.io/2026-10-14-ucldop-online/) in reproducible analysis in R and Python for mental health researchers (2026), and I was invited by Datacise Open Learning to teach [good practice in R](https://yangjustinc.github.io/good-practice-r-ons-srs/) to users of the ONS Secure Research Service across England (November 2026); the workshop materials are openly archived with a DOI.
+- **Research Development Programme Lead (2023 to 2025)** In the Division of Psychiatry, I used annual needs assessments to shape the Division's training in quantitative methods, fellowship preparation, open science, public involvement, and research management.
+- **Early career researchers** Since 2022 I have built and coordinated the Division's community of non-clinical early career researchers (around 50 to 60 members), with regular fellowship development and peer feedback sessions, and have since shared its leadership with colleagues.
 
 Reusable teaching materials are listed under [Code and resources](../resources/), and courses I have delivered under [Talks](../talks/).
 
@@ -122,4 +122,4 @@ published_projects |>
 
 ## Prospective doctoral students
 
-I welcome enquiries from prospective PhD students whose questions fit my research on health and social care in severe mental illness, mental health and addiction services, or school and health, particularly projects on where needs are recognised or missed, including when they span more than one service. Please [get in touch](../contact/) with a short outline of your question, the data or methods you have in mind, and your likely funding route.
+I welcome enquiries from prospective PhD students whose questions fit my research on severe mental illness, addictions, or neurodevelopmental conditions, particularly projects on where needs are recognised or missed, including when they span more than one service. Please [get in touch](../contact/) with a short outline of your question, the data or methods you have in mind, and your likely funding route.
