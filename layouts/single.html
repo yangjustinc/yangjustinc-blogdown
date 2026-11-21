@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-<main id="main">
+<main id="main"{{ with .File }} class="page-{{ .ContentBaseName }}"{{ end }}>
   <article>
     <header class="article-meta">
       <h1><span class="title">{{ .Title | markdownify }}</span></h1>

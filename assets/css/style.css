@@ -247,6 +247,7 @@ h3:hover .heading-anchor,
 /* ---------- Margin labels ---------- */
 /* Anything hung in the margin shares these settings. */
 
+.margin-note,
 .news-date,
 .talk-date,
 .funding-meta,
@@ -265,9 +266,55 @@ h3:hover .heading-anchor,
   text-align: right;
 }
 
+/* Items in running lists can carry a margin label too. */
+main li {
+  position: relative;
+}
+
+li > .margin-note {
+  top: 0.32rem;
+}
+
+.entry > .margin-note {
+  top: 1.45rem;
+}
+
+h2 + .entry > .margin-note {
+  top: 0.65rem;
+}
+
+/* Sideheads: on prose pages, the bold lead-in of each list item moves
+   into the margin, so these pages use the margin like the others. */
+.page-research article > ul > li > strong:first-child,
+.page-teaching .section > ul > li > strong:first-child {
+  position: absolute;
+  top: 0.28rem;
+  left: calc(-1 * var(--hang));
+  width: var(--margin);
+  color: var(--navy);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.page-research article > ul:has(> li > strong:first-child),
+.page-teaching .section > ul:has(> li > strong:first-child),
+ul:has(> li > .margin-note) {
+  padding-left: 0;
+  list-style: none;
+}
+
+.page-research article > ul:has(> li > strong:first-child) > li + li,
+.page-teaching .section > ul:has(> li > strong:first-child) > li + li,
+ul:has(> li > .margin-note) > li + li {
+  margin-top: 1rem;
+}
+
 /* Funder, amount and dates: one per line in the margin, a dotted
    run in the column on narrow screens. */
-.funding-meta span {
+.funding-meta span,
+.margin-note span {
   display: block;
 }
 
@@ -700,7 +747,8 @@ h2 + .people-grid .team-card:first-child img {
   color: var(--ink-2);
 }
 
-/* ---------- Tables: wide, so they span margin and column ---------- */
+/* ---------- Tables: wide, so they span margin and column, but set in
+   the same serif as the text ---------- */
 
 .site-table-wrap,
 .table-responsive {
@@ -713,8 +761,7 @@ table,
 .site-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: var(--sans);
-  font-size: 0.97rem;
+  font-size: 0.98rem;
   font-variant-numeric: lining-nums tabular-nums;
   line-height: 1.4;
 }
@@ -733,7 +780,9 @@ td:first-child {
 
 th {
   border-bottom: 1px solid var(--rule-strong);
-  color: var(--ink-2);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.9rem;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -1111,10 +1160,12 @@ footer a {
     padding-left: 0;
   }
 
+  .margin-note,
   .news-date,
   .talk-date,
   .funding-meta,
   .selected-meta {
+    display: block;
     position: static;
     width: auto;
     margin: 0 0 0.3rem;
@@ -1125,11 +1176,22 @@ footer a {
     content: none;
   }
 
-  .funding-meta span {
+
+  .page-research article > ul > li > strong:first-child,
+  .page-teaching .section > ul > li > strong:first-child {
+    position: static;
+    width: auto;
+    font-size: inherit;
+    text-align: left;
+  }
+
+  .funding-meta span,
+  .margin-note span {
     display: inline;
   }
 
-  .funding-meta span + span::before {
+  .funding-meta span + span::before,
+  .margin-note span + span::before {
     content: " · ";
   }
 
