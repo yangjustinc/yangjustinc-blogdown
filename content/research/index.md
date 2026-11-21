@@ -3,19 +3,18 @@ title: Research
 description: "Research by Dr Justin C Yang on where inequalities in mental health arise as needs are recognised, or missed, across education, health, addiction, and social care services."
 ---
 
-My research asks where inequalities in mental health arise: the points at which someone's needs are noticed or missed by services, and acted on or not. Whether a school recognises a child's autism, whether someone with a drug problem and a mental illness reaches treatment, and what support a person with severe mental illness receives outside hospital can all shape what follows, and each differs between groups and places.
+Many people's needs span more than one service: health and social care, mental health and addiction treatment, the NHS and schools. Each service sees and records only its part, so the points at which needs are noticed or missed are often invisible in any single dataset. I use records from the NHS, addiction treatment services, and schools, linked where possible, to find where inequalities arise, so that services and policy can act on them. In this sense the work extends the “pathways to care” tradition in psychiatric epidemiology beyond health services. How such records can be used well, and in ways the public can trust, is described under [How I work](#how-i-work).
 
-Many people's needs span more than one service: schools and the NHS, mental health and addiction treatment, health and social care. Each service sees and records only its part, so these points are often invisible in any single dataset. I use records from schools, the NHS, and addiction treatment services, linked where possible, to find where inequalities arise, so that services and policy can act on them. In this sense the work extends the “pathways to care” tradition in psychiatric epidemiology beyond health services. How such records can be used well, and in ways the public can trust, is described under [How I work](#how-i-work).
+I follow this question in three areas, in order of my current funded work: severe mental illness, addiction services, and school and health. Funding details are on the [Funding](../funding/) page, and the full record is on [Publications](../publications/).
 
-I follow this question in three areas, each developed through a series of studies. Funding details are on the [Funding](../funding/) page, and the full record is on [Publications](../publications/).
+## Health and social care in severe mental illness
 
-## School and health
+People with severe mental illness are supported in hospital, in the community, and by social care, and what happens to them in one setting shapes the others. I study treatment, harms, and inequalities in severe mental illness, including the support recorded outside the NHS.
 
-Autistic and other neurodivergent children are identified, supported, and excluded from school at different rates depending on who they are and where they live. Much of what happens to them is recorded in education data, and much in health data.
-
-- **Autism incidence in English schools.** With colleagues at the University of Cambridge, we studied recorded autism among more than 7 million pupils in English state schools and found that incidence differed sharply between social and ethnic groups and between areas ([*Lancet Child & Adolescent Health*, 2022](https://doi.org/10.1016/S2352-4642(22)00247-4)). I was joint first author and led the population and spatial analyses. A 2026 OECD report on rising childhood autism diagnoses cites the study as evidence of under-diagnosis among girls from minority ethnic groups.
-- **HOPE-SEN (2024 to 2026).** My ADR UK fellowship built on that study. It used linked national education and hospital records (ECHILD) to examine school absence, exclusion, alternative provision, and hospital admission among pupils receiving support for neurodevelopmental needs. Three first author papers are in preparation, and the analysis code is [openly archived](https://doi.org/10.5281/zenodo.22710433).
-- **Policy and doctoral research.** With Vanessa Cieplinska, a PhD student I co-supervise, and Professor Vasiliki Totsika, I submitted written evidence to the House of Commons Education Committee on persistent school absence among autistic pupils and pupils with intellectual disability (2026).
+- **Medication harms.** Among 13,391 patients of a London mental health service, antipsychotic polypharmacy was associated with endocrine and metabolic adverse drug reactions recorded in routine care ([*Psychological Medicine*, 2022](https://doi.org/10.1017/S0033291722000952)). I was joint first author and led the analysis and writing.
+- **WISDOM (2026 to 2029).** My UKRI Mental Health Platform Cross-Hub Fellowship brings together the Complex Emotions, DATAMIND, and Social Health hubs to study the social, emotional, environmental, and institutional drivers of severe and enduring mental illness.
+- **Observation on psychiatric wards (2024 to 2027).** In this £1.5 million NIHR study led by Professor Alexandra Pitman, I lead the electronic health record work package, which uses natural language processing to identify enhanced patient observation in clinical notes.
+- **Linking health and social care data (from 2027).** I co-lead a work package on the acceptability and governance of linking health and social care records in a new NIHR School for Social Care Research study led by Professor Peter Bath.
 
 ## Mental health and addiction services
 
@@ -26,14 +25,13 @@ People with drug or alcohol problems often have mental health needs too, and the
 - **Stigma in services (2026).** I lead the quantitative evaluation of a co-produced course for health and care staff who work with people who use drugs, funded through the NIHR School for Public Health Research.
 - I am an Associate Editor of *Addiction*.
 
-## Health and social care in severe mental illness
+## School and health
 
-People with severe mental illness are supported in hospital, in the community, and by social care, and what happens to them in one setting shapes the others. I study treatment, harms, and inequalities in severe mental illness, including the support recorded outside the NHS.
+Autistic and other neurodivergent children are identified, supported, and excluded from school at different rates depending on who they are and where they live. Much of what happens to them is recorded in education data, and much in health data.
 
-- **Medication harms.** Among 13,391 patients of a London mental health service, antipsychotic polypharmacy was associated with endocrine and metabolic adverse drug reactions recorded in routine care ([*Psychological Medicine*, 2022](https://doi.org/10.1017/S0033291722000952)). I was joint first author and led the analysis and writing.
-- **WISDOM (2026 to 2029).** My UKRI Mental Health Platform Cross-Hub Fellowship brings together the Complex Emotions, DATAMIND, and Social Health hubs to study the social, emotional, environmental, and institutional drivers of severe and enduring mental illness.
-- **Observation on psychiatric wards (2024 to 2027).** In this £1.5 million NIHR study led by Professor Alexandra Pitman, I lead the electronic health record work package, which uses natural language processing to identify enhanced patient observation in clinical notes.
-- **Linking health and social care data (from 2027).** I co-lead a work package on the acceptability and governance of linking health and social care records in a new NIHR School for Social Care Research study led by Professor Peter Bath.
+- **Autism incidence in English schools.** With colleagues at the University of Cambridge, we studied recorded autism among more than 7 million pupils in English state schools and found that incidence differed sharply between social and ethnic groups and between areas ([*Lancet Child & Adolescent Health*, 2022](https://doi.org/10.1016/S2352-4642(22)00247-4)). I was joint first author and led the population and spatial analyses. A 2026 OECD report on rising childhood autism diagnoses cites the study as evidence of under-diagnosis among girls from minority ethnic groups.
+- **HOPE-SEN (2024 to 2026).** My ADR UK fellowship built on that study. It used linked national education and hospital records (ECHILD) to examine school absence, exclusion, alternative provision, and hospital admission among pupils receiving support for neurodevelopmental needs. Three first author papers are in preparation, and the analysis code is [openly archived](https://doi.org/10.5281/zenodo.22710433).
+- **Policy and doctoral research.** With Vanessa Cieplinska, a PhD student I co-supervise, and Professor Vasiliki Totsika, I submitted written evidence to the House of Commons Education Committee on persistent school absence among autistic pupils and pupils with intellectual disability (2026).
 
 ## How I work
 

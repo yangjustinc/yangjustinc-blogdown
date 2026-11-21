@@ -5,7 +5,7 @@ aliases:
   - /people/
 ---
 
-MINDSET is the name of my research group at UCL. It includes the postdoctoral research fellows whose research I direct day to day and the doctoral students I co-supervise. Much of our work depends on partnerships with NHS trusts, national data programmes, treatment providers, lived experience organisations, and other research groups, listed below.
+MINDSET (Multimodal Inference and Data Science for Epidemiology and Treatment) is my research group at UCL. It includes the postdoctoral research fellows whose research I direct day to day and the doctoral students I co-supervise. Much of our work depends on partnerships with NHS trusts, national data programmes, treatment providers, lived experience organisations, and other research groups, listed below.
 
 ## Research team
 
@@ -65,16 +65,6 @@ Many partners contribute to more than one line of work.
 
 <div class="partner-groups">
 <section class="partner-group">
-<h3>National data programmes and population research</h3>
-<p>Linked national administrative data, the infrastructure for using it, and research on social inequalities in mental health. This underpins the school and health work and the comparisons between groups and places.</p>
-<ul class="link-list">
-<li><a href="https://www.adruk.org/">Administrative Data Research UK</a></li>
-<li><a href="https://www.hdruk.ac.uk/">Health Data Research UK</a></li>
-<li><a href="https://www.psylife.eu/">Social inequalities in mental health across the life course (PsyLife)</a></li>
-<li><a href="https://datamind.org.uk/">The Hub for Mental Health Informatics Research Development (DATAMIND)</a></li>
-</ul>
-</section>
-<section class="partner-group">
 <h3>NHS trusts and clinical informatics</h3>
 <p>Electronic health records, natural language processing of clinical text, governed data access, and harmonisation across NHS research databases. This underpins the work on severe mental illness.</p>
 <ul class="link-list">
@@ -83,6 +73,25 @@ Many partners contribute to more than one line of work.
 <li><a href="https://www.northlondonmentalhealth.nhs.uk/">North London NHS Foundation Trust</a></li>
 <li><a href="https://slam.nhs.uk/">South London and Maudsley NHS Foundation Trust</a></li>
 <li><a href="https://smwu.github.io/">Dr Stephanie Wu</a></li>
+</ul>
+</section>
+<section class="partner-group">
+<h3>Treatment providers and lived experience organisations</h3>
+<p>Partners who keep research questions and interpretation tied to how services work and to people's experience of them. Change Grow Live and Turning Point are partners in <a href="https://yangjustinc.github.io/united/">UNITED</a>.</p>
+<ul class="link-list">
+<li><a href="https://www.changegrowlive.org/">Change Grow Live</a></li>
+<li><a href="https://mcpin.org/">McPin Foundation</a></li>
+<li><a href="https://www.turning-point.co.uk/">Turning Point</a></li>
+</ul>
+</section>
+<section class="partner-group">
+<h3>National data programmes and population research</h3>
+<p>Linked national administrative data, the infrastructure for using it, and research on social inequalities in mental health. This underpins the school and health work and the comparisons between groups and places.</p>
+<ul class="link-list">
+<li><a href="https://www.adruk.org/">Administrative Data Research UK</a></li>
+<li><a href="https://www.hdruk.ac.uk/">Health Data Research UK</a></li>
+<li><a href="https://www.psylife.eu/">Social inequalities in mental health across the life course (PsyLife)</a></li>
+<li><a href="https://datamind.org.uk/">The Hub for Mental Health Informatics Research Development (DATAMIND)</a></li>
 </ul>
 </section>
 <section class="partner-group">
@@ -95,15 +104,6 @@ Many partners contribute to more than one line of work.
 <li><a href="https://www.mentalhealthpolicyeconomicsgroup.com/">Mental Health | Policy | Economics Group</a></li>
 <li><a href="https://www.mentalhealthepi.com/">Mental Illness through Systems Thinking (MIST) Psychiatric Epidemiology</a></li>
 <li><a href="https://www.socialhealthhub.org/">Social Health Hub</a></li>
-</ul>
-</section>
-<section class="partner-group">
-<h3>Treatment providers and lived experience organisations</h3>
-<p>Partners who keep research questions and interpretation tied to how services work and to people's experience of them. Change Grow Live and Turning Point are partners in <a href="https://yangjustinc.github.io/united/">UNITED</a>.</p>
-<ul class="link-list">
-<li><a href="https://www.changegrowlive.org/">Change Grow Live</a></li>
-<li><a href="https://mcpin.org/">McPin Foundation</a></li>
-<li><a href="https://www.turning-point.co.uk/">Turning Point</a></li>
 </ul>
 </section>
 </div>

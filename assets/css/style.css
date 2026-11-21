@@ -248,7 +248,6 @@ h3:hover .heading-anchor,
 /* Anything hung in the margin shares these settings. */
 
 .margin-note,
-.news-date,
 .talk-date,
 .funding-meta,
 .selected-meta,
@@ -538,22 +537,42 @@ h2 + .talk-card .talk-date,
 
 /* ---------- Home ---------- */
 
+/* The introduction is a real two-column grid, so the profile column in
+   the margin can be as long as it needs without overlapping anything. */
 .home-intro {
-  position: relative;
-  margin-top: 3.25rem;
+  display: grid;
+  grid-template-columns: var(--margin) minmax(0, 1fr);
+  column-gap: var(--gap);
+  margin: 3.25rem 0 0 calc(-1 * var(--hang));
+}
+
+.home-card {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.home-portrait {
+  display: block;
+  width: 100%;
+  margin: 0.4rem 0 0.9rem;
+  border-radius: 2px;
+}
+
+.home-contact {
+  margin: 0 0 0.6rem;
+  overflow-wrap: anywhere;
+}
+
+.home-card .profiles {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
 }
 
 .home-intro h1 {
   margin-bottom: 1.1rem;
-}
-
-/* Portrait hangs in the margin, beside the name. */
-.home-portrait {
-  position: absolute;
-  top: 0.35rem;
-  left: calc(-1 * var(--hang));
-  width: var(--margin);
-  border-radius: 2px;
 }
 
 .home-lede {
@@ -561,25 +580,85 @@ h2 + .talk-card .talk-date,
   line-height: 1.55;
 }
 
-.home-role {
+.home-intro-text > p:last-child {
   margin-bottom: 0;
   color: var(--ink-2);
 }
 
-.mindset-questions {
-  margin: 0 0 1rem;
+/* At a glance: label in the margin, fact in the column. */
+.glance {
+  margin: 0;
 }
 
-.mindset-question {
+.glance > div {
+  position: relative;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.glance > div:first-child {
+  border-top: 0;
+  padding-top: 0.1rem;
+}
+
+.glance dt {
+  position: absolute;
+  top: 0.75rem;
+  left: calc(-1 * var(--hang));
+  width: var(--margin);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.glance > div:first-child dt {
+  top: 0.3rem;
+}
+
+.glance dd {
+  margin: 0;
+}
+
+/* Research areas: funded projects and dates in the margin. */
+.areas {
+  margin: 0;
+}
+
+.area {
+  position: relative;
   padding: 1.2rem 0 1.25rem;
   border-top: 1px solid var(--rule);
 }
 
-.mindset-question h3 {
+.area > .margin-note {
+  top: 1.45rem;
+}
+
+.area .margin-note span:nth-child(odd) {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.area .margin-note span:nth-child(even) {
+  margin-bottom: 0.45rem;
+}
+
+.area h3 {
   margin: 0 0 0.35rem;
 }
 
-.mindset-question > p:not(.theme-evidence) {
+.area h3 a {
+  color: inherit;
+  text-decoration-color: var(--rule-strong);
+}
+
+.area h3 a:hover {
+  color: var(--link);
+}
+
+.area > p:not(.theme-evidence):not(.margin-note) {
   margin-bottom: 0.6rem;
 }
 
@@ -590,33 +669,37 @@ h2 + .talk-card .talk-date,
   line-height: 1.55;
 }
 
-.mindset-question .heading-anchor {
+.area .heading-anchor {
   display: none;
 }
 
-.news-list {
+/* Profile links, used on the homepage and in the footer. */
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.1rem;
+  margin: 0;
   padding: 0;
   list-style: none;
+  font-family: var(--sans);
 }
 
-.news-list li {
-  position: relative;
-  margin: 0;
-  padding: 1.1rem 0;
-  border-top: 1px solid var(--rule);
+.profiles li + li {
+  margin-top: 0;
 }
 
-.news-list li:first-child {
-  border-top: 0;
-  padding-top: 0.2rem;
+.profiles a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0;
 }
 
-.news-list li:first-child .news-date {
-  top: 0.35rem;
-}
-
-.news-date {
-  top: 1.35rem;
+.profiles svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+  flex: none;
 }
 
 /* ---------- Team ---------- */
@@ -677,25 +760,15 @@ h2 + .people-grid .team-card:first-child img {
   font-size: 0.95rem;
 }
 
-/* Wide groups span margin and column. */
-.partner-groups,
-.leadership-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 var(--gap);
-  margin-left: calc(-1 * var(--hang));
-}
-
-.partner-group,
-.leadership-card {
-  padding-top: 1rem;
+/* Partner groups sit in the column; their link lists run in two
+   columns to keep them compact. */
+.partner-group {
+  padding: 1rem 0 0.4rem;
   border-top: 1px solid var(--rule);
 }
 
-.partner-group h3,
-.leadership-kicker {
-  margin: 0 0 0.5rem;
-  font-size: 1.12rem;
+.partner-group h3 {
+  margin: 0 0 0.45rem;
 }
 
 .partner-group p {
@@ -703,17 +776,57 @@ h2 + .people-grid .team-card:first-child img {
   font-size: 1rem;
 }
 
-.link-list,
+.link-list {
+  columns: 2;
+  column-gap: var(--gap);
+  padding: 0;
+  list-style: none;
+  font-family: var(--sans);
+  font-size: 0.97rem;
+  line-height: 1.4;
+}
+
+.link-list li {
+  break-inside: avoid;
+  margin: 0 0 0.5rem;
+}
+
+/* Roles and recognition: each group's name is a sidehead in the margin. */
+.leadership-card {
+  position: relative;
+  padding: 1rem 0 0.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+h2 + .leadership-grid .leadership-card:first-child {
+  border-top: 0;
+  padding-top: 0.2rem;
+}
+
+.leadership-kicker {
+  position: absolute;
+  top: 1.25rem;
+  left: calc(-1 * var(--hang));
+  width: var(--margin);
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  text-align: right;
+}
+
+h2 + .leadership-grid .leadership-card:first-child .leadership-kicker {
+  top: 0.45rem;
+}
+
 .role-list {
   padding: 0;
   list-style: none;
   font-size: 1rem;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
-.link-list li + li,
 .role-list li + li {
-  margin-top: 0.55rem;
+  margin-top: 0.5rem;
 }
 
 .partner-group .heading-anchor,
@@ -747,12 +860,11 @@ h2 + .people-grid .team-card:first-child img {
   color: var(--ink-2);
 }
 
-/* ---------- Tables: wide, so they span margin and column, but set in
-   the same serif as the text ---------- */
+/* ---------- Tables: in the column, set in the reading serif ---------- */
 
 .site-table-wrap,
 .table-responsive {
-  margin: 1.25rem 0 1.75rem calc(-1 * var(--hang));
+  margin: 1.25rem 0 1.75rem;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -814,14 +926,11 @@ th {
   margin: 1rem 0 2rem;
 }
 
-/* The filters, timeline and its caption are wide, so they span margin
-   and column. (The full list is nested inside the explorer by the R
-   output, so the explorer itself stays in the column.) */
 .publication-filter-group {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin: 0 0 1rem calc(-1 * var(--hang));
+  margin: 0 0 1rem;
 }
 
 .publication-filter,
@@ -859,7 +968,7 @@ th {
 }
 
 .publication-timeline-scroll {
-  margin: 0.5rem 0 0.5rem calc(-1 * var(--hang));
+  margin: 0.5rem 0;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -867,7 +976,7 @@ th {
 .publication-timeline {
   display: block;
   width: 100%;
-  min-width: 640px;
+  min-width: 540px;
 }
 
 .publication-timeline-grid {
@@ -875,11 +984,18 @@ th {
   stroke-width: 1;
 }
 
+/* The SVG is 900 units wide but drawn at column width, so its type is
+   set larger in SVG units to read at about 12px. Lane names sit just
+   above their lane so long names don't run into the first points. */
 .publication-timeline-year,
 .publication-timeline-lane {
   fill: var(--ink-2);
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 17px;
+}
+
+.publication-timeline-lane {
+  transform: translateY(-14px);
 }
 
 .publication-timeline-mark {
@@ -902,7 +1018,6 @@ th {
 
 .publication-selected-paper {
   min-height: 1.6em;
-  margin-left: calc(-1 * var(--hang));
   color: var(--ink-2);
   font-family: var(--sans);
   font-size: 0.98rem;
@@ -1066,17 +1181,18 @@ th {
 /* ---------- Footer ---------- */
 
 footer {
-  position: relative;
-  padding-top: 0;
   padding-bottom: 2.75rem;
   color: var(--muted);
   font-family: var(--sans);
   font-size: 0.95rem;
 }
 
-footer hr {
-  margin: 0 0 1.25rem calc(-1 * var(--hang));
-  border-top-color: var(--rule-strong);
+.footer-inner {
+  display: grid;
+  gap: 0.6rem;
+  margin-left: calc(-1 * var(--hang));
+  padding: 1.25rem 0 0 var(--hang);
+  border-top: 1px solid var(--rule-strong);
 }
 
 footer p {
@@ -1087,30 +1203,15 @@ footer a {
   color: var(--ink-2);
 }
 
-.footer-social {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.15rem;
-  margin: 0 0 0.6rem -0.65rem;
-}
-
-.footer-social a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 2.75rem;
-  min-height: 2.75rem;
-  color: var(--muted);
-}
-
-.footer-social a:hover {
+.footer-name a:first-child {
   color: var(--navy);
+  font-family: var(--serif);
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.footer-social svg {
-  width: 1.15rem;
-  height: 1.15rem;
-  fill: currentColor;
+.footer-copy {
+  font-size: 0.88rem;
 }
 
 /* ---------- Narrow screens: the margin folds into the column ---------- */
@@ -1161,7 +1262,6 @@ footer a {
   }
 
   .margin-note,
-  .news-date,
   .talk-date,
   .funding-meta,
   .selected-meta {
@@ -1196,18 +1296,43 @@ footer a {
   }
 
   .home-intro {
+    display: flex;
+    flex-direction: column-reverse;
     margin-top: 2.25rem;
   }
 
-  .home-portrait {
-    position: static;
-    float: right;
-    width: 5.75rem;
-    margin: 0.2rem 0 0.75rem 1rem;
+  .home-card {
+    margin-top: 1.25rem;
+    text-align: left;
   }
 
-  .home-lede {
-    clear: both;
+  .home-portrait {
+    width: 6rem;
+    margin: 0 0 0.75rem;
+  }
+
+  .home-card .profiles {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .glance dt,
+  .leadership-kicker {
+    position: static;
+    width: auto;
+    text-align: left;
+  }
+
+  .glance dt {
+    margin-bottom: 0.1rem;
+  }
+
+  .leadership-kicker {
+    margin-bottom: 0.4rem;
+  }
+
+  .link-list {
+    columns: 1;
   }
 
   .team-card {
@@ -1232,10 +1357,6 @@ footer a {
     justify-self: start;
   }
 
-  .partner-groups,
-  .leadership-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
 
   .publication-toolbar > p {
     grid-template-columns: minmax(0, 1fr);
@@ -1259,7 +1380,7 @@ footer a {
 @media print {
   body::before,
   .site-header nav,
-  .footer-social,
+  .profiles,
   .publication-explorer,
   .publication-toolbar,
   .publication-entry-actions,
