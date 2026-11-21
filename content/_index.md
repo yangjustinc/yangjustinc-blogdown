@@ -1,81 +1,57 @@
 ---
 title: Home
-description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying where inequalities in mental health arise as people's needs are recognised, or missed, by services."
+description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying complex and co-occurring mental health needs that span services, and where those needs go unmet."
 ---
 
 <div class="home-intro">
+<aside class="home-card" aria-label="Profile and contact">
 <img class="home-portrait" src="team/pictures/justinyang.webp" alt="Portrait of Justin C Yang" width="256" height="256" decoding="async" fetchpriority="high">
+<p class="home-contact"><a href="mailto:justin.yang@ucl.ac.uk">justin.yang@ucl.ac.uk</a></p>
+{{< profiles >}}
+</aside>
 <div class="home-intro-text">
 <h1>Justin C Yang</h1>
-<p class="home-lede">I study where inequalities in mental health arise: the points at which someone's needs are noticed or missed by services, and acted on or not. Whether a school recognises a child's autism, or whether someone with psychosis who uses drugs is treated by one service or passed between two, can shape what follows. Each service records only its part, so I use records from schools, the NHS, and addiction treatment services, linked where possible, to find where these inequalities arise and where services could act.</p>
-<p class="home-role">I am a psychiatric epidemiologist and Senior Research Fellow in the <a href="https://www.ucl.ac.uk/psychiatry">UCL Division of Psychiatry</a>, and an Associate Editor of <a href="https://onlinelibrary.wiley.com/journal/13600443"><i>Addiction</i></a>.</p>
+<p class="home-lede">I study complex and co-occurring mental health needs: people with severe mental illness who also use drugs or alcohol or need social care, and neurodivergent children whose needs cross health and education. These needs span services that each see only part of the picture, and that is where they go unmet.</p>
+<p>Whether someone with psychosis who uses drugs is treated by one service or passed between two, or whether a school recognises a child's autism, can shape what follows. To see these needs whole, I bring sources together: linked records from the NHS, addiction treatment services, and schools, clinical text, and national surveys, triangulated to show where needs go unmet and where services and policy could act.</p>
+<p>This is the work of <b>MINDSET</b> (Multimodal Inference and Data Science for Epidemiology and Treatment), my research group in the <a href="https://www.ucl.ac.uk/psychiatry">UCL Division of Psychiatry</a>, with two postdoctoral research fellows and two doctoral students (<a href="team/">Team</a>).</p>
 </div>
 </div>
 
-<div class="academic-snapshot" aria-label="Research record at a glance">
-  <div class="academic-snapshot-item">
-    <span class="academic-snapshot-label">Funding as principal investigator</span>
-    <strong>£562k</strong>
-    <span>Three competitive awards since 2024, from UKRI, ESRC, and NIHR</span>
-  </div>
-  <div class="academic-snapshot-item">
-    <span class="academic-snapshot-label">Collaborative awards</span>
-    <strong>£1.9m</strong>
-    <span>Full value of four awards as co-investigator or work package lead</span>
-  </div>
-  <div class="academic-snapshot-item">
-    <span class="academic-snapshot-label">Policy</span>
-    <strong>About 35</strong>
-    <span>Policy documents citing my co-authored work, including OECD and WHO reports</span>
-  </div>
-  <div class="academic-snapshot-item">
-    <span class="academic-snapshot-label">National role</span>
-    <strong>Expert Member</strong>
-    <span>Health Research Authority Confidentiality Advisory Group</span>
-  </div>
-</div>
+## At a glance
+
+<dl class="glance">
+  <div><dt>Position</dt><dd>Psychiatric epidemiologist and Senior Research Fellow, UCL Division of Psychiatry</dd></div>
+  <div><dt>Funding as principal investigator</dt><dd>£562k from three competitive awards since 2024, from UKRI, ESRC, and NIHR (<a href="funding/">Funding</a>)</dd></div>
+  <div><dt>Collaborative awards</dt><dd>£1.9m across four awards as co-investigator or work package lead</dd></div>
+  <div><dt>Policy</dt><dd>Work I have co-authored is cited in about 35 policy documents, including OECD and WHO reports</dd></div>
+  <div><dt>National roles</dt><dd>Associate Editor, <a href="https://onlinelibrary.wiley.com/journal/13600443"><i>Addiction</i></a>; Expert Member, Health Research Authority Confidentiality Advisory Group; Deputy Lead, <a href="https://www.northlondonmentalhealth.nhs.uk/research-database-">North London NHS Foundation Trust research database</a> (<a href="about/">About</a>)</dd></div>
+</dl>
 
 ## Research
 
-I follow this question in three areas, each developed through a series of studies. See [Research](research/) for more detail.
+Three areas, in order of my current funded work. [Research](research/) has the detail.
 
-<div class="mindset-questions theme-cards">
-  <section class="mindset-question">
-    <span class="mindset-question-number">01</span>
-    <h3>School and health</h3>
-    <p>How schools and health services identify and support autistic and other neurodivergent children, and what follows for school attendance, exclusion, and hospital admission.</p>
-    <p class="theme-evidence"><b>Key finding:</b> recorded autism incidence among more than 7 million pupils in England differed sharply between social and ethnic groups and between areas (<a href="https://doi.org/10.1016/S2352-4642(22)00247-4"><i>Lancet Child &amp; Adolescent Health</i></a>, 2022; joint first author). A 2026 OECD report cites it.<br><b>Projects:</b> HOPE-SEN, ADR UK fellowship (2024 to 2026), on school absence, exclusion, and hospital admission among neurodivergent pupils.</p>
+<div class="areas">
+  <section class="area">
+    <p class="margin-note"><span>WISDOM</span><span>UKRI, 2026–29</span><span>Ward observation</span><span>NIHR, 2024–27</span><span>Health and social care data</span><span>NIHR, from 2027</span></p>
+    <h3><a href="research/#severe-mental-illness">Severe mental illness</a></h3>
+    <p>Treatment, harms, and unmet need in hospital and in the community, including the social care support that NHS records miss.</p>
+    <p class="theme-evidence"><b>Key finding:</b> antipsychotic polypharmacy was associated with endocrine and metabolic adverse drug reactions among 13,391 patients (<a href="https://doi.org/10.1017/S0033291722000952"><i>Psychological Medicine</i></a>, 2022; joint first author).</p>
   </section>
-  <section class="mindset-question">
-    <span class="mindset-question-number">02</span>
-    <h3>Mental health and addiction services</h3>
+  <section class="area">
+    <p class="margin-note"><span><a href="https://yangjustinc.github.io/united/">UNITED</a></span><span>NIHR, 2026</span><span>Stigma in services</span><span>NIHR, 2026</span></p>
+    <h3><a href="research/#addictions">Addictions</a></h3>
     <p>Who reaches treatment for drug and alcohol problems, particularly people who also have a mental illness, and what stands in the way.</p>
-    <p class="theme-evidence"><b>Key findings:</b> cost was the barrier most often reported by US adults with unmet need for mental health treatment, and provision of opioid agonist treatment varied by region, organisation, and payment (2019 and 2020; first author).<br><b>Projects:</b> <a href="https://yangjustinc.github.io/united/">UNITED</a>, NIHR Team Science award (2026), on what England's national treatment data can show about who reaches treatment; evaluation of an anti-stigma course for health and care staff, NIHR (2026).</p>
+    <p class="theme-evidence"><b>Key findings:</b> cost was the barrier most often reported by US adults with unmet need for mental health treatment, and provision of opioid agonist treatment varied by region, organisation, and payment (2019 and 2020; first author).</p>
   </section>
-  <section class="mindset-question">
-    <span class="mindset-question-number">03</span>
-    <h3>Health and social care in severe mental illness</h3>
-    <p>Treatment, harms, and inequalities for people with severe mental illness, in hospital and in the community, including the support recorded outside the NHS.</p>
-    <p class="theme-evidence"><b>Key finding:</b> antipsychotic polypharmacy was associated with endocrine and metabolic adverse drug reactions among 13,391 patients (<a href="https://doi.org/10.1017/S0033291722000952"><i>Psychological Medicine</i></a>, 2022; joint first author).<br><b>Projects:</b> WISDOM, UKRI fellowship (2026 to 2029), on the social and emotional drivers of severe mental illness; enhanced patient observation on psychiatric wards, NIHR (2024 to 2027); linking health and social care data, NIHR (from 2027).</p>
+  <section class="area">
+    <p class="margin-note"><span>HOPE-SEN</span><span>ADR UK, 2024–26</span></p>
+    <h3><a href="research/#neurodevelopmental-conditions">Neurodevelopmental conditions</a></h3>
+    <p>Which autistic and other neurodivergent children are recognised and supported by schools and health services, and what follows for attendance, exclusion, and hospital admission.</p>
+    <p class="theme-evidence"><b>Key finding:</b> recorded autism incidence among more than 7 million pupils in England differed sharply between social and ethnic groups and between areas (<a href="https://doi.org/10.1016/S2352-4642(22)00247-4"><i>Lancet Child &amp; Adolescent Health</i></a>, 2022; joint first author). A 2026 OECD report cites it.</p>
   </section>
 </div>
 
-## Recent
-
-<ul class="news-list">
-  <li><span class="news-date">November 2026</span> UNITED Lunch and Learn with the NIHR Public Health Policy Research Unit on how routine data can help us understand the needs of people who use drugs and alcohol (<a href="https://yangjustinc.github.io/united/#recording">recording and slides</a>). Workshop on good practice in R for users of the ONS Secure Research Service, through Datacise Open Learning on 25 November (<a href="https://yangjustinc.github.io/good-practice-r-ons-srs/">open materials</a>).</li>
-  <li><span class="news-date">October 2026</span> Elected to UCL Academic Board. Funding awarded by the NIHR School for Social Care Research for a study of linking health and social care data, in which I co-lead a work package.</li>
-  <li><span class="news-date">September 2026</span> Written evidence to the House of Commons Education Committee on persistent school absence among autistic pupils and pupils with intellectual disability, with Vanessa Cieplinska and Professor Vasiliki Totsika.</li>
-  <li><span class="news-date">2026</span> Scoping review of 83 research outputs using England's National Drug Treatment Monitoring System, from UNITED (<a href="https://doi.org/10.2139/ssrn.7505399">preprint</a>; under review).</li>
-  <li><span class="news-date">January 2026</span> WISDOM began: a UKRI Mental Health Platform fellowship linking the Complex Emotions, DATAMIND, and Social Health hubs.</li>
-</ul>
-
-## How I work
-
-Seeing where needs are recognised or missed usually means bringing together records that each service keeps separately, in ways the public can trust. Since 2019 I have helped run the [research database](https://www.northlondonmentalhealth.nhs.uk/research-database-) of what is now North London NHS Foundation Trust, now as Deputy Lead, and I sit on the Health Research Authority's Confidentiality Advisory Group, which advises on when confidential patient information can be used without consent.
-
 ## Working together
 
-MINDSET is the name of my research group: the postdoctoral researchers whose research I direct day to day, and the doctoral students I co-supervise. See [Team](team/). I collaborate with academic groups, NHS trusts, treatment providers, and people with lived experience.
-
-I welcome conversations about research on how mental health needs are recognised and acted on across education, health, addiction, and social care services, and about doctoral supervision. [Get in touch](contact/).
+I collaborate with academic groups, NHS trusts, treatment providers, and people with lived experience, and I welcome enquiries about research partnerships and doctoral supervision. [Get in touch](contact/).

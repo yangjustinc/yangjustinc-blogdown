@@ -6,7 +6,7 @@ output:
     keep_md: yes
 ---
 
-My publications include joint first and senior author papers in *The Lancet Child & Adolescent Health*, *Psychological Medicine*, and *LGBT Health*. Work I have co-authored is cited in about 35 policy documents, including reports from the OECD, the World Health Organization, the EU drugs agency, and UNODC. Open access copies are linked where available.
+My publications include joint first and senior author papers in *Psychological Medicine*, *The Lancet Child & Adolescent Health*, and *LGBT Health*. Work I have co-authored is cited in about 35 policy documents, including reports from the OECD, the World Health Organization, the EU drugs agency, and UNODC. Open access copies are linked where available.
 
 Five papers that show the main lines of my research are below, followed by an explorer and the complete list, which is updated from [ORCID](https://orcid.org/0000-0003-2881-4906).
 

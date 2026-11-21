@@ -3,7 +3,7 @@ title: Contact
 description: "Contact Dr Justin C Yang about research collaboration, doctoral supervision, speaking invitations, or advisory work."
 ---
 
-I welcome enquiries about **research collaboration**, particularly on how mental health needs are recognised and acted on across education, health, addiction, and social care services; **doctoral supervision**; **speaking and methods training**; and **advice on research data access and governance**.
+I welcome enquiries about **research collaboration**, particularly on complex and co-occurring mental health needs across health, social care, addiction, and education services; **doctoral supervision**; **speaking and methods training**; and **advice on research data access and governance**.
 
 You can email me directly at [justin.yang@ucl.ac.uk](mailto:justin.yang@ucl.ac.uk), or use the form below. Prospective PhD students should include a short outline of their question, the data or methods they have in mind, and their likely funding route.
 

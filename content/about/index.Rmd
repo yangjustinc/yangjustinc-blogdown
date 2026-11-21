@@ -12,7 +12,7 @@ output:
 
 <p class="bio-note">For event organisers and editors: this biography may be reused as written.</p>
 
-Dr Justin C Yang is a psychiatric epidemiologist and Senior Research Fellow in the Division of Psychiatry at University College London, and an Associate Editor of *Addiction*. Dr Yang's research asks where inequalities in mental health arise: the points at which people's needs are recognised or missed by services, and acted on or not, particularly when those needs span school and health care, mental health and addiction treatment, or health and social care. The work uses routinely collected records from these services, linked where possible, and addresses how such records can be used in ways the public can trust.
+Dr Justin C Yang is a psychiatric epidemiologist and Senior Research Fellow in the Division of Psychiatry at University College London, and an Associate Editor of *Addiction*. Dr Yang studies complex and co-occurring mental health needs: people whose needs span health and social care, mental health and addiction treatment, or health care and school, and where those needs go unmet. The work brings together linked records from these services, clinical text, and national surveys, and addresses how such records can be used in ways the public can trust.
 
 Dr Yang leads the MINDSET research group at UCL and an NIHR Team Science award on England's national drug and alcohol treatment data (UNITED), holds a UKRI Mental Health Platform Cross-Hub Fellowship (WISDOM, 2026 to 2029), and led an ADR UK fellowship on the education and health of neurodivergent pupils (HOPE-SEN, 2024 to 2026). Dr Yang is Deputy Lead of the North London NHS Foundation Trust research database and an Expert Member of the Health Research Authority's Confidentiality Advisory Group, and holds a PhD in Public Health and Primary Care from the University of Cambridge and an MSPH in Health Policy from Johns Hopkins University.
 
@@ -22,52 +22,60 @@ Dr Yang leads the MINDSET research group at UCL and an NIHR Team Science award o
 
 <div class="leadership-card hue-orange">
 <h3 class="leadership-kicker">Editorial and peer review</h3>
-<p><b>Associate Editor</b>, <a href="https://onlinelibrary.wiley.com/page/journal/13600443/homepage/editorialboard.html"><i>Addiction</i></a> (2025&ndash;)<br>
-<b>Member</b>, <a href="https://www.ukri.org/councils/esrc/">ESRC Peer Review College</a> (2025&ndash;)<br>
-<b>Expert Assessor</b>, <a href="https://www.adruk.org/">Administrative Data Research UK</a> (2025&ndash;)<br>
-<b>Member</b>, <a href="https://www.addiction-ssa.org/">Society for the Study of Addiction Reviewer College</a> (2025&ndash;)<br>
-<b>Editorial Board Member</b>, <a href="https://journals.sagepub.com/editorial-board/SAT"><i>Substance Use: Research and Treatment</i></a> (2022&ndash;)</p>
+<ul class="role-list">
+<li><b>Associate Editor</b>, <a href="https://onlinelibrary.wiley.com/page/journal/13600443/homepage/editorialboard.html"><i>Addiction</i></a> (2025&ndash;)</li>
+<li><b>Member</b>, <a href="https://www.ukri.org/councils/esrc/">ESRC Peer Review College</a> (2025&ndash;)</li>
+<li><b>Expert Assessor</b>, <a href="https://www.adruk.org/">Administrative Data Research UK</a> (2025&ndash;)</li>
+<li><b>Member</b>, <a href="https://www.addiction-ssa.org/">Society for the Study of Addiction Reviewer College</a> (2025&ndash;)</li>
+<li><b>Editorial Board Member</b>, <a href="https://journals.sagepub.com/editorial-board/SAT"><i>Substance Use: Research and Treatment</i></a> (2022&ndash;)</li>
+</ul>
 </div>
 
 <div class="leadership-card hue-purple">
 <h3 class="leadership-kicker">National research governance and policy</h3>
-<p><b>Written evidence</b>, House of Commons Education Committee, on persistent school absence among autistic pupils and pupils with intellectual disability (ECA0106, 2026)<br>
-<b>Expert Member</b>, <a href="https://www.hra.nhs.uk/about-us/committees-and-services/confidentiality-advisory-group/">Confidentiality Advisory Group, Health Research Authority</a> (2026&ndash;)<br>
-<b>Member</b>, ADR UK Task and Finish Group on the data access journey (2026&ndash;)<br>
-<b>Public Member</b>, Data Access Committee, <a href="https://easternsde.nhs.uk/">Eastern England Secure Data Environment</a> (2026&ndash;)<br>
-<b>Steering Committee Member</b>, <a href="https://www.gov.uk/government/publications/life-sciences-healthcare-goals/addiction-healthcare-goals">Addiction Healthcare Goals</a> (2025&ndash;)<br>
-<b>Steering Group Member</b>, <a href="https://mentalhealthresearch.org.uk/">NIHR Mental Health Research Incubator</a> (2025&ndash;)</p>
+<ul class="role-list">
+<li><b>Written evidence</b>, House of Commons Education Committee, on persistent school absence among autistic pupils and pupils with intellectual disability (ECA0106, 2026)</li>
+<li><b>Expert Member</b>, <a href="https://www.hra.nhs.uk/about-us/committees-and-services/confidentiality-advisory-group/">Confidentiality Advisory Group, Health Research Authority</a> (2026&ndash;)</li>
+<li><b>Member</b>, ADR UK Task and Finish Group on the data access journey (2026&ndash;)</li>
+<li><b>Public Member</b>, Data Access Committee, <a href="https://easternsde.nhs.uk/">Eastern England Secure Data Environment</a> (2026&ndash;)</li>
+<li><b>Steering Committee Member</b>, <a href="https://www.gov.uk/government/publications/life-sciences-healthcare-goals/addiction-healthcare-goals">Addiction Healthcare Goals</a> (2025&ndash;)</li>
+<li><b>Steering Group Member</b>, <a href="https://mentalhealthresearch.org.uk/">NIHR Mental Health Research Incubator</a> (2025&ndash;)</li>
+</ul>
 </div>
 
 <div class="leadership-card hue-blue">
 <h3 class="leadership-kicker">Research infrastructure</h3>
-<p><b>Co-lead</b>, HDR UK and DARE UK project embedding national public involvement standards in the research database's governance (2025&ndash;26)<br>
-<b>Deputy Lead</b> (2024&ndash;), previously Database Manager (2019&ndash;2024), <a href="https://www.northlondonmentalhealth.nhs.uk/research-database-">North London NHS Foundation Trust research database</a>. Led the integration of two trusts' research data after their merger; has advised on 31 research projects; contributes to harmonisation with the equivalent databases at South London and Maudsley, Oxford Health, and Cambridgeshire and Peterborough.</p>
+<ul class="role-list">
+<li><b>Co-lead</b>, HDR UK and DARE UK project embedding national public involvement standards in the research database's governance (2025&ndash;26)</li>
+<li><b>Deputy Lead</b> (2024&ndash;), previously Database Manager (2019&ndash;2024), <a href="https://www.northlondonmentalhealth.nhs.uk/research-database-">North London NHS Foundation Trust research database</a>. Led the integration of two trusts' research data after their merger; has advised on 31 research projects; contributes to harmonisation with the equivalent databases at South London and Maudsley, Oxford Health, and Cambridgeshire and Peterborough.</li>
+</ul>
 </div>
 
 <div class="leadership-card hue-green">
 <h3 class="leadership-kicker">Leadership at UCL</h3>
-<p><b>Elected Member</b>, <a href="https://www.ucl.ac.uk/about/leadership/governance/committees/ab-and-committees/academic-board">UCL Academic Board</a> (2026&ndash;)<br>
-<b>Open Science Champion</b>, Faculty of Brain Sciences (2025&ndash;)<br>
-<b>Research Development Programme Lead</b>, Division of Psychiatry (2023&ndash;25)<br>
-<b>Lead</b>, Culture Change Action Group, Division of Psychiatry (2022&ndash;); designed and led the Division's Athena SWAN listening exercise on bullying, harassment, and inclusion<br>
-<b>Coordinator</b>, the Division's community of non-clinical early career researchers, around 50&ndash;60 members (2022&ndash;), now with colleagues</p>
+<ul class="role-list">
+<li><b>Elected Member</b>, <a href="https://www.ucl.ac.uk/about/leadership/governance/committees/ab-and-committees/academic-board">UCL Academic Board</a> (2026&ndash;)</li>
+<li><b>Open Science Champion</b>, Faculty of Brain Sciences (2025&ndash;)</li>
+<li><b>Research Development Programme Lead</b>, Division of Psychiatry (2023&ndash;25)</li>
+<li><b>Lead</b>, Culture Change Action Group, Division of Psychiatry (2022&ndash;); designed and led the Division's Athena SWAN listening exercise on bullying, harassment, and inclusion</li>
+<li><b>Coordinator</b>, the Division's community of non-clinical early career researchers, around 50&ndash;60 members (2022&ndash;), now with colleagues</li>
+</ul>
 </div>
 
 </div>
 
 ## Career
 
-- **Senior Research Fellow**, Division of Psychiatry, UCL (2025&ndash;)
-- **Visiting Lecturer**, Wolfson Institute of Population Health, Queen Mary University of London (2021&ndash;2025)
-- **Research Fellow**, Division of Psychiatry, UCL (2019&ndash;2025)
-- **Senior Associate**, Avalere Health, Washington DC (2014&ndash;2015)
+- <span class="margin-note">2025&ndash;</span>**Senior Research Fellow**, Division of Psychiatry, UCL
+- <span class="margin-note">2021&ndash;2025</span>**Visiting Lecturer**, Wolfson Institute of Population Health, Queen Mary University of London
+- <span class="margin-note">2019&ndash;2025</span>**Research Fellow**, Division of Psychiatry, UCL
+- <span class="margin-note">2014&ndash;2015</span>**Senior Associate**, Avalere Health, Washington DC
 
 ## Education
 
-- **PhD**, Public Health and Primary Care, University of Cambridge (2019)
-- **MSPH**, Health Policy, Johns Hopkins Bloomberg School of Public Health (2015)
-- **BSc**, Cell Biology and Genetics, and **BA (Hons)**, English, University of British Columbia (2012)
+- <span class="margin-note">2019</span>**PhD**, Public Health and Primary Care, University of Cambridge
+- <span class="margin-note">2015</span>**MSPH**, Health Policy, Johns Hopkins Bloomberg School of Public Health
+- <span class="margin-note">2012</span>**BSc**, Cell Biology and Genetics, and **BA (Hons)**, English, University of British Columbia
 
 ## Manuscript review
 
