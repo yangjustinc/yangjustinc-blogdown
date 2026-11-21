@@ -1,6 +1,6 @@
 ---
 title: Home
-description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying unmet need in mental health: who needs care but is not recognised, counted, or treated, and why."
+description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying complex and co-occurring mental health needs that span services, and where those needs go unmet."
 ---
 
 <div class="home-intro">
@@ -11,9 +11,9 @@ description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying unme
 </aside>
 <div class="home-intro-text">
 <h1>Justin C Yang</h1>
-<p class="home-lede">I study unmet need in mental health: who needs care but is not recognised, counted, or treated, and how services, funding, and the data they keep produce that gap.</p>
-<p>Needs are noticed or missed at particular points. Whether someone with psychosis who uses drugs is treated by one service or passed between two, or whether a school recognises a child's autism, can shape what follows. Each service records only its part, so I work with records from the NHS, addiction treatment services, and schools, alongside national surveys, to find where needs go unmet and where services and policy could act.</p>
-<p>I lead <b>MINDSET</b> (Multimodal Inference and Data Science for Epidemiology and Treatment), my research group in the <a href="https://www.ucl.ac.uk/psychiatry">UCL Division of Psychiatry</a>.</p>
+<p class="home-lede">I study complex and co-occurring mental health needs: people with severe mental illness who also use drugs or alcohol, who need both health and social care, or whose needs cross health and education. Their needs span services that each see only part of the picture, and that is where needs go unmet.</p>
+<p>Whether someone with psychosis who uses drugs is treated by one service or passed between two, or whether a school recognises a child's autism, can shape what follows. Because no single source holds the whole picture, I bring sources together: linked records from the NHS, addiction treatment services, and schools, clinical text, and national surveys, triangulated to show where needs go unmet and where services and policy could act.</p>
+<p>This is the work of <b>MINDSET</b> (Multimodal Inference and Data Science for Epidemiology and Treatment), my research group in the <a href="https://www.ucl.ac.uk/psychiatry">UCL Division of Psychiatry</a>.</p>
 </div>
 </div>
 

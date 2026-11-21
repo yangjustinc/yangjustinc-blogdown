@@ -1,9 +1,9 @@
 ---
 title: Research
-description: "Research by Dr Justin C Yang on unmet need in mental health, across severe mental illness, addiction services, and neurodevelopment."
+description: "Research by Dr Justin C Yang on complex and co-occurring mental health needs, across severe mental illness, addiction services, and neurodevelopment."
 ---
 
-My research is about unmet need in mental health: who needs care but is not recognised, counted, or treated, and how services, funding, and the data they keep produce that gap. Many people's needs span more than one service (health and social care, mental health and addiction treatment, the NHS and schools), and each service sees and records only its part, so the points at which needs are missed are often invisible in any single dataset. In this sense the work extends the “pathways to care” tradition in psychiatric epidemiology beyond health services.
+My research is about complex and co-occurring mental health needs: people whose needs span more than one service (health and social care, mental health and addiction treatment, the NHS and schools), and where those needs go unmet. Each service sees and records only its part, so these needs are often invisible in any single dataset. I bring together linked records, clinical text, and national surveys, and triangulate across them, to see what no one source shows. In this sense the work extends the “pathways to care” tradition in psychiatric epidemiology beyond health services.
 
 I follow this question in three areas, in order of my current funded work: severe mental illness, addiction services, and school and health. A related strand asks who is counted in the evidence itself, for example whether research and public health needs assessments record sexual orientation and gender identity. Funding details are on the [Funding](../funding/) page, and the full record is on [Publications](../publications/).
 
@@ -43,6 +43,6 @@ Seeing where needs are recognised or missed depends on records that are well gov
 
 ## Methods
 
-I work mainly with linked national administrative data in trusted research environments; electronic health records and natural language processing of clinical text, including large language models used within governed environments; longitudinal, multilevel, and spatial models; and causal inference for observational data. As senior author, I also designed an audit of how alcohol research collects and reports data on sexual orientation and gender identity ([*LGBT Health*, 2024](https://doi.org/10.1089/lgbt.2023.0085)), which our team has since applied to cardiovascular research.
+The methods serve the question: because complex needs are only partly visible in any one source, I combine sources and test whether they point the same way. I work mainly with linked national administrative data in trusted research environments; electronic health records and natural language processing of clinical text, including large language models used within governed environments; longitudinal, multilevel, and spatial models; and causal inference for observational data. As senior author, I also designed an audit of how alcohol research collects and reports data on sexual orientation and gender identity ([*LGBT Health*, 2024](https://doi.org/10.1089/lgbt.2023.0085)), which our team has since applied to cardiovascular research.
 
 Where data cannot be shared, I release analysis code and teaching materials, including [workshop materials on good practice in R](https://yangjustinc.github.io/good-practice-r-ons-srs/) for researchers using the ONS Secure Research Service; see [Code and resources](../resources/).

@@ -58,10 +58,10 @@ menu:
       weight: 9
 
 params:
-  homeTitle: "Justin C Yang | Psychiatric epidemiologist studying unmet need in mental health"
-  description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying unmet need in mental health: who needs care but is not recognised, counted, or treated, and why."
-  ogImage: "social-card-v5.jpg"
-  ogImageAlt: "Mark of five coloured strands with the text: Justin C Yang, psychiatric epidemiologist studying unmet need in mental health: who needs care but is not recognised, counted, or treated"
+  homeTitle: "Justin C Yang | Psychiatric epidemiologist studying complex and co-occurring mental health needs"
+  description: "Dr Justin C Yang is a UCL psychiatric epidemiologist studying complex and co-occurring mental health needs that span services, and where those needs go unmet."
+  ogImage: "social-card-v6.jpg"
+  ogImageAlt: "Mark of five coloured strands with the text: Justin C Yang, psychiatric epidemiologist studying complex and co-occurring mental health needs that span services, and where they go unmet"
   person:
     affiliation: "University College London"
     jobTitle: "Senior Research Fellow"
