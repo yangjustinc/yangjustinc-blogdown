@@ -74,11 +74,12 @@ doctoral |>
 
 I teach, or have taught, on three MSc modules in the UCL Division of Psychiatry:
 
-<div class="teaching-module-grid">
-<div class="teaching-module hue-blue"><svg class="teaching-module-glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false"><circle cx="32" cy="6" r="4"/><path d="M32 10v8M10 18h44M10 18v10m22-10v10m22-10v10"/><circle cx="10" cy="32" r="4"/><circle cx="32" cy="32" r="4"/><circle cx="54" cy="32" r="4"/></svg><a href="https://www.ucl.ac.uk/module-catalogue/modules/core-principles-of-mental-health-research-PSBS0002"><b>Core Principles of Mental Health Research</b></a><br>Research design, critical appraisal, and the foundations of mental health research.</div>
-<div class="teaching-module hue-teal"><svg class="teaching-module-glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false"><path d="M7 34V6M7 34h51M12 29l10-6 9 2 10-10 12-5"/><circle cx="15" cy="16" r="2.5"/><circle cx="26" cy="30" r="2.5"/><circle cx="36" cy="18" r="2.5"/><circle cx="49" cy="22" r="2.5"/></svg><a href="https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research-PSBS0008"><b>Practical Statistics for Mental Health Research</b></a><br>Applied statistical analysis for mental health research.</div>
-<div class="teaching-module hue-green"><svg class="teaching-module-glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false"><circle cx="8" cy="11" r="4"/><circle cx="8" cy="29" r="4"/><path d="M12 11h18l9 9h17M12 29h18l9-9M48 14l8 6-8 6"/></svg><a href="https://www.ucl.ac.uk/module-catalogue/modules/epidemiological-research-methods-in-mental-health-PSBS0013"><b>Epidemiological Research Methods in Mental Health</b></a><br>Epidemiological designs, measures, inference, and interpretation in psychiatric research.</div>
-</div>
+<ul class="module-list">
+<li><a href="https://www.ucl.ac.uk/module-catalogue/modules/core-principles-of-mental-health-research-PSBS0002"><b>Core Principles of Mental Health Research</b></a><br>Research design, critical appraisal, and the foundations of mental health research.</li>
+<li><a href="https://www.ucl.ac.uk/module-catalogue/modules/practical-statistics-for-mental-health-research-PSBS0008"><b>Practical Statistics for Mental Health Research</b></a><br>Applied statistical analysis for mental health research.</li>
+<li><a href="https://www.ucl.ac.uk/module-catalogue/modules/epidemiological-research-methods-in-mental-health-PSBS0013"><b>Epidemiological Research Methods in Mental Health</b></a><br>Epidemiological designs, measures, inference, and interpretation in psychiatric research.</li>
+</ul>
+
 From 2021 to 2025 I was a Visiting Lecturer at the Wolfson Institute of Population Health, Queen Mary University of London, where I supervised 17 MSc dissertations.
 
 ## Research training and development
@@ -93,12 +94,11 @@ Reusable teaching materials are listed under [Code and resources](../resources/)
 
 ```{r results='asis', echo=FALSE}
 cat(
-  '<div class="supervision-summary">',
-  '<div class="supervision-stat"><b>', nrow(taught), '</b><span>MSc and BSc research projects supervised since 2020</span></div>',
-  '<div class="supervision-stat"><b>', nrow(primary_projects), '</b><span>as primary supervisor</span></div>',
-  '<div class="supervision-stat"><b>', nrow(published_projects), '</b><span>led to peer reviewed papers with the student as first author</span></div>',
-  '<div class="supervision-stat"><b>', sum(doctoral$status == "Current"), '</b><span>current doctoral supervision and committee roles</span></div>',
-  '</div>'
+  '<p class="lede-figures">Since 2020 I have supervised ', nrow(taught),
+  ' MSc and BSc research projects, ', nrow(primary_projects), ' of them as primary supervisor. Of these, ',
+  nrow(published_projects), ' led to peer reviewed papers with the student as first author, and I currently hold ',
+  sum(doctoral$status == "Current"), ' doctoral supervision and committee roles.</p>',
+  sep = ''
 )
 ```
 

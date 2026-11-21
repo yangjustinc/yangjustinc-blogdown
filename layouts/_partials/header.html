@@ -8,7 +8,6 @@
     <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
     {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
-    <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
     {{ if not .IsHome }}
       {{ $headingLinks := resources.Get "js/heading-links.js" | minify | fingerprint }}
       <script src="{{ $headingLinks.RelPermalink }}" integrity="{{ $headingLinks.Data.Integrity }}" defer></script>
