@@ -1,36 +1,42 @@
 /*
  * justinyang.me
  *
- * The site is set like a short academic monograph: one serif for reading
- * and headings (Source Serif 4), its companion sans (Source Sans 3) for
- * small interface text, one column, sections divided by fine rules.
+ * Design rules, in order of importance:
  *
- * Every list on the site (selected papers, publications, funding, talks,
- * resources) uses the same entry pattern: a serif title, a small sans
- * metadata line, then the description, separated by hairlines.
+ * 1. Margin and column. On wide screens every page has a narrow margin
+ *    column and a text column. The margin holds "when and where" (dates,
+ *    venues, funders, amounts, years, portraits), right-aligned against
+ *    the text, so chronology can be scanned down one edge. The column
+ *    holds "what". Wide material (timeline, tables, partner groups)
+ *    spans both. On narrow screens the margin folds into the column.
  *
- * Colour: navy ink for headings, one link blue, quiet greys for rules.
- * The five logo strand colours are used only as the research-strand key
- * on the Publications page, where they carry meaning.
+ * 2. Serif for content, sans for apparatus. Everything to be read is set
+ *    in Source Serif 4; navigation, margin labels, form controls and
+ *    filters are set in Source Sans 3. Running text uses old-style
+ *    figures; the margin uses lining tabular figures.
  *
- * All text colours meet WCAG AA on the page background.
+ * 3. One identity, used once. The five strands of the logo appear as a
+ *    headband at the top of every page and, on Publications, as the
+ *    research-strand key. No other decorative colour.
+ *
+ * 4. Warm paper, warm grey rules, navy ink. All text meets WCAG AA.
  */
 
 :root {
-  --paper: #fdfcfa;
-  --ink: #1c2730;           /* 14.9:1 */
-  --ink-2: #3f4c56;         /* 9.0:1, secondary text */
-  --muted: #5b6770;         /* 5.8:1, metadata */
-  --navy: #173b57;          /* headings, brand */
-  --link: #1a5c92;          /* 6.9:1 */
-  --link-hover: #0f3f68;
-  --rule: #dde2e6;
-  --rule-strong: #b9c2c9;
-  --wash: #f3f5f6;
-  --focus: #1a5c92;
-  --success: #2c6a3c;       /* 6.3:1, "Open access" */
+  --paper: #fbf8f2;
+  --ink: #1d2329;           /* 15.1:1 on paper */
+  --ink-2: #3e4852;         /* 9.1:1 */
+  --muted: #5c6670;         /* 5.6:1 */
+  --navy: #173b57;          /* 11.2:1 */
+  --link: #1b5a8e;          /* 6.8:1 */
+  --link-hover: #0f3d63;
+  --underline: rgba(27, 90, 142, 0.38);
+  --rule: #e2dccf;
+  --rule-strong: #c7bfaf;
+  --success: #2c6a3c;
+  --focus: #1b5a8e;
 
-  /* Research strands (from the logo); Publications page only */
+  /* The five strands of the logo */
   --strand-clinical: #1f7fc4;
   --strand-administrative: #137f76;
   --strand-addiction: #b85c00;
@@ -41,7 +47,10 @@
   --sans: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
   --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
 
-  --column: 46rem;
+  --margin: 9.5rem;         /* margin column */
+  --gap: 2.25rem;           /* space between margin and text */
+  --hang: calc(var(--margin) + var(--gap));
+  --column: 39rem;          /* text column, about 68 characters */
   --gutter: 1.25rem;
 }
 
@@ -65,22 +74,38 @@ body {
   font-family: var(--serif);
   font-size: 1.125rem;
   font-optical-sizing: auto;
+  font-variant-numeric: oldstyle-nums proportional-nums;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
+}
+
+/* Headband: the five strands of the logo, with hard stops. */
+body::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--strand-clinical) 0 20%,
+    var(--strand-administrative) 20% 40%,
+    var(--strand-addiction) 40% 60%,
+    var(--strand-inequalities) 60% 80%,
+    var(--strand-population) 80% 100%
+  );
 }
 
 .site-header,
 main,
 footer {
   width: 100%;
-  max-width: calc(var(--column) + 2 * var(--gutter));
+  max-width: calc(var(--hang) + var(--column) + 2 * var(--gutter));
   margin: 0 auto;
-  padding-left: var(--gutter);
   padding-right: var(--gutter);
+  padding-left: calc(var(--gutter) + var(--hang));
 }
 
 main {
-  padding-bottom: 3rem;
+  padding-bottom: 3.5rem;
 }
 
 p,
@@ -90,6 +115,11 @@ dl,
 blockquote,
 table {
   margin: 0 0 1rem;
+}
+
+p,
+li {
+  text-wrap: pretty;
 }
 
 ul,
@@ -108,13 +138,14 @@ img {
 
 a {
   color: var(--link);
+  text-decoration-color: var(--underline);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
 
 a:hover {
   color: var(--link-hover);
-  text-decoration-thickness: 2px;
+  text-decoration-color: currentColor;
 }
 
 :focus-visible {
@@ -169,19 +200,20 @@ h4 {
 
 h1 {
   margin: 0;
-  font-size: clamp(2rem, 4.5vw, 2.6rem);
+  font-size: clamp(2.1rem, 4.6vw, 2.75rem);
   letter-spacing: -0.012em;
 }
 
+/* Section rules run across margin and column, so the grid shows. */
 h2 {
-  margin: 2.75rem 0 1rem;
-  padding-top: 1.1rem;
-  border-top: 1px solid var(--rule);
+  margin: 3rem 0 1.1rem calc(-1 * var(--hang));
+  padding: 1.1rem 0 0 var(--hang);
+  border-top: 1px solid var(--rule-strong);
   font-size: 1.5rem;
 }
 
 h3 {
-  margin: 1.75rem 0 0.5rem;
+  margin: 1.75rem 0 0.45rem;
   font-size: 1.15rem;
 }
 
@@ -190,9 +222,8 @@ h4 {
   font-size: 1rem;
 }
 
-/* Section permalinks: present for keyboard and hover, quiet otherwise. */
 .heading-anchor {
-  margin-left: 0.15em;
+  margin-left: 0.2em;
   color: var(--muted);
   font-family: var(--sans);
   font-size: 0.7em;
@@ -213,30 +244,49 @@ h3:hover .heading-anchor,
   }
 }
 
+/* ---------- Margin labels ---------- */
+/* Anything hung in the margin shares these settings. */
+
+.news-date,
+.talk-date,
+.funding-meta,
+.selected-meta,
+.publication-entry::before {
+  position: absolute;
+  top: 1.25rem;
+  left: calc(-1 * var(--hang));
+  width: var(--margin);
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1.4;
+  text-align: right;
+}
+
+/* Funder, amount and dates: one per line in the margin, a dotted
+   run in the column on narrow screens. */
+.funding-meta span {
+  display: block;
+}
+
 /* ---------- Header ---------- */
 
 .site-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem 2rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--rule);
-}
-
-/* Keep the header rule inside the column, not across the gutter. */
-.site-header {
-  border-bottom: 0;
-  background: linear-gradient(var(--rule), var(--rule)) no-repeat
-    left var(--gutter) bottom / calc(100% - 2 * var(--gutter)) 1px;
+  display: grid;
+  grid-template-columns: var(--margin) minmax(0, 1fr);
+  column-gap: var(--gap);
+  align-items: baseline;
+  padding-top: 1.4rem;
+  padding-bottom: 1.1rem;
+  padding-left: var(--gutter);
 }
 
 .site-brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.55rem;
   color: var(--navy);
   text-decoration: none;
 }
@@ -246,20 +296,22 @@ h3:hover .heading-anchor,
 }
 
 .site-brand-mark {
-  width: 2rem;
-  height: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  align-self: center;
 }
 
 .site-brand-name {
   font-family: var(--serif);
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .menu {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.15rem 1.1rem;
+  gap: 0.1rem 1.15rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -281,26 +333,27 @@ h3:hover .heading-anchor,
 .menu a:hover {
   color: var(--navy);
   text-decoration: underline;
-  text-decoration-thickness: 1px;
+  text-decoration-color: var(--rule-strong);
 }
 
 .menu a.active {
   color: var(--navy);
   text-decoration: underline;
+  text-decoration-color: currentColor;
   text-decoration-thickness: 2px;
-  text-underline-offset: 0.35em;
+  text-underline-offset: 0.4em;
 }
 
 /* ---------- Page title ---------- */
 
 .article-meta {
-  margin: 3rem 0 1.5rem;
+  margin: 3.25rem 0 1.5rem;
 }
 
 .article-meta + p,
 .article-meta + .section > p:first-of-type:not([class]) {
   color: var(--ink-2);
-  font-size: 1.25rem;
+  font-size: 1.28rem;
   line-height: 1.55;
 }
 
@@ -312,8 +365,6 @@ h3:hover .heading-anchor,
   font-size: 0.95rem;
 }
 
-/* R Markdown wraps sections in divs; the first heading after the title
-   doesn't need a rule above it. */
 .article-meta + .section > h2:first-child,
 .article-meta + h2 {
   margin-top: 0;
@@ -321,30 +372,8 @@ h3:hover .heading-anchor,
   border-top: 0;
 }
 
-/* ---------- Shared small text ---------- */
-
-.meta,
-.funding-meta,
-.funding-reference,
-.talk-event,
-.talk-date,
-.selected-meta,
-.publication-entry-meta,
-.publication-result-count,
-.bio-note,
-.contact-form__note,
-.news-date {
-  color: var(--muted);
-  font-family: var(--sans);
-  font-size: 0.95rem;
-  line-height: 1.45;
-}
-
-.bio-note {
-  font-style: italic;
-}
-
-/* ---------- Entry pattern ---------- */
+/* ---------- Entries ---------- */
+/* Selected papers, publications, funding, talks, resources. */
 
 .entry,
 .funding-card,
@@ -352,8 +381,25 @@ h3:hover .heading-anchor,
 .selected-publication,
 .publication-entry,
 .recent-publication {
-  padding: 1.1rem 0 1.2rem;
+  position: relative;
+  padding: 1.2rem 0 1.25rem;
   border-top: 1px solid var(--rule);
+}
+
+h2 + .entry,
+h2 + .funding-card,
+h2 + .talk-card,
+h2 + p + .selected-publication,
+h2 + .selected-publication,
+.funding-section-intro + .funding-card {
+  border-top: 0;
+  padding-top: 0.4rem;
+}
+
+h2 + .funding-card .funding-meta,
+h2 + .talk-card .talk-date,
+.funding-section-intro + .funding-card .funding-meta {
+  top: 0.45rem;
 }
 
 .entry > :last-child,
@@ -371,7 +417,7 @@ h3:hover .heading-anchor,
   margin: 0 0 0.3rem;
   color: var(--navy);
   font-family: var(--serif);
-  font-size: 1.15rem;
+  font-size: 1.16rem;
   font-weight: 600;
   line-height: 1.3;
 }
@@ -390,26 +436,24 @@ h3:hover .heading-anchor,
   text-decoration-color: currentColor;
 }
 
-/* Small labels above or beside a title: sentence case, not capitals. */
-.talk-label,
-.selected-theme,
-.funding-role {
-  margin-bottom: 0.2rem;
+/* Roles and venues: italic serif, as in a CV. */
+.funding-role,
+.talk-event {
+  margin: 0 0 0.4rem;
   color: var(--ink-2);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+/* Kind of item, above the title: quiet sans. */
+.talk-label,
+.selected-theme {
+  margin-bottom: 0.25rem;
+  color: var(--muted);
   font-family: var(--sans);
-  font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.funding-role {
-  margin: 0 0 0.15rem;
-}
-
-.funding-meta,
-.talk-event,
-.selected-meta {
-  margin-bottom: 0.5rem;
+  font-size: 0.92rem;
+  line-height: 1.35;
 }
 
 .funding-description,
@@ -417,38 +461,56 @@ h3:hover .heading-anchor,
   margin: 0.5rem 0;
 }
 
+.funding-reference {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-variant-numeric: lining-nums;
+}
+
 .selected-contribution {
   color: var(--ink-2);
-  font-family: var(--sans);
-  font-size: 0.98rem;
+  font-size: 1rem;
 }
 
 .talk-materials {
-  margin-top: 0.35rem;
-  font-family: var(--sans);
-  font-size: 0.98rem;
+  margin-top: 0.3rem;
+  font-size: 1rem;
 }
 
 .funding-section-intro p {
   color: var(--ink-2);
 }
 
+.bio-note,
+.contact-form__note {
+  color: var(--muted);
+  font-size: 0.98rem;
+  font-style: italic;
+}
+
 /* ---------- Home ---------- */
 
 .home-intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 8.5rem;
-  gap: 0 2.25rem;
-  align-items: start;
-  margin-top: 3rem;
+  position: relative;
+  margin-top: 3.25rem;
 }
 
 .home-intro h1 {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.1rem;
+}
+
+/* Portrait hangs in the margin, beside the name. */
+.home-portrait {
+  position: absolute;
+  top: 0.35rem;
+  left: calc(-1 * var(--hang));
+  width: var(--margin);
+  border-radius: 2px;
 }
 
 .home-lede {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   line-height: 1.55;
 }
 
@@ -457,20 +519,12 @@ h3:hover .heading-anchor,
   color: var(--ink-2);
 }
 
-.home-portrait {
-  grid-column: 2;
-  grid-row: 1;
-  width: 100%;
-  margin-top: 0.4rem;
-  border-radius: 3px;
-}
-
 .mindset-questions {
   margin: 0 0 1rem;
 }
 
 .mindset-question {
-  padding: 1.1rem 0 1.2rem;
+  padding: 1.2rem 0 1.25rem;
   border-top: 1px solid var(--rule);
 }
 
@@ -485,9 +539,8 @@ h3:hover .heading-anchor,
 .theme-evidence {
   margin: 0;
   color: var(--ink-2);
-  font-family: var(--sans);
-  font-size: 0.98rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.55;
 }
 
 .mindset-question .heading-anchor {
@@ -500,85 +553,102 @@ h3:hover .heading-anchor,
 }
 
 .news-list li {
-  display: grid;
-  grid-template-columns: 8.5rem minmax(0, 1fr);
-  gap: 0.15rem 1.25rem;
+  position: relative;
   margin: 0;
-  padding: 0.8rem 0;
+  padding: 1.1rem 0;
   border-top: 1px solid var(--rule);
 }
 
+.news-list li:first-child {
+  border-top: 0;
+  padding-top: 0.2rem;
+}
+
+.news-list li:first-child .news-date {
+  top: 0.35rem;
+}
+
 .news-date {
-  padding-top: 0.15rem;
+  top: 1.35rem;
 }
 
 /* ---------- Team ---------- */
 
 .people-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 2rem;
-  margin: 0.5rem 0 1.5rem;
+  margin: 0 0 1.5rem;
 }
 
 .team-card {
-  display: grid;
-  grid-template-columns: 5.5rem minmax(0, 1fr);
-  grid-auto-rows: min-content;
-  column-gap: 1rem;
-  padding: 1rem 0;
+  position: relative;
+  min-height: calc(var(--margin) * 0.7 + 2.4rem);
+  padding: 1.2rem 0;
   border-top: 1px solid var(--rule);
-  font-family: var(--sans);
-  font-size: 0.98rem;
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.45;
 }
 
+h2 + .people-grid .team-card:first-child {
+  border-top: 0;
+  padding-top: 0.4rem;
+}
+
+h2 + .people-grid .team-card:first-child img {
+  top: 0.45rem;
+}
+
+/* Portraits hang in the margin, right-aligned against the text. */
 .team-card img {
-  grid-row: 1 / span 5;
-  width: 5.5rem;
-  height: 5.5rem;
-  border-radius: 3px;
+  position: absolute;
+  top: 1.25rem;
+  left: calc(-1 * var(--hang) + var(--margin) * 0.3);
+  width: calc(var(--margin) * 0.7);
+  height: calc(var(--margin) * 0.7);
+  border-radius: 2px;
   object-fit: cover;
-}
-
-.team-card > :not(img) {
-  grid-column: 2;
 }
 
 .people-name {
   color: var(--navy);
-  font-family: var(--serif);
-  font-size: 1.08rem;
+  font-size: 1.16rem;
   font-weight: 600;
 }
 
 .people-role {
   color: var(--ink-2);
+  font-style: italic;
 }
 
 .people-expertise {
-  margin-top: 0.15rem;
-  color: var(--muted);
+  margin-top: 0.2rem;
+  color: var(--ink-2);
 }
 
 .team-card a {
-  justify-self: start;
-  margin-top: 0.3rem;
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
 }
 
-.partner-groups {
+/* Wide groups span margin and column. */
+.partner-groups,
+.leadership-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 2rem;
+  gap: 0 var(--gap);
+  margin-left: calc(-1 * var(--hang));
 }
 
-.partner-group {
+.partner-group,
+.leadership-card {
   padding-top: 1rem;
   border-top: 1px solid var(--rule);
 }
 
-.partner-group h3 {
-  margin-top: 0;
+.partner-group h3,
+.leadership-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 1.12rem;
 }
 
 .partner-group p {
@@ -586,51 +656,20 @@ h3:hover .heading-anchor,
   font-size: 1rem;
 }
 
-.link-list {
-  padding: 0;
-  list-style: none;
-  font-family: var(--sans);
-  font-size: 0.98rem;
-  line-height: 1.4;
-}
-
-.link-list li + li {
-  margin-top: 0.45rem;
-}
-
-.partner-group .heading-anchor {
-  display: none;
-}
-
-/* ---------- About ---------- */
-
-.leadership-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 2rem;
-}
-
-.leadership-card {
-  padding-top: 1rem;
-  border-top: 1px solid var(--rule);
-}
-
-.leadership-kicker {
-  margin: 0 0 0.6rem;
-  font-size: 1.1rem;
-}
-
+.link-list,
 .role-list {
   padding: 0;
   list-style: none;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
+.link-list li + li,
 .role-list li + li {
-  margin-top: 0.6rem;
+  margin-top: 0.55rem;
 }
 
+.partner-group .heading-anchor,
 .leadership-card .heading-anchor {
   display: none;
 }
@@ -644,7 +683,7 @@ h3:hover .heading-anchor,
 
 .module-list li {
   margin: 0;
-  padding: 0.75rem 0;
+  padding: 0.8rem 0;
   border-top: 1px solid var(--rule);
   font-size: 1rem;
 }
@@ -654,18 +693,18 @@ h3:hover .heading-anchor,
 }
 
 .module-list b {
-  font-size: 1.08rem;
+  font-size: 1.1rem;
 }
 
 .lede-figures {
   color: var(--ink-2);
 }
 
-/* ---------- Tables ---------- */
+/* ---------- Tables: wide, so they span margin and column ---------- */
 
 .site-table-wrap,
 .table-responsive {
-  margin: 1.25rem 0 1.5rem;
+  margin: 1.25rem 0 1.75rem calc(-1 * var(--hang));
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -675,13 +714,14 @@ table,
   width: 100%;
   border-collapse: collapse;
   font-family: var(--sans);
-  font-size: 0.95rem;
+  font-size: 0.97rem;
+  font-variant-numeric: lining-nums tabular-nums;
   line-height: 1.4;
 }
 
 th,
 td {
-  padding: 0.55rem 0.9rem 0.55rem 0;
+  padding: 0.6rem 1rem 0.6rem 0;
   border-bottom: 1px solid var(--rule);
   text-align: left;
   vertical-align: top;
@@ -692,7 +732,7 @@ td:first-child {
 }
 
 th {
-  border-bottom-color: var(--rule-strong);
+  border-bottom: 1px solid var(--rule-strong);
   color: var(--ink-2);
   font-weight: 600;
   white-space: nowrap;
@@ -706,6 +746,11 @@ th {
 .publication-strand-inequalities { --strand-color: var(--strand-inequalities); }
 .publication-strand-population { --strand-color: var(--strand-population); }
 
+/* Year of each publication in the margin. */
+.publication-entry::before {
+  content: attr(data-year);
+}
+
 .publication-strand-dot {
   display: inline-block;
   flex: none;
@@ -714,18 +759,20 @@ th {
   margin-right: 0.4rem;
   border-radius: 50%;
   background: var(--strand-color, var(--muted));
-  vertical-align: 0.05em;
 }
 
 .publication-explorer {
   margin: 1rem 0 2rem;
 }
 
+/* The filters, timeline and its caption are wide, so they span margin
+   and column. (The full list is nested inside the explorer by the R
+   output, so the explorer itself stays in the column.) */
 .publication-filter-group {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin: 0 0 1rem;
+  margin: 0 0 1rem calc(-1 * var(--hang));
 }
 
 .publication-filter,
@@ -736,8 +783,8 @@ th {
   min-height: 2rem;
   padding: 0.2rem 0.65rem;
   border: 1px solid var(--rule-strong);
-  border-radius: 3px;
-  background: var(--paper);
+  border-radius: 2px;
+  background: transparent;
   color: var(--ink);
   font-family: var(--sans);
   font-size: 0.92rem;
@@ -763,7 +810,7 @@ th {
 }
 
 .publication-timeline-scroll {
-  margin: 0.5rem 0 0.5rem;
+  margin: 0.5rem 0 0.5rem calc(-1 * var(--hang));
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -806,6 +853,7 @@ th {
 
 .publication-selected-paper {
   min-height: 1.6em;
+  margin-left: calc(-1 * var(--hang));
   color: var(--ink-2);
   font-family: var(--sans);
   font-size: 0.98rem;
@@ -817,7 +865,7 @@ th {
 
 .publication-toolbar > p {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(9rem, 0.35fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(9rem, 0.4fr) auto;
   align-items: end;
   gap: 0.75rem;
   margin: 0;
@@ -838,7 +886,7 @@ th {
   min-height: 2.5rem;
   padding: 0.4rem 0.6rem;
   border: 1px solid var(--rule-strong);
-  border-radius: 3px;
+  border-radius: 2px;
   background: #fff;
   color: var(--ink);
   font: inherit;
@@ -851,6 +899,9 @@ th {
 
 .publication-result-count {
   margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.95rem;
 }
 
 .publication-section h3 {
@@ -858,7 +909,7 @@ th {
 }
 
 .publication-citation {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.45rem;
   font-size: 1.02rem;
   line-height: 1.5;
 }
@@ -873,6 +924,9 @@ th {
   align-items: center;
   gap: 0.25rem 1rem;
   margin-bottom: 0.55rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.92rem;
 }
 
 .publication-strand-label {
@@ -899,7 +953,7 @@ th {
 
 .contact-form {
   margin: 2rem 0 0.75rem;
-  max-width: 34rem;
+  max-width: 32rem;
   font-family: var(--sans);
 }
 
@@ -920,7 +974,7 @@ th {
   width: 100%;
   padding: 0.6rem 0.7rem;
   border: 1px solid var(--rule-strong);
-  border-radius: 3px;
+  border-radius: 2px;
   background: #fff;
   color: var(--ink);
   font: inherit;
@@ -936,9 +990,9 @@ th {
 
 .contact-form button {
   min-height: 2.75rem;
-  padding: 0.55rem 1.2rem;
+  padding: 0.55rem 1.25rem;
   border: 0;
-  border-radius: 3px;
+  border-radius: 2px;
   background: var(--navy);
   color: #fff;
   font: inherit;
@@ -963,15 +1017,17 @@ th {
 /* ---------- Footer ---------- */
 
 footer {
-  padding-top: 1.5rem;
-  padding-bottom: 2.5rem;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 2.75rem;
   color: var(--muted);
   font-family: var(--sans);
   font-size: 0.95rem;
 }
 
 footer hr {
-  margin: 0 0 1.25rem;
+  margin: 0 0 1.25rem calc(-1 * var(--hang));
+  border-top-color: var(--rule-strong);
 }
 
 footer p {
@@ -985,8 +1041,8 @@ footer a {
 .footer-social {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem;
-  margin: 0 0 0.75rem -0.6rem;
+  gap: 0.15rem;
+  margin: 0 0 0.6rem -0.65rem;
 }
 
 .footer-social a {
@@ -1008,22 +1064,30 @@ footer a {
   fill: currentColor;
 }
 
-/* ---------- Narrow screens ---------- */
+/* ---------- Narrow screens: the margin folds into the column ---------- */
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
+  :root {
+    --hang: 0rem;
+  }
+
   body {
     font-size: 1.0625rem;
   }
 
-  .article-meta + p,
-  .home-lede {
-    font-size: 1.15rem;
+  .site-header,
+  main,
+  footer {
+    max-width: calc(var(--column) + 2 * var(--gutter));
+    padding-left: var(--gutter);
   }
 
   .site-header {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 1rem;
+    gap: 0.4rem;
+    padding-top: 1.1rem;
   }
 
   .menu {
@@ -1035,29 +1099,48 @@ footer a {
   }
 
   .article-meta {
-    margin-top: 2rem;
+    margin-top: 2.25rem;
   }
 
-  .people-grid,
-  .partner-groups,
-  .leadership-grid {
-    grid-template-columns: minmax(0, 1fr);
+  .article-meta + p,
+  .home-lede {
+    font-size: 1.16rem;
   }
 
-  .publication-toolbar > p {
-    grid-template-columns: minmax(0, 1fr);
+  h2 {
+    padding-left: 0;
   }
-}
 
-@media (max-width: 560px) {
+  .news-date,
+  .talk-date,
+  .funding-meta,
+  .selected-meta {
+    position: static;
+    width: auto;
+    margin: 0 0 0.3rem;
+    text-align: left;
+  }
+
+  .publication-entry::before {
+    content: none;
+  }
+
+  .funding-meta span {
+    display: inline;
+  }
+
+  .funding-meta span + span::before {
+    content: " · ";
+  }
+
   .home-intro {
-    display: block;
-    margin-top: 2rem;
+    margin-top: 2.25rem;
   }
 
   .home-portrait {
+    position: static;
     float: right;
-    width: 5.5rem;
+    width: 5.75rem;
     margin: 0.2rem 0 0.75rem 1rem;
   }
 
@@ -1065,7 +1148,34 @@ footer a {
     clear: both;
   }
 
-  .news-list li {
+  .team-card {
+    display: grid;
+    grid-template-columns: 4.75rem minmax(0, 1fr);
+    column-gap: 1rem;
+    min-height: 0;
+  }
+
+  .team-card img {
+    position: static;
+    grid-row: 1 / span 5;
+    width: 4.75rem;
+    height: 4.75rem;
+  }
+
+  .team-card > :not(img) {
+    grid-column: 2;
+  }
+
+  .team-card a {
+    justify-self: start;
+  }
+
+  .partner-groups,
+  .leadership-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .publication-toolbar > p {
     grid-template-columns: minmax(0, 1fr);
   }
 }
@@ -1085,6 +1195,7 @@ footer a {
 }
 
 @media print {
+  body::before,
   .site-header nav,
   .footer-social,
   .publication-explorer,

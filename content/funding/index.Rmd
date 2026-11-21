@@ -372,7 +372,7 @@ render_funding <- function(df) {
       meta_html <- if (length(meta_parts) > 0) {
         paste0(
           '<div class="funding-meta">',
-          paste(meta_parts, collapse = " &middot; "),
+          paste0("<span>", meta_parts, "</span>", collapse = ""),
           "</div>"
         )
       } else {
