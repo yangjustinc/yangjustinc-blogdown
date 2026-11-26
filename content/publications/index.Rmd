@@ -503,6 +503,10 @@ selected_display |>
 <p class="selected-contribution"><b>My contribution:</b> First author; I led the review as principal investigator of UNITED.</p>
 </div>
 
+## Conference abstracts
+
+Yeskendir A, et al. [Racial disparities in suicide mortality in the United States: examining the mediating role of neighborhood socioeconomic conditions in a nationwide study, 2011–2021](https://epiresearch.org/abstract-search/?abst_id=260369). Conference abstract, Society for Epidemiologic Research Annual Meeting. *Epidemiology*, October 2026, vol. 37, pp. 33–34. [DOI](https://doi.org/10.1097/01.ede.0001280248.27798.6a)
+
 ## Explore my research
 
 The timeline and filters group peer reviewed publications into broad research areas using OpenAlex topics, with my own classifications for the selected papers above. Open access links are included where OpenAlex or a verified institutional repository record identifies an accessible copy.

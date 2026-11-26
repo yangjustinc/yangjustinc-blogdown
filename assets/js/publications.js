@@ -20,11 +20,18 @@
     "Population health": areaLabels.population
   };
 
-  function setLabelWithDot(element, label) {
+  function setLabelWithDot(element, label, wrap) {
     var dot = element.querySelector(".publication-strand-dot");
     element.textContent = "";
     if (dot) element.appendChild(dot);
-    element.appendChild(document.createTextNode(label));
+    if (wrap) {
+      var lines = document.createElement("span");
+      lines.className = "publication-filter-label";
+      lines.textContent = label.replace(" & ", " &\n");
+      element.appendChild(lines);
+    } else {
+      element.appendChild(document.createTextNode(label));
+    }
   }
 
   function applyResearchAreaLanguage() {
@@ -58,13 +65,23 @@
       if (key === "all") {
         button.textContent = "All areas";
       } else if (areaLabels[key]) {
-        setLabelWithDot(button, areaLabels[key]);
+        setLabelWithDot(button, areaLabels[key], true);
       }
     });
 
     explorer.querySelectorAll(".publication-timeline-lane").forEach(function (lane) {
-      var label = lane.textContent.trim();
-      if (legacyLabels[label]) lane.textContent = legacyLabels[label];
+      var label = legacyLabels[lane.textContent.trim()];
+      if (!label) return;
+
+      var lines = label.replace(" & ", " &\n").split("\n");
+      lane.textContent = "";
+      lines.forEach(function (line, index) {
+        var span = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+        span.setAttribute("x", lane.getAttribute("x"));
+        span.setAttribute("dy", index === 0 ? "0" : "1.15em");
+        span.textContent = index === 0 ? line + " " : line;
+        lane.appendChild(span);
+      });
     });
 
     explorer.querySelectorAll(".publication-entry").forEach(function (entry) {
