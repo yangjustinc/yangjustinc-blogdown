@@ -961,6 +961,11 @@ th {
   box-shadow: 0 0 0 1.5px #fff;
 }
 
+.publication-filter-label {
+  white-space: pre-line;
+  text-align: left;
+}
+
 .publication-timeline-scroll {
   margin: 0.5rem 0;
   overflow-x: auto;
@@ -979,8 +984,8 @@ th {
 }
 
 /* The SVG is 900 units wide but drawn at column width, so its type is
-   set larger in SVG units to read at about 12px. Lane names sit just
-   above their lane so long names don't run into the first points. */
+   set larger in SVG units to read at about 12px. The first line of each
+   lane label sits above the lane, with space for a second line below. */
 .publication-timeline-year,
 .publication-timeline-lane {
   fill: var(--ink-2);
