@@ -24,13 +24,15 @@ talks <- read_csv(
     Type = col_character(),
     Invited = col_logical(),
     Materials = col_character(),
+    WorkshopMaterials = col_character(),
     Kind = col_character(),
     DatePrecision = col_character()
   )
 ) |>
   mutate(
     Type = na_if(str_squish(Type), ""),
-    Materials = na_if(str_squish(Materials), "")
+    Materials = na_if(str_squish(Materials), ""),
+    WorkshopMaterials = na_if(str_squish(WorkshopMaterials), "")
   )
 
 today <- Sys.Date()
@@ -73,6 +75,7 @@ render_talks <- function(df) {
       Type,
       Invited,
       Materials,
+      WorkshopMaterials,
       DatePrecision,
       Kind,
       ...
@@ -121,7 +124,7 @@ render_talks <- function(df) {
         "</div>"
       )
 
-      materials_html <- if (
+      materials_link <- if (
         !is.na(Materials) &&
         Materials != ""
       ) {
@@ -134,12 +137,26 @@ render_talks <- function(df) {
         }
 
         paste0(
-          '<div class="talk-materials"><a href="',
+          '<a href="',
           htmlEscape(Materials),
           '">',
           link_text,
-          "</a></div>"
+          "</a>"
         )
+      } else {
+        NULL
+      }
+
+      materials_links <- c(
+        materials_link,
+        if (!is.na(WorkshopMaterials)) {
+          paste0(
+            '<a href="', htmlEscape(WorkshopMaterials), '">View workshop materials</a>'
+          )
+        }
+      )
+      materials_html <- if (length(materials_links) > 0) {
+        paste0('<div class="talk-materials">', paste(materials_links, collapse = " · "), "</div>")
       } else {
         ""
       }
