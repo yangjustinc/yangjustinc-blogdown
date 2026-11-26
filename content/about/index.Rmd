@@ -34,7 +34,7 @@ Dr Yang leads the MINDSET research group at UCL and an NIHR Team Science award o
 <div class="leadership-card hue-purple">
 <h3 class="leadership-kicker">National research governance and policy</h3>
 <ul class="role-list">
-<li><b>Written evidence</b>, House of Commons Education Committee, on persistent school absence among autistic pupils and pupils with intellectual disability (ECA0106, 2026)</li>
+<li><b>Written evidence</b>, House of Commons Education Committee, on persistent school absence among autistic pupils and pupils with intellectual disability (<a href="https://committees.parliament.uk/writtenevidence/168395/default/">ECA0106, Word document</a>, 2026)</li>
 <li><b>Expert Member</b>, <a href="https://www.hra.nhs.uk/about-us/committees-and-services/confidentiality-advisory-group/">Confidentiality Advisory Group, Health Research Authority</a> (2026&ndash;)</li>
 <li><b>Member</b>, ADR UK Task and Finish Group on the data access journey (2026&ndash;)</li>
 <li><b>Public Member</b>, Data Access Committee, <a href="https://easternsde.nhs.uk/">Eastern England Secure Data Environment</a> (2026&ndash;)</li>
